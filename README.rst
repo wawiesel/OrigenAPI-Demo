@@ -6,7 +6,8 @@ documentation and simple linking scripts with CMake.
 
 Although the ORIGEN API is export controlled and you must obtain it
 through `<https://rsicc.ornl.gov>`_ in the latest version of
-`SCALE <https://scale.ornl.gov>`_, but the *documentation* is open source.
+`SCALE <https://scale.ornl.gov>`_, the *documentation of the API* 
+is open.
 
 Here is a link to the ORIGEN API
 `Doxygen documentation <https://wawiesel.github.io/OrigenAPI-Demo/>`_.
