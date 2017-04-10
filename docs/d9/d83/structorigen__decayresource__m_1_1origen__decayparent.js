@@ -1,0 +1,25 @@
+var structorigen__decayresource__m_1_1origen__decayparent =
+[
+    [ "destroy", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a57b28444bcfb0defbf1865b08da060ab", null ],
+    [ "get_channel_map", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a32dad9317b1d116bcaa1ba2a7b13138a", null ],
+    [ "get_decay_constant", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a552184300568c3cbfb882b7592577710", null ],
+    [ "get_decaychannel", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#ad3c6d5b3f1b02e55e259fd8f5c4f8c96", null ],
+    [ "get_half_life", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#aa95762856060d7e81b3523935b3bc7d3", null ],
+    [ "get_q_fraction_from_photons", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a94da946b779f3bc00f08829e9231fb14", null ],
+    [ "get_rcg_for_air", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a41996ad32c1a328e8ee8e3ae2c8916cc", null ],
+    [ "get_rcg_for_water", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#aac566f3fc41edf5101c2fab1e9909e98", null ],
+    [ "get_recoverable_energy_value", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a9d1d29ae8f63b0ada2a104dbfa1e37fb", null ],
+    [ "get_time_units", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#ac23a258508b4e4ccfc16e247cc886094", null ],
+    [ "initialize", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#adfbe07ec00dcf26df553ac1d6f4b90d0", null ],
+    [ "list_decay_modes", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a533fd89c29818bae25322b7f85d37de5", null ],
+    [ "num_decay_modes", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#ad032cc708e119a093482c0006713c1c0", null ],
+    [ "num_residuals", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a6e1a353f202b863732070e8981df8f96", null ],
+    [ "set_decay_constant", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a8a492769fa2fd457f602b2121a8fb8de", null ],
+    [ "set_half_life", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#aa4ee167d232436a1861694496833bde6", null ],
+    [ "set_q_fraction_from_photons", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a41cc23967f615a29b05203507a0efc2f", null ],
+    [ "set_rcg_for_air", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a6693b4be6195d8376d8c871cbbd0b356", null ],
+    [ "set_rcg_for_water", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#ad90dd8fef7dfabca6a41e5a47c8b1e2b", null ],
+    [ "set_recoverable_energy_value", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a84f9ac27a42db30c0c506160eedbd696", null ],
+    [ "set_time_units", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#a911a1dcb7361b41d40d0c5edaafdc2a5", null ],
+    [ "instance_ptr", "d9/d83/structorigen__decayresource__m_1_1origen__decayparent.html#aa178a1856f4421048505c7ecae3309ea", null ]
+];

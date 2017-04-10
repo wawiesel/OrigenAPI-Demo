@@ -1,0 +1,25 @@
+var _spectrum___m_8f90 =
+[
+    [ "origen_spectrum", "dc/d28/structorigen__spectrum__m_1_1origen__spectrum.html", "dc/d28/structorigen__spectrum__m_1_1origen__spectrum" ],
+    [ "origen_spectrum_bounds_at", "da/df1/_spectrum___m_8f90.html#a3425397d2a58144f52fdb86cf3521539", null ],
+    [ "origen_spectrum_bounds_size", "da/df1/_spectrum___m_8f90.html#a44096722c74921489405c391a4d81a67", null ],
+    [ "origen_spectrum_destroy", "da/df1/_spectrum___m_8f90.html#a54c0adafb4d06fd64b85419ee5fc5cae", null ],
+    [ "origen_spectrum_get_bounds", "da/df1/_spectrum___m_8f90.html#a045bf2b7668b4b1b420ff9d0b83ca864", null ],
+    [ "origen_spectrum_get_bounds_vec", "da/df1/_spectrum___m_8f90.html#a598983c57dfeca320fcd236674e13712", null ],
+    [ "origen_spectrum_get_intensity", "da/df1/_spectrum___m_8f90.html#aae2f381a681891bd0146ef4b2c65ed1c", null ],
+    [ "origen_spectrum_get_intensity_vec", "da/df1/_spectrum___m_8f90.html#abfccb4d2182dddb5d8a99b57854e8341", null ],
+    [ "origen_spectrum_getptr_bounds_vec", "da/df1/_spectrum___m_8f90.html#aacd481995a8d2270e099ac97928babf5", null ],
+    [ "origen_spectrum_getptr_intensity_vec", "da/df1/_spectrum___m_8f90.html#aa159fec5ed18891605ea0586b8afdb42", null ],
+    [ "origen_spectrum_has_bounds", "da/df1/_spectrum___m_8f90.html#af4b9bded3f7d57b22f40b9edeb89fdc6", null ],
+    [ "origen_spectrum_has_intensity", "da/df1/_spectrum___m_8f90.html#a5b5e7155782f3f08d563eb90f2bcedc0", null ],
+    [ "origen_spectrum_initialize", "da/df1/_spectrum___m_8f90.html#a9362f530671d9b060bd6cac311f7bc93", null ],
+    [ "origen_spectrum_intensity_at", "da/df1/_spectrum___m_8f90.html#a999cec53373521d86285873273bafc20", null ],
+    [ "origen_spectrum_intensity_size", "da/df1/_spectrum___m_8f90.html#a130c930e01026a64443b231231e9fcb0", null ],
+    [ "origen_spectrum_manageptr_bounds", "da/df1/_spectrum___m_8f90.html#aea2cece9ad749e4af7cdbf906f949884", null ],
+    [ "origen_spectrum_manageptr_intensity", "da/df1/_spectrum___m_8f90.html#a7138b211fe539fa73155c8e4f7de5c0a", null ],
+    [ "origen_spectrum_set_bounds", "da/df1/_spectrum___m_8f90.html#af57cdf10219d52654798436829c51abc", null ],
+    [ "origen_spectrum_set_bounds_vec", "da/df1/_spectrum___m_8f90.html#ab5beeaa6014dbbd5a6bc5eecea809cda", null ],
+    [ "origen_spectrum_set_intensity", "da/df1/_spectrum___m_8f90.html#a7ef7096b1471f9b7b76c6891cef478c8", null ],
+    [ "origen_spectrum_set_intensity_vec", "da/df1/_spectrum___m_8f90.html#a97e6569294ac62c147732c9f913157fb", null ],
+    [ "origen_spectrum_total_intensity", "da/df1/_spectrum___m_8f90.html#a1fef9a36be55ab345917847416d77869", null ]
+];

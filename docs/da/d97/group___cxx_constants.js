@@ -1,0 +1,28 @@
+var group___cxx_constants =
+[
+    [ "ALPHA_MASS", "da/d97/group___cxx_constants.html#ga6b370423a929ac16355f2c4b03d21d53", null ],
+    [ "BAD_DOUBLE", "da/d97/group___cxx_constants.html#ga5009830b8bdf67f1a6d5a960c588f851", null ],
+    [ "BAD_FLOAT", "da/d97/group___cxx_constants.html#gaab3ee1bf8cef11145adc944f22eb2d1e", null ],
+    [ "BAD_INT", "da/d97/group___cxx_constants.html#ga426e523c2ef3a056affda1ad7e27d302", null ],
+    [ "BAD_SIZE_T", "da/d97/group___cxx_constants.html#gab86e3173343f69d89164aafd5f173703", null ],
+    [ "BRANCH_RATIO_TOLERANCE", "da/d97/group___cxx_constants.html#ga52104ad3caae66cfca215c08316f93fb", null ],
+    [ "DEUTERON_MASS", "da/d97/group___cxx_constants.html#ga3a276c1f30f785ee4c63adbab63aec7e", null ],
+    [ "ELECTRON_MASS", "da/d97/group___cxx_constants.html#gaf68441d72a448f611eda1ba36eefb236", null ],
+    [ "EMAX", "da/d97/group___cxx_constants.html#gaeaabbfbdadf439805ca1c706f6243b9c", null ],
+    [ "EMIN", "da/d97/group___cxx_constants.html#gab347e40749c87cbceca6295142e802af", null ],
+    [ "ERR", "da/d97/group___cxx_constants.html#gafd638c6bef6a6e3f86c26a8b7ddba970", null ],
+    [ "ETOL", "da/d97/group___cxx_constants.html#gaced2c694e941e0761c1a5c726e856a19", null ],
+    [ "HELION_MASS", "da/d97/group___cxx_constants.html#gaa1628e49965ada5db3727f9e3728738e", null ],
+    [ "MAXIMUM_MASS_LOST", "da/d97/group___cxx_constants.html#gad3ea14c3a33280236fa1f6606dbda3df", null ],
+    [ "MAXIMUM_MASSNUMBER_LOST", "da/d97/group___cxx_constants.html#gaac3ea7905fbf9e408bd744efd546a9d8", null ],
+    [ "MAXIMUM_ZZZAAA_LOST", "da/d97/group___cxx_constants.html#ga580b6ece5175e437c08dd8752433cff9", null ],
+    [ "MINIMUM_HEAVY_PARTICLE_MASS", "da/d97/group___cxx_constants.html#ga85dc5d4cd225e223a2167b86362772d8", null ],
+    [ "NEUTRINO_MASS", "da/d97/group___cxx_constants.html#ga59b11c047bace687a77c73945474cc3b", null ],
+    [ "NEUTRON_MASS", "da/d97/group___cxx_constants.html#gaac10ad0b0002152d292c0f320ec8ca4a", null ],
+    [ "NUCLEON_TOLERANCE", "da/d97/group___cxx_constants.html#gaa877d679c5714c747fb25747f35efe71", null ],
+    [ "NULL_MASS", "da/d97/group___cxx_constants.html#gad2ea7931128e14ba798e57150b1c7449", null ],
+    [ "POSITRON_MASS", "da/d97/group___cxx_constants.html#ga4202866ed08b99ddee0f88d3c10e34d0", null ],
+    [ "PROTON_MASS", "da/d97/group___cxx_constants.html#ga368bacde1c37fdb92b430291d815eff0", null ],
+    [ "TRITON_MASS", "da/d97/group___cxx_constants.html#ga3c49e846e9a141666fa8c876b015c052", null ],
+    [ "YIELD_TOLERANCE", "da/d97/group___cxx_constants.html#gaf2808a58128467d6027f4a6f8be6bf8a", null ]
+];
