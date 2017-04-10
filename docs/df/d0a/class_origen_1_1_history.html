@@ -104,7 +104,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d3/d39/class_origen_1_1_history-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">History&lt; Q &gt; Class Template Reference</div>  </div>
@@ -113,6 +116,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 <p><code>#include &lt;History.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a0dab4d06ed80efb29446a33e365f8e51"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../db/d4f/class_origen_1_1_quantity.html">Quantity</a>&lt; <a class="el" href="../../d1/d35/struct_origen_1_1_time.html">Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#a0dab4d06ed80efb29446a33e365f8e51">T</a></td></tr>
+<tr class="separator:a0dab4d06ed80efb29446a33e365f8e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac662eb1242e5d36a8475ed75dfd1b6c6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../df/d0a/class_origen_1_1_history.html">History</a>&lt; Q &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#ac662eb1242e5d36a8475ed75dfd1b6c6">Type</a></td></tr>
+<tr class="separator:ac662eb1242e5d36a8475ed75dfd1b6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afebc5999ad81a1c786f7410059f76b62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d4f/class_origen_1_1_quantity.html#acc4906b5560d05fca55075927b056dfa">T::SCP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a> (size_t i) const </td></tr>
@@ -137,12 +147,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a92f769662373ecfcae1feb52ddd05bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a> () const </td></tr>
 <tr class="separator:a3f23c97b6c9f2a88e1121d1c633ccafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4c578a8ed0ed5d51eb74fcdda179f956"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#a4c578a8ed0ed5d51eb74fcdda179f956">synchronize</a> ()</td></tr>
+<tr class="separator:a4c578a8ed0ed5d51eb74fcdda179f956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a60a68dc70701d45cef0266e3f4c8b03f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; typename Q::SP &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#a60a68dc70701d45cef0266e3f4c8b03f">b_quantities</a></td></tr>
+<tr class="separator:a60a68dc70701d45cef0266e3f4c8b03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20da1ab0ff43931d588c7db18e03bfac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#af48928113681f030672d5275d3f65589">Representation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#a20da1ab0ff43931d588c7db18e03bfac">b_reps</a></td></tr>
+<tr class="separator:a20da1ab0ff43931d588c7db18e03bfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358d4a02f3d720cc815349e8e6fcb9dd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d4f/class_origen_1_1_quantity.html#aeb083df5f9d3273ffaa05a700449b3d8">T::SP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a></td></tr>
+<tr class="separator:a358d4a02f3d720cc815349e8e6fcb9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Q = U::SP&gt;<br />
 class Origen::History&lt; Q &gt;</h3>
 
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#_a4">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#_a4">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a0dab4d06ed80efb29446a33e365f8e51"></a>
 <div class="memitem">
@@ -190,8 +214,10 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#a12">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a13">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3c6ddea3e28c1a002ff64e9faf5f6e80"></a>
@@ -214,8 +240,10 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#a6">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a7">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a03760257da4b7321469c7fa669b6b441"></a>
@@ -272,8 +300,10 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#a14">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a15">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa33634ba12ee4a9520d3947a37fb9fcf"></a>
@@ -297,8 +327,10 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#a13">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a14">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a330e3e172c5e16b99574339d850ad052"></a>
@@ -355,8 +387,10 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#a11">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a12">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aacc73f5f35b1cdb891f01879b22a920f"></a>
@@ -396,8 +430,10 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#a7">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a8">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad2e41c8280b6cdf93d39e1135d2abdf7"></a>
@@ -469,8 +505,10 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d31/tst_history_8cpp-example.html#a16">tstHistory.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a17">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a4c578a8ed0ed5d51eb74fcdda179f956"></a>

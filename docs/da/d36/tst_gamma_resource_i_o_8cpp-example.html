@@ -223,7 +223,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        ofs &lt;&lt; <span class="stringliteral">&quot;     &#39;&quot;</span> &lt;&lt; ctxt &lt;&lt; <span class="stringliteral">&quot;&#39; u 1:2 w l\n&quot;</span>;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="line"><span class="keyword">class </span>GammaResourceData : <span class="keyword">public</span> ::testing::TestWithParam&lt;int&gt;</div>
+<div class="line"><span class="keyword">class </span><a name="_a5"></a><a class="code" href="../../d8/d75/class_gamma_resource_data.html">GammaResourceData</a> : <span class="keyword">public</span> ::testing::TestWithParam&lt;int&gt;</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> SetUp()</div>
@@ -251,11 +251,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <span class="keywordflow">for</span>( <span class="keyword">auto</span> path : paths )</div>
 <div class="line">        {</div>
 <div class="line">            std::string full_path( scale_data + path );</div>
-<div class="line">            <a name="_a5"></a><a class="code" href="../../da/d22/class_origen_1_1_gamma_resource_i_o.html">GammaResourceIO</a> io;</div>
+<div class="line">            <a name="_a6"></a><a class="code" href="../../da/d22/class_origen_1_1_gamma_resource_i_o.html">GammaResourceIO</a> io;</div>
 <div class="line">            DataContainer opts;</div>
 <div class="line"></div>
-<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#a3dc0469598c41fd373fa9958de8fa57d">SP_GammaResource</a> resource( <span class="keyword">new</span> <a name="_a6"></a><a class="code" href="../../d1/d58/class_origen_1_1_gamma_resource.html">GammaResource</a>() );</div>
-<div class="line">            <span class="keywordtype">bool</span> <a name="a7"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a> = io.load( *resource, full_path, opts );</div>
+<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#a3dc0469598c41fd373fa9958de8fa57d">SP_GammaResource</a> resource( <span class="keyword">new</span> <a name="_a7"></a><a class="code" href="../../d1/d58/class_origen_1_1_gamma_resource.html">GammaResource</a>() );</div>
+<div class="line">            <span class="keywordtype">bool</span> <a name="a8"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a> = io.load( *resource, full_path, opts );</div>
 <div class="line">            EXPECT_TRUE( read );</div>
 <div class="line">            resource_map[path] = resource;</div>
 <div class="line"></div>
@@ -265,30 +265,30 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">                std::cout &lt;&lt; nprintf(</div>
 <div class="line">                    <span class="stringliteral">&quot;%30s %7d %7s %3d %3d %1s %7.1e %7.1e %7.1e\n&quot;</span>,</div>
 <div class="line">                    path.c_str(),</div>
-<div class="line">                    em.<a name="a8"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>(),</div>
+<div class="line">                    em.<a name="a9"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>(),</div>
 <div class="line">                    ScaleData::Utils::pizzzaaa_to_symbol( em.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>() ).c_str(),</div>
-<div class="line">                    em.<a name="a9"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a770f10e7628ff4b587637d7ed55a7222">num_continuous</a>(),</div>
-<div class="line">                    em.<a name="a10"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a7903e36a8aa20eba22aa9fa8e43def68">num_discrete</a>(),</div>
+<div class="line">                    em.<a name="a10"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a770f10e7628ff4b587637d7ed55a7222">num_continuous</a>(),</div>
+<div class="line">                    em.<a name="a11"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a7903e36a8aa20eba22aa9fa8e43def68">num_discrete</a>(),</div>
 <div class="line">                    ( em.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a770f10e7628ff4b587637d7ed55a7222">num_continuous</a>() == 0 || em.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a7903e36a8aa20eba22aa9fa8e43def68">num_discrete</a>() == 0 )</div>
 <div class="line">                        ? <span class="stringliteral">&quot;N&quot;</span></div>
 <div class="line">                        : <span class="stringliteral">&quot;Y&quot;</span>,</div>
-<div class="line">                    em.<a name="a11"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a27967a6e7b56b86bee49d5d8968dbcbf">total_intensity</a>(),</div>
-<div class="line">                    em.<a name="a12"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ab1364a28094f99bd8e04ee458b7f439b">total_energy_intensity</a>(),</div>
-<div class="line">                    em.<a name="a13"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a237fd13dda4ca2e568cc0c40ce38b2af">mean_energy</a>() );</div>
+<div class="line">                    em.<a name="a12"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a27967a6e7b56b86bee49d5d8968dbcbf">total_intensity</a>(),</div>
+<div class="line">                    em.<a name="a13"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ab1364a28094f99bd8e04ee458b7f439b">total_energy_intensity</a>(),</div>
+<div class="line">                    em.<a name="a14"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a237fd13dda4ca2e568cc0c40ce38b2af">mean_energy</a>() );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">    std::map&lt;std::string, SP_GammaResource&gt; resource_map;</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line">TEST_P( GammaResourceData, DISABLED_BinningPerformance )</div>
+<div class="line"><a name="a15"></a><a class="code" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a0ee1868fda931bd08ca7a8812514f32c">TEST_P</a>( <a class="code" href="../../d8/d75/class_gamma_resource_data.html">GammaResourceData</a>, DISABLED_BinningPerformance )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// get an energy grid</span></div>
 <div class="line">    <span class="keywordtype">double</span> emax = 1e+1;</div>
 <div class="line">    <span class="keywordtype">double</span> emin = 1e-4;</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">size_t</span> ndiv = GetParam();</div>
-<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> e2 = <a name="a14"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a01bfafdcd614b7fe7814c3a2d5f02ce8">EmissionSpectrum::create_bounds_log</a>( emax, emin, ndiv );</div>
+<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> e2 = <a name="a16"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a01bfafdcd614b7fe7814c3a2d5f02ce8">EmissionSpectrum::create_bounds_log</a>( emax, emin, ndiv );</div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> b2( ndiv + 1, 0.0 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// request a special print of an id</span></div>
@@ -307,9 +307,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <span class="keyword">const</span> <a class="code" href="../../d1/d58/class_origen_1_1_gamma_resource.html">GammaResource</a>&amp; resource = *entry.second;</div>
 <div class="line">        <span class="keyword">const</span> std::string&amp; path = entry.first;</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; resource.<a name="a15"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a6bc8b708013152c8c2acd5106ccf2faa">emission_size</a>(); ++i )</div>
+<div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; resource.<a name="a17"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a6bc8b708013152c8c2acd5106ccf2faa">emission_size</a>(); ++i )</div>
 <div class="line">        {</div>
-<div class="line">            <a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a> em = resource.<a name="a16"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a9ae9704c9c07df64626e50f22d3a5f67">emission_at</a>( i );</div>
+<div class="line">            <a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a> em = resource.<a name="a18"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a9ae9704c9c07df64626e50f22d3a5f67">emission_at</a>( i );</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">if</span>( em.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>() == print_id )</div>
 <div class="line">            {</div>
@@ -322,7 +322,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">                <span class="comment">// bin with weight in map or something small</span></div>
 <div class="line">                <span class="comment">// if not found so is not a null op</span></div>
 <div class="line">                <span class="keywordtype">double</span> id_wt = map.count( em.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>() ) &gt; 0 ? map[em.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>()] : 1e-20;</div>
-<div class="line">                em.<a name="a17"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#aaeb3102bde9f0f1bae5738e5efdc79ca">bin</a>( e2, &amp;b2, id_wt );</div>
+<div class="line">                em.<a name="a19"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#aaeb3102bde9f0f1bae5738e5efdc79ca">bin</a>( e2, &amp;b2, id_wt );</div>
 <div class="line"></div>
 <div class="line">                <span class="comment">// check that we are always increasing the total intensity</span></div>
 <div class="line">                <span class="keywordtype">double</span> this_sum = ScaleSTL::sum( b2 );</div>
@@ -340,12 +340,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <a name="a18"></a><a class="code" href="../../d5/dc1/namespace_origen.html#af1145aecbf23fda29398fa71fe1c8dda">printTimingReport</a>();</div>
+<div class="line">    <a name="a20"></a><a class="code" href="../../d5/dc1/namespace_origen.html#af1145aecbf23fda29398fa71fe1c8dda">printTimingReport</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// print out complete bins</span></div>
 <div class="line">    {</div>
 <div class="line">        std::ofstream ofs( <span class="stringliteral">&quot;bins&quot;</span> + std::to_string( ndiv ) + <span class="stringliteral">&quot;.txt&quot;</span> );</div>
-<div class="line">        ofs &lt;&lt; <a name="a19"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#a5a13ed74158b085aa190fc6e54f462de">Spectrum::print_bins</a>( e2, b2 );</div>
+<div class="line">        ofs &lt;&lt; <a name="a21"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#a5a13ed74158b085aa190fc6e54f462de">Spectrum::print_bins</a>( e2, b2 );</div>
 <div class="line">    }</div>
 <div class="line">    {</div>
 <div class="line">        std::ofstream ofs( <span class="stringliteral">&quot;bins&quot;</span> + std::to_string( ndiv ) + <span class="stringliteral">&quot;.gpt&quot;</span> );</div>
@@ -356,11 +356,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">INSTANTIATE_TEST_CASE_P( Ndiv,</div>
-<div class="line">                         GammaResourceData,</div>
+<div class="line"><a name="a22"></a><a class="code" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#ac26f2859e22771402aab56cf3a2baa0f">INSTANTIATE_TEST_CASE_P</a>( Ndiv,</div>
+<div class="line">                         <a class="code" href="../../d8/d75/class_gamma_resource_data.html">GammaResourceData</a>,</div>
 <div class="line">                         ::testing::Values( 1, 1e1, 1e2, 1e3, 1e4, 1e5 ) );</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../da/d22/class_origen_1_1_gamma_resource_i_o.html">GammaResourceIO</a>, cimg )</div>
+<div class="line"><a name="a23"></a><a class="code" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a2381a234a8b9a67883e2ffd6f87a23b1">TEST</a>( <a class="code" href="../../da/d22/class_origen_1_1_gamma_resource_i_o.html">GammaResourceIO</a>, cimg )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d1/d58/class_origen_1_1_gamma_resource.html">GammaResource</a> resource;</div>
 <div class="line"></div>
@@ -377,14 +377,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">else</span></div>
 <div class="line">    {</div>
-<div class="line">        <a name="_a20"></a><a class="code" href="../../d5/d19/class_origen_1_1_gamma_resource_i_o__cimg.html">GammaResourceIO_cimg</a> io;</div>
+<div class="line">        <a name="_a24"></a><a class="code" href="../../d5/d19/class_origen_1_1_gamma_resource_i_o__cimg.html">GammaResourceIO_cimg</a> io;</div>
 <div class="line">        DataContainer opts;</div>
 <div class="line">        std::istringstream stream( <a class="code" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a37342918c8bd43097e28c6b8a0fb39c6">snippet</a> );</div>
-<div class="line">        <span class="keywordtype">bool</span> read = io.<a name="a21"></a><a class="code" href="../../d5/d19/class_origen_1_1_gamma_resource_i_o__cimg.html#ac167e0b0a5f50d6e5f5473b75f0bfab0">read</a>( resource, stream, opts );</div>
+<div class="line">        <span class="keywordtype">bool</span> read = io.<a name="a25"></a><a class="code" href="../../d5/d19/class_origen_1_1_gamma_resource_i_o__cimg.html#ac167e0b0a5f50d6e5f5473b75f0bfab0">read</a>( resource, stream, opts );</div>
 <div class="line">        EXPECT_TRUE( read );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    EXPECT_TRUE( resource.<a name="a22"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#aee4ca6fa73f12e1f24c58dd088bb4936">has_emission</a>( 4007 ) );</div>
+<div class="line">    EXPECT_TRUE( resource.<a name="a26"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#aee4ca6fa73f12e1f24c58dd088bb4936">has_emission</a>( 4007 ) );</div>
 <div class="line">    EXPECT_TRUE( resource.<a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#aee4ca6fa73f12e1f24c58dd088bb4936">has_emission</a>( 11025 ) );</div>
 <div class="line">    EXPECT_TRUE( resource.<a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#aee4ca6fa73f12e1f24c58dd088bb4936">has_emission</a>( 92238 ) );</div>
 <div class="line">    EXPECT_TRUE( resource.<a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#aee4ca6fa73f12e1f24c58dd088bb4936">has_emission</a>( 58151 ) );</div>
@@ -393,13 +393,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// Lines test</span></div>
 <div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a> emission = resource.<a name="a23"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a6e7c1020d091d23ec2572779c4d19708">emission</a>( 92238 );</div>
+<div class="line">        <a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a> emission = resource.<a name="a27"></a><a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a6e7c1020d091d23ec2572779c4d19708">emission</a>( 92238 );</div>
 <div class="line">        EXPECT_EQ( 0, emission.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a770f10e7628ff4b587637d7ed55a7222">num_continuous</a>() );</div>
 <div class="line">        EXPECT_EQ( 17, emission.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a7903e36a8aa20eba22aa9fa8e43def68">num_discrete</a>() );</div>
 <div class="line"></div>
-<div class="line">        <a name="_a24"></a><a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html">DiscreteSpectrum</a> lines = emission.<a name="a25"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ad61ff6e6c9b86dc07d392695dad02671">discrete</a>();</div>
+<div class="line">        <a name="_a28"></a><a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html">DiscreteSpectrum</a> lines = emission.<a name="a29"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ad61ff6e6c9b86dc07d392695dad02671">discrete</a>();</div>
 <div class="line">        EXPECT_DOUBLE_EQ( 1.0808E-02, lines.search( 3.0613E-03 ) );</div>
-<div class="line">        EXPECT_DOUBLE_EQ( <a name="a26"></a><a class="code" href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">BAD_DOUBLE</a>, lines.search( 3.0615E-03 ) );</div>
+<div class="line">        EXPECT_DOUBLE_EQ( <a name="a30"></a><a class="code" href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">BAD_DOUBLE</a>, lines.search( 3.0615E-03 ) );</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Continuum test</span></div>
@@ -407,9 +407,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a> emission = resource.<a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a6e7c1020d091d23ec2572779c4d19708">emission</a>( 58151 );</div>
 <div class="line">        EXPECT_EQ( 138, emission.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a770f10e7628ff4b587637d7ed55a7222">num_continuous</a>() );</div>
 <div class="line">        EXPECT_EQ( 0, emission.<a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a7903e36a8aa20eba22aa9fa8e43def68">num_discrete</a>() );</div>
-<div class="line">        <a name="_a27"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> continuous = emission.<a name="a28"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a2001084edc2b9e9e8ea402f22e07491a">continuous</a>();</div>
+<div class="line">        <a name="_a31"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> continuous = emission.<a name="a32"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a2001084edc2b9e9e8ea402f22e07491a">continuous</a>();</div>
 <div class="line">        EXPECT_EQ( 139, continuous.bounds_size() );</div>
-<div class="line">        <span class="keywordtype">double</span> e1 = continuous.<a name="a29"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#ad07d872f51b642657f333f6135b816b9">bounds_at</a>( 1 );</div>
+<div class="line">        <span class="keywordtype">double</span> e1 = continuous.<a name="a33"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#ad07d872f51b642657f333f6135b816b9">bounds_at</a>( 1 );</div>
 <div class="line">        EXPECT_FLOAT_EQ( 5.4862E+00, e1 );</div>
 <div class="line">        <span class="keywordtype">double</span> e2 = continuous.bounds_at( 2 );</div>
 <div class="line">        EXPECT_FLOAT_EQ( 5.4625E+00, e2 );</div>

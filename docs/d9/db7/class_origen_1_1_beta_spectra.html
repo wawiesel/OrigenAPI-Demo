@@ -104,7 +104,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d5/dcc/class_origen_1_1_beta_spectra-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BetaSpectra Class Reference</div>  </div>
@@ -125,6 +128,164 @@ Inheritance diagram for BetaSpectra:</div>
 <p>Container for beta spectrum data.  
  <a href="../../d9/db7/class_origen_1_1_beta_spectra.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7351842d7f6987571bb7d56c6b7a72ae"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html">BetaSpectra</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html#a7351842d7f6987571bb7d56c6b7a72ae">SP</a></td></tr>
+<tr class="separator:a7351842d7f6987571bb7d56c6b7a72ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f71926fc3deff9bd9bf8fea8da008b9"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; const <a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html">BetaSpectra</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html#a6f71926fc3deff9bd9bf8fea8da008b9">SCP</a></td></tr>
+<tr class="separator:a6f71926fc3deff9bd9bf8fea8da008b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a08be673a6a4873b5a9ea39248dfee99b"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a>(const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a> &amp;, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a08be673a6a4873b5a9ea39248dfee99b">Integrator_t</a></td></tr>
+<tr class="separator:a08be673a6a4873b5a9ea39248dfee99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Basic Methods</h2></td></tr>
+<tr class="memitem:af43ae7da1529751a1670dd955079731c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#af43ae7da1529751a1670dd955079731c">bounds</a> () const </td></tr>
+<tr class="memdesc:af43ae7da1529751a1670dd955079731c"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a const reference to bounds  <a href="#af43ae7da1529751a1670dd955079731c">More...</a><br /></td></tr>
+<tr class="separator:af43ae7da1529751a1670dd955079731c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264abe5d00fbdbd158758c49769bfdfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a264abe5d00fbdbd158758c49769bfdfe">set_bounds</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;)</td></tr>
+<tr class="memdesc:a264abe5d00fbdbd158758c49769bfdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the bounds (copy operation)  <a href="#a264abe5d00fbdbd158758c49769bfdfe">More...</a><br /></td></tr>
+<tr class="separator:a264abe5d00fbdbd158758c49769bfdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade32901d5cd290a582ef0687b181ff58"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ade32901d5cd290a582ef0687b181ff58">intensity</a> () const </td></tr>
+<tr class="memdesc:ade32901d5cd290a582ef0687b181ff58"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a const reference to intensity  <a href="#ade32901d5cd290a582ef0687b181ff58">More...</a><br /></td></tr>
+<tr class="separator:ade32901d5cd290a582ef0687b181ff58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12704a8c4cefa8e359548bd6cda50de5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a12704a8c4cefa8e359548bd6cda50de5">set_intensity</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;)</td></tr>
+<tr class="memdesc:a12704a8c4cefa8e359548bd6cda50de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the intensity (copy operation)  <a href="#a12704a8c4cefa8e359548bd6cda50de5">More...</a><br /></td></tr>
+<tr class="separator:a12704a8c4cefa8e359548bd6cda50de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Comparison</h2></td></tr>
+<tr class="memitem:a218f85b7a31456afdaf5c7b667b756a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a218f85b7a31456afdaf5c7b667b756a3">match</a> (const <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> &amp;) const </td></tr>
+<tr class="separator:a218f85b7a31456afdaf5c7b667b756a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0e5fe85d8f3eb55ee20cb6ed0eba4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a7f0e5fe85d8f3eb55ee20cb6ed0eba4f">operator==</a> (const <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> &amp;) const </td></tr>
+<tr class="separator:a7f0e5fe85d8f3eb55ee20cb6ed0eba4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c387f7f75e97e3ffcf08a41a0812f1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ad9c387f7f75e97e3ffcf08a41a0812f1">match</a> (const <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> &amp;, const <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> &amp;)</td></tr>
+<tr class="separator:ad9c387f7f75e97e3ffcf08a41a0812f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Convenience Methods</h2></td></tr>
+<tr class="memitem:a27967a6e7b56b86bee49d5d8968dbcbf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a27967a6e7b56b86bee49d5d8968dbcbf">total_intensity</a> () const </td></tr>
+<tr class="separator:a27967a6e7b56b86bee49d5d8968dbcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aaa0992d1615ec4f22ea0ba3be21bb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab323dec471bcb154d194a975f775c2ac">EnergyRange_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a9aaa0992d1615ec4f22ea0ba3be21bb1">energy_range</a> () const </td></tr>
+<tr class="separator:a9aaa0992d1615ec4f22ea0ba3be21bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237fd13dda4ca2e568cc0c40ce38b2af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a237fd13dda4ca2e568cc0c40ce38b2af">mean_energy</a> () const </td></tr>
+<tr class="separator:a237fd13dda4ca2e568cc0c40ce38b2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1364a28094f99bd8e04ee458b7f439b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ab1364a28094f99bd8e04ee458b7f439b">total_energy_intensity</a> () const </td></tr>
+<tr class="separator:ab1364a28094f99bd8e04ee458b7f439b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c7da2e495549da6d67276a2c798d5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ad9c7da2e495549da6d67276a2c798d5b">newsp_energy_intensity</a> () const </td></tr>
+<tr class="separator:ad9c7da2e495549da6d67276a2c798d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Memory-usage Variants of Other Methods</h2></td></tr>
+<tr class="memitem:ad3fe493b3752edccbac082d484d7ce3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ad3fe493b3752edccbac082d484d7ce3a">newptr_energy_intensity</a> () const </td></tr>
+<tr class="separator:ad3fe493b3752edccbac082d484d7ce3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72ebe9fbbb18f3803285cfd19c1f62a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab4e9f67822da93cfce527b86b214181b">SCP_Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ab72ebe9fbbb18f3803285cfd19c1f62a">scp_intensity</a> () const </td></tr>
+<tr class="memdesc:ab72ebe9fbbb18f3803285cfd19c1f62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a shared (read-only) intensity pointer  <a href="#ab72ebe9fbbb18f3803285cfd19c1f62a">More...</a><br /></td></tr>
+<tr class="separator:ab72ebe9fbbb18f3803285cfd19c1f62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf66d604072f3dff47bc3757b1179af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab4e9f67822da93cfce527b86b214181b">SCP_Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a5cf66d604072f3dff47bc3757b1179af">scp_bounds</a> () const </td></tr>
+<tr class="memdesc:a5cf66d604072f3dff47bc3757b1179af"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a shared (read-only) bounds pointer  <a href="#a5cf66d604072f3dff47bc3757b1179af">More...</a><br /></td></tr>
+<tr class="separator:a5cf66d604072f3dff47bc3757b1179af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Mapping Methods</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp1f218c859045bf74ae4032fdc29af706"></a> </p>
+</td></tr>
+<tr class="memitem:aec1c87c350b879026c3a82f6086669eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#aec1c87c350b879026c3a82f6086669eb">map_intensity</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;new_bounds, <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a08be673a6a4873b5a9ea39248dfee99b">Integrator_t</a> integrator, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *<a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ade32901d5cd290a582ef0687b181ff58">intensity</a>, double wt=1.0, double tol=<a class="el" href="../../da/d97/group___cxx_constants.html#ga2570295a00d37c827155c6b2d4039e52">ETOL</a>) const </td></tr>
+<tr class="separator:aec1c87c350b879026c3a82f6086669eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259e903b5cee63b74dd6721133a0b192"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a259e903b5cee63b74dd6721133a0b192">map_intensity</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;new_bounds, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *<a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ade32901d5cd290a582ef0687b181ff58">intensity</a>, double wt=1.0, double tol=<a class="el" href="../../da/d97/group___cxx_constants.html#ga2570295a00d37c827155c6b2d4039e52">ETOL</a>) const </td></tr>
+<tr class="separator:a259e903b5cee63b74dd6721133a0b192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5aba321a9008c28af2ad0dce6860501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ae5aba321a9008c28af2ad0dce6860501">remap_intensity</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *<a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ade32901d5cd290a582ef0687b181ff58">intensity</a>, double wt=1.0) const </td></tr>
+<tr class="separator:ae5aba321a9008c28af2ad0dce6860501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c25a6eeaa2b184571e129fa4929d4a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a8c25a6eeaa2b184571e129fa4929d4a0">has_mapping_variables</a> () const </td></tr>
+<tr class="separator:a8c25a6eeaa2b184571e129fa4929d4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73bdf4baa3aa4ce5fff1d59899cadb64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a73bdf4baa3aa4ce5fff1d59899cadb64">clear_mapping_variables</a> () const </td></tr>
+<tr class="separator:a73bdf4baa3aa4ce5fff1d59899cadb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a13ed74158b085aa190fc6e54f462de"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a5a13ed74158b085aa190fc6e54f462de">print_bins</a> () const </td></tr>
+<tr class="separator:a5a13ed74158b085aa190fc6e54f462de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Additional Methods for Language Bindings (e.g. Fortran)</h2></td></tr>
+<tr class="memitem:ad07d872f51b642657f333f6135b816b9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ad07d872f51b642657f333f6135b816b9">bounds_at</a> (size_t) const </td></tr>
+<tr class="memdesc:ad07d872f51b642657f333f6135b816b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">get element of bounds vector by index  <a href="#ad07d872f51b642657f333f6135b816b9">More...</a><br /></td></tr>
+<tr class="separator:ad07d872f51b642657f333f6135b816b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9aec2fb32759b0be29472395f073200"><td class="memItemLeft" align="right" valign="top">double const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#af9aec2fb32759b0be29472395f073200">bounds_array</a> () const </td></tr>
+<tr class="memdesc:af9aec2fb32759b0be29472395f073200"><td class="mdescLeft">&#160;</td><td class="mdescRight">return view of bounds vector  <a href="#af9aec2fb32759b0be29472395f073200">More...</a><br /></td></tr>
+<tr class="separator:af9aec2fb32759b0be29472395f073200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf910f0c2a73ff4790d43160511eb68"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a1bf910f0c2a73ff4790d43160511eb68">bounds_size</a> () const </td></tr>
+<tr class="memdesc:a1bf910f0c2a73ff4790d43160511eb68"><td class="mdescLeft">&#160;</td><td class="mdescRight">return size of bounds vector  <a href="#a1bf910f0c2a73ff4790d43160511eb68">More...</a><br /></td></tr>
+<tr class="separator:a1bf910f0c2a73ff4790d43160511eb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045a45f2dd2ea4d6601b6c16719a66bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a045a45f2dd2ea4d6601b6c16719a66bf">has_bounds</a> () const </td></tr>
+<tr class="memdesc:a045a45f2dd2ea4d6601b6c16719a66bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether the class has a non-null bounds  <a href="#a045a45f2dd2ea4d6601b6c16719a66bf">More...</a><br /></td></tr>
+<tr class="separator:a045a45f2dd2ea4d6601b6c16719a66bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c9586c8a67c063a8a8e4389a72096b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a43c9586c8a67c063a8a8e4389a72096b">get_bounds</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;) const </td></tr>
+<tr class="memdesc:a43c9586c8a67c063a8a8e4389a72096b"><td class="mdescLeft">&#160;</td><td class="mdescRight">populate an existing Vec_Dbl with a copy of bounds  <a href="#a43c9586c8a67c063a8a8e4389a72096b">More...</a><br /></td></tr>
+<tr class="separator:a43c9586c8a67c063a8a8e4389a72096b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775122065b14a55564ea51b547afea95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a775122065b14a55564ea51b547afea95">manageptr_bounds</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *&amp;)</td></tr>
+<tr class="memdesc:a775122065b14a55564ea51b547afea95"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the bounds (ownership transfer)  <a href="#a775122065b14a55564ea51b547afea95">More...</a><br /></td></tr>
+<tr class="separator:a775122065b14a55564ea51b547afea95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de5ca17c022fa163cde882012ec76eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a8de5ca17c022fa163cde882012ec76eb">getptr_bounds</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> const *&amp;) const </td></tr>
+<tr class="memdesc:a8de5ca17c022fa163cde882012ec76eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve pointer (read-only) to bounds  <a href="#a8de5ca17c022fa163cde882012ec76eb">More...</a><br /></td></tr>
+<tr class="separator:a8de5ca17c022fa163cde882012ec76eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a0828ccf6145dda6df44010a34043c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ab7a0828ccf6145dda6df44010a34043c">get_bounds_array</a> (size_t, double *) const </td></tr>
+<tr class="memdesc:ab7a0828ccf6145dda6df44010a34043c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get array of bounds vector (Fortran)  <a href="#ab7a0828ccf6145dda6df44010a34043c">More...</a><br /></td></tr>
+<tr class="separator:ab7a0828ccf6145dda6df44010a34043c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af471bb83392c93a1bb630ffa64128f7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#af471bb83392c93a1bb630ffa64128f7e">set_bounds_array</a> (size_t, double *)</td></tr>
+<tr class="memdesc:af471bb83392c93a1bb630ffa64128f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set bounds vector from array (Fortran)  <a href="#af471bb83392c93a1bb630ffa64128f7e">More...</a><br /></td></tr>
+<tr class="separator:af471bb83392c93a1bb630ffa64128f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa99babdb8e42dcddf06172da826f389a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#aa99babdb8e42dcddf06172da826f389a">intensity_at</a> (size_t) const </td></tr>
+<tr class="memdesc:aa99babdb8e42dcddf06172da826f389a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get element of intensity vector by index  <a href="#aa99babdb8e42dcddf06172da826f389a">More...</a><br /></td></tr>
+<tr class="separator:aa99babdb8e42dcddf06172da826f389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e95aa7b3d513225a9373e4759c8c75"><td class="memItemLeft" align="right" valign="top">double const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ae0e95aa7b3d513225a9373e4759c8c75">intensity_array</a> () const </td></tr>
+<tr class="memdesc:ae0e95aa7b3d513225a9373e4759c8c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">return view of intensity vector  <a href="#ae0e95aa7b3d513225a9373e4759c8c75">More...</a><br /></td></tr>
+<tr class="separator:ae0e95aa7b3d513225a9373e4759c8c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd767c32f4be065b68372a9288e4ca4e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#afd767c32f4be065b68372a9288e4ca4e">intensity_size</a> () const </td></tr>
+<tr class="memdesc:afd767c32f4be065b68372a9288e4ca4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return size of intensity vector  <a href="#afd767c32f4be065b68372a9288e4ca4e">More...</a><br /></td></tr>
+<tr class="separator:afd767c32f4be065b68372a9288e4ca4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ea9863a4edd280442f2cad89862b38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a94ea9863a4edd280442f2cad89862b38">has_intensity</a> () const </td></tr>
+<tr class="memdesc:a94ea9863a4edd280442f2cad89862b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether the class has a non-null intensity  <a href="#a94ea9863a4edd280442f2cad89862b38">More...</a><br /></td></tr>
+<tr class="separator:a94ea9863a4edd280442f2cad89862b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4ad6a3de12acd7ce06c9033dce4bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#acb4ad6a3de12acd7ce06c9033dce4bb2">get_intensity</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;) const </td></tr>
+<tr class="memdesc:acb4ad6a3de12acd7ce06c9033dce4bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">populate an existing Vec_Dbl with a copy of intensity  <a href="#acb4ad6a3de12acd7ce06c9033dce4bb2">More...</a><br /></td></tr>
+<tr class="separator:acb4ad6a3de12acd7ce06c9033dce4bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4bb6e91f43890535cb1cad121895a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#aac4bb6e91f43890535cb1cad121895a3">manageptr_intensity</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *&amp;)</td></tr>
+<tr class="memdesc:aac4bb6e91f43890535cb1cad121895a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the intensity (ownership transfer)  <a href="#aac4bb6e91f43890535cb1cad121895a3">More...</a><br /></td></tr>
+<tr class="separator:aac4bb6e91f43890535cb1cad121895a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02877483ea348d4fb6449bec63d2b9fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a02877483ea348d4fb6449bec63d2b9fc">getptr_intensity</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> const *&amp;) const </td></tr>
+<tr class="memdesc:a02877483ea348d4fb6449bec63d2b9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve pointer (read-only) to intensity  <a href="#a02877483ea348d4fb6449bec63d2b9fc">More...</a><br /></td></tr>
+<tr class="separator:a02877483ea348d4fb6449bec63d2b9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4151b755d14c4921da1289058c13bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a5c4151b755d14c4921da1289058c13bf">get_intensity_array</a> (size_t, double *) const </td></tr>
+<tr class="memdesc:a5c4151b755d14c4921da1289058c13bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">get array of intensity vector (Fortran)  <a href="#a5c4151b755d14c4921da1289058c13bf">More...</a><br /></td></tr>
+<tr class="separator:a5c4151b755d14c4921da1289058c13bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f7f470b85bc37a439ed7a92436549b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a29f7f470b85bc37a439ed7a92436549b">set_intensity_array</a> (size_t, double *)</td></tr>
+<tr class="memdesc:a29f7f470b85bc37a439ed7a92436549b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set intensity vector from array (Fortran)  <a href="#a29f7f470b85bc37a439ed7a92436549b">More...</a><br /></td></tr>
+<tr class="separator:a29f7f470b85bc37a439ed7a92436549b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Static Helper Functions</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp2e790d0211865dfc913b072ef70eab7c"></a> returns true if the new and old bounds have the same min/max energy, i.e. the mapping will be conservative  </p>
+</td></tr>
+<tr class="memitem:a3f109a06d7599a884a084a75e6fa715e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a3f109a06d7599a884a084a75e6fa715e">map_intensity</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;old_bounds, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;new_bounds, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a> &amp;union_to_old, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a> &amp;union_to_new, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;union_grid, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;old_intensity, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;union_wts, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *new_intensity, double wt=1.0)</td></tr>
+<tr class="separator:a3f109a06d7599a884a084a75e6fa715e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03773767d2f46597c7215a8bbd4ceeb1"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a03773767d2f46597c7215a8bbd4ceeb1">print_bins</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;<a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#af43ae7da1529751a1670dd955079731c">bounds</a>, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;<a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#ade32901d5cd290a582ef0687b181ff58">intensity</a>)</td></tr>
+<tr class="separator:a03773767d2f46597c7215a8bbd4ceeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da1cb8c24be5e696c07638c9de09412"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a4da1cb8c24be5e696c07638c9de09412">map_bins</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;old_bounds, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;new_bounds, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a> *union_to_old, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a> *union_to_new, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *union_grid, double tol=<a class="el" href="../../da/d97/group___cxx_constants.html#ga2570295a00d37c827155c6b2d4039e52">ETOL</a>)</td></tr>
+<tr class="separator:a4da1cb8c24be5e696c07638c9de09412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456eecb070c8bc91bcc00266e2964334"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a456eecb070c8bc91bcc00266e2964334">computeUnionWts_1</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;union_grid, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a> &amp;union_to_old, const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;old_flux)</td></tr>
+<tr class="separator:a456eecb070c8bc91bcc00266e2964334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Other</h2></td></tr>
+<tr class="memitem:abaa2509be8018c7c26c497b0ba482b73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#abaa2509be8018c7c26c497b0ba482b73">b_bounds</a></td></tr>
+<tr class="separator:abaa2509be8018c7c26c497b0ba482b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b90cce81369172fc68da239d9dcdb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a75b90cce81369172fc68da239d9dcdb1">b_intensity</a></td></tr>
+<tr class="separator:a75b90cce81369172fc68da239d9dcdb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a51861029bd6f4c6b96848bce2317a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a35a51861029bd6f4c6b96848bce2317a">canonicalize_bounds</a> ()</td></tr>
+<tr class="separator:a35a51861029bd6f4c6b96848bce2317a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2046ccc0956c218a449f721702e7e3ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a2046ccc0956c218a449f721702e7e3ac">canonicalize_intensity</a> ()</td></tr>
+<tr class="separator:a2046ccc0956c218a449f721702e7e3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa795cec9ff762e6cc3f3c2e1ed9a4283"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html#aa795cec9ff762e6cc3f3c2e1ed9a4283">BetaSpectra</a> ()</td></tr>
@@ -141,11 +302,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9a5e42ec8dc4900539ac7ca67a5e746c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab259e21885aaaf4375a0a7dcd74e3a32"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html#ab259e21885aaaf4375a0a7dcd74e3a32">operator==</a> (const <a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html">BetaSpectra</a> &amp;) const </td></tr>
 <tr class="separator:ab259e21885aaaf4375a0a7dcd74e3a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab232fa8d359d4510af3166cc91d85e8a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html#ab232fa8d359d4510af3166cc91d85e8a">match</a> (const <a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html">BetaSpectra</a> &amp;, const <a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html">BetaSpectra</a> &amp;)</td></tr>
+<tr class="separator:ab232fa8d359d4510af3166cc91d85e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a90f41edb0251a0b86d519366caf29e80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html#a90f41edb0251a0b86d519366caf29e80">d_nuclide_type</a></td></tr>
+<tr class="separator:a90f41edb0251a0b86d519366caf29e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Container for beta spectrum data. </p>
 <p>The <a class="el" href="../../d9/db7/class_origen_1_1_beta_spectra.html" title="Container for beta spectrum data. ">BetaSpectra</a> data container manages the beta intensity and the group structure. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/dd1/tst_beta_spectra_8cpp-example.html#_a0">tstBetaSpectra.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/d48/_core_2dc_2tests_2tst_beta_spectra_8cpp-example.html#_a1">Core/dc/tests/tstBetaSpectra.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a7351842d7f6987571bb7d56c6b7a72ae"></a>
 <div class="memitem">
@@ -429,9 +600,9 @@ Public Member Functions</h2></td></tr>
 
 <p>set the bounds (copy operation) </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_OBJECT(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a12">tstEmissionResource.cpp</a>, <a class="el" href="../../dd/d30/tst_emission_spectrum_8cpp-example.html#a5">tstEmissionSpectrum.cpp</a>, and <a class="el" href="../../d5/d3d/tst_gamma_resource_8cpp-example.html#a11">tstGammaResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/da0/_core_2dc_2tests_2tst_emission_spectrum_8cpp-example.html#a6">Core/dc/tests/tstEmissionSpectrum.cpp</a>, <a class="el" href="../../d4/d97/_core_2re_2tests_2tst_emission_resource_8cpp-example.html#a13">Core/re/tests/tstEmissionResource.cpp</a>, and <a class="el" href="../../da/d8e/_core_2re_2tests_2tst_gamma_resource_8cpp-example.html#a12">Core/re/tests/tstGammaResource.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a6185440953d33eed566c645dfcd74eae">FakeFactory::newspStateSet_10nuclide()</a>, <a class="el" href="../../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s62b::read()</a>, <a class="el" href="../../d5/d19/class_origen_1_1_gamma_resource_i_o__cimg.html#ac167e0b0a5f50d6e5f5473b75f0bfab0">GammaResourceIO_cimg::read()</a>, <a class="el" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_bof::read()</a>, <a class="el" href="../../d4/d85/class_origen_1_1_state_set_i_o__s61.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s61::read()</a>, and <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1()</a>.</p>
+<p>Referenced by <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a6185440953d33eed566c645dfcd74eae">FakeFactory::newspStateSet_10nuclide()</a>, <a class="el" href="../../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s62b::read()</a>, <a class="el" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_bof::read()</a>, <a class="el" href="../../d4/d85/class_origen_1_1_state_set_i_o__s61.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s61::read()</a>, <a class="el" href="../../d5/d19/class_origen_1_1_gamma_resource_i_o__cimg.html#ac167e0b0a5f50d6e5f5473b75f0bfab0">GammaResourceIO_cimg::read()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1()</a>, and <a class="el" href="../../de/d9e/tst_emission_spectrum_8cpp.html#aacc11300cf247216821265ebce12a197">TEST()</a>.</p>
 
 </div>
 </div>
@@ -1081,11 +1252,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d19/tst_discrete_spectrum_8cpp-example.html#a8">tstDiscreteSpectrum.cpp</a>, <a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a8">tstEmissionResource.cpp</a>, <a class="el" href="../../dd/d30/tst_emission_spectrum_8cpp-example.html#a8">tstEmissionSpectrum.cpp</a>, <a class="el" href="../../d5/d3d/tst_gamma_resource_8cpp-example.html#a8">tstGammaResource.cpp</a>, and <a class="el" href="../../da/d36/tst_gamma_resource_i_o_8cpp-example.html#a19">tstGammaResourceIO.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/d81/_core_2dc_2tests_2tst_discrete_spectrum_8cpp-example.html#a9">Core/dc/tests/tstDiscreteSpectrum.cpp</a>, <a class="el" href="../../d6/da0/_core_2dc_2tests_2tst_emission_spectrum_8cpp-example.html#a9">Core/dc/tests/tstEmissionSpectrum.cpp</a>, <a class="el" href="../../d7/d70/_core_2io_2tests_2tst_gamma_resource_i_o_8cpp-example.html#a21">Core/io/tests/tstGammaResourceIO.cpp</a>, <a class="el" href="../../d4/d97/_core_2re_2tests_2tst_emission_resource_8cpp-example.html#a9">Core/re/tests/tstEmissionResource.cpp</a>, and <a class="el" href="../../da/d8e/_core_2re_2tests_2tst_gamma_resource_8cpp-example.html#a9">Core/re/tests/tstGammaResource.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#abaa2509be8018c7c26c497b0ba482b73">Spectrum::b_bounds</a>, and <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a75b90cce81369172fc68da239d9dcdb1">Spectrum::b_intensity</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a3d7f0d6f69aae1086e7d5df429dd1b80">EmissionSpectrum::print_continuous()</a>.</p>
+<p>Referenced by <a class="el" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a3d7f0d6f69aae1086e7d5df429dd1b80">EmissionSpectrum::print_continuous()</a>, <a class="el" href="../../d0/d4b/tst_discrete_spectrum_8cpp.html#a22387e2c5585869cf19c195893371d9e">TEST()</a>, and <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a0ee1868fda931bd08ca7a8812514f32c">TEST_P()</a>.</p>
 
 </div>
 </div>
@@ -1147,8 +1318,10 @@ Public Member Functions</h2></td></tr>
 
 <p>get element of bounds vector by index </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d36/tst_gamma_resource_i_o_8cpp-example.html#a29">tstGammaResourceIO.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/d70/_core_2io_2tests_2tst_gamma_resource_i_o_8cpp-example.html#a33">Core/io/tests/tstGammaResourceIO.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a2381a234a8b9a67883e2ffd6f87a23b1">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af9aec2fb32759b0be29472395f073200"></a>

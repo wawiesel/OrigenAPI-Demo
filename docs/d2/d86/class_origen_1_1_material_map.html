@@ -105,6 +105,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d7/dbd/class_origen_1_1_material_map-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MaterialMap Class Reference</div>  </div>
@@ -124,6 +125,19 @@ Inheritance diagram for MaterialMap:</div>
 <p>Simple map of materials id-&gt;<a class="el" href="../../df/d34/class_origen_1_1_material.html" title="Container for an ORIGEN depletable material. ">Origen::Material</a>.  
  <a href="../../d2/d86/class_origen_1_1_material_map.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Standard::Serializable&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp17ac0d320585ece2947a594dae72c7b1"></a>See Standard::Serializable for details. </p>
+</td></tr>
+<tr class="memitem:ae4c23583af6639cd829b18fac3280e24"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d86/class_origen_1_1_material_map.html#ae4c23583af6639cd829b18fac3280e24">serialize</a> (Standard::AbstractStream *stream) const </td></tr>
+<tr class="separator:ae4c23583af6639cd829b18fac3280e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fdab80f4d25ff470dc98ec59635e5c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d86/class_origen_1_1_material_map.html#ad6fdab80f4d25ff470dc98ec59635e5c">deserialize</a> (Standard::AbstractStream *stream)</td></tr>
+<tr class="separator:ad6fdab80f4d25ff470dc98ec59635e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76830aeae6053d193eefb376628f9268"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d86/class_origen_1_1_material_map.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a> () const </td></tr>
+<tr class="separator:a76830aeae6053d193eefb376628f9268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc289ff50350b0a19b071f74ec6e533"><td class="memItemLeft" align="right" valign="top">virtual Standard::Serializable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d86/class_origen_1_1_material_map.html#a9dc289ff50350b0a19b071f74ec6e533">getCopy</a> () const </td></tr>
+<tr class="separator:a9dc289ff50350b0a19b071f74ec6e533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4c836366779d96dd2370aa244a92039"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">SP_Material</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d86/class_origen_1_1_material_map.html#ae4c836366779d96dd2370aa244a92039">get</a> (int id) const </td></tr>
@@ -149,10 +163,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8a5f792e0b089585bd71f8b8822695da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa48c39f92bc04eded742f5310c74aafe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d86/class_origen_1_1_material_map.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a> () const </td></tr>
 <tr class="separator:aa48c39f92bc04eded742f5310c74aafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a4736f9b2b54dddaa10b54581a23a1789"><td class="memItemLeft" align="right" valign="top">K&#160;</td><td class="memItemRight" valign="bottom"><b>keys</b></td></tr>
+<tr class="memdesc:a4736f9b2b54dddaa10b54581a23a1789"><td class="mdescLeft">&#160;</td><td class="mdescRight">STL member.  <a href="#a4736f9b2b54dddaa10b54581a23a1789">More...</a><br /></td></tr>
+<tr class="separator:a4736f9b2b54dddaa10b54581a23a1789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af400dbe3fe1572c567f882190c772196"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd7/tst_history_8cpp.html#a0dab4d06ed80efb29446a33e365f8e51">T</a>&#160;</td><td class="memItemRight" valign="bottom"><b>elements</b></td></tr>
+<tr class="memdesc:af400dbe3fe1572c567f882190c772196"><td class="mdescLeft">&#160;</td><td class="mdescRight">STL member.  <a href="#af400dbe3fe1572c567f882190c772196">More...</a><br /></td></tr>
+<tr class="separator:af400dbe3fe1572c567f882190c772196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple map of materials id-&gt;<a class="el" href="../../df/d34/class_origen_1_1_material.html" title="Container for an ORIGEN depletable material. ">Origen::Material</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#_a15">exNEAMS.cpp</a>, <a class="el" href="../../d0/dc5/tstio_8cpp-example.html#_a1">tstio.cpp</a>, <a class="el" href="../../dd/d60/tst_material_8cpp-example.html#_a7">tstMaterial.cpp</a>, <a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#_a39">tstMaterialBuffer.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#_a11">tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#_a5">tstParallelDepletion.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dfd/_core_2dc_2tests_2tst_material_8cpp-example.html#_a10">Core/dc/tests/tstMaterial.cpp</a>, <a class="el" href="../../de/dd3/_core_2fn_2tests_2tstio_8cpp-example.html#_a2">Core/fn/tests/tstio.cpp</a>, <a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#_a39">Core/io/tests/tstMaterialBuffer.cpp</a>, <a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#_a23">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#_a6">Manager/mzd/tests/tstParallelDepletion.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae4c836366779d96dd2370aa244a92039"></a>
 <div class="memitem">
@@ -187,8 +210,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>add a new material </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d60/tst_material_8cpp-example.html#a8">tstMaterial.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dfd/_core_2dc_2tests_2tst_material_8cpp-example.html#a11">Core/dc/tests/tstMaterial.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d3/d31/tst_material_8cpp.html#a6fd8580fbe9cbe8eca82db9cfe222502">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1be7856230c2ba34178f41f199dd0d83"></a>
@@ -240,8 +265,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>total cold volume (cm^3) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d60/tst_material_8cpp-example.html#a9">tstMaterial.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dfd/_core_2dc_2tests_2tst_material_8cpp-example.html#a12">Core/dc/tests/tstMaterial.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d3/d31/tst_material_8cpp.html#a6fd8580fbe9cbe8eca82db9cfe222502">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7280c744f5ba9d41356836b1f1baf63a"></a>
@@ -258,8 +285,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>total mass (g) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d60/tst_material_8cpp-example.html#a10">tstMaterial.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dfd/_core_2dc_2tests_2tst_material_8cpp-example.html#a13">Core/dc/tests/tstMaterial.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d3/d31/tst_material_8cpp.html#a6fd8580fbe9cbe8eca82db9cfe222502">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8a5f792e0b089585bd71f8b8822695da"></a>
@@ -276,8 +305,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>total hm mass (g) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d60/tst_material_8cpp-example.html#a11">tstMaterial.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dfd/_core_2dc_2tests_2tst_material_8cpp-example.html#a14">Core/dc/tests/tstMaterial.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d3/d31/tst_material_8cpp.html#a6fd8580fbe9cbe8eca82db9cfe222502">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae4c23583af6639cd829b18fac3280e24"></a>

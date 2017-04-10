@@ -683,12 +683,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">return</span> g_libreg;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( MaterialBuffer, hdf5 )</div>
+<div class="line"><a name="a43"></a><a class="code" href="../../db/d51/tst_material_buffer_8cpp.html#a8b1d55ab032473483af51878fa27e812">TEST</a>( MaterialBuffer, hdf5 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// library</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib = <a name="a43"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>( <span class="keyword">new</span> <a name="_a44"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a>() );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib = <a name="a44"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>( <span class="keyword">new</span> <a name="_a45"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a>() );</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordtype">bool</span> pass = <a name="a45"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( *lib );</div>
+<div class="line">        <span class="keywordtype">bool</span> pass = <a name="a46"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( *lib );</div>
 <div class="line">        ASSERT_TRUE( pass );</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -700,8 +700,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Origen::Vec_Int</a> ref_ids;</div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> ref_vals;</div>
-<div class="line">    <a name="a46"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a>( ref_ids, ref_vals );</div>
-<div class="line">    mat-&gt;<a name="a47"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#aa08562727b473f6c74ef84894eff4040">set_numden_bos</a>( ref_vals, ref_ids );</div>
+<div class="line">    <a name="a47"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a>( ref_ids, ref_vals );</div>
+<div class="line">    mat-&gt;<a name="a48"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#aa08562727b473f6c74ef84894eff4040">set_numden_bos</a>( ref_vals, ref_ids );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// add the material map</span></div>
 <div class="line">    <a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a> mat_map;</div>
@@ -709,13 +709,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// transition matrix</span></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7a406c531668ac8d63ce2e70eb1b38f4">Origen::SP_TransitionMatrixP</a> trx_m1 =</div>
-<div class="line">        mat-&gt;<a name="a48"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#ac95b2f770966959fbe0cd46d1ee78cf6">library</a>()-&gt;newsp_transition_matrix_at( 0 );</div>
+<div class="line">        mat-&gt;<a name="a49"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#ac95b2f770966959fbe0cd46d1ee78cf6">library</a>()-&gt;newsp_transition_matrix_at( 0 );</div>
 <div class="line">    <span class="keywordtype">double</span> flux_m1 = 3.91;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// add a step</span></div>
-<div class="line">    mat-&gt;<a name="a49"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#a9a32702e796b20e9c67d247267b8c38a">add_step</a>( 123.456 );  <span class="comment">// step 0</span></div>
-<div class="line">    mat-&gt;<a name="a50"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#a73f6b4b0c94c3fb475ecf64379f99f6a">set_flux</a>( flux_m1 );</div>
-<div class="line">    mat-&gt;<a name="a51"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#a9b66000066bc908fe821f1a227a4d823">set_transition_matrix</a>( trx_m1 );</div>
+<div class="line">    mat-&gt;<a name="a50"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#a9a32702e796b20e9c67d247267b8c38a">add_step</a>( 123.456 );  <span class="comment">// step 0</span></div>
+<div class="line">    mat-&gt;<a name="a51"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#a73f6b4b0c94c3fb475ecf64379f99f6a">set_flux</a>( flux_m1 );</div>
+<div class="line">    mat-&gt;<a name="a52"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html#a9b66000066bc908fe821f1a227a4d823">set_transition_matrix</a>( trx_m1 );</div>
 <div class="line"></div>
 <div class="line">    mat-&gt;<a class="code" href="../../df/d34/class_origen_1_1_material.html#a9a32702e796b20e9c67d247267b8c38a">add_step</a>( 223.456 );  <span class="comment">// step 1</span></div>
 <div class="line">    mat-&gt;<a class="code" href="../../df/d34/class_origen_1_1_material.html#a73f6b4b0c94c3fb475ecf64379f99f6a">set_flux</a>( flux_m1 );</div>

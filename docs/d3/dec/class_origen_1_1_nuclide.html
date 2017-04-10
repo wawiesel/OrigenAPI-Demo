@@ -104,7 +104,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="../../de/ddd/class_origen_1_1_nuclide-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Nuclide Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -126,11 +129,231 @@ Inheritance diagram for Nuclide:</div>
 <p>Defines the nuclide interface for the <a class="el" href="../../df/d1a/class_origen_1_1_transition_system.html" title="Defines the interface TransitionSystem. ">TransitionSystem</a>.  
  <a href="../../d3/dec/class_origen_1_1_nuclide.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a6e971010e3448e235944ab8a5d9d095b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/dc1/namespace_origen.html#a1ad92e6eff1bb424299002cfe6c97307">SP_Nuclide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">SP</a></td></tr>
+<tr class="memdesc:a6e971010e3448e235944ab8a5d9d095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">strong pointer  <a href="#a6e971010e3448e235944ab8a5d9d095b">More...</a><br /></td></tr>
+<tr class="separator:a6e971010e3448e235944ab8a5d9d095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d1df6225e5de38c399818a0546a2927"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/dc1/namespace_origen.html#abb063989753d57e3bdf2d6169e7d868a">WP_Nuclide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a8d1df6225e5de38c399818a0546a2927">WP</a></td></tr>
+<tr class="memdesc:a8d1df6225e5de38c399818a0546a2927"><td class="mdescLeft">&#160;</td><td class="mdescRight">weak pointer  <a href="#a8d1df6225e5de38c399818a0546a2927">More...</a><br /></td></tr>
+<tr class="separator:a8d1df6225e5de38c399818a0546a2927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281265f073fb2e5df206bc61ead7c7ca"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/dc1/namespace_origen.html#a945bc514ad9497c57e0576aad458293e">CWP_Nuclide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a281265f073fb2e5df206bc61ead7c7ca">CWP</a></td></tr>
+<tr class="memdesc:a281265f073fb2e5df206bc61ead7c7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">const weak pointer  <a href="#a281265f073fb2e5df206bc61ead7c7ca">More...</a><br /></td></tr>
+<tr class="separator:a281265f073fb2e5df206bc61ead7c7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Origen::Checkable&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp015343b88ac2c58800c472dc06ceb8c5"></a>See <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html">Origen::Checkable</a> for details. </p>
+</td></tr>
+<tr class="memitem:a37627d5d5bba7f4a8690c71c2ab3cb07"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a> () const </td></tr>
+<tr class="separator:a37627d5d5bba7f4a8690c71c2ab3cb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f2506684e94df1027d6cc61815da55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a48f2506684e94df1027d6cc61815da55">get_name</a> (std::string &amp;<a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>) const </td></tr>
+<tr class="separator:a48f2506684e94df1027d6cc61815da55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cafd0174fbe3e0b8d18060fb87d1db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a74cafd0174fbe3e0b8d18060fb87d1db">set_name</a> (std::string <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>)</td></tr>
+<tr class="separator:a74cafd0174fbe3e0b8d18060fb87d1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c063cfb2479f614be43b9d2f92ba63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a> () const </td></tr>
+<tr class="separator:ae0c063cfb2479f614be43b9d2f92ba63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fb1d841c96187de27e808a25831ea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a45fb1d841c96187de27e808a25831ea8">get_id</a> (int &amp;<a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>) const </td></tr>
+<tr class="separator:a45fb1d841c96187de27e808a25831ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff8f115eede06acb2c131ec56b3f3a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a6ff8f115eede06acb2c131ec56b3f3a4">set_id</a> (int <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>)</td></tr>
+<tr class="separator:a6ff8f115eede06acb2c131ec56b3f3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9a8833481bcdf07b02103ce7fd1618"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a0f9a8833481bcdf07b02103ce7fd1618">has_initialized_id</a> () const </td></tr>
+<tr class="separator:a0f9a8833481bcdf07b02103ce7fd1618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48c39f92bc04eded742f5310c74aafe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a> () const </td></tr>
+<tr class="separator:aa48c39f92bc04eded742f5310c74aafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e41c8280b6cdf93d39e1135d2abdf7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ad2e41c8280b6cdf93d39e1135d2abdf7">good</a> () const </td></tr>
+<tr class="separator:ad2e41c8280b6cdf93d39e1135d2abdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7e8ee6da0df06c3a5b83f74b960720"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#afe7e8ee6da0df06c3a5b83f74b960720">good</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Vec_Str</a> &amp;errors) const </td></tr>
+<tr class="separator:afe7e8ee6da0df06c3a5b83f74b960720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a4821adb73cda110fab0770eb6a386"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a12a4821adb73cda110fab0770eb6a386">is_initialized</a> () const </td></tr>
+<tr class="separator:a12a4821adb73cda110fab0770eb6a386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e47229702e5fe4ac4200b550c15a947"><td class="memItemLeft" align="right" valign="top">Scale::Json::Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a3e47229702e5fe4ac4200b550c15a947">to_json</a> () const </td></tr>
+<tr class="separator:a3e47229702e5fe4ac4200b550c15a947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Origen::Nuclide&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp78af661c77aafac71a9f2dee2c637fc4"></a>See <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html" title="Defines the nuclide interface for the TransitionSystem. ">Origen::Nuclide</a> for details. </p>
+</td></tr>
+<tr class="memitem:a0dc0b663d88abbb5c08dac3b16230b13"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a0dc0b663d88abbb5c08dac3b16230b13">gains</a> () const </td></tr>
+<tr class="memdesc:a0dc0b663d88abbb5c08dac3b16230b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vector of gains producing the nuclide.  <a href="#a0dc0b663d88abbb5c08dac3b16230b13">More...</a><br /></td></tr>
+<tr class="separator:a0dc0b663d88abbb5c08dac3b16230b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32f3e770cbf2613ccc917825f949891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#af32f3e770cbf2613ccc917825f949891">get_gains</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> &gt; &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a0dc0b663d88abbb5c08dac3b16230b13">gains</a>) const </td></tr>
+<tr class="memdesc:af32f3e770cbf2613ccc917825f949891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of gains producing the nuclide.  <a href="#af32f3e770cbf2613ccc917825f949891">More...</a><br /></td></tr>
+<tr class="separator:af32f3e770cbf2613ccc917825f949891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca6a8ea68a04c571e95886c8246af39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#adca6a8ea68a04c571e95886c8246af39">set_gains</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> &gt; <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a0dc0b663d88abbb5c08dac3b16230b13">gains</a>)</td></tr>
+<tr class="memdesc:adca6a8ea68a04c571e95886c8246af39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the gains producing the nuclide.  <a href="#adca6a8ea68a04c571e95886c8246af39">More...</a><br /></td></tr>
+<tr class="separator:adca6a8ea68a04c571e95886c8246af39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517edd64d7b8d07dc7385090eea2b382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a517edd64d7b8d07dc7385090eea2b382">append_gain</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a23167773c95582121ddb8611a68f0dc4">gain</a>)</td></tr>
+<tr class="memdesc:a517edd64d7b8d07dc7385090eea2b382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append gain to list of gains.  <a href="#a517edd64d7b8d07dc7385090eea2b382">More...</a><br /></td></tr>
+<tr class="separator:a517edd64d7b8d07dc7385090eea2b382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2851f9f2c514e9ea666cdf461a6f8bb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a2851f9f2c514e9ea666cdf461a6f8bb5">clear_gains</a> ()</td></tr>
+<tr class="separator:a2851f9f2c514e9ea666cdf461a6f8bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23167773c95582121ddb8611a68f0dc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a23167773c95582121ddb8611a68f0dc4">gain</a> (int channel_id, int parent_id) const </td></tr>
+<tr class="memdesc:a23167773c95582121ddb8611a68f0dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve a gain  <a href="#a23167773c95582121ddb8611a68f0dc4">More...</a><br /></td></tr>
+<tr class="separator:a23167773c95582121ddb8611a68f0dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6d7158a36873e6732c5655a713465f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#acb6d7158a36873e6732c5655a713465f">num_gains</a> () const </td></tr>
+<tr class="memdesc:acb6d7158a36873e6732c5655a713465f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of gains producing the nuclide.  <a href="#acb6d7158a36873e6732c5655a713465f">More...</a><br /></td></tr>
+<tr class="separator:acb6d7158a36873e6732c5655a713465f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b956b7843fb829b4eda3a8b43b79cda"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a7b956b7843fb829b4eda3a8b43b79cda">losses</a> () const </td></tr>
+<tr class="memdesc:a7b956b7843fb829b4eda3a8b43b79cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vector of losses destroying the nuclide.  <a href="#a7b956b7843fb829b4eda3a8b43b79cda">More...</a><br /></td></tr>
+<tr class="separator:a7b956b7843fb829b4eda3a8b43b79cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02155f24bf3502076752f9466d9f21e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a02155f24bf3502076752f9466d9f21e6">get_losses</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &gt; &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a7b956b7843fb829b4eda3a8b43b79cda">losses</a>) const </td></tr>
+<tr class="memdesc:a02155f24bf3502076752f9466d9f21e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of losses destroying the nuclide.  <a href="#a02155f24bf3502076752f9466d9f21e6">More...</a><br /></td></tr>
+<tr class="separator:a02155f24bf3502076752f9466d9f21e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cdc0b22780f9ab795ab067d206847ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a8cdc0b22780f9ab795ab067d206847ad">set_losses</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &gt; <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a7b956b7843fb829b4eda3a8b43b79cda">losses</a>)</td></tr>
+<tr class="memdesc:a8cdc0b22780f9ab795ab067d206847ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the losses destroying the nuclide.  <a href="#a8cdc0b22780f9ab795ab067d206847ad">More...</a><br /></td></tr>
+<tr class="separator:a8cdc0b22780f9ab795ab067d206847ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254502caa01fbd71bb413a839826d33e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a254502caa01fbd71bb413a839826d33e">loss</a> (int channel_id) const </td></tr>
+<tr class="memdesc:a254502caa01fbd71bb413a839826d33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return loss channel  <a href="#a254502caa01fbd71bb413a839826d33e">More...</a><br /></td></tr>
+<tr class="separator:a254502caa01fbd71bb413a839826d33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba71f06cd698589303ce37313d63ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aeba71f06cd698589303ce37313d63ac8">get_loss</a> (int channel_id, <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a254502caa01fbd71bb413a839826d33e">loss</a>) const </td></tr>
+<tr class="memdesc:aeba71f06cd698589303ce37313d63ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve loss channel  <a href="#aeba71f06cd698589303ce37313d63ac8">More...</a><br /></td></tr>
+<tr class="separator:aeba71f06cd698589303ce37313d63ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78674e432d83c37fba4ccf3c5aa1b2bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a78674e432d83c37fba4ccf3c5aa1b2bf">set_loss</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a254502caa01fbd71bb413a839826d33e">loss</a>)</td></tr>
+<tr class="separator:a78674e432d83c37fba4ccf3c5aa1b2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3de3050808214018f5dc9d94ddfa740"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aa3de3050808214018f5dc9d94ddfa740">add_loss</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a> channel_type)</td></tr>
+<tr class="memdesc:aa3de3050808214018f5dc9d94ddfa740"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new loss channel to the nuclide by specifying <a class="el" href="../../d2/d9c/class_origen_1_1_channel_type.html" title="Defines the channel type interface for the TransitionSystem. ">ChannelType</a>  <a href="#aa3de3050808214018f5dc9d94ddfa740">More...</a><br /></td></tr>
+<tr class="separator:aa3de3050808214018f5dc9d94ddfa740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c9f50efddaf5c29afe83d32fa6b42e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a29c9f50efddaf5c29afe83d32fa6b42e">add_loss</a> (int field_id, int reaction_mt, int decay_mode=0)</td></tr>
+<tr class="memdesc:a29c9f50efddaf5c29afe83d32fa6b42e"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new loss channel by specifying raw ids  <a href="#a29c9f50efddaf5c29afe83d32fa6b42e">More...</a><br /></td></tr>
+<tr class="separator:a29c9f50efddaf5c29afe83d32fa6b42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b8682c2a5ad08a6e98ab746d20af89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a32b8682c2a5ad08a6e98ab746d20af89">add_loss</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a1f460afd8318c9edab1804ac7daae1d3">SP_Field</a> field, int reaction_mt, int decay_mode=0)</td></tr>
+<tr class="memdesc:a32b8682c2a5ad08a6e98ab746d20af89"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new loss channel with <a class="el" href="../../d9/d32/class_origen_1_1_field.html" title="Defines the field interface for the TransitionSystem. ">Field</a> and raw ids  <a href="#a32b8682c2a5ad08a6e98ab746d20af89">More...</a><br /></td></tr>
+<tr class="separator:a32b8682c2a5ad08a6e98ab746d20af89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70382be1d174716015fe1df0ea33a0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ab70382be1d174716015fe1df0ea33a0a">add_loss</a> (int decay_mode)</td></tr>
+<tr class="memdesc:ab70382be1d174716015fe1df0ea33a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a decay loss  <a href="#ab70382be1d174716015fe1df0ea33a0a">More...</a><br /></td></tr>
+<tr class="separator:ab70382be1d174716015fe1df0ea33a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb84fe3204abb79ea48e3c379e342055"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aeb84fe3204abb79ea48e3c379e342055">num_losses</a> () const </td></tr>
+<tr class="memdesc:aeb84fe3204abb79ea48e3c379e342055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of losses destroying the nuclide.  <a href="#aeb84fe3204abb79ea48e3c379e342055">More...</a><br /></td></tr>
+<tr class="separator:aeb84fe3204abb79ea48e3c379e342055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc5a0807c4e4545b69f648ffbd1f803"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#abc3079b2f754584d87a404c82ed75d8e">CWP_TransitionSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afbc5a0807c4e4545b69f648ffbd1f803">system</a> () const </td></tr>
+<tr class="separator:afbc5a0807c4e4545b69f648ffbd1f803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbd2b74ff050fcdd3f67c14c5b64615"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afbbd2b74ff050fcdd3f67c14c5b64615">get_system</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#aac8ed2126e9dd862b72b6a3c4a871527">WP_TransitionSystem</a> &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afbc5a0807c4e4545b69f648ffbd1f803">system</a>) const </td></tr>
+<tr class="separator:afbbd2b74ff050fcdd3f67c14c5b64615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7b139f30be34d3169b34d8f4ffb209"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#adc7b139f30be34d3169b34d8f4ffb209">set_system</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#aac8ed2126e9dd862b72b6a3c4a871527">WP_TransitionSystem</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afbc5a0807c4e4545b69f648ffbd1f803">system</a>)</td></tr>
+<tr class="separator:adc7b139f30be34d3169b34d8f4ffb209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe14a2b1e005004f5e5a5bcb2ec0e6c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afe14a2b1e005004f5e5a5bcb2ec0e6c8">has_initialized_system</a> () const </td></tr>
+<tr class="separator:afe14a2b1e005004f5e5a5bcb2ec0e6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa62fe614773f635c90229714e0e8c27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aaa62fe614773f635c90229714e0e8c27">isomeric_state</a> () const </td></tr>
+<tr class="separator:aaa62fe614773f635c90229714e0e8c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2e48865685a3d1d2c1160713010287"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#acf2e48865685a3d1d2c1160713010287">get_isomeric_state</a> (int &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aaa62fe614773f635c90229714e0e8c27">isomeric_state</a>) const </td></tr>
+<tr class="separator:acf2e48865685a3d1d2c1160713010287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62e7db09edad341ecf8bf28b2006e793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a62e7db09edad341ecf8bf28b2006e793">set_isomeric_state</a> (int <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aaa62fe614773f635c90229714e0e8c27">isomeric_state</a>)</td></tr>
+<tr class="separator:a62e7db09edad341ecf8bf28b2006e793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a24d5b09036143f82a6717f7daabb0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a33b3c7e9d2cd59ce9b64c52fa399212c">SP_Species</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a6a24d5b09036143f82a6717f7daabb0f">species</a> () const </td></tr>
+<tr class="separator:a6a24d5b09036143f82a6717f7daabb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f11a8b5828b96bf66f524131dabe760"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a2f11a8b5828b96bf66f524131dabe760">get_species</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a33b3c7e9d2cd59ce9b64c52fa399212c">SP_Species</a> &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a6a24d5b09036143f82a6717f7daabb0f">species</a>) const </td></tr>
+<tr class="separator:a2f11a8b5828b96bf66f524131dabe760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb594bbf5a61d9f48759ef2042710eb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#adb594bbf5a61d9f48759ef2042710eb8">set_species</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a33b3c7e9d2cd59ce9b64c52fa399212c">SP_Species</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a6a24d5b09036143f82a6717f7daabb0f">species</a>)</td></tr>
+<tr class="separator:adb594bbf5a61d9f48759ef2042710eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2dcfbb32a387e6ffe7a179a3bab7155"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ad2dcfbb32a387e6ffe7a179a3bab7155">has_initialized_species</a> () const </td></tr>
+<tr class="separator:ad2dcfbb32a387e6ffe7a179a3bab7155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf141cbaab1a9d0dcf09bb5e221127a6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#acf141cbaab1a9d0dcf09bb5e221127a6">num</a> () const </td></tr>
+<tr class="separator:acf141cbaab1a9d0dcf09bb5e221127a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39cd915d73cc98ec252ce48661f10ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aa39cd915d73cc98ec252ce48661f10ea">get_num</a> (double &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#acf141cbaab1a9d0dcf09bb5e221127a6">num</a>) const </td></tr>
+<tr class="separator:aa39cd915d73cc98ec252ce48661f10ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70287fff029be976fe782389560d3841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a70287fff029be976fe782389560d3841">set_num</a> (double <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#acf141cbaab1a9d0dcf09bb5e221127a6">num</a>)</td></tr>
+<tr class="separator:a70287fff029be976fe782389560d3841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a216ef97032bdf36eb3db9b39ec073"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a51a216ef97032bdf36eb3db9b39ec073">decay_constant</a> () const </td></tr>
+<tr class="memdesc:a51a216ef97032bdf36eb3db9b39ec073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the decay constant.  <a href="#a51a216ef97032bdf36eb3db9b39ec073">More...</a><br /></td></tr>
+<tr class="separator:a51a216ef97032bdf36eb3db9b39ec073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba5d275816f4daf8f20f1aab6f9c77f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a2ba5d275816f4daf8f20f1aab6f9c77f">loss_xs</a> () const </td></tr>
+<tr class="separator:a2ba5d275816f4daf8f20f1aab6f9c77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4003fb7538233099f42b8f879346514e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a4003fb7538233099f42b8f879346514e">~Nuclide</a> ()</td></tr>
 <tr class="memdesc:a4003fb7538233099f42b8f879346514e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a4003fb7538233099f42b8f879346514e">More...</a><br /></td></tr>
 <tr class="separator:a4003fb7538233099f42b8f879346514e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3d14ebcf9951a6567ac63441b1f0aee9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a3d14ebcf9951a6567ac63441b1f0aee9">Nuclide</a> ()</td></tr>
+<tr class="separator:a3d14ebcf9951a6567ac63441b1f0aee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab3a18b5eecb1c56b55c0b6ddcf3866eb"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ab3a18b5eecb1c56b55c0b6ddcf3866eb">gains_impl</a> () const  =0</td></tr>
+<tr class="separator:ab3a18b5eecb1c56b55c0b6ddcf3866eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b94a9deb2c64b0e73e05c6b688a6eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#af7b94a9deb2c64b0e73e05c6b688a6eb">get_gains_impl</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> &gt; &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a0dc0b663d88abbb5c08dac3b16230b13">gains</a>) const  =0</td></tr>
+<tr class="separator:af7b94a9deb2c64b0e73e05c6b688a6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93b559f3a9211e6bf6bee9fdafefc99"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ae93b559f3a9211e6bf6bee9fdafefc99">set_gains_impl</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> &gt; <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a0dc0b663d88abbb5c08dac3b16230b13">gains</a>)=0</td></tr>
+<tr class="separator:ae93b559f3a9211e6bf6bee9fdafefc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a032899a43a8e3d6a7379d759e4f5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a31a032899a43a8e3d6a7379d759e4f5b">append_gain_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a23167773c95582121ddb8611a68f0dc4">gain</a>)=0</td></tr>
+<tr class="separator:a31a032899a43a8e3d6a7379d759e4f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1434654e72a4a9c1995dc24a7861f9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#a9bd307d5e705cb4d0f84836bc03fee06">WP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aaa1434654e72a4a9c1995dc24a7861f9">gain_impl</a> (int channel_id, int parent_id) const  =0</td></tr>
+<tr class="separator:aaa1434654e72a4a9c1995dc24a7861f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21dd55b874c254e6fb10691f107a388d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a21dd55b874c254e6fb10691f107a388d">num_gains_impl</a> () const  =0</td></tr>
+<tr class="separator:a21dd55b874c254e6fb10691f107a388d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71def166d0a650d5d660228b627e926b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a71def166d0a650d5d660228b627e926b">clear_gains_impl</a> ()=0</td></tr>
+<tr class="separator:a71def166d0a650d5d660228b627e926b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada96c041a91d5698538c6979b46952aa"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ada96c041a91d5698538c6979b46952aa">losses_impl</a> () const  =0</td></tr>
+<tr class="separator:ada96c041a91d5698538c6979b46952aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefff00e8d23b5be6555d61dbee69348"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afefff00e8d23b5be6555d61dbee69348">get_losses_impl</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &gt; &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a7b956b7843fb829b4eda3a8b43b79cda">losses</a>) const  =0</td></tr>
+<tr class="separator:afefff00e8d23b5be6555d61dbee69348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01c08e200638c8b9d7e52dab3fea639"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aa01c08e200638c8b9d7e52dab3fea639">set_losses_impl</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &gt; <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a7b956b7843fb829b4eda3a8b43b79cda">losses</a>)=0</td></tr>
+<tr class="separator:aa01c08e200638c8b9d7e52dab3fea639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f6705f0a51ed05163c6123d4ac06d9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a87f6705f0a51ed05163c6123d4ac06d9">loss_impl</a> (int channel_id) const  =0</td></tr>
+<tr class="separator:a87f6705f0a51ed05163c6123d4ac06d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8e03b021586c5b9f9f8e03fe7a91f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aff8e03b021586c5b9f9f8e03fe7a91f1">get_loss_impl</a> (int channel_id, <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a254502caa01fbd71bb413a839826d33e">loss</a>) const  =0</td></tr>
+<tr class="separator:aff8e03b021586c5b9f9f8e03fe7a91f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cefffb21c5b07681496e6621c83e9a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a3cefffb21c5b07681496e6621c83e9a9">set_loss_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a254502caa01fbd71bb413a839826d33e">loss</a>)=0</td></tr>
+<tr class="separator:a3cefffb21c5b07681496e6621c83e9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b636d915f22d1c015535bf5b3865605"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a8b636d915f22d1c015535bf5b3865605">add_loss_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a> channel_type)=0</td></tr>
+<tr class="separator:a8b636d915f22d1c015535bf5b3865605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a822ddccbd1df25d7677c278045d040"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a5a822ddccbd1df25d7677c278045d040">add_loss_impl</a> (int field_id, int reaction_mt, int decay_mode=0)</td></tr>
+<tr class="separator:a5a822ddccbd1df25d7677c278045d040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5829733a739eaa586ded24e0fbdca504"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a5829733a739eaa586ded24e0fbdca504">add_loss_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a1f460afd8318c9edab1804ac7daae1d3">SP_Field</a> field, int reaction_mt, int decay_mode=0)</td></tr>
+<tr class="separator:a5829733a739eaa586ded24e0fbdca504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3f4102767b7a01a8dcb97186f8d2e9d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ae3f4102767b7a01a8dcb97186f8d2e9d">add_loss_impl</a> (int decay_mode)</td></tr>
+<tr class="separator:ae3f4102767b7a01a8dcb97186f8d2e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7730331803079851d009c419563455bd"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a7730331803079851d009c419563455bd">num_losses_impl</a> () const  =0</td></tr>
+<tr class="separator:a7730331803079851d009c419563455bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b64cd6d69beb2b70ba1f2c8dacb0431"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#abc3079b2f754584d87a404c82ed75d8e">CWP_TransitionSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a4b64cd6d69beb2b70ba1f2c8dacb0431">system_impl</a> () const  =0</td></tr>
+<tr class="separator:a4b64cd6d69beb2b70ba1f2c8dacb0431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5d4fec951ea0b8c6c7e2791f60bb1e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a0a5d4fec951ea0b8c6c7e2791f60bb1e">get_system_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#aac8ed2126e9dd862b72b6a3c4a871527">WP_TransitionSystem</a> &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afbc5a0807c4e4545b69f648ffbd1f803">system</a>) const  =0</td></tr>
+<tr class="separator:a0a5d4fec951ea0b8c6c7e2791f60bb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecbf8cd50bc7b0e4d65eccd82de2cd8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aecbf8cd50bc7b0e4d65eccd82de2cd8b">set_system_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#aac8ed2126e9dd862b72b6a3c4a871527">WP_TransitionSystem</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#afbc5a0807c4e4545b69f648ffbd1f803">system</a>)=0</td></tr>
+<tr class="separator:aecbf8cd50bc7b0e4d65eccd82de2cd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5567592d50f49c39b99c54ac3bc65d3a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a5567592d50f49c39b99c54ac3bc65d3a">has_initialized_system_impl</a> () const  =0</td></tr>
+<tr class="separator:a5567592d50f49c39b99c54ac3bc65d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491ad24f2a1e58d63974999a2c0e5af0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a491ad24f2a1e58d63974999a2c0e5af0">isomeric_state_impl</a> () const  =0</td></tr>
+<tr class="separator:a491ad24f2a1e58d63974999a2c0e5af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12a6fdcd4b70aad4cfe553ea925e945"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ab12a6fdcd4b70aad4cfe553ea925e945">get_isomeric_state_impl</a> (int &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aaa62fe614773f635c90229714e0e8c27">isomeric_state</a>) const  =0</td></tr>
+<tr class="separator:ab12a6fdcd4b70aad4cfe553ea925e945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81063b4c146137e0e9a4df0e672ab452"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a81063b4c146137e0e9a4df0e672ab452">set_isomeric_state_impl</a> (int <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aaa62fe614773f635c90229714e0e8c27">isomeric_state</a>)=0</td></tr>
+<tr class="separator:a81063b4c146137e0e9a4df0e672ab452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e5320da0eec629f8b347801db319c8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#a33b3c7e9d2cd59ce9b64c52fa399212c">SP_Species</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a72e5320da0eec629f8b347801db319c8">species_impl</a> () const  =0</td></tr>
+<tr class="separator:a72e5320da0eec629f8b347801db319c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6eaa4dac5b8fb782e50d463e607c0e5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#ab6eaa4dac5b8fb782e50d463e607c0e5">get_species_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a33b3c7e9d2cd59ce9b64c52fa399212c">SP_Species</a> &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a6a24d5b09036143f82a6717f7daabb0f">species</a>) const  =0</td></tr>
+<tr class="separator:ab6eaa4dac5b8fb782e50d463e607c0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e0197e34abb908fcb73a8ce78e7842e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a3e0197e34abb908fcb73a8ce78e7842e">set_species_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a33b3c7e9d2cd59ce9b64c52fa399212c">SP_Species</a> <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a6a24d5b09036143f82a6717f7daabb0f">species</a>)=0</td></tr>
+<tr class="separator:a3e0197e34abb908fcb73a8ce78e7842e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d62edb8e36367d46971fbc85851b18"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a10d62edb8e36367d46971fbc85851b18">has_initialized_species_impl</a> () const  =0</td></tr>
+<tr class="separator:a10d62edb8e36367d46971fbc85851b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669f64f6d313f58f1693e9c30dad77a5"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a669f64f6d313f58f1693e9c30dad77a5">num_impl</a> () const  =0</td></tr>
+<tr class="separator:a669f64f6d313f58f1693e9c30dad77a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06332883a7010971c199e7022c89ca3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#aa06332883a7010971c199e7022c89ca3">get_num_impl</a> (double &amp;<a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#acf141cbaab1a9d0dcf09bb5e221127a6">num</a>) const  =0</td></tr>
+<tr class="separator:aa06332883a7010971c199e7022c89ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54be50c9b9826ae4f48a5da69c66f5a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a54be50c9b9826ae4f48a5da69c66f5a9">set_num_impl</a> (double <a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#acf141cbaab1a9d0dcf09bb5e221127a6">num</a>)=0</td></tr>
+<tr class="separator:a54be50c9b9826ae4f48a5da69c66f5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb63497772a0c6ef66b4c6ccfcdcffb0"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#abb63497772a0c6ef66b4c6ccfcdcffb0">decay_constant_impl</a> () const  =0</td></tr>
+<tr class="separator:abb63497772a0c6ef66b4c6ccfcdcffb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a18a7796b78c11c72fa4b986b6cc3d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a07a18a7796b78c11c72fa4b986b6cc3d">loss_xs_impl</a> () const  =0</td></tr>
+<tr class="separator:a07a18a7796b78c11c72fa4b986b6cc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690375cfa20af5f12cdadd41a1bf6827"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a690375cfa20af5f12cdadd41a1bf6827">name_impl</a> () const </td></tr>
+<tr class="separator:a690375cfa20af5f12cdadd41a1bf6827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac4e740481fdae6459fb218e0256882"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a3ac4e740481fdae6459fb218e0256882">id_impl</a> () const </td></tr>
+<tr class="separator:a3ac4e740481fdae6459fb218e0256882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86072d4287aa9b104b5b29d70680e2f5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a86072d4287aa9b104b5b29d70680e2f5">good_impl</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Vec_Str</a> &amp;errors) const </td></tr>
+<tr class="memdesc:a86072d4287aa9b104b5b29d70680e2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#a86072d4287aa9b104b5b29d70680e2f5">More...</a><br /></td></tr>
+<tr class="separator:a86072d4287aa9b104b5b29d70680e2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa390b82335a85c36e9884d7c834330"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#affa390b82335a85c36e9884d7c834330">is_initialized_impl</a> () const </td></tr>
+<tr class="memdesc:affa390b82335a85c36e9884d7c834330"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#affa390b82335a85c36e9884d7c834330">More...</a><br /></td></tr>
+<tr class="separator:affa390b82335a85c36e9884d7c834330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="memItemLeft" align="right" valign="top">virtual Scale::Json::Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dec/class_origen_1_1_nuclide.html#a69f23dfe3584ad7ea4e66f7af6dfa870">to_json_impl</a> () const </td></tr>
+<tr class="memdesc:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#a69f23dfe3584ad7ea4e66f7af6dfa870">More...</a><br /></td></tr>
+<tr class="separator:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the nuclide interface for the <a class="el" href="../../df/d1a/class_origen_1_1_transition_system.html" title="Defines the interface TransitionSystem. ">TransitionSystem</a>. </p>
@@ -1989,9 +2212,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a11">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a12">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../db/d33/class_origen_1_1_channel_type___fiss.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Fiss::good_impl()</a>, <a class="el" href="../../de/dc1/class_origen_1_1_channel_type___decay.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Decay::good_impl()</a>, and <a class="el" href="../../da/d2c/class_origen_1_1_channel_type___reac.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Reac::good_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../db/d33/class_origen_1_1_channel_type___fiss.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Fiss::good_impl()</a>, <a class="el" href="../../de/dc1/class_origen_1_1_channel_type___decay.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Decay::good_impl()</a>, <a class="el" href="../../da/d2c/class_origen_1_1_channel_type___reac.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Reac::good_impl()</a>, and <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
 
 </div>
 </div>
@@ -2016,8 +2239,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a13">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a14">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a74cafd0174fbe3e0b8d18060fb87d1db"></a>
@@ -2041,8 +2266,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a9">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a10">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae0c063cfb2479f614be43b9d2f92ba63"></a>
@@ -2065,9 +2292,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a10">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a11">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a4bcab4c2ff132be0649a5122f6a88b7a">TransitionSystem_Gen::add_nuclide_impl()</a>, <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a50d1a62adec62e91574c0f49bbf0f8ce">TransitionSystem_Gen::add_species_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#adbafe2119d03b4b2196742009ee163f8">Channel_Gen::add_transition_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ac8d8afdcd1310c8e58d8a84381afd161">Nuclide_Gen::gain_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a5dc35b9b26cae9cde38501d1ab91e9d1">LibraryBuilder::search_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#a32804297b600f1302b8687579c2a5c6c">Nuclide_Gen::set_losses_impl()</a>, and <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#a9c19634f938d6e31b1fc627d42b52ed7">Channel_Gen::set_transition_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a4bcab4c2ff132be0649a5122f6a88b7a">TransitionSystem_Gen::add_nuclide_impl()</a>, <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a50d1a62adec62e91574c0f49bbf0f8ce">TransitionSystem_Gen::add_species_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#adbafe2119d03b4b2196742009ee163f8">Channel_Gen::add_transition_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ac8d8afdcd1310c8e58d8a84381afd161">Nuclide_Gen::gain_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a5dc35b9b26cae9cde38501d1ab91e9d1">LibraryBuilder::search_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#a32804297b600f1302b8687579c2a5c6c">Nuclide_Gen::set_losses_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#a9c19634f938d6e31b1fc627d42b52ed7">Channel_Gen::set_transition_impl()</a>, <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>, and <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#a0eed3995cdc59da9e381fd2dfa617e06">TEST_F()</a>.</p>
 
 </div>
 </div>
@@ -2092,8 +2319,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a12">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a13">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6ff8f115eede06acb2c131ec56b3f3a4"></a>
@@ -2117,8 +2346,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a8">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a9">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0f9a8833481bcdf07b02103ce7fd1618"></a>
@@ -2166,8 +2397,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/d29/tst_transition_system_adapter__ampx_n_8cpp-example.html#a20">tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d1c/_manager_2libld_2tests_2tst_transition_system_adapter__ampx_n_8cpp-example.html#a32">Manager/libld/tests/tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a2edbeb0ab90d2711f2ed92838dd6f770">TEST_F()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad2e41c8280b6cdf93d39e1135d2abdf7"></a>

@@ -104,9 +104,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="preprocessor">#include &quot;ScaleData/Core/Utils.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;cctype&gt;</span></div>
 <div class="line"></div>
-<div class="line">TEST( EnergyResource, Basic )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../d7/dca/tst_energy_resource_8cpp.html#a05e6c077045bb6104cc211a7a030337b">TEST</a>( EnergyResource, Basic )</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a0"></a><a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html">Origen::EnergyResource</a> fiscap;</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html">Origen::EnergyResource</a> fiscap;</div>
 <div class="line">    <span class="keywordtype">double</span> kCap, kFiss;</div>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">for</span>( <span class="keywordtype">int</span> i : std::vector&lt;int&gt;({1001,</div>
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keyword">auto</span> s = ScaleData::Utils::z_to_symbol(z);</div>
 <div class="line">    s[0] = toupper(s[0]);</div>
 <div class="line">    <span class="keywordtype">int</span> a = i%1000;</div>
-<div class="line">    fiscap.<a name="a1"></a><a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( i, kCap, kFiss);</div>
+<div class="line">    fiscap.<a name="a2"></a><a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( i, kCap, kFiss);</div>
 <div class="line">    <span class="keywordflow">if</span>( kCap==0.0 )<span class="keywordflow">continue</span>;</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\\nuclide{&quot;</span>&lt;&lt;z&lt;&lt;<span class="stringliteral">&quot;}{&quot;</span>&lt;&lt; s &lt;&lt;<span class="stringliteral">&quot;}{&quot;</span>&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot;}\t&amp;\t&quot;</span>&lt;&lt; kCap &lt;&lt; <span class="stringliteral">&quot;\t&amp;\t&quot;</span> &lt;&lt; kFiss &lt;&lt; <span class="stringliteral">&quot;\t\\\\\\hline&quot;</span>&lt;&lt;std::endl;</div>
 <div class="line">}</div>

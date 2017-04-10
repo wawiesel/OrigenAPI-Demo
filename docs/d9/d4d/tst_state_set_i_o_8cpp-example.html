@@ -113,17 +113,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;Nemesis/gtest/nemesis_gtest.hh&quot;</span></div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span>StateSetIOTester : <span class="keyword">public</span> ::testing::TestWithParam&lt;const char*&gt;</div>
+<div class="line"><span class="keyword">class </span><a name="_a0"></a><a class="code" href="../../dd/d65/class_state_set_i_o_tester.html">StateSetIOTester</a> : <span class="keyword">public</span> ::testing::TestWithParam&lt;const char*&gt;</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
-<div class="line">    <span class="keywordtype">void</span> SetUp() { <a name="a0"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">Origen::FakeFactory::StateSet_random1</a>( set ); }</div>
-<div class="line">    <span class="keywordtype">void</span> TearDown() { <a name="a1"></a><a class="code" href="../../d5/dc1/namespace_origen.html#af1145aecbf23fda29398fa71fe1c8dda">Origen::printTimingReport</a>( std::cout ); }</div>
-<div class="line">    <a name="_a2"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a> set;</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a1"></a><a class="code" href="../../dd/d65/class_state_set_i_o_tester.html#a1b06560e0e01a806b92c2386220d0b57">SetUp</a>() { <a name="a2"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">Origen::FakeFactory::StateSet_random1</a>( <a name="a3"></a><a class="code" href="../../dd/d65/class_state_set_i_o_tester.html#af645c830779e835cb8865ea00337e078">set</a> ); }</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a4"></a><a class="code" href="../../dd/d65/class_state_set_i_o_tester.html#a931587596081ef8178c2b128facb0411">TearDown</a>() { <a name="a5"></a><a class="code" href="../../d5/dc1/namespace_origen.html#af1145aecbf23fda29398fa71fe1c8dda">Origen::printTimingReport</a>( std::cout ); }</div>
+<div class="line">    <a name="_a6"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a> <a class="code" href="../../dd/d65/class_state_set_i_o_tester.html#af645c830779e835cb8865ea00337e078">set</a>;</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line">TEST_P( StateSetIOTester, RoundTrip )</div>
+<div class="line"><a name="a7"></a><a class="code" href="../../d0/d0c/tst_state_set_i_o_8cpp.html#a5be511ee9eec3d6bc7e25e97ca5c8755">TEST_P</a>( <a class="code" href="../../dd/d65/class_state_set_i_o_tester.html">StateSetIOTester</a>, RoundTrip )</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a3"></a><a class="code" href="../../da/d61/class_origen_1_1_state_set_i_o.html">Origen::StateSetIO</a> io;</div>
+<div class="line">    <a name="_a8"></a><a class="code" href="../../da/d61/class_origen_1_1_state_set_i_o.html">Origen::StateSetIO</a> io;</div>
 <div class="line">    ScaleUtils::IO::DB opts;</div>
 <div class="line"></div>
 <div class="line">    std::string file = <span class="stringliteral">&quot;test.&quot;</span> + std::string( GetParam() ) + <span class="stringliteral">&quot;.f71&quot;</span>;</div>
@@ -140,13 +140,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_EQ( set, new_set );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">INSTANTIATE_TEST_CASE_P( StateSetTesterFormats,</div>
-<div class="line">                         StateSetIOTester,</div>
+<div class="line"><a name="a9"></a><a class="code" href="../../d0/d0c/tst_state_set_i_o_8cpp.html#a0270381b9a96dccf1ba697728bf2a2d0">INSTANTIATE_TEST_CASE_P</a>( StateSetTesterFormats,</div>
+<div class="line">                         <a class="code" href="../../dd/d65/class_state_set_i_o_tester.html">StateSetIOTester</a>,</div>
 <div class="line">                         ::testing::Values( <span class="stringliteral">&quot;s62b&quot;</span>, <span class="stringliteral">&quot;bof&quot;</span> ) );</div>
 <div class="line"></div>
-<div class="line">TEST_F( StateSetIOTester, AppendStream )</div>
+<div class="line"><a name="a10"></a><a class="code" href="../../d0/d0c/tst_state_set_i_o_8cpp.html#afadd23cf1aeafea5400a0fc1972dc9c6">TEST_F</a>( <a class="code" href="../../dd/d65/class_state_set_i_o_tester.html">StateSetIOTester</a>, AppendStream )</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a4"></a><a class="code" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html">Origen::StateSetIO_bof</a> io;</div>
+<div class="line">    <a name="_a11"></a><a class="code" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html">Origen::StateSetIO_bof</a> io;</div>
 <div class="line">    std::ofstream ofs;</div>
 <div class="line">    std::remove( <span class="stringliteral">&quot;testOriginalPlus1.f71&quot;</span> );</div>
 <div class="line">    std::remove( <span class="stringliteral">&quot;testAppend.f71&quot;</span> );</div>
@@ -158,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        opts.prepareBinaryFileWrite( ofs, <span class="stringliteral">&quot;testOriginalPlus1.f71&quot;</span> );</div>
 <div class="line">        opts.set( <span class="stringliteral">&quot;fileFormat&quot;</span>, <span class="stringliteral">&quot;bof&quot;</span> );</div>
 <div class="line">        set.add_states( set.states_at( 1 ) );</div>
-<div class="line">        pass = io.<a name="a5"></a><a class="code" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html#abb8abf9640d82eea7e057c0d7c68d829">write</a>( set, ofs, opts );</div>
+<div class="line">        pass = io.<a name="a12"></a><a class="code" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html#abb8abf9640d82eea7e057c0d7c68d829">write</a>( set, ofs, opts );</div>
 <div class="line">        EXPECT_TRUE( pass );</div>
 <div class="line">        ofs.close();</div>
 <div class="line">    }</div>
@@ -173,7 +173,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <span class="comment">// write an extra piece</span></div>
 <div class="line">        {</div>
 <div class="line">            <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a> s2;</div>
-<div class="line">            s2.<a name="a6"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( set.states_at( 2 ) );</div>
+<div class="line">            s2.<a name="a13"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( set.states_at( 2 ) );</div>
 <div class="line">            opts.set( <span class="stringliteral">&quot;append&quot;</span>, <span class="keyword">true</span> );</div>
 <div class="line">            pass = io.<a class="code" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html#abb8abf9640d82eea7e057c0d7c68d829">write</a>( s2, ofs, opts );</div>
 <div class="line">            EXPECT_TRUE( pass );</div>
@@ -195,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_EQ( set, set2 );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( StateSetIOTester, AppendFile )</div>
+<div class="line"><a class="code" href="../../d0/d0c/tst_state_set_i_o_8cpp.html#afadd23cf1aeafea5400a0fc1972dc9c6">TEST_F</a>( <a class="code" href="../../dd/d65/class_state_set_i_o_tester.html">StateSetIOTester</a>, AppendFile )</div>
 <div class="line">{</div>
 <div class="line">    ASSERT_EQ( 44, set.states_size() );</div>
 <div class="line"></div>
@@ -213,7 +213,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        SCOPED_TIMER( <span class="stringliteral">&quot;single write&quot;</span> );</div>
 <div class="line">        ScaleUtils::IO::DB opts;</div>
 <div class="line">        opts.set( <span class="stringliteral">&quot;appendExisting&quot;</span>, <span class="keyword">true</span> );</div>
-<div class="line">        <span class="keywordtype">bool</span> pass = <a name="a7"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a4bc8fafcfb72aec941bda576a04e9b35">saveStateSet</a>( set, <span class="stringliteral">&quot;testOriginal.f71&quot;</span>, opts );</div>
+<div class="line">        <span class="keywordtype">bool</span> pass = <a name="a14"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a4bc8fafcfb72aec941bda576a04e9b35">saveStateSet</a>( set, <span class="stringliteral">&quot;testOriginal.f71&quot;</span>, opts );</div>
 <div class="line">        EXPECT_TRUE( pass );</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -242,8 +242,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        SCOPED_TIMER( <span class="stringliteral">&quot;load time&quot;</span> );</div>
 <div class="line">        ScaleUtils::IO::DB opts;</div>
 <div class="line">        <span class="comment">// load appended state written to disk</span></div>
-<div class="line">        appended_set = <a name="a8"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a7532b3a40e862fe12af8f13b9a2c7c22">Origen::SP_StateSet</a>(</div>
-<div class="line">            <a name="a9"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae0a09cfbca180cadf62422c9eab7255a">Origen::loadStateSet</a>( <span class="stringliteral">&quot;testAppend.f71&quot;</span>, opts ) );</div>
+<div class="line">        appended_set = <a name="a15"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a7532b3a40e862fe12af8f13b9a2c7c22">Origen::SP_StateSet</a>(</div>
+<div class="line">            <a name="a16"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae0a09cfbca180cadf62422c9eab7255a">Origen::loadStateSet</a>( <span class="stringliteral">&quot;testAppend.f71&quot;</span>, opts ) );</div>
 <div class="line">        ASSERT_FALSE( appended_set == <span class="keyword">nullptr</span> );</div>
 <div class="line">        ASSERT_EQ( 55, appended_set-&gt;states_size() );</div>
 <div class="line">    }</div>

@@ -112,10 +112,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="keyword">using</span> std::string;</div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a0"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Material</a>, Setup )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../d3/d31/tst_material_8cpp.html#ad14e40b2e7b1b8f717d091b5573b6276">TEST</a>( <a name="_a1"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Material</a>, Setup )</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> library = <a name="a1"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a>( <span class="keyword">new</span> <a name="_a2"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
-<div class="line">    <span class="keywordtype">bool</span> created = <a name="a3"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a775d4ba0b990767a62d9d7b498d9280f">FakeFactory::Library_random1</a>( *library );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> library = <a name="a2"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a>( <span class="keyword">new</span> <a name="_a3"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
+<div class="line">    <span class="keywordtype">bool</span> created = <a name="a4"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a775d4ba0b990767a62d9d7b498d9280f">FakeFactory::Library_random1</a>( *library );</div>
 <div class="line">    ASSERT_TRUE( created );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize material</span></div>
@@ -165,17 +165,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../df/d34/class_origen_1_1_material.html">Material</a>, Accessors )</div>
+<div class="line"><a class="code" href="../../d3/d31/tst_material_8cpp.html#ad14e40b2e7b1b8f717d091b5573b6276">TEST</a>( <a class="code" href="../../df/d34/class_origen_1_1_material.html">Material</a>, Accessors )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// reference bos data</span></div>
 <div class="line">    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> ref_ids;</div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> ref_vals;</div>
-<div class="line">    <a name="a4"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">FakeFactory::vera_uox_e360</a>( ref_ids, ref_vals );</div>
+<div class="line">    <a name="a5"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">FakeFactory::vera_uox_e360</a>( ref_ids, ref_vals );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create library</span></div>
 <div class="line">    <span class="keywordtype">string</span> library_type = <span class="stringliteral">&quot;pwr.*.orglib&quot;</span>;</div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> library = <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a>( <span class="keyword">new</span> <a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
-<div class="line">    <span class="keywordtype">bool</span> created = <a name="a5"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">FakeFactory::Library_scale_pwr</a>( *library );</div>
+<div class="line">    <span class="keywordtype">bool</span> created = <a name="a6"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">FakeFactory::Library_scale_pwr</a>( *library );</div>
 <div class="line">    ASSERT_TRUE( created );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize material</span></div>
@@ -290,7 +290,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span>MaterialTester : <span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><span class="keyword">class </span><a name="_a7"></a><a class="code" href="../../de/d89/class_material_tester.html">MaterialTester</a> : <span class="keyword">public</span> ::testing::Test</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> SetUp()</div>
@@ -313,7 +313,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">SP_Material</a> mat;</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line">TEST_F( MaterialTester, Flush )</div>
+<div class="line"><a name="a8"></a><a class="code" href="../../d3/d31/tst_material_8cpp.html#a256600e0d55b8205500e048ebcb8e177">TEST_F</a>( <a class="code" href="../../de/d89/class_material_tester.html">MaterialTester</a>, Flush )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> dtrel( 4, 0.25 );  <span class="comment">// relative distribution of time over the step</span></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> flux, power;</div>
@@ -325,7 +325,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; ref_nsteps; ++i )</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordtype">double</span> dt = 86400. * 30 * ( 1 + i / 2 );</div>
-<div class="line">        <span class="keywordtype">double</span> <a name="a6"></a><a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a> = 1e14 * ( i + 1 );</div>
+<div class="line">        <span class="keywordtype">double</span> <a name="a9"></a><a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a> = 1e14 * ( i + 1 );</div>
 <div class="line">        ref_dt.push_back( dt );</div>
 <div class="line">        ref_flux.push_back( f );</div>
 <div class="line">        ref_fluence.push_back( ref_fluence.back() + dt * <a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a> );</div>
@@ -400,7 +400,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( MaterialTester, PowerBurnup )</div>
+<div class="line"><a class="code" href="../../d3/d31/tst_material_8cpp.html#a256600e0d55b8205500e048ebcb8e177">TEST_F</a>( <a class="code" href="../../de/d89/class_material_tester.html">MaterialTester</a>, PowerBurnup )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> dtrel( 2, 0.50 );  <span class="comment">// relative distribution of time over the step</span></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> flux, power;</div>
@@ -436,7 +436,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_FLOAT_EQ( bu1, mat-&gt;burnup_at( 1 ) );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a7"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">MaterialMap</a>, Accessors )</div>
+<div class="line"><a class="code" href="../../d3/d31/tst_material_8cpp.html#ad14e40b2e7b1b8f717d091b5573b6276">TEST</a>( <a name="_a10"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">MaterialMap</a>, Accessors )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// reference bos data</span></div>
 <div class="line">    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> ref_ids;</div>
@@ -463,13 +463,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">SP_Material</a> mat(</div>
 <div class="line">            <span class="keyword">new</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html">Material</a>( library_type, library, name, <span class="keywordtype">id</span>, volume ) );</div>
 <div class="line">        mat-&gt;set_numden_bos( ref_vals, ref_ids );</div>
-<div class="line">        matmap.<a name="a8"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#aabf68b6c88e0d87c645456b00f189a0f">add</a>( mat );</div>
+<div class="line">        matmap.<a name="a11"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#aabf68b6c88e0d87c645456b00f189a0f">add</a>( mat );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    EXPECT_FLOAT_EQ( total_volume, matmap.<a name="a9"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#afe473feb8ddf9d19a21e43141c70c367">cold_volume</a>() );</div>
-<div class="line">    EXPECT_FLOAT_EQ( 10.255454 * total_volume, matmap.<a name="a10"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#a7280c744f5ba9d41356836b1f1baf63a">initial_mass</a>() );</div>
+<div class="line">    EXPECT_FLOAT_EQ( total_volume, matmap.<a name="a12"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#afe473feb8ddf9d19a21e43141c70c367">cold_volume</a>() );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 10.255454 * total_volume, matmap.<a name="a13"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#a7280c744f5ba9d41356836b1f1baf63a">initial_mass</a>() );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 10.255454 * total_volume * 0.88143277,</div>
-<div class="line">                     matmap.<a name="a11"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#a8a5f792e0b089585bd71f8b8822695da">initial_hm_mass</a>() );</div>
+<div class="line">                     matmap.<a name="a14"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html#a8a5f792e0b089585bd71f8b8822695da">initial_hm_mass</a>() );</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

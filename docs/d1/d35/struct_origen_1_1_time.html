@@ -104,6 +104,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../df/d25/struct_origen_1_1_time-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Time Struct Reference</div>  </div>
@@ -111,8 +114,54 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;Time.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae63bf01444fa83e2e4d536e113dddf95"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">UNITS</a> { <br />
+&#160;&#160;<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a> = -1, 
+<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a70367ff8e866216e6a822a2c952abfc1">SECONDS</a>, 
+<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a3e03a6eb831c67e94dfdd97c9ac90bc8">MINUTES</a>, 
+<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a4071f24c62fa1c9c6c34b8d2dd0f2b4e">HOURS</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95aecd160bcb5fa0d5e062562b01487f202">DAYS</a>, 
+<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a51123b2a74c6266a48567abc6e6c0c68">YEARS</a>, 
+<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95adc6f24fd6915a3f2786a1b7045406924">END</a>
+<br />
+ }<tr class="separator:ae63bf01444fa83e2e4d536e113dddf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:acbb2f3b4b02fa647c8cb21996d864e94"><td class="memTemplParams" colspan="2">template&lt;Time::UNITS u&gt; </td></tr>
+<tr class="memitem:acbb2f3b4b02fa647c8cb21996d864e94"><td class="memTemplItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#acbb2f3b4b02fa647c8cb21996d864e94">name</a> ()</td></tr>
+<tr class="separator:acbb2f3b4b02fa647c8cb21996d864e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe285c4809f382580de9e3dace05ec86"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#abe285c4809f382580de9e3dace05ec86">name</a> (<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">Time::UNITS</a> u)</td></tr>
+<tr class="separator:abe285c4809f382580de9e3dace05ec86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2584201ca69d238ac0f9f772c736d8b0"><td class="memTemplParams" colspan="2">template&lt;Time::UNITS u&gt; </td></tr>
+<tr class="memitem:a2584201ca69d238ac0f9f772c736d8b0"><td class="memTemplItemLeft" align="right" valign="top">static double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a2584201ca69d238ac0f9f772c736d8b0">base</a> ()</td></tr>
+<tr class="separator:a2584201ca69d238ac0f9f772c736d8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4209ed82fbdd69822e4f573f74e68ed"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#aa4209ed82fbdd69822e4f573f74e68ed">base</a> (<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">Time::UNITS</a> u)</td></tr>
+<tr class="separator:aa4209ed82fbdd69822e4f573f74e68ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e0a3bea0ca70cc630a773255afb1da"><td class="memTemplParams" colspan="2">template&lt;Time::UNITS to, Time::UNITS from&gt; </td></tr>
+<tr class="memitem:a90e0a3bea0ca70cc630a773255afb1da"><td class="memTemplItemLeft" align="right" valign="top">static double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a90e0a3bea0ca70cc630a773255afb1da">factor</a> ()</td></tr>
+<tr class="separator:a90e0a3bea0ca70cc630a773255afb1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62fecc7485fe055d3a352af37b868918"><td class="memTemplParams" colspan="2">template&lt;Time::UNITS to&gt; </td></tr>
+<tr class="memitem:a62fecc7485fe055d3a352af37b868918"><td class="memTemplItemLeft" align="right" valign="top">static double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a62fecc7485fe055d3a352af37b868918">factor</a> (<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">Time::UNITS</a> from)</td></tr>
+<tr class="separator:a62fecc7485fe055d3a352af37b868918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07061e6c9c1c0e7d991e97f5514e3b58"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a07061e6c9c1c0e7d991e97f5514e3b58">factor</a> (<a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">Time::UNITS</a> to, <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">Time::UNITS</a> from)</td></tr>
+<tr class="separator:a07061e6c9c1c0e7d991e97f5514e3b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d2ec2364cb6d828953632abea6c1f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">Time::UNITS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a78d2ec2364cb6d828953632abea6c1f9">units</a> (const char *s)</td></tr>
+<tr class="separator:a78d2ec2364cb6d828953632abea6c1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7060455a662efbdb2012a61fb1140069"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">Time::UNITS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a7060455a662efbdb2012a61fb1140069">units</a> (int i)</td></tr>
+<tr class="separator:a7060455a662efbdb2012a61fb1140069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a6c9a8b67c5fa190eabf72984507b6195"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95">UNITS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a6c9a8b67c5fa190eabf72984507b6195">DEFAULT</a> = <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a70367ff8e866216e6a822a2c952abfc1">SECONDS</a></td></tr>
+<tr class="separator:a6c9a8b67c5fa190eabf72984507b6195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc7/tst_time_8cpp-example.html#_a0">tstTime.cpp</a>.</dd>
+<div class="textblock"><dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dc8/_core_2dc_2tests_2tst_time_8cpp-example.html#_a1">Core/dc/tests/tstTime.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="ae63bf01444fa83e2e4d536e113dddf95"></a>
 <div class="memitem">
@@ -163,8 +212,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc7/tst_time_8cpp-example.html#a4">tstTime.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dc8/_core_2dc_2tests_2tst_time_8cpp-example.html#a5">Core/dc/tests/tstTime.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d0/d02/tst_time_8cpp.html#add93bd0c557b982a929de72848a17b51">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abe285c4809f382580de9e3dace05ec86"></a>
@@ -211,9 +262,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc7/tst_time_8cpp-example.html#a3">tstTime.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dc8/_core_2dc_2tests_2tst_time_8cpp-example.html#a4">Core/dc/tests/tstTime.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a62fecc7485fe055d3a352af37b868918">Time::factor()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a9ecc200189e94a079773540f35b06eac">Origen::Time::name&lt; Time::DAYS &gt;()</a>.</p>
+<p>Referenced by <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#a62fecc7485fe055d3a352af37b868918">Time::factor()</a>, <a class="el" href="../../d0/d02/tst_time_8cpp.html#add93bd0c557b982a929de72848a17b51">TEST()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a9ecc200189e94a079773540f35b06eac">Origen::Time::name&lt; Time::DAYS &gt;()</a>.</p>
 
 </div>
 </div>
@@ -261,8 +312,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc7/tst_time_8cpp-example.html#a7">tstTime.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dc8/_core_2dc_2tests_2tst_time_8cpp-example.html#a8">Core/dc/tests/tstTime.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d0/d02/tst_time_8cpp.html#add93bd0c557b982a929de72848a17b51">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a62fecc7485fe055d3a352af37b868918"></a>
@@ -346,8 +399,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc7/tst_time_8cpp-example.html#a2">tstTime.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dc8/_core_2dc_2tests_2tst_time_8cpp-example.html#a3">Core/dc/tests/tstTime.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d0/d02/tst_time_8cpp.html#add93bd0c557b982a929de72848a17b51">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7060455a662efbdb2012a61fb1140069"></a>

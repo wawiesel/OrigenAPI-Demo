@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="keyword">typedef</span> std::vector&lt;double&gt; <a name="a1"></a><a class="code" href="../../d6/d5a/tst_kernel_radau5_c_8cpp.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a>;</div>
 <div class="line"><span class="keyword">using</span> ScaleUtils::IO::nprintf;</div>
 <div class="line"></div>
-<div class="line">TEST( tstSolverRadau5, test )</div>
+<div class="line"><a name="a2"></a><a class="code" href="../../d6/d5a/tst_kernel_radau5_c_8cpp.html#a145f336f6c4f7ddf7367af1559237f41">TEST</a>( tstSolverRadau5, test )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> itot, non;</div>
 <div class="line">    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> non0, kd, loc, ZAI;</div>
@@ -122,10 +122,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordtype">int</span> i, j;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Load a library</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a> lib;</div>
-<div class="line">    <span class="keywordtype">bool</span> loaded = <a name="a3"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( lib );</div>
+<div class="line">    <a name="_a3"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a> lib;</div>
+<div class="line">    <span class="keywordtype">bool</span> loaded = <a name="a4"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( lib );</div>
 <div class="line">    Insist( loaded, <span class="stringliteral">&quot;load failed!&quot;</span> );</div>
-<div class="line">    <a class="code" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html#afb55bc73ff1ba4f1605a68227ee92603">Origen::TransitionMatrixP::SP</a> trx = lib.<a name="a4"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a977b919cc2065a44e3a8adfbe680eb49">newsp_transition_matrix_at</a>( 0 );</div>
+<div class="line">    <a class="code" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html#afb55bc73ff1ba4f1605a68227ee92603">Origen::TransitionMatrixP::SP</a> trx = lib.<a name="a5"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a977b919cc2065a44e3a8adfbe680eb49">newsp_transition_matrix_at</a>( 0 );</div>
 <div class="line"></div>
 <div class="line">    EXPECT_EQ( 0, trx-&gt;first_transition( 0 ) );</div>
 <div class="line">    EXPECT_EQ( 555, trx-&gt;last_transition( 0, 1.0 ) );</div>
@@ -191,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">// the toleranses are rather high to make the running time reasonable</span></div>
 <div class="line">    <span class="comment">// (even with just one day step)</span></div>
 <div class="line"></div>
-<div class="line">    <a name="a5"></a><a class="code" href="../../d7/ddf/kernel__radau5_8hpp.html#a51d4255b3b5f6879d67c05e29937f097">kernel_radau5</a>( &amp;*trx,</div>
+<div class="line">    <a name="a6"></a><a class="code" href="../../d7/ddf/kernel__radau5_8hpp.html#a51d4255b3b5f6879d67c05e29937f097">kernel_radau5</a>( &amp;*trx,</div>
 <div class="line">                   itot,</div>
 <div class="line">                   non,</div>
 <div class="line">                   &amp;n0[0],</div>

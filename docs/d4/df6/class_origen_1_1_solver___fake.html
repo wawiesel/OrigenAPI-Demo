@@ -105,6 +105,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d2/d36/class_origen_1_1_solver___fake-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Solver_Fake Class Reference</div>  </div>
@@ -125,17 +127,72 @@ Inheritance diagram for Solver_Fake:</div>
 <p>A fake solver satisfying the <a class="el" href="../../d2/df0/class_origen_1_1_solver.html" title="Interface satisfied ORIGEN single step depletion/decay solver. ">Origen::Solver</a> interface.  
  <a href="../../d4/df6/class_origen_1_1_solver___fake.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Origen::Solver&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp28f2e196bc1ed0da23049c33aba09ed8"></a>See <a class="el" href="../../d2/df0/class_origen_1_1_solver.html" title="Interface satisfied ORIGEN single step depletion/decay solver. ">Origen::Solver</a> for details. </p>
+</td></tr>
+<tr class="memitem:a1a63c5e83563d564b31f5d3735650b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a1a63c5e83563d564b31f5d3735650b30">set_continuous_loss</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *lambda)</td></tr>
+<tr class="separator:a1a63c5e83563d564b31f5d3735650b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe37ab3d53f6b75bd47836c0f1cb6c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#abe37ab3d53f6b75bd47836c0f1cb6c8c">set_transition_matrix</a> (<a class="el" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html">TransitionMatrixP</a> *trx)</td></tr>
+<tr class="separator:abe37ab3d53f6b75bd47836c0f1cb6c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f04d1925ad34f2df01bdf8625f81c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a67f04d1925ad34f2df01bdf8625f81c2">set_source</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *src)</td></tr>
+<tr class="separator:a67f04d1925ad34f2df01bdf8625f81c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dba0121a9adaba1a04aec64a5769011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a7dba0121a9adaba1a04aec64a5769011">get_defaults</a> (ScaleUtils::IO::DB &amp;dc, bool force=false)</td></tr>
+<tr class="separator:a7dba0121a9adaba1a04aec64a5769011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35de52a38ca9b44757c1fd2d018afd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#ac35de52a38ca9b44757c1fd2d018afd8">check_opts</a> (ScaleUtils::IO::DB &amp;dc, bool allow_missing=true)</td></tr>
+<tr class="separator:ac35de52a38ca9b44757c1fd2d018afd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae07a5e0a6d1d4ffa6b25feccbfb3e92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#aae07a5e0a6d1d4ffa6b25feccbfb3e92">set_opts</a> (const ScaleUtils::IO::DB &amp;opts)</td></tr>
+<tr class="separator:aae07a5e0a6d1d4ffa6b25feccbfb3e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4682463633952a2e3fd6477b3ed9318"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">solve</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;in, double flux, double dt, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *out)</td></tr>
+<tr class="separator:af4682463633952a2e3fd6477b3ed9318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585cd31bba044ea2fead91ae062010c9"><td class="memItemLeft" align="right" valign="top">const ScaleUtils::IO::DB &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a585cd31bba044ea2fead91ae062010c9">status</a> () const </td></tr>
+<tr class="separator:a585cd31bba044ea2fead91ae062010c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/class_origen_1_1_solver.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a7e965039e6b663111e6c8115e69080"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a8a7e965039e6b663111e6c8115e69080">Solver_Fake</a> ()</td></tr>
 <tr class="separator:a8a7e965039e6b663111e6c8115e69080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc1f8a1f654aaeedbc5172005059903"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a9dc1f8a1f654aaeedbc5172005059903">~Solver_Fake</a> ()</td></tr>
 <tr class="separator:a9dc1f8a1f654aaeedbc5172005059903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3f874d88825eedd87134148a477d7bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a3f874d88825eedd87134148a477d7bb2">set_continuous_loss_impl</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *lambda)</td></tr>
+<tr class="separator:a3f874d88825eedd87134148a477d7bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702170b5c1bf5a0e1424c50dd3b8c8cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a702170b5c1bf5a0e1424c50dd3b8c8cc">set_transition_matrix_impl</a> (<a class="el" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html">TransitionMatrixP</a> *trx)</td></tr>
+<tr class="separator:a702170b5c1bf5a0e1424c50dd3b8c8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b91bed55c1cb4dd51cc344ff085d03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#af8b91bed55c1cb4dd51cc344ff085d03">set_source_impl</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *src)</td></tr>
+<tr class="separator:af8b91bed55c1cb4dd51cc344ff085d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613d9dcede8fb8bb51b46f5c369ad929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a613d9dcede8fb8bb51b46f5c369ad929">set_opts_impl</a> (const ScaleUtils::IO::DB &amp;opts)</td></tr>
+<tr class="separator:a613d9dcede8fb8bb51b46f5c369ad929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f247828946600efbe65f4959f5ad99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#ae7f247828946600efbe65f4959f5ad99">check_opts_impl</a> (ScaleUtils::IO::DB &amp;opts, bool allow_missing)</td></tr>
+<tr class="separator:ae7f247828946600efbe65f4959f5ad99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed650dcec292d83dc4f35720b6677918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#aed650dcec292d83dc4f35720b6677918">get_defaults_impl</a> (ScaleUtils::IO::DB &amp;dc, const bool force)</td></tr>
+<tr class="separator:aed650dcec292d83dc4f35720b6677918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415be826c056e1634b7b7265380c27b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a415be826c056e1634b7b7265380c27b3">solve_impl</a> (const <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;in, double flux, double dt, <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *out)</td></tr>
+<tr class="separator:a415be826c056e1634b7b7265380c27b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc254fc90e6dc88fcdd3452b4f829d21"><td class="memItemLeft" align="right" valign="top">const ScaleUtils::IO::DB &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#afc254fc90e6dc88fcdd3452b4f829d21">status_impl</a> () const </td></tr>
+<tr class="separator:afc254fc90e6dc88fcdd3452b4f829d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4b51a4d6b40d21dc5d883629ceb23b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a2a4b51a4d6b40d21dc5d883629ceb23b">clear_impl</a> ()</td></tr>
+<tr class="separator:a2a4b51a4d6b40d21dc5d883629ceb23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a766e49265cfcb420e2eb1100023dcb04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a766e49265cfcb420e2eb1100023dcb04">d_lambda</a></td></tr>
+<tr class="separator:a766e49265cfcb420e2eb1100023dcb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3c0a287ec92b801996d545e7a05937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#a4d3c0a287ec92b801996d545e7a05937">d_src</a></td></tr>
+<tr class="separator:a4d3c0a287ec92b801996d545e7a05937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad409e05d0a322fcd425a0e926b41d42b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html">TransitionMatrixP</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#ad409e05d0a322fcd425a0e926b41d42b">d_trx</a></td></tr>
+<tr class="separator:ad409e05d0a322fcd425a0e926b41d42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af683ba10ca0835af37e0061e81e82ac0"><td class="memItemLeft" align="right" valign="top">ScaleUtils::IO::UP_DB&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df6/class_origen_1_1_solver___fake.html#af683ba10ca0835af37e0061e81e82ac0">d_status</a></td></tr>
+<tr class="separator:af683ba10ca0835af37e0061e81e82ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A fake solver satisfying the <a class="el" href="../../d2/df0/class_origen_1_1_solver.html" title="Interface satisfied ORIGEN single step depletion/decay solver. ">Origen::Solver</a> interface. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d2/df0/class_origen_1_1_solver.html" title="Interface satisfied ORIGEN single step depletion/decay solver. ">Origen::Solver</a> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#_a13">tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../d7/d73/tst_solver_8cpp-example.html#_a1">tstSolver.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#_a25">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../df/d7d/_core_2xf_2tests_2tst_solver_8cpp-example.html#_a2">Core/xf/tests/tstSolver.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8a7e965039e6b663111e6c8115e69080"></a>
 <div class="memitem">
@@ -489,11 +546,11 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a12">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a12">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a13">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a13">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#aeacdf6785cce819806cc2020dbaf1114">Solver::set_continuous_loss_impl()</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, and <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>, and <a class="el" href="../../d4/d7e/tst_solver__cram_8cpp.html#ad81ab9db220d9112aee8715d43689052">TEST()</a>.</p>
 
 </div>
 </div>
@@ -524,11 +581,11 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a12">exNEAMS.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a9">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a9">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a10">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a10">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a6d9dd4bb795fd128d50fb87de56c88df">Solver::set_transition_matrix_impl()</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, and <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>, and <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#abd1aeecfc6b8eb2b58d35ee4df34bcff">TEST()</a>.</p>
 
 </div>
 </div>
@@ -559,11 +616,11 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a10">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a10">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a11">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a11">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a9cf52975df6dc1214debad84278765ce">Solver::set_source_impl()</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, and <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>, and <a class="el" href="../../d4/d7e/tst_solver__cram_8cpp.html#ad81ab9db220d9112aee8715d43689052">TEST()</a>.</p>
 
 </div>
 </div>
@@ -607,11 +664,11 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a1">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a1">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a2">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a2">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a54f5e722d9cd263f300b0fc3fd12f8ca">Solver::get_defaults_impl()</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>, <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#ad616a3844dc77f6b9111cfedbcfbe393">Solver_cram::Solver_cram()</a>, and <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a397eb8cfabef3837af8154526a6b83ad">Solver_matrex::Solver_matrex()</a>.</p>
+<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_cram::clear_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a2a4b51a4d6b40d21dc5d883629ceb23b">Solver_matrex::clear_impl()</a>, <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#ad616a3844dc77f6b9111cfedbcfbe393">Solver_cram::Solver_cram()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a397eb8cfabef3837af8154526a6b83ad">Solver_matrex::Solver_matrex()</a>, and <a class="el" href="../../d4/d7e/tst_solver__cram_8cpp.html#a923c107d6b03c6d809c1bb1d33aa6d35">TEST()</a>.</p>
 
 </div>
 </div>
@@ -657,11 +714,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the check is passed, false if the check fails.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Any errors will be written to opts. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a2">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a2">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a3">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a3">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#aaf638457ceac69b0e527078c9568e09b">Solver::check_opts_impl()</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a613d9dcede8fb8bb51b46f5c369ad929">Solver_cram::set_opts_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#ad03f65b91390169ccbc6b62aca5b64a1">Solver_matrex::set_opts_impl()</a>, <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a415be826c056e1634b7b7265380c27b3">Solver_cram::solve_impl()</a>, and <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a415be826c056e1634b7b7265380c27b3">Solver_matrex::solve_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a613d9dcede8fb8bb51b46f5c369ad929">Solver_cram::set_opts_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#ad03f65b91390169ccbc6b62aca5b64a1">Solver_matrex::set_opts_impl()</a>, <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a415be826c056e1634b7b7265380c27b3">Solver_cram::solve_impl()</a>, <a class="el" href="../../dd/db3/class_origen_1_1_solver__matrex.html#a415be826c056e1634b7b7265380c27b3">Solver_matrex::solve_impl()</a>, and <a class="el" href="../../d4/d7e/tst_solver__cram_8cpp.html#a923c107d6b03c6d809c1bb1d33aa6d35">TEST()</a>.</p>
 
 </div>
 </div>
@@ -694,9 +751,11 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a4">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a4">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a5">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a5">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a8f2619655e2563fe3f8640129ea31f2d">Solver::set_opts_impl()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d4/d7e/tst_solver__cram_8cpp.html#ad389cd87fc5af9dae9e3bd1906e3b91f">TEST()</a>.</p>
 
 </div>
 </div>
@@ -755,9 +814,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success or false on failure. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a13">exNEAMS.cpp</a>, <a class="el" href="../../d7/d73/tst_solver_8cpp-example.html#a2">tstSolver.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a11">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a11">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../df/d7d/_core_2xf_2tests_2tst_solver_8cpp-example.html#a3">Core/xf/tests/tstSolver.cpp</a>, <a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a12">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a12">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a0bca8867988c849478eaf6353a597463">Solver::solve_impl()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d7/d37/tst_solver_8cpp.html#ac977c17c14339ed9e7d9dbc6f93593e3">TEST()</a>.</p>
 
 </div>
 </div>
@@ -784,9 +845,11 @@ Public Member Functions</h2></td></tr>
 <p>Return current solver options and possible error messages from <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">Solver::solve()</a>. Note, however, that the solver kernels do not actually send any error messages as of yet and instead terminate the process.</p>
 <dl class="section note"><dt>Note</dt><dd>The options are solver specific. See the appropriate solver subclass for list of opts.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the options and error messages. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a5">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a5">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a6">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a6">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a8151cc0943a93700721384b8f871dd59">Solver::status_impl()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d4/d7e/tst_solver__cram_8cpp.html#ad389cd87fc5af9dae9e3bd1906e3b91f">TEST()</a>.</p>
 
 </div>
 </div>
@@ -812,9 +875,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Clear all data returning the solver option to the state it had right after constructor. All solver options get default values.</p>
 <dl class="section note"><dt>Note</dt><dd>This never needs to be called for memory management or other similar reasons. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a14">exNEAMS.cpp</a>.</dd>
-</dl>
+
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#a648643b8a44d201a59d1d3404c089078">Solver::clear_impl()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#abd1aeecfc6b8eb2b58d35ee4df34bcff">TEST()</a>.</p>
 
 </div>
 </div>

@@ -2,6 +2,7 @@ var searchData=
 [
   ['gamma_5flibrary_5fclass',['gamma_library_class',['../d3/d09/structgamma__library_1_1gamma__library__class.html',1,'gamma_library']]],
   ['gammaresource',['GammaResource',['../d1/d58/class_origen_1_1_gamma_resource.html',1,'Origen']]],
+  ['gammaresourcedata',['GammaResourceData',['../d8/d75/class_gamma_resource_data.html',1,'']]],
   ['gammaresourceio',['GammaResourceIO',['../da/d22/class_origen_1_1_gamma_resource_i_o.html',1,'Origen']]],
   ['gammaresourceio_5fcimg',['GammaResourceIO_cimg',['../d5/d19/class_origen_1_1_gamma_resource_i_o__cimg.html',1,'Origen']]],
   ['gammaspectra',['GammaSpectra',['../d1/db0/class_origen_1_1_gamma_spectra.html',1,'Origen']]],

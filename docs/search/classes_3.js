@@ -1,6 +1,7 @@
 var searchData=
 [
   ['data',['Data',['../db/d85/struct_origen_1_1_s_tab1_1_1_data.html',1,'Origen::STab1']]],
+  ['decay_5fcompare',['decay_compare',['../dc/daf/classdecay__compare.html',1,'']]],
   ['decaychannel',['DecayChannel',['../dc/da1/class_origen_1_1_decay_channel.html',1,'Origen']]],
   ['decaydata',['DecayData',['../db/d2d/class_origen_1_1_decay_data.html',1,'Origen']]],
   ['decayparent',['DecayParent',['../df/d71/class_origen_1_1_decay_parent.html',1,'Origen']]],

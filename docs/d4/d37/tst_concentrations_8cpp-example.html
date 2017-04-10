@@ -110,33 +110,33 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="keyword">using</span> std::pair;</div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( tstConcentrations, Basic )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST</a>( tstConcentrations, Basic )</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a0"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> concs;</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> concs;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set 3 nuclides in 3 different sublibs and use internal sorting option</span></div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordtype">bool</span> sort = <span class="keyword">true</span>;</div>
-<div class="line">        <a name="_a1"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> nuc_set( {10001001, 30002002, 20002002}, sort );</div>
-<div class="line">        concs.<a name="a2"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
+<div class="line">        <a name="_a2"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> nuc_set( {10001001, 30002002, 20002002}, sort );</div>
+<div class="line">        concs.<a name="a3"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// get the nuclide set and check that ids were reordered correctly</span></div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a>&amp; nuc_set = concs.<a name="a3"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>();</div>
-<div class="line">    EXPECT_VEC_EQ( <a name="a4"></a><a class="code" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a>( {10001001, 20002002, 30002002} ), nuc_set.<a name="a5"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">ids</a>() );</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a>&amp; nuc_set = concs.<a name="a4"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>();</div>
+<div class="line">    EXPECT_VEC_EQ( <a name="a5"></a><a class="code" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a>( {10001001, 20002002, 30002002} ), nuc_set.<a name="a6"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">ids</a>() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set values that correspond to the actual order</span></div>
-<div class="line">    concs.<a name="a6"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( {1.0, 0.5, 0.25} );</div>
-<div class="line">    EXPECT_VEC_EQ( <a name="a7"></a><a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( {1.0, 0.5, 0.25} ), concs.<a name="a8"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>() );</div>
+<div class="line">    concs.<a name="a7"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( {1.0, 0.5, 0.25} );</div>
+<div class="line">    EXPECT_VEC_EQ( <a name="a8"></a><a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( {1.0, 0.5, 0.25} ), concs.<a name="a9"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check vals_at</span></div>
-<div class="line">    EXPECT_EQ( 1.00, concs.<a name="a9"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 0 ) );</div>
+<div class="line">    EXPECT_EQ( 1.00, concs.<a name="a10"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 0 ) );</div>
 <div class="line">    EXPECT_EQ( 0.50, concs.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 1 ) );</div>
 <div class="line">    EXPECT_EQ( 0.25, concs.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 2 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// new concentrations from copy</span></div>
 <div class="line">    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> concs2( concs );</div>
-<div class="line">    EXPECT_TRUE( concs.<a name="a10"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">match</a>( concs2 ) );</div>
+<div class="line">    EXPECT_TRUE( concs.<a name="a11"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">match</a>( concs2 ) );</div>
 <div class="line">    EXPECT_EQ( concs, concs2 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// make sure still matches but values are new</span></div>
@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// attempt to add a nuclide that we should find</span></div>
 <div class="line">    <span class="keywordtype">bool</span> all_found;</div>
-<div class="line">    all_found = concs.<a name="a11"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">accumulate_concs</a>( {30002002}, {5.3} );</div>
+<div class="line">    all_found = concs.<a name="a12"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">accumulate_concs</a>( {30002002}, {5.3} );</div>
 <div class="line">    EXPECT_TRUE( all_found );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 5.3 + 0.25, concs.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 2 ) );</div>
 <div class="line"></div>
@@ -166,13 +166,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_FLOAT_EQ( prev, concs.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 1 ) );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( tstConcentrations, NuclideSetManagement )</div>
+<div class="line"><a class="code" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST</a>( tstConcentrations, NuclideSetManagement )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// many variants of a nuclide like depletion would have</span></div>
 <div class="line">    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> depl;</div>
 <div class="line">    {</div>
 <div class="line">        <a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> nuc_set;</div>
-<div class="line">        nuc_set.<a name="a12"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ad1596b8009f8903a70ac90a9059031f3">set_ids</a>(</div>
+<div class="line">        nuc_set.<a name="a13"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ad1596b8009f8903a70ac90a9059031f3">set_ids</a>(</div>
 <div class="line">            {10001003, 10027058, 20001003, 30001002, 30027058, 40001003} );</div>
 <div class="line">        depl.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
 <div class="line">    }</div>
@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
 <div class="line">    }</div>
 <div class="line">    tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( 0.5 );</div>
-<div class="line">    EXPECT_FALSE( tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a name="a13"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#acaa2e302fc58ed7a4c570af900345ada">has_sublibs</a>() );</div>
+<div class="line">    EXPECT_FALSE( tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a name="a14"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#acaa2e302fc58ed7a4c570af900345ada">has_sublibs</a>() );</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">bool</span> found;</div>
 <div class="line"></div>
@@ -194,9 +194,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    found = depl.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">accumulate_concs</a>( {1003, 27058}, {0.5, 1.2} );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// find in SUBLIB_1LT because Z&lt;26</span></div>
-<div class="line">    EXPECT_EQ( 10001003, depl.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a name="a14"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#af65c9c915f254006705af86d2d9c8ddd">ids_at</a>( 0 ) );</div>
+<div class="line">    EXPECT_EQ( 10001003, depl.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a name="a15"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#af65c9c915f254006705af86d2d9c8ddd">ids_at</a>( 0 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 1.5, depl.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 0 ) );</div>
-<div class="line">    EXPECT_FLOAT_EQ( 1.5, depl.<a name="a15"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0f4b9b16a4cdb76944d6b1175f25735f">lookup_val</a>( 10001003 ) );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 1.5, depl.<a name="a16"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0f4b9b16a4cdb76944d6b1175f25735f">lookup_val</a>( 10001003 ) );</div>
 <div class="line">    <span class="comment">// find ins SUBLIB_3FP because first moving backwards</span></div>
 <div class="line">    EXPECT_EQ( 30027058, depl.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#af65c9c915f254006705af86d2d9c8ddd">ids_at</a>( 4 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 2.2, depl.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 4 ) );</div>
@@ -212,14 +212,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_TRUE( found );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 0.1 + 0.3 + 0.6 + 0.5, tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0f4b9b16a4cdb76944d6b1175f25735f">lookup_val</a>( 1003 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 0.2 + 0.5 + 0.5, tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0f4b9b16a4cdb76944d6b1175f25735f">lookup_val</a>( 27058 ) );</div>
-<div class="line">    EXPECT_EQ( <a name="a16"></a><a class="code" href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">BAD_DOUBLE</a>, tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0f4b9b16a4cdb76944d6b1175f25735f">lookup_val</a>( 1002 ) );</div>
+<div class="line">    EXPECT_EQ( <a name="a17"></a><a class="code" href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">BAD_DOUBLE</a>, tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0f4b9b16a4cdb76944d6b1175f25735f">lookup_val</a>( 1002 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 0, tran.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0f4b9b16a4cdb76944d6b1175f25735f">lookup_val</a>( 1002, 0.0 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// std::cout &lt;&lt; depl.to_string() &lt;&lt; std::endl;</span></div>
 <div class="line">    <span class="comment">// std::cout &lt;&lt; tran.to_string() &lt;&lt; std::endl;</span></div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( tstConcentrations, Serialization1 )</div>
+<div class="line"><a class="code" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST</a>( tstConcentrations, Serialization1 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// many variants of a nuclide like depletion would have</span></div>
 <div class="line">    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> obj1;</div>
@@ -229,16 +229,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        obj1.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
 <div class="line">    }</div>
 <div class="line">    obj1.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( 1.0 );</div>
-<div class="line">    obj1.<a name="a17"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">set_volume</a>( 3.0 );</div>
+<div class="line">    obj1.<a name="a18"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">set_volume</a>( 3.0 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// serialize</span></div>
 <div class="line">    SerialStream ss;</div>
-<div class="line">    <span class="keywordtype">int</span> return_code = obj1.<a name="a18"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ae4c23583af6639cd829b18fac3280e24">serialize</a>( &amp;ss );</div>
+<div class="line">    <span class="keywordtype">int</span> return_code = obj1.<a name="a19"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ae4c23583af6639cd829b18fac3280e24">serialize</a>( &amp;ss );</div>
 <div class="line">    EXPECT_EQ( 0, return_code );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// deserialize</span></div>
 <div class="line">    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> obj2;</div>
-<div class="line">    return_code = obj2.<a name="a19"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6fdab80f4d25ff470dc98ec59635e5c">deserialize</a>( &amp;ss );</div>
+<div class="line">    return_code = obj2.<a name="a20"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6fdab80f4d25ff470dc98ec59635e5c">deserialize</a>( &amp;ss );</div>
 <div class="line">    EXPECT_EQ( 0, return_code );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compare</span></div>
@@ -246,24 +246,24 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_NE( &amp;obj1, &amp;obj2 );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( tstConcentrations, Serialization2 )</div>
+<div class="line"><a class="code" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST</a>( tstConcentrations, Serialization2 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// create a nuclide set</span></div>
 <div class="line">    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> ids;</div>
-<div class="line">    <a name="a20"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a3f5074a0309e7a45d83499d01b910c6e">FakeFactory::nuclide_set_addnux4</a>( ids );</div>
+<div class="line">    <a name="a21"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a3f5074a0309e7a45d83499d01b910c6e">FakeFactory::nuclide_set_addnux4</a>( ids );</div>
 <div class="line">    <a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> nuc_set;</div>
 <div class="line">    nuc_set.<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ad1596b8009f8903a70ac90a9059031f3">set_ids</a>( ids );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// re-use buffer to get numden</span></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> numden;</div>
-<div class="line">    <a name="a21"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a5fa02c958ecadf3f3af37f72706cf700">FakeFactory::vera_uox_e310</a>( ids, numden );</div>
+<div class="line">    <a name="a22"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a5fa02c958ecadf3f3af37f72706cf700">FakeFactory::vera_uox_e310</a>( ids, numden );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set up concentrations</span></div>
 <div class="line">    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> obj1;</div>
-<div class="line">    obj1.<a name="a22"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a3680d6a9dfba0e096906180b18a97155">set_units</a>( <a name="a23"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880dae91739cb6b73294f95c000bd050a2873">ATOMS_B_CM</a> );</div>
+<div class="line">    obj1.<a name="a23"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a3680d6a9dfba0e096906180b18a97155">set_units</a>( <a name="a24"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880dae91739cb6b73294f95c000bd050a2873">ATOMS_B_CM</a> );</div>
 <div class="line">    obj1.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
 <div class="line">    obj1.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">set_volume</a>( 3.0 );</div>
-<div class="line">    obj1.<a name="a24"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a371782e2ae025b5502a49a8653fda9bd">set_concs</a>( ids, numden );</div>
+<div class="line">    obj1.<a name="a25"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a371782e2ae025b5502a49a8653fda9bd">set_concs</a>( ids, numden );</div>
 <div class="line">    <span class="comment">// std::cout &lt;&lt; obj1.to_string() &lt;&lt; std::endl;</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// serialize</span></div>
@@ -281,10 +281,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_NE( &amp;obj1, &amp;obj2 );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( tstConcentrations, UnitConversion )</div>
+<div class="line"><a class="code" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST</a>( tstConcentrations, UnitConversion )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">auto</span> nr = std::make_shared&lt;NuclideResource&gt;();</div>
-<div class="line">    <a name="a25"></a><a class="code" href="../../d5/dc1/namespace_origen.html#adb61847813ab464c57d90bffa87d9fbf">defaultNuclideResource</a>( &amp;*nr );</div>
+<div class="line">    <a name="a26"></a><a class="code" href="../../d5/dc1/namespace_origen.html#adb61847813ab464c57d90bffa87d9fbf">defaultNuclideResource</a>( &amp;*nr );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check that masses are close (but not quite) the mass number</span></div>
 <div class="line">    <span class="keywordtype">double</span> u5 = nr-&gt;mass( 92235 );</div>
@@ -297,7 +297,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_NE( 238.0, u8 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// get a library and extract the nuclide set</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib = <a name="a26"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a1b4d9f7a3dd266e50da323a90c16eb33">FakeFactory::newspLibrary_10nuclide</a>();</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib = <a name="a27"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a1b4d9f7a3dd266e50da323a90c16eb33">FakeFactory::newspLibrary_10nuclide</a>();</div>
 <div class="line">    <span class="keyword">const</span> <a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a>&amp; nuc_set = lib-&gt;definition().nuclide_set();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create Concentrations with the same nuclide set and nuclide resource</span></div>
@@ -305,11 +305,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    concs.set_nuclide_resource( nr );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// test out moles--&gt;grams first</span></div>
-<div class="line">    concs.set_units( <a name="a27"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da382b25822ec0fef9c7f866e40153e01e">MOLES</a> );</div>
+<div class="line">    concs.set_units( <a name="a28"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da382b25822ec0fef9c7f866e40153e01e">MOLES</a> );</div>
 <div class="line">    concs.set_concs( {92238, 92235}, {2.0, 1.0} );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// switch to grams, check values</span></div>
-<div class="line">    concs.set_units( <a name="a28"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da73a9747a2e1ccab011a3bc941d495c2f">GRAMS</a> );</div>
+<div class="line">    concs.set_units( <a name="a29"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da73a9747a2e1ccab011a3bc941d495c2f">GRAMS</a> );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 2.0 * u8, concs.lookup_val( 20092238 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 1.0 * u5, concs.lookup_val( 20092235 ) );</div>
 <div class="line"></div>
@@ -351,7 +351,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">}</div>
 <div class="line"><span class="comment"></span></div>
 <div class="line"><span class="comment">//! Here we test going from a</span></div>
-<div class="line"><span class="comment"></span>TEST( Concentration, UnitConversion2 )</div>
+<div class="line"><span class="comment"></span><a class="code" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST</a>( Concentration, UnitConversion2 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Get the default nuclide resource, based on the current version of</span></div>
 <div class="line">    <span class="comment">// the InMemoryStdCompLib.</span></div>
@@ -364,7 +364,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">// get out a SCALE number density calculation, number density by nuclide</span></div>
 <div class="line">    <span class="comment">// without sublib.</span></div>
 <div class="line">    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> origen_concs;</div>
-<div class="line">    origen_concs.<a name="a29"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ad3eb8f31a888b9aec622a72071e5b438">set_nuclide_resource</a>( nr );</div>
+<div class="line">    origen_concs.<a name="a30"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ad3eb8f31a888b9aec622a72071e5b438">set_nuclide_resource</a>( nr );</div>
 <div class="line">    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> stdcomp_concs = origen_concs;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Initialize stdcomp_concs with numden.  Note that stdcomps do not have</span></div>
@@ -399,18 +399,18 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    origen_concs.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a3680d6a9dfba0e096906180b18a97155">set_units</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da73a9747a2e1ccab011a3bc941d495c2f">GRAMS</a> );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Normalize to 1 gram so now have weight fraction.</span></div>
-<div class="line">    origen_concs.<a name="a30"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a38a8925700a6350a19ee19c66fb28b91">normalize</a>();</div>
-<div class="line">    EXPECT_FLOAT_EQ( 1.0, origen_concs.<a name="a31"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">sum</a>() );</div>
+<div class="line">    origen_concs.<a name="a31"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a38a8925700a6350a19ee19c66fb28b91">normalize</a>();</div>
+<div class="line">    EXPECT_FLOAT_EQ( 1.0, origen_concs.<a name="a32"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">sum</a>() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Alternatively can normalize to an amount of heavy metal (1MTHM here).</span></div>
-<div class="line">    origen_concs.<a name="a32"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aed94fdd5ef2b0e69611bf24df8751121">normalize_hm</a>( 1e6 );</div>
-<div class="line">    EXPECT_FLOAT_EQ( 1e6, origen_concs.<a name="a33"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4cdba977856c3342812015db870ba18d">sum_hm</a>() );</div>
+<div class="line">    origen_concs.<a name="a33"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aed94fdd5ef2b0e69611bf24df8751121">normalize_hm</a>( 1e6 );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 1e6, origen_concs.<a name="a34"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4cdba977856c3342812015db870ba18d">sum_hm</a>() );</div>
 <div class="line">    EXPECT_LT( 1e6, origen_concs.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">sum</a>() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// std::cout &lt;&lt; origen_concs.to_string() &lt;&lt; std::endl;</span></div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( tstConcentrations, accumulate )</div>
+<div class="line"><a class="code" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST</a>( tstConcentrations, accumulate )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// these could be any 3 numbers</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> a( 1.0 );</div>

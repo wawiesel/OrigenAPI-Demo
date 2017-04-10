@@ -126,11 +126,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment">// GLOBAL COMMUNICATOR</span></div>
 <div class="line">Standard::Communicator <a name="a5"></a><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( Example, 1CreationOfAMaterial )</div>
+<div class="line"><a name="a6"></a><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, 1CreationOfAMaterial )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Get a general 2237-nuclide ORIGEN library.</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib( <span class="keyword">new</span> <a name="_a6"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
-<div class="line">    <a name="a7"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">FakeFactory::Library_scale_pwr</a>( *lib );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib( <span class="keyword">new</span> <a name="_a7"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
+<div class="line">    <a name="a8"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">FakeFactory::Library_scale_pwr</a>( *lib );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Extract a transition matrix from it.  We will use this PWR transition</span></div>
 <div class="line">    <span class="comment">// matrix for all materials in this test.</span></div>
@@ -146,17 +146,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        std::string name = <span class="stringliteral">&quot;material_1234&quot;</span>;  <span class="comment">// material name</span></div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Use the FakeFactory to get a reasonable initial composition.</span></div>
-<div class="line">        <a name="a8"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">FakeFactory::vera_uox_e360</a>( ids, numden );</div>
+<div class="line">        <a name="a9"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">FakeFactory::vera_uox_e360</a>( ids, numden );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Initialize the material.</span></div>
-<div class="line">        mat = <a name="a9"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">SP_Material</a>( <span class="keyword">new</span> <a name="_a10"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Material</a>( lib, name, <span class="keywordtype">id</span>, volume ) );</div>
+<div class="line">        mat = <a name="a10"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">SP_Material</a>( <span class="keyword">new</span> <a name="_a11"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Material</a>( lib, name, <span class="keywordtype">id</span>, volume ) );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Set the beginning of step number densities.</span></div>
 <div class="line">        mat-&gt;set_numden_bos( numden, ids );</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( Example, 2SimpleDepletionByFlux )</div>
+<div class="line"><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, 2SimpleDepletionByFlux )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Get a general 2237-nuclide ORIGEN library.</span></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib( <span class="keyword">new</span> <a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
@@ -203,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordtype">size_t</span> nsteps = flux.size();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create a Bell depletion/decay solver.</span></div>
-<div class="line">    <a name="_a11"></a><a class="code" href="../../dd/db3/class_origen_1_1_solver__matrex.html">Solver_matrex</a> slv;</div>
+<div class="line">    <a name="_a12"></a><a class="code" href="../../dd/db3/class_origen_1_1_solver__matrex.html">Solver_matrex</a> slv;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Enter step loop.</span></div>
 <div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; nsteps; ++j )</div>
@@ -212,22 +212,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <span class="keywordtype">double</span> dt = time[j + 1] - time[j];</div>
 <div class="line">        mat-&gt;add_step( dt );</div>
 <div class="line">        mat-&gt;set_flux( flux[j] );</div>
-<div class="line">        mat-&gt;<a name="a12"></a><a class="code" href="../../d2/df0/class_origen_1_1_solver.html#abe37ab3d53f6b75bd47836c0f1cb6c8c">set_transition_matrix</a>( trx );</div>
+<div class="line">        mat-&gt;<a name="a13"></a><a class="code" href="../../d2/df0/class_origen_1_1_solver.html#abe37ab3d53f6b75bd47836c0f1cb6c8c">set_transition_matrix</a>( trx );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Solve the step using only data on the material, solve takes</span></div>
 <div class="line">        <span class="comment">// the bos vector, time, flux, and pointer to eos.</span></div>
 <div class="line">        <a class="code" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a> n0 = mat-&gt;amount_bos();</div>
 <div class="line">        <a class="code" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a> n1 = mat-&gt;amount_eos();</div>
 <div class="line">        slv.<a class="code" href="../../d2/df0/class_origen_1_1_solver.html#abe37ab3d53f6b75bd47836c0f1cb6c8c">set_transition_matrix</a>( &amp;*mat-&gt;transition_matrix() );</div>
-<div class="line">        slv.<a name="a13"></a><a class="code" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">solve</a>( *n0, mat-&gt;flux(), mat-&gt;dt(), &amp;*n1 );</div>
-<div class="line">        slv.<a name="a14"></a><a class="code" href="../../d2/df0/class_origen_1_1_solver.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line">        slv.<a name="a14"></a><a class="code" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">solve</a>( *n0, mat-&gt;flux(), mat-&gt;dt(), &amp;*n1 );</div>
+<div class="line">        slv.<a name="a15"></a><a class="code" href="../../d2/df0/class_origen_1_1_solver.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Inspect results stored in material.</span></div>
 <div class="line">    <span class="keywordflow">if</span>( <span class="keyword">false</span> ) std::cout &lt;&lt; mat-&gt;to_string() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( Example, 3MultiZoneDepletionByFlux )</div>
+<div class="line"><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, 3MultiZoneDepletionByFlux )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Get a general 2237-nuclide ORIGEN library.</span></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib( <span class="keyword">new</span> <a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
@@ -238,7 +238,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#aef2479a1b99e118a833432267e18fdea">SP_TransitionMatrix</a> trx( lib-&gt;newsp_transition_matrix_at( 0 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create materials.</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> matmap( <span class="keyword">new</span> <a name="_a15"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a>() );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> matmap( <span class="keyword">new</span> <a name="_a16"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a>() );</div>
 <div class="line">    <span class="keywordtype">size_t</span> num_mats = 4;</div>
 <div class="line">    {</div>
 <div class="line">        std::vector&lt;int&gt; ids;</div>
@@ -267,25 +267,25 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordtype">size_t</span> nsteps = flux.size();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create multi-zone depleter.</span></div>
-<div class="line">    <a name="_a16"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html">Origen::MultiZoneDepleter</a> mzd;</div>
+<div class="line">    <a name="_a17"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html">Origen::MultiZoneDepleter</a> mzd;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Set solver to be used.</span></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">Origen::SP_Solver</a> slv( <span class="keyword">new</span> <a class="code" href="../../dd/db3/class_origen_1_1_solver__matrex.html">Origen::Solver_matrex</a>() );</div>
-<div class="line">    mzd.<a name="a17"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a900c4ac4ba5ae27bd02bacf4dee0a1b1">set_solver</a>( slv );</div>
+<div class="line">    mzd.<a name="a18"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a900c4ac4ba5ae27bd02bacf4dee0a1b1">set_solver</a>( slv );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Set material map.</span></div>
-<div class="line">    mzd.<a name="a18"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
+<div class="line">    mzd.<a name="a19"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Initialize number of substeps and whether to deplete by power.</span></div>
 <div class="line">    <span class="comment">// Used in mzd.update(dc) below.</span></div>
-<div class="line">    mzd.<a name="a19"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( {1.0} );</div>
-<div class="line">    mzd.<a name="a20"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ad84b488ed5d1e78b13b4b2aa6584f733">unset_constraint</a>();</div>
+<div class="line">    mzd.<a name="a20"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( {1.0} );</div>
+<div class="line">    mzd.<a name="a21"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ad84b488ed5d1e78b13b4b2aa6584f733">unset_constraint</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Enter step loop.</span></div>
 <div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; nsteps; ++j )</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// Add new step data for each material.</span></div>
-<div class="line">        mzd.<a name="a21"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a55669259c86b01befd75b8d81502170d">add_step</a>( time[j + 1] - time[j] );</div>
+<div class="line">        mzd.<a name="a22"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a55669259c86b01befd75b8d81502170d">add_step</a>( time[j + 1] - time[j] );</div>
 <div class="line">        <span class="keywordflow">for</span>( <span class="keyword">auto</span> it = matmap-&gt;begin(); it != matmap-&gt;end(); ++it )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="comment">// int id = it-&gt;first;</span></div>
@@ -297,14 +297,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Execute solve for all materials.</span></div>
-<div class="line">        mzd.<a name="a22"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
+<div class="line">        mzd.<a name="a23"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Have a look at the materials in the map.</span></div>
 <div class="line">    <span class="keywordflow">if</span>( <span class="keyword">false</span> ) std::cout &lt;&lt; matmap-&gt;to_string() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( Example, 4MultiZoneDepletionByPower )</div>
+<div class="line"><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, 4MultiZoneDepletionByPower )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Get a general 2237-nuclide ORIGEN library.</span></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib( <span class="keyword">new</span> <a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
@@ -353,8 +353,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Initialize number of substeps and whether to deplete by power.</span></div>
-<div class="line">    mzd.<a name="a23"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab77ecce57efa7528667bc94682b90741">set_constraint_its_max</a>( 1 );</div>
-<div class="line">    mzd.<a name="a24"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">set_power_constraint</a>( 7.5e3 );</div>
+<div class="line">    mzd.<a name="a24"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab77ecce57efa7528667bc94682b90741">set_constraint_its_max</a>( 1 );</div>
+<div class="line">    mzd.<a name="a25"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">set_power_constraint</a>( 7.5e3 );</div>
 <div class="line">    mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( {1.0} );  <span class="comment">// single substep</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Enter step loop.</span></div>
@@ -395,18 +395,18 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">if</span>( <span class="keyword">false</span> ) std::cout &lt;&lt; matmap-&gt;to_string() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( Example, DISABLED_5MultiZoneWithTransportCoupling )</div>
+<div class="line"><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, DISABLED_5MultiZoneWithTransportCoupling )</div>
 <div class="line">{</div>
 <div class="line">    std::string library_path;</div>
 <div class="line">    std::string jeff_path;</div>
 <div class="line">    std::string yields_path;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Initialize transition matrix updater by paths.</span></div>
-<div class="line">    <a name="_a25"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html">TransitionMatrixUpdater</a> tmu;</div>
-<div class="line">    tmu.<a name="a26"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a3cc87fdf6f503fab8a567ee48b80eded">load</a>( library_path, jeff_path, yields_path );</div>
+<div class="line">    <a name="_a26"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html">TransitionMatrixUpdater</a> tmu;</div>
+<div class="line">    tmu.<a name="a27"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a3cc87fdf6f503fab8a567ee48b80eded">load</a>( library_path, jeff_path, yields_path );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Get a general 2237-nuclide ORIGEN library.</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib = tmu.<a name="a27"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#aceca9176d1b239704b0debedf80a493e">sp_library</a>();</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib = tmu.<a name="a28"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#aceca9176d1b239704b0debedf80a493e">sp_library</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create 16 materials.</span></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> matmap( <span class="keyword">new</span> <a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a>() );</div>
@@ -460,7 +460,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">            <span class="comment">// In a real simulation, this flux come from the transport solution.</span></div>
 <div class="line">            <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> mg_flux( 252, 1.0 );</div>
-<div class="line">            <span class="keywordtype">double</span> rflux = tmu.<a name="a28"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#adf3b22a9889a5a9f57ff56c5753c9d8b">update_mg_flux</a>( mg_flux );  <span class="comment">// returns sum</span></div>
+<div class="line">            <span class="keywordtype">double</span> rflux = tmu.<a name="a29"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#adf3b22a9889a5a9f57ff56c5753c9d8b">update_mg_flux</a>( mg_flux );  <span class="comment">// returns sum</span></div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Now we can update specific one group cross sections to</span></div>
 <div class="line">            <span class="comment">// supplement/override data set from just the flux.</span></div>
@@ -468,11 +468,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> num_mts = {1, 2};</div>
 <div class="line">            <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> mt_list = {102, 102, 18};</div>
 <div class="line">            <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> xs = {17.0, 9., 100.};</div>
-<div class="line">            tmu.<a name="a29"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a7b4ac774cfa0727fe906a9c63112d46f">update_user_xs</a>( <span class="stringliteral">&quot;IZZZAAA&quot;</span>, nuclide_list, num_mts, mt_list, xs );</div>
+<div class="line">            tmu.<a name="a30"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a7b4ac774cfa0727fe906a9c63112d46f">update_user_xs</a>( <span class="stringliteral">&quot;IZZZAAA&quot;</span>, nuclide_list, num_mts, mt_list, xs );</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Get a new transition matrix.</span></div>
 <div class="line">            <a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#aef2479a1b99e118a833432267e18fdea">SP_TransitionMatrix</a> trx( <span class="keyword">new</span> <a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a4638ab51377138ed407ceb22118dbb2e">TransitionMatrix</a>() );</div>
-<div class="line">            tmu.<a name="a30"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a40f98aa45aaf40c4e44dce7c38ad7d31">get_transition_matrix</a>( &amp;*trx );</div>
+<div class="line">            tmu.<a name="a31"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a40f98aa45aaf40c4e44dce7c38ad7d31">get_transition_matrix</a>( &amp;*trx );</div>
 <div class="line">            mat-&gt;set_flux( rflux );</div>
 <div class="line">            mat-&gt;set_transition_matrix( trx );</div>
 <div class="line">        }</div>
@@ -485,7 +485,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">if</span>( <span class="keyword">false</span> ) std::cout &lt;&lt; matmap-&gt;to_string() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( Example, DISABLED_6MultiZoneWithAbsorptionTreatment )</div>
+<div class="line"><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, DISABLED_6MultiZoneWithAbsorptionTreatment )</div>
 <div class="line">{</div>
 <div class="line">    std::string library_path;</div>
 <div class="line">    std::string jeff_path;</div>
@@ -557,7 +557,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> nuclide_list = {92235, 94239};</div>
 <div class="line">            <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> fis_xs = {40.0, 100.0};</div>
 <div class="line">            <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> abs_xs = {57.0, 109.0};</div>
-<div class="line">            tmu.<a name="a31"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a53bb9cec5497420b9f2ff7ead100f8fb">update_fission_absorption_xs</a>(</div>
+<div class="line">            tmu.<a name="a32"></a><a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a53bb9cec5497420b9f2ff7ead100f8fb">update_fission_absorption_xs</a>(</div>
 <div class="line">                <span class="stringliteral">&quot;IZZZAAA&quot;</span>, nuclide_list, fis_xs, abs_xs );</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Get a new transition matrix.</span></div>
@@ -575,7 +575,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">if</span>( <span class="keyword">false</span> ) std::cout &lt;&lt; matmap-&gt;to_string() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( Example, 7MultiZoneWithMPI )</div>
+<div class="line"><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, 7MultiZoneWithMPI )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Get a general 2237-nuclide ORIGEN library.</span></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> lib( <span class="keyword">new</span> <a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
@@ -624,7 +624,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Set communicator.</span></div>
-<div class="line">    mzd.<a name="a32"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa25aacf5e2fc3a37c73e4d8d1049260d">set_comm</a>( &amp;<a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a> );</div>
+<div class="line">    mzd.<a name="a33"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa25aacf5e2fc3a37c73e4d8d1049260d">set_comm</a>( &amp;<a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a> );</div>
 <div class="line"></div>
 <div class="line">    mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab77ecce57efa7528667bc94682b90741">set_constraint_its_max</a>( 1 );</div>
 <div class="line">    mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">set_power_constraint</a>( 7.5e3 );</div>
@@ -650,11 +650,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// The status object is useful for getting parallel info.</span></div>
-<div class="line">        <span class="keywordflow">if</span>( <span class="keyword">false</span> &amp;&amp; <a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank() == 0 ) std::cout &lt;&lt; mzd.<a name="a33"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a585cd31bba044ea2fead91ae062010c9">status</a>() &lt;&lt; std::endl;</div>
+<div class="line">        <span class="keywordflow">if</span>( <span class="keyword">false</span> &amp;&amp; <a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank() == 0 ) std::cout &lt;&lt; mzd.<a name="a34"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a585cd31bba044ea2fead91ae062010c9">status</a>() &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( Example, 8ExternallyDriven ) {}</div>
+<div class="line"><a class="code" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a8f1628964ec89cfe4bb2aa23db0814f3">TEST</a>( Example, 8ExternallyDriven ) {}</div>
 <div class="line"></div>
 <div class="line"></div>
 </div><!-- fragment --> </div><!-- contents -->

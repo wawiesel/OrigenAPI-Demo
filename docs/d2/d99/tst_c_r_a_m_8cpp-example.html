@@ -380,23 +380,23 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> * Fixture class for the tstCRAM* gtests that involve reading origen library  *</span></div>
 <div class="line"><span class="comment"> *                                                                            *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
-<div class="line"><span class="keyword">class </span>tstCRAM : <span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><span class="keyword">class </span><a name="_a3"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a> : <span class="keyword">public</span> ::testing::Test</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
-<div class="line">    tstCRAM()</div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a0229c833bb370dc84b14b63a698d281e">tstCRAM</a>()</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// Must load rev01 library because that is what reference is based on</span></div>
 <div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib;</div>
 <div class="line">        {</div>
 <div class="line">            ScaleUtils::IO::DB opts;</div>
-<div class="line">            lib = <a name="a3"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>(</div>
-<div class="line">                <a name="a4"></a><a class="code" href="../../d5/dc1/namespace_origen.html#affc00b67fd5e67c205d0f87f8daf5360">Origen::loadLibrary</a>( <span class="stringliteral">&quot;pwr.rev01.orglib&quot;</span>, opts ) );</div>
+<div class="line">            lib = <a name="a5"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>(</div>
+<div class="line">                <a name="a6"></a><a class="code" href="../../d5/dc1/namespace_origen.html#affc00b67fd5e67c205d0f87f8daf5360">Origen::loadLibrary</a>( <span class="stringliteral">&quot;pwr.rev01.orglib&quot;</span>, opts ) );</div>
 <div class="line">            opts.throwErrorStack();</div>
-<div class="line">            trx = lib-&gt;newsp_transition_matrix_at( 0 );</div>
+<div class="line">            <a name="a7"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a> = lib-&gt;newsp_transition_matrix_at( 0 );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        itot = trx-&gt;get_itot();</div>
-<div class="line">        non = trx-&gt;get_non();</div>
+<div class="line">        itot = <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_itot();</div>
+<div class="line">        non = <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_non();</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Convert the Lists to vectors</span></div>
 <div class="line"></div>
@@ -405,34 +405,34 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        loc.resize( non );</div>
 <div class="line">        ZAI.resize( itot );</div>
 <div class="line"></div>
-<div class="line">        copy( ( trx-&gt;get_non0_() )-&gt;begin(),</div>
-<div class="line">              ( trx-&gt;get_non0_() )-&gt;end(),</div>
+<div class="line">        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_non0_() )-&gt;begin(),</div>
+<div class="line">              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_non0_() )-&gt;end(),</div>
 <div class="line">              non0.begin() );</div>
-<div class="line">        copy( ( trx-&gt;get_kd_() )-&gt;begin(),</div>
-<div class="line">              ( trx-&gt;get_kd_() )-&gt;end(),</div>
+<div class="line">        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_kd_() )-&gt;begin(),</div>
+<div class="line">              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_kd_() )-&gt;end(),</div>
 <div class="line">              kd.begin() );</div>
-<div class="line">        copy( ( trx-&gt;get_loc() )-&gt;begin(),</div>
-<div class="line">              ( trx-&gt;get_loc() )-&gt;end(),</div>
+<div class="line">        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_loc() )-&gt;begin(),</div>
+<div class="line">              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_loc() )-&gt;end(),</div>
 <div class="line">              loc.begin() );</div>
-<div class="line">        copy( ( trx-&gt;get_nucl() )-&gt;begin(),</div>
-<div class="line">              ( trx-&gt;get_nucl() )-&gt;end(),</div>
+<div class="line">        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_nucl() )-&gt;begin(),</div>
+<div class="line">              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_nucl() )-&gt;end(),</div>
 <div class="line">              ZAI.begin() );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    ~tstCRAM() {}</div>
+<div class="line">    <a name="a8"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#aa0dae0593dcc16247410aa2f3016da45">~tstCRAM</a>() {}</div>
 <div class="line">    <span class="comment">// variables in the test class</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7a406c531668ac8d63ce2e70eb1b38f4">Origen::SP_TransitionMatrixP</a> trx;</div>
-<div class="line">    <span class="keywordtype">int</span> itot, non;</div>
-<div class="line">    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> non0, kd, loc, ZAI;</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7a406c531668ac8d63ce2e70eb1b38f4">Origen::SP_TransitionMatrixP</a> <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a9"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a>, <a name="a10"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a63d390aad036f8c02618c0ce30386b95">non</a>;</div>
+<div class="line">    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> <a name="a11"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#adf5e8b0356b153d74ed228e6c4be8e9e">non0</a>, <a name="a12"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#abe35f2304f68209f297cfe6796939218">kd</a>, <a name="a13"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a06ea0c2ecf8a3d13e6a89d43d8d93b00">loc</a>, <a name="a14"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a6212e234dfdb3d438990886832f4d7fe">ZAI</a>;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// these are not strictly part of the library read, but are required</span></div>
 <div class="line">    <span class="comment">// to fold it which will always follow</span></div>
 <div class="line"></div>
-<div class="line">    DoubleList DLdiag, DLa;</div>
-<div class="line">    <span class="keywordtype">double</span> flux;</div>
+<div class="line">    DoubleList <a name="a15"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#ab4518a8958d4041388893e366e25eda0">DLdiag</a>, <a name="a16"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a9c66eb3f63c08c8ad49bd21503f9a7e0">DLa</a>;</div>
+<div class="line">    <span class="keywordtype">double</span> <a name="a17"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a4139968379e7fa4dd48b4a4d00a650d7">flux</a>;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// and other junk</span></div>
-<div class="line">    <span class="keywordtype">int</span> i;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a18"></a><a class="code" href="../../dd/df4/classtst_c_r_a_m.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
 <div class="line">};</div>
 <div class="line"></div>
 <div class="line"><span class="comment">/******************************************************************************</span></div>
@@ -440,28 +440,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> *                                                                            *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span>tstOrigenToCRSMatrix : <span class="keyword">public</span> tstCRAM</div>
+<div class="line"><span class="keyword">class </span><a name="_a19"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a> : <span class="keyword">public</span> <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
-<div class="line">    tstOrigenToCRSMatrix() {}</div>
-<div class="line">    ~tstOrigenToCRSMatrix()</div>
+<div class="line">    <a name="a20"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a9dc9c5fabd28b25bb5eb6559371dcea1">tstOrigenToCRSMatrix</a>() {}</div>
+<div class="line">    <a name="a21"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a814c812a6ce6e51aa01e625e2f962f3f">~tstOrigenToCRSMatrix</a>()</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// set the zero flux flag</span></div>
 <div class="line"></div>
-<div class="line">        EXPECT_GE( flux, 0 );</div>
+<div class="line">        EXPECT_GE( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a4139968379e7fa4dd48b4a4d00a650d7">flux</a>, 0 );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span>( flux == 0.0 )</div>
+<div class="line">        <span class="keywordflow">if</span>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a4139968379e7fa4dd48b4a4d00a650d7">flux</a> == 0.0 )</div>
 <div class="line">            zero_flux_step = 1;</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">            zero_flux_step = 0;</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Fold library</span></div>
 <div class="line"></div>
-<div class="line">        trx-&gt;fold_flux( flux, DLdiag, DLa );</div>
-<div class="line">        <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> diag( DLdiag.begin(), DLdiag.end() );</div>
-<div class="line">        <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> a( DLa.begin(), DLa.end() );</div>
+<div class="line">        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;fold_flux( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a4139968379e7fa4dd48b4a4d00a650d7">flux</a>, <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#ab4518a8958d4041388893e366e25eda0">DLdiag</a>, <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a9c66eb3f63c08c8ad49bd21503f9a7e0">DLa</a> );</div>
+<div class="line">        <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> diag( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#ab4518a8958d4041388893e366e25eda0">DLdiag</a>.begin(), <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#ab4518a8958d4041388893e366e25eda0">DLdiag</a>.end() );</div>
+<div class="line">        <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> a( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a9c66eb3f63c08c8ad49bd21503f9a7e0">DLa</a>.begin(), <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a9c66eb3f63c08c8ad49bd21503f9a7e0">DLa</a>.end() );</div>
 <div class="line"></div>
-<div class="line">        <a name="a5"></a><a class="code" href="../../d6/dfc/kernel__cram_8cpp.html#a766915c86655672579fe5205b19bc692">OrigenToCRSMatrix</a>( &amp;a_n,</div>
+<div class="line">        <a name="a22"></a><a class="code" href="../../d6/dfc/kernel__cram_8cpp.html#a766915c86655672579fe5205b19bc692">OrigenToCRSMatrix</a>( &amp;a_n,</div>
 <div class="line">                           &amp;a_val,</div>
 <div class="line">                           &amp;a_ci,</div>
 <div class="line">                           &amp;a_rp,</div>
@@ -513,7 +513,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        {</div>
 <div class="line">            free( src_dummy_n0 );</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ ) free( source_term[i] );</div>
+<div class="line">            <span class="keywordflow">for</span>( i = 0; i &lt; <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a>; i++ ) free( source_term[i] );</div>
 <div class="line"></div>
 <div class="line">            free( source_term );</div>
 <div class="line">        }</div>
@@ -526,10 +526,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        free( newIdx );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">double</span> *a_val, **source_term, *src_dummy_n0;</div>
-<div class="line">    <span class="keywordtype">int</span> a_n, a_nnz, *a_ci, *a_rp, *a_diag_idx, *oldIdx, *newIdx;</div>
-<div class="line">    <span class="keywordtype">int</span> source_order, zero_flux_step, is_adjoint, sort_nuclides;</div>
-<div class="line">    <span class="keywordtype">int</span> i;</div>
+<div class="line">    <span class="keywordtype">double</span> *<a name="a23"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#af7b2515260e86ca51c3011521d67e928">a_val</a>, **<a name="a24"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#ad0015a05bf97c890be0351807889802a">source_term</a>, *<a name="a25"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a3f1947b338ae79ef706fd00d1a420e8b">src_dummy_n0</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a26"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#aa3b189ec441f48ea1be9cdb7b1adf64d">a_n</a>, <a name="a27"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#ab39c9390436ce730ecdcb9611091bf4d">a_nnz</a>, *<a name="a28"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a816c53c25cf50ee3b834ddc9db6c2d9b">a_ci</a>, *<a name="a29"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#abb66c428a5bd27a0c26ac28a244c4b2f">a_rp</a>, *<a name="a30"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a490aec08ad3ee9c28969ccdcd4ad1285">a_diag_idx</a>, *<a name="a31"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a8bdb6cbe5212425b1dde4bf8d99e099e">oldIdx</a>, *<a name="a32"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#af3b261f0be63bce2f39cc5ecb44fe240">newIdx</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a33"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a534c2d02b11a658fd881a929955ec5b9">source_order</a>, <a name="a34"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a6b08d9223689a0bcec816106db6e06a4">zero_flux_step</a>, <a name="a35"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a49d61c7bf0b001a499b38c75863084cb">is_adjoint</a>, <a name="a36"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#ad7808a028876509f1a2d03ea99cb6cca">sort_nuclides</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a37"></a><a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
 <div class="line">};</div>
 <div class="line"></div>
 <div class="line"><span class="comment">/*****************************************************************************/</span><span class="comment"></span></div>
@@ -545,7 +545,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> *    4x4 system without double define, no source                             *</span></div>
 <div class="line"><span class="comment"> *                                                                            *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
-<div class="line">TEST( tstOrigenToCRSMatrix_simple, 1 )</div>
+<div class="line"><a name="a38"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST</a>( tstOrigenToCRSMatrix_simple, 1 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> itot = 4;  <span class="comment">// number of nuclides</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> non = 5;   <span class="comment">// number of reactions (non-diag. elements in A)</span></div>
@@ -654,7 +654,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> *    4x4 system with double defines, no source                               *</span></div>
 <div class="line"><span class="comment"> *                                                                            *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
-<div class="line">TEST( tstOrigenToCRSMatrix_simple, 2 )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST</a>( tstOrigenToCRSMatrix_simple, 2 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> itot = 4;     <span class="comment">// number of nuclides</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> non = 5 + 3;  <span class="comment">// number of reactions (non-diag. elements in A)</span></div>
@@ -778,7 +778,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> *    4x4 system without double define, order 2 source                        *</span></div>
 <div class="line"><span class="comment"> *                                                                            *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
-<div class="line">TEST( tstOrigenToCRSMatrix_simple, 3 )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST</a>( tstOrigenToCRSMatrix_simple, 3 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> itot = 4;  <span class="comment">// number of nuclides</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> non = 5;   <span class="comment">// number of reactions (non-diag. elements in A)</span></div>
@@ -933,7 +933,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 1.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*             NO   N0      NO     NO */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, DecayNoSort )</div>
+<div class="line"><a name="a39"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, DecayNoSort )</div>
 <div class="line">{</div>
 <div class="line">    flux = 0.0e14;</div>
 <div class="line">    sort_nuclides = 0;</div>
@@ -944,7 +944,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 2.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES   N0      NO     NO */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, ActivationNoSort )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, ActivationNoSort )</div>
 <div class="line">{</div>
 <div class="line">    flux = 3.0e14;</div>
 <div class="line">    sort_nuclides = 0;</div>
@@ -955,7 +955,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 3.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES  YES      NO     NO */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, ActivationWithSort )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, ActivationWithSort )</div>
 <div class="line">{</div>
 <div class="line">    flux = 3.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -966,7 +966,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 4.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES  YES     YES     NO */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, AdjointActivationWithSort )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, AdjointActivationWithSort )</div>
 <div class="line">{</div>
 <div class="line">    flux = 3.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -977,7 +977,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 5.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES   NO     YES     NO */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, AdjointDecayNoSort )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, AdjointDecayNoSort )</div>
 <div class="line">{</div>
 <div class="line">    flux = 0.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -988,7 +988,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 6.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES  YES      NO   YES+ */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, ActivationWithSource1 )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, ActivationWithSource1 )</div>
 <div class="line">{</div>
 <div class="line">    flux = 3.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -1005,7 +1005,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 7.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES  YES      NO   YES- */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, ActivationWithSource2 )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, ActivationWithSource2 )</div>
 <div class="line">{</div>
 <div class="line">    flux = 3.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -1022,7 +1022,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 8.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES  YES      NO  YES+- */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, ActivationWithSource3 )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, ActivationWithSource3 )</div>
 <div class="line">{</div>
 <div class="line">    flux = 3.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -1041,7 +1041,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 9.  Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES  YES     YES  YES+- */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, AdjointActivationWithSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, AdjointActivationWithSource )</div>
 <div class="line">{</div>
 <div class="line">    flux = 3.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -1060,7 +1060,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 10. Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*             NO   NO     NO  YES+- */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, DecayWithSourceNoSort )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, DecayWithSourceNoSort )</div>
 <div class="line">{</div>
 <div class="line">    flux = 0.0e14;</div>
 <div class="line">    sort_nuclides = 0;</div>
@@ -1079,7 +1079,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 11. Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*             NO  YES      NO  YES+- high order */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, Order4Source )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, Order4Source )</div>
 <div class="line">{</div>
 <div class="line">    flux = 0.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -1101,7 +1101,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*  TEST 12. Flux Sort Adjoint Source */</span></div>
 <div class="line"><span class="comment">/*            YES  YES     YES YES+- high order */</span></div>
-<div class="line">TEST_F( tstOrigenToCRSMatrix, Order3SourceAdjoint )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html">tstOrigenToCRSMatrix</a>, Order3SourceAdjoint )</div>
 <div class="line">{</div>
 <div class="line">    flux = 2.0e14;</div>
 <div class="line">    sort_nuclides = 1;</div>
@@ -1138,7 +1138,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> * This should catch coarse errors (and they will be easier to debug from     *</span></div>
 <div class="line"><span class="comment"> * small system.                                                              *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
-<div class="line">TEST( tstCRAM2, simple2x2 )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST</a>( tstCRAM2, simple2x2 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> itot = 2;    <span class="comment">// number of nuclides</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> non = 1;     <span class="comment">// number of reactions (non-diag. elements in A)</span></div>
@@ -1208,7 +1208,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    solution[1] = n0[1] * ( std::exp( -lambda * delta_t ) );</div>
 <div class="line"></div>
 <div class="line">    cram_order = 16;</div>
-<div class="line">    <a name="a6"></a><a class="code" href="../../d6/dfc/kernel__cram_8cpp.html#a280cd76fe988677c00f96930b194e4a4">kernel_cram</a>( n,</div>
+<div class="line">    <a name="a40"></a><a class="code" href="../../d6/dfc/kernel__cram_8cpp.html#a280cd76fe988677c00f96930b194e4a4">kernel_cram</a>( n,</div>
 <div class="line">                 n0,</div>
 <div class="line">                 <span class="keyword">nullptr</span>,</div>
 <div class="line">                 -1,</div>
@@ -1390,7 +1390,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    free( source_term );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( tstCRAMcutoff, simple2x2 )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST</a>( tstCRAMcutoff, simple2x2 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> itot = 2;  <span class="comment">// number of nuclides</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> non = 1;   <span class="comment">// number of reactions (non-diag. elements in A)</span></div>
@@ -1642,10 +1642,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment">//#include &quot;Origen/Manager/Wrapper/tests/pwr.rev01.fresh.35e13.100d.expm.h&quot;</span></div>
 <div class="line"><span class="comment">//#include &quot;Origen/Manager/Wrapper/tests/pwr.rev01.fresh+src.35e13.100d.expm.h&quot;</span></div>
 <div class="line"></div>
-<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a7"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a5fca156ec984eadc46e5f9042aaeeb25">GetRefResultsNoSRC</a>();</div>
-<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a8"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a68910af4225125c75905e21832abab05">GetRefResultsWithSRC</a>();</div>
+<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a41"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a5fca156ec984eadc46e5f9042aaeeb25">GetRefResultsNoSRC</a>();</div>
+<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a42"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a68910af4225125c75905e21832abab05">GetRefResultsWithSRC</a>();</div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, FreshFuelDepletion )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, FreshFuelDepletion )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// fold library</span></div>
 <div class="line"></div>
@@ -1694,13 +1694,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> n_ref = <a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a5fca156ec984eadc46e5f9042aaeeb25">GetRefResultsNoSRC</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// human-readable illustration of the overall performance</span></div>
-<div class="line">    <a name="a9"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a6cd2b3cb14011012e0f3e9ed22be4427">PrintErrorTable</a>( itot, &amp;n[0], &amp;n_ref[0] );</div>
+<div class="line">    <a name="a43"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a6cd2b3cb14011012e0f3e9ed22be4427">PrintErrorTable</a>( itot, &amp;n[0], &amp;n_ref[0] );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check that there are not too many bad errors</span></div>
 <div class="line">    <a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a702403c788cfadd964ec3e21774cfbe4">CheckErrors</a>( itot, &amp;n[0], &amp;n_ref[0], 1e-18, 1e-8, &amp;ZAI[0] );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, FreshFuelDepletionWithSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, FreshFuelDepletionWithSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// fold library</span></div>
 <div class="line"></div>
@@ -4598,11 +4598,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">//#include &quot;Origen/Manager/Wrapper/tests/pwr.rev01.old.decay.100d.expm.h&quot;</span></div>
 <div class="line"></div>
-<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a10"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#aead01ffd193345f97af02bbfa11c158a">GetInitialComposition</a>();</div>
-<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a11"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a8449ff0eb7e44785d6a32e82c2d65f02">GetReferenceResultsOldFuel</a>();</div>
-<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a12"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ab0cceb0d54cbce21a821319d74cbd68a">GetReferenceResultsRandomSource</a>();</div>
+<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a44"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#aead01ffd193345f97af02bbfa11c158a">GetInitialComposition</a>();</div>
+<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a45"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a8449ff0eb7e44785d6a32e82c2d65f02">GetReferenceResultsOldFuel</a>();</div>
+<div class="line"><a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a46"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ab0cceb0d54cbce21a821319d74cbd68a">GetReferenceResultsRandomSource</a>();</div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, OldFuelDecayNoSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, OldFuelDecayNoSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// fold library</span></div>
 <div class="line"></div>
@@ -4660,7 +4660,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ ) EXPECT_GE( n[0], 0 );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, DecayFromRandomSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, DecayFromRandomSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> i;</div>
 <div class="line"></div>
@@ -4681,7 +4681,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ )</div>
 <div class="line">        source_term[i] = (<span class="keywordtype">double</span>*)calloc( source_order + 1, <span class="keyword">sizeof</span>( <span class="keywordtype">double</span> ) );</div>
 <div class="line"></div>
-<div class="line">    <a name="a13"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a66ddb6f05e799693112fbe62a97c9237">my_drand</a>( 49024601LL );</div>
+<div class="line">    <a name="a47"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a66ddb6f05e799693112fbe62a97c9237">my_drand</a>( 49024601LL );</div>
 <div class="line">    <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ ) source_term[i][0] = <a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a66ddb6f05e799693112fbe62a97c9237">my_drand</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">double</span> delta_t = 100 * 60 * 60 * 24;</div>
@@ -8942,11 +8942,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="preprocessor">#define MAKE_BLESSED_RESULTS 0  // 1 make blessed results</span></div>
 <div class="line"><span class="comment">// 0 runs the actual test</span></div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, CompareToBlessed )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, CompareToBlessed )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> i;</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">if</span>( !<a name="a14"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a4e5ac78b28e73676a7ada3701c06aa92">MAKE_BLESSED_RESULTS</a> )</div>
+<div class="line">    <span class="keywordflow">if</span>( !<a name="a48"></a><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a4e5ac78b28e73676a7ada3701c06aa92">MAKE_BLESSED_RESULTS</a> )</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordtype">double</span> b_delta_t;</div>
 <div class="line">        <span class="keywordtype">int</span> b_itot, b_non, b_zero_flux_step, b_is_adjoint, b_cram_order;</div>
@@ -8959,7 +8959,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        std::printf( <span class="stringliteral">&quot;comparing to blessed results in:\n   %s\n&quot;</span>,</div>
 <div class="line">                     <a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae4be4e8fd41c5f57f0b39ee7e2e3055f">tstCRAM5_blessed_results_path</a>.c_str() );</div>
 <div class="line"></div>
-<div class="line">        <a name="a15"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a2075b9694287779f5b9db3bd7428f096">ReadBlessedResults</a>( &amp;b_n,</div>
+<div class="line">        <a name="a49"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a2075b9694287779f5b9db3bd7428f096">ReadBlessedResults</a>( &amp;b_n,</div>
 <div class="line">                            &amp;b_n0,</div>
 <div class="line">                            &amp;b_source_term,</div>
 <div class="line">                            &amp;b_source_order,</div>
@@ -9065,7 +9065,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        std::sprintf(</div>
 <div class="line">            tmpstr, <span class="stringliteral">&quot; %s collapsed with flux %.17e&quot;</span>, <span class="stringliteral">&quot;pwr.rev01.orglib&quot;</span>, flux );</div>
 <div class="line"></div>
-<div class="line">        <a name="a16"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a6db2276c537c7b4f3cf8a4efef184944">WriteBlessedResults</a>( &amp;n[0],</div>
+<div class="line">        <a name="a50"></a><a class="code" href="../../df/df2/tst_c_r_a_mcommons_8cpp.html#a6db2276c537c7b4f3cf8a4efef184944">WriteBlessedResults</a>( &amp;n[0],</div>
 <div class="line">                             &amp;n0[0],</div>
 <div class="line">                             source_term,</div>
 <div class="line">                             source_order,</div>
@@ -9125,10 +9125,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> * doubth, disable the culling and rerun. Remember to restore culling after.  *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span>tstCRAMNegativeSource : <span class="keyword">public</span> tstCRAM</div>
+<div class="line"><span class="keyword">class </span><a name="_a51"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html">tstCRAMNegativeSource</a> : <span class="keyword">public</span> <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
-<div class="line">    tstCRAMNegativeSource()</div>
+<div class="line">    <a name="a52"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a93337a37c2767511dda089f91063d478">tstCRAMNegativeSource</a>()</div>
 <div class="line">    {</div>
 <div class="line">        zero_flux_step = 0, is_adjoint = 0, cram_order = 16, internal_steps = 1;</div>
 <div class="line">        source_order = 0;</div>
@@ -9137,54 +9137,54 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">        <span class="comment">// fold library</span></div>
 <div class="line"></div>
-<div class="line">        flux = 3.5e14;</div>
-<div class="line">        trx-&gt;fold_flux( flux, DLdiag, DLa );</div>
+<div class="line">        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a4139968379e7fa4dd48b4a4d00a650d7">flux</a> = 3.5e14;</div>
+<div class="line">        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;fold_flux( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a4139968379e7fa4dd48b4a4d00a650d7">flux</a>, <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#ab4518a8958d4041388893e366e25eda0">DLdiag</a>, <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a9c66eb3f63c08c8ad49bd21503f9a7e0">DLa</a> );</div>
 <div class="line"></div>
 <div class="line">        diag.assign(</div>
-<div class="line">            DLdiag.begin(),</div>
-<div class="line">            DLdiag</div>
+<div class="line">            <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#ab4518a8958d4041388893e366e25eda0">DLdiag</a>.begin(),</div>
+<div class="line">            <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#ab4518a8958d4041388893e366e25eda0">DLdiag</a></div>
 <div class="line">                .end() );  <span class="comment">// copy(DLdiag.begin(), DLdiag.end(), diag.begin());</span></div>
-<div class="line">        a.assign( DLa.begin(), DLa.end() );</div>
+<div class="line">        a.assign( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a9c66eb3f63c08c8ad49bd21503f9a7e0">DLa</a>.begin(), <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a9c66eb3f63c08c8ad49bd21503f9a7e0">DLa</a>.end() );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Allocate source term arrays</span></div>
 <div class="line"></div>
-<div class="line">        n0_1.resize( itot, 0.0 );</div>
-<div class="line">        n_1.resize( itot, 0.0 );</div>
-<div class="line">        n0_2.resize( itot, 0.0 );</div>
-<div class="line">        n_2.resize( itot, 0.0 );</div>
-<div class="line">        n0_3.resize( itot, 0.0 );</div>
-<div class="line">        n_3.resize( itot, 0.0 );</div>
+<div class="line">        <a name="a53"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a714e24428b7787d2b9249e5a74cde1ea">n0_1</a>.resize( itot, 0.0 );</div>
+<div class="line">        <a name="a54"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#ab805e54ab33b93b53464afe8dd0fb2b4">n_1</a>.resize( itot, 0.0 );</div>
+<div class="line">        <a name="a55"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a055156872e4a2c9c5b6dff2cfbdfe9af">n0_2</a>.resize( itot, 0.0 );</div>
+<div class="line">        <a name="a56"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#adb47adc050d2e51a040dab998eb00f9e">n_2</a>.resize( itot, 0.0 );</div>
+<div class="line">        <a name="a57"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a8c53b6e6336cd2e38d84ac33d8acaa79">n0_3</a>.resize( itot, 0.0 );</div>
+<div class="line">        <a name="a58"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a9df089dc1da2d5c6f2265c4a7af25978">n_3</a>.resize( itot, 0.0 );</div>
 <div class="line"></div>
-<div class="line">        source_term_1 = (<span class="keywordtype">double</span>**)malloc( itot * <span class="keyword">sizeof</span>( <span class="keywordtype">double</span>* ) );</div>
-<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ )</div>
-<div class="line">            source_term_1[i] =</div>
+<div class="line">        <a name="a59"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#afd4abcfb30923dd880a7395be6e2066e">source_term_1</a> = (<span class="keywordtype">double</span>**)malloc( itot * <span class="keyword">sizeof</span>( <span class="keywordtype">double</span>* ) );</div>
+<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a>; i++ )</div>
+<div class="line">            <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#afd4abcfb30923dd880a7395be6e2066e">source_term_1</a>[i] =</div>
 <div class="line">                (<span class="keywordtype">double</span>*)calloc( source_order + 1, <span class="keyword">sizeof</span>( <span class="keywordtype">double</span> ) );</div>
 <div class="line"></div>
-<div class="line">        source_term_2 = (<span class="keywordtype">double</span>**)malloc( itot * <span class="keyword">sizeof</span>( <span class="keywordtype">double</span>* ) );</div>
-<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ )</div>
-<div class="line">            source_term_2[i] =</div>
+<div class="line">        <a name="a60"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#ab29484e35825b8a784ac931714afb6fc">source_term_2</a> = (<span class="keywordtype">double</span>**)malloc( itot * <span class="keyword">sizeof</span>( <span class="keywordtype">double</span>* ) );</div>
+<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a>; i++ )</div>
+<div class="line">            <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#ab29484e35825b8a784ac931714afb6fc">source_term_2</a>[i] =</div>
 <div class="line">                (<span class="keywordtype">double</span>*)calloc( source_order + 1, <span class="keyword">sizeof</span>( <span class="keywordtype">double</span> ) );</div>
 <div class="line"></div>
-<div class="line">        source_term_3 = (<span class="keywordtype">double</span>**)malloc( itot * <span class="keyword">sizeof</span>( <span class="keywordtype">double</span>* ) );</div>
-<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ )</div>
-<div class="line">            source_term_3[i] =</div>
+<div class="line">        <a name="a61"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a873f1d03edcd584f39d15564a7410b6d">source_term_3</a> = (<span class="keywordtype">double</span>**)malloc( itot * <span class="keyword">sizeof</span>( <span class="keywordtype">double</span>* ) );</div>
+<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a>; i++ )</div>
+<div class="line">            <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a873f1d03edcd584f39d15564a7410b6d">source_term_3</a>[i] =</div>
 <div class="line">                (<span class="keywordtype">double</span>*)calloc( source_order + 1, <span class="keyword">sizeof</span>( <span class="keywordtype">double</span> ) );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">int</span> i;</div>
-<div class="line">    <span class="keywordtype">int</span> zero_flux_step, is_adjoint, cram_order, internal_steps, source_order;</div>
-<div class="line">    <span class="keywordtype">int</span> remove_negatives;</div>
-<div class="line">    <span class="keywordtype">double</span> cutoff;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a62"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a63"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a6b08d9223689a0bcec816106db6e06a4">zero_flux_step</a>, <a name="a64"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a49d61c7bf0b001a499b38c75863084cb">is_adjoint</a>, <a name="a65"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a32ed12c090cf67204114834b671257c9">cram_order</a>, <a name="a66"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a2448b2f919520eb9e46beb8386d3fc06">internal_steps</a>, <a name="a67"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a534c2d02b11a658fd881a929955ec5b9">source_order</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a name="a68"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a0e647972beb859b4c5de9274d498cf7a">remove_negatives</a>;</div>
+<div class="line">    <span class="keywordtype">double</span> <a name="a69"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a034fbedcce0aee66ee125138543e2703">cutoff</a>;</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> diag, a;</div>
+<div class="line">    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a name="a70"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a9a7ec4469f38bdf0fac9bf57c3654738">diag</a>, <a name="a71"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a431c20b58beafae6bb25006ace9fbbca">a</a>;</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> n0_1, n_1, n0_2, n_2, n0_3, n_3;</div>
-<div class="line">    <span class="keywordtype">double</span> **source_term_1, **source_term_2, **source_term_3;</div>
+<div class="line">    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a714e24428b7787d2b9249e5a74cde1ea">n0_1</a>, <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#ab805e54ab33b93b53464afe8dd0fb2b4">n_1</a>, <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a055156872e4a2c9c5b6dff2cfbdfe9af">n0_2</a>, <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#adb47adc050d2e51a040dab998eb00f9e">n_2</a>, <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a8c53b6e6336cd2e38d84ac33d8acaa79">n0_3</a>, <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a9df089dc1da2d5c6f2265c4a7af25978">n_3</a>;</div>
+<div class="line">    <span class="keywordtype">double</span> **<a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#afd4abcfb30923dd880a7395be6e2066e">source_term_1</a>, **<a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#ab29484e35825b8a784ac931714afb6fc">source_term_2</a>, **<a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a873f1d03edcd584f39d15564a7410b6d">source_term_3</a>;</div>
 <div class="line"></div>
-<div class="line">    ~tstCRAMNegativeSource()</div>
+<div class="line">    <a name="a72"></a><a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html#a2cab71e1f4ad18550f15a0ea725341f3">~tstCRAMNegativeSource</a>()</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// free</span></div>
-<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; itot; i++ )</div>
+<div class="line">        <span class="keywordflow">for</span>( i = 0; i &lt; <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a>; i++ )</div>
 <div class="line">        {</div>
 <div class="line">            free( source_term_1[i] );</div>
 <div class="line">            free( source_term_2[i] );</div>
@@ -9198,7 +9198,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*** 1: source term only *111111111111111111111111111111111111111111111111111*/</span></div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAMNegativeSource, NegativeSourceNoInitial )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html">tstCRAMNegativeSource</a>, NegativeSourceNoInitial )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">double</span> delta_t = 200 * 60 * 60 * 24;</div>
 <div class="line"></div>
@@ -9263,7 +9263,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*** 2: source + initial *222222222222222222222222222222222222222222222222222*/</span></div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAMNegativeSource, NegativeSourceWithInitial )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html">tstCRAMNegativeSource</a>, NegativeSourceWithInitial )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">double</span> delta_t = 200 * 60 * 60 * 24;</div>
 <div class="line"></div>
@@ -9352,7 +9352,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*** 3: source + initial, source has both positive and negative values *33333*/</span></div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAMNegativeSource, MixedSourceWithInitial )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../df/d52/classtst_c_r_a_m_negative_source.html">tstCRAMNegativeSource</a>, MixedSourceWithInitial )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">double</span> delta_t = 200 * 60 * 60 * 24;</div>
 <div class="line"></div>
@@ -9457,7 +9457,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> *                                                                            *</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, TestAdjointNoSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, TestAdjointNoSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> i;</div>
 <div class="line"></div>
@@ -9558,7 +9558,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">                 dot1 / dot2 - 1 );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, TestAdjointWithSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, TestAdjointWithSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> i;</div>
 <div class="line">    <span class="keywordtype">int</span> idx = trx-&gt;find_nuclide_guess( 922350 );</div>
@@ -9702,7 +9702,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"> * source term works</span></div>
 <div class="line"><span class="comment"> *****************************************************************************/</span></div>
 <div class="line"></div>
-<div class="line">TEST( tstCRAM8, SingleTermSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST</a>( tstCRAM8, SingleTermSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> itot = 6;       <span class="comment">// number of nuclides</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> non = 0;        <span class="comment">// number of reactions (non-diag. elements in A)</span></div>
@@ -9778,7 +9778,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    free( source_term );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( tstCRAM8, MultiTermSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST</a>( tstCRAM8, MultiTermSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> itot = 6;       <span class="comment">// number of nuclides</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> non = 0;        <span class="comment">// number of reactions (non-diag. elements in A)</span></div>
@@ -9858,7 +9858,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment">// this tests that higher order terms produce correct amount by having stable</span></div>
 <div class="line"><span class="comment">// target nuclides for them</span></div>
 <div class="line"></div>
-<div class="line">TEST_F( tstCRAM, FullSystemLinearSource )</div>
+<div class="line"><a class="code" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ae799a3282d39b5eaab3dd4f4990c86f0">TEST_F</a>( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html">tstCRAM</a>, FullSystemLinearSource )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> i, j;</div>
 <div class="line">    <span class="keywordtype">int</span> zero_flux_step = 0, is_adjoint = 0, cram_order = 16, internal_steps = 1;</div>

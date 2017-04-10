@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['a',['a',['../d7/d41/class_origen_1_1_transition_matrix_p.html#af73600e74c0fe1ca2f2d0bcc9940e207',1,'Origen::TransitionMatrixP::a()'],['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#abf2d7fa65df76f1b5eb338d6b2573c77',1,'rksuite_90::rk_comm_real_1d::a()']]],
+  ['a',['a',['../d7/d41/class_origen_1_1_transition_matrix_p.html#af73600e74c0fe1ca2f2d0bcc9940e207',1,'Origen::TransitionMatrixP::a()'],['../df/d52/classtst_c_r_a_m_negative_source.html#a431c20b58beafae6bb25006ace9fbbca',1,'tstCRAMNegativeSource::a()'],['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#abf2d7fa65df76f1b5eb338d6b2573c77',1,'rksuite_90::rk_comm_real_1d::a()']]],
+  ['a_5fci',['a_ci',['../d4/d20/classtst_origen_to_c_r_s_matrix.html#a816c53c25cf50ee3b834ddc9db6c2d9b',1,'tstOrigenToCRSMatrix']]],
+  ['a_5fdiag_5fidx',['a_diag_idx',['../d4/d20/classtst_origen_to_c_r_s_matrix.html#a490aec08ad3ee9c28969ccdcd4ad1285',1,'tstOrigenToCRSMatrix']]],
+  ['a_5fn',['a_n',['../d4/d20/classtst_origen_to_c_r_s_matrix.html#aa3b189ec441f48ea1be9cdb7b1adf64d',1,'tstOrigenToCRSMatrix']]],
+  ['a_5fnnz',['a_nnz',['../d4/d20/classtst_origen_to_c_r_s_matrix.html#ab39c9390436ce730ecdcb9611091bf4d',1,'tstOrigenToCRSMatrix']]],
+  ['a_5frp',['a_rp',['../d4/d20/classtst_origen_to_c_r_s_matrix.html#abb66c428a5bd27a0c26ac28a244c4b2f',1,'tstOrigenToCRSMatrix']]],
+  ['a_5fval',['a_val',['../d4/d20/classtst_origen_to_c_r_s_matrix.html#af7b2515260e86ca51c3011521d67e928',1,'tstOrigenToCRSMatrix']]],
   ['aaa',['aaa',['../d8/dff/namespaceorigen__beta.html#a3bcefa1475ae97eaed731cfa2d04f26b',1,'origen_beta']]],
   ['absfrac',['absfrac',['../db/df3/structorigen__output_1_1origen__output__class.html#a9760c6ec066e303e3b7b899e49e66ef5',1,'origen_output::origen_output_class']]],
   ['absorption_5fcoeff',['absorption_coeff',['../db/df3/structorigen__output_1_1origen__output__class.html#a358c5755b09af18327a087531e14b0d1',1,'origen_output::origen_output_class']]],

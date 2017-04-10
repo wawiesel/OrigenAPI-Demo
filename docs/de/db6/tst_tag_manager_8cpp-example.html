@@ -113,12 +113,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span>TagManagerTester : <span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><span class="keyword">class </span><a name="_a0"></a><a class="code" href="../../dd/d4a/class_tag_manager_tester.html">TagManagerTester</a> : <span class="keyword">public</span> ::testing::Test</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> SetUp()</div>
 <div class="line">    {</div>
-<div class="line">        testTags = <a name="a0"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ac8678d91297434b0f707226559e9a873">SP_TagManager</a>( <span class="keyword">new</span> <a name="_a1"></a><a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a>() );</div>
+<div class="line">        testTags = <a name="a1"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ac8678d91297434b0f707226559e9a873">SP_TagManager</a>( <span class="keyword">new</span> <a name="_a2"></a><a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a>() );</div>
 <div class="line">        compareTags = <a class="code" href="../../d5/dc1/namespace_origen.html#ac8678d91297434b0f707226559e9a873">SP_TagManager</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a>() );</div>
 <div class="line">        tst = <span class="keyword">true</span>;</div>
 <div class="line">    }</div>
@@ -144,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="preprocessor">    EXPECT_TRUE( a.size() == b.size() &amp;&amp; \</span></div>
 <div class="line"><span class="preprocessor">                 std::equal( a.begin(), a.end(), b.begin() ) )</span></div>
 <div class="line"></div>
-<div class="line">TEST_F( TagManagerTester, IdTagSetHasGetTest )</div>
+<div class="line"><a name="a3"></a><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#a42ccc459fcdfc94162f5c3ac925b603b">TEST_F</a>( <a class="code" href="../../dd/d4a/class_tag_manager_tester.html">TagManagerTester</a>, IdTagSetHasGetTest )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">/*</span></div>
 <div class="line"><span class="comment">     * Testing setIdTag, hasTag, and getIdTag.</span></div>
@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;Either getIdTag or setIdTag has failed.&quot;</span>;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( TagManagerTester, InterpTagSetHasGetTest )</div>
+<div class="line"><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#a42ccc459fcdfc94162f5c3ac925b603b">TEST_F</a>( <a class="code" href="../../dd/d4a/class_tag_manager_tester.html">TagManagerTester</a>, InterpTagSetHasGetTest )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">/*</span></div>
 <div class="line"><span class="comment">     * Testing setInterp Tag, hasTag, and getInterpTag.</span></div>
@@ -179,7 +179,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;Either getInterpTag or setInterpTag has failed.&quot;</span>;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( TagManagerTester, listIdTagsTest )</div>
+<div class="line"><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#a42ccc459fcdfc94162f5c3ac925b603b">TEST_F</a>( <a class="code" href="../../dd/d4a/class_tag_manager_tester.html">TagManagerTester</a>, listIdTagsTest )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">/* Testing listIdTags function. */</span></div>
 <div class="line">    EXPECT_TRUE( testTags-&gt;listIdTags().empty() )</div>
@@ -206,7 +206,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;listIdTags() did not return appropriate tags.&quot;</span>;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( TagManagerTester, listInterpTagsTest )</div>
+<div class="line"><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#a42ccc459fcdfc94162f5c3ac925b603b">TEST_F</a>( <a class="code" href="../../dd/d4a/class_tag_manager_tester.html">TagManagerTester</a>, listInterpTagsTest )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">/* Testing listInterpTags function. */</span></div>
 <div class="line">    EXPECT_TRUE( testTags-&gt;listInterpTags().empty() )</div>
@@ -234,7 +234,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;listInterpTags has returned a non-matching list of tag names.&quot;</span>;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( TagManagerTester, deleteTagTest )</div>
+<div class="line"><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#a42ccc459fcdfc94162f5c3ac925b603b">TEST_F</a>( <a class="code" href="../../dd/d4a/class_tag_manager_tester.html">TagManagerTester</a>, deleteTagTest )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">/* Testing deleteTag function. */</span></div>
 <div class="line"></div>
@@ -316,7 +316,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;deleteTag function failed to clear all interp tags.&quot;</span>;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( TagManagerTester, compareAndMatchTests )</div>
+<div class="line"><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#a42ccc459fcdfc94162f5c3ac925b603b">TEST_F</a>( <a class="code" href="../../dd/d4a/class_tag_manager_tester.html">TagManagerTester</a>, compareAndMatchTests )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">/*</span></div>
 <div class="line"><span class="comment">     * Testing the compare function that accepts another TagManager instance and</span></div>
@@ -848,7 +848,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_TRUE( !testStringVector2.empty() )</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;compare(std::vector&lt;std::string&gt;, TagManager) failed to properly &quot;</span></div>
 <div class="line">           <span class="stringliteral">&quot;compare a string vector with 3 tag names to an empty tag manager.&quot;</span>;</div>
-<div class="line">    <a name="a2"></a><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#ab96e5eb516bf3a40e11424e7a5c61de9">EXPECT_SET_EQ</a>( testStringVector, testStringVector2 )</div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../d5/d8f/tst_tag_manager_8cpp.html#ab96e5eb516bf3a40e11424e7a5c61de9">EXPECT_SET_EQ</a>( testStringVector, testStringVector2 )</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;compare(std::vector&lt;std::string&gt;, TagManager) failed to properly &quot;</span></div>
 <div class="line">           <span class="stringliteral">&quot;return the tag names requested from a string vector with three &quot;</span></div>
 <div class="line">           <span class="stringliteral">&quot;tags against an empty tag manager.&quot;</span>;</div>

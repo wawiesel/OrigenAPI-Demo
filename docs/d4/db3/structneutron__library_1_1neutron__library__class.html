@@ -105,6 +105,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d0/dc5/typeneutron__library_1_1neutron__library__class-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">neutron_library_class Type Reference</div>  </div>
@@ -134,6 +135,93 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a45ca3cf66718dc48dbd8724a8b56b000"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a45ca3cf66718dc48dbd8724a8b56b000">read_branching</a> =&gt; neutron_library__read_branching</td></tr>
 <tr class="memdesc:a45ca3cf66718dc48dbd8724a8b56b000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read branching data.  <a href="#a45ca3cf66718dc48dbd8724a8b56b000">More...</a><br /></td></tr>
 <tr class="separator:a45ca3cf66718dc48dbd8724a8b56b000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a468d3673cdf5204e01e9211910c216d5"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(n_elements, 9)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a468d3673cdf5204e01e9211910c216d5">stcoeff_data</a></td></tr>
+<tr class="memdesc:a468d3673cdf5204e01e9211910c216d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">stopping coefficient data for elements  <a href="#a468d3673cdf5204e01e9211910c216d5">More...</a><br /></td></tr>
+<tr class="separator:a468d3673cdf5204e01e9211910c216d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10ada136b59c460e22700d15eebcec8"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#aa10ada136b59c460e22700d15eebcec8">branch_q</a></td></tr>
+<tr class="memdesc:aa10ada136b59c460e22700d15eebcec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">branching data [itot]  <a href="#aa10ada136b59c460e22700d15eebcec8">More...</a><br /></td></tr>
+<tr class="separator:aa10ada136b59c460e22700d15eebcec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fed0490f918e4d14a5ff4322a22aa0d"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a6fed0490f918e4d14a5ff4322a22aa0d">branch_el</a></td></tr>
+<tr class="memdesc:a6fed0490f918e4d14a5ff4322a22aa0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">branching data [[branch_nl]]  <a href="#a6fed0490f918e4d14a5ff4322a22aa0d">More...</a><br /></td></tr>
+<tr class="separator:a6fed0490f918e4d14a5ff4322a22aa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea85e52a87222a0fbe00fe07e6f4d335"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#aea85e52a87222a0fbe00fe07e6f4d335">branch_ep</a></td></tr>
+<tr class="memdesc:aea85e52a87222a0fbe00fe07e6f4d335"><td class="mdescLeft">&#160;</td><td class="mdescRight">branching data [[branch_np]]  <a href="#aea85e52a87222a0fbe00fe07e6f4d335">More...</a><br /></td></tr>
+<tr class="separator:aea85e52a87222a0fbe00fe07e6f4d335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09b5493f993d9db19da24acd0b46832"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#aa09b5493f993d9db19da24acd0b46832">branch_f</a></td></tr>
+<tr class="memdesc:aa09b5493f993d9db19da24acd0b46832"><td class="mdescLeft">&#160;</td><td class="mdescRight">branching data [[branch_nl*branch_np]]  <a href="#aa09b5493f993d9db19da24acd0b46832">More...</a><br /></td></tr>
+<tr class="separator:aa09b5493f993d9db19da24acd0b46832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0100f0f7b295fd6e287cc78a01afe6"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a3f0100f0f7b295fd6e287cc78a01afe6">branch_nl</a></td></tr>
+<tr class="memdesc:a3f0100f0f7b295fd6e287cc78a01afe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">brancing data size [itot]  <a href="#a3f0100f0f7b295fd6e287cc78a01afe6">More...</a><br /></td></tr>
+<tr class="separator:a3f0100f0f7b295fd6e287cc78a01afe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab157c854f2f088fad5b0e57368d0225a"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#ab157c854f2f088fad5b0e57368d0225a">branch_np</a></td></tr>
+<tr class="memdesc:ab157c854f2f088fad5b0e57368d0225a"><td class="mdescLeft">&#160;</td><td class="mdescRight">brancing data size [itot]  <a href="#ab157c854f2f088fad5b0e57368d0225a">More...</a><br /></td></tr>
+<tr class="separator:ab157c854f2f088fad5b0e57368d0225a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81005409518ad0b8cb15a1246cae7111"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a81005409518ad0b8cb15a1246cae7111">branch_ptr_el</a></td></tr>
+<tr class="memdesc:a81005409518ad0b8cb15a1246cae7111"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to first item [itot]  <a href="#a81005409518ad0b8cb15a1246cae7111">More...</a><br /></td></tr>
+<tr class="separator:a81005409518ad0b8cb15a1246cae7111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216f577063fe094ebc0a232ce9810a63"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a216f577063fe094ebc0a232ce9810a63">branch_ptr_ep</a></td></tr>
+<tr class="memdesc:a216f577063fe094ebc0a232ce9810a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to first item [itot]  <a href="#a216f577063fe094ebc0a232ce9810a63">More...</a><br /></td></tr>
+<tr class="separator:a216f577063fe094ebc0a232ce9810a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d19d56aede0cc3d1be7db2c9f1e63dd"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a4d19d56aede0cc3d1be7db2c9f1e63dd">branch_ptr_f</a></td></tr>
+<tr class="memdesc:a4d19d56aede0cc3d1be7db2c9f1e63dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to first item [itot]  <a href="#a4d19d56aede0cc3d1be7db2c9f1e63dd">More...</a><br /></td></tr>
+<tr class="separator:a4d19d56aede0cc3d1be7db2c9f1e63dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18addd1793434972f07c6e4ea87b7ac3"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a18addd1793434972f07c6e4ea87b7ac3">xs_n</a></td></tr>
+<tr class="memdesc:a18addd1793434972f07c6e4ea87b7ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">XS data &ndash; number of entries [itot].  <a href="#a18addd1793434972f07c6e4ea87b7ac3">More...</a><br /></td></tr>
+<tr class="separator:a18addd1793434972f07c6e4ea87b7ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82937e5eea73ff603e7c4a1fdf5d722f"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a82937e5eea73ff603e7c4a1fdf5d722f">xs_ptr</a></td></tr>
+<tr class="memdesc:a82937e5eea73ff603e7c4a1fdf5d722f"><td class="mdescLeft">&#160;</td><td class="mdescRight">XS data &ndash; pointer to the first item [itot].  <a href="#a82937e5eea73ff603e7c4a1fdf5d722f">More...</a><br /></td></tr>
+<tr class="separator:a82937e5eea73ff603e7c4a1fdf5d722f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacce1606a641fcc777fa60e383c0466f"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#aacce1606a641fcc777fa60e383c0466f">xs_e</a></td></tr>
+<tr class="memdesc:aacce1606a641fcc777fa60e383c0466f"><td class="mdescLeft">&#160;</td><td class="mdescRight">XS data [[xs_n]].  <a href="#aacce1606a641fcc777fa60e383c0466f">More...</a><br /></td></tr>
+<tr class="separator:aacce1606a641fcc777fa60e383c0466f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65252d2c0d01fa253156c39755b90a49"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a65252d2c0d01fa253156c39755b90a49">xs_xs</a></td></tr>
+<tr class="memdesc:a65252d2c0d01fa253156c39755b90a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">XS data [[xs_n]].  <a href="#a65252d2c0d01fa253156c39755b90a49">More...</a><br /></td></tr>
+<tr class="separator:a65252d2c0d01fa253156c39755b90a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa80a0b487f5c41228a30a028d76f14"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a4aa80a0b487f5c41228a30a028d76f14">decay_eal</a></td></tr>
+<tr class="memdesc:a4aa80a0b487f5c41228a30a028d76f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [[decay_nal]]  <a href="#a4aa80a0b487f5c41228a30a028d76f14">More...</a><br /></td></tr>
+<tr class="separator:a4aa80a0b487f5c41228a30a028d76f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2699a2489831095cd760abf190b0411"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#ac2699a2489831095cd760abf190b0411">decay_fal</a></td></tr>
+<tr class="memdesc:ac2699a2489831095cd760abf190b0411"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [[decay_nal]]  <a href="#ac2699a2489831095cd760abf190b0411">More...</a><br /></td></tr>
+<tr class="separator:ac2699a2489831095cd760abf190b0411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e1dbdf6ada42e2a158f8ab215f92e7"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#ab2e1dbdf6ada42e2a158f8ab215f92e7">decay_fdng</a></td></tr>
+<tr class="memdesc:ab2e1dbdf6ada42e2a158f8ab215f92e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [[decay_ndn]]  <a href="#ab2e1dbdf6ada42e2a158f8ab215f92e7">More...</a><br /></td></tr>
+<tr class="separator:ab2e1dbdf6ada42e2a158f8ab215f92e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe8dd89ad535f561a2415921e3e4bc69"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#abe8dd89ad535f561a2415921e3e4bc69">decay_alam</a></td></tr>
+<tr class="memdesc:abe8dd89ad535f561a2415921e3e4bc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [itot]  <a href="#abe8dd89ad535f561a2415921e3e4bc69">More...</a><br /></td></tr>
+<tr class="separator:abe8dd89ad535f561a2415921e3e4bc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d41916da3c0cb8b00a5245c92c94622"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a4d41916da3c0cb8b00a5245c92c94622">decay_bfsf</a></td></tr>
+<tr class="memdesc:a4d41916da3c0cb8b00a5245c92c94622"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [itot]  <a href="#a4d41916da3c0cb8b00a5245c92c94622">More...</a><br /></td></tr>
+<tr class="separator:a4d41916da3c0cb8b00a5245c92c94622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155e77076befffb39ea51d0700ef16dc"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a155e77076befffb39ea51d0700ef16dc">decay_barnu</a></td></tr>
+<tr class="memdesc:a155e77076befffb39ea51d0700ef16dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [itot]  <a href="#a155e77076befffb39ea51d0700ef16dc">More...</a><br /></td></tr>
+<tr class="separator:a155e77076befffb39ea51d0700ef16dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6e6b2a15c3c8d6f07492b4b355bb22"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#ace6e6b2a15c3c8d6f07492b4b355bb22">decay_a</a></td></tr>
+<tr class="memdesc:ace6e6b2a15c3c8d6f07492b4b355bb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [itot]  <a href="#ace6e6b2a15c3c8d6f07492b4b355bb22">More...</a><br /></td></tr>
+<tr class="separator:ace6e6b2a15c3c8d6f07492b4b355bb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e68e564215b4cab63f8b1a64b70f4b"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a76e68e564215b4cab63f8b1a64b70f4b">decay_b</a></td></tr>
+<tr class="memdesc:a76e68e564215b4cab63f8b1a64b70f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [itot]  <a href="#a76e68e564215b4cab63f8b1a64b70f4b">More...</a><br /></td></tr>
+<tr class="separator:a76e68e564215b4cab63f8b1a64b70f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12dfa615467ceec02cc50c1765151b63"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a12dfa615467ceec02cc50c1765151b63">decay_bfdn</a></td></tr>
+<tr class="memdesc:a12dfa615467ceec02cc50c1765151b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay data [itot]  <a href="#a12dfa615467ceec02cc50c1765151b63">More...</a><br /></td></tr>
+<tr class="separator:a12dfa615467ceec02cc50c1765151b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2a965d3b1b1fee43aeabb34b8a7996"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#ada2a965d3b1b1fee43aeabb34b8a7996">decay_ndn</a></td></tr>
+<tr class="memdesc:ada2a965d3b1b1fee43aeabb34b8a7996"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay &ndash; number of DN lines [itot]  <a href="#ada2a965d3b1b1fee43aeabb34b8a7996">More...</a><br /></td></tr>
+<tr class="separator:ada2a965d3b1b1fee43aeabb34b8a7996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31512519d6b7bc7472356c06451157b"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#ac31512519d6b7bc7472356c06451157b">decay_nal</a></td></tr>
+<tr class="memdesc:ac31512519d6b7bc7472356c06451157b"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay &ndash; number of AN lines [itot]  <a href="#ac31512519d6b7bc7472356c06451157b">More...</a><br /></td></tr>
+<tr class="separator:ac31512519d6b7bc7472356c06451157b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32fc65c67b3c3f1048036f34ff7bc054"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a32fc65c67b3c3f1048036f34ff7bc054">decay_ptr_al</a></td></tr>
+<tr class="memdesc:a32fc65c67b3c3f1048036f34ff7bc054"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay &ndash; pointer to the first AN item [itot]  <a href="#a32fc65c67b3c3f1048036f34ff7bc054">More...</a><br /></td></tr>
+<tr class="separator:a32fc65c67b3c3f1048036f34ff7bc054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26398fe473ea6e92fd4446f6b8bcbba8"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#a26398fe473ea6e92fd4446f6b8bcbba8">decay_ptr_dn</a></td></tr>
+<tr class="memdesc:a26398fe473ea6e92fd4446f6b8bcbba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">decay &ndash; pointer to the first DN item [itot]  <a href="#a26398fe473ea6e92fd4446f6b8bcbba8">More...</a><br /></td></tr>
+<tr class="separator:a26398fe473ea6e92fd4446f6b8bcbba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memItemLeft" align="right" valign="top">type(origen_librarywrapper), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db3/structneutron__library_1_1neutron__library__class.html#aca217f2b2b238f4a56fb199d8d20edb6">lib</a> =&gt;NULL()</td></tr>
+<tr class="memdesc:aca217f2b2b238f4a56fb199d8d20edb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">an origen library  <a href="#aca217f2b2b238f4a56fb199d8d20edb6">More...</a><br /></td></tr>
+<tr class="separator:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Neutron data library class; it reads the neutron source data from a file into memory. </p>

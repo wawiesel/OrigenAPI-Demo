@@ -105,6 +105,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d1/df2/typeorigen__gamma_1_1origen__gamma__class-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">origen_gamma_class Type Reference</div>  </div>
@@ -128,6 +129,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4c6c72ce8672c69788dc77abf0bbbec"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#af4c6c72ce8672c69788dc77abf0bbbec">get_spectrum</a> =&gt; orggam__get_spectrum</td></tr>
 <tr class="memdesc:af4c6c72ce8672c69788dc77abf0bbbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate photon yields and spectra for given concentrations.  <a href="#af4c6c72ce8672c69788dc77abf0bbbec">More...</a><br /></td></tr>
 <tr class="separator:af4c6c72ce8672c69788dc77abf0bbbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ad466b58f392ba2ccd511b90c418a851e"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#ad466b58f392ba2ccd511b90c418a851e">nsteps</a></td></tr>
+<tr class="memdesc:ad466b58f392ba2ccd511b90c418a851e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of steps.  <a href="#ad466b58f392ba2ccd511b90c418a851e">More...</a><br /></td></tr>
+<tr class="separator:ad466b58f392ba2ccd511b90c418a851e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memItemLeft" align="right" valign="top">type(origen_librarywrapper), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#aca217f2b2b238f4a56fb199d8d20edb6">lib</a> =&gt;NULL()</td></tr>
+<tr class="memdesc:aca217f2b2b238f4a56fb199d8d20edb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">associated ORIGEN library  <a href="#aca217f2b2b238f4a56fb199d8d20edb6">More...</a><br /></td></tr>
+<tr class="separator:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eafcd69e7a8e0edd814c5ccb9b0c73a"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html">gamma_library_class</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#a3eafcd69e7a8e0edd814c5ccb9b0c73a">glib</a> =&gt;NULL()</td></tr>
+<tr class="memdesc:a3eafcd69e7a8e0edd814c5ccb9b0c73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">associated GAMMA library  <a href="#a3eafcd69e7a8e0edd814c5ccb9b0c73a">More...</a><br /></td></tr>
+<tr class="separator:a3eafcd69e7a8e0edd814c5ccb9b0c73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af311dc5babf8a3310328efbe70e44021"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="../../d3/dfb/structgamma__library_1_1origen__gamma__options.html">origen_gamma_options</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#af311dc5babf8a3310328efbe70e44021">opts</a></td></tr>
+<tr class="memdesc:af311dc5babf8a3310328efbe70e44021"><td class="mdescLeft">&#160;</td><td class="mdescRight">options for gamma calculations  <a href="#af311dc5babf8a3310328efbe70e44021">More...</a><br /></td></tr>
+<tr class="separator:af311dc5babf8a3310328efbe70e44021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac079ca6994ccd5a5d6233a0f0ba9d8ac"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:,:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#ac079ca6994ccd5a5d6233a0f0ba9d8ac">gamma_yields</a></td></tr>
+<tr class="memdesc:ac079ca6994ccd5a5d6233a0f0ba9d8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">non-summed n/s spectrum [ngroups * 0:nsteps * itot]  <a href="#ac079ca6994ccd5a5d6233a0f0ba9d8ac">More...</a><br /></td></tr>
+<tr class="separator:ac079ca6994ccd5a5d6233a0f0ba9d8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2234d69dd6dc5dbdb55cdbd12ff35b"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#a4c2234d69dd6dc5dbdb55cdbd12ff35b">spectrum_n</a></td></tr>
+<tr class="memdesc:a4c2234d69dd6dc5dbdb55cdbd12ff35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">spectrum [n/s] [ngroups * 0:nsteps]  <a href="#a4c2234d69dd6dc5dbdb55cdbd12ff35b">More...</a><br /></td></tr>
+<tr class="separator:a4c2234d69dd6dc5dbdb55cdbd12ff35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82262daa236f28e5d6d4092be2fb9d1"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#aa82262daa236f28e5d6d4092be2fb9d1">spectrum_e</a></td></tr>
+<tr class="memdesc:aa82262daa236f28e5d6d4092be2fb9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">spectrum [MeV/s] [ngroups * 0:nsteps]  <a href="#aa82262daa236f28e5d6d4092be2fb9d1">More...</a><br /></td></tr>
+<tr class="separator:aa82262daa236f28e5d6d4092be2fb9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a457b7b713998ddc95af3ae144909112a"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#a457b7b713998ddc95af3ae144909112a">total_n</a></td></tr>
+<tr class="memdesc:a457b7b713998ddc95af3ae144909112a"><td class="mdescLeft">&#160;</td><td class="mdescRight">total counts including outside bin structure [n/s] [0:nsteps]  <a href="#a457b7b713998ddc95af3ae144909112a">More...</a><br /></td></tr>
+<tr class="separator:a457b7b713998ddc95af3ae144909112a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac394c43a3e1119fa76c855e657528af6"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#ac394c43a3e1119fa76c855e657528af6">total_e</a></td></tr>
+<tr class="memdesc:ac394c43a3e1119fa76c855e657528af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">total energy including outside bin structure [MeV/s] [0:nsteps]  <a href="#ac394c43a3e1119fa76c855e657528af6">More...</a><br /></td></tr>
+<tr class="separator:ac394c43a3e1119fa76c855e657528af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d89c3ef5252ca5c1e5e10af2887fa86"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#a5d89c3ef5252ca5c1e5e10af2887fa86">missing_e_nobrem</a></td></tr>
+<tr class="memdesc:a5d89c3ef5252ca5c1e5e10af2887fa86"><td class="mdescLeft">&#160;</td><td class="mdescRight">total energy for nuclides without spectra [MeV/s] [0:nsteps] but not including brem  <a href="#a5d89c3ef5252ca5c1e5e10af2887fa86">More...</a><br /></td></tr>
+<tr class="separator:a5d89c3ef5252ca5c1e5e10af2887fa86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Gamma calculations. </p>

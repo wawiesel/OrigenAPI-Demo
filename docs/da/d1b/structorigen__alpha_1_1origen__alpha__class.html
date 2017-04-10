@@ -105,6 +105,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d8/d33/typeorigen__alpha_1_1origen__alpha__class-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">origen_alpha_class Type Reference</div>  </div>
@@ -125,6 +126,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9d934e3a340697e9b36ebab508e8f33"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#af9d934e3a340697e9b36ebab508e8f33">output</a> =&gt; origen_alpha__output</td></tr>
 <tr class="memdesc:af9d934e3a340697e9b36ebab508e8f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform the output  <a href="#af9d934e3a340697e9b36ebab508e8f33">More...</a><br /></td></tr>
 <tr class="separator:af9d934e3a340697e9b36ebab508e8f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memItemLeft" align="right" valign="top">type(origen_librarywrapper), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#aca217f2b2b238f4a56fb199d8d20edb6">lib</a> =&gt;NULL()</td></tr>
+<tr class="memdesc:aca217f2b2b238f4a56fb199d8d20edb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">associated origen library  <a href="#aca217f2b2b238f4a56fb199d8d20edb6">More...</a><br /></td></tr>
+<tr class="separator:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa906d5a7c638db99b92ce5079ab76065"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="../../dd/d28/structalpha__library_1_1alpha__library__class.html">alpha_library_class</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#aa906d5a7c638db99b92ce5079ab76065">alib</a> =&gt;NULL()</td></tr>
+<tr class="memdesc:aa906d5a7c638db99b92ce5079ab76065"><td class="mdescLeft">&#160;</td><td class="mdescRight">associated alpha library  <a href="#aa906d5a7c638db99b92ce5079ab76065">More...</a><br /></td></tr>
+<tr class="separator:aa906d5a7c638db99b92ce5079ab76065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad466b58f392ba2ccd511b90c418a851e"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#ad466b58f392ba2ccd511b90c418a851e">nsteps</a></td></tr>
+<tr class="memdesc:ad466b58f392ba2ccd511b90c418a851e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of time steps.  <a href="#ad466b58f392ba2ccd511b90c418a851e">More...</a><br /></td></tr>
+<tr class="separator:ad466b58f392ba2ccd511b90c418a851e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095d91df0215d73db5841dd18bc633b1"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="../../dd/d6a/structorigen__alpha_1_1origen__alpha__options.html">origen_alpha_options</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#a095d91df0215d73db5841dd18bc633b1">opts</a></td></tr>
+<tr class="memdesc:a095d91df0215d73db5841dd18bc633b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of alpha calculation options.  <a href="#a095d91df0215d73db5841dd18bc633b1">More...</a><br /></td></tr>
+<tr class="separator:a095d91df0215d73db5841dd18bc633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80319db42c4d4f67680e6d78f787db1"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:,:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#ac80319db42c4d4f67680e6d78f787db1">source</a></td></tr>
+<tr class="memdesc:ac80319db42c4d4f67680e6d78f787db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alpha source [0:nsteps, itot, ngroups].  <a href="#ac80319db42c4d4f67680e6d78f787db1">More...</a><br /></td></tr>
+<tr class="separator:ac80319db42c4d4f67680e6d78f787db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9dcfe34b8309f1065ca50da33843d1b"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#ab9dcfe34b8309f1065ca50da33843d1b">spectrum</a></td></tr>
+<tr class="memdesc:ab9dcfe34b8309f1065ca50da33843d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alpha spectrum (1/s) [ngroups, 0:nsteps].  <a href="#ab9dcfe34b8309f1065ca50da33843d1b">More...</a><br /></td></tr>
+<tr class="separator:ab9dcfe34b8309f1065ca50da33843d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Alpha calculation module. </p>

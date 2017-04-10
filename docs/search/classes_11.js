@@ -10,12 +10,14 @@ var searchData=
   ['solver_5fmatrex',['Solver_matrex',['../dd/db3/class_origen_1_1_solver__matrex.html',1,'Origen']]],
   ['solver_5foptions',['solver_options',['../d8/d59/structsolvers_1_1solver__options.html',1,'solvers']]],
   ['solverselector',['SolverSelector',['../d8/d2d/class_origen_1_1_solver_selector.html',1,'Origen']]],
+  ['specialyield',['SpecialYield',['../dd/ddc/struct_special_yield.html',1,'']]],
   ['species',['Species',['../d5/df7/class_origen_1_1_species.html',1,'Origen']]],
   ['species_5fgen',['Species_Gen',['../d5/df4/class_origen_1_1_species___gen.html',1,'Origen']]],
   ['spectrum',['Spectrum',['../d7/dd5/class_origen_1_1_spectrum.html',1,'Origen']]],
   ['stab1',['STab1',['../d8/df7/struct_origen_1_1_s_tab1.html',1,'Origen']]],
   ['stab1reader',['STab1Reader',['../d4/d47/class_origen_1_1_s_tab1_reader.html',1,'Origen']]],
   ['stab1writer',['STab1Writer',['../d1/d1e/class_origen_1_1_s_tab1_writer.html',1,'Origen']]],
+  ['stab1writertester',['STab1WriterTester',['../d2/db4/class_s_tab1_writer_tester.html',1,'']]],
   ['state',['State',['../d8/d01/class_origen_1_1_state.html',1,'Origen']]],
   ['stateinfo',['StateInfo',['../d8/dd4/class_origen_1_1_state_info.html',1,'Origen']]],
   ['stateset',['StateSet',['../d4/dc0/class_origen_1_1_state_set.html',1,'Origen']]],
@@ -23,6 +25,9 @@ var searchData=
   ['statesetio_5fbof',['StateSetIO_bof',['../dc/de3/class_origen_1_1_state_set_i_o__bof.html',1,'Origen']]],
   ['statesetio_5fs61',['StateSetIO_s61',['../d4/d85/class_origen_1_1_state_set_i_o__s61.html',1,'Origen']]],
   ['statesetio_5fs62b',['StateSetIO_s62b',['../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html',1,'Origen']]],
+  ['statesetiotester',['StateSetIOTester',['../dd/d65/class_state_set_i_o_tester.html',1,'']]],
   ['statistics',['statistics',['../de/d0a/interfacerksuite__90_1_1statistics.html',1,'rksuite_90']]],
-  ['step_5fintegrate',['step_integrate',['../dc/d60/interfacerksuite__90_1_1step__integrate.html',1,'rksuite_90']]]
+  ['step_5fintegrate',['step_integrate',['../dc/d60/interfacerksuite__90_1_1step__integrate.html',1,'rksuite_90']]],
+  ['stepper',['Stepper',['../dc/db2/class_stepper.html',1,'']]],
+  ['stepper_5ffixed',['Stepper_fixed',['../d3/d51/class_stepper__fixed.html',1,'']]]
 ];

@@ -105,22 +105,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a0"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html">TransitionStructure</a>, Basic )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../d8/d43/tst_transition_structure_8cpp.html#aa56a326e15809f24385b7fc3ca31bbb4">TEST</a>( <a name="_a1"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html">TransitionStructure</a>, Basic )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// create fake</span></div>
 <div class="line"></div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html">LibraryHeader</a> lh = <a name="a2"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#ae0bf0ff5d09e01b0b903f1392d09d41c">FakeFactory::createLibraryHeader_random1</a>();</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html">LibraryHeader</a> lh = <a name="a3"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#ae0bf0ff5d09e01b0b903f1392d09d41c">FakeFactory::createLibraryHeader_random1</a>();</div>
 <div class="line">    <a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html">TransitionStructure</a> obj1;</div>
-<div class="line">    <a name="a3"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aa43caa75e9076ecce3a7c7cf6facd7ed">FakeFactory::TransitionStructure_random1</a>( obj1, lh );</div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aa43caa75e9076ecce3a7c7cf6facd7ed">FakeFactory::TransitionStructure_random1</a>( obj1, lh );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// serialize</span></div>
 <div class="line">    SerialStream ss;</div>
-<div class="line">    <span class="keywordtype">int</span> return_code = obj1.<a name="a4"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ae4c23583af6639cd829b18fac3280e24">serialize</a>( &amp;ss );</div>
+<div class="line">    <span class="keywordtype">int</span> return_code = obj1.<a name="a5"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ae4c23583af6639cd829b18fac3280e24">serialize</a>( &amp;ss );</div>
 <div class="line">    EXPECT_EQ( 0, return_code );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// deserialize</span></div>
 <div class="line">    <a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html">TransitionStructure</a> obj2;</div>
-<div class="line">    return_code = obj2.<a name="a5"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ad6fdab80f4d25ff470dc98ec59635e5c">deserialize</a>( &amp;ss );</div>
+<div class="line">    return_code = obj2.<a name="a6"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ad6fdab80f4d25ff470dc98ec59635e5c">deserialize</a>( &amp;ss );</div>
 <div class="line">    EXPECT_EQ( 0, return_code );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compare</span></div>

@@ -118,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Origen::Vec_Int</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;TEST( Tabulate, Append )</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../df/d69/tsttabulate_8cpp.html#a9d875875ad13c3990b61205c10f09dea">   14</a></span>&#160;<a class="code" href="../../df/d69/tsttabulate_8cpp.html#a9d875875ad13c3990b61205c10f09dea">TEST</a>( Tabulate, Append )</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">auto</span> lib = <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a1b4d9f7a3dd266e50da323a90c16eb33">Origen::FakeFactory::newspLibrary_10nuclide</a>();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
@@ -151,60 +151,60 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// printTable( false, &amp;table );</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">class </span>TabulateMaterial : <span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../da/d0b/class_tabulate_material.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d0b/class_tabulate_material.html">TabulateMaterial</a> : <span class="keyword">public</span> ::testing::Test</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> SetUp()</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../da/d0b/class_tabulate_material.html#a1b06560e0e01a806b92c2386220d0b57">   50</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d0b/class_tabulate_material.html#a1b06560e0e01a806b92c2386220d0b57">SetUp</a>()</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// initialize materials</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            mat1 = <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">Origen::FakeFactory::newspMaterial_scale_pwr</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            mat1-&gt;set_id( 1 );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            mat1-&gt;set_name( <span class="stringliteral">&quot;mix1&quot;</span> );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a> = <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">Origen::FakeFactory::newspMaterial_scale_pwr</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_id( 1 );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_name( <span class="stringliteral">&quot;mix1&quot;</span> );</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            mat2 = <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">Origen::FakeFactory::newspMaterial_scale_pwr</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            mat2-&gt;set_id( 2 );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            mat2-&gt;set_name( <span class="stringliteral">&quot;mix2&quot;</span> );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a> = <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">Origen::FakeFactory::newspMaterial_scale_pwr</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_id( 2 );</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_name( <span class="stringliteral">&quot;mix2&quot;</span> );</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// reference bos data</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> ref_ids;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> ref_vals;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a>( ref_ids, ref_vals );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            mat1-&gt;set_numden_bos( ref_vals, ref_ids );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_numden_bos( ref_vals, ref_ids );</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            ref_ids.push_back( 72172 );</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            ref_vals.push_back( 1e-20 );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            mat2-&gt;set_numden_bos( ref_vals, ref_ids );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_numden_bos( ref_vals, ref_ids );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// add solvers and take a step</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        mat1-&gt;set_solver( std::make_shared&lt;Origen::Solver_Fake&gt;() );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_solver( std::make_shared&lt;Origen::Solver_Fake&gt;() );</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> flux, power, dtrel;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            dtrel = {1.0};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            mat1-&gt;add_step( 1.0 );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            mat1-&gt;set_flux( 1e14 );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            mat1-&gt;set_transition_matrix(</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                mat1-&gt;library()-&gt;newsp_transition_matrix_at( 0 ) );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            mat1-&gt;solve( dtrel, &amp;flux, &amp;power );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;add_step( 1.0 );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_flux( 1e14 );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_transition_matrix(</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;library()-&gt;newsp_transition_matrix_at( 0 ) );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;solve( dtrel, &amp;flux, &amp;power );</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        mat2-&gt;set_solver( std::make_shared&lt;Origen::Solver_Fake&gt;() );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_solver( std::make_shared&lt;Origen::Solver_Fake&gt;() );</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> flux, power, dtrel;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            dtrel = {1.0};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            mat2-&gt;add_step( 1.0 );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            mat2-&gt;set_flux( 2e14 );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            mat2-&gt;set_transition_matrix(</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                mat1-&gt;library()-&gt;newsp_transition_matrix_at( 0 ) );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            mat2-&gt;solve( dtrel, &amp;flux, &amp;power );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;add_step( 1.0 );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_flux( 2e14 );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_transition_matrix(</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;library()-&gt;newsp_transition_matrix_at( 0 ) );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;solve( dtrel, &amp;flux, &amp;power );</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> mat1;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> mat2;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">   96</a></span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">   97</a></span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;TEST_F( TabulateMaterial, Isotopics )</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../df/d69/tsttabulate_8cpp.html#a215e917915da7f4741ebc954e84bbefd">  100</a></span>&#160;<a class="code" href="../../df/d69/tsttabulate_8cpp.html#a215e917915da7f4741ebc954e84bbefd">TEST_F</a>( <a class="code" href="../../da/d0b/class_tabulate_material.html">TabulateMaterial</a>, Isotopics )</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    ScaleUtils::IO::Table2D table;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
@@ -221,7 +221,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    EXPECT_NE( <span class="stringliteral">&quot;&quot;</span>, ss.str() );</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;TEST_F( TabulateMaterial, TransitionRate )</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../df/d69/tsttabulate_8cpp.html#a2e95e2d4c508ff110f27846806af1cdc">  117</a></span>&#160;<a class="code" href="../../df/d69/tsttabulate_8cpp.html#a215e917915da7f4741ebc954e84bbefd">TEST_F</a>( <a class="code" href="../../da/d0b/class_tabulate_material.html">TabulateMaterial</a>, TransitionRate )</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    ScaleUtils::IO::Table2D table;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
@@ -239,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    EXPECT_NE( <span class="stringliteral">&quot;&quot;</span>, ss.str() );</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;TEST_F( TabulateMaterial, LossRate )</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../df/d69/tsttabulate_8cpp.html#a6f4a17a5fc93777eef43c77ffe12f93c">  135</a></span>&#160;<a class="code" href="../../df/d69/tsttabulate_8cpp.html#a215e917915da7f4741ebc954e84bbefd">TEST_F</a>( <a class="code" href="../../da/d0b/class_tabulate_material.html">TabulateMaterial</a>, LossRate )</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    ScaleUtils::IO::Table2D table;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
@@ -255,7 +255,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    EXPECT_NE( <span class="stringliteral">&quot;&quot;</span>, ss.str() );</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;TEST_F( TabulateMaterial, FissionRate )</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="../../df/d69/tsttabulate_8cpp.html#af2b81addfc1d0eb9b5b789e92de62d66">  151</a></span>&#160;<a class="code" href="../../df/d69/tsttabulate_8cpp.html#a215e917915da7f4741ebc954e84bbefd">TEST_F</a>( <a class="code" href="../../da/d0b/class_tabulate_material.html">TabulateMaterial</a>, FissionRate )</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    ScaleUtils::IO::Table2D table;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
@@ -270,6 +270,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">// std::cout &lt;&lt; ss.str() &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    EXPECT_NE( <span class="stringliteral">&quot;&quot;</span>, ss.str() );</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="ttc" id="tsttabulate_8cpp_html_a215e917915da7f4741ebc954e84bbefd"><div class="ttname"><a href="../../df/d69/tsttabulate_8cpp.html#a215e917915da7f4741ebc954e84bbefd">TEST_F</a></div><div class="ttdeci">TEST_F(TabulateMaterial, Isotopics)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d69/tsttabulate_8cpp_source.html#l00100">tsttabulate.cpp:100</a></div></div>
 <div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d50/_concentrations_interface_8h_source.html#l00017">ConcentrationsInterface.h:17</a></div></div>
 <div class="ttc" id="namespace_origen_html_a55c03e9e8d89fdf39a370e8e83220fec"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a></div><div class="ttdeci">std::shared_ptr&lt; Material &gt; SP_Material</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00636">Material.h:636</a></div></div>
 <div class="ttc" id="namespace_origen_html_a4cc4f52038e4936da306db0363963f66"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates</a></div><div class="ttdeci">void tabulateMaterialTransitionRates(const Material &amp;mat, size_t step, ScaleUtils::IO::Table2D *table, SCP_TransitionStructure &amp;base_tstruct)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd1/tabulate_8cpp_source.html#l00528">tabulate.cpp:528</a></div></div>
@@ -277,7 +278,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="ttc" id="group___cxx_typedefs_html_ga3756c041a3b614fdd8eaccd9cad18908"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#ga3756c041a3b614fdd8eaccd9cad18908">Origen::SCP_Vec_Int</a></div><div class="ttdeci">std::shared_ptr&lt; const Vec_Int &gt; SCP_Vec_Int</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5e/_definitions_8h_source.html#l00042">Definitions.h:42</a></div></div>
 <div class="ttc" id="class_origen_1_1_fake_factory_html_a32955ef2509f74b312d8b7b3110c16a8"><div class="ttname"><a href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a></div><div class="ttdeci">static void vera_uox_e360(Vec_Int &amp;ids, Vec_Dbl &amp;numden)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dc8/_fake_factory_8cpp_source.html#l00592">FakeFactory.cpp:592</a></div></div>
 <div class="ttc" id="namespace_origen_html_aad37ba79f81b9d9224035596aebec08d"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#aad37ba79f81b9d9224035596aebec08d">Origen::printTable</a></div><div class="ttdeci">void printTable(bool transpose, Table2D *table, std::ostream &amp;os)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d00/print_8cpp_source.html#l00275">print.cpp:275</a></div></div>
+<div class="ttc" id="class_tabulate_material_html"><div class="ttname"><a href="../../da/d0b/class_tabulate_material.html">TabulateMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d69/tsttabulate_8cpp_source.html#l00047">tsttabulate.cpp:47</a></div></div>
 <div class="ttc" id="tabulate_8h_html"><div class="ttname"><a href="../../d3/d32/tabulate_8h.html">tabulate.h</a></div><div class="ttdoc">create tables out of Origen objects. </div></div>
+<div class="ttc" id="class_tabulate_material_html_a1b06560e0e01a806b92c2386220d0b57"><div class="ttname"><a href="../../da/d0b/class_tabulate_material.html#a1b06560e0e01a806b92c2386220d0b57">TabulateMaterial::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d69/tsttabulate_8cpp_source.html#l00050">tsttabulate.cpp:50</a></div></div>
 <div class="ttc" id="namespace_origen_html_ad1f7805721dc35df742741b512f6dd24"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ad1f7805721dc35df742741b512f6dd24">Origen::tabulateMaterialIsotopics</a></div><div class="ttdeci">void tabulateMaterialIsotopics(const Material &amp;mat, size_t point, ScaleUtils::IO::Table2D *table, SCP_Vec_Int &amp;base_ids)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd1/tabulate_8cpp_source.html#l00493">tabulate.cpp:493</a></div></div>
 <div class="ttc" id="namespace_origen_html_a323bd38ef9ed3ddaf99162d1e53acc70"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a323bd38ef9ed3ddaf99162d1e53acc70">Origen::tabulateLossXs</a></div><div class="ttdeci">void tabulateLossXs(const Library &amp;lib, int sizzzaaa, const std::string &amp;idform, int prec, int pos, const std::string &amp;column_name, bool append_column, Table2D *table)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd1/tabulate_8cpp_source.html#l00176">tabulate.cpp:176</a></div></div>
 <div class="ttc" id="namespace_origen_html_a22b95843411eaccdadd4f42c271945c1"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a22b95843411eaccdadd4f42c271945c1">Origen::tabulateMaterialLossRate</a></div><div class="ttdeci">void tabulateMaterialLossRate(const Material &amp;mat, size_t step, ScaleUtils::IO::Table2D *table, bool &amp;append)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd1/tabulate_8cpp_source.html#l00784">tabulate.cpp:784</a></div></div>
@@ -288,6 +291,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="ttc" id="print_8h_html"><div class="ttname"><a href="../../d5/d77/print_8h.html">print.h</a></div><div class="ttdoc">print Origen objects in a nice form </div></div>
 <div class="ttc" id="namespace_origen_html_a753aee961181ddd999835254abb09f00"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a753aee961181ddd999835254abb09f00">Origen::tabulateMaterialFissionRate</a></div><div class="ttdeci">void tabulateMaterialFissionRate(const Material &amp;mat, size_t step, ScaleUtils::IO::Table2D *table, bool &amp;append)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd1/tabulate_8cpp_source.html#l00867">tabulate.cpp:867</a></div></div>
 <div class="ttc" id="namespace_vec___int_html"><div class="ttname"><a href="../../d4/d05/namespace_vec___int.html">Vec_Int</a></div></div>
+<div class="ttc" id="class_tabulate_material_html_abcf536357ebc2ebff6ece92196a0cb7b"><div class="ttname"><a href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">TabulateMaterial::mat1</a></div><div class="ttdeci">Origen::SP_Material mat1</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d69/tsttabulate_8cpp_source.html#l00096">tsttabulate.cpp:96</a></div></div>
+<div class="ttc" id="class_tabulate_material_html_af176eaf1254d8fd7ef5f8169a84d3e05"><div class="ttname"><a href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">TabulateMaterial::mat2</a></div><div class="ttdeci">Origen::SP_Material mat2</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d69/tsttabulate_8cpp_source.html#l00097">tsttabulate.cpp:97</a></div></div>
+<div class="ttc" id="tsttabulate_8cpp_html_a9d875875ad13c3990b61205c10f09dea"><div class="ttname"><a href="../../df/d69/tsttabulate_8cpp.html#a9d875875ad13c3990b61205c10f09dea">TEST</a></div><div class="ttdeci">TEST(Tabulate, Append)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d69/tsttabulate_8cpp_source.html#l00014">tsttabulate.cpp:14</a></div></div>
 <div class="ttc" id="group___cxx_typedefs_html_gae386eb6c70779056cf6d5c6d1c43c48f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Origen::Vec_Int</a></div><div class="ttdeci">std::vector&lt; int &gt; Vec_Int</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5e/_definitions_8h_source.html#l00030">Definitions.h:30</a></div></div>
 <div class="ttc" id="namespace_origen_html_a9d7d0ea32c82a05f3fac3293b6cf20c4"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a9d7d0ea32c82a05f3fac3293b6cf20c4">Origen::SCP_TransitionStructure</a></div><div class="ttdeci">TransitionStructure::SCP SCP_TransitionStructure</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df4/_transition_structure_8h_source.html#l00151">TransitionStructure.h:151</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

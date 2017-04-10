@@ -104,6 +104,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="../../da/dad/class_origen_1_1_channel-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Channel Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -124,6 +126,189 @@ Inheritance diagram for Channel:</div>
 
 <p>Defines the channel interface for the <a class="el" href="../../df/d1a/class_origen_1_1_transition_system.html" title="Defines the interface TransitionSystem. ">TransitionSystem</a>.  
  <a href="../../d6/d47/class_origen_1_1_channel.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ad1f820a4c73ef39ee91a141c33c95e90"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">SP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ad1f820a4c73ef39ee91a141c33c95e90">SP</a></td></tr>
+<tr class="memdesc:ad1f820a4c73ef39ee91a141c33c95e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">strong pointer  <a href="#ad1f820a4c73ef39ee91a141c33c95e90">More...</a><br /></td></tr>
+<tr class="separator:ad1f820a4c73ef39ee91a141c33c95e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd2c073348c23fe2bb55eff61155dd2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/dc1/namespace_origen.html#a1a7c68020313a1ee192adc12f87b4374">WP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#adbd2c073348c23fe2bb55eff61155dd2">WP</a></td></tr>
+<tr class="memdesc:adbd2c073348c23fe2bb55eff61155dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">weak pointer  <a href="#adbd2c073348c23fe2bb55eff61155dd2">More...</a><br /></td></tr>
+<tr class="separator:adbd2c073348c23fe2bb55eff61155dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadff5fb6ffe9e73ac7d4b972c81f569e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/dc1/namespace_origen.html#ad8494eba3cd4494fd71a6e4c180481a1">CWP_Channel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#aadff5fb6ffe9e73ac7d4b972c81f569e">CWP</a></td></tr>
+<tr class="memdesc:aadff5fb6ffe9e73ac7d4b972c81f569e"><td class="mdescLeft">&#160;</td><td class="mdescRight">const weak pointer  <a href="#aadff5fb6ffe9e73ac7d4b972c81f569e">More...</a><br /></td></tr>
+<tr class="separator:aadff5fb6ffe9e73ac7d4b972c81f569e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Origen::Channel&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp1009d88773bcc05c493cdbe6749d7404"></a>See <a class="el" href="../../d6/d47/class_origen_1_1_channel.html" title="Defines the channel interface for the TransitionSystem. ">Origen::Channel</a> for details. </p>
+</td></tr>
+<tr class="memitem:ad83269b9ab56f60e019096d92ccd95e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ad83269b9ab56f60e019096d92ccd95e5">num_transitions</a> () const </td></tr>
+<tr class="separator:ad83269b9ab56f60e019096d92ccd95e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bec400787712dd8dd673253726274a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae5bec400787712dd8dd673253726274a">transition</a> (int transition_id) const </td></tr>
+<tr class="separator:ae5bec400787712dd8dd673253726274a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8ffb78bf5f099005fa8b0ea51991dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#afa8ffb78bf5f099005fa8b0ea51991dc">get_transition</a> (int transition_id, <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae5bec400787712dd8dd673253726274a">transition</a>) const </td></tr>
+<tr class="separator:afa8ffb78bf5f099005fa8b0ea51991dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc77384ebbe79019ec91fe66a7e5fde6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#adc77384ebbe79019ec91fe66a7e5fde6">set_transition</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae5bec400787712dd8dd673253726274a">transition</a>)</td></tr>
+<tr class="separator:adc77384ebbe79019ec91fe66a7e5fde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e05d4ac590eecb5ee5f0f503797e13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a78e05d4ac590eecb5ee5f0f503797e13">add_transition</a> (int transition_id)</td></tr>
+<tr class="separator:a78e05d4ac590eecb5ee5f0f503797e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6fad5706ff92892c5ac80fc4046cd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a0a6fad5706ff92892c5ac80fc4046cd7">add_transition</a> (int transition_id, double yield)</td></tr>
+<tr class="separator:a0a6fad5706ff92892c5ac80fc4046cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58dda272ed79c04059e6cf745029ec92"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a58dda272ed79c04059e6cf745029ec92">transitions</a> () const </td></tr>
+<tr class="separator:a58dda272ed79c04059e6cf745029ec92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67e71757bcdfe9fc898a0d1aa58642d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae67e71757bcdfe9fc898a0d1aa58642d">get_transitions</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt; &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a58dda272ed79c04059e6cf745029ec92">transitions</a>) const </td></tr>
+<tr class="separator:ae67e71757bcdfe9fc898a0d1aa58642d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fd9dd607a8f9fdd3ee1b3ebd988610"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae2fd9dd607a8f9fdd3ee1b3ebd988610">set_transitions</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt; <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a58dda272ed79c04059e6cf745029ec92">transitions</a>)</td></tr>
+<tr class="separator:ae2fd9dd607a8f9fdd3ee1b3ebd988610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6439445ef76a814263dfc0cb45dc36f0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a6439445ef76a814263dfc0cb45dc36f0">byproduct_transitions</a> () const </td></tr>
+<tr class="separator:a6439445ef76a814263dfc0cb45dc36f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5181a79c64c133bbdaeeee61477bd1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a5181a79c64c133bbdaeeee61477bd1f1">get_byproduct_transitions</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt; &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a58dda272ed79c04059e6cf745029ec92">transitions</a>) const </td></tr>
+<tr class="separator:a5181a79c64c133bbdaeeee61477bd1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcba35acd9b4b12087f11b63719fa926"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#afcba35acd9b4b12087f11b63719fa926">update_byproduct_transitions</a> ()</td></tr>
+<tr class="separator:afcba35acd9b4b12087f11b63719fa926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52403a5f3b1f941e9e043f574701e65e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a52403a5f3b1f941e9e043f574701e65e">channel_type</a> () const </td></tr>
+<tr class="separator:a52403a5f3b1f941e9e043f574701e65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921f8f0f4bfceccfda64f9ec7aace0c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a921f8f0f4bfceccfda64f9ec7aace0c0">get_channel_type</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a> &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a52403a5f3b1f941e9e043f574701e65e">channel_type</a>) const </td></tr>
+<tr class="separator:a921f8f0f4bfceccfda64f9ec7aace0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5413e3aefc8b07cace35ef486b0a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a6a5413e3aefc8b07cace35ef486b0a85">set_channel_type</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a> <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a52403a5f3b1f941e9e043f574701e65e">channel_type</a>)</td></tr>
+<tr class="separator:a6a5413e3aefc8b07cace35ef486b0a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4357ec90fe551797b40f56aa04e973e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae4357ec90fe551797b40f56aa04e973e">has_initialized_channel_type</a> () const </td></tr>
+<tr class="separator:ae4357ec90fe551797b40f56aa04e973e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a216ef97032bdf36eb3db9b39ec073"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a51a216ef97032bdf36eb3db9b39ec073">decay_constant</a> () const </td></tr>
+<tr class="separator:a51a216ef97032bdf36eb3db9b39ec073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65be492612f63ea21588c286693fb26a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html">Channel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a65be492612f63ea21588c286693fb26a">set_decay_constant</a> (double <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a51a216ef97032bdf36eb3db9b39ec073">decay_constant</a>)</td></tr>
+<tr class="separator:a65be492612f63ea21588c286693fb26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693f86ebc9b1fc797ff5fa29037b2a96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a693f86ebc9b1fc797ff5fa29037b2a96">has_initialized_decay_constant</a> () const </td></tr>
+<tr class="separator:a693f86ebc9b1fc797ff5fa29037b2a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a711a1787af9216b05792ec179b8ad396"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a711a1787af9216b05792ec179b8ad396">xs</a> () const </td></tr>
+<tr class="separator:a711a1787af9216b05792ec179b8ad396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8490e009716ede4d8567d3aab407bf16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html">Channel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a8490e009716ede4d8567d3aab407bf16">set_xs</a> (double <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a711a1787af9216b05792ec179b8ad396">xs</a>)</td></tr>
+<tr class="separator:a8490e009716ede4d8567d3aab407bf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229072d9515188eee82ab1c36377b2cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a229072d9515188eee82ab1c36377b2cb">has_initialized_xs</a> () const </td></tr>
+<tr class="separator:a229072d9515188eee82ab1c36377b2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00d555ca99c6be6811d25432ec604e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a945bc514ad9497c57e0576aad458293e">CWP_Nuclide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae00d555ca99c6be6811d25432ec604e0">parent</a> () const </td></tr>
+<tr class="separator:ae00d555ca99c6be6811d25432ec604e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b9c75edcfef32a529996fa98178d284"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a4b9c75edcfef32a529996fa98178d284">get_parent</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#abb063989753d57e3bdf2d6169e7d868a">WP_Nuclide</a> &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae00d555ca99c6be6811d25432ec604e0">parent</a>) const </td></tr>
+<tr class="separator:a4b9c75edcfef32a529996fa98178d284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566af9815af4316434e8aca9228f8b62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a566af9815af4316434e8aca9228f8b62">set_parent</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#abb063989753d57e3bdf2d6169e7d868a">WP_Nuclide</a> <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae00d555ca99c6be6811d25432ec604e0">parent</a>)</td></tr>
+<tr class="separator:a566af9815af4316434e8aca9228f8b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac844cb9fa2194b0e5c5c56aaa51e0f79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ac844cb9fa2194b0e5c5c56aaa51e0f79">has_initialized_parent</a> () const </td></tr>
+<tr class="separator:ac844cb9fa2194b0e5c5c56aaa51e0f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa39df059918bae423256dcf198c745"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#afaa39df059918bae423256dcf198c745">daughter_mass_number</a> () const </td></tr>
+<tr class="separator:afaa39df059918bae423256dcf198c745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78b4870493ad6246b78a5e44752d089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ab78b4870493ad6246b78a5e44752d089">daughter_charge_number</a> () const </td></tr>
+<tr class="separator:ab78b4870493ad6246b78a5e44752d089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf9d664407ba0699774d52ede017bfc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a0bf9d664407ba0699774d52ede017bfc">coeff</a> () const </td></tr>
+<tr class="separator:a0bf9d664407ba0699774d52ede017bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c57ac03cc882258334f756988917503"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a5c57ac03cc882258334f756988917503">rate</a> () const </td></tr>
+<tr class="separator:a5c57ac03cc882258334f756988917503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Origen::Checkable&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp015343b88ac2c58800c472dc06ceb8c5"></a>See <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html">Origen::Checkable</a> for details. </p>
+</td></tr>
+<tr class="memitem:a37627d5d5bba7f4a8690c71c2ab3cb07"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a> () const </td></tr>
+<tr class="separator:a37627d5d5bba7f4a8690c71c2ab3cb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f2506684e94df1027d6cc61815da55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a48f2506684e94df1027d6cc61815da55">get_name</a> (std::string &amp;<a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>) const </td></tr>
+<tr class="separator:a48f2506684e94df1027d6cc61815da55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cafd0174fbe3e0b8d18060fb87d1db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a74cafd0174fbe3e0b8d18060fb87d1db">set_name</a> (std::string <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>)</td></tr>
+<tr class="separator:a74cafd0174fbe3e0b8d18060fb87d1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c063cfb2479f614be43b9d2f92ba63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a> () const </td></tr>
+<tr class="separator:ae0c063cfb2479f614be43b9d2f92ba63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fb1d841c96187de27e808a25831ea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a45fb1d841c96187de27e808a25831ea8">get_id</a> (int &amp;<a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>) const </td></tr>
+<tr class="separator:a45fb1d841c96187de27e808a25831ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff8f115eede06acb2c131ec56b3f3a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a6ff8f115eede06acb2c131ec56b3f3a4">set_id</a> (int <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>)</td></tr>
+<tr class="separator:a6ff8f115eede06acb2c131ec56b3f3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9a8833481bcdf07b02103ce7fd1618"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a0f9a8833481bcdf07b02103ce7fd1618">has_initialized_id</a> () const </td></tr>
+<tr class="separator:a0f9a8833481bcdf07b02103ce7fd1618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48c39f92bc04eded742f5310c74aafe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a> () const </td></tr>
+<tr class="separator:aa48c39f92bc04eded742f5310c74aafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e41c8280b6cdf93d39e1135d2abdf7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#ad2e41c8280b6cdf93d39e1135d2abdf7">good</a> () const </td></tr>
+<tr class="separator:ad2e41c8280b6cdf93d39e1135d2abdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7e8ee6da0df06c3a5b83f74b960720"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#afe7e8ee6da0df06c3a5b83f74b960720">good</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Vec_Str</a> &amp;errors) const </td></tr>
+<tr class="separator:afe7e8ee6da0df06c3a5b83f74b960720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a4821adb73cda110fab0770eb6a386"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a12a4821adb73cda110fab0770eb6a386">is_initialized</a> () const </td></tr>
+<tr class="separator:a12a4821adb73cda110fab0770eb6a386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e47229702e5fe4ac4200b550c15a947"><td class="memItemLeft" align="right" valign="top">Scale::Json::Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a3e47229702e5fe4ac4200b550c15a947">to_json</a> () const </td></tr>
+<tr class="separator:a3e47229702e5fe4ac4200b550c15a947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa23df98fbd95f5752c39c4d9e2bc5aad"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#aa23df98fbd95f5752c39c4d9e2bc5aad">num_transitions_impl</a> () const  =0</td></tr>
+<tr class="separator:aa23df98fbd95f5752c39c4d9e2bc5aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7643c088b74cf698ddbb6a22e6b4c49e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a7643c088b74cf698ddbb6a22e6b4c49e">daughter_mass_number_impl</a> () const </td></tr>
+<tr class="separator:a7643c088b74cf698ddbb6a22e6b4c49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac359416c75fbade6d48e71172b50c5b7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ac359416c75fbade6d48e71172b50c5b7">daughter_charge_number_impl</a> () const </td></tr>
+<tr class="separator:ac359416c75fbade6d48e71172b50c5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae370e79b5f0940d26b9fecdbf3f04e33"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae370e79b5f0940d26b9fecdbf3f04e33">transition_impl</a> (int transition_id) const  =0</td></tr>
+<tr class="separator:ae370e79b5f0940d26b9fecdbf3f04e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32211e7ca26897c48e5e25877baa999"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ad32211e7ca26897c48e5e25877baa999">get_transition_impl</a> (int transition_id, <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae5bec400787712dd8dd673253726274a">transition</a>) const  =0</td></tr>
+<tr class="separator:ad32211e7ca26897c48e5e25877baa999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c7233b0d50593d06e5f1ce7be68161"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae8c7233b0d50593d06e5f1ce7be68161">set_transition_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae5bec400787712dd8dd673253726274a">transition</a>)=0</td></tr>
+<tr class="separator:ae8c7233b0d50593d06e5f1ce7be68161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6753357e1443af0076670a1394afafb2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#a945bc514ad9497c57e0576aad458293e">CWP_Nuclide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a6753357e1443af0076670a1394afafb2">parent_impl</a> () const  =0</td></tr>
+<tr class="separator:a6753357e1443af0076670a1394afafb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33720dde60474fe97acbb47e20849680"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a33720dde60474fe97acbb47e20849680">get_parent_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#abb063989753d57e3bdf2d6169e7d868a">WP_Nuclide</a> &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae00d555ca99c6be6811d25432ec604e0">parent</a>) const  =0</td></tr>
+<tr class="separator:a33720dde60474fe97acbb47e20849680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d22ba178090d6858f214977822f988"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ab7d22ba178090d6858f214977822f988">set_parent_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#abb063989753d57e3bdf2d6169e7d868a">WP_Nuclide</a> <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ae00d555ca99c6be6811d25432ec604e0">parent</a>)=0</td></tr>
+<tr class="separator:ab7d22ba178090d6858f214977822f988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835720e0f63dc8f8d81f074e39d064cd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a835720e0f63dc8f8d81f074e39d064cd">has_initialized_parent_impl</a> () const </td></tr>
+<tr class="separator:a835720e0f63dc8f8d81f074e39d064cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5bb6fdb1ebb2813a041a3de2bf697dc"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ac5bb6fdb1ebb2813a041a3de2bf697dc">coeff_impl</a> () const  =0</td></tr>
+<tr class="separator:ac5bb6fdb1ebb2813a041a3de2bf697dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7567809893022f88993db28c0debe4"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a3b7567809893022f88993db28c0debe4">rate_impl</a> () const  =0</td></tr>
+<tr class="separator:a3b7567809893022f88993db28c0debe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a751d5796cb6a9cab16124f2350c29"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#af3a751d5796cb6a9cab16124f2350c29">channel_type_impl</a> () const  =0</td></tr>
+<tr class="separator:af3a751d5796cb6a9cab16124f2350c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99870bed671ac9a0925b8e2f6cbc8a2b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a99870bed671ac9a0925b8e2f6cbc8a2b">get_channel_type_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a> &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a52403a5f3b1f941e9e043f574701e65e">channel_type</a>) const  =0</td></tr>
+<tr class="separator:a99870bed671ac9a0925b8e2f6cbc8a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810bd541a46fb183c481c7da99d79afa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a810bd541a46fb183c481c7da99d79afa">set_channel_type_impl</a> (<a class="el" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">SP_ChannelType</a> <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a52403a5f3b1f941e9e043f574701e65e">channel_type</a>)=0</td></tr>
+<tr class="separator:a810bd541a46fb183c481c7da99d79afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a2bd334cb829ed383e942a8938bcb6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a76a2bd334cb829ed383e942a8938bcb6">has_initialized_channel_type_impl</a> () const </td></tr>
+<tr class="separator:a76a2bd334cb829ed383e942a8938bcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb63497772a0c6ef66b4c6ccfcdcffb0"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#abb63497772a0c6ef66b4c6ccfcdcffb0">decay_constant_impl</a> () const  =0</td></tr>
+<tr class="separator:abb63497772a0c6ef66b4c6ccfcdcffb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f837644e472fa06bbe91047c3807ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a47f837644e472fa06bbe91047c3807ff">set_decay_constant_impl</a> (double <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a51a216ef97032bdf36eb3db9b39ec073">decay_constant</a>)=0</td></tr>
+<tr class="separator:a47f837644e472fa06bbe91047c3807ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36df934440f5d57b69b6b0e6972b9687"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a36df934440f5d57b69b6b0e6972b9687">has_initialized_decay_constant_impl</a> () const </td></tr>
+<tr class="separator:a36df934440f5d57b69b6b0e6972b9687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b57f2d172c3f3e6c2f473e65856d75e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a6b57f2d172c3f3e6c2f473e65856d75e">xs_impl</a> () const  =0</td></tr>
+<tr class="separator:a6b57f2d172c3f3e6c2f473e65856d75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78697431f362544040d392e1f8ef547"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#aa78697431f362544040d392e1f8ef547">set_xs_impl</a> (double <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a711a1787af9216b05792ec179b8ad396">xs</a>)=0</td></tr>
+<tr class="separator:aa78697431f362544040d392e1f8ef547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26bb220638182c8dc879b1f6301ded73"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a26bb220638182c8dc879b1f6301ded73">has_initialized_xs_impl</a> () const </td></tr>
+<tr class="separator:a26bb220638182c8dc879b1f6301ded73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0aaf018e7dcb42aecc930591a6f19d"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a4c0aaf018e7dcb42aecc930591a6f19d">transitions_impl</a> () const  =0</td></tr>
+<tr class="separator:a4c0aaf018e7dcb42aecc930591a6f19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c7eb76975bd23af104bf42433b4bbf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#aa6c7eb76975bd23af104bf42433b4bbf">get_transitions_impl</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt; &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a58dda272ed79c04059e6cf745029ec92">transitions</a>) const  =0</td></tr>
+<tr class="separator:aa6c7eb76975bd23af104bf42433b4bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19416f1f9f75649c94fa49d8fd42da37"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a19416f1f9f75649c94fa49d8fd42da37">set_transitions_impl</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt; <a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a58dda272ed79c04059e6cf745029ec92">transitions</a>)=0</td></tr>
+<tr class="separator:a19416f1f9f75649c94fa49d8fd42da37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a94b274e993a254ed6ae91e3f3f0ee"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a00a94b274e993a254ed6ae91e3f3f0ee">add_transition_impl</a> (int transition_id)=0</td></tr>
+<tr class="separator:a00a94b274e993a254ed6ae91e3f3f0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819b59187de9a64946ccf4a64eb4945d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a819b59187de9a64946ccf4a64eb4945d">add_transition_impl</a> (int transition_id, double yield)=0</td></tr>
+<tr class="separator:a819b59187de9a64946ccf4a64eb4945d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690375cfa20af5f12cdadd41a1bf6827"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a690375cfa20af5f12cdadd41a1bf6827">name_impl</a> () const </td></tr>
+<tr class="separator:a690375cfa20af5f12cdadd41a1bf6827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac4e740481fdae6459fb218e0256882"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a3ac4e740481fdae6459fb218e0256882">id_impl</a> () const </td></tr>
+<tr class="separator:a3ac4e740481fdae6459fb218e0256882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa390b82335a85c36e9884d7c834330"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#affa390b82335a85c36e9884d7c834330">is_initialized_impl</a> () const </td></tr>
+<tr class="memdesc:affa390b82335a85c36e9884d7c834330"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#affa390b82335a85c36e9884d7c834330">More...</a><br /></td></tr>
+<tr class="separator:affa390b82335a85c36e9884d7c834330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86072d4287aa9b104b5b29d70680e2f5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a86072d4287aa9b104b5b29d70680e2f5">good_impl</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Vec_Str</a> &amp;errors) const </td></tr>
+<tr class="memdesc:a86072d4287aa9b104b5b29d70680e2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#a86072d4287aa9b104b5b29d70680e2f5">More...</a><br /></td></tr>
+<tr class="separator:a86072d4287aa9b104b5b29d70680e2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="memItemLeft" align="right" valign="top">virtual Scale::Json::Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a69f23dfe3584ad7ea4e66f7af6dfa870">to_json_impl</a> () const </td></tr>
+<tr class="memdesc:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#a69f23dfe3584ad7ea4e66f7af6dfa870">More...</a><br /></td></tr>
+<tr class="separator:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4a673eeeffdb883b1a93b749bffd17"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#afa4a673eeeffdb883b1a93b749bffd17">byproduct_transitions_impl</a> () const  =0</td></tr>
+<tr class="separator:afa4a673eeeffdb883b1a93b749bffd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d722f3bca09e49bd51f2891fc58e0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ac3d722f3bca09e49bd51f2891fc58e0b">get_byproduct_transitions_impl</a> (std::vector&lt; <a class="el" href="../../d5/dc1/namespace_origen.html#ade67b5decb0d9461d4c43b782a0df58b">SP_Transition</a> &gt; &amp;<a class="el" href="../../d6/d47/class_origen_1_1_channel.html#a58dda272ed79c04059e6cf745029ec92">transitions</a>) const  =0</td></tr>
+<tr class="separator:ac3d722f3bca09e49bd51f2891fc58e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace553716910d596cf6e3d78612293f16"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d47/class_origen_1_1_channel.html#ace553716910d596cf6e3d78612293f16">update_byproduct_transitions_impl</a> ()=0</td></tr>
+<tr class="separator:ace553716910d596cf6e3d78612293f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the channel interface for the <a class="el" href="../../df/d1a/class_origen_1_1_transition_system.html" title="Defines the interface TransitionSystem. ">TransitionSystem</a>. </p>
 <p>The channel, in the context of the transition system, manages five main pieces of data:</p><ol type="1">
@@ -570,9 +755,9 @@ Inheritance diagram for Channel:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a56">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a68">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#adbafe2119d03b4b2196742009ee163f8">Channel_Gen::add_transition_impl()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ad2f23265b4f9738ab8881d22b1fcc9cf">Nuclide_Gen::append_gain_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ac8d8afdcd1310c8e58d8a84381afd161">Nuclide_Gen::gain_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#ad3ec85b104e4f41569eaf03ba9ff6a09">Channel_Gen::rate_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#ab5b21e6ecdb8e99afeef8dbb4155d138">Channel_Gen::set_parent_impl()</a>, and <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#a81035e5336277e020c1d18f9ee2288df">Channel_Gen::update_byproduct_transitions_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#adbafe2119d03b4b2196742009ee163f8">Channel_Gen::add_transition_impl()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ad2f23265b4f9738ab8881d22b1fcc9cf">Nuclide_Gen::append_gain_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ac8d8afdcd1310c8e58d8a84381afd161">Nuclide_Gen::gain_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#ad3ec85b104e4f41569eaf03ba9ff6a09">Channel_Gen::rate_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#ab5b21e6ecdb8e99afeef8dbb4155d138">Channel_Gen::set_parent_impl()</a>, <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#a0eed3995cdc59da9e381fd2dfa617e06">TEST_F()</a>, and <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#a81035e5336277e020c1d18f9ee2288df">Channel_Gen::update_byproduct_transitions_impl()</a>.</p>
 
 </div>
 </div>
@@ -1629,9 +1814,9 @@ Inheritance diagram for Channel:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a11">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a12">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../db/d33/class_origen_1_1_channel_type___fiss.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Fiss::good_impl()</a>, <a class="el" href="../../de/dc1/class_origen_1_1_channel_type___decay.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Decay::good_impl()</a>, and <a class="el" href="../../da/d2c/class_origen_1_1_channel_type___reac.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Reac::good_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../db/d33/class_origen_1_1_channel_type___fiss.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Fiss::good_impl()</a>, <a class="el" href="../../de/dc1/class_origen_1_1_channel_type___decay.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Decay::good_impl()</a>, <a class="el" href="../../da/d2c/class_origen_1_1_channel_type___reac.html#a86072d4287aa9b104b5b29d70680e2f5">ChannelType_Reac::good_impl()</a>, and <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
 
 </div>
 </div>
@@ -1656,8 +1841,10 @@ Inheritance diagram for Channel:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a13">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a14">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a74cafd0174fbe3e0b8d18060fb87d1db"></a>
@@ -1681,8 +1868,10 @@ Inheritance diagram for Channel:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a9">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a10">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae0c063cfb2479f614be43b9d2f92ba63"></a>
@@ -1705,9 +1894,9 @@ Inheritance diagram for Channel:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a10">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a11">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a4bcab4c2ff132be0649a5122f6a88b7a">TransitionSystem_Gen::add_nuclide_impl()</a>, <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a50d1a62adec62e91574c0f49bbf0f8ce">TransitionSystem_Gen::add_species_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#adbafe2119d03b4b2196742009ee163f8">Channel_Gen::add_transition_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ac8d8afdcd1310c8e58d8a84381afd161">Nuclide_Gen::gain_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a5dc35b9b26cae9cde38501d1ab91e9d1">LibraryBuilder::search_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#a32804297b600f1302b8687579c2a5c6c">Nuclide_Gen::set_losses_impl()</a>, and <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#a9c19634f938d6e31b1fc627d42b52ed7">Channel_Gen::set_transition_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a4bcab4c2ff132be0649a5122f6a88b7a">TransitionSystem_Gen::add_nuclide_impl()</a>, <a class="el" href="../../d5/d42/class_origen_1_1_transition_system___gen.html#a50d1a62adec62e91574c0f49bbf0f8ce">TransitionSystem_Gen::add_species_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#adbafe2119d03b4b2196742009ee163f8">Channel_Gen::add_transition_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ac8d8afdcd1310c8e58d8a84381afd161">Nuclide_Gen::gain_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a5dc35b9b26cae9cde38501d1ab91e9d1">LibraryBuilder::search_reaction_transitions()</a>, <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#a32804297b600f1302b8687579c2a5c6c">Nuclide_Gen::set_losses_impl()</a>, <a class="el" href="../../d4/dad/class_origen_1_1_channel___gen.html#a9c19634f938d6e31b1fc627d42b52ed7">Channel_Gen::set_transition_impl()</a>, <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>, and <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#a0eed3995cdc59da9e381fd2dfa617e06">TEST_F()</a>.</p>
 
 </div>
 </div>
@@ -1732,8 +1921,10 @@ Inheritance diagram for Channel:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a12">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a13">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6ff8f115eede06acb2c131ec56b3f3a4"></a>
@@ -1757,8 +1948,10 @@ Inheritance diagram for Channel:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a8">tstTransitionSystem_Gen.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a9">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0f9a8833481bcdf07b02103ce7fd1618"></a>
@@ -1806,8 +1999,10 @@ Inheritance diagram for Channel:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/d29/tst_transition_system_adapter__ampx_n_8cpp-example.html#a20">tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d1c/_manager_2libld_2tests_2tst_transition_system_adapter__ampx_n_8cpp-example.html#a32">Manager/libld/tests/tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a2edbeb0ab90d2711f2ed92838dd6f770">TEST_F()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad2e41c8280b6cdf93d39e1135d2abdf7"></a>

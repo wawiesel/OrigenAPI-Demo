@@ -105,6 +105,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d1/dab/class_origen_1_1_multi_zone_depleter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MultiZoneDepleter Class Reference</div>  </div>
@@ -177,10 +179,58 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae006844a02161d12182ab372ca5c257b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a585cd31bba044ea2fead91ae062010c9"><td class="memItemLeft" align="right" valign="top">const ScaleUtils::IO::DB &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a585cd31bba044ea2fead91ae062010c9">status</a> () const </td></tr>
 <tr class="separator:a585cd31bba044ea2fead91ae062010c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a94242fb44d17aab1730d215b9c433d57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a94242fb44d17aab1730d215b9c433d57">allreduce</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> &amp;x) const </td></tr>
+<tr class="separator:a94242fb44d17aab1730d215b9c433d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a34f7fcc1b4eebc10cf117872879fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af3a34f7fcc1b4eebc10cf117872879fb">pre_transmute</a> ()</td></tr>
+<tr class="separator:af3a34f7fcc1b4eebc10cf117872879fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f1df1b80366e8fe9bc89d3c58e83269"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8f1df1b80366e8fe9bc89d3c58e83269">global_scaling_factor</a> (size_t s, size_t itran)</td></tr>
+<tr class="separator:a8f1df1b80366e8fe9bc89d3c58e83269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93149ea1f0b5e020081244c0a194a42"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae93149ea1f0b5e020081244c0a194a42">transmute</a> (size_t s, size_t itran)</td></tr>
+<tr class="separator:ae93149ea1f0b5e020081244c0a194a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0737f396d9ff3b098e0ad475798a38b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a0737f396d9ff3b098e0ad475798a38b1">post_transmute</a> ()</td></tr>
+<tr class="separator:a0737f396d9ff3b098e0ad475798a38b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af9c2f1f247a4997587ff7754574bf197"><td class="memItemLeft" align="right" valign="top">Standard::Communicator *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af9c2f1f247a4997587ff7754574bf197">b_comm</a></td></tr>
+<tr class="separator:af9c2f1f247a4997587ff7754574bf197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11dad69bc754a8e0fd758e4ac49fa6e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">SP_Solver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a11dad69bc754a8e0fd758e4ac49fa6e0">b_solver</a></td></tr>
+<tr class="separator:a11dad69bc754a8e0fd758e4ac49fa6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263edba7dbb40e20d81e1c97f61dad51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">SP_MaterialMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a263edba7dbb40e20d81e1c97f61dad51">b_mats</a></td></tr>
+<tr class="separator:a263edba7dbb40e20d81e1c97f61dad51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c955607a0952eac46856f78e38a800"><td class="memItemLeft" align="right" valign="top">ScaleUtils::IO::UP_DB&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae3c955607a0952eac46856f78e38a800">b_status</a></td></tr>
+<tr class="separator:ae3c955607a0952eac46856f78e38a800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65755fa62f6e56ce13c1ea09f5fc77cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a65755fa62f6e56ce13c1ea09f5fc77cc">b_has_constraint</a></td></tr>
+<tr class="separator:a65755fa62f6e56ce13c1ea09f5fc77cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67120ee34f780a0f54c312977a28c1bd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a67120ee34f780a0f54c312977a28c1bd">b_dt</a></td></tr>
+<tr class="separator:a67120ee34f780a0f54c312977a28c1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecc4ec88b1583a6066905b7f9441571"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a3ecc4ec88b1583a6066905b7f9441571">b_bg</a></td></tr>
+<tr class="separator:a3ecc4ec88b1583a6066905b7f9441571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a052059f5f28319e2471b790d57b6ea"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a6a052059f5f28319e2471b790d57b6ea">b_bg_volume</a></td></tr>
+<tr class="separator:a6a052059f5f28319e2471b790d57b6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3975d6223065905b9bf430a91e70f0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aeb3975d6223065905b9bf430a91e70f0">b_constraint</a></td></tr>
+<tr class="separator:aeb3975d6223065905b9bf430a91e70f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834d0282968bab1e4936d12b4b00d462"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52">Material::FluxParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a834d0282968bab1e4936d12b4b00d462">b_constraint_type</a></td></tr>
+<tr class="separator:a834d0282968bab1e4936d12b4b00d462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21da2a17cb8a424970169a728c9528d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a21da2a17cb8a424970169a728c9528d5">b_trel</a></td></tr>
+<tr class="separator:a21da2a17cb8a424970169a728c9528d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab287ff2178b3e63c0d9532ab875b6df4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab287ff2178b3e63c0d9532ab875b6df4">b_scaling</a></td></tr>
+<tr class="separator:ab287ff2178b3e63c0d9532ab875b6df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537be633028cba499c42fb17bf644b98"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a537be633028cba499c42fb17bf644b98">b_constraint_its_max</a></td></tr>
+<tr class="separator:a537be633028cba499c42fb17bf644b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb56b8532e7813b80dd56c6cc57fbb3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a0bb56b8532e7813b80dd56c6cc57fbb3">b_constraint_its_tol</a></td></tr>
+<tr class="separator:a0bb56b8532e7813b80dd56c6cc57fbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e5476168582e794a5b60923b86ac6b"><td class="memItemLeft" align="right" valign="top">std::set&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a68e5476168582e794a5b60923b86ac6b">b_basis_ids</a></td></tr>
+<tr class="separator:a68e5476168582e794a5b60923b86ac6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155e8da444c49bef208753515b737e83"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a155e8da444c49bef208753515b737e83">b_is_basis</a></td></tr>
+<tr class="separator:a155e8da444c49bef208753515b737e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Performs one step of irradiation (potentially many substeps) for many materials, with a fixed transition matrix which resides on each material. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#_a16">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#_a9">tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#_a9">tstParallelDepletion.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#_a18">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#_a19">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#_a14">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#_a10">Manager/mzd/tests/tstParallelDepletion.cpp</a>, <a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#_a19">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#_a20">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0af6808998088a3af6ed5640b6b7f426"></a>
 <div class="memitem">
@@ -234,9 +284,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a17">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a14">tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a11">tstParallelDepletion.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a19">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a20">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a26">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a12">Manager/mzd/tests/tstParallelDepletion.cpp</a>, <a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a20">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a21">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a11dad69bc754a8e0fd758e4ac49fa6e0">MultiZoneDepleter::b_solver</a>.</p>
+
+<p>Referenced by <a class="el" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">MultiZoneDepleterTester::SetUp()</a>, and <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a1392102c3aa03dbdb44ceed8fc977b64">TEST()</a>.</p>
 
 </div>
 </div>
@@ -253,9 +305,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a32">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a15">tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a13">tstParallelDepletion.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a27">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a14">Manager/mzd/tests/tstParallelDepletion.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af9c2f1f247a4997587ff7754574bf197">MultiZoneDepleter::b_comm</a>.</p>
+
+<p>Referenced by <a class="el" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">MultiZoneDepleterTester::SetUp()</a>, and <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a6b9d90ed3890620d2aafd38054b15db9">TEST()</a>.</p>
 
 </div>
 </div>
@@ -272,9 +326,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a18">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a16">tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a12">tstParallelDepletion.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a20">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a21">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a28">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a13">Manager/mzd/tests/tstParallelDepletion.cpp</a>, <a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a21">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a22">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a263edba7dbb40e20d81e1c97f61dad51">MultiZoneDepleter::b_mats</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a11dad69bc754a8e0fd758e4ac49fa6e0">MultiZoneDepleter::b_solver</a>.</p>
+
+<p>Referenced by <a class="el" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">MultiZoneDepleterTester::SetUp()</a>, and <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a1392102c3aa03dbdb44ceed8fc977b64">TEST()</a>.</p>
 
 </div>
 </div>
@@ -324,7 +380,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a22">tstMultiZoneDepleter.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a36">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a263edba7dbb40e20d81e1c97f61dad51">MultiZoneDepleter::b_mats</a>.</p>
 
@@ -343,9 +399,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a21">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a18">tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a18">tstParallelDepletion.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a21">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a22">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a32">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a19">Manager/mzd/tests/tstParallelDepletion.cpp</a>, <a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a22">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a23">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a67120ee34f780a0f54c312977a28c1bd">MultiZoneDepleter::b_dt</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a263edba7dbb40e20d81e1c97f61dad51">MultiZoneDepleter::b_mats</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a352e31e1b76369b0582bcbc8d678d20e">MultiZoneDepleter::dt()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a1392102c3aa03dbdb44ceed8fc977b64">TEST()</a>.</p>
 
 </div>
 </div>
@@ -415,7 +473,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a32">tstMultiZoneDepleter.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a109">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a67120ee34f780a0f54c312977a28c1bd">MultiZoneDepleter::b_dt</a>.</p>
 
@@ -435,11 +493,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a20">exNEAMS.cpp</a>.</dd>
-</dl>
+
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a3ecc4ec88b1583a6066905b7f9441571">MultiZoneDepleter::b_bg</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a6a052059f5f28319e2471b790d57b6ea">MultiZoneDepleter::b_bg_volume</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aeb3975d6223065905b9bf430a91e70f0">MultiZoneDepleter::b_constraint</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a834d0282968bab1e4936d12b4b00d462">MultiZoneDepleter::b_constraint_type</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a65755fa62f6e56ce13c1ea09f5fc77cc">MultiZoneDepleter::b_has_constraint</a>, and <a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52a6ce26a62afab55d7606ad4e92428b30c">Material::UNKNOWN</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a1392102c3aa03dbdb44ceed8fc977b64">TEST()</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
 
 </div>
 </div>
@@ -466,11 +523,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a24">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a30">tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a16">tstParallelDepletion.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a107">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a17">Manager/mzd/tests/tstParallelDepletion.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a3ecc4ec88b1583a6066905b7f9441571">MultiZoneDepleter::b_bg</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a6a052059f5f28319e2471b790d57b6ea">MultiZoneDepleter::b_bg_volume</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aeb3975d6223065905b9bf430a91e70f0">MultiZoneDepleter::b_constraint</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a834d0282968bab1e4936d12b4b00d462">MultiZoneDepleter::b_constraint_type</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a65755fa62f6e56ce13c1ea09f5fc77cc">MultiZoneDepleter::b_has_constraint</a>, and <a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52a316771101d4b4b1dea7d7e2a82ef1658">Material::POWER</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a2262e7b23a963e00e5625175ec42101b">TEST()</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
 
 </div>
 </div>
@@ -523,11 +580,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a19">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a20">tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a17">tstParallelDepletion.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a34">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a18">Manager/mzd/tests/tstParallelDepletion.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a21da2a17cb8a424970169a728c9528d5">MultiZoneDepleter::b_trel</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a1392102c3aa03dbdb44ceed8fc977b64">TEST()</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
 
 </div>
 </div>
@@ -564,11 +621,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a23">exNEAMS.cpp</a>, and <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a23">tstMultiZoneDepleter.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a38">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a537be633028cba499c42fb17bf644b98">MultiZoneDepleter::b_constraint_its_max</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a2262e7b23a963e00e5625175ec42101b">TEST()</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">MultiZoneDepleter::update()</a>.</p>
 
 </div>
 </div>
@@ -585,7 +642,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a31">tstMultiZoneDepleter.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a108">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a0bb56b8532e7813b80dd56c6cc57fbb3">MultiZoneDepleter::b_constraint_its_tol</a>.</p>
 
@@ -644,7 +701,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a24">tstMultiZoneDepleter.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a39">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab287ff2178b3e63c0d9532ab875b6df4">MultiZoneDepleter::b_scaling</a>.</p>
 
@@ -687,9 +744,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Updates data from dc (same end result as setters). </p>
 <dl class="section return"><dt>Returns</dt><dd><b>bool</b> false if errors were found&ndash;check with <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a585cd31bba044ea2fead91ae062010c9">status()</a>. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a19">tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a14">tstParallelDepletion.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a22">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a23">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a33">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a15">Manager/mzd/tests/tstParallelDepletion.cpp</a>, <a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a23">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a24">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aeb3975d6223065905b9bf430a91e70f0">MultiZoneDepleter::b_constraint</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a537be633028cba499c42fb17bf644b98">MultiZoneDepleter::b_constraint_its_max</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a0bb56b8532e7813b80dd56c6cc57fbb3">MultiZoneDepleter::b_constraint_its_tol</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a67120ee34f780a0f54c312977a28c1bd">MultiZoneDepleter::b_dt</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae3c955607a0952eac46856f78e38a800">MultiZoneDepleter::b_status</a>, <a class="el" href="../../df/d34/class_origen_1_1_material.html#aba34c4c1c0fee46218b2f34eaf6da758">Material::decay_substep_dtrel()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a2b957cb5a012ec1a161ea888f86e62f9">MultiZoneDepleter::set_basis_ids()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab77ecce57efa7528667bc94682b90741">MultiZoneDepleter::set_constraint_its_max()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a91e9df178e91376ccd7cd2cc7e237220">MultiZoneDepleter::set_constraint_its_tol()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a4e9aa5eef4949796acad13d61d527341">MultiZoneDepleter::set_dt()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a1171aea6bcd7206e6d6518a89e1d2e3b">MultiZoneDepleter::set_flux_constraint()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">MultiZoneDepleter::set_power_constraint()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">MultiZoneDepleter::set_substep_dtrel()</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ad84b488ed5d1e78b13b4b2aa6584f733">MultiZoneDepleter::unset_constraint()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a03d63011fcf5c6a8ecde0457cd1553f2">TEST()</a>.</p>
 
 </div>
 </div>
@@ -708,9 +767,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Execute this module. </p>
 <dl class="section return"><dt>Returns</dt><dd><b>bool</b> true on success, false otherwise </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a22">exNEAMS.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a21">tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#a15">tstParallelDepletion.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a23">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a24">tstSolver_matrex.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a35">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#a16">Manager/mzd/tests/tstParallelDepletion.cpp</a>, <a class="el" href="../../d0/d89/_solver_2cram_2tests_2tst_solver_cram_8cpp-example.html#a24">Solver/cram/tests/tstSolver_cram.cpp</a>, and <a class="el" href="../../d6/d8a/_solver_2matrex_2tests_2tst_solver_matrex_8cpp-example.html#a25">Solver/matrex/tests/tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a537be633028cba499c42fb17bf644b98">MultiZoneDepleter::b_constraint_its_max</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a0bb56b8532e7813b80dd56c6cc57fbb3">MultiZoneDepleter::b_constraint_its_tol</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab287ff2178b3e63c0d9532ab875b6df4">MultiZoneDepleter::b_scaling</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae3c955607a0952eac46856f78e38a800">MultiZoneDepleter::b_status</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a21da2a17cb8a424970169a728c9528d5">MultiZoneDepleter::b_trel</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8f1df1b80366e8fe9bc89d3c58e83269">MultiZoneDepleter::global_scaling_factor()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a9fc139de38be67ceac515093fbc82bba">MultiZoneDepleter::has_constraint()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a0737f396d9ff3b098e0ad475798a38b1">MultiZoneDepleter::post_transmute()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af3a34f7fcc1b4eebc10cf117872879fb">MultiZoneDepleter::pre_transmute()</a>, and <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae93149ea1f0b5e020081244c0a194a42">MultiZoneDepleter::transmute()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a1392102c3aa03dbdb44ceed8fc977b64">TEST()</a>.</p>
 
 </div>
 </div>
@@ -726,9 +787,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#a33">exNEAMS.cpp</a>, and <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#a25">tstMultiZoneDepleter.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a40">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a94242fb44d17aab1730d215b9c433d57">MultiZoneDepleter::allreduce()</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a3ecc4ec88b1583a6066905b7f9441571">MultiZoneDepleter::b_bg</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a6a052059f5f28319e2471b790d57b6ea">MultiZoneDepleter::b_bg_volume</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aeb3975d6223065905b9bf430a91e70f0">MultiZoneDepleter::b_constraint</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a537be633028cba499c42fb17bf644b98">MultiZoneDepleter::b_constraint_its_max</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a0bb56b8532e7813b80dd56c6cc57fbb3">MultiZoneDepleter::b_constraint_its_tol</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a834d0282968bab1e4936d12b4b00d462">MultiZoneDepleter::b_constraint_type</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a67120ee34f780a0f54c312977a28c1bd">MultiZoneDepleter::b_dt</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a65755fa62f6e56ce13c1ea09f5fc77cc">MultiZoneDepleter::b_has_constraint</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a263edba7dbb40e20d81e1c97f61dad51">MultiZoneDepleter::b_mats</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae3c955607a0952eac46856f78e38a800">MultiZoneDepleter::b_status</a>, <a class="el" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a21da2a17cb8a424970169a728c9528d5">MultiZoneDepleter::b_trel</a>, and <a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52a316771101d4b4b1dea7d7e2a82ef1658">Material::POWER</a>.</p>
+
+<p>Referenced by <a class="el" href="../../de/dad/ex_n_e_a_m_s_8cpp.html#a6b9d90ed3890620d2aafd38054b15db9">TEST()</a>.</p>
 
 </div>
 </div>

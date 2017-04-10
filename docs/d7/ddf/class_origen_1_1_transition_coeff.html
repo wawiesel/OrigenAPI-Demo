@@ -104,7 +104,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="../../d2/dcc/class_origen_1_1_transition_coeff-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TransitionCoeff Class Reference</div>  </div>
@@ -124,6 +130,13 @@ Inheritance diagram for TransitionCoeff:</div>
 <p>Container for transition coefficient data.  
  <a href="../../d7/ddf/class_origen_1_1_transition_coeff.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:abcf47b0bd261cb49fbfdc89785b35b69"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html">TransitionCoeff</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#abcf47b0bd261cb49fbfdc89785b35b69">SP</a></td></tr>
+<tr class="separator:abcf47b0bd261cb49fbfdc89785b35b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955762f5f9df5ce223476ca8b23be1ab"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; const <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html">TransitionCoeff</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a955762f5f9df5ce223476ca8b23be1ab">SCP</a></td></tr>
+<tr class="separator:a955762f5f9df5ce223476ca8b23be1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b9f02ca60e9e554d90ad9dd8023a34e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a7b9f02ca60e9e554d90ad9dd8023a34e">TransitionCoeff</a> ()</td></tr>
@@ -441,11 +454,66 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71b2b4d3e64d7a86ff6dd151ac7700f3"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a71b2b4d3e64d7a86ff6dd151ac7700f3"><td class="memTemplItemLeft" align="right" valign="top">float&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a71b2b4d3e64d7a86ff6dd151ac7700f3">fission_power</a> (const std::vector&lt; float &gt; &amp;numden, float vol, float <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a76badf2c55b2721af9e905826c952252">flux</a>, const <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> &amp;nucset) const </td></tr>
 <tr class="separator:a71b2b4d3e64d7a86ff6dd151ac7700f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a082a26e3bc01feb0701f18347435951b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a082a26e3bc01feb0701f18347435951b">match</a> (const <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html">TransitionCoeff</a> &amp;, const <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html">TransitionCoeff</a> &amp;)</td></tr>
+<tr class="separator:a082a26e3bc01feb0701f18347435951b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba42445999f1a551b08b95124f41503"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#afba42445999f1a551b08b95124f41503">fission_xs_index</a> (size_t, const <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> &amp;)</td></tr>
+<tr class="separator:afba42445999f1a551b08b95124f41503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a20453b44564e70ab97f56c71a9425415"><td class="memItemLeft" align="right" valign="top">static const Standard::Serializable::UID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a20453b44564e70ab97f56c71a9425415">uid</a> = 0x99152462a5c56032</td></tr>
+<tr class="separator:a20453b44564e70ab97f56c71a9425415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2fd1adafc1cc1ddcc6bb2e53c1827340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2fd1adafc1cc1ddcc6bb2e53c1827340">canonicalize_matrix</a> ()</td></tr>
+<tr class="separator:a2fd1adafc1cc1ddcc6bb2e53c1827340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9f202c8f76d6ce13ed4893be6230f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a9f9f202c8f76d6ce13ed4893be6230f9">canonicalize_neutron_yields</a> ()</td></tr>
+<tr class="separator:a9f9f202c8f76d6ce13ed4893be6230f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2588bb60e460f8d32172cbb05cc25e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2588bb60e460f8d32172cbb05cc25e56">canonicalize_flux</a> ()</td></tr>
+<tr class="separator:a2588bb60e460f8d32172cbb05cc25e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4bf9a4087bc2d3f4c8564757ae5f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#acd4bf9a4087bc2d3f4c8564757ae5f2c">canonicalize_loss_xs</a> ()</td></tr>
+<tr class="separator:acd4bf9a4087bc2d3f4c8564757ae5f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d8a9eeae089606bf1c90c74f9f467c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a08d8a9eeae089606bf1c90c74f9f467c">canonicalize_fission_xs</a> ()</td></tr>
+<tr class="separator:a08d8a9eeae089606bf1c90c74f9f467c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4b6d9aafce79f748efcada98b3c3db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a4b4b6d9aafce79f748efcada98b3c3db">canonicalize_kappa_capture</a> ()</td></tr>
+<tr class="separator:a4b4b6d9aafce79f748efcada98b3c3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228e7d80d2de746b29d3fae13f99481a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a228e7d80d2de746b29d3fae13f99481a">canonicalize_kappa_fission</a> ()</td></tr>
+<tr class="separator:a228e7d80d2de746b29d3fae13f99481a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a61fbbdb9812706f1fa9bd556797be302"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a61fbbdb9812706f1fa9bd556797be302">b_burnup</a></td></tr>
+<tr class="separator:a61fbbdb9812706f1fa9bd556797be302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850334614790dc15aed2bb938dd37824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gaaf2ab21d8330d6e28c9cb793f04d9a0e">SP_Vec_Flt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a850334614790dc15aed2bb938dd37824">b_matrix</a></td></tr>
+<tr class="separator:a850334614790dc15aed2bb938dd37824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e37397ffac7c4a085e7ac44ec177bac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gaaf2ab21d8330d6e28c9cb793f04d9a0e">SP_Vec_Flt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a8e37397ffac7c4a085e7ac44ec177bac">b_loss_xs</a></td></tr>
+<tr class="separator:a8e37397ffac7c4a085e7ac44ec177bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b8cc533aed816cf7fc9c9fdd5f8ce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gaaf2ab21d8330d6e28c9cb793f04d9a0e">SP_Vec_Flt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ad1b8cc533aed816cf7fc9c9fdd5f8ce6">b_fission_xs</a></td></tr>
+<tr class="separator:ad1b8cc533aed816cf7fc9c9fdd5f8ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05872a6ebf9eccf759c81b6a6cde3c86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gaaf2ab21d8330d6e28c9cb793f04d9a0e">SP_Vec_Flt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a05872a6ebf9eccf759c81b6a6cde3c86">b_neutron_yields</a></td></tr>
+<tr class="separator:a05872a6ebf9eccf759c81b6a6cde3c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ecf98a6791cbdf2c2338266ee613b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gaaf2ab21d8330d6e28c9cb793f04d9a0e">SP_Vec_Flt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a13ecf98a6791cbdf2c2338266ee613b2">b_flux</a></td></tr>
+<tr class="separator:a13ecf98a6791cbdf2c2338266ee613b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2afec3e967699beeea57dd0220ba4d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gaaf2ab21d8330d6e28c9cb793f04d9a0e">SP_Vec_Flt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ae2afec3e967699beeea57dd0220ba4d8">b_kappa_capture</a></td></tr>
+<tr class="separator:ae2afec3e967699beeea57dd0220ba4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04906fb9a05f7a0fefdc05f825f3bab9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#gaaf2ab21d8330d6e28c9cb793f04d9a0e">SP_Vec_Flt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a04906fb9a05f7a0fefdc05f825f3bab9">b_kappa_fission</a></td></tr>
+<tr class="separator:a04906fb9a05f7a0fefdc05f825f3bab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ad5661df871570690f7195eb29d2b781a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ad5661df871570690f7195eb29d2b781a">ScaleUtils::IO::Accessor&lt; TransitionCoeff &gt;</a></td></tr>
+<tr class="separator:ad5661df871570690f7195eb29d2b781a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d867768c47a7bacd4e9cf5c03c58e95"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a7d867768c47a7bacd4e9cf5c03c58e95">GridView_TransitionCoeff</a></td></tr>
+<tr class="separator:a7d867768c47a7bacd4e9cf5c03c58e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Container for transition coefficient data. </p>
 <p>The TransititonCoeff data container manages the coefficient data for transitions. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d22/tst_grid_view_8cpp-example.html#_a30">tstGridView.cpp</a>, <a class="el" href="../../d2/dcc/tstinterp_8cpp-example.html#_a5">tstinterp.cpp</a>, <a class="el" href="../../d4/de5/tst_library_8cpp-example.html#_a15">tstLibrary.cpp</a>, <a class="el" href="../../dd/d8c/tst_library_i_o_8cpp-example.html#_a12">tstLibraryIO.cpp</a>, <a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#_a1">tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#_a50">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/de5/_core_2dc_2tests_2tst_grid_view_8cpp-example.html#_a31">Core/dc/tests/tstGridView.cpp</a>, <a class="el" href="../../d2/d5f/_core_2dc_2tests_2tst_library_8cpp-example.html#_a16">Core/dc/tests/tstLibrary.cpp</a>, <a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#_a1">Core/dc/tests/tstTransitionCoeff.cpp</a>, <a class="el" href="../../dd/d17/_core_2fn_2tests_2tstinterp_8cpp-example.html#_a6">Core/fn/tests/tstinterp.cpp</a>, <a class="el" href="../../d2/deb/_core_2io_2tests_2tst_library_i_o_8cpp-example.html#_a13">Core/io/tests/tstLibraryIO.cpp</a>, and <a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#_a54">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="abcf47b0bd261cb49fbfdc89785b35b69"></a>
 <div class="memitem">
@@ -502,9 +570,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/dcc/tstinterp_8cpp-example.html#a22">tstinterp.cpp</a>, and <a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a6">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a7">Core/dc/tests/tstTransitionCoeff.cpp</a>, and <a class="el" href="../../dd/d17/_core_2fn_2tests_2tstinterp_8cpp-example.html#a23">Core/fn/tests/tstinterp.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ad1b8cc533aed816cf7fc9c9fdd5f8ce6">TransitionCoeff::b_fission_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a13ecf98a6791cbdf2c2338266ee613b2">TransitionCoeff::b_flux</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ae2afec3e967699beeea57dd0220ba4d8">TransitionCoeff::b_kappa_capture</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a04906fb9a05f7a0fefdc05f825f3bab9">TransitionCoeff::b_kappa_fission</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a8e37397ffac7c4a085e7ac44ec177bac">TransitionCoeff::b_loss_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a850334614790dc15aed2bb938dd37824">TransitionCoeff::b_matrix</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a05872a6ebf9eccf759c81b6a6cde3c86">TransitionCoeff::b_neutron_yields</a>, and <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aef01025e80ab7a47a4219802be0c7f6f">TransitionCoeff::burnup()</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a24060b4a38b223d2b850d4257b473156">TEST()</a>.</p>
 
 </div>
 </div>
@@ -739,9 +809,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return the scalar burnup </p>
 <p>Auto-generated from macro \ #ORIGEN_ACCESSORS_SCALAR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/dcc/tstinterp_8cpp-example.html#a24">tstinterp.cpp</a>, <a class="el" href="../../d4/de5/tst_library_8cpp-example.html#a24">tstLibrary.cpp</a>, <a class="el" href="../../dd/d8c/tst_library_i_o_8cpp-example.html#a15">tstLibraryIO.cpp</a>, and <a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a9">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d5f/_core_2dc_2tests_2tst_library_8cpp-example.html#a27">Core/dc/tests/tstLibrary.cpp</a>, <a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a10">Core/dc/tests/tstTransitionCoeff.cpp</a>, <a class="el" href="../../dd/d17/_core_2fn_2tests_2tstinterp_8cpp-example.html#a25">Core/fn/tests/tstinterp.cpp</a>, and <a class="el" href="../../d2/deb/_core_2io_2tests_2tst_library_i_o_8cpp-example.html#a16">Core/io/tests/tstLibraryIO.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2a7fae9feed4a6076a1a2fea2486f750">TransitionCoeff::approx_eq()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a95e367d3d07f29280ee8b21f847d18db">TransitionCoeff::clone()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a4e4ece14bed916163e551ce53802e532">FakeFactory::Library_linear2D()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aff4c248b286574d0a8a2bf4407c380ef">TransitionCoeff::operator==()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a3ebec2ca2d6276fb4d75f54d48028a34">Origen::populateLossXsValues()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_bof::read()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_s62b::read()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aefa15798d9ff8030f778b1d2d916d710">TransitionCoeff::scale()</a>, <a class="el" href="../../da/d39/tst_library_i_o_8cpp.html#af87b12127226c579569911f7a33ce0b5">scale61_fixup()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a558a7ffd34d19019a879f48a4bc54db2">Origen::tabulateBurnups()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a4009622ba6b79d876d363352c64852da">Origen::tabulateFissionXs()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a19013dc5f38ea521030f1de9ec5f1c5a">Origen::thinLibrary()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>, and <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#ad141651156345d8b46c60f326d939944">LibraryIO_bof::write()</a>.</p>
+<p>Referenced by <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2a7fae9feed4a6076a1a2fea2486f750">TransitionCoeff::approx_eq()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a95e367d3d07f29280ee8b21f847d18db">TransitionCoeff::clone()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a4e4ece14bed916163e551ce53802e532">FakeFactory::Library_linear2D()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aff4c248b286574d0a8a2bf4407c380ef">TransitionCoeff::operator==()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a3ebec2ca2d6276fb4d75f54d48028a34">Origen::populateLossXsValues()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_s62b::read()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_bof::read()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aefa15798d9ff8030f778b1d2d916d710">TransitionCoeff::scale()</a>, <a class="el" href="../../da/d39/tst_library_i_o_8cpp.html#af87b12127226c579569911f7a33ce0b5">scale61_fixup()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a558a7ffd34d19019a879f48a4bc54db2">Origen::tabulateBurnups()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a4009622ba6b79d876d363352c64852da">Origen::tabulateFissionXs()</a>, <a class="el" href="../../df/d87/tst_library_8cpp.html#ac1b8416e5a2a3fe4e6619c7d47ee8a6d">TEST()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a19013dc5f38ea521030f1de9ec5f1c5a">Origen::thinLibrary()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>, and <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#ad141651156345d8b46c60f326d939944">LibraryIO_bof::write()</a>.</p>
 
 </div>
 </div>
@@ -761,9 +831,9 @@ Public Member Functions</h2></td></tr>
 
 <p>set the scalar burnup </p>
 <p>Auto-generated from macro \ #ORIGEN_ACCESSORS_SCALAR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/d22/tst_grid_view_8cpp-example.html#a31">tstGridView.cpp</a>, <a class="el" href="../../d2/dcc/tstinterp_8cpp-example.html#a16">tstinterp.cpp</a>, <a class="el" href="../../d4/de5/tst_library_8cpp-example.html#a28">tstLibrary.cpp</a>, and <a class="el" href="../../dd/d8c/tst_library_i_o_8cpp-example.html#a14">tstLibraryIO.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/de5/_core_2dc_2tests_2tst_grid_view_8cpp-example.html#a32">Core/dc/tests/tstGridView.cpp</a>, <a class="el" href="../../d2/d5f/_core_2dc_2tests_2tst_library_8cpp-example.html#a31">Core/dc/tests/tstLibrary.cpp</a>, <a class="el" href="../../dd/d17/_core_2fn_2tests_2tstinterp_8cpp-example.html#a17">Core/fn/tests/tstinterp.cpp</a>, and <a class="el" href="../../d2/deb/_core_2io_2tests_2tst_library_i_o_8cpp-example.html#a15">Core/io/tests/tstLibraryIO.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../de/d87/class_origen_1_1_library.html#ae773fe3cb4f72fa077f88e59504b4231">Library::add_transition_matrix()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a7b1ae45e8bf4dacb8dc32805ec6b7fa1">LibraryBuilder::create_library()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a9f8495d8bd1598c09a5b2e1f1144ed3f">Origen::createTransitionCoeff_random1()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#a3f73c4f5aebd5c56e68bacef94be35c7">get_transition_data()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a4e4ece14bed916163e551ce53802e532">FakeFactory::Library_linear2D()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_s62b::read()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_bof::read()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aefa15798d9ff8030f778b1d2d916d710">TransitionCoeff::scale()</a>, <a class="el" href="../../da/d39/tst_library_i_o_8cpp.html#af87b12127226c579569911f7a33ce0b5">scale61_fixup()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad887b251d4aa831632f12d193e9d52e7">Origen::setbuLibrary()</a>, and <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a968ffa13d899edda5968bcdc03d2e079">FakeFactory::TransitionCoeff_random2()</a>.</p>
+<p>Referenced by <a class="el" href="../../de/d87/class_origen_1_1_library.html#ae773fe3cb4f72fa077f88e59504b4231">Library::add_transition_matrix()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a7b1ae45e8bf4dacb8dc32805ec6b7fa1">LibraryBuilder::create_library()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a9f8495d8bd1598c09a5b2e1f1144ed3f">Origen::createTransitionCoeff_random1()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#a3f73c4f5aebd5c56e68bacef94be35c7">get_transition_data()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a4e4ece14bed916163e551ce53802e532">FakeFactory::Library_linear2D()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_bof::read()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_s62b::read()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aefa15798d9ff8030f778b1d2d916d710">TransitionCoeff::scale()</a>, <a class="el" href="../../da/d39/tst_library_i_o_8cpp.html#af87b12127226c579569911f7a33ce0b5">scale61_fixup()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad887b251d4aa831632f12d193e9d52e7">Origen::setbuLibrary()</a>, <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#a20693594227bd01ff568e0ddf27ac84b">TEST()</a>, <a class="el" href="../../da/d39/tst_library_i_o_8cpp.html#a2c2c2cf173e7f61c7c05d2a1a3ddce53">TEST_F()</a>, and <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a968ffa13d899edda5968bcdc03d2e079">FakeFactory::TransitionCoeff_random2()</a>.</p>
 
 </div>
 </div>
@@ -783,9 +853,9 @@ Public Member Functions</h2></td></tr>
 <p>return a const reference to matrix </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_OBJECT().</p>
 <p>Invalid if this instance of <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html" title="Container for transition coefficient data. ">TransitionCoeff</a> goes out of scope. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/de5/tst_library_8cpp-example.html#a42">tstLibrary.cpp</a>, <a class="el" href="../../d6/d29/tst_transition_system_adapter__ampx_n_8cpp-example.html#a49">tstTransitionSystemAdapter_AmpxN.cpp</a>, and <a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#a77">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d5f/_core_2dc_2tests_2tst_library_8cpp-example.html#a45">Core/dc/tests/tstLibrary.cpp</a>, <a class="el" href="../../da/d1c/_manager_2libld_2tests_2tst_transition_system_adapter__ampx_n_8cpp-example.html#a62">Manager/libld/tests/tstTransitionSystemAdapter_AmpxN.cpp</a>, and <a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#a87">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#a3ed29738a98158a5aa875e352c497af3">Origen::construct_coeff_map()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#a3f73c4f5aebd5c56e68bacef94be35c7">get_transition_data()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#ad2c7c44567301e4e264eb41651d816cd">inject_fission_yields()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aff4c248b286574d0a8a2bf4407c380ef">TransitionCoeff::operator==()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#ad141651156345d8b46c60f326d939944">LibraryIO_bof::write()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>, and <a class="el" href="../../d8/dde/class_origen_1_1_library_i_o__s61.html#ad141651156345d8b46c60f326d939944">LibraryIO_s61::write()</a>.</p>
+<p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#a3ed29738a98158a5aa875e352c497af3">Origen::construct_coeff_map()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#a3f73c4f5aebd5c56e68bacef94be35c7">get_transition_data()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#ad2c7c44567301e4e264eb41651d816cd">inject_fission_yields()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aff4c248b286574d0a8a2bf4407c380ef">TransitionCoeff::operator==()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../df/d87/tst_library_8cpp.html#ab2165c4d94d643c81ba6651314ebfe95">TEST()</a>, <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#a0a474501b480c56245b5fdfbd63f7037">TEST_F()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#ad141651156345d8b46c60f326d939944">LibraryIO_bof::write()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>, and <a class="el" href="../../d8/dde/class_origen_1_1_library_i_o__s61.html#ad141651156345d8b46c60f326d939944">LibraryIO_s61::write()</a>.</p>
 
 </div>
 </div>
@@ -805,8 +875,10 @@ Public Member Functions</h2></td></tr>
 
 <p>get element of matrix vector by index </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#a19">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#a23">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#a7a38201f0bd7c41d41cc649fc3e78a3d">TEST_F()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7b3f72c5322c2be00201691d5b5a7e53"></a>
@@ -844,9 +916,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return view of matrix vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a11">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a12">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -865,9 +937,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return size of matrix vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a10">tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#a51">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a11">Core/dc/tests/tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#a55">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
+<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
 
 </div>
 </div>
@@ -1099,9 +1171,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return view of loss_xs vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a13">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a14">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -1120,9 +1192,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return size of loss_xs vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a12">tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#a52">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a13">Core/dc/tests/tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#a56">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
+<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
 
 </div>
 </div>
@@ -1356,9 +1428,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return view of fission_xs vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a15">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a16">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -1377,9 +1449,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return size of fission_xs vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a14">tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#a53">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a15">Core/dc/tests/tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#a57">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a4009622ba6b79d876d363352c64852da">Origen::tabulateFissionXs()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
+<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a4009622ba6b79d876d363352c64852da">Origen::tabulateFissionXs()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
 
 </div>
 </div>
@@ -1611,9 +1683,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return view of neutron_yields vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a17">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a18">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -1632,9 +1704,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return size of neutron_yields vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a16">tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#a54">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a17">Core/dc/tests/tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#a58">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
+<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
 
 </div>
 </div>
@@ -1807,7 +1879,7 @@ Public Member Functions</h2></td></tr>
 <p>return a const reference to flux </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_OBJECT().</p>
 <p>Invalid if this instance of <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html" title="Container for transition coefficient data. ">TransitionCoeff</a> goes out of scope. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d8c/tst_library_i_o_8cpp-example.html#a17">tstLibraryIO.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/deb/_core_2io_2tests_2tst_library_i_o_8cpp-example.html#a18">Core/io/tests/tstLibraryIO.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a367446d4ddcf2b03990a320bd440749f">TransitionCoeff::capture_power()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aa1e5cee19de78ebc26fd27202cb99b59">TransitionCoeff::fission_power()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aff4c248b286574d0a8a2bf4407c380ef">TransitionCoeff::operator==()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a4402c0ec6da4623ffa7689b51205d388">TransitionCoeff::reaction_power()</a>, <a class="el" href="../../da/d39/tst_library_i_o_8cpp.html#af87b12127226c579569911f7a33ce0b5">scale61_fixup()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#ad141651156345d8b46c60f326d939944">LibraryIO_bof::write()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
 
@@ -1867,9 +1939,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return view of flux vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a19">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a20">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -1888,9 +1960,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return size of flux vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a18">tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d7/da7/tst_transition_system_adapter__decay_resource_8cpp-example.html#a49">tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a19">Core/dc/tests/tstTransitionCoeff.cpp</a>, and <a class="el" href="../../d0/d5b/_manager_2libld_2tests_2tst_transition_system_adapter__decay_resource_8cpp-example.html#a53">Manager/libld/tests/tstTransitionSystemAdapter_DecayResource.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#ad141651156345d8b46c60f326d939944">LibraryIO_bof::write()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
+<p>Referenced by <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#ac5d9c2f6c91187d79218e15290d30bac">Library::populate_transition_matrix_reaction()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#ad141651156345d8b46c60f326d939944">LibraryIO_bof::write()</a>, and <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#ad141651156345d8b46c60f326d939944">LibraryIO_s62b::write()</a>.</p>
 
 </div>
 </div>
@@ -1928,7 +2000,7 @@ Public Member Functions</h2></td></tr>
 
 <p>set the flux (copy operation) </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_OBJECT(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d8c/tst_library_i_o_8cpp-example.html#a16">tstLibraryIO.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/deb/_core_2io_2tests_2tst_library_i_o_8cpp-example.html#a17">Core/io/tests/tstLibraryIO.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../de/d87/class_origen_1_1_library.html#ae773fe3cb4f72fa077f88e59504b4231">Library::add_transition_matrix()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a7b1ae45e8bf4dacb8dc32805ec6b7fa1">LibraryBuilder::create_library()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#a3f73c4f5aebd5c56e68bacef94be35c7">get_transition_data()</a>, <a class="el" href="../../d8/dde/class_origen_1_1_library_i_o__s61.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_s61::read()</a>, <a class="el" href="../../d2/d61/class_origen_1_1_library_i_o__s62b.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_s62b::read()</a>, <a class="el" href="../../d5/d39/class_origen_1_1_library_i_o__bof.html#a325ef1c910c64d441454de48a9dec0dc">LibraryIO_bof::read()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aefa15798d9ff8030f778b1d2d916d710">TransitionCoeff::scale()</a>, and <a class="el" href="../../da/d39/tst_library_i_o_8cpp.html#af87b12127226c579569911f7a33ce0b5">scale61_fixup()</a>.</p>
 
@@ -2123,9 +2195,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return view of kappa_fission vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a21">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a22">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -2144,9 +2216,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return size of kappa_fission vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a20">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a21">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2a7fae9feed4a6076a1a2fea2486f750">TransitionCoeff::approx_eq()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2a7fae9feed4a6076a1a2fea2486f750">TransitionCoeff::approx_eq()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -2380,9 +2452,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return view of kappa_capture vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a23">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a24">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -2401,9 +2473,9 @@ Public Member Functions</h2></td></tr>
 
 <p>return size of kappa_capture vector </p>
 <p>Auto-generated from macro #ORIGEN_ACCESSORS_SP_VECTOR(). </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a22">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a23">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
-<p>Referenced by <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2a7fae9feed4a6076a1a2fea2486f750">TransitionCoeff::approx_eq()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
+<p>Referenced by <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2a7fae9feed4a6076a1a2fea2486f750">TransitionCoeff::approx_eq()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a1fee0195651331c310e8350a052d5c66">TEST()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a44098f41cb5ba6b5fe84052e664d0480">test_addEqOp()</a>.</p>
 
 </div>
 </div>
@@ -2575,7 +2647,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a24">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a25">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a61fbbdb9812706f1fa9bd556797be302">TransitionCoeff::b_burnup</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ad1b8cc533aed816cf7fc9c9fdd5f8ce6">TransitionCoeff::b_fission_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a13ecf98a6791cbdf2c2338266ee613b2">TransitionCoeff::b_flux</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ae2afec3e967699beeea57dd0220ba4d8">TransitionCoeff::b_kappa_capture</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a04906fb9a05f7a0fefdc05f825f3bab9">TransitionCoeff::b_kappa_fission</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a8e37397ffac7c4a085e7ac44ec177bac">TransitionCoeff::b_loss_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a850334614790dc15aed2bb938dd37824">TransitionCoeff::b_matrix</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a05872a6ebf9eccf759c81b6a6cde3c86">TransitionCoeff::b_neutron_yields</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a76830aeae6053d193eefb376628f9268">TransitionCoeff::getSerializedSize()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write()</a>.</p>
 
@@ -2596,7 +2668,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a25">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a26">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a61fbbdb9812706f1fa9bd556797be302">TransitionCoeff::b_burnup</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ad1b8cc533aed816cf7fc9c9fdd5f8ce6">TransitionCoeff::b_fission_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a13ecf98a6791cbdf2c2338266ee613b2">TransitionCoeff::b_flux</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ae2afec3e967699beeea57dd0220ba4d8">TransitionCoeff::b_kappa_capture</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a04906fb9a05f7a0fefdc05f825f3bab9">TransitionCoeff::b_kappa_fission</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a8e37397ffac7c4a085e7ac44ec177bac">TransitionCoeff::b_loss_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a850334614790dc15aed2bb938dd37824">TransitionCoeff::b_matrix</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a05872a6ebf9eccf759c81b6a6cde3c86">TransitionCoeff::b_neutron_yields</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a08d8a9eeae089606bf1c90c74f9f467c">TransitionCoeff::canonicalize_fission_xs()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2588bb60e460f8d32172cbb05cc25e56">TransitionCoeff::canonicalize_flux()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a4b4b6d9aafce79f748efcada98b3c3db">TransitionCoeff::canonicalize_kappa_capture()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a228e7d80d2de746b29d3fae13f99481a">TransitionCoeff::canonicalize_kappa_fission()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#acd4bf9a4087bc2d3f4c8564757ae5f2c">TransitionCoeff::canonicalize_loss_xs()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2fd1adafc1cc1ddcc6bb2e53c1827340">TransitionCoeff::canonicalize_matrix()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a9f9f202c8f76d6ce13ed4893be6230f9">TransitionCoeff::canonicalize_neutron_yields()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a76830aeae6053d193eefb376628f9268">TransitionCoeff::getSerializedSize()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read()</a>.</p>
 
@@ -2677,7 +2749,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a26">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a27">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aa48c39f92bc04eded742f5310c74aafe">TransitionCoeff::to_string()</a>.</p>
 
@@ -2774,11 +2846,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/dcc/tstinterp_8cpp-example.html#a15">tstinterp.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d17/_core_2fn_2tests_2tstinterp_8cpp-example.html#a16">Core/fn/tests/tstinterp.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a61fbbdb9812706f1fa9bd556797be302">TransitionCoeff::b_burnup</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ad1b8cc533aed816cf7fc9c9fdd5f8ce6">TransitionCoeff::b_fission_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a13ecf98a6791cbdf2c2338266ee613b2">TransitionCoeff::b_flux</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ae2afec3e967699beeea57dd0220ba4d8">TransitionCoeff::b_kappa_capture</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a04906fb9a05f7a0fefdc05f825f3bab9">TransitionCoeff::b_kappa_fission</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a8e37397ffac7c4a085e7ac44ec177bac">TransitionCoeff::b_loss_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a850334614790dc15aed2bb938dd37824">TransitionCoeff::b_matrix</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a05872a6ebf9eccf759c81b6a6cde3c86">TransitionCoeff::b_neutron_yields</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aef01025e80ab7a47a4219802be0c7f6f">TransitionCoeff::burnup()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a4e3a0392b52a9261206f641904e18bb2">TransitionCoeff::set_burnup()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#af300db0979b9db127da3964d74b848dc">TransitionCoeff::set_fission_xs()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ac4958277744eb12452ecc1249f4e15a6">TransitionCoeff::set_flux()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a75c5ca93bae26be1febdf9157e412bb4">TransitionCoeff::set_kappa_capture()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a455437166fa0a226b7c34236455c679e">TransitionCoeff::set_kappa_fission()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a95b33ff058085fab63f2c47288243f03">TransitionCoeff::set_loss_xs()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aa4ae601b99f6e604339d1ed0db910b6a">TransitionCoeff::set_matrix()</a>, and <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a824b13bd5e74416e1941246e5b96f351">TransitionCoeff::set_neutron_yields()</a>.</p>
 
-<p>Referenced by <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a48e195e1eeb01615a0c5af266e622a59">FakeFactory::Library_linear1D()</a>, and <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a4e4ece14bed916163e551ce53802e532">FakeFactory::Library_linear2D()</a>.</p>
+<p>Referenced by <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a48e195e1eeb01615a0c5af266e622a59">FakeFactory::Library_linear1D()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a4e4ece14bed916163e551ce53802e532">FakeFactory::Library_linear2D()</a>, and <a class="el" href="../../d6/d7a/tst_transition_coeff_8cpp.html#a328f3b5b799e2578dd5e0a58aed1f24c">TEST()</a>.</p>
 
 </div>
 </div>
@@ -2805,9 +2877,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/de5/tst_library_8cpp-example.html#a25">tstLibrary.cpp</a>, and <a class="el" href="../../d1/dcb/tst_transition_coeff_8cpp-example.html#a7">tstTransitionCoeff.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d5f/_core_2dc_2tests_2tst_library_8cpp-example.html#a28">Core/dc/tests/tstLibrary.cpp</a>, and <a class="el" href="../../dc/dd1/_core_2dc_2tests_2tst_transition_coeff_8cpp-example.html#a8">Core/dc/tests/tstTransitionCoeff.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a61fbbdb9812706f1fa9bd556797be302">TransitionCoeff::b_burnup</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ad1b8cc533aed816cf7fc9c9fdd5f8ce6">TransitionCoeff::b_fission_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a13ecf98a6791cbdf2c2338266ee613b2">TransitionCoeff::b_flux</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ae2afec3e967699beeea57dd0220ba4d8">TransitionCoeff::b_kappa_capture</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a04906fb9a05f7a0fefdc05f825f3bab9">TransitionCoeff::b_kappa_fission</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a8e37397ffac7c4a085e7ac44ec177bac">TransitionCoeff::b_loss_xs</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a850334614790dc15aed2bb938dd37824">TransitionCoeff::b_matrix</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a05872a6ebf9eccf759c81b6a6cde3c86">TransitionCoeff::b_neutron_yields</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aef01025e80ab7a47a4219802be0c7f6f">TransitionCoeff::burnup()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#aa13a2ea958f0c72e5f4e5082a178c647">TransitionCoeff::has_kappa_capture()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a9e202ee8aa3964e7276adf0d99d94b23">TransitionCoeff::has_kappa_fission()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a1e9b67d3546a8cf644f62522e8572537">TransitionCoeff::kappa_capture_size()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ae96ef4c044e195129b11e92cb6ffac7c">TransitionCoeff::kappa_fission_size()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a70b680747dc40693f75f08da80a26a0a">TransitionCoeff::scp_fission_xs()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ac032c236d28df3361b9fb6f0b146fec5">TransitionCoeff::scp_flux()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a2ebe5044a832be6eb5ed8d9990499f9b">TransitionCoeff::scp_kappa_capture()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a42137dec372a44685c433d0a5cc0f227">TransitionCoeff::scp_kappa_fission()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ab86d15746766625c0c018e4d50ee7734">TransitionCoeff::scp_loss_xs()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a7b3f72c5322c2be00201691d5b5a7e53">TransitionCoeff::scp_matrix()</a>, <a class="el" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#ab934ca73075e43c3ca22f8aecdb05be3">TransitionCoeff::scp_neutron_yields()</a>, and <a class="el" href="../../d2/d50/_transition_coeff_8cpp.html#a84789493ffe41a4a886fe46a9e084220">SP_CAST_VF</a>.</p>
+
+<p>Referenced by <a class="el" href="../../df/d87/tst_library_8cpp.html#ac1b8416e5a2a3fe4e6619c7d47ee8a6d">TEST()</a>.</p>
 
 </div>
 </div>

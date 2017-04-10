@@ -112,26 +112,26 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a0"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a>, Binning )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../de/d9e/tst_emission_spectrum_8cpp.html#aacc11300cf247216821265ebce12a197">TEST</a>( <a name="_a1"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a>, Binning )</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html">DiscreteSpectrum</a> ds;</div>
-<div class="line">    ds.<a name="a2"></a><a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html#aa08e1c572683593573a9d2c6e305148d">add_line</a>( 1.0, 0.9 );</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html">DiscreteSpectrum</a> ds;</div>
+<div class="line">    ds.<a name="a3"></a><a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html#aa08e1c572683593573a9d2c6e305148d">add_line</a>( 1.0, 0.9 );</div>
 <div class="line">    ds.<a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html#aa08e1c572683593573a9d2c6e305148d">add_line</a>( 0.3, 0.8 );</div>
 <div class="line">    ds.<a class="code" href="../../d6/dea/class_origen_1_1_discrete_spectrum.html#aa08e1c572683593573a9d2c6e305148d">add_line</a>( 0.1, 0.7 );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html">EmissionSpectrum</a> em( 1001 );</div>
-<div class="line">    em.<a name="a3"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a0d9b6918bbff4b3576b06022ed611066">set_discrete</a>( ds );</div>
+<div class="line">    em.<a name="a4"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#a0d9b6918bbff4b3576b06022ed611066">set_discrete</a>( ds );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> en( {2.0, 1.0, 0.1} );</div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> iy( {0.3, 0.4} );</div>
-<div class="line">    <a name="_a4"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> cs;</div>
-<div class="line">    cs.<a name="a5"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#a264abe5d00fbdbd158758c49769bfdfe">set_bounds</a>( en );</div>
+<div class="line">    <a name="_a5"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html">Spectrum</a> cs;</div>
+<div class="line">    cs.<a name="a6"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#a264abe5d00fbdbd158758c49769bfdfe">set_bounds</a>( en );</div>
 <div class="line">    cs.set_intensity( iy );</div>
-<div class="line">    em.<a name="a6"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#af617b42c5b505f8067b94f464a0c7d99">set_continuous</a>( cs );</div>
+<div class="line">    em.<a name="a7"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#af617b42c5b505f8067b94f464a0c7d99">set_continuous</a>( cs );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> intensity( 2, 0.0 );</div>
-<div class="line">    em.<a name="a7"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#aaeb3102bde9f0f1bae5738e5efdc79ca">bin</a>( en, &amp;intensity );</div>
-<div class="line">    <span class="keywordflow">if</span>( 0 ) std::cout &lt;&lt; <a name="a8"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#a5a13ed74158b085aa190fc6e54f462de">Spectrum::print_bins</a>( en, intensity );</div>
+<div class="line">    em.<a name="a8"></a><a class="code" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#aaeb3102bde9f0f1bae5738e5efdc79ca">bin</a>( en, &amp;intensity );</div>
+<div class="line">    <span class="keywordflow">if</span>( 0 ) std::cout &lt;&lt; <a name="a9"></a><a class="code" href="../../d7/dd5/class_origen_1_1_spectrum.html#a5a13ed74158b085aa190fc6e54f462de">Spectrum::print_bins</a>( en, intensity );</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

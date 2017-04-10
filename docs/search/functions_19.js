@@ -11,5 +11,6 @@ var searchData=
   ['yieldresource',['YieldResource',['../d1/dbc/class_origen_1_1_yield_resource.html#a945f8709b989bbc98ef15ed481a9a329',1,'Origen::YieldResource']]],
   ['yieldresource_5fscale',['YieldResource_scale',['../da/daf/class_origen_1_1_fake_factory.html#ac0ba6129812e023b6a5c3ab7fb8fe08d',1,'Origen::FakeFactory']]],
   ['yieldresourceio',['YieldResourceIO',['../d5/d9a/class_origen_1_1_yield_resource_i_o.html#a722cae7dd6217a9e842f25d19dc65991',1,'Origen::YieldResourceIO']]],
-  ['yields',['yields',['../d8/d3f/class_origen_1_1_yield_data.html#a2e9eaffbd8271527b5d9b1a119ac5ffb',1,'Origen::YieldData::yields()'],['../d8/d3f/class_origen_1_1_yield_data.html#ae0a7c19bf67ce1e1a53fdcd85088022b',1,'Origen::YieldData::yields() const ']]]
+  ['yields',['yields',['../d8/d3f/class_origen_1_1_yield_data.html#a2e9eaffbd8271527b5d9b1a119ac5ffb',1,'Origen::YieldData::yields()'],['../d8/d3f/class_origen_1_1_yield_data.html#ae0a7c19bf67ce1e1a53fdcd85088022b',1,'Origen::YieldData::yields() const ']]],
+  ['yields_5fcompare',['yields_compare',['../d8/db7/classyields__compare.html#ae11b087bf7fb3f21a4d33472a33da6f6',1,'yields_compare']]]
 ];

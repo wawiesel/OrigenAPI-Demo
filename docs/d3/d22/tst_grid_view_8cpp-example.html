@@ -117,14 +117,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a0"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html">GridView_StateInfo</a>, Basic )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST</a>( <a name="_a1"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html">GridView_StateInfo</a>, Basic )</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> <a name="a2"></a><a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> <a name="a3"></a><a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
 <div class="line"></div>
-<div class="line">    <a name="a3"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1</a>( f );</div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1</a>( f );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// get two state info</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">SCP_StateInfo</a> info1 = f.<a name="a4"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a name="a5"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#ae73e1f7376de32bb0ab4947e6f5be39d">scp_definition</a>();</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">SCP_StateInfo</a> info1 = f.<a name="a5"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a name="a6"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#ae73e1f7376de32bb0ab4947e6f5be39d">scp_definition</a>();</div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">SCP_StateInfo</a> info2 = f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 1 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#ae73e1f7376de32bb0ab4947e6f5be39d">scp_definition</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">float</span> t1 = info1-&gt;time();</div>
@@ -137,21 +137,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html">GridView_StateInfo</a> view2( info2 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// matches itself</span></div>
-<div class="line">    EXPECT_TRUE( view1.<a name="a6"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a8cf24a63b4dc610430366ec07cd0852c">match</a>( *info1 ) );</div>
+<div class="line">    EXPECT_TRUE( view1.<a name="a7"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a8cf24a63b4dc610430366ec07cd0852c">match</a>( *info1 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// matches second one</span></div>
 <div class="line">    EXPECT_TRUE( view1.<a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a8cf24a63b4dc610430366ec07cd0852c">match</a>( *info2 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check view of object 1</span></div>
 <div class="line">    {</div>
-<div class="line">        GridView_StateInfo::GD_t::I_t nr = view1.<a name="a7"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a40bb76e59fe6b75d8f174cd514835613">nr</a>();</div>
+<div class="line">        GridView_StateInfo::GD_t::I_t nr = view1.<a name="a8"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a40bb76e59fe6b75d8f174cd514835613">nr</a>();</div>
 <div class="line">        ASSERT_EQ( 5, nr );</div>
 <div class="line"></div>
-<div class="line">        <span class="keyword">const</span> GridView_StateInfo::GD_t::Vec_I&amp; rextents = view1.<a name="a8"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a94a315a1cb23ae48577ab6a66fd50c2d">rextents</a>();</div>
+<div class="line">        <span class="keyword">const</span> GridView_StateInfo::GD_t::Vec_I&amp; rextents = view1.<a name="a9"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a94a315a1cb23ae48577ab6a66fd50c2d">rextents</a>();</div>
 <div class="line">        ASSERT_EQ( 1, rextents[0] );</div>
 <div class="line">        ASSERT_EQ( 1, rextents[1] );</div>
 <div class="line"></div>
-<div class="line">        <span class="keyword">const</span> GridView_StateInfo::GD_t::Vec_Rptr&amp; <a name="a9"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = view1.<a name="a10"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a0150217fab3a2d48453f09e057cc58e3">r</a>();</div>
+<div class="line">        <span class="keyword">const</span> GridView_StateInfo::GD_t::Vec_Rptr&amp; <a name="a10"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = view1.<a name="a11"></a><a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a0150217fab3a2d48453f09e057cc58e3">r</a>();</div>
 <div class="line">        ASSERT_EQ( t1, r[0][0] );</div>
 <div class="line">        ASSERT_EQ( bu1, r[1][0] );</div>
 <div class="line"></div>
@@ -177,7 +177,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// build a phony StateSet just from headers</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state1( <span class="keyword">new</span> <a name="_a11"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a>() );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state1( <span class="keyword">new</span> <a name="_a12"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a>() );</div>
 <div class="line">    state1-&gt;set_definition( *info1 );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state2( <span class="keyword">new</span> <a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a>() );</div>
@@ -185,13 +185,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> state_set;</div>
 <div class="line"></div>
-<div class="line">    state_set.<a name="a12"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( *state1 );</div>
+<div class="line">    state_set.<a name="a13"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( *state1 );</div>
 <div class="line">    state_set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( *state2 );</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ( info1-&gt;case_number(), info2-&gt;case_number() );</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">SCP_StateInfo</a> <a name="a13"></a><a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a> =</div>
-<div class="line">        state_set.<a name="a14"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a78a0018aa7698f2eec938d78000a6f65">interpolate_info</a>( 0.5 * ( t1 + t2 ), info1-&gt;case_number() );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">SCP_StateInfo</a> <a name="a14"></a><a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a> =</div>
+<div class="line">        state_set.<a name="a15"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a78a0018aa7698f2eec938d78000a6f65">interpolate_info</a>( 0.5 * ( t1 + t2 ), info1-&gt;case_number() );</div>
 <div class="line"></div>
 <div class="line">    ASSERT_FALSE( info == <span class="keyword">nullptr</span> );</div>
 <div class="line"></div>
@@ -199,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_FLOAT_EQ( 0.5 * ( t1 + t2 ), info-&gt;time() );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html">GridView_StateInfo</a>, WithTagManager )</div>
+<div class="line"><a class="code" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST</a>( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html">GridView_StateInfo</a>, WithTagManager )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> <a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
 <div class="line"></div>
@@ -207,21 +207,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// add tag managers to state set</span></div>
 <div class="line">    {</div>
-<div class="line">        <a name="_a15"></a><a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a> tagman1;</div>
+<div class="line">        <a name="_a16"></a><a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a> tagman1;</div>
 <div class="line">        <a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a> tagman2;</div>
 <div class="line"></div>
-<div class="line">        tagman1.<a name="a16"></a><a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a5b9362cf95c63561e01db3489d0de0fe">setInterpTag</a>( <span class="stringliteral">&quot;boron&quot;</span>, 600 );</div>
+<div class="line">        tagman1.<a name="a17"></a><a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a5b9362cf95c63561e01db3489d0de0fe">setInterpTag</a>( <span class="stringliteral">&quot;boron&quot;</span>, 600 );</div>
 <div class="line">        tagman2.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a5b9362cf95c63561e01db3489d0de0fe">setInterpTag</a>( <span class="stringliteral">&quot;boron&quot;</span>, 1200 );</div>
 <div class="line">        <a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a> state1 = f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 );</div>
 <div class="line">        <a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a> state2 = f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 1 );</div>
-<div class="line">        <a name="_a17"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html">StateInfo</a> info1 = state1.<a name="a18"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>();</div>
+<div class="line">        <a name="_a18"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html">StateInfo</a> info1 = state1.<a name="a19"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>();</div>
 <div class="line">        <a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html">StateInfo</a> info2 = state2.<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>();</div>
 <div class="line"></div>
-<div class="line">        info1.<a name="a19"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a883803bed52a0bae14270eb5dc12f809">set_tag_manager</a>( tagman1 );</div>
+<div class="line">        info1.<a name="a20"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a883803bed52a0bae14270eb5dc12f809">set_tag_manager</a>( tagman1 );</div>
 <div class="line">        info2.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a883803bed52a0bae14270eb5dc12f809">set_tag_manager</a>( tagman2 );</div>
-<div class="line">        state1.<a name="a20"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#ae224952b37ac31d6e2d14302131b22b3">set_definition</a>( info1 );</div>
+<div class="line">        state1.<a name="a21"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#ae224952b37ac31d6e2d14302131b22b3">set_definition</a>( info1 );</div>
 <div class="line">        state2.<a class="code" href="../../d8/d01/class_origen_1_1_state.html#ae224952b37ac31d6e2d14302131b22b3">set_definition</a>( info2 );</div>
-<div class="line">        f.<a name="a21"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ad50f024bf5c9f586302dfe174fe48682">set_states_at</a>( state1, 0 );</div>
+<div class="line">        f.<a name="a22"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ad50f024bf5c9f586302dfe174fe48682">set_states_at</a>( state1, 0 );</div>
 <div class="line">        f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ad50f024bf5c9f586302dfe174fe48682">set_states_at</a>( state2, 1 );</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -267,14 +267,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_FLOAT_EQ( 900, info-&gt;tag_manager().getInterpTag( <span class="stringliteral">&quot;boron&quot;</span> ) );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a22"></a><a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html">GridView_State</a>, Basic )</div>
+<div class="line"><a class="code" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST</a>( <a name="_a23"></a><a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html">GridView_State</a>, Basic )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> <a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1</a>( f );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// get two state</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">SCP_State</a> state1 = f.<a name="a23"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( 0 );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">SCP_State</a> state1 = f.<a name="a24"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( 0 );</div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">SCP_State</a> state2 = f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( 1 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// get two state info</span></div>
@@ -320,14 +320,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">// Test out basic 2-D interpolation using TagManager with</span></div>
 <div class="line"><span class="comment">// GridView_TransitionCoeff</span></div>
-<div class="line">TEST( <a name="_a24"></a><a class="code" href="../../d0/dfc/class_origen_1_1_grid_view___transition_coeff.html">GridView_TransitionCoeff</a>, DISABLED_ND_Grid_Interp )</div>
+<div class="line"><a class="code" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST</a>( <a name="_a25"></a><a class="code" href="../../d0/dfc/class_origen_1_1_grid_view___transition_coeff.html">GridView_TransitionCoeff</a>, DISABLED_ND_Grid_Interp )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using</span> ScaleUtils::Math::interpwts_lin;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create a 2-D grid of fake libraries associated with fake enrichment /</span></div>
 <div class="line">    <span class="comment">// void fractions</span></div>
 <div class="line">    std::vector&lt;SP_Library&gt; fakeLibs;</div>
-<div class="line">    <a name="_a25"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html">GridData_TransitionCoeff</a> InterpGrid;</div>
+<div class="line">    <a name="_a26"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html">GridData_TransitionCoeff</a> InterpGrid;</div>
 <div class="line">    std::vector&lt;size_t&gt; libOrder;</div>
 <div class="line">    std::vector&lt;TagManager&gt; fakeTagMans;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> numR = 8;  <span class="comment">// 1 burnup + 7 TC vectors = 8 interpolable responses</span></div>
@@ -341,9 +341,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j != enrich.size(); ++j )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="comment">// Create a set of arbitrary CX&#39;s &amp; tag our fake library</span></div>
-<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> fakeLib = <a name="a26"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a>( <span class="keyword">new</span> <a name="_a27"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
-<div class="line">            <a name="a28"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a775d4ba0b990767a62d9d7b498d9280f">FakeFactory::Library_random1</a>( *fakeLib );</div>
-<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#ac8678d91297434b0f707226559e9a873">SP_TagManager</a> fakeTags = <a name="a29"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ac8678d91297434b0f707226559e9a873">SP_TagManager</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a>() );</div>
+<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> fakeLib = <a name="a27"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a>( <span class="keyword">new</span> <a name="_a28"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Library</a>() );</div>
+<div class="line">            <a name="a29"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a775d4ba0b990767a62d9d7b498d9280f">FakeFactory::Library_random1</a>( *fakeLib );</div>
+<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#ac8678d91297434b0f707226559e9a873">SP_TagManager</a> fakeTags = <a name="a30"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ac8678d91297434b0f707226559e9a873">SP_TagManager</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">TagManager</a>() );</div>
 <div class="line">            fakeTags-&gt;setInterpTag( dimNames[0], voidFracs[i] );</div>
 <div class="line">            fakeTags-&gt;setInterpTag( dimNames[1], enrich[j] );</div>
 <div class="line">            fakeLib-&gt;set_tag_manager( *fakeTags );</div>
@@ -352,8 +352,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> k = 0; k != fakeLib-&gt;transition_coeff_size(); ++k )</div>
 <div class="line">            {</div>
 <div class="line">                ASSERT_TRUE( fakeLib-&gt;has_transition_coeff_at( k ) );</div>
-<div class="line">                <a name="_a30"></a><a class="code" href="../../d7/ddf/class_origen_1_1_transition_coeff.html">TransitionCoeff</a> tc = fakeLib-&gt;transition_coeff_at( k );</div>
-<div class="line">                tc.<a name="a31"></a><a class="code" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a4e3a0392b52a9261206f641904e18bb2">set_burnup</a>( 5000.0 * k );</div>
+<div class="line">                <a name="_a31"></a><a class="code" href="../../d7/ddf/class_origen_1_1_transition_coeff.html">TransitionCoeff</a> tc = fakeLib-&gt;transition_coeff_at( k );</div>
+<div class="line">                tc.<a name="a32"></a><a class="code" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a4e3a0392b52a9261206f641904e18bb2">set_burnup</a>( 5000.0 * k );</div>
 <div class="line">                fakeLib-&gt;set_transition_coeff_at( tc, k );</div>
 <div class="line">            }</div>
 <div class="line">            fakeLibs.push_back( fakeLib );</div>
@@ -367,8 +367,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Each TransitionCoeff has 8 interpolable responses =&gt; nr=8</span></div>
-<div class="line">    InterpGrid.<a name="a32"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a275a59bb78fde259a5c5612edae2a21a">setx</a>( fakeTagMans, dimNames, numR );</div>
-<div class="line">    libOrder = InterpGrid.<a name="a33"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a7bde49893b0c4586b5df774b9e8671f0">get_tm_indexMap</a>();</div>
+<div class="line">    InterpGrid.<a name="a33"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a275a59bb78fde259a5c5612edae2a21a">setx</a>( fakeTagMans, dimNames, numR );</div>
+<div class="line">    libOrder = InterpGrid.<a name="a34"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a7bde49893b0c4586b5df774b9e8671f0">get_tm_indexMap</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check that xgrid is the same as what we expect it to be</span></div>
 <div class="line">    std::vector&lt;float&gt; voidGrid;</div>
@@ -445,14 +445,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            gridResponses.push_back( gvTC );</div>
 <div class="line">        }</div>
 <div class="line">        <span class="comment">// Set the response vector for this Grid from the GridView</span></div>
-<div class="line">        InterpGrid.<a name="a34"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a32d60080d8bbeb281b0b8b1466ff3cf0">setr</a>( gridResponses );</div>
+<div class="line">        InterpGrid.<a name="a35"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a32d60080d8bbeb281b0b8b1466ff3cf0">setr</a>( gridResponses );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Finally, interpolate on the calculated weights and return a new</span></div>
 <div class="line">        <span class="comment">// TransitionCoeff via</span></div>
 <div class="line">        <span class="comment">// GridData_TransitionCoeff::interpolate_transition_coeff</span></div>
 <div class="line">        GridData_TransitionCoeff::Vec_Z z = InterpGrid.rgridsum( wts );</div>
 <div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a47464f887884b9b150a26b4cff85fc1b">SP_TransitionCoeff</a> interpTC =</div>
-<div class="line">            InterpGrid.<a name="a35"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a159a631a6fedb6d84a708b1faaa85f17">interpolate_transition_coeff</a>( wts );</div>
+<div class="line">            InterpGrid.<a name="a36"></a><a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a159a631a6fedb6d84a708b1faaa85f17">interpolate_transition_coeff</a>( wts );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Check that the burnup of the interpolated TC is the same as the</span></div>
 <div class="line">        <span class="comment">// original</span></div>

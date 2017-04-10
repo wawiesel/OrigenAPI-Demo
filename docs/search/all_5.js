@@ -71,6 +71,7 @@ var searchData=
   ['energyunionizerinterface_2eh',['EnergyUnionizerInterface.h',['../d5/dd1/_energy_unionizer_interface_8h.html',1,'']]],
   ['equal_5fd_5ftreshold',['equal_d_treshold',['../dd/d83/namespacekernel__matrex.html#a7259a3845b5b3bc521628ec8a6bd55c5',1,'kernel_matrex']]],
   ['equals',['equals',['../d1/de9/structorigen__library__m_1_1origen__library.html#a5482ba9f8c9e1dfdcc0a1b9fbf37f995',1,'origen_library_m::origen_library::equals()'],['../dc/d64/structorigen__state__m_1_1origen__state.html#a7803fada8d6273f4cf19f76756b83bd0',1,'origen_state_m::origen_state::equals()'],['../db/d69/structorigen__stateset__m_1_1origen__stateset.html#aeccdf082caa75e18ea9ed880e36a652d',1,'origen_stateset_m::origen_stateset::equals()']]],
+  ['equed',['equed',['../d6/dfe/struct_l_ustore.html#a4cba4d2a9ea00cf00f478c6fc79aca99',1,'LUstore']]],
   ['equil',['equil',['../dd/d83/namespacekernel__matrex.html#af45eb838e9962988609722607f6d9fcd',1,'kernel_matrex']]],
   ['er',['er',['../de/de8/namespaceauxiliary__erf__m.html#a78b78590e75dbb352329791d73788241',1,'auxiliary_erf_m']]],
   ['erasfl',['erasfl',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a53b9d290cd6ec62b56ffc6af8c552743',1,'rksuite_90::rk_comm_real_1d']]],

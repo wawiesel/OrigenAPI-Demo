@@ -102,6 +102,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -121,6 +122,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <code>#include &quot;ScaleUtils/SuperLU/SRC/slu_zdefs.h&quot;</code><br />
 <code>#include &quot;Standard/Interface/jdebug.h&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfe/struct_l_ustore.html">LUstore</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:af2e1575f3f81b75079edded741a589e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#af2e1575f3f81b75079edded741a589e3">SORT_NUCLIDES</a>&#160;&#160;&#160;1</td></tr>
@@ -135,7 +141,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a246b07e575efe303e340da78c4e3e15c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a246b07e575efe303e340da78c4e3e15c">CopyLU</a> (SuperMatrix *L, SuperMatrix *U, LUstore *LU)</td></tr>
+<tr class="memitem:a246b07e575efe303e340da78c4e3e15c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a246b07e575efe303e340da78c4e3e15c">CopyLU</a> (SuperMatrix *L, SuperMatrix *U, <a class="el" href="../../d6/dfe/struct_l_ustore.html">LUstore</a> *LU)</td></tr>
 <tr class="separator:a246b07e575efe303e340da78c4e3e15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff5a005e75ba1c528c5f8597d45cb1cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#aff5a005e75ba1c528c5f8597d45cb1cb">makeExpmInput</a> (int itot, int a_n, int nnz, doublecomplex *a_val_complex, int *a_ci, int *rp, double delta_t, doublecomplex *Bvals, double **source_term, int source_order, int *ZAI)</td></tr>
 <tr class="separator:aff5a005e75ba1c528c5f8597d45cb1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,7 +239,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">LUstore *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/dfe/struct_l_ustore.html">LUstore</a> *&#160;</td>
           <td class="paramname"><em>LU</em>&#160;</td>
         </tr>
         <tr>
@@ -253,6 +259,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>References <a class="el" href="../../d6/dfe/struct_l_ustore.html#a2eaceeb453d85c9186c69a0e61d3a41b">LUstore::L</a>, and <a class="el" href="../../d6/dfe/struct_l_ustore.html#a10fb6c0f207466cbe427755f85cc53d4">LUstore::U</a>.</p>
 
 <p>Referenced by <a class="el" href="../../da/def/kernel__cram_8hpp.html#a45c654949dcb526cf76cdd65498a4ceb">kernel_cram()</a>.</p>
 
@@ -655,11 +663,11 @@ offdiag (which is called "a" in most of <a class="el" href="../../d5/dc1/namespa
 <dd>
 The culling feature from earlier versions was removed. Use internal substeps instead.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>zero on successfull exit or nonzero on failed exit. On failed exit the results (i.e., n) are unspecified. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d99/tst_c_r_a_m_8cpp-example.html#a6">tstCRAM.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/dfe/_solver_2cram_2src_2tests_2tst_c_r_a_m_8cpp-example.html#a40">Solver/cram/src/tests/tstCRAM.cpp</a>.</dd>
 </dl>
-<p>References <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a246b07e575efe303e340da78c4e3e15c">CopyLU()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>, <a class="el" href="../../da/def/kernel__cram_8hpp.html#af79aa009834d9b4a50ef6fc96f89e5d7">kernel_cram_coefficients()</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#aff5a005e75ba1c528c5f8597d45cb1cb">makeExpmInput()</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a8109e19dd4e4009213d14ae3d68214f5">makeMatlabInput()</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a47f2e62c0dbebc787052c165afcada0e">NAME</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a766915c86655672579fe5205b19bc692">OrigenToCRSMatrix()</a>, <a class="el" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a>, and <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#af2e1575f3f81b75079edded741a589e3">SORT_NUCLIDES</a>.</p>
+<p>References <a class="el" href="../../d6/dfe/struct_l_ustore.html#a7a13c6886afe82da55588f528325dbc9">LUstore::C</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a246b07e575efe303e340da78c4e3e15c">CopyLU()</a>, <a class="el" href="../../d6/dfe/struct_l_ustore.html#a4cba4d2a9ea00cf00f478c6fc79aca99">LUstore::equed</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>, <a class="el" href="../../da/def/kernel__cram_8hpp.html#af79aa009834d9b4a50ef6fc96f89e5d7">kernel_cram_coefficients()</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#aff5a005e75ba1c528c5f8597d45cb1cb">makeExpmInput()</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a8109e19dd4e4009213d14ae3d68214f5">makeMatlabInput()</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a47f2e62c0dbebc787052c165afcada0e">NAME</a>, <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a766915c86655672579fe5205b19bc692">OrigenToCRSMatrix()</a>, <a class="el" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a>, <a class="el" href="../../d6/dfe/struct_l_ustore.html#a9fb630a8ba5f3a8bfdcafc45b3511b88">LUstore::R</a>, and <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#af2e1575f3f81b75079edded741a589e3">SORT_NUCLIDES</a>.</p>
 
-<p>Referenced by <a class="el" href="../../dd/d7e/kernel__cram__from__fortran_8cpp.html#aa6eba8d39329bf76318552b1837726b9">kernel_cram_from_fortran()</a>, and <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a415be826c056e1634b7b7265380c27b3">Solver_cram::solve_impl()</a>.</p>
+<p>Referenced by <a class="el" href="../../dd/d7e/kernel__cram__from__fortran_8cpp.html#aa6eba8d39329bf76318552b1837726b9">kernel_cram_from_fortran()</a>, <a class="el" href="../../d4/d53/class_origen_1_1_solver__cram.html#a415be826c056e1634b7b7265380c27b3">Solver_cram::solve_impl()</a>, <a class="el" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a0bdeaebce0e26aeec0af6e5540315488">TEST()</a>, and <a class="el" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#ad73d132335e244ca5bb546103cc2923d">TEST_F()</a>.</p>
 
 </div>
 </div>
@@ -818,11 +826,11 @@ The culling feature from earlier versions was removed. Use internal substeps ins
 </ul>
 <p>For details about the homogenization see: </p><hr/>
 <dl class="section note"><dt>Note</dt><dd>The first nine arguments are used for output. They are pointers to the variables p_&lt;name in kernel_cram()&gt; The other arguments are same as for <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a280cd76fe988677c00f96930b194e4a4">kernel_cram()</a>. The output, except for p_a_n and p_a_nnz which are scalars, will be allocated by this function. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d99/tst_c_r_a_m_8cpp-example.html#a5">tstCRAM.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/dfe/_solver_2cram_2src_2tests_2tst_c_r_a_m_8cpp-example.html#a22">Solver/cram/src/tests/tstCRAM.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d6/dfc/kernel__cram_8cpp.html#a9ce670e6925467c50c380d67ffe4dbd7">sortCRSnuclides()</a>.</p>
 
-<p>Referenced by <a class="el" href="../../da/def/kernel__cram_8hpp.html#a45c654949dcb526cf76cdd65498a4ceb">kernel_cram()</a>.</p>
+<p>Referenced by <a class="el" href="../../da/def/kernel__cram_8hpp.html#a45c654949dcb526cf76cdd65498a4ceb">kernel_cram()</a>, <a class="el" href="../../dd/d3d/tst_c_r_a_m_8cpp.html#a28907438acfe9ad973db1a96cd1ff04f">TEST()</a>, and <a class="el" href="../../d4/d20/classtst_origen_to_c_r_s_matrix.html#a814c812a6ce6e51aa01e625e2f962f3f">tstOrigenToCRSMatrix::~tstOrigenToCRSMatrix()</a>.</p>
 
 </div>
 </div>

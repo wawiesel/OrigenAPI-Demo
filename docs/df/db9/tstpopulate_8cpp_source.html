@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;TEST( PopulateStringifyNuclide, Default )</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">    7</a></span>&#160;<a class="code" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a>( PopulateStringifyNuclide, Default )</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">// check that it works with format</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;20092235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, <span class="stringliteral">&quot;$S$I$ZZZ$AAA&quot;</span> ) );</div>
@@ -126,7 +126,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;0001001&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001 ) );</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;TEST( PopulateStringifyNuclide, TraditionalZAAAI )</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../df/db9/tstpopulate_8cpp.html#a799c35811d8f92801941c10eeb6db4b4">   22</a></span>&#160;<a class="code" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a>( PopulateStringifyNuclide, TraditionalZAAAI )</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string idform = <span class="stringliteral">&quot;$Z$AAA$I&quot;</span>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;922350&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
@@ -137,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;10010&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, idform ) );</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;TEST( PopulateStringifyNuclide, Symbols )</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../df/db9/tstpopulate_8cpp.html#a4fff6310458a8ebd851743315fc49697">   33</a></span>&#160;<a class="code" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a>( PopulateStringifyNuclide, Symbols )</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string idform = <span class="stringliteral">&quot;$Ee-$A$m&quot;</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;U-235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;H-1&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, idform ) );</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;TEST( PopulateStringifyNuclide, SymbolsWithSublib )</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../df/db9/tstpopulate_8cpp.html#a9a9b6d3d2198fb5d6f50ad0ec0bc8333">   44</a></span>&#160;<a class="code" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a>( PopulateStringifyNuclide, SymbolsWithSublib )</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::string idform = <span class="stringliteral">&quot;$S:$Ee-$A$m&quot;</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;2:U-235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
@@ -159,21 +159,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;0:H-1&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, idform ) );</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;TEST( PopulateStringifyNuclide, ElementCapitalization )</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../df/db9/tstpopulate_8cpp.html#a1af35ef24f52a3c78dd1e1cefa8f2c84">   55</a></span>&#160;<a class="code" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a>( PopulateStringifyNuclide, ElementCapitalization )</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;fm&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 100256, <span class="stringliteral">&quot;$ee&quot;</span> ) );</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;FM&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 100256, <span class="stringliteral">&quot;$EE&quot;</span> ) );</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;Fm&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 100256, <span class="stringliteral">&quot;$Ee&quot;</span> ) );</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;TEST( PopulateStringifyNuclide, MetastableCapitalization )</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../df/db9/tstpopulate_8cpp.html#a79f3094537e7d6a895c0ac5380c28dc9">   62</a></span>&#160;<a class="code" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a>( PopulateStringifyNuclide, MetastableCapitalization )</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, <span class="stringliteral">&quot;$M&quot;</span> ) );</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;M&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, <span class="stringliteral">&quot;$M&quot;</span> ) );</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;m&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, <span class="stringliteral">&quot;$m&quot;</span> ) );</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;TEST( PopulateStringifyNuclide, FullSymbol )</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../df/db9/tstpopulate_8cpp.html#a2233b195a86bc861b436c5983bc3556e">   69</a></span>&#160;<a class="code" href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a>( PopulateStringifyNuclide, FullSymbol )</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::string idform = <span class="stringliteral">&quot;$Z-$Ee-$Am$I&quot;</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;92-U-235m0&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
@@ -185,6 +185,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="ttc" id="populate_8h_html"><div class="ttname"><a href="../../dc/d56/populate_8h.html">populate.h</a></div><div class="ttdoc">populate Origen objects from other objects and vice versa. </div></div>
 <div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc1/populate_8cpp_source.html#l00045">populate.cpp:45</a></div></div>
+<div class="ttc" id="tstpopulate_8cpp_html_a089198fed7ffc5b1bc7c5298ae5b9dbb"><div class="ttname"><a href="../../df/db9/tstpopulate_8cpp.html#a089198fed7ffc5b1bc7c5298ae5b9dbb">TEST</a></div><div class="ttdeci">TEST(PopulateStringifyNuclide, Default)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db9/tstpopulate_8cpp_source.html#l00007">tstpopulate.cpp:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

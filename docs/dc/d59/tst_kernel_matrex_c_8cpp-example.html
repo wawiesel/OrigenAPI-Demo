@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d59/kernel__matrex_8hpp.html">Origen/Solver/matrex/src/kernel_matrex.hpp</a>&quot;</span></div>
 <div class="line"><span class="keyword">typedef</span> std::vector&lt;int&gt; <a name="a0"></a><a class="code" href="../../d5/df4/tst_kernel_matrex_c_8cpp.html#ae386eb6c70779056cf6d5c6d1c43c48f">Vec_Int</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( tstKernelMatrexC, test )</div>
+<div class="line"><a name="a1"></a><a class="code" href="../../d5/df4/tst_kernel_matrex_c_8cpp.html#a6d2362b6ac7767292fd4f3650006d4d8">TEST</a>( tstKernelMatrexC, test )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> itot, non;</div>
 <div class="line">    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> non0, kd, loc, ZAI;</div>
@@ -118,9 +118,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordtype">int</span> i, j;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Load a library.</span></div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a> lib;</div>
-<div class="line">    ASSERT_TRUE( <a name="a2"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( lib ) );</div>
-<div class="line">    <a class="code" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html#afb55bc73ff1ba4f1605a68227ee92603">Origen::TransitionMatrixP::SP</a> trx = lib.<a name="a3"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a977b919cc2065a44e3a8adfbe680eb49">newsp_transition_matrix_at</a>( 0 );</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a> lib;</div>
+<div class="line">    ASSERT_TRUE( <a name="a3"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( lib ) );</div>
+<div class="line">    <a class="code" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html#afb55bc73ff1ba4f1605a68227ee92603">Origen::TransitionMatrixP::SP</a> trx = lib.<a name="a4"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a977b919cc2065a44e3a8adfbe680eb49">newsp_transition_matrix_at</a>( 0 );</div>
 <div class="line"></div>
 <div class="line">    itot = trx-&gt;get_itot();</div>
 <div class="line">    non = trx-&gt;get_non();</div>
@@ -181,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment">      }</span></div>
 <div class="line"><span class="comment">    */</span></div>
 <div class="line"></div>
-<div class="line">    <a name="a4"></a><a class="code" href="../../d1/d59/kernel__matrex_8hpp.html#a4d311030e3472700ead3dff45adea213">kernel_matrex</a>( &amp;*trx,</div>
+<div class="line">    <a name="a5"></a><a class="code" href="../../d1/d59/kernel__matrex_8hpp.html#a4d311030e3472700ead3dff45adea213">kernel_matrex</a>( &amp;*trx,</div>
 <div class="line">                   itot,</div>
 <div class="line">                   non,</div>
 <div class="line">                   &amp;n0[0],</div>

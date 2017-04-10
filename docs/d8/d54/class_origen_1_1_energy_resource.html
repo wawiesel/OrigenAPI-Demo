@@ -104,7 +104,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../d4/d45/class_origen_1_1_energy_resource-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">EnergyResource Class Reference</div>  </div>
@@ -116,6 +118,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <p>Computes kappa values for fission/capture based on izzzaaa lookup.  
  <a href="../../d8/d54/class_origen_1_1_energy_resource.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1a8680d082a49fed8aba3b7b45514f3a"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; int, std::pair&lt; double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a1a8680d082a49fed8aba3b7b45514f3a">Map</a></td></tr>
+<tr class="separator:a1a8680d082a49fed8aba3b7b45514f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc64c475abafc914e5b1b57be4ef7f5"><td class="memItemLeft" align="right" valign="top">typedef Map::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#aafc64c475abafc914e5b1b57be4ef7f5">Pair</a></td></tr>
+<tr class="separator:aafc64c475abafc914e5b1b57be4ef7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d48ece4a50d22c30c53833e7370a737"><td class="memItemLeft" align="right" valign="top">typedef Map::mapped_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a6d48ece4a50d22c30c53833e7370a737">Value</a></td></tr>
+<tr class="separator:a6d48ece4a50d22c30c53833e7370a737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a24bfc3f1e91c746fcd485ca891a95ef2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a> (int izzzaaa, double &amp;kapCap, double &amp;kapFiss) const </td></tr>
@@ -123,10 +134,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a24bfc3f1e91c746fcd485ca891a95ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad65f7151a07f1d62725fb6a29beedbdf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#ad65f7151a07f1d62725fb6a29beedbdf">getKappaAbs</a> (int izzzaaa, double sigCap, double sigFiss, double numden=1.0) const </td></tr>
 <tr class="separator:ad65f7151a07f1d62725fb6a29beedbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a9641d5b5e6602d772858966b9188921c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a1a8680d082a49fed8aba3b7b45514f3a">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a9641d5b5e6602d772858966b9188921c">map</a></td></tr>
+<tr class="separator:a9641d5b5e6602d772858966b9188921c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef854b520a5bbcd71660ccd97f01e93"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a0ef854b520a5bbcd71660ccd97f01e93">DEFAULT_KAPPA_CAPTURE</a> = 5.0</td></tr>
+<tr class="separator:a0ef854b520a5bbcd71660ccd97f01e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e3a9587955ecad335e88aa71d2573e"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#ac7e3a9587955ecad335e88aa71d2573e">DEFAULT_KAPPA_FISSION</a> = 200.0</td></tr>
+<tr class="separator:ac7e3a9587955ecad335e88aa71d2573e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Computes kappa values for fission/capture based on izzzaaa lookup. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d09/tst_energy_resource_8cpp-example.html#_a0">tstEnergyResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d5/d53/_core_2re_2tests_2tst_energy_resource_8cpp-example.html#_a1">Core/re/tests/tstEnergyResource.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a1a8680d082a49fed8aba3b7b45514f3a"></a>
 <div class="memitem">
@@ -205,11 +225,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><b>bool</b> - true if izzzaaa was found, else false. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d09/tst_energy_resource_8cpp-example.html#a1">tstEnergyResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d5/d53/_core_2re_2tests_2tst_energy_resource_8cpp-example.html#a2">Core/re/tests/tstEnergyResource.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a0ef854b520a5bbcd71660ccd97f01e93">EnergyResource::DEFAULT_KAPPA_CAPTURE</a>, <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#ac7e3a9587955ecad335e88aa71d2573e">EnergyResource::DEFAULT_KAPPA_FISSION</a>, and <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a9641d5b5e6602d772858966b9188921c">EnergyResource::map</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html#a5260ed5ca411919e209b723e0798dc92">TransitionMatrixP::finish_init()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ab5fd7f39fd11aa2864290521a9103e17">Origen::get_default_kappas()</a>, and <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#ad65f7151a07f1d62725fb6a29beedbdf">EnergyResource::getKappaAbs()</a>.</p>
+<p>Referenced by <a class="el" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html#a5260ed5ca411919e209b723e0798dc92">TransitionMatrixP::finish_init()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ab5fd7f39fd11aa2864290521a9103e17">Origen::get_default_kappas()</a>, <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#ad65f7151a07f1d62725fb6a29beedbdf">EnergyResource::getKappaAbs()</a>, and <a class="el" href="../../d7/dca/tst_energy_resource_8cpp.html#a05e6c077045bb6104cc211a7a030337b">TEST()</a>.</p>
 
 </div>
 </div>

@@ -114,30 +114,30 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a0"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Interpolation )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a9f3ea6edcb92cebd10e1d06be92fa8ad">TEST</a>( <a name="_a1"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Interpolation )</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> <a name="a1"></a><a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
-<div class="line">    <a name="a2"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1</a>( f );</div>
+<div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> <a name="a2"></a><a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
+<div class="line">    <a name="a3"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1</a>( f );</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">bool</span> print_iso = <span class="keyword">false</span>;</div>
 <div class="line">    <span class="keywordflow">if</span>( print_iso )</div>
 <div class="line">    {</div>
 <div class="line">        std::ofstream oldfile( <span class="stringliteral">&quot;old.csv&quot;</span> );</div>
-<div class="line">        <a name="a3"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ad4648f8215d34ffb3c91390f305750c1">printConcentrations_csv</a>( f, <a name="a4"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">GATOMS</a>, <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;&quot;</span>, oldfile );</div>
+<div class="line">        <a name="a4"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ad4648f8215d34ffb3c91390f305750c1">printConcentrations_csv</a>( f, <a name="a5"></a><a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">GATOMS</a>, <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;&quot;</span>, oldfile );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">size_t</span> n = f.<a name="a5"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>();</div>
-<div class="line">    <span class="keywordtype">float</span> dt = f.<a name="a6"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( n - 1 ).<a name="a7"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a8"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">time</a>() -</div>
+<div class="line">    <span class="keywordtype">size_t</span> n = f.<a name="a6"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>();</div>
+<div class="line">    <span class="keywordtype">float</span> dt = f.<a name="a7"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( n - 1 ).<a name="a8"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a9"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">time</a>() -</div>
 <div class="line">               f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">time</a>();</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">int</span> case_number = f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a9"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#ae1490c5965622e0768ca399de523e353">case_number</a>();</div>
+<div class="line">    <span class="keywordtype">int</span> case_number = f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a10"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#ae1490c5965622e0768ca399de523e353">case_number</a>();</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> newf;</div>
 <div class="line">    <span class="keywordtype">size_t</span> newn = 100;</div>
 <div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; newn; ++i )</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state = f.<a name="a10"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a2e31d3edbb02b119fd229386b86ad45b">interpolate</a>( i * dt / ( newn - 1 ), case_number );</div>
-<div class="line">        newf.<a name="a11"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( *state );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state = f.<a name="a11"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a2e31d3edbb02b119fd229386b86ad45b">interpolate</a>( i * dt / ( newn - 1 ), case_number );</div>
+<div class="line">        newf.<a name="a12"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( *state );</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">if</span>( print_iso )</div>
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> test;</div>
 <div class="line">    {</div>
 <div class="line">        <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> c;</div>
-<div class="line">        newf.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 1 ).<a name="a12"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a name="a13"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a782ba209205f0f2e87e8c6e75042dc17">get_vals</a>( c );</div>
+<div class="line">        newf.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 1 ).<a name="a13"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a name="a14"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a782ba209205f0f2e87e8c6e75042dc17">get_vals</a>( c );</div>
 <div class="line">        test.assign( c.begin(), c.end() );</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -171,22 +171,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_VEC_SOFTEQ( ref, test, 1e-5 );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Basic )</div>
+<div class="line"><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a9f3ea6edcb92cebd10e1d06be92fa8ad">TEST</a>( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Basic )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> set;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// nuclide set</span></div>
-<div class="line">    <a name="_a14"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> nuc_set;</div>
-<div class="line">    nuc_set.<a name="a15"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ad1596b8009f8903a70ac90a9059031f3">set_ids</a>( {8016, 92235} );</div>
+<div class="line">    <a name="_a15"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a> nuc_set;</div>
+<div class="line">    nuc_set.<a name="a16"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ad1596b8009f8903a70ac90a9059031f3">set_ids</a>( {8016, 92235} );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// concentrations with default units</span></div>
-<div class="line">    <a name="_a16"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> concs;</div>
-<div class="line">    concs.<a name="a17"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
-<div class="line">    concs.<a name="a18"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( {1.5, 10.0} );</div>
+<div class="line">    <a name="_a17"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a> concs;</div>
+<div class="line">    concs.<a name="a18"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ac106f978716fdd0ff70e88741e894ccd">set_nuclide_set</a>( nuc_set );</div>
+<div class="line">    concs.<a name="a19"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( {1.5, 10.0} );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create first state (copies concs&#39; internals)</span></div>
-<div class="line">    <a name="_a19"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a> s1;</div>
-<div class="line">    s1.<a name="a20"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a1239112067f6a4de1faa122f676995b4">set_concs</a>( concs );</div>
+<div class="line">    <a name="_a20"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a> s1;</div>
+<div class="line">    s1.<a name="a21"></a><a class="code" href="../../d8/d01/class_origen_1_1_state.html#a1239112067f6a4de1faa122f676995b4">set_concs</a>( concs );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create second state with different concentrations</span></div>
 <div class="line">    <span class="comment">// reuse first concentrations to avoid duplicating NuclideSet</span></div>
@@ -199,32 +199,32 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">add_states</a>( s2 );</div>
 <div class="line"></div>
 <div class="line">    EXPECT_FLOAT_EQ( 8016,</div>
-<div class="line">                     set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a name="a21"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a name="a22"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#af65c9c915f254006705af86d2d9c8ddd">ids_at</a>( 0 ) );</div>
+<div class="line">                     set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a name="a22"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a name="a23"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#af65c9c915f254006705af86d2d9c8ddd">ids_at</a>( 0 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 92235,</div>
 <div class="line">                     set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#af65c9c915f254006705af86d2d9c8ddd">ids_at</a>( 1 ) );</div>
 <div class="line"></div>
-<div class="line">    EXPECT_FLOAT_EQ( 1.5, set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a name="a23"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 0 ) );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 1.5, set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a name="a24"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 0 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 10.0, set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 0 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 1 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 16.0, set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 1 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 0 ) );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 5.0, set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( 1 ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>().<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5">vals_at</a>( 1 ) );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Convenience )</div>
+<div class="line"><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a9f3ea6edcb92cebd10e1d06be92fa8ad">TEST</a>( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Convenience )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> <a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1</a>( f );</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> energies = f.<a name="a24"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a07811662bc1944837bcaf54226ed0296">energies</a>();</div>
-<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> times = f.<a name="a25"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>();</div>
-<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> powers = f.<a name="a26"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a1067c9550e39b373eb9035eb8e69e6c4">powers</a>();</div>
-<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> fluxes = f.<a name="a27"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a85824ba3c5ec2e1a70c7cc69f06f4daa">fluxes</a>();</div>
+<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> energies = f.<a name="a25"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a07811662bc1944837bcaf54226ed0296">energies</a>();</div>
+<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> times = f.<a name="a26"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>();</div>
+<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> powers = f.<a name="a27"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a1067c9550e39b373eb9035eb8e69e6c4">powers</a>();</div>
+<div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a> fluxes = f.<a name="a28"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a85824ba3c5ec2e1a70c7cc69f06f4daa">fluxes</a>();</div>
 <div class="line"></div>
-<div class="line">    EXPECT_EQ( 11, f.<a name="a28"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8731ac7f8797c612d28fb4bfbedc7295">neutron_spectra</a>().size() );</div>
-<div class="line">    EXPECT_EQ( 11, f.<a name="a29"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a03b2f24e8a6c4f3579e6257ca4674933">alpha_spectra</a>().size() );</div>
-<div class="line">    EXPECT_EQ( 11, f.<a name="a30"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#aed143ca39ad9c6b86040c800bac2f202">beta_spectra</a>().size() );</div>
-<div class="line">    EXPECT_EQ( 11, f.<a name="a31"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a751c85c85ca0ae3e849d6ac1e89f97e7">gamma_spectra</a>().size() );</div>
-<div class="line">    EXPECT_EQ( 44, f.<a name="a32"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a9d635ec91d1a4dde7d2f9812d3a848aa">concs</a>().size() );</div>
+<div class="line">    EXPECT_EQ( 11, f.<a name="a29"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8731ac7f8797c612d28fb4bfbedc7295">neutron_spectra</a>().size() );</div>
+<div class="line">    EXPECT_EQ( 11, f.<a name="a30"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a03b2f24e8a6c4f3579e6257ca4674933">alpha_spectra</a>().size() );</div>
+<div class="line">    EXPECT_EQ( 11, f.<a name="a31"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#aed143ca39ad9c6b86040c800bac2f202">beta_spectra</a>().size() );</div>
+<div class="line">    EXPECT_EQ( 11, f.<a name="a32"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a751c85c85ca0ae3e849d6ac1e89f97e7">gamma_spectra</a>().size() );</div>
+<div class="line">    EXPECT_EQ( 44, f.<a name="a33"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a9d635ec91d1a4dde7d2f9812d3a848aa">concs</a>().size() );</div>
 <div class="line"></div>
 <div class="line">    EXPECT_EQ( 44, f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a07811662bc1944837bcaf54226ed0296">energies</a>().size() );</div>
 <div class="line">    EXPECT_EQ( 44, f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>().size() );</div>
@@ -233,14 +233,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
 <div class="line">    {</div>
-<div class="line">        EXPECT_EQ( energies[i], f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a33"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">energy</a>() );</div>
+<div class="line">        EXPECT_EQ( energies[i], f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a34"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">energy</a>() );</div>
 <div class="line">        EXPECT_EQ( times[i], f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">time</a>() );</div>
-<div class="line">        EXPECT_EQ( powers[i], f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a34"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a9094a36f758d5c904d6e02670b6d9809">power</a>() );</div>
-<div class="line">        EXPECT_EQ( fluxes[i], f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a35"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a976de47802913ecedcb65e919d45394c">flux</a>() );</div>
+<div class="line">        EXPECT_EQ( powers[i], f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a35"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a9094a36f758d5c904d6e02670b6d9809">power</a>() );</div>
+<div class="line">        EXPECT_EQ( fluxes[i], f.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>().<a name="a36"></a><a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a976de47802913ecedcb65e919d45394c">flux</a>() );</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> <a name="a36"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a0f47dea69a25b368845ede9db4cddb30">timing_smart_pointer</a>( <span class="keywordtype">int</span> repeat, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a>&amp; state_set )</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a37"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a0f47dea69a25b368845ede9db4cddb30">timing_smart_pointer</a>( <span class="keywordtype">int</span> repeat, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a>&amp; state_set )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#af3cb4a4eb70f4fe664beef407c3d8ec2">SCP_NuclideSet</a> nuclide_set;</div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a9c012da9fb664e11e346628ad72472f5">SCP_Concentrations</a> concs;</div>
@@ -250,13 +250,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordtype">int</span> units;</div>
 <div class="line">    <span class="keywordtype">int</span> isum;</div>
 <div class="line">    <span class="keywordtype">double</span> dsum;</div>
-<div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> <a name="a37"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = 0; <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> &lt; repeat; ++<a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> )</div>
+<div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> <a name="a38"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = 0; <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> &lt; repeat; ++<a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> )</div>
 <div class="line">    {</div>
 <div class="line">        isum = 0;</div>
 <div class="line">        dsum = 0.0;</div>
 <div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; state_set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
 <div class="line">        {</div>
-<div class="line">            state = state_set.<a name="a38"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( i );</div>
+<div class="line">            state = state_set.<a name="a39"></a><a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( i );</div>
 <div class="line">            concs = state-&gt;scp_concs();</div>
 <div class="line">            units = concs-&gt;units();</div>
 <div class="line">            vals = concs-&gt;scp_vals();</div>
@@ -276,7 +276,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    (void)dsum;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> <a name="a39"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a15c10fc710367aaa688466a61c2dd6e6">timing_ref_at</a>( <span class="keywordtype">int</span> repeat, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a>&amp; state_set )</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a40"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a15c10fc710367aaa688466a61c2dd6e6">timing_ref_at</a>( <span class="keywordtype">int</span> repeat, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a>&amp; state_set )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> units;</div>
 <div class="line">    <span class="keywordtype">int</span> isum;</div>
@@ -289,10 +289,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        {</div>
 <div class="line">            <span class="keyword">const</span> <a class="code" href="../../d8/d01/class_origen_1_1_state.html">State</a>&amp; state = state_set.<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
 <div class="line">            <span class="keyword">const</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html">Concentrations</a>&amp; concs = state.<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a636b19bb738268d1068570fecb39d7d7">concs</a>();</div>
-<div class="line">            units = concs.<a name="a40"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>();</div>
-<div class="line">            <span class="keyword">const</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>&amp; vals = concs.<a name="a41"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>();</div>
+<div class="line">            units = concs.<a name="a41"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>();</div>
+<div class="line">            <span class="keyword">const</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>&amp; vals = concs.<a name="a42"></a><a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>();</div>
 <div class="line">            <span class="keyword">const</span> <a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html">NuclideSet</a>&amp; nuclide_set = concs.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>();</div>
-<div class="line">            <span class="keyword">const</span> <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a>&amp; ids = nuclide_set.<a name="a42"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">ids</a>();</div>
+<div class="line">            <span class="keyword">const</span> <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a>&amp; ids = nuclide_set.<a name="a43"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">ids</a>();</div>
 <div class="line">            <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; vals.size(); ++j )</div>
 <div class="line">            {</div>
 <div class="line">                isum += ids.at( j );</div>
@@ -307,7 +307,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    (void)dsum;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> <a name="a43"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#af0f0b30aa52a7c8f248033c42eb0f6e8">timing_ref</a>( <span class="keywordtype">int</span> repeat, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a>&amp; state_set )</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a44"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#af0f0b30aa52a7c8f248033c42eb0f6e8">timing_ref</a>( <span class="keywordtype">int</span> repeat, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">Origen::StateSet</a>&amp; state_set )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> units;</div>
 <div class="line">    <span class="keywordtype">int</span> isum;</div>
@@ -339,14 +339,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &lt;ctime&gt;</span></div>
-<div class="line"><span class="keywordtype">float</span> <a name="a44"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#ad1a7bd27020865129c86de9563a1c6a0">cpu_time</a>()</div>
+<div class="line"><span class="keywordtype">float</span> <a name="a45"></a><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#ad1a7bd27020865129c86de9563a1c6a0">cpu_time</a>()</div>
 <div class="line">{</div>
 <div class="line">    clock_t t;</div>
 <div class="line">    t = clock();</div>
 <div class="line">    <span class="keywordflow">return</span> ( ( (<span class="keywordtype">float</span>)t ) / CLOCKS_PER_SEC );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Timing )</div>
+<div class="line"><a class="code" href="../../d9/ddc/tst_state_set_8cpp.html#a9f3ea6edcb92cebd10e1d06be92fa8ad">TEST</a>( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>, Timing )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a> state_set;</div>
 <div class="line">    <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1</a>( state_set );</div>

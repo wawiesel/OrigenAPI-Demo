@@ -114,14 +114,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;Nemesis/gtest/nemesis_gtest.hh&quot;</span></div>
 <div class="line"></div>
-<div class="line">TEST( YieldResource, BasicAccessors )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../d7/d44/tst_yield_resource_8cpp.html#a809b80f0c4abe0fa0ed95de332811d05">TEST</a>( YieldResource, BasicAccessors )</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a0"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html">Origen::YieldResource</a> yr;</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html">Origen::YieldResource</a> yr;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Add a nuclide.</span></div>
-<div class="line">    yr.<a name="a1"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a45e6d719ef461842d82d8c07c924bdfb">add_fissionable</a>( 92235 );</div>
+<div class="line">    yr.<a name="a2"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a45e6d719ef461842d82d8c07c924bdfb">add_fissionable</a>( 92235 );</div>
 <div class="line">    {</div>
-<div class="line">        <a name="_a2"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html">Origen::YieldParent</a>* yp = yr.<a name="a3"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a727cf9369f2a004480d5add3d438b76d">fissionable</a>( 92235 );</div>
+<div class="line">        <a name="_a3"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html">Origen::YieldParent</a>* yp = yr.<a name="a4"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a727cf9369f2a004480d5add3d438b76d">fissionable</a>( 92235 );</div>
 <div class="line">        EXPECT_TRUE( yp != <span class="keyword">nullptr</span> );</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -142,19 +142,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        {</div>
 <div class="line">            <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Origen::Vec_Int</a> <span class="keywordtype">id</span> = {54135, 1054135, 49102};</div>
 <div class="line">            <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> val = {0.1, 0.2, 0.3};</div>
-<div class="line">            yp.<a name="a4"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a3d272eee3991b2e7254b136a6dab1916">add_data</a>( 0.0623, <span class="keywordtype">id</span>, val );</div>
+<div class="line">            yp.<a name="a5"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a3d272eee3991b2e7254b136a6dab1916">add_data</a>( 0.0623, <span class="keywordtype">id</span>, val );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordtype">int</span> ienergy = yp.<a name="a5"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a6bd26daf0a3b2ce4dac1e4c26fbe4c2c">energy_index</a>( 0.0623 );</div>
+<div class="line">        <span class="keywordtype">int</span> ienergy = yp.<a name="a6"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a6bd26daf0a3b2ce4dac1e4c26fbe4c2c">energy_index</a>( 0.0623 );</div>
 <div class="line">        ASSERT_FALSE( ienergy == -1 );</div>
 <div class="line"></div>
-<div class="line">        <a name="_a6"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html">Origen::YieldData</a>&amp; ys = yp.<a name="a7"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a5f70f8d397ae41edb2f3a75e5f062ab6">data_at</a>( ienergy );</div>
+<div class="line">        <a name="_a7"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html">Origen::YieldData</a>&amp; ys = yp.<a name="a8"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a5f70f8d397ae41edb2f3a75e5f062ab6">data_at</a>( ienergy );</div>
 <div class="line"></div>
-<div class="line">        EXPECT_FLOAT_EQ( 0.0623, ys.<a name="a8"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a7d8a7d1d94db857f9b53e50c675f216b">energy</a>() );</div>
+<div class="line">        EXPECT_FLOAT_EQ( 0.0623, ys.<a name="a9"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a7d8a7d1d94db857f9b53e50c675f216b">energy</a>() );</div>
 <div class="line"></div>
-<div class="line">        EXPECT_EQ( 3, ys.<a name="a9"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a722641b6315752acb93d4e71f5f18416">num_yields</a>() );</div>
+<div class="line">        EXPECT_EQ( 3, ys.<a name="a10"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a722641b6315752acb93d4e71f5f18416">num_yields</a>() );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordtype">int</span> k1 = yp.<a name="a10"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a8e72a72b38f255a2361a5cc7358e61f0">fp_index</a>( 54135 );</div>
+<div class="line">        <span class="keywordtype">int</span> k1 = yp.<a name="a11"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a8e72a72b38f255a2361a5cc7358e61f0">fp_index</a>( 54135 );</div>
 <div class="line">        EXPECT_NE( -1, k1 );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordtype">int</span> k2 = yp.<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a8e72a72b38f255a2361a5cc7358e61f0">fp_index</a>( 1054135 );</div>
@@ -201,7 +201,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        EXPECT_NE( -1, k4 );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// should now be able to get all 4 yield values for both energies</span></div>
-<div class="line">        EXPECT_FLOAT_EQ( 0.0, ys.<a name="a11"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( k1 ) );</div>
+<div class="line">        EXPECT_FLOAT_EQ( 0.0, ys.<a name="a12"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( k1 ) );</div>
 <div class="line">        EXPECT_FLOAT_EQ( 0.0, ys.<a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( k2 ) );</div>
 <div class="line">        EXPECT_FLOAT_EQ( 0.0, ys.<a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( k3 ) );</div>
 <div class="line">        EXPECT_FLOAT_EQ( 0.4, ys.<a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( k4 ) );</div>
@@ -223,16 +223,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html">Origen::YieldParent</a>* yp1 = yr.<a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a727cf9369f2a004480d5add3d438b76d">fissionable</a>( 92235 );</div>
 <div class="line">        ASSERT_TRUE( yp1 != <span class="keyword">nullptr</span> );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordtype">int</span> k = yp1-&gt;<a name="a12"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aadf023a5695a5c02328cfa176e394b2c">add_fp</a>( 51103 );</div>
+<div class="line">        <span class="keywordtype">int</span> k = yp1-&gt;<a name="a13"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aadf023a5695a5c02328cfa176e394b2c">add_fp</a>( 51103 );</div>
 <div class="line">        ASSERT_NE( 5, k );</div>
-<div class="line">        ASSERT_EQ( 2, yp1-&gt;<a name="a13"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ae61d3f0660a84a3329ecef4b92ae7fc6">num_energies</a>() );</div>
+<div class="line">        ASSERT_EQ( 2, yp1-&gt;<a name="a14"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ae61d3f0660a84a3329ecef4b92ae7fc6">num_energies</a>() );</div>
 <div class="line"></div>
 <div class="line">        EXPECT_FLOAT_EQ( 0.0, yp1-&gt;<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a5f70f8d397ae41edb2f3a75e5f062ab6">data_at</a>( 0 ).<a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( k ) );</div>
 <div class="line">        EXPECT_FLOAT_EQ( 0.0, yp1-&gt;<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a5f70f8d397ae41edb2f3a75e5f062ab6">data_at</a>( 1 ).<a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( k ) );</div>
 <div class="line"></div>
 <div class="line">        ASSERT_TRUE( yp1-&gt;<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a8e72a72b38f255a2361a5cc7358e61f0">fp_index</a>( 49102 ) != -1 );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordtype">float</span> v0 = yp1-&gt;<a name="a14"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aab4dda88e91bcabc53edf067bb6fc9c3">interp_yield</a>( 49102, 0.0623 );</div>
+<div class="line">        <span class="keywordtype">float</span> v0 = yp1-&gt;<a name="a15"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aab4dda88e91bcabc53edf067bb6fc9c3">interp_yield</a>( 49102, 0.0623 );</div>
 <div class="line">        EXPECT_FLOAT_EQ( 0.3, v0 );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordtype">float</span> v1 = yp1-&gt;<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aab4dda88e91bcabc53edf067bb6fc9c3">interp_yield</a>( 51103, 2e4 );</div>
@@ -246,7 +246,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( YieldResource, AllEnergy )</div>
+<div class="line"><a class="code" href="../../d7/d44/tst_yield_resource_8cpp.html#a809b80f0c4abe0fa0ed95de332811d05">TEST</a>( YieldResource, AllEnergy )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html">Origen::YieldResource</a> yr;</div>
 <div class="line"></div>
@@ -277,7 +277,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> energies;</div>
-<div class="line">    yr.<a name="a15"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a06ddc5d308700c3d64e8090e972f6e7f">get_all_energies</a>( &amp;energies );</div>
+<div class="line">    yr.<a name="a16"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a06ddc5d308700c3d64e8090e972f6e7f">get_all_energies</a>( &amp;energies );</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ( 4u, energies.size() );</div>
 <div class="line">    EXPECT_FLOAT_EQ( 2e7, energies[0] );</div>
@@ -286,24 +286,24 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_FLOAT_EQ( 0.0623, energies[3] );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span>YieldResourceTester : <span class="keyword">public</span> ::testing::Test, <span class="keyword">public</span> <a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html">Origen::YieldResource</a></div>
+<div class="line"><span class="keyword">class </span><a name="_a17"></a><a class="code" href="../../d9/d2d/class_yield_resource_tester.html">YieldResourceTester</a> : <span class="keyword">public</span> ::testing::Test, <span class="keyword">public</span> <a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html">Origen::YieldResource</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetUp()</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a18"></a><a class="code" href="../../d9/d2d/class_yield_resource_tester.html#a901706a587f9ae84df8b2395fbe759cb">SetUp</a>()</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordtype">bool</span> status = <a name="a16"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#ac0ba6129812e023b6a5c3ab7fb8fe08d">Origen::FakeFactory::YieldResource_scale</a>( *<span class="keyword">this</span> );</div>
+<div class="line">        <span class="keywordtype">bool</span> status = <a name="a19"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#ac0ba6129812e023b6a5c3ab7fb8fe08d">Origen::FakeFactory::YieldResource_scale</a>( *<span class="keyword">this</span> );</div>
 <div class="line">        ASSERT_TRUE( status );</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line">TEST_F( YieldResourceTester, IOFunctions )</div>
+<div class="line"><a name="a20"></a><a class="code" href="../../d7/d44/tst_yield_resource_8cpp.html#ad38449b361b97fb5b8264d90ed58c0b6">TEST_F</a>( <a class="code" href="../../d9/d2d/class_yield_resource_tester.html">YieldResourceTester</a>, IOFunctions )</div>
 <div class="line">{</div>
-<div class="line">    <a name="a17"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a49814e88b42df729555669ecbe6e6468">Origen::printInterpolatedYields</a>( *<span class="keyword">this</span>, 92235, 1.0e4, 0, std::cout );</div>
-<div class="line">    <a name="a18"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">Origen::printYields</a>( *<span class="keyword">this</span>, std::cout );</div>
-<div class="line">    <a name="a19"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a39b9685c18f87122726909aff67632fc">Origen::printYieldEnergies</a>( *<span class="keyword">this</span>, std::cout );</div>
+<div class="line">    <a name="a21"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a49814e88b42df729555669ecbe6e6468">Origen::printInterpolatedYields</a>( *<span class="keyword">this</span>, 92235, 1.0e4, 0, std::cout );</div>
+<div class="line">    <a name="a22"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">Origen::printYields</a>( *<span class="keyword">this</span>, std::cout );</div>
+<div class="line">    <a name="a23"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a39b9685c18f87122726909aff67632fc">Origen::printYieldEnergies</a>( *<span class="keyword">this</span>, std::cout );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST_F( YieldResourceTester, Removal )</div>
+<div class="line"><a class="code" href="../../d7/d44/tst_yield_resource_8cpp.html#ad38449b361b97fb5b8264d90ed58c0b6">TEST_F</a>( <a class="code" href="../../d9/d2d/class_yield_resource_tester.html">YieldResourceTester</a>, Removal )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// check existence of nuclides we will use in testing</span></div>
 <div class="line">    ASSERT_TRUE( this-&gt;fissionable( 92235 ) != <span class="keyword">nullptr</span> );</div>
@@ -364,11 +364,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    ASSERT_EQ( 3, pu239-&gt;<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ae61d3f0660a84a3329ecef4b92ae7fc6">num_energies</a>() );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> energies;</div>
-<div class="line">    pu239-&gt;<a name="a20"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#abd3ea764d8421c372a03ef69bd7d82d4">get_energies</a>( &amp;energies );</div>
+<div class="line">    pu239-&gt;<a name="a24"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#abd3ea764d8421c372a03ef69bd7d82d4">get_energies</a>( &amp;energies );</div>
 <div class="line">    EXPECT_EQ( 3u, energies.size() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// remove middle energy and see if we get close to the same (5% tolerance)</span></div>
-<div class="line">    pu239-&gt;<a name="a21"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a34939e1e3653ec9d00f8eddc330c67f9">remove_data_at</a>( 1 );  <span class="comment">// remove middle energy</span></div>
+<div class="line">    pu239-&gt;<a name="a25"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a34939e1e3653ec9d00f8eddc330c67f9">remove_data_at</a>( 1 );  <span class="comment">// remove middle energy</span></div>
 <div class="line">    EXPECT_NEAR( p9_cs135_yield,</div>
 <div class="line">                 pu239-&gt;<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aab4dda88e91bcabc53edf067bb6fc9c3">interp_yield</a>( 53135, 0.5e6 ),</div>
 <div class="line">                 0.05 * p9_cs135_yield );</div>
@@ -382,14 +382,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_FLOAT_EQ( energies[0], new_energies[0] );</div>
 <div class="line">    EXPECT_FLOAT_EQ( energies[2], new_energies[1] );</div>
 <div class="line"></div>
-<div class="line">    found = pu239-&gt;<a name="a22"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#afc8d7caa5b57d18b94d520004c964f4f">remove_fp</a>( 56135 );</div>
+<div class="line">    found = pu239-&gt;<a name="a26"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#afc8d7caa5b57d18b94d520004c964f4f">remove_fp</a>( 56135 );</div>
 <div class="line">    EXPECT_TRUE( found );</div>
-<div class="line">    EXPECT_FALSE( pu239-&gt;<a name="a23"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ab4397529a79c8359cfff7cb70c16dd1d">has_fp</a>( 56135 ) );</div>
+<div class="line">    EXPECT_FALSE( pu239-&gt;<a name="a27"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ab4397529a79c8359cfff7cb70c16dd1d">has_fp</a>( 56135 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// keep only the I/Xe mass chain</span></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Origen::Vec_Int</a> ids3 = {52135, 53135, 54135, 55135, 56135};</div>
-<div class="line">    pu239-&gt;<a name="a24"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#adae7a459f0d87e380881fce6de921f5d">set_fp_ids</a>( ids3 );</div>
-<div class="line">    EXPECT_EQ( 5, pu239-&gt;<a name="a25"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a1f16fdba54e136191b0844830934795e">num_fps</a>() );</div>
+<div class="line">    pu239-&gt;<a name="a28"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#adae7a459f0d87e380881fce6de921f5d">set_fp_ids</a>( ids3 );</div>
+<div class="line">    EXPECT_EQ( 5, pu239-&gt;<a name="a29"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a1f16fdba54e136191b0844830934795e">num_fps</a>() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// this was added back in the set_fp_ids above but should now be zero yield</span></div>
 <div class="line">    EXPECT_TRUE( pu239-&gt;<a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ab4397529a79c8359cfff7cb70c16dd1d">has_fp</a>( 56135 ) );</div>

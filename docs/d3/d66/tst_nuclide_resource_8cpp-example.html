@@ -112,23 +112,23 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a>;</div>
 <div class="line"></div>
-<div class="line">TEST( <a name="_a0"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a>, Basic )</div>
+<div class="line"><a name="a0"></a><a class="code" href="../../d9/d33/tst_nuclide_resource_8cpp.html#a5e315c68e6a8819b9a080c48a70b0841">TEST</a>( <a name="_a1"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a>, Basic )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a> nr( <span class="keyword">true</span> );  <span class="comment">// load default resource</span></div>
-<div class="line">    ASSERT_TRUE( nr.<a name="a1"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#afb4919942c938fc957aa5225cc7a4557">is_present</a>( 92235 ) );</div>
+<div class="line">    ASSERT_TRUE( nr.<a name="a2"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#afb4919942c938fc957aa5225cc7a4557">is_present</a>( 92235 ) );</div>
 <div class="line">    ASSERT_TRUE( nr.<a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#afb4919942c938fc957aa5225cc7a4557">is_present</a>( 1092235 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check that it&#39;s not 235 but close</span></div>
-<div class="line">    EXPECT_NE( 235, nr.<a name="a2"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>[92235].mass );</div>
+<div class="line">    EXPECT_NE( 235, nr.<a name="a3"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>[92235].mass );</div>
 <div class="line">    EXPECT_NEAR( 235.0, nr.<a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>[92235].mass, 0.1 );</div>
 <div class="line"></div>
 <div class="line">    EXPECT_NEAR( 235.0, nr.<a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>[1092235].mass, 0.1 );</div>
 <div class="line">    EXPECT_NE( 235, nr.<a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>[1092235].mass );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a>, Default )</div>
+<div class="line"><a class="code" href="../../d9/d33/tst_nuclide_resource_8cpp.html#a5e315c68e6a8819b9a080c48a70b0841">TEST</a>( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a>, Default )</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a51afc2b8af347e6abe19c29183ccf51e">SCP_NuclideResource</a> nr1 = <a name="a3"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">NuclideResource::default_resource</a>();</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a51afc2b8af347e6abe19c29183ccf51e">SCP_NuclideResource</a> nr1 = <a name="a4"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">NuclideResource::default_resource</a>();</div>
 <div class="line">    ASSERT_FALSE( nr1 == <span class="keyword">nullptr</span> );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// check use count (NuclideResource class owns unique)</span></div>
@@ -144,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_EQ( nr1.get(), nr2.get() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// clear on class</span></div>
-<div class="line">    <a name="a4"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#abcff51c46a3adaaa1baabbf105516ad4">NuclideResource::clear_default_resource</a>();</div>
+<div class="line">    <a name="a5"></a><a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#abcff51c46a3adaaa1baabbf105516ad4">NuclideResource::clear_default_resource</a>();</div>
 <div class="line">    EXPECT_EQ( 2, nr1.use_count() );</div>
 <div class="line">    nr2 = <span class="keyword">nullptr</span>;</div>
 <div class="line">    EXPECT_EQ( 1, nr1.use_count() );</div>
@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_NE( nr1.get(), nr2.get() );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">TEST( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a>, AbundanceSums )</div>
+<div class="line"><a class="code" href="../../d9/d33/tst_nuclide_resource_8cpp.html#a5e315c68e6a8819b9a080c48a70b0841">TEST</a>( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a>, AbundanceSums )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html">NuclideResource</a> nr( <span class="keyword">true</span> );  <span class="comment">// load default resource</span></div>
 <div class="line">    std::vector&lt;double&gt; total_num( 150, 0.0 );</div>

@@ -105,6 +105,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d7/d5a/typegamma__library_1_1gamma__library__class-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">gamma_library_class Type Reference</div>  </div>
@@ -131,6 +132,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab797209d76b1145e76f99dc9cc8b86e5"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#ab797209d76b1145e76f99dc9cc8b86e5">rebin_continuum</a> =&gt; gamma_library__rebin_continuum</td></tr>
 <tr class="memdesc:ab797209d76b1145e76f99dc9cc8b86e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">rebin gamma continua  <a href="#ab797209d76b1145e76f99dc9cc8b86e5">More...</a><br /></td></tr>
 <tr class="separator:ab797209d76b1145e76f99dc9cc8b86e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memItemLeft" align="right" valign="top">type(origen_librarywrapper), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#aca217f2b2b238f4a56fb199d8d20edb6">lib</a> =&gt;NULL()</td></tr>
+<tr class="memdesc:aca217f2b2b238f4a56fb199d8d20edb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">an origen library  <a href="#aca217f2b2b238f4a56fb199d8d20edb6">More...</a><br /></td></tr>
+<tr class="separator:aca217f2b2b238f4a56fb199d8d20edb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af311dc5babf8a3310328efbe70e44021"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="../../d3/dfb/structgamma__library_1_1origen__gamma__options.html">origen_gamma_options</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#af311dc5babf8a3310328efbe70e44021">opts</a></td></tr>
+<tr class="memdesc:af311dc5babf8a3310328efbe70e44021"><td class="mdescLeft">&#160;</td><td class="mdescRight">gamma options  <a href="#af311dc5babf8a3310328efbe70e44021">More...</a><br /></td></tr>
+<tr class="separator:af311dc5babf8a3310328efbe70e44021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e7ebf20a3588a2e9d28b9c5359d9ba"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#ad6e7ebf20a3588a2e9d28b9c5359d9ba">binned</a></td></tr>
+<tr class="memdesc:ad6e7ebf20a3588a2e9d28b9c5359d9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binned gamma energies for every nuclide and energy group [ngroups * nuclides].  <a href="#ad6e7ebf20a3588a2e9d28b9c5359d9ba">More...</a><br /></td></tr>
+<tr class="separator:ad6e7ebf20a3588a2e9d28b9c5359d9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec9277d17727e803665fa32d5010001"><td class="memItemLeft" align="right" valign="top">logical, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#a2ec9277d17727e803665fa32d5010001">has_gamma</a></td></tr>
+<tr class="memdesc:a2ec9277d17727e803665fa32d5010001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags if a nuclide has any gamma lines [nuclides].  <a href="#a2ec9277d17727e803665fa32d5010001">More...</a><br /></td></tr>
+<tr class="separator:a2ec9277d17727e803665fa32d5010001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a008ad6c029e9735b1fffcea34e8ddfbe"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#a008ad6c029e9735b1fffcea34e8ddfbe">e_gamma</a></td></tr>
+<tr class="memdesc:a008ad6c029e9735b1fffcea34e8ddfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average group energies [ngroups].  <a href="#a008ad6c029e9735b1fffcea34e8ddfbe">More...</a><br /></td></tr>
+<tr class="separator:a008ad6c029e9735b1fffcea34e8ddfbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a271bb3b85ab2259418b61e78ea3b0317"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#a271bb3b85ab2259418b61e78ea3b0317">unbinned_energy</a></td></tr>
+<tr class="memdesc:a271bb3b85ab2259418b61e78ea3b0317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lost energy (outside bounds) [nuclides].  <a href="#a271bb3b85ab2259418b61e78ea3b0317">More...</a><br /></td></tr>
+<tr class="separator:a271bb3b85ab2259418b61e78ea3b0317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718350cfd6a1cd60c4f04cfe637ee0ea"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/structgamma__library_1_1gamma__library__class.html#a718350cfd6a1cd60c4f04cfe637ee0ea">unbinned_particles</a></td></tr>
+<tr class="memdesc:a718350cfd6a1cd60c4f04cfe637ee0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lost particles (outside bounds) [nuclides].  <a href="#a718350cfd6a1cd60c4f04cfe637ee0ea">More...</a><br /></td></tr>
+<tr class="separator:a718350cfd6a1cd60c4f04cfe637ee0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Gamma library; provides a wrapper around the gamma data libraries. </p>

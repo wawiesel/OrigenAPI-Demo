@@ -105,6 +105,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../db/d12/typeorigen__casewrapper__m_1_1origen__casewrapper-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">origen_casewrapper Type Reference</div>  </div>
@@ -226,6 +229,72 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ace69e0cd0499e86278b6818be0016ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4882559c05e76d674e9ccc69acb568bd"><td class="memItemLeft" align="right" valign="top">procedure, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a4882559c05e76d674e9ccc69acb568bd">set_volume</a> =&gt; Origen_CaseWrapper__set_volume</td></tr>
 <tr class="separator:a4882559c05e76d674e9ccc69acb568bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aca4dffe03e9cea8b70a120cc4f6702de"><td class="memItemLeft" align="right" valign="top">type(origen_librarywrapper), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#aca4dffe03e9cea8b70a120cc4f6702de">libw</a></td></tr>
+<tr class="memdesc:aca4dffe03e9cea8b70a120cc4f6702de"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to the library being used for this run  <a href="#aca4dffe03e9cea8b70a120cc4f6702de">More...</a><br /></td></tr>
+<tr class="separator:aca4dffe03e9cea8b70a120cc4f6702de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae35d5d94889dbb2c381ac6753a5ebb5e"><td class="memItemLeft" align="right" valign="top">type(origen_case)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#ae35d5d94889dbb2c381ac6753a5ebb5e">b_case</a></td></tr>
+<tr class="memdesc:ae35d5d94889dbb2c381ac6753a5ebb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ class where case data is stored.  <a href="#ae35d5d94889dbb2c381ac6753a5ebb5e">More...</a><br /></td></tr>
+<tr class="separator:ae35d5d94889dbb2c381ac6753a5ebb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ea0b9761ea698bcd05dd66d07b9c06"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#aa4ea0b9761ea698bcd05dd66d07b9c06">b_initialized</a> = .false.</td></tr>
+<tr class="memdesc:aa4ea0b9761ea698bcd05dd66d07b9c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">boolean to determine intization state  <a href="#aa4ea0b9761ea698bcd05dd66d07b9c06">More...</a><br /></td></tr>
+<tr class="separator:aa4ea0b9761ea698bcd05dd66d07b9c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ba21bd777c8d42c078ed6469eab9cc"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a48ba21bd777c8d42c078ed6469eab9cc">times</a></td></tr>
+<tr class="memdesc:a48ba21bd777c8d42c078ed6469eab9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">end-of-step times [0:nsteps]  <a href="#a48ba21bd777c8d42c078ed6469eab9cc">More...</a><br /></td></tr>
+<tr class="separator:a48ba21bd777c8d42c078ed6469eab9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e4c7c6c1ca3527f86fab2a37c22f92"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a89e4c7c6c1ca3527f86fab2a37c22f92">input_by_flux</a> = .false.</td></tr>
+<tr class="memdesc:a89e4c7c6c1ca3527f86fab2a37c22f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">switch for given flux / given power  <a href="#a89e4c7c6c1ca3527f86fab2a37c22f92">More...</a><br /></td></tr>
+<tr class="separator:a89e4c7c6c1ca3527f86fab2a37c22f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2341c4e930f480376ad764f2c9bbf4c"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#ad2341c4e930f480376ad764f2c9bbf4c">fluxes</a></td></tr>
+<tr class="memdesc:ad2341c4e930f480376ad764f2c9bbf4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">given (or converted) flux [nsteps]  <a href="#ad2341c4e930f480376ad764f2c9bbf4c">More...</a><br /></td></tr>
+<tr class="separator:ad2341c4e930f480376ad764f2c9bbf4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9befc089ff9c7da670376229081871c5"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a9befc089ff9c7da670376229081871c5">powers</a></td></tr>
+<tr class="memdesc:a9befc089ff9c7da670376229081871c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">given (or converted) power [nsteps]  <a href="#a9befc089ff9c7da670376229081871c5">More...</a><br /></td></tr>
+<tr class="separator:a9befc089ff9c7da670376229081871c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff94ec9cfb1579216750a5e8ee63389"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a2ff94ec9cfb1579216750a5e8ee63389">burnups</a></td></tr>
+<tr class="memdesc:a2ff94ec9cfb1579216750a5e8ee63389"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculated burnup [0:nsteps]  <a href="#a2ff94ec9cfb1579216750a5e8ee63389">More...</a><br /></td></tr>
+<tr class="separator:a2ff94ec9cfb1579216750a5e8ee63389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03bd685d6e307a8d9e3fbb7baa50d409"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a03bd685d6e307a8d9e3fbb7baa50d409">fluence</a></td></tr>
+<tr class="memdesc:a03bd685d6e307a8d9e3fbb7baa50d409"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculated fluence [0:nsteps]  <a href="#a03bd685d6e307a8d9e3fbb7baa50d409">More...</a><br /></td></tr>
+<tr class="separator:a03bd685d6e307a8d9e3fbb7baa50d409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38d91aed70f47b33e33a99968c9ee92"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#ae38d91aed70f47b33e33a99968c9ee92">concentrations</a></td></tr>
+<tr class="memdesc:ae38d91aed70f47b33e33a99968c9ee92"><td class="mdescLeft">&#160;</td><td class="mdescRight">nuclide concentrations [0:nsteps,1:itot]  <a href="#ae38d91aed70f47b33e33a99968c9ee92">More...</a><br /></td></tr>
+<tr class="separator:ae38d91aed70f47b33e33a99968c9ee92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c57efcf554d25a653a7b2a9769496a"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#ad3c57efcf554d25a653a7b2a9769496a">concentrations0</a></td></tr>
+<tr class="memdesc:ad3c57efcf554d25a653a7b2a9769496a"><td class="mdescLeft">&#160;</td><td class="mdescRight">nuclide initial concentrations [0:nsteps,1:itot]; the reason why the concentrations(0,:) array is not used directly is that it is not allocated until set_times is called  <a href="#ad3c57efcf554d25a653a7b2a9769496a">More...</a><br /></td></tr>
+<tr class="separator:ad3c57efcf554d25a653a7b2a9769496a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f03df9d5b0bd55b1c434e8d764881ae"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a4f03df9d5b0bd55b1c434e8d764881ae">reprocessing_rate</a></td></tr>
+<tr class="memdesc:a4f03df9d5b0bd55b1c434e8d764881ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">continuous reprocessing rate  <a href="#a4f03df9d5b0bd55b1c434e8d764881ae">More...</a><br /></td></tr>
+<tr class="separator:a4f03df9d5b0bd55b1c434e8d764881ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c02e89724437c5281a90a93df830833"><td class="memItemLeft" align="right" valign="top">real(c_double), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a5c02e89724437c5281a90a93df830833">feed_rate</a></td></tr>
+<tr class="memdesc:a5c02e89724437c5281a90a93df830833"><td class="mdescLeft">&#160;</td><td class="mdescRight">continuous feed rate  <a href="#a5c02e89724437c5281a90a93df830833">More...</a><br /></td></tr>
+<tr class="separator:a5c02e89724437c5281a90a93df830833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499c413fe0e7548c7380d9fd464cc533"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a499c413fe0e7548c7380d9fd464cc533">adjoint</a> = .false.</td></tr>
+<tr class="memdesc:a499c413fe0e7548c7380d9fd464cc533"><td class="mdescLeft">&#160;</td><td class="mdescRight">is this an adjoint case?  <a href="#a499c413fe0e7548c7380d9fd464cc533">More...</a><br /></td></tr>
+<tr class="separator:a499c413fe0e7548c7380d9fd464cc533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec60dce956632c983fbdf4bd30a5d590"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#aec60dce956632c983fbdf4bd30a5d590">fixed_fission_energy</a> = .false.</td></tr>
+<tr class="memdesc:aec60dce956632c983fbdf4bd30a5d590"><td class="mdescLeft">&#160;</td><td class="mdescRight">switch: use fixed or composition-dependent fission energy?  <a href="#aec60dce956632c983fbdf4bd30a5d590">More...</a><br /></td></tr>
+<tr class="separator:aec60dce956632c983fbdf4bd30a5d590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e52e5e09380cd703efbc30bf180cbdf"><td class="memItemLeft" align="right" valign="top">real(c_double)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a9e52e5e09380cd703efbc30bf180cbdf">volume</a> = 1.0d0</td></tr>
+<tr class="memdesc:a9e52e5e09380cd703efbc30bf180cbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">volume  <a href="#a9e52e5e09380cd703efbc30bf180cbdf">More...</a><br /></td></tr>
+<tr class="separator:a9e52e5e09380cd703efbc30bf180cbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c46a4325c5defa787439eabd742c4f0"><td class="memItemLeft" align="right" valign="top">real(c_double)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a7c46a4325c5defa787439eabd742c4f0">save_time_offset</a> = 0.0</td></tr>
+<tr class="memdesc:a7c46a4325c5defa787439eabd742c4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time offset for saving to f71 (allows discharge to be time = 0):  <a href="#a7c46a4325c5defa787439eabd742c4f0">More...</a><br /></td></tr>
+<tr class="separator:a7c46a4325c5defa787439eabd742c4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac9140fcab0d76a8c2322137b43da0c96"><td class="memItemLeft" align="right" valign="top">procedure, private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#ac9140fcab0d76a8c2322137b43da0c96">execute_calculation</a> =&gt; Origen_CaseWrapper__execute_calculation</td></tr>
+<tr class="memdesc:ac9140fcab0d76a8c2322137b43da0c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs the depletion calculation This is not a wrapper function. The associated wrapper function is run.  <a href="#ac9140fcab0d76a8c2322137b43da0c96">More...</a><br /></td></tr>
+<tr class="separator:ac9140fcab0d76a8c2322137b43da0c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a01a22534c2edffec18251d47d2819593"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="../../d8/d59/structsolvers_1_1solver__options.html">solver_options</a>), private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a01a22534c2edffec18251d47d2819593">solver</a></td></tr>
+<tr class="memdesc:a01a22534c2edffec18251d47d2819593"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set/get solver options use thisb_caseset/get_solver_options()  <a href="#a01a22534c2edffec18251d47d2819593">More...</a><br /></td></tr>
+<tr class="separator:a01a22534c2edffec18251d47d2819593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function/Subroutine Documentation</h2>
 <a class="anchor" id="ac37c0d3f0d43cae2fa1e61f5482de88d"></a>

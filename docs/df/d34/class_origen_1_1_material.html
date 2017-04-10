@@ -104,7 +104,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d2/da9/class_origen_1_1_material-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Material Class Reference</div>  </div>
@@ -125,6 +129,53 @@ Inheritance diagram for Material:</div>
 <p>Container for an ORIGEN depletable material.  
  <a href="../../df/d34/class_origen_1_1_material.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:afeb15fa158549dd888e608280a6a4d52"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52">FluxParameter</a> { <a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a> = -1, 
+<a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52aa76c44edb76686fa1bbda9ebe69c7857">FLUX</a> = 0, 
+<a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52a316771101d4b4b1dea7d7e2a82ef1658">POWER</a> = 1, 
+<a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52a7651b6d5b084d97604c623341e07516b">LAST_FLUX_PARAMETER</a>
+ }<tr class="separator:afeb15fa158549dd888e608280a6a4d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:ac71c961a7c5aba87ce8eefcaac0ed6fa"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; double, double, ScaleSTL::ApproxLt&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ac71c961a7c5aba87ce8eefcaac0ed6fa">History_t</a></td></tr>
+<tr class="separator:ac71c961a7c5aba87ce8eefcaac0ed6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Origen::Checkable&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp015343b88ac2c58800c472dc06ceb8c5"></a>See <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html">Origen::Checkable</a> for details. </p>
+</td></tr>
+<tr class="memitem:afe7e8ee6da0df06c3a5b83f74b960720"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#afe7e8ee6da0df06c3a5b83f74b960720">good</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Vec_Str</a> &amp;errors) const </td></tr>
+<tr class="separator:afe7e8ee6da0df06c3a5b83f74b960720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e41c8280b6cdf93d39e1135d2abdf7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ad2e41c8280b6cdf93d39e1135d2abdf7">good</a> () const </td></tr>
+<tr class="separator:ad2e41c8280b6cdf93d39e1135d2abdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a4821adb73cda110fab0770eb6a386"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a12a4821adb73cda110fab0770eb6a386">is_initialized</a> () const </td></tr>
+<tr class="separator:a12a4821adb73cda110fab0770eb6a386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e708d496acb090a8657506c512ecf55"><td class="memItemLeft" align="right" valign="top">virtual Scale::Json::Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a3e708d496acb090a8657506c512ecf55">to_json</a> () const </td></tr>
+<tr class="separator:a3e708d496acb090a8657506c512ecf55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c0069d441ad0d886f408d289e1753d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ad0c0069d441ad0d886f408d289e1753d">to_string</a> (int level=1) const </td></tr>
+<tr class="separator:ad0c0069d441ad0d886f408d289e1753d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9a8833481bcdf07b02103ce7fd1618"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a0f9a8833481bcdf07b02103ce7fd1618">has_initialized_id</a> () const </td></tr>
+<tr class="separator:a0f9a8833481bcdf07b02103ce7fd1618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c063cfb2479f614be43b9d2f92ba63"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a> () const </td></tr>
+<tr class="separator:ae0c063cfb2479f614be43b9d2f92ba63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fb1d841c96187de27e808a25831ea8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a45fb1d841c96187de27e808a25831ea8">get_id</a> (int &amp;<a class="el" href="../../df/d34/class_origen_1_1_material.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>) const </td></tr>
+<tr class="separator:a45fb1d841c96187de27e808a25831ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff8f115eede06acb2c131ec56b3f3a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a6ff8f115eede06acb2c131ec56b3f3a4">set_id</a> (int <a class="el" href="../../df/d34/class_origen_1_1_material.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>)</td></tr>
+<tr class="separator:a6ff8f115eede06acb2c131ec56b3f3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37627d5d5bba7f4a8690c71c2ab3cb07"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a> () const </td></tr>
+<tr class="separator:a37627d5d5bba7f4a8690c71c2ab3cb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cafd0174fbe3e0b8d18060fb87d1db"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a74cafd0174fbe3e0b8d18060fb87d1db">set_name</a> (std::string <a class="el" href="../../df/d34/class_origen_1_1_material.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>)</td></tr>
+<tr class="separator:a74cafd0174fbe3e0b8d18060fb87d1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f2506684e94df1027d6cc61815da55"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a48f2506684e94df1027d6cc61815da55">get_name</a> (std::string &amp;<a class="el" href="../../df/d34/class_origen_1_1_material.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>) const </td></tr>
+<tr class="separator:a48f2506684e94df1027d6cc61815da55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+INTERFACE&lt;&lt;Origen::Checkable&gt;&gt;</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp015343b88ac2c58800c472dc06ceb8c5"></a>See <a class="el" href="../../de/d3d/class_origen_1_1_checkable.html">Origen::Checkable</a> for details. </p>
+</td></tr>
+<tr class="memitem:aa48c39f92bc04eded742f5310c74aafe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a> () const </td></tr>
+<tr class="separator:aa48c39f92bc04eded742f5310c74aafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acc0472f689cc5489502e0e08e73297f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#acc0472f689cc5489502e0e08e73297f8">Material</a> (std::string <a class="el" href="../../df/d34/class_origen_1_1_material.html#a46e42023ee0cbc593b0bbbe03bdfaca2">library_type</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> <a class="el" href="../../df/d34/class_origen_1_1_material.html#ac95b2f770966959fbe0cd46d1ee78cf6">library</a>, std::string <a class="el" href="../../df/d34/class_origen_1_1_material.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>, int <a class="el" href="../../df/d34/class_origen_1_1_material.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>, double <a class="el" href="../../df/d34/class_origen_1_1_material.html#afe473feb8ddf9d19a21e43141c70c367">cold_volume</a>)</td></tr>
@@ -458,6 +509,102 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6aa597c87b292bfe2fdbb40364dd8fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55a92413e82f8ef9692e9917640a4e16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a55a92413e82f8ef9692e9917640a4e16">solve_kernel</a> (double trel1, double trel2, double z0, double z1, double *<a class="el" href="../../df/d34/class_origen_1_1_material.html#a34908ed964d0c2a80118646a19666d27">flux</a>, double *<a class="el" href="../../df/d34/class_origen_1_1_material.html#a1be7856230c2ba34178f41f199dd0d83">power</a>)</td></tr>
 <tr class="separator:a55a92413e82f8ef9692e9917640a4e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aba34c4c1c0fee46218b2f34eaf6da758"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#aba34c4c1c0fee46218b2f34eaf6da758">decay_substep_dtrel</a> (size_t ns)</td></tr>
+<tr class="separator:aba34c4c1c0fee46218b2f34eaf6da758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:afd6afb40f7d72b9e172ff00313e13ffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#afd6afb40f7d72b9e172ff00313e13ffd">init_mos</a> ()</td></tr>
+<tr class="separator:afd6afb40f7d72b9e172ff00313e13ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0a3ecb0cac9edb61db5f01895b35b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#aab0a3ecb0cac9edb61db5f01895b35b1">clear_mos</a> ()</td></tr>
+<tr class="separator:aab0a3ecb0cac9edb61db5f01895b35b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87da6c264055c28d3eb9650d6a260a94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a87da6c264055c28d3eb9650d6a260a94">swap_mos_bos</a> ()</td></tr>
+<tr class="separator:a87da6c264055c28d3eb9650d6a260a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af067b171f449d286f55b299fbf16657e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#af067b171f449d286f55b299fbf16657e">swap_mos_eos</a> ()</td></tr>
+<tr class="separator:af067b171f449d286f55b299fbf16657e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480a07f9a5a190077eb151485aaa77c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a480a07f9a5a190077eb151485aaa77c5">initialize_mass</a> ()</td></tr>
+<tr class="memdesc:a480a07f9a5a190077eb151485aaa77c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">mass initializer function  <a href="#a480a07f9a5a190077eb151485aaa77c5">More...</a><br /></td></tr>
+<tr class="separator:a480a07f9a5a190077eb151485aaa77c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a53d4458d8acabc07a965d94dc9dd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a51a53d4458d8acabc07a965d94dc9dd5">internal_initialize</a> (std::string <a class="el" href="../../df/d34/class_origen_1_1_material.html#a46e42023ee0cbc593b0bbbe03bdfaca2">library_type</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a> <a class="el" href="../../df/d34/class_origen_1_1_material.html#ac95b2f770966959fbe0cd46d1ee78cf6">library</a>, std::string <a class="el" href="../../df/d34/class_origen_1_1_material.html#a37627d5d5bba7f4a8690c71c2ab3cb07">name</a>, int <a class="el" href="../../df/d34/class_origen_1_1_material.html#ae0c063cfb2479f614be43b9d2f92ba63">id</a>, double <a class="el" href="../../df/d34/class_origen_1_1_material.html#afe473feb8ddf9d19a21e43141c70c367">cold_volume</a>)</td></tr>
+<tr class="memdesc:a51a53d4458d8acabc07a965d94dc9dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">everything initializer function  <a href="#a51a53d4458d8acabc07a965d94dc9dd5">More...</a><br /></td></tr>
+<tr class="separator:a51a53d4458d8acabc07a965d94dc9dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86072d4287aa9b104b5b29d70680e2f5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a86072d4287aa9b104b5b29d70680e2f5">good_impl</a> (<a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Vec_Str</a> &amp;errors) const </td></tr>
+<tr class="memdesc:a86072d4287aa9b104b5b29d70680e2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#a86072d4287aa9b104b5b29d70680e2f5">More...</a><br /></td></tr>
+<tr class="separator:a86072d4287aa9b104b5b29d70680e2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa390b82335a85c36e9884d7c834330"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#affa390b82335a85c36e9884d7c834330">is_initialized_impl</a> () const </td></tr>
+<tr class="memdesc:affa390b82335a85c36e9884d7c834330"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#affa390b82335a85c36e9884d7c834330">More...</a><br /></td></tr>
+<tr class="separator:affa390b82335a85c36e9884d7c834330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="memItemLeft" align="right" valign="top">virtual Scale::Json::Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/class_origen_1_1_checkable.html#a69f23dfe3584ad7ea4e66f7af6dfa870">to_json_impl</a> () const </td></tr>
+<tr class="memdesc:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="mdescLeft">&#160;</td><td class="mdescRight">useful to chain  <a href="#a69f23dfe3584ad7ea4e66f7af6dfa870">More...</a><br /></td></tr>
+<tr class="separator:a69f23dfe3584ad7ea4e66f7af6dfa870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:abcc70a9543ab61ba14aea9c5e1b2b7b7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#abcc70a9543ab61ba14aea9c5e1b2b7b7">b_library_type</a></td></tr>
+<tr class="memdesc:abcc70a9543ab61ba14aea9c5e1b2b7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">library type for general book-keeping  <a href="#abcc70a9543ab61ba14aea9c5e1b2b7b7">More...</a><br /></td></tr>
+<tr class="separator:abcc70a9543ab61ba14aea9c5e1b2b7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4d507fbd5d4965b0273c0903d43e29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">SP_Library</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a2c4d507fbd5d4965b0273c0903d43e29">b_library</a></td></tr>
+<tr class="memdesc:a2c4d507fbd5d4965b0273c0903d43e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">actual library for reference values  <a href="#a2c4d507fbd5d4965b0273c0903d43e29">More...</a><br /></td></tr>
+<tr class="separator:a2c4d507fbd5d4965b0273c0903d43e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479ae0a3952b70d0177314e0ebf0dd82"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a479ae0a3952b70d0177314e0ebf0dd82">b_mass</a></td></tr>
+<tr class="memdesc:a479ae0a3952b70d0177314e0ebf0dd82"><td class="mdescLeft">&#160;</td><td class="mdescRight">total mass (g) at time=0  <a href="#a479ae0a3952b70d0177314e0ebf0dd82">More...</a><br /></td></tr>
+<tr class="separator:a479ae0a3952b70d0177314e0ebf0dd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2e02cdf6cc8da09478150bbbb65101"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#add2e02cdf6cc8da09478150bbbb65101">b_initial_hm_mass</a></td></tr>
+<tr class="memdesc:add2e02cdf6cc8da09478150bbbb65101"><td class="mdescLeft">&#160;</td><td class="mdescRight">total mass in heavy metal (g) at time=0  <a href="#add2e02cdf6cc8da09478150bbbb65101">More...</a><br /></td></tr>
+<tr class="separator:add2e02cdf6cc8da09478150bbbb65101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78721e55b4e79b4455e6792aef5827e8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a78721e55b4e79b4455e6792aef5827e8">b_initial_hm_mass_multiplier</a></td></tr>
+<tr class="separator:a78721e55b4e79b4455e6792aef5827e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11dad69bc754a8e0fd758e4ac49fa6e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">SP_Solver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a11dad69bc754a8e0fd758e4ac49fa6e0">b_solver</a></td></tr>
+<tr class="memdesc:a11dad69bc754a8e0fd758e4ac49fa6e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">solver  <a href="#a11dad69bc754a8e0fd758e4ac49fa6e0">More...</a><br /></td></tr>
+<tr class="separator:a11dad69bc754a8e0fd758e4ac49fa6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e77a3bd4c17ceba9d6a2c7647d4130"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a32e77a3bd4c17ceba9d6a2c7647d4130">b_trel_bos</a></td></tr>
+<tr class="separator:a32e77a3bd4c17ceba9d6a2c7647d4130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcbe1fb6751b82a2c587a238a47657f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#abf0a77d8892af68cbca20f3a4513fd75">SP_DoubleList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#abfcbe1fb6751b82a2c587a238a47657f">b_amount_bos</a></td></tr>
+<tr class="separator:abfcbe1fb6751b82a2c587a238a47657f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde1e032b558a804b6b56bc97ff3647d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#acde1e032b558a804b6b56bc97ff3647d">b_trel_mos</a></td></tr>
+<tr class="separator:acde1e032b558a804b6b56bc97ff3647d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa036c24ec1cf4ffb566c5000f75d2757"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#abf0a77d8892af68cbca20f3a4513fd75">SP_DoubleList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#aa036c24ec1cf4ffb566c5000f75d2757">b_amount_mos</a></td></tr>
+<tr class="separator:aa036c24ec1cf4ffb566c5000f75d2757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac643ecc171952ad7369c9b9f4f4491f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ac643ecc171952ad7369c9b9f4f4491f5">b_trel_eos</a></td></tr>
+<tr class="separator:ac643ecc171952ad7369c9b9f4f4491f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad2750a16b371bab1fb002673b42c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#abf0a77d8892af68cbca20f3a4513fd75">SP_DoubleList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a1ad2750a16b371bab1fb002673b42c2e">b_amount_eos</a></td></tr>
+<tr class="separator:a1ad2750a16b371bab1fb002673b42c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10dea06dc748209689930a3eac2f78f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ac71c961a7c5aba87ce8eefcaac0ed6fa">History_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a10dea06dc748209689930a3eac2f78f4">b_flux_hist</a></td></tr>
+<tr class="separator:a10dea06dc748209689930a3eac2f78f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bd80d96ed2edd18637b263af921c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ac71c961a7c5aba87ce8eefcaac0ed6fa">History_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ab0bd80d96ed2edd18637b263af921c1a">b_power_hist</a></td></tr>
+<tr class="separator:ab0bd80d96ed2edd18637b263af921c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f7e78656fc3ad457b479b84ebc68eb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ac71c961a7c5aba87ce8eefcaac0ed6fa">History_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a4f7e78656fc3ad457b479b84ebc68eb0">b_param_hist</a></td></tr>
+<tr class="separator:a4f7e78656fc3ad457b479b84ebc68eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71982ed9753119c9b6d25ebb9682adc0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a71982ed9753119c9b6d25ebb9682adc0">b_name</a></td></tr>
+<tr class="memdesc:a71982ed9753119c9b6d25ebb9682adc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">saved name for this material  <a href="#a71982ed9753119c9b6d25ebb9682adc0">More...</a><br /></td></tr>
+<tr class="separator:a71982ed9753119c9b6d25ebb9682adc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd0a9eeaa0f11d3027de09e40504434"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a1cd0a9eeaa0f11d3027de09e40504434">b_id</a></td></tr>
+<tr class="memdesc:a1cd0a9eeaa0f11d3027de09e40504434"><td class="mdescLeft">&#160;</td><td class="mdescRight">saved id  <a href="#a1cd0a9eeaa0f11d3027de09e40504434">More...</a><br /></td></tr>
+<tr class="separator:a1cd0a9eeaa0f11d3027de09e40504434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8436987bd8fc08f4c56cb5aa916405"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a6b8436987bd8fc08f4c56cb5aa916405">b_cold_volume</a></td></tr>
+<tr class="memdesc:a6b8436987bd8fc08f4c56cb5aa916405"><td class="mdescLeft">&#160;</td><td class="mdescRight">volume (cm^3) at cold conditions  <a href="#a6b8436987bd8fc08f4c56cb5aa916405">More...</a><br /></td></tr>
+<tr class="separator:a6b8436987bd8fc08f4c56cb5aa916405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3fad487177420751a0bae2aee24164"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga3be65ff4b64925dd6ad7d70bfda9fb6c">Deq_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a7b3fad487177420751a0bae2aee24164">b_step_flux_cm2s</a></td></tr>
+<tr class="memdesc:a7b3fad487177420751a0bae2aee24164"><td class="mdescLeft">&#160;</td><td class="mdescRight">average flux magnitude (#/cm^2-s) over each step  <a href="#a7b3fad487177420751a0bae2aee24164">More...</a><br /></td></tr>
+<tr class="separator:a7b3fad487177420751a0bae2aee24164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685fa7d476dd37f70b28a7ecc689bed1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga3be65ff4b64925dd6ad7d70bfda9fb6c">Deq_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a685fa7d476dd37f70b28a7ecc689bed1">b_step_power_watt</a></td></tr>
+<tr class="memdesc:a685fa7d476dd37f70b28a7ecc689bed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">average power (W) over each step  <a href="#a685fa7d476dd37f70b28a7ecc689bed1">More...</a><br /></td></tr>
+<tr class="separator:a685fa7d476dd37f70b28a7ecc689bed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a30c70546c24a6250f1c163d3daf0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#aa57ea77d9df28230830843d68d1b3deb">Deq_TrMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a50a30c70546c24a6250f1c163d3daf0d">b_step_trx</a></td></tr>
+<tr class="memdesc:a50a30c70546c24a6250f1c163d3daf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">transition matrix over each step  <a href="#a50a30c70546c24a6250f1c163d3daf0d">More...</a><br /></td></tr>
+<tr class="separator:a50a30c70546c24a6250f1c163d3daf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4280c30b129ff6b06e340d181d2fc2ec"><td class="memItemLeft" align="right" valign="top">std::deque&lt; <a class="el" href="../../df/d34/class_origen_1_1_material.html#afeb15fa158549dd888e608280a6a4d52">FluxParameter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#a4280c30b129ff6b06e340d181d2fc2ec">b_flux_parameter</a></td></tr>
+<tr class="memdesc:a4280c30b129ff6b06e340d181d2fc2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">provided "flux" parameter over each step  <a href="#a4280c30b129ff6b06e340d181d2fc2ec">More...</a><br /></td></tr>
+<tr class="separator:a4280c30b129ff6b06e340d181d2fc2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb16f9c83b8b355b33acb7a0b6e66fe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d09/group___cxx_typedefs.html#ga3be65ff4b64925dd6ad7d70bfda9fb6c">Deq_Dbl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#abb16f9c83b8b355b33acb7a0b6e66fe5">b_point_time_s</a></td></tr>
+<tr class="memdesc:abb16f9c83b8b355b33acb7a0b6e66fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">time (s) at each point  <a href="#abb16f9c83b8b355b33acb7a0b6e66fe5">More...</a><br /></td></tr>
+<tr class="separator:abb16f9c83b8b355b33acb7a0b6e66fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5043f9e0be239caf519689dea9f09c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc1/namespace_origen.html#a8fc86b103ef3ce2f96b75efbf821f1ab">Deq_Amt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d34/class_origen_1_1_material.html#ac5043f9e0be239caf519689dea9f09c8">b_point_amount_cm2barn</a></td></tr>
+<tr class="memdesc:ac5043f9e0be239caf519689dea9f09c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">nuclide amount (cm^2/barn)  <a href="#ac5043f9e0be239caf519689dea9f09c8">More...</a><br /></td></tr>
+<tr class="separator:ac5043f9e0be239caf519689dea9f09c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Container for an ORIGEN depletable material. </p>
@@ -482,7 +629,7 @@ Public Member Functions</h2></td></tr>
 </ul>
 <p>There is only a single way to 'set' something, set_x(const T&amp; v).</p>
 <p>Using set always implies a copy. To manipulate data directly, which is not recommended, use the getters that return smart pointers, e.g. trx_over(), <a class="el" href="../../df/d34/class_origen_1_1_material.html#a9f5e682d981dbd194752cd80e6c89bc4" title="get amount (cm^2/barn) at a time point ">amount_at()</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de0/ex_n_e_a_m_s_8cpp-example.html#_a10">exNEAMS.cpp</a>, <a class="el" href="../../dd/d60/tst_material_8cpp-example.html#_a0">tstMaterial.cpp</a>, <a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#_a22">tstMaterialBuffer.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#_a5">tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#_a8">tstParallelDepletion.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dfd/_core_2dc_2tests_2tst_material_8cpp-example.html#_a1">Core/dc/tests/tstMaterial.cpp</a>, <a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#_a22">Core/io/tests/tstMaterialBuffer.cpp</a>, <a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#_a6">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#_a9">Manager/mzd/tests/tstParallelDepletion.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="ac71c961a7c5aba87ce8eefcaac0ed6fa"></a>
 <div class="memitem">
@@ -662,7 +809,7 @@ Public Member Functions</h2></td></tr>
 
 <p>allocate and set delta-time </p>
 <p>add new time step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a49">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a50">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -717,7 +864,7 @@ Public Member Functions</h2></td></tr>
 
 <p>get library type </p>
 <p>get library type </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a32">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a32">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 
@@ -738,7 +885,7 @@ Public Member Functions</h2></td></tr>
 
 <p>get library </p>
 <p>get library </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a48">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a49">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a066cc9e6c13b09b0b4af7ce00800bdcd">Origen::tabulateMaterialFission()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad1f7805721dc35df742741b512f6dd24">Origen::tabulateMaterialIsotopics()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acc1b57d68cf042c6a16bc8029e88ff5e">Origen::tabulateMaterialLoss()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 
@@ -759,7 +906,7 @@ Public Member Functions</h2></td></tr>
 
 <p>total number of nuclides </p>
 <p>get total number of nuclides </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a23">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a23">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 
@@ -910,7 +1057,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get initial mass (g) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a33">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a33">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 
@@ -930,7 +1077,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get initial hm mass (gIHM) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a34">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a34">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 
@@ -1014,7 +1161,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get cold volume (cm^3), volume at room temperature </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a36">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a36">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 
@@ -1121,7 +1268,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get the number of times stored (including on disk) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a37">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a37">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>.</p>
 
@@ -1141,7 +1288,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get the number of steps </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a25">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a25">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>.</p>
 
@@ -1216,7 +1363,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get a time (s) value (0 to nsteps) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a26">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a26">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>.</p>
 
@@ -1271,7 +1418,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get amount (cm^2/barn) at a time point </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a24">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a24">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 
@@ -1678,7 +1825,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set number density (#/barn-cm) at begin of step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a47">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a48">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2341,7 +2488,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get a transition matrix over a step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a29">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a29">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a066cc9e6c13b09b0b4af7ce00800bdcd">Origen::tabulateMaterialFission()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acc1b57d68cf042c6a16bc8029e88ff5e">Origen::tabulateMaterialLoss()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 
@@ -2379,7 +2526,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set transition matrix of current step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a51">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a52">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2398,7 +2545,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get power (W) over a step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a28">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a28">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>.</p>
 
@@ -2482,7 +2629,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get flux (#/cm^2-s) over a step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a27">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a27">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 
@@ -2522,7 +2669,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set flux (#/cm^2-s) over current step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a50">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a51">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2880,7 +3027,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a31">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a31">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 
@@ -2954,7 +3101,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a35">tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a35">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a066cc9e6c13b09b0b4af7ce00800bdcd">Origen::tabulateMaterialFission()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad1f7805721dc35df742741b512f6dd24">Origen::tabulateMaterialIsotopics()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acc1b57d68cf042c6a16bc8029e88ff5e">Origen::tabulateMaterialLoss()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 
@@ -3821,8 +3968,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/d29/tst_transition_system_adapter__ampx_n_8cpp-example.html#a20">tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d1c/_manager_2libld_2tests_2tst_transition_system_adapter__ampx_n_8cpp-example.html#a32">Manager/libld/tests/tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
 </dl>
+<p>Referenced by <a class="el" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a2edbeb0ab90d2711f2ed92838dd6f770">TEST_F()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a86072d4287aa9b104b5b29d70680e2f5"></a>
