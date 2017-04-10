@@ -144,7 +144,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">class</span>(origen_betaspectra)::this</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::nuclide_type</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">call </span>f_origen_betaspectra_set_nuclide_type(this%instance_ptr, nuclide_type)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0228ddd5283582237dca081137b4dab3"></a>
@@ -160,7 +164,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">class</span>(origen_betaspectra)::this</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    result2return=f_origen_betaspectra_nuclide_type(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab429da3e8a1f822bf8f0320c6e02e562"></a>
@@ -176,7 +184,10 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">class</span>(origen_betaspectra) :: this</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    this%instance_ptr = f_origen_betaspectra_initialize()</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3d15bde6ff9e07907629f180848e4679"></a>
@@ -192,7 +203,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">class</span>(origen_betaspectra) :: this</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">call </span>f_origen_betaspectra_destroy(this%instance_ptr)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    this%instance_ptr = c_null_ptr</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

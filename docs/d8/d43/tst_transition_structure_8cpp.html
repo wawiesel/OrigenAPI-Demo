@@ -145,7 +145,31 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#ae0bf0ff5d09e01b0b903f1392d09d41c">FakeFactory::createLibraryHeader_random1()</a>, <a class="el" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ad6fdab80f4d25ff470dc98ec59635e5c">TransitionStructure::deserialize()</a>, <a class="el" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ae4c23583af6639cd829b18fac3280e24">TransitionStructure::serialize()</a>, and <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#aa43caa75e9076ecce3a7c7cf6facd7ed">FakeFactory::TransitionStructure_random1()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// create fake</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html">LibraryHeader</a> lh = FakeFactory::createLibraryHeader_random1();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html">TransitionStructure</a> obj1;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    FakeFactory::TransitionStructure_random1( obj1, lh );</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// serialize</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    SerialStream ss;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> return_code = obj1.<a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ae4c23583af6639cd829b18fac3280e24">serialize</a>( &amp;ss );</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    EXPECT_EQ( 0, return_code );</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// deserialize</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html">TransitionStructure</a> obj2;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    return_code = obj2.<a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#ad6fdab80f4d25ff470dc98ec59635e5c">deserialize</a>( &amp;ss );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EXPECT_EQ( 0, return_code );</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// compare</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    EXPECT_EQ( obj1, obj2 );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html">Origen::LibraryHeader</a></div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:12</div></div>
+<div class="ttc" id="class_origen_1_1_transition_structure_html_ad6fdab80f4d25ff470dc98ec59635e5c"><div class="ttname"><a href="../../d5/d8b/class_origen_1_1_transition_structure.html#ad6fdab80f4d25ff470dc98ec59635e5c">Origen::TransitionStructure::deserialize</a></div><div class="ttdeci">int deserialize(Standard::AbstractStream *stream)</div><div class="ttdef"><b>Definition:</b> TransitionStructure.cpp:155</div></div>
+<div class="ttc" id="class_origen_1_1_transition_structure_html"><div class="ttname"><a href="../../d5/d8b/class_origen_1_1_transition_structure.html">Origen::TransitionStructure</a></div><div class="ttdoc">Container for transition structure data. </div><div class="ttdef"><b>Definition:</b> TransitionStructure.h:22</div></div>
+<div class="ttc" id="class_origen_1_1_transition_structure_html_ae4c23583af6639cd829b18fac3280e24"><div class="ttname"><a href="../../d5/d8b/class_origen_1_1_transition_structure.html#ae4c23583af6639cd829b18fac3280e24">Origen::TransitionStructure::serialize</a></div><div class="ttdeci">int serialize(Standard::AbstractStream *stream) const </div><div class="ttdef"><b>Definition:</b> TransitionStructure.cpp:122</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

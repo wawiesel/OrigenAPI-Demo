@@ -477,7 +477,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Number of steps. </p>
-
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">integer</span> :: nsteps</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aca217f2b2b238f4a56fb199d8d20edb6"></a>
@@ -491,7 +492,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated ORIGEN library </p>
-
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>),<span class="keywordtype">pointer</span> :: lib =&gt; null()</div>
+<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0fc989bd87389feef6034cb58c4c34f1"></a>
@@ -505,7 +508,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated neutron library </p>
-
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">type</span>(neutron_library_class),<span class="keywordtype">pointer</span> :: nlib =&gt; null()</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="add6240e26da7e8a2ef8e0d08cf6ea940"></a>
@@ -519,7 +523,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set of options </p>
-
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">type</span>(origen_neutron_options) :: opts</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad7cac18a0c1165f115c030c052ee9194"></a>
@@ -533,7 +538,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>final spontaneous fission source by nuclide [libiact * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source_sf(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9d9b30c0efba5f1c47dd055c40ccf31b"></a>
@@ -547,7 +553,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>alpha,n source term by nuclide [libiact+libifp * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source_an(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3e046616c8b68096f86f1aa049fe6f8e"></a>
@@ -561,7 +568,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>delayed neutron sources [libifp * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source_dn(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a97e7d4d9526208e33b999e7d32b310d4"></a>
@@ -575,7 +583,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>alpha,n neutron spectra [ngroups * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum_an(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad545ca0dba852deddd6fb8c973662c55"></a>
@@ -589,7 +598,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>spontaneous fission neutron spectra [ngroups * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum_sf(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a06935321ae112b3e2a655a1a9d43ab90"></a>
@@ -603,7 +613,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>delayed neutron spectra [ngroups * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum_dn(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab9dcfe34b8309f1065ca50da33843d1b"></a>
@@ -617,7 +628,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>final total neutron spectra [ngroups * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7807e7936eb9e8d08a422996a8c8dd42"></a>
@@ -631,7 +643,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>number of sources nuclides </p>
-
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">integer</span> :: n_source_nuclides</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae80b64dbbd8d17d597f2bb27b4e2af37"></a>
@@ -645,7 +658,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>list of source nuclides - ZAI [n_source_nuclides] </p>
-
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">allocatable</span> :: source_nuclides(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0b6e7394c8efbfad8cd7241fc286b4b6"></a>
@@ -659,7 +673,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>list of source nuclides - M [n_source_nuclides] </p>
-
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">allocatable</span> :: source_nuclide_indexes(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5b3d63dda301c2d49f413adc97fe41c9"></a>
@@ -673,7 +688,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>source nuclide total alpha branching ratios [n_source_nuclides] </p>
-
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source_branching(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a49c603d018b135075f155f524d8b80d7"></a>
@@ -687,7 +703,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>decay constants of source nuclides [n_source_nuclides] </p>
-
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source_lambdas(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0cfa5ebfd335a33d728afb621c614db6"></a>
@@ -701,7 +718,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>concentrations of the source nuclides [n_source_nuclides,0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source_concentrations(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a835c3070ae3ccf24e439ba6b24258851"></a>
@@ -715,7 +733,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>number of SF neutron sources </p>
-
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">integer</span> :: sf_source_n</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a67cf086eadc716b4b5d197152312060b"></a>
@@ -729,7 +748,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>spontaneous fission neutron source nuclides [itot] </p>
-
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">character(len=20)</span>, <span class="keywordtype">allocatable</span> :: sf_source_nuclides(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aad8b045b1adac5479bf23b8652f2a3f5"></a>
@@ -743,7 +763,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>spontaneous fission neutron source data [itot, 6] </p>
-
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: sf_source_data(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a83f58a07e1ad0ba47e68932cba78bf4d"></a>
@@ -757,7 +778,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>spontaneous fission neutron spectra by source nuclide [ngroups, itot] </p>
-
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: sf_source_spectra(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9c5834997431b836aa87280939afe5bc"></a>
@@ -771,7 +793,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>number of delayed neutron source nuclides </p>
-
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">integer</span> :: dn_source_n</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="acc86bfed9387c5f96da9d7de8e0cd0dc"></a>
@@ -785,7 +808,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>delayed neutron source nuclides [itot] </p>
-
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">character(20)</span>, <span class="keywordtype">allocatable</span> :: dn_source_nuclides(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a6540c33fc74f19c0804cce5f68437020"></a>
@@ -799,7 +823,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>delayed neutron source [itot, 5] </p>
-
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: dn_source_data(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad0b836d8cdc8cfbb0f586c593bb2fe4d"></a>
@@ -813,7 +838,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>delayed neutron spectra by source nuclide [ngroups, itot] </p>
-
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: dn_source_spectra(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0285be3d8fe73d2a6a7739fa9b8518bb"></a>
@@ -827,7 +853,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>average neutron energy (a,n) </p>
-
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> :: average_energy_an</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a81a14b56b7e45ad555760bf75fd755b0"></a>
@@ -841,7 +868,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>average neutron energy (SF) </p>
-
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> :: average_energy_sf</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae86b6580406f18b0ee8a5904244b0a2f"></a>
@@ -855,7 +883,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>average neutron energy (DN) </p>
-
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> :: average_energy_dn</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa5af797cbf96d1d1313f5e5716c17ca1"></a>
@@ -869,7 +898,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>average neutron energy (total) </p>
-
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> :: average_energy</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a462b50ef53fd58c7d8633ba2581c15b2"></a>
@@ -883,7 +913,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>[ngroups, n_target] </p>
-
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: an_target_spectra(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="acda6d058d035ee1f6fe96f257bbb8a68"></a>
@@ -895,7 +926,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">integer</span> :: n_matrix</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae112f575546b8e3e170ebe9a05f7aea4"></a>
@@ -907,7 +939,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">allocatable</span> :: matrix_z(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a97a364a7f95930e280901d4a4e84a2f8"></a>
@@ -919,7 +952,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: matrix_x(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="adcc5eca204ff2811436bd031b0aacc61"></a>
@@ -931,7 +965,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">integer</span> :: n_target</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a1ff0091fde488a70a78670d3e820c321"></a>
@@ -943,7 +978,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">integer</span> , <span class="keywordtype">allocatable</span> :: target_n(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a56a418f4b007a31468d5353f53449f43"></a>
@@ -955,7 +991,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> , <span class="keywordtype">allocatable</span> :: target_x(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5ba3b6ee30c6690ed7c607f2beb37ca3"></a>
@@ -969,7 +1006,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>flag for lack of neutron calculations data </p>
-
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">logical</span> :: noneut</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this type was generated from the following file:<ul>

@@ -175,7 +175,15 @@ Protected Attributes</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a104">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../dd/d44/class_multi_zone_depleter_tester.html#affaa92aa09a60a482d4b5c15a6f3362d">MultiZoneDepleterTester::matmap</a>, <a class="el" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">MultiZoneDepleterTester::SetUp()</a>, and <a class="el" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#aa1c7c6ecade46891b6d8d38e64c17bda">stepper</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">MultiZoneDepleterTester::SetUp</a>();</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        ASSERT_FALSE( <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#affaa92aa09a60a482d4b5c15a6f3362d">matmap</a> == <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        <a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#aa1c7c6ecade46891b6d8d38e64c17bda">stepper</a> = GetParam();</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    }</div>
+<div class="ttc" id="class_multi_zone_depleter_tester_p_html_aa1c7c6ecade46891b6d8d38e64c17bda"><div class="ttname"><a href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#aa1c7c6ecade46891b6d8d38e64c17bda">MultiZoneDepleterTesterP::stepper</a></div><div class="ttdeci">SP_Stepper stepper</div><div class="ttdef"><b>Definition:</b> tstMultiZoneDepleter.cpp:511</div></div>
+<div class="ttc" id="class_multi_zone_depleter_tester_html_affaa92aa09a60a482d4b5c15a6f3362d"><div class="ttname"><a href="../../dd/d44/class_multi_zone_depleter_tester.html#affaa92aa09a60a482d4b5c15a6f3362d">MultiZoneDepleterTester::matmap</a></div><div class="ttdeci">Origen::SP_MaterialMap matmap</div><div class="ttdef"><b>Definition:</b> tstMultiZoneDepleter.cpp:165</div></div>
+<div class="ttc" id="class_multi_zone_depleter_tester_html_a1b06560e0e01a806b92c2386220d0b57"><div class="ttname"><a href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">MultiZoneDepleterTester::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> tstMultiZoneDepleter.cpp:171</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a324819835f8847e4bcee0b884d8c7860"></a>
@@ -199,7 +207,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a29">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
-</dl>
+</dl><div class="fragment"><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a93554aee92b1a0701d801d34ef056df2">dc</a>.deepDelete();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;finished WrapUp&quot;</span> );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="ttc" id="class_multi_zone_depleter_tester_html_a93554aee92b1a0701d801d34ef056df2"><div class="ttname"><a href="../../dd/d44/class_multi_zone_depleter_tester.html#a93554aee92b1a0701d801d34ef056df2">MultiZoneDepleterTester::dc</a></div><div class="ttdeci">DataContainer dc</div><div class="ttdef"><b>Definition:</b> tstMultiZoneDepleter.cpp:163</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af52823a74894aa413e99d2fa48c90566"></a>
@@ -224,7 +237,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#a30">Core/xf/tests/tstMultiZoneDepleter.cpp</a>.</dd>
-</dl>
+</dl><div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        os &lt;&lt; <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#affaa92aa09a60a482d4b5c15a6f3362d">matmap</a>-&gt;to_string() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="ttc" id="class_multi_zone_depleter_tester_html_affaa92aa09a60a482d4b5c15a6f3362d"><div class="ttname"><a href="../../dd/d44/class_multi_zone_depleter_tester.html#affaa92aa09a60a482d4b5c15a6f3362d">MultiZoneDepleterTester::matmap</a></div><div class="ttdeci">Origen::SP_MaterialMap matmap</div><div class="ttdef"><b>Definition:</b> tstMultiZoneDepleter.cpp:165</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

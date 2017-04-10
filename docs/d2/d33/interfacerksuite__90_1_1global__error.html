@@ -160,7 +160,111 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;<span class="comment">! Part of rksuite_90 v1.0 (Aug 1994)</span></div>
+<div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;<span class="comment">!         software for initial value problems in ODEs</span></div>
+<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;<span class="comment">! Authors: R.W. Brankin (NAG Ltd., Oxford, England)</span></div>
+<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;<span class="comment">!          I. Gladwell  (Math Dept., SMU, Dallas, TX, USA)</span></div>
+<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;<span class="comment">!          see main doc for contact details</span></div>
+<div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160;<span class="keywordtype">type</span>(<a class="code" href="../../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html">rk_comm_real_1d</a>), <span class="keywordtype">intent(inout)</span> :: comm</div>
+<div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;<span class="keywordtype">real(kind=wp)</span>, <span class="keywordtype">optional</span>, <span class="keywordtype">intent(out)</span> :: max_error</div>
+<div class="line"><a name="l02438"></a><span class="lineno"> 2438</span>&#160;<span class="keywordtype">real(kind=wp)</span>, <span class="keywordtype">optional</span>, <span class="keywordtype">intent(out)</span> :: t_max_error                  <span class="comment">!indep!</span></div>
+<div class="line"><a name="l02439"></a><span class="lineno"> 2439</span>&#160;<span class="keywordtype">real(kind=wp)</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">optional</span>, <span class="keywordtype">intent(out)</span> :: rms_error      <span class="comment">!shp-dep!</span></div>
+<div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02441"></a><span class="lineno"> 2441</span>&#160;<span class="keywordtype">character(len=*)</span>, <span class="keywordtype">parameter</span> :: srname=<span class="stringliteral">&quot;GLOBAL_ERROR&quot;</span></div>
+<div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;<span class="keywordtype">integer</span> :: ier, nrec, state</div>
+<div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160;<span class="keywordtype">intrinsic</span>         sqrt</div>
+<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;<span class="keywordtype">integer</span>, <span class="keywordtype">parameter</span> :: not_ready=-1, not_reusable=-3, fatal=911, &amp;</div>
+<div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;   catastrophe=912, just_fine=1</div>
+<div class="line"><a name="l02449"></a><span class="lineno"> 2449</span>&#160;<span class="keywordtype">logical</span>, <span class="keywordtype">parameter</span> :: ask=.true.</div>
+<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;ier = just_fine; nrec = 0</div>
+<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160;body: do</div>
+<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;<span class="comment">!  Is it permissible to call GLOBAL_ERROR?</span></div>
+<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160;   state = <a class="code" href="../../d6/d3c/namespacerksuite__90.html#a00498fc41667433023ec5029c417c4e5">get_saved_state_r1</a>(srname,comm%save_states)</div>
+<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;   <span class="keywordflow">if</span> (state==fatal) then</div>
+<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;      ier = catastrophe; nrec = 1; <span class="keyword">write</span> (comm%rec,<span class="stringliteral">&quot;(a)&quot;</span>) &amp;</div>
+<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;<span class="stringliteral">&quot; ** A catastrophic error has already been detected elsewhere.&quot;</span></div>
+<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;      <span class="keywordflow">exit</span> body</div>
+<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;<span class="keyword">   end </span>if</div>
+<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160;   <span class="keywordflow">if</span> (state==not_reusable) then</div>
+<div class="line"><a name="l02464"></a><span class="lineno"> 2464</span>&#160;      ier = fatal; nrec = 2; <span class="keyword">write</span> (comm%rec,<span class="stringliteral">&quot;(a/a)&quot;</span>) &amp;</div>
+<div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160;<span class="stringliteral">&quot; ** You have already made a call to GLOBAL_ERROR after a hard failure was&quot;</span>, &amp;</div>
+<div class="line"><a name="l02466"></a><span class="lineno"> 2466</span>&#160;<span class="stringliteral">&quot; ** reported from the integrator. You cannot call GLOBAL_ERROR again.&quot;</span></div>
+<div class="line"><a name="l02467"></a><span class="lineno"> 2467</span>&#160;      <span class="keywordflow">exit</span> body</div>
+<div class="line"><a name="l02468"></a><span class="lineno"> 2468</span>&#160;<span class="keyword">   end </span>if</div>
+<div class="line"><a name="l02469"></a><span class="lineno"> 2469</span>&#160;   state = <a class="code" href="../../d6/d3c/namespacerksuite__90.html#a00498fc41667433023ec5029c417c4e5">get_saved_state_r1</a>(<span class="stringliteral">&quot;STEP_INTEGRATE&quot;</span>,comm%save_states)</div>
+<div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;   <span class="keywordflow">if</span> (state==not_ready) then</div>
+<div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;      ier = fatal; nrec = 1</div>
+<div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;      <span class="keywordflow">if</span> (comm%use_range) then</div>
+<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;         <span class="keyword">write</span> (comm%rec,<span class="stringliteral">&quot;(a)&quot;</span>) &amp;</div>
+<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;<span class="stringliteral">&quot; ** You have not yet called RANGE_INTEGRATE, so you cannot call GLOBAL_ERROR.&quot;</span></div>
+<div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;      else</div>
+<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;         <span class="keyword">write</span> (comm%rec,<span class="stringliteral">&quot;(a)&quot;</span>) &amp;</div>
+<div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160;<span class="stringliteral">&quot; ** You have not yet called STEP_INTEGRATE, so you cannot call GLOBAL_ERROR.&quot;</span></div>
+<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;<span class="keyword">      end </span>if</div>
+<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;      <span class="keywordflow">exit</span> body</div>
+<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;<span class="keyword">   end </span>if</div>
+<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;<span class="comment">!  Set flag so that the routine can only be called once after a hard</span></div>
+<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;<span class="comment">!  failure from the integrator.</span></div>
+<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;   <span class="keywordflow">if</span> (state==5 .or. state==6) ier = not_reusable</div>
+<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;<span class="comment">!  Check that ERROR_ASSESS was set properly for error assessment in SETUP.</span></div>
+<div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;   <span class="keywordflow">if</span> (.not.comm%erason) then</div>
+<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160;      ier = fatal; nrec = 3; <span class="keyword">write</span> (comm%rec,<span class="stringliteral">&quot;(a/a/a)&quot;</span>) &amp;</div>
+<div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;<span class="stringliteral">&quot; ** No error assessment is available since you did not ask for it in your&quot;</span>,&amp;</div>
+<div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;<span class="stringliteral">&quot; ** call to the routine SETUP. Check your program carefully.&quot;</span></div>
+<div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160;      <span class="keywordflow">exit</span> body</div>
+<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;<span class="keyword">   end </span>if</div>
+<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160;<span class="comment">! Check size of RMS_ERROR</span></div>
+<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160;   <span class="keywordflow">if</span> (<span class="keyword">present</span>(rms_error)) then</div>
+<div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160;      <span class="keywordflow">if</span> (any(shape(rms_error) /= shape(comm%y))) then</div>
+<div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160;         ier = fatal; nrec = 2; <span class="keyword">write</span> (comm%rec,<span class="stringliteral">&quot;(a,a)&quot;</span>) &amp;</div>
+<div class="line"><a name="l02501"></a><span class="lineno"> 2501</span>&#160;<span class="stringliteral">&quot; ** The shape of RMS_ERROR is not consistent with the shape of the&quot;</span>, &amp;</div>
+<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;<span class="stringliteral">&quot; ** dependent variables.&quot;</span></div>
+<div class="line"><a name="l02503"></a><span class="lineno"> 2503</span>&#160;         <span class="keywordflow">exit</span> body</div>
+<div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160;<span class="keyword">      end </span>if</div>
+<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160;<span class="keyword">   end </span>if</div>
+<div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;<span class="comment">!  Check to see if the integrator has not actually taken a step.</span></div>
+<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02509"></a><span class="lineno"> 2509</span>&#160;   <span class="keywordflow">if</span> (comm%step_count==0) then</div>
+<div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;      ier = fatal; nrec = 2; <span class="keyword">write</span> (comm%rec,<span class="stringliteral">&quot;(a/a)&quot;</span>) &amp;</div>
+<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;<span class="stringliteral">&quot; ** The integrator has not actually taken any successful steps. You cannot&quot;</span>,&amp;</div>
+<div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160;<span class="stringliteral">&quot; ** call GLOBAL_ERROR in this circumstance. Check your program carefully.&quot;</span></div>
+<div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;       <span class="keywordflow">exit</span> body</div>
+<div class="line"><a name="l02514"></a><span class="lineno"> 2514</span>&#160;<span class="keyword">   end </span>if</div>
+<div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02516"></a><span class="lineno"> 2516</span>&#160;<span class="comment">!  Compute RMS error and set output variables.</span></div>
+<div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160;   <span class="keywordflow">if</span> (<span class="keyword">present</span>(max_error)) max_error = comm%ge_max_contrib</div>
+<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160;   <span class="keywordflow">if</span> (<span class="keyword">present</span>(t_max_error)) t_max_error = comm%t_ge_max_contrib</div>
+<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;   <span class="keywordflow">if</span> (<span class="keyword">present</span>(rms_error)) rms_error = &amp;</div>
+<div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;      sqrt(comm%ge_assess/<span class="keywordtype">real</span>(comm%step_count,kind=<a class="code" href="../../dd/d4e/namespacerksuite__90__prec.html#a572601519dfd43a8990fcc72c97f14c9">wp</a>))</div>
+<div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;   <span class="keywordflow">exit</span> body</div>
+<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;<span class="keywordflow">end do</span> body</div>
+<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;<span class="comment">!</span></div>
+<div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;<span class="keyword">call </span><a class="code" href="../../d6/d3c/namespacerksuite__90.html#a9d49d78d449878c244be5e635935b7d2">rkmsg_r1</a>(ier,srname,nrec,comm)</div>
+<div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160;<span class="comment">!</span></div>
+<div class="ttc" id="namespacerksuite__90_html_a9d49d78d449878c244be5e635935b7d2"><div class="ttname"><a href="../../d6/d3c/namespacerksuite__90.html#a9d49d78d449878c244be5e635935b7d2">rksuite_90::rkmsg_r1</a></div><div class="ttdeci">subroutine rkmsg_r1(ier, srname, nrec, comm, flag)</div><div class="ttdef"><b>Definition:</b> rksuite_90.f90:2954</div></div>
+<div class="ttc" id="namespacerksuite__90_html_a00498fc41667433023ec5029c417c4e5"><div class="ttname"><a href="../../d6/d3c/namespacerksuite__90.html#a00498fc41667433023ec5029c417c4e5">rksuite_90::get_saved_state_r1</a></div><div class="ttdeci">integer function get_saved_state_r1(srname, save_states)</div><div class="ttdef"><b>Definition:</b> rksuite_90.f90:3073</div></div>
+<div class="ttc" id="structrksuite__90_1_1rk__comm__real__1d_html"><div class="ttname"><a href="../../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html">rksuite_90::rk_comm_real_1d</a></div><div class="ttdef"><b>Definition:</b> rksuite_90.f90:44</div></div>
+<div class="ttc" id="namespacerksuite__90__prec_html_a572601519dfd43a8990fcc72c97f14c9"><div class="ttname"><a href="../../dd/d4e/namespacerksuite__90__prec.html#a572601519dfd43a8990fcc72c97f14c9">rksuite_90_prec::wp</a></div><div class="ttdeci">integer, parameter wp</div><div class="ttdef"><b>Definition:</b> rksuite_90.f90:20</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>

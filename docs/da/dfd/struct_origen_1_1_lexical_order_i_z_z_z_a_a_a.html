@@ -155,7 +155,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::stringstream ss_lhs, ss_rhs;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> lhs_r = ScaleData::Utils::pizzzaaa_to_zzzaaai( lhs );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> rhs_r = ScaleData::Utils::pizzzaaa_to_zzzaaai( rhs );</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ss_lhs &lt;&lt; std::setw( 7 ) &lt;&lt; std::setfill( <span class="charliteral">&#39;0&#39;</span> ) &lt;&lt; lhs_r;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ss_rhs &lt;&lt; std::setw( 7 ) &lt;&lt; std::setfill( <span class="charliteral">&#39;0&#39;</span> ) &lt;&lt; rhs_r;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> ss_lhs.str() &lt; ss_rhs.str();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>

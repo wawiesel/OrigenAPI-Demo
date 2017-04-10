@@ -156,7 +156,20 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Concentrations::units()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">size_t</span> bytes = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        bytes +=</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Acc&lt;Origen::ConcentrationUnit&gt;::read</a>( a, <span class="stringliteral">&quot;units&quot;</span>, obj.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>() );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Acc&lt;Origen::NuclideSet&gt;::read</a>(</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            a, <span class="stringliteral">&quot;nuclide_set&quot;</span>, obj.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> );</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Acc&lt;Vec_Dbl&gt;::read</a>( a, <span class="stringliteral">&quot;vals&quot;</span>, obj.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> bytes;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="namespace_origen_html_ad9dbf183ba4f551eeab50e180dce7f18"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read</a></div><div class="ttdeci">void read(const bof::BOFObject &amp;obj, TagManager &amp;tag_manager)</div><div class="ttdoc">read a tag manager from a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:6</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab5709e367acc993c40084a72fd150daa"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Origen::Concentrations::units</a></div><div class="ttdeci">ConcentrationUnit units() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:357</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a175631130a8214dc436e0ee39114ddd5"></a>
@@ -198,7 +211,20 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">size_t</span> bytes = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Acc&lt;Origen::ConcentrationUnit&gt;::write</a>(</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            a, <span class="stringliteral">&quot;units&quot;</span>, obj.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>(), only_size );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Acc&lt;Origen::NuclideSet&gt;::write</a>(</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            a, <span class="stringliteral">&quot;nuclide_set&quot;</span>, obj.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>, only_size );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Acc&lt;Vec_Dbl&gt;::write</a>( a, <span class="stringliteral">&quot;vals&quot;</span>, obj.<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>, only_size );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> bytes;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="namespace_origen_html_adc3bd8008cc072027f3900e34d9f3747"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write</a></div><div class="ttdeci">void write(bof::BOFObject &amp;obj, std::string name, const TagManager &amp;tag_manager)</div><div class="ttdoc">write a tag manager to a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:41</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab5709e367acc993c40084a72fd150daa"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Origen::Concentrations::units</a></div><div class="ttdeci">ConcentrationUnit units() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:357</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

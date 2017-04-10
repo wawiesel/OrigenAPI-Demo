@@ -171,7 +171,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">Obiwan_view::b_opts</a>, and <a class="el" href="../../de/d95/class_origen_1_1_obiwan__view.html#aea85d4851b7151e59419fee113b3e75c">Obiwan_view::populate()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">b_opts</a> = <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#aea85d4851b7151e59419fee113b3e75c">populate</a>( argc, argv );</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_obiwan__view_html_aea85d4851b7151e59419fee113b3e75c"><div class="ttname"><a href="../../de/d95/class_origen_1_1_obiwan__view.html#aea85d4851b7151e59419fee113b3e75c">Origen::Obiwan_view::populate</a></div><div class="ttdeci">static ScaleUtils::IO::DB populate(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> Obiwan_view.cpp:231</div></div>
+<div class="ttc" id="class_origen_1_1_obiwan__view_html_aa06610b9dd08f21e252f7976eea33c2d"><div class="ttname"><a href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">Origen::Obiwan_view::b_opts</a></div><div class="ttdeci">ScaleUtils::IO::DB b_opts</div><div class="ttdef"><b>Definition:</b> Obiwan_view.h:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5e2e533699c0be29ee63ba4ec0a004ca"></a>
@@ -187,7 +192,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;: <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">b_opts</a>( opts ) {}</div>
+<div class="ttc" id="class_origen_1_1_obiwan__view_html_aa06610b9dd08f21e252f7976eea33c2d"><div class="ttname"><a href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">Origen::Obiwan_view::b_opts</a></div><div class="ttdeci">ScaleUtils::IO::DB b_opts</div><div class="ttdef"><b>Definition:</b> Obiwan_view.h:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7c8a5b92270397c01ebc52127f8fb8c8"></a>
@@ -210,7 +217,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -239,7 +247,135 @@ Protected Attributes</h2></td></tr>
 <p>Take care to not mess up the formatting below. We are using doxygen snippets to get that text to appear as-is in the doxygen documentation for this script. </p>
 
 <p>Referenced by <a class="el" href="../../de/d95/class_origen_1_1_obiwan__view.html#ab218b1b9a5686a449113d1a46e702d68">Obiwan_view::execute()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#a73f30f776dc60ca92d5204636b5ee1bd">help</a> = R<span class="stringliteral">&quot;help(</span><span class="comment"></span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//! [help]</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"></span> purpose: display detailed contents of ORIGEN binary files</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; usage: obiwan view  -format=String()  [opts]  file</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        -flag=Type(DefaultValue)       DESCRIPTION</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ________________________       ____________________________</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        -prec=Int(4)                   number of significant digits to output</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        -zeros=Bool(1)                 whether to output zero values</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        -symbols=Bool(0)               whether to output numeric ids (1001) or symbols (H-1)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                       same as -idform=&#39;$S:$ee$AAA$m&#39;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        -transpose=Bool(0)             whether to transpose table</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        -pos=Int(1)                    position in library to output (0 is all positions)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                       &lt;0 means NORMALIZE output to that position</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                       this is very useful for viewing xs data</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                       across many scales</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        -sizzzaaa=Int(0)               nuclide identifier s=sublibrary 1|2|3</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                       e.g. u235 as an actinide is 20092235</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                                                   SIZZZAAA</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        -idform=String($S$I$ZZZ$AAA)   controls printout of ids, the following</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                       are subsituted</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                         $S - sublib integer</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                         $I - isomeric state integer</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                       $ZZZ - up to 3 digits of atomic number (also Z, ZZ)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                       $AAA - up to 3 digits of mass number (also A, AA)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                        $EE - up to 2 characters elemental symbol (also Ee,ee for different case)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                                         $M - metastable indicator &#39;M&#39; for first, &#39;M2&#39; for second, etc. (also m)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                       DEFAULT with -symbols=0 -&gt; -idform=&#39;$S$I$ZZZ$AAA&#39;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                               with -symbols=1 -&gt; -idform=&#39;$S:$ee$AAA$m&#39;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        -units=String()                when printing, choose units</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                         type  format  units</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                          f71     csv  abso|fiss|capt|airm|apel|</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                                       atom|becq|curi|gamw|gamm|</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                                       gato|gper|gram|h2om|kilo|</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                                       wpel|watt|mevs|part|inte|</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                                       ener</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        -type=String()                 load only a partciular type</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                          f33: Origen::Library</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                          f71: Origen::StateSet</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                          yld: Origen::YieldResource</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                          dec: Origen::DecayResource</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        -tid=Int(0)                    otherwise uses trial and error</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                                       transition id: dk mode (&lt;0) or reaction MT number (&gt;0)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        -flux=Real(1.0)                multiply reaction matrix coefficients by flux (n/cm^2s)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        Filter input (NOTE: with -format=graphviz only)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        -allow_s=Array(2)              JSON-formatted list of sublibs integers (1,2,3)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        -allow_i=Array()               JSON-formatted list of isomeric states ()</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        -allow_z=Array()               JSON-formatted list of atomic numbers ()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        -allow_a=Array()               JSON-formatted list of mass numbers ()</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        -allow_decay=Bool(true)        whether to display decay transitions</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        -allow_fission=Bool(false)     whether to display fission transitions</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        -allow_reaction=Bool(true)     whether to display reaction transitions</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        -allow_transition_id()         JSON-formatted list of transition ids</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        -include_byproducts            whether to include byproduct reactions arrows</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        -format=String()               format for output</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                       Origen::Library formats</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                           coeff   - output tabular transition coefficients</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                           coefft  - same as coeff but with transition ids (dk/mts)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                           json    - output in JSON format</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                                           tags    - output file tags</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                                           nucl    - nuclide list</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                           nprodr  - neutron production ratio</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                           genneu  - neutron generation</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                           loxs    - loss xs</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                                           fisxs   - fission xs</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                                           ts      - transition system</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                           burnups - output burnup list</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                          reaction - allowed reactions</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                          graphviz - output dot file of transitions to STDOUT</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                      Origen::StateSet</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                                           csv     - comma-separated values</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                                           info    - information table</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                           tags    - tags stored on each state</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; NOTE: all non-essential output goes to STDERR</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; example:</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    #display a table of loss cross section data</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    #pos=0 is for all positions (burnups) on library</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    $ obiwan view -format=loxs -pos=0 ./a10_e15w01.bof 2&gt;/dev/null</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;     nuclide  0.0000e+00  1.5000e+03  4.5000e+03  7.5000e+03  1.0500e+04  1.3500e+04  1.6500e+04  3.1500e+04  4.6500e+04  5.8500e+04  7.0500e+04</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    10001001  2.5724e-01  2.6172e-01  2.6315e-01  2.6400e-01  2.6582e-01  2.6731e-01  2.6850e-01  2.7275e-01  2.7622e-01  2.7860e-01  2.8056e-01</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    10001002  8.9254e-03  9.6637e-03  9.8350e-03  9.9177e-03  1.0278e-02  1.0590e-02  1.0853e-02  1.1883e-02  1.2778e-02  1.3409e-02  1.3945e-02</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    10001003  2.3025e-04  2.4988e-04  2.5428e-04  2.5635e-04  2.6587e-04  2.7415e-04  2.8111e-04  3.0845e-04  3.3223e-04  3.4898e-04  3.6325e-04</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    10001004  1.2445e+11  1.3507e+11  1.3744e+11  1.3856e+11  1.4371e+11  1.4818e+11  1.5194e+11  1.6672e+11  1.7957e+11  1.8863e+11  1.9634e+11</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    ...</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    #you could always pipe through grep, e.g. | grep 20092235 to get a</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    #particular line, but in many cases, the transpose table is better</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    #note normalization to first position value</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    $ obiwan view -format=loxs -sizzzaaa=20092235 -pos=-1 -transpose=1 ./a10_e15w01.bof 2&gt;/dev/null</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;             nuclide    20092235</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          0.0000e+00  1.0000e+00</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;          1.5000e+03  9.9738e-01</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;          4.5000e+03  1.0177e+00</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;          7.5000e+03  1.0398e+00</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          1.0500e+04  1.0466e+00</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;          1.3500e+04  1.0517e+00</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;          1.6500e+04  1.0560e+00</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;          3.1500e+04  1.0677e+00</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;          4.6500e+04  1.0709e+00</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;          5.8500e+04  1.0711e+00</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;          7.0500e+04  1.0707e+00</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    #output transitions (neato from graphviz works best)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    obiwan view -format=graphviz -allow_s=&quot;[1,2,3]&quot; -include_byproducts=0 \</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        $DATA/origen_library/pwr.rev03.orglib &gt;transitions.dot</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    neato -n1 transitions.dot -T pdf &gt;transitions.pdf</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">//! [help]</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment"></span>    )help&quot;;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="comment">// break up tag so Doxygen doesn&#39;t think this is a 3rd tag</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">return</span> ScaleUtils::IO::removeSubstring( help,</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                                            <span class="stringliteral">&quot;//! [&quot;</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                            <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                            <span class="stringliteral">&quot;help&quot;</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                                            <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                            <span class="stringliteral">&quot;]&quot;</span> );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_obiwan__view_html_a73f30f776dc60ca92d5204636b5ee1bd"><div class="ttname"><a href="../../de/d95/class_origen_1_1_obiwan__view.html#a73f30f776dc60ca92d5204636b5ee1bd">Origen::Obiwan_view::help</a></div><div class="ttdeci">static std::string help()</div><div class="ttdoc">provide a help message </div><div class="ttdef"><b>Definition:</b> Obiwan_view.cpp:96</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aea85d4851b7151e59419fee113b3e75c"></a>
@@ -277,7 +413,82 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#ab2a65e639a6ebc747233370b4bed0278">Origen::populateObiwan_dataType()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../de/d95/class_origen_1_1_obiwan__view.html#a7efb996a1de979a9d1428a8d1e5a69f5">Obiwan_view::Obiwan_view()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    Standard::CommandLine cmd( argc, argv );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// get files</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Origen::Vec_Str</a> files = cmd.arguments();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    ScaleUtils::IO::DB base;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// output error message</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">if</span>( files.size() == 0 )</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        base.set( <span class="stringliteral">&quot;help&quot;</span>, <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( files.size() != 1 )</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        base.appendError( <span class="stringliteral">&quot;Please provide 1 and only 1 filenames&quot;</span> );</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// debugging echo</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        jDebugLine( cmd.toString() );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">// expand globs (e.g. *.txt)</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        ScaleUtils::IO::expandPaths( files );</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="comment">// main file</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        base.set( <span class="stringliteral">&quot;path&quot;</span>, files[0] );</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="comment">// get data type to read</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#ab2a65e639a6ebc747233370b4bed0278">populateObiwan_dataType</a>( &amp;base, cmd.getValue( <span class="stringliteral">&quot;-type&quot;</span>, <span class="stringliteral">&quot;&quot;</span> ) );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="comment">// output format</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">// (json|coeff|coefft|nucl|ts|all_tags|id_tags|interp_tags)</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        base.set( <span class="stringliteral">&quot;format&quot;</span>, cmd.getValue( <span class="stringliteral">&quot;-format&quot;</span>, <span class="stringliteral">&quot;&quot;</span> ) );</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="comment">// other parameters</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        base.set( <span class="stringliteral">&quot;prec&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-prec&quot;</span>, 4 ) );</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        base.set( <span class="stringliteral">&quot;zeros&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-zeros&quot;</span>, 1 ) == 1 );</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        base.set( <span class="stringliteral">&quot;pos&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-pos&quot;</span>, 1 ) );</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        base.set( <span class="stringliteral">&quot;sizzzaaa&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-sizzzaaa&quot;</span>, 0 ) );</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        std::string idform = <span class="stringliteral">&quot;$S$I$ZZZ$AAA&quot;</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">if</span>( cmd.getValueAs( <span class="stringliteral">&quot;-symbols&quot;</span>, 0 ) == 1 ) idform = <span class="stringliteral">&quot;$S:$ee$AAA$m&quot;</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        base.set( <span class="stringliteral">&quot;units&quot;</span>, cmd.getValue( <span class="stringliteral">&quot;-units&quot;</span>, <span class="stringliteral">&quot;&quot;</span> ) );</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        base.set( <span class="stringliteral">&quot;idform&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-idform&quot;</span>, idform ) );</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        base.set( <span class="stringliteral">&quot;tid&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-tid&quot;</span>, 0 ) );</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        base.set( <span class="stringliteral">&quot;transpose&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-transpose&quot;</span>, 0 ) == 1 );</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        base.set( <span class="stringliteral">&quot;flux&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-flux&quot;</span>, -1.0 ) );</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="comment">// options for graphviz</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        base.setFromJson&lt;IntegerList*&gt;( <span class="stringliteral">&quot;allow_s&quot;</span>,</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                                        cmd.getValue( <span class="stringliteral">&quot;-allow_s&quot;</span>, <span class="stringliteral">&quot;[2]&quot;</span> ) );</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        base.setFromJson&lt;IntegerList*&gt;( <span class="stringliteral">&quot;allow_i&quot;</span>,</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                        cmd.getValue( <span class="stringliteral">&quot;-allow_i&quot;</span>, <span class="stringliteral">&quot;[]&quot;</span> ) );</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        base.setFromJson&lt;IntegerList*&gt;( <span class="stringliteral">&quot;allow_z&quot;</span>,</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                                        cmd.getValue( <span class="stringliteral">&quot;-allow_z&quot;</span>, <span class="stringliteral">&quot;[]&quot;</span> ) );</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        base.setFromJson&lt;IntegerList*&gt;( <span class="stringliteral">&quot;allow_a&quot;</span>,</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                        cmd.getValue( <span class="stringliteral">&quot;-allow_a&quot;</span>, <span class="stringliteral">&quot;[]&quot;</span> ) );</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        base.set( <span class="stringliteral">&quot;allow_decay&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-allow_decay&quot;</span>, 1 ) == 1 );</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        base.set( <span class="stringliteral">&quot;allow_fission&quot;</span>, cmd.getValueAs( <span class="stringliteral">&quot;-allow_fission&quot;</span>, 0 ) == 1 );</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        base.set( <span class="stringliteral">&quot;allow_reaction&quot;</span>,</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                  cmd.getValueAs( <span class="stringliteral">&quot;-allow_reaction&quot;</span>, 1 ) == 1 );</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        base.setFromJson&lt;IntegerList*&gt;(</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="stringliteral">&quot;allow_transition_id&quot;</span>,</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            cmd.getValue( <span class="stringliteral">&quot;-allow_transition_id&quot;</span>, <span class="stringliteral">&quot;[]&quot;</span> ) );</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        base.set( <span class="stringliteral">&quot;include_byproducts&quot;</span>,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                  cmd.getValueAs( <span class="stringliteral">&quot;-include_byproducts&quot;</span>, 0 ) == 1 );</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">return</span> base;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
+<div class="ttc" id="group___cxx_typedefs_html_ga656e8cc192193706f75546404dff74e3"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#ga656e8cc192193706f75546404dff74e3">Origen::Vec_Str</a></div><div class="ttdeci">std::vector&lt; std::string &gt; Vec_Str</div><div class="ttdef"><b>Definition:</b> Definitions.h:29</div></div>
+<div class="ttc" id="namespace_origen_html_ab2a65e639a6ebc747233370b4bed0278"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ab2a65e639a6ebc747233370b4bed0278">Origen::populateObiwan_dataType</a></div><div class="ttdeci">void populateObiwan_dataType(ScaleUtils::IO::DB *base, const std::string &amp;type)</div><div class="ttdef"><b>Definition:</b> populate.cpp:856</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab218b1b9a5686a449113d1a46e702d68"></a>
@@ -307,7 +518,45 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">Obiwan_view::b_opts</a>, <a class="el" href="../../de/d95/class_origen_1_1_obiwan__view.html#a73f30f776dc60ca92d5204636b5ee1bd">Obiwan_view::help()</a>, <a class="el" href="../../dc/dac/io_8h.html#a30a88719315ed4b5d3664700553d0e50">ORIGEN_MACRO_loadMulti</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a308227842d19989857ebb67e32d96a1f">Origen::view()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#ad3bc4cda68823b71fda7995979e65002">Origen::obiwan_main()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;{</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="comment">// quick returns</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">b_opts</a>.get( <span class="stringliteral">&quot;help&quot;</span>, <span class="keyword">false</span> ) )</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    {</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        out &lt;&lt; <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#a73f30f776dc60ca92d5204636b5ee1bd">help</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    }</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">b_opts</a>.numError() &gt; 0 )</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    {</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    }</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="comment">// ORIGEN_MACRO_loadMulti requires:</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="comment">// - string path</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <span class="comment">// - DB opts</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="comment">// - int status</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keyword">auto</span> path = <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">b_opts</a>.get( <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;&quot;</span> );</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    ScaleUtils::IO::DB opts = <a class="code" href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">b_opts</a>.clone();</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="keywordtype">int</span> status = 0;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <a class="code" href="../../dc/dac/io_8h.html#a30a88719315ed4b5d3664700553d0e50">ORIGEN_MACRO_loadMulti</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#a308227842d19989857ebb67e32d96a1f">view</a> );</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="comment">// opts dump after everything</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <a class="code" href="../../dc/d32/group___fortran_constants.html#ga595a7a58c908ec8f7c6778d9d5b532aa">err</a> &lt;&lt; opts.toString();</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="comment">// error out</span></div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">if</span>( opts.numError() &gt; 0 )</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    {</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        out &lt;&lt; opts.dumpErrorStack();</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        status = -3;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    }</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordflow">return</span> status;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;}</div>
+<div class="ttc" id="group___fortran_constants_html_ga595a7a58c908ec8f7c6778d9d5b532aa"><div class="ttname"><a href="../../dc/d32/group___fortran_constants.html#ga595a7a58c908ec8f7c6778d9d5b532aa">origen_definitions_m::err</a></div><div class="ttdeci">real(c_double) err</div><div class="ttdoc">Small value threshold below this value, isotopics should be set to zero formerly block 4...</div><div class="ttdef"><b>Definition:</b> Definitions_M.f90:26</div></div>
+<div class="ttc" id="io_8h_html_a30a88719315ed4b5d3664700553d0e50"><div class="ttname"><a href="../../dc/dac/io_8h.html#a30a88719315ed4b5d3664700553d0e50">ORIGEN_MACRO_loadMulti</a></div><div class="ttdeci">#define ORIGEN_MACRO_loadMulti(CALL_FUNCTION)                                                            </div><div class="ttdef"><b>Definition:</b> io.h:75</div></div>
+<div class="ttc" id="class_origen_1_1_obiwan__view_html_aa06610b9dd08f21e252f7976eea33c2d"><div class="ttname"><a href="../../de/d95/class_origen_1_1_obiwan__view.html#aa06610b9dd08f21e252f7976eea33c2d">Origen::Obiwan_view::b_opts</a></div><div class="ttdeci">ScaleUtils::IO::DB b_opts</div><div class="ttdef"><b>Definition:</b> Obiwan_view.h:34</div></div>
+<div class="ttc" id="class_origen_1_1_obiwan__view_html_a73f30f776dc60ca92d5204636b5ee1bd"><div class="ttname"><a href="../../de/d95/class_origen_1_1_obiwan__view.html#a73f30f776dc60ca92d5204636b5ee1bd">Origen::Obiwan_view::help</a></div><div class="ttdeci">static std::string help()</div><div class="ttdoc">provide a help message </div><div class="ttdef"><b>Definition:</b> Obiwan_view.cpp:96</div></div>
+<div class="ttc" id="namespace_origen_html_a308227842d19989857ebb67e32d96a1f"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a308227842d19989857ebb67e32d96a1f">Origen::view</a></div><div class="ttdeci">int view(const Origen::Library &amp;lib, ScaleUtils::IO::DB opts, std::ostream &amp;out, std::ostream &amp;err)</div><div class="ttdef"><b>Definition:</b> Obiwan_view.cpp:320</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

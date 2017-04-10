@@ -256,7 +256,13 @@ Protected Attributes</h2></td></tr>
 <p><a class="el" href="../../da/d73/namespace_scale_1_1_module.html">Scale::Module</a> interface. </p>
 
 <p>References <a class="el" href="../../da/d73/namespace_scale_1_1_module.html#a9681074d96b8debab18fd021d75dea02">Scale::Module::validate()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span>( !<a class="code" href="../../da/d73/namespace_scale_1_1_module.html#a9681074d96b8debab18fd021d75dea02">validate</a>( data ) ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="ttc" id="namespace_scale_1_1_module_html_a9681074d96b8debab18fd021d75dea02"><div class="ttname"><a href="../../da/d73/namespace_scale_1_1_module.html#a9681074d96b8debab18fd021d75dea02">Scale::Module::validate</a></div><div class="ttdeci">bool validate(const Standard::AbstractDataContainer &amp;data)</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.cpp:8</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae006844a02161d12182ab372ca5c257b"></a>
@@ -273,7 +279,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8ce63984ad67edfccbda6ea82fb8673e">TransitionMatrixUpdater::execute()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3720ba0fbb1704218c6eb985cdacd47a"></a>
@@ -290,7 +297,16 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8fd2b8010425be905b8dd92c198f5f20">TransitionMatrixUpdater::b_createNew</a>, and <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a263edba7dbb40e20d81e1c97f61dad51">TransitionMatrixUpdater::b_mats</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8fd2b8010425be905b8dd92c198f5f20">b_createNew</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// b_tmu=nullptr;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// b_ampx=nullptr;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a263edba7dbb40e20d81e1c97f61dad51">b_mats</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="ttc" id="class_scale_1_1_module_1_1_transition_matrix_updater_html_a8fd2b8010425be905b8dd92c198f5f20"><div class="ttname"><a href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8fd2b8010425be905b8dd92c198f5f20">Scale::Module::TransitionMatrixUpdater::b_createNew</a></div><div class="ttdeci">bool b_createNew</div><div class="ttdoc">central object </div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.h:147</div></div>
+<div class="ttc" id="class_scale_1_1_module_1_1_transition_matrix_updater_html_a263edba7dbb40e20d81e1c97f61dad51"><div class="ttname"><a href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a263edba7dbb40e20d81e1c97f61dad51">Scale::Module::TransitionMatrixUpdater::b_mats</a></div><div class="ttdeci">SP_MaterialMap b_mats</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.h:150</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a587251e456439c3b1552c5c0813781a2"></a>
@@ -310,7 +326,11 @@ Protected Attributes</h2></td></tr>
 <p>pre-execute setters </p>
 
 <p>References <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a263edba7dbb40e20d81e1c97f61dad51">TransitionMatrixUpdater::b_mats</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a263edba7dbb40e20d81e1c97f61dad51">b_mats</a> = mats;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="class_scale_1_1_module_1_1_transition_matrix_updater_html_a263edba7dbb40e20d81e1c97f61dad51"><div class="ttname"><a href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a263edba7dbb40e20d81e1c97f61dad51">Scale::Module::TransitionMatrixUpdater::b_mats</a></div><div class="ttdeci">SP_MaterialMap b_mats</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.h:150</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="acfb6b7365ed4029f4192faa56a67dc04"></a>
@@ -330,7 +350,17 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8fd2b8010425be905b8dd92c198f5f20">TransitionMatrixUpdater::b_createNew</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8ce63984ad67edfccbda6ea82fb8673e">TransitionMatrixUpdater::execute()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// whether to append a new transition matrix to each material</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// or to update last one</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span>( data.contains( <span class="stringliteral">&quot;createNew&quot;</span> ) )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8fd2b8010425be905b8dd92c198f5f20">b_createNew</a> = data.getBool( <span class="stringliteral">&quot;createNew&quot;</span> );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="class_scale_1_1_module_1_1_transition_matrix_updater_html_a8fd2b8010425be905b8dd92c198f5f20"><div class="ttname"><a href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#a8fd2b8010425be905b8dd92c198f5f20">Scale::Module::TransitionMatrixUpdater::b_createNew</a></div><div class="ttdeci">bool b_createNew</div><div class="ttdoc">central object </div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.h:147</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a8ce63984ad67edfccbda6ea82fb8673e"></a>
@@ -350,7 +380,16 @@ Protected Attributes</h2></td></tr>
 <p>convenient update+execute </p>
 
 <p>References <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#ae006844a02161d12182ab372ca5c257b">TransitionMatrixUpdater::execute()</a>, and <a class="el" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#acfb6b7365ed4029f4192faa56a67dc04">TransitionMatrixUpdater::update()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#acfb6b7365ed4029f4192faa56a67dc04">update</a>( data ) )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="ttc" id="class_scale_1_1_module_1_1_transition_matrix_updater_html_ae006844a02161d12182ab372ca5c257b"><div class="ttname"><a href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#ae006844a02161d12182ab372ca5c257b">Scale::Module::TransitionMatrixUpdater::execute</a></div><div class="ttdeci">bool execute()</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.cpp:24</div></div>
+<div class="ttc" id="class_scale_1_1_module_1_1_transition_matrix_updater_html_acfb6b7365ed4029f4192faa56a67dc04"><div class="ttname"><a href="../../d7/d04/class_scale_1_1_module_1_1_transition_matrix_updater.html#acfb6b7365ed4029f4192faa56a67dc04">Scale::Module::TransitionMatrixUpdater::update</a></div><div class="ttdeci">bool update(const Standard::AbstractDataContainer &amp;data)</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.cpp:45</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa3b33f9b6b85b7d1c4cacc57afc48145"></a>

@@ -169,7 +169,13 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        : <a class="code" href="../../d5/d15/class_origen_1_1_local_diff.html#af0a9c682336062908947959671cd0eaf">b_have_difference</a>( <a class="code" href="../../d5/d15/class_origen_1_1_local_diff.html#afabea70625327f83cdc19f23b2cc38af">have_difference</a> ), <a class="code" href="../../d5/d15/class_origen_1_1_local_diff.html#a3ead42cc9156c42e3e8f77a014a37e2d">b_string</a>( <span class="keywordtype">string</span> )</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_local_diff_html_afabea70625327f83cdc19f23b2cc38af"><div class="ttname"><a href="../../d5/d15/class_origen_1_1_local_diff.html#afabea70625327f83cdc19f23b2cc38af">Origen::LocalDiff::have_difference</a></div><div class="ttdeci">bool have_difference() const </div><div class="ttdef"><b>Definition:</b> diff.cpp:21</div></div>
+<div class="ttc" id="class_origen_1_1_local_diff_html_af0a9c682336062908947959671cd0eaf"><div class="ttname"><a href="../../d5/d15/class_origen_1_1_local_diff.html#af0a9c682336062908947959671cd0eaf">Origen::LocalDiff::b_have_difference</a></div><div class="ttdeci">const bool b_have_difference</div><div class="ttdef"><b>Definition:</b> diff.cpp:39</div></div>
+<div class="ttc" id="class_origen_1_1_local_diff_html_a3ead42cc9156c42e3e8f77a014a37e2d"><div class="ttname"><a href="../../d5/d15/class_origen_1_1_local_diff.html#a3ead42cc9156c42e3e8f77a014a37e2d">Origen::LocalDiff::b_string</a></div><div class="ttdeci">const std::string b_string</div><div class="ttdef"><b>Definition:</b> diff.cpp:40</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -197,7 +203,9 @@ Private Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../da/d94/class_origen_1_1_diff.html#ae3994d0caca9306e98e9b4205006b759">Diff</a>.</p>
 
 <p>References <a class="el" href="../../d5/d15/class_origen_1_1_local_diff.html#af0a9c682336062908947959671cd0eaf">LocalDiff::b_have_difference</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d5/d15/class_origen_1_1_local_diff.html#af0a9c682336062908947959671cd0eaf">b_have_difference</a>; }</div>
+<div class="ttc" id="class_origen_1_1_local_diff_html_af0a9c682336062908947959671cd0eaf"><div class="ttname"><a href="../../d5/d15/class_origen_1_1_local_diff.html#af0a9c682336062908947959671cd0eaf">Origen::LocalDiff::b_have_difference</a></div><div class="ttdeci">const bool b_have_difference</div><div class="ttdef"><b>Definition:</b> diff.cpp:39</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2143614d75a375b894eb5f1981b74285"></a>
@@ -225,7 +233,23 @@ Private Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../da/d94/class_origen_1_1_diff.html#ab2edf417e70670ed98febc0b5281a75b">Diff</a>.</p>
 
 <p>References <a class="el" href="../../d5/d15/class_origen_1_1_local_diff.html#a3ead42cc9156c42e3e8f77a014a37e2d">LocalDiff::b_string</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span>( only_differences )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a> lines = ScaleUtils::IO::splitString( <span class="stringliteral">&quot;\n&quot;</span>, <a class="code" href="../../d5/d15/class_origen_1_1_local_diff.html#a3ead42cc9156c42e3e8f77a014a37e2d">b_string</a> );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            std::string diff_lines;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; line : lines )</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">if</span>( line.find( <span class="stringliteral">&quot;DIFF&quot;</span> ) != std::string::npos )</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    diff_lines += line + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> diff_lines;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d5/d15/class_origen_1_1_local_diff.html#a3ead42cc9156c42e3e8f77a014a37e2d">b_string</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_local_diff_html_a3ead42cc9156c42e3e8f77a014a37e2d"><div class="ttname"><a href="../../d5/d15/class_origen_1_1_local_diff.html#a3ead42cc9156c42e3e8f77a014a37e2d">Origen::LocalDiff::b_string</a></div><div class="ttdeci">const std::string b_string</div><div class="ttdef"><b>Definition:</b> diff.cpp:40</div></div>
+<div class="ttc" id="_nuclide_set_interface_8h_html_a656e8cc192193706f75546404dff74e3"><div class="ttname"><a href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a></div><div class="ttdeci">std::vector&lt; std::string &gt; Vec_Str</div><div class="ttdef"><b>Definition:</b> NuclideSetInterface.h:16</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

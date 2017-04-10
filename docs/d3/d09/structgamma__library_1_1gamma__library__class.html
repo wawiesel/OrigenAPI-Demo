@@ -257,7 +257,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>an origen library </p>
-
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>),<span class="keywordtype">pointer</span> :: lib=&gt;null()</div>
+<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af311dc5babf8a3310328efbe70e44021"></a>
@@ -271,7 +273,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>gamma options </p>
-
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">type</span>(origen_gamma_options) :: opts</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad6e7ebf20a3588a2e9d28b9c5359d9ba"></a>
@@ -285,7 +288,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Binned gamma energies for every nuclide and energy group [ngroups * nuclides]. </p>
-
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: binned(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2ec9277d17727e803665fa32d5010001"></a>
@@ -299,7 +303,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flags if a nuclide has any gamma lines [nuclides]. </p>
-
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">logical</span>, <span class="keywordtype">allocatable</span> :: has_gamma(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a008ad6c029e9735b1fffcea34e8ddfbe"></a>
@@ -313,7 +318,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Average group energies [ngroups]. </p>
-
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: e_gamma(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a271bb3b85ab2259418b61e78ea3b0317"></a>
@@ -327,7 +333,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Lost energy (outside bounds) [nuclides]. </p>
-
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: unbinned_energy(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a718350cfd6a1cd60c4f04cfe637ee0ea"></a>
@@ -341,7 +348,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Lost particles (outside bounds) [nuclides]. </p>
-
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: unbinned_particles(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this type was generated from the following file:<ul>

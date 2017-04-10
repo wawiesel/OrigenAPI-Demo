@@ -217,7 +217,13 @@ class Origen::History&lt; Q &gt;</h3>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a13">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>.size() == 0 ) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span>( i &gt;= <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>.size() ) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>[i];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_a358d4a02f3d720cc815349e8e6fcb9dd"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">Origen::History::b_times</a></div><div class="ttdeci">std::vector&lt; T::SP &gt; b_times</div><div class="ttdef"><b>Definition:</b> History.h:104</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3c6ddea3e28c1a002ff64e9faf5f6e80"></a>
@@ -243,7 +249,11 @@ class Origen::History&lt; Q &gt;</h3>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a7">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( 0 );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_afebc5999ad81a1c786f7410059f76b62"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">Origen::History::t</a></div><div class="ttdeci">T::SCP t(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:21</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a03760257da4b7321469c7fa669b6b441"></a>
@@ -266,7 +276,12 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">n</a>() - 1 );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_afebc5999ad81a1c786f7410059f76b62"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">Origen::History::t</a></div><div class="ttdeci">T::SCP t(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:21</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a779efe10a8564e80553431bd4d357f7a"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">Origen::History::n</a></div><div class="ttdeci">size_t n() const </div><div class="ttdef"><b>Definition:</b> History.i.h:15</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2e023b36487cbd493baf8981c8e95d25"></a>
@@ -303,7 +318,16 @@ class Origen::History&lt; Q &gt;</h3>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a15">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span>( i + 1 &lt; <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">n</a>() )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( i + 1 )-&gt;valueAs( u ) - <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( i )-&gt;valueAs( u );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_afebc5999ad81a1c786f7410059f76b62"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">Origen::History::t</a></div><div class="ttdeci">T::SCP t(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:21</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a779efe10a8564e80553431bd4d357f7a"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">Origen::History::n</a></div><div class="ttdeci">size_t n() const </div><div class="ttdef"><b>Definition:</b> History.i.h:15</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa33634ba12ee4a9520d3947a37fb9fcf"></a>
@@ -330,7 +354,13 @@ class Origen::History&lt; Q &gt;</h3>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a14">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a60a68dc70701d45cef0266e3f4c8b03f">b_quantities</a>.size() == 0 ) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span>( i &gt;= <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a60a68dc70701d45cef0266e3f4c8b03f">b_quantities</a>.size() ) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a60a68dc70701d45cef0266e3f4c8b03f">b_quantities</a>[i];</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_a60a68dc70701d45cef0266e3f4c8b03f"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a60a68dc70701d45cef0266e3f4c8b03f">Origen::History::b_quantities</a></div><div class="ttdeci">std::vector&lt; typename Q::SP &gt; b_quantities</div><div class="ttdef"><b>Definition:</b> History.h:102</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a330e3e172c5e16b99574339d850ad052"></a>
@@ -364,7 +394,16 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span>( i + 1 &lt; <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">n</a>() )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#aa33634ba12ee4a9520d3947a37fb9fcf">q</a>( i + 1 )-&gt;valueAs( u ) - <a class="code" href="../../df/d0a/class_origen_1_1_history.html#aa33634ba12ee4a9520d3947a37fb9fcf">q</a>( i )-&gt;valueAs( u );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_aa33634ba12ee4a9520d3947a37fb9fcf"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#aa33634ba12ee4a9520d3947a37fb9fcf">Origen::History::q</a></div><div class="ttdeci">Q::SCP q(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:125</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a779efe10a8564e80553431bd4d357f7a"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">Origen::History::n</a></div><div class="ttdeci">size_t n() const </div><div class="ttdef"><b>Definition:</b> History.i.h:15</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a779efe10a8564e80553431bd4d357f7a"></a>
@@ -390,7 +429,11 @@ class Origen::History&lt; Q &gt;</h3>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a12">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>.size();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_a358d4a02f3d720cc815349e8e6fcb9dd"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">Origen::History::b_times</a></div><div class="ttdeci">std::vector&lt; T::SP &gt; b_times</div><div class="ttdef"><b>Definition:</b> History.h:104</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aacc73f5f35b1cdb891f01879b22a920f"></a>
@@ -433,7 +476,23 @@ class Origen::History&lt; Q &gt;</h3>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a8">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// fix the incremental association on way in</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span>( !<a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>-&gt;isIncremental() &amp;&amp; <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>.size() &gt; 0 )</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>-&gt;setIncrementalFrom( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>[0] );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>.push_back( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a> );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a60a68dc70701d45cef0266e3f4c8b03f">b_quantities</a>.push_back( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#aa33634ba12ee4a9520d3947a37fb9fcf">q</a> );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a20da1ab0ff43931d588c7db18e03bfac">b_reps</a>.push_back( rep );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a4c578a8ed0ed5d51eb74fcdda179f956">synchronize</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_afebc5999ad81a1c786f7410059f76b62"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">Origen::History::t</a></div><div class="ttdeci">T::SCP t(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:21</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_aa33634ba12ee4a9520d3947a37fb9fcf"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#aa33634ba12ee4a9520d3947a37fb9fcf">Origen::History::q</a></div><div class="ttdeci">Q::SCP q(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:125</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a358d4a02f3d720cc815349e8e6fcb9dd"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">Origen::History::b_times</a></div><div class="ttdeci">std::vector&lt; T::SP &gt; b_times</div><div class="ttdef"><b>Definition:</b> History.h:104</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a60a68dc70701d45cef0266e3f4c8b03f"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a60a68dc70701d45cef0266e3f4c8b03f">Origen::History::b_quantities</a></div><div class="ttdeci">std::vector&lt; typename Q::SP &gt; b_quantities</div><div class="ttdef"><b>Definition:</b> History.h:102</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a4c578a8ed0ed5d51eb74fcdda179f956"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a4c578a8ed0ed5d51eb74fcdda179f956">Origen::History::synchronize</a></div><div class="ttdeci">virtual void synchronize()</div><div class="ttdef"><b>Definition:</b> History.i.h:111</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a20da1ab0ff43931d588c7db18e03bfac"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a20da1ab0ff43931d588c7db18e03bfac">Origen::History::b_reps</a></div><div class="ttdeci">std::vector&lt; Representation &gt; b_reps</div><div class="ttdef"><b>Definition:</b> History.h:103</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad2e41c8280b6cdf93d39e1135d2abdf7"></a>
@@ -456,7 +515,13 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a> v;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../df/d0a/class_origen_1_1_history.html#ad2e41c8280b6cdf93d39e1135d2abdf7">good</a>( v );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="ttc" id="_nuclide_set_interface_8h_html_a656e8cc192193706f75546404dff74e3"><div class="ttname"><a href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a></div><div class="ttdeci">std::vector&lt; std::string &gt; Vec_Str</div><div class="ttdef"><b>Definition:</b> NuclideSetInterface.h:16</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_ad2e41c8280b6cdf93d39e1135d2abdf7"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#ad2e41c8280b6cdf93d39e1135d2abdf7">Origen::History::good</a></div><div class="ttdeci">bool good() const </div><div class="ttdef"><b>Definition:</b> History.i.h:118</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a92f769662373ecfcae1feb52ddd05bd3"></a>
@@ -482,7 +547,29 @@ class Origen::History&lt; Q &gt;</h3>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a70367ff8e866216e6a822a2c952abfc1">Time::SECONDS</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">size_t</span> nerr = errors.size();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">n</a>() - 1; ++i )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">double</span> t1 = <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( i )-&gt;valueAs( <a class="code" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a70367ff8e866216e6a822a2c952abfc1">Time::SECONDS</a> );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">double</span> t2 = <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( i + 1 )-&gt;valueAs( <a class="code" href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a70367ff8e866216e6a822a2c952abfc1">Time::SECONDS</a> );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span>( t1 &gt; t2 )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            errors.push_back(</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                nprintf( <span class="stringliteral">&quot;time[%d]=%8s &gt; time[%d]=%8s in time list&quot;</span>,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                         i,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                         <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( i )-&gt;<a class="code" href="../../df/d0a/class_origen_1_1_history.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a>().c_str(),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                         i + 1,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                         <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( i + 1 )-&gt;<a class="code" href="../../df/d0a/class_origen_1_1_history.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a>().c_str() ) );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> nerr == errors.size();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_afebc5999ad81a1c786f7410059f76b62"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">Origen::History::t</a></div><div class="ttdeci">T::SCP t(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:21</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a3f23c97b6c9f2a88e1121d1c633ccafa"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a3f23c97b6c9f2a88e1121d1c633ccafa">Origen::History::toString</a></div><div class="ttdeci">virtual std::string toString() const </div><div class="ttdef"><b>Definition:</b> History.i.h:61</div></div>
+<div class="ttc" id="struct_origen_1_1_time_html_ae63bf01444fa83e2e4d536e113dddf95a70367ff8e866216e6a822a2c952abfc1"><div class="ttname"><a href="../../d1/d35/struct_origen_1_1_time.html#ae63bf01444fa83e2e4d536e113dddf95a70367ff8e866216e6a822a2c952abfc1">Origen::Time::SECONDS</a></div><div class="ttdef"><b>Definition:</b> Time.h:14</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a779efe10a8564e80553431bd4d357f7a"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a779efe10a8564e80553431bd4d357f7a">Origen::History::n</a></div><div class="ttdeci">size_t n() const </div><div class="ttdef"><b>Definition:</b> History.i.h:15</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
@@ -508,7 +595,21 @@ class Origen::History&lt; Q &gt;</h3>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df8/_core_2dc_2tests_2tst_history_8cpp-example.html#a17">Core/dc/tests/tstHistory.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/dd7/tst_history_8cpp.html#a6af7eb546b5d2e954c0c5609cd2705ec">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    std::string s = nprintf( <span class="stringliteral">&quot;%12s %12s\n&quot;</span>, <span class="stringliteral">&quot;time&quot;</span>, <span class="stringliteral">&quot;quantity&quot;</span> );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">b_times</a>.size(); ++i )</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::string tstr( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">t</a>( i )-&gt;<a class="code" href="../../df/d0a/class_origen_1_1_history.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a>() );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::string qstr( <a class="code" href="../../df/d0a/class_origen_1_1_history.html#aa33634ba12ee4a9520d3947a37fb9fcf">q</a>( i )-&gt;<a class="code" href="../../df/d0a/class_origen_1_1_history.html#a3f23c97b6c9f2a88e1121d1c633ccafa">toString</a>() );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        s += nprintf( <span class="stringliteral">&quot;%12s %12s\n&quot;</span>, tstr.c_str(), qstr.c_str() );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_history_html_afebc5999ad81a1c786f7410059f76b62"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#afebc5999ad81a1c786f7410059f76b62">Origen::History::t</a></div><div class="ttdeci">T::SCP t(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:21</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_aa33634ba12ee4a9520d3947a37fb9fcf"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#aa33634ba12ee4a9520d3947a37fb9fcf">Origen::History::q</a></div><div class="ttdeci">Q::SCP q(size_t i) const </div><div class="ttdef"><b>Definition:</b> History.i.h:125</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a358d4a02f3d720cc815349e8e6fcb9dd"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a358d4a02f3d720cc815349e8e6fcb9dd">Origen::History::b_times</a></div><div class="ttdeci">std::vector&lt; T::SP &gt; b_times</div><div class="ttdef"><b>Definition:</b> History.h:104</div></div>
+<div class="ttc" id="class_origen_1_1_history_html_a3f23c97b6c9f2a88e1121d1c633ccafa"><div class="ttname"><a href="../../df/d0a/class_origen_1_1_history.html#a3f23c97b6c9f2a88e1121d1c633ccafa">Origen::History::toString</a></div><div class="ttdeci">virtual std::string toString() const </div><div class="ttdef"><b>Definition:</b> History.i.h:61</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4c578a8ed0ed5d51eb74fcdda179f956"></a>
@@ -531,7 +632,11 @@ class Origen::History&lt; Q &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// null-op</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// just to possibly extend the class</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

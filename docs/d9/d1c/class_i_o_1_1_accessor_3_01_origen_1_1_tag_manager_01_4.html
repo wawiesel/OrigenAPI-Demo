@@ -156,7 +156,33 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read()</a>, <a class="el" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3343e569e4ab3a3fb3ca1e9368622544">TagManager::setIdTag()</a>, and <a class="el" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a5b9362cf95c63561e01db3489d0de0fe">TagManager::setInterpTag()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::vector&lt;std::string&gt; id_names, id_values, interp_names;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::vector&lt;double&gt; interp_values;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">size_t</span> bytes = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Acc&lt;Vec_Str&gt;::read</a>( a, <span class="stringliteral">&quot;idn&quot;</span>, id_names );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Acc&lt;Vec_Str&gt;::read</a>( a, <span class="stringliteral">&quot;idv&quot;</span>, id_values );</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Acc&lt;Vec_Str&gt;::read</a>( a, <span class="stringliteral">&quot;itn&quot;</span>, interp_names );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Acc&lt;Vec_Dbl&gt;::read</a>( a, <span class="stringliteral">&quot;itv&quot;</span>, interp_values );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        Check( id_values.size() == id_names.size() );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; id_names.size(); i++ )</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            obj.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3343e569e4ab3a3fb3ca1e9368622544">setIdTag</a>( id_names[i], id_values[i] );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Check( interp_names.size() == interp_values.size() );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; interp_names.size(); i++ )</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            obj.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a5b9362cf95c63561e01db3489d0de0fe">setInterpTag</a>( interp_names[i], interp_values[i] );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> bytes;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_a5b9362cf95c63561e01db3489d0de0fe"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#a5b9362cf95c63561e01db3489d0de0fe">Origen::TagManager::setInterpTag</a></div><div class="ttdeci">void setInterpTag(std::string name, double dblValue)</div><div class="ttdoc">This function checks if the name provided is already in the interpolatable tags. If yes...</div><div class="ttdef"><b>Definition:</b> TagManager.cpp:57</div></div>
+<div class="ttc" id="namespace_origen_html_ad9dbf183ba4f551eeab50e180dce7f18"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read</a></div><div class="ttdeci">void read(const bof::BOFObject &amp;obj, TagManager &amp;tag_manager)</div><div class="ttdoc">read a tag manager from a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:6</div></div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_a3343e569e4ab3a3fb3ca1e9368622544"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3343e569e4ab3a3fb3ca1e9368622544">Origen::TagManager::setIdTag</a></div><div class="ttdeci">void setIdTag(std::string name, std::string strValue)</div><div class="ttdoc">Set new string value to ID tag. Create new ID tag if that tag isn&#39;t already present in the current Da...</div><div class="ttdef"><b>Definition:</b> TagManager.cpp:42</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aefb13fd19b9437d1b70733dc1be4309b"></a>
@@ -198,7 +224,22 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">size_t</span> bytes = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Acc&lt;Vec_Str&gt;::write</a>( a, <span class="stringliteral">&quot;idn&quot;</span>, obj.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3182fc28c79a87e471c13ff62fb6e451">listIdTags</a>(), only_size );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Acc&lt;Vec_Str&gt;::write</a>( a, <span class="stringliteral">&quot;idv&quot;</span>, obj.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a10abb8c99b0920da753b44c049721a4c">listIdValues</a>(), only_size );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        bytes +=</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Acc&lt;Vec_Str&gt;::write</a>( a, <span class="stringliteral">&quot;itn&quot;</span>, obj.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#ab8f5bf3682167451044df9b1e73ab4b7">listInterpTags</a>(), only_size );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        bytes +=</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Acc&lt;Vec_Dbl&gt;::write</a>( a, <span class="stringliteral">&quot;itv&quot;</span>, obj.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a9716916a5342586df4d26ce1c710587f">listInterpValues</a>(), only_size );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> bytes;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_ab8f5bf3682167451044df9b1e73ab4b7"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#ab8f5bf3682167451044df9b1e73ab4b7">Origen::TagManager::listInterpTags</a></div><div class="ttdeci">Vec_Str listInterpTags() const </div><div class="ttdoc">Overrides the getNames function in DataContainer and is used specifically to return the names of the ...</div><div class="ttdef"><b>Definition:</b> TagManager.cpp:125</div></div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_a10abb8c99b0920da753b44c049721a4c"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#a10abb8c99b0920da753b44c049721a4c">Origen::TagManager::listIdValues</a></div><div class="ttdeci">Vec_Str listIdValues() const </div><div class="ttdoc">Return vector of id tag values in the DataContainer. </div><div class="ttdef"><b>Definition:</b> TagManager.cpp:166</div></div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_a3182fc28c79a87e471c13ff62fb6e451"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3182fc28c79a87e471c13ff62fb6e451">Origen::TagManager::listIdTags</a></div><div class="ttdeci">Vec_Str listIdTags() const </div><div class="ttdoc">Overrides the getNames function in DataContainer and is used specifically to return the names of the ...</div><div class="ttdef"><b>Definition:</b> TagManager.cpp:111</div></div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_a9716916a5342586df4d26ce1c710587f"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#a9716916a5342586df4d26ce1c710587f">Origen::TagManager::listInterpValues</a></div><div class="ttdeci">Vec_Dbl listInterpValues() const </div><div class="ttdoc">Return vector of interpolatable tag values in the DataContainer. </div><div class="ttdef"><b>Definition:</b> TagManager.cpp:134</div></div>
+<div class="ttc" id="namespace_origen_html_adc3bd8008cc072027f3900e34d9f3747"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write</a></div><div class="ttdeci">void write(bof::BOFObject &amp;obj, std::string name, const TagManager &amp;tag_manager)</div><div class="ttdoc">write a tag manager to a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:41</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

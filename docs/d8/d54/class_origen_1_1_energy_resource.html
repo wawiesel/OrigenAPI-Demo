@@ -230,7 +230,29 @@ Static Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a0ef854b520a5bbcd71660ccd97f01e93">EnergyResource::DEFAULT_KAPPA_CAPTURE</a>, <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#ac7e3a9587955ecad335e88aa71d2573e">EnergyResource::DEFAULT_KAPPA_FISSION</a>, and <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a9641d5b5e6602d772858966b9188921c">EnergyResource::map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d41/class_origen_1_1_transition_matrix_p.html#a5260ed5ca411919e209b723e0798dc92">TransitionMatrixP::finish_init()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ab5fd7f39fd11aa2864290521a9103e17">Origen::get_default_kappas()</a>, <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#ad65f7151a07f1d62725fb6a29beedbdf">EnergyResource::getKappaAbs()</a>, and <a class="el" href="../../d7/dca/tst_energy_resource_8cpp.html#a05e6c077045bb6104cc211a7a030337b">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Map::const_iterator cit = <a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a9641d5b5e6602d772858966b9188921c">map</a>.find( izzzaaa );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> found_it;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span>( cit == <a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a9641d5b5e6602d772858966b9188921c">map</a>.end() )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        found_it = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        kapCap = <a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a0ef854b520a5bbcd71660ccd97f01e93">DEFAULT_KAPPA_CAPTURE</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        kapFiss = <a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#ac7e3a9587955ecad335e88aa71d2573e">DEFAULT_KAPPA_FISSION</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        found_it = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a6d48ece4a50d22c30c53833e7370a737">Value</a> fiscap = cit-&gt;second;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        kapCap = fiscap.first;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        kapFiss = fiscap.second;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> found_it;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_energy_resource_html_a9641d5b5e6602d772858966b9188921c"><div class="ttname"><a href="../../d8/d54/class_origen_1_1_energy_resource.html#a9641d5b5e6602d772858966b9188921c">Origen::EnergyResource::map</a></div><div class="ttdeci">static const Map map</div><div class="ttdef"><b>Definition:</b> EnergyResource.h:35</div></div>
+<div class="ttc" id="class_origen_1_1_energy_resource_html_a6d48ece4a50d22c30c53833e7370a737"><div class="ttname"><a href="../../d8/d54/class_origen_1_1_energy_resource.html#a6d48ece4a50d22c30c53833e7370a737">Origen::EnergyResource::Value</a></div><div class="ttdeci">Map::mapped_type Value</div><div class="ttdef"><b>Definition:</b> EnergyResource.h:27</div></div>
+<div class="ttc" id="class_origen_1_1_energy_resource_html_a0ef854b520a5bbcd71660ccd97f01e93"><div class="ttname"><a href="../../d8/d54/class_origen_1_1_energy_resource.html#a0ef854b520a5bbcd71660ccd97f01e93">Origen::EnergyResource::DEFAULT_KAPPA_CAPTURE</a></div><div class="ttdeci">static const double DEFAULT_KAPPA_CAPTURE</div><div class="ttdef"><b>Definition:</b> EnergyResource.h:36</div></div>
+<div class="ttc" id="class_origen_1_1_energy_resource_html_ac7e3a9587955ecad335e88aa71d2573e"><div class="ttname"><a href="../../d8/d54/class_origen_1_1_energy_resource.html#ac7e3a9587955ecad335e88aa71d2573e">Origen::EnergyResource::DEFAULT_KAPPA_FISSION</a></div><div class="ttdeci">static const double DEFAULT_KAPPA_FISSION</div><div class="ttdef"><b>Definition:</b> EnergyResource.h:37</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad65f7151a07f1d62725fb6a29beedbdf"></a>
@@ -270,7 +292,13 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">EnergyResource::getKappaValues()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">double</span> kapCap, kapFiss;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( izzzaaa, kapCap, kapFiss );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> numden * ( sigCap * kapCap + sigFiss * kapFiss );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_energy_resource_html_a24bfc3f1e91c746fcd485ca891a95ef2"><div class="ttname"><a href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">Origen::EnergyResource::getKappaValues</a></div><div class="ttdeci">bool getKappaValues(int izzzaaa, double &amp;kapCap, double &amp;kapFiss) const </div><div class="ttdoc">getKappaValues </div><div class="ttdef"><b>Definition:</b> EnergyResource.cpp:81</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

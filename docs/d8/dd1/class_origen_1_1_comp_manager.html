@@ -266,7 +266,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>create a new <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html" title="Class for mixing up sweet materials. ">CompManager</a> </p>
-
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;: <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">b_lib</a>( stdComp ) {}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ab3df1468ea9c2910d73defa1a5378cb1"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">Origen::CompManager::b_lib</a></div><div class="ttdeci">const ScaleData::StdComp &amp; b_lib</div><div class="ttdoc">std comp library used for molar masses and isotopic content of elements </div><div class="ttdef"><b>Definition:</b> CompManager.h:70</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a38f9efdebf81c47710317d363366da3f"></a>
@@ -293,7 +295,16 @@ Protected Attributes</h2></td></tr>
 <p>destroy </p>
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.begin();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">while</span>( it != <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.end() )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">delete</span> it-&gt;second;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        ++it;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -338,7 +349,62 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">CompManager::b_lib</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">CompManager::getCompIndex()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a17799306038e1b6e3c89285ac3ae9331">CompManager::addPart()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">CompManager::createEle()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#adee13021a0658b15d052e9816e7188ae">CompManager::isAutomatic()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a573d1b000c47d4a9cac15e11672a3bf2">CompManager::isEle()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a70d325aa90a9f7e0f1860cc852d0caf1">CompManager::isNuc()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// initialize element</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    ele = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// get index</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">id</span> = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">getCompIndex</a>( part );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// reverse to indicate named composition</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>( <span class="keywordtype">id</span> != 0 )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">id</span> = -id;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// otherwise search as nuclide or element</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">id</span> = ScaleData::Utils::symbol_to_pizzzaaa( part );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span>( <span class="keywordtype">id</span> &lt;= 0 )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;part=&#39;&quot;</span> + part + <span class="stringliteral">&quot;&#39; is not a valid NUCLIDE/ELEMENT id&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordtype">int</span> p, i, z, a;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            ScaleData::Utils::split_pizzzaaa( <span class="keywordtype">id</span>, p, i, z, a );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span>( p != 0 )</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;part=&#39;&quot;</span> + part +</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                       <span class="stringliteral">&quot;&#39; does not have the correct format (IZZZAAA)&quot;</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="comment">// element</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( a == 0 )</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">b_lib</a>.getElementAt( <span class="keywordtype">id</span>, 0 ) == nullptr )</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;part=&#39;&quot;</span> + part + <span class="stringliteral">&quot;&#39; --&gt; &quot;</span> + std::to_string( <span class="keywordtype">id</span> ) +</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                           <span class="stringliteral">&quot; is not a valid ELEMENT in this StdCompLibrary&quot;</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                ele = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="comment">// carbon (6000) must be treated like nuclide</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">if</span>( z == 6 ) ele = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">b_lib</a>.getNuclide( <span class="keywordtype">id</span> ) == nullptr )</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;part=&#39;&quot;</span> + part + <span class="stringliteral">&quot;&#39; --&gt; &quot;</span> + std::to_string( <span class="keywordtype">id</span> ) +</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                       <span class="stringliteral">&quot; is not a valid NUCLIDE in this StdCompLibrary&quot;</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">// no error</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a1103633bf7b577d5cdadd855da4909c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">Origen::CompManager::getCompIndex</a></div><div class="ttdeci">int getCompIndex(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:64</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ab3df1468ea9c2910d73defa1a5378cb1"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">Origen::CompManager::b_lib</a></div><div class="ttdeci">const ScaleData::StdComp &amp; b_lib</div><div class="ttdoc">std comp library used for molar masses and isotopic content of elements </div><div class="ttdef"><b>Definition:</b> CompManager.h:70</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="adee13021a0658b15d052e9816e7188ae"></a>
@@ -366,7 +432,15 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">CompManager::checkKnown()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">bool</span> ele;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">auto</span> error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">checkKnown</a>( name, <span class="keywordtype">id</span>, ele );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span>( ele0 != <span class="keyword">nullptr</span> ) *ele0 = ele;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> error == <span class="stringliteral">&quot;&quot;</span> &amp;&amp; <span class="keywordtype">id</span> &gt; 0;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a5cffc9ad27a5f38d8df71e22988cdfbe"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">Origen::CompManager::checkKnown</a></div><div class="ttdeci">std::string checkKnown(const std::string &amp;part, int &amp;id, bool &amp;ele) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:71</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a573d1b000c47d4a9cac15e11672a3bf2"></a>
@@ -384,7 +458,14 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">CompManager::checkKnown()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">bool</span> ele;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">auto</span> error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">checkKnown</a>( name, <span class="keywordtype">id</span>, ele );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> error == <span class="stringliteral">&quot;&quot;</span> &amp;&amp; <span class="keywordtype">id</span> &gt; 0 &amp;&amp; ele;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a5cffc9ad27a5f38d8df71e22988cdfbe"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">Origen::CompManager::checkKnown</a></div><div class="ttdeci">std::string checkKnown(const std::string &amp;part, int &amp;id, bool &amp;ele) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:71</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a70d325aa90a9f7e0f1860cc852d0caf1"></a>
@@ -402,7 +483,14 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">CompManager::checkKnown()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">bool</span> ele;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">auto</span> error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">checkKnown</a>( name, <span class="keywordtype">id</span>, ele );</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> error == <span class="stringliteral">&quot;&quot;</span> &amp;&amp; <span class="keywordtype">id</span> &gt; 0 &amp;&amp; !ele;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a5cffc9ad27a5f38d8df71e22988cdfbe"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">Origen::CompManager::checkKnown</a></div><div class="ttdeci">std::string checkKnown(const std::string &amp;part, int &amp;id, bool &amp;ele) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:71</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a17799306038e1b6e3c89285ac3ae9331"></a>
@@ -439,7 +527,69 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">CompManager::checkKnown()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">CompManager::createEle()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">CompManager::getCompIndex()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">CompManager::createEle()</a>, and <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span>( cc == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;name=&#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; does not exist (create with initComp)&quot;</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">if</span>( cc-&gt;final )</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;name=&#39;&quot;</span> + name +</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;               <span class="stringliteral">&quot;&#39; has been finalized (no further modifications permitted)&quot;</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// get the part id</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">bool</span> ele;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    std::string error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">checkKnown</a>( part, <span class="keywordtype">id</span>, ele );</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> ) <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">// attempt to initialize an element if the part is an element</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span>( ele )</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keyword">auto</span> error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">createEle</a>( part );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> ) <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// get the id of this newly created element</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordtype">id</span> = -<a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">getCompIndex</a>( part );</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        Check( <span class="keywordtype">id</span> &lt; 0 );</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">// check id exists</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span>( <span class="keywordtype">id</span> == 0 )</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;part=&quot;</span> + part + <span class="stringliteral">&quot; does not exist&quot;</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// multiply according to the inputScaleString (e.g. PPM, PCT)</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    cc-&gt;ids.push_back( <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    Check( cc-&gt;inputScaleFactor &gt; 0.0 );</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">double</span> add_value = value * ( cc-&gt;inputScaleFactor );</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// shortcut to add UP TO the remainder</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span>( add_value &lt; 0 )</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span>( cc-&gt;inputNorm )</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            cc-&gt;nums.push_back( 0.0 );</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;name=&#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; with part=&quot;</span> + part +</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                   <span class="stringliteral">&quot; cannot use &lt;0 to fill because inputNorm=yes&quot;</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordtype">double</span> remaining = 1.0 - cm::total( cc-&gt;nums );</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        add_value =</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            std::min( std::abs( add_value ), std::max( remaining, 0.0 ) );</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">// push back the value</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    cc-&gt;nums.push_back( add_value );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a1103633bf7b577d5cdadd855da4909c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">Origen::CompManager::getCompIndex</a></div><div class="ttdeci">int getCompIndex(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:64</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a3083bda9d654abef786aeb47ae3e173d"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">Origen::CompManager::createEle</a></div><div class="ttdeci">std::string createEle(const std::string &amp;elementName)</div><div class="ttdef"><b>Definition:</b> CompManager.cpp:284</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a5cffc9ad27a5f38d8df71e22988cdfbe"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">Origen::CompManager::checkKnown</a></div><div class="ttdeci">std::string checkKnown(const std::string &amp;part, int &amp;id, bool &amp;ele) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:71</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a742c230847747e6b610858b474473974"></a>
@@ -482,7 +632,77 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">CompManager::b_id_lookup</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">CompManager::getCompIndex()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">CompManager::getNumComps()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">CompManager::createEle()</a>, and <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">int</span> index = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">getCompIndex</a>( name );</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">if</span>( index != 0 )</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;name=&#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; already exists!&quot;</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="comment">// increment and add data</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    index = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">getNumComps</a>() + 1;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>[name] = index;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keyword">auto</span> cc = <span class="keyword">new</span> CompContainer;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>[index] = cc;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    cc-&gt;inputTypeString = inputTypeString;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    cc-&gt;inputScaleString = inputScaleString;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    cc-&gt;inputScaleFactor = 1.0;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    cc-&gt;inputNorm = inputNorm;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    cc-&gt;referenceDensity = 0.0;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    cc-&gt;name = name;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    cc-&gt;index = index;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    cc-&gt;final = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    cc-&gt;molarmass = 0.0;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    cc-&gt;inputTotal = 0.0;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">// handle inputScaleString (multiply everything by this)</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">if</span>( inputTypeString == <span class="stringliteral">&quot;WT&quot;</span> || inputTypeString == <span class="stringliteral">&quot;NUM&quot;</span> )</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">if</span>( inputScaleString == <span class="stringliteral">&quot;FRAC&quot;</span> )</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            cc-&gt;inputScaleFactor = 1.0;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( inputScaleString == <span class="stringliteral">&quot;PCT&quot;</span> )</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            cc-&gt;inputScaleFactor = 1.0e-2;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( inputScaleString == <span class="stringliteral">&quot;PPM&quot;</span> )</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            cc-&gt;inputScaleFactor = 1.0e-6;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( inputScaleString == <span class="stringliteral">&quot;ABS&quot;</span> )</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            cc-&gt;inputScaleFactor = 1.0;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;inputScaleString=&quot;</span> + inputScaleString +</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                   <span class="stringliteral">&quot; must be FRAC|PCT|PPM|ABS&quot;</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( inputTypeString == <span class="stringliteral">&quot;CONC&quot;</span> )</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        cc-&gt;inputNorm = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        cc-&gt;inputScaleString = <span class="stringliteral">&quot;ABS&quot;</span>;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( inputTypeString == <span class="stringliteral">&quot;FORM&quot;</span> )</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        cc-&gt;inputNorm = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        cc-&gt;inputScaleString = <span class="stringliteral">&quot;ABS&quot;</span>;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;inputTypeString=&quot;</span> + inputTypeString +</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;               <span class="stringliteral">&quot; must be FORM|WT|NUM|CONC&quot;</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a1103633bf7b577d5cdadd855da4909c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">Origen::CompManager::getCompIndex</a></div><div class="ttdeci">int getCompIndex(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:64</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ac6cfbd3aed96accd200ccfffd2b0bd20"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">Origen::CompManager::b_id_lookup</a></div><div class="ttdeci">CiMap_t b_id_lookup</div><div class="ttdef"><b>Definition:</b> CompManager.h:62</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a941aab5376f77d4b6690de89af835d8d"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">Origen::CompManager::getNumComps</a></div><div class="ttdeci">int getNumComps() const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:688</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3083bda9d654abef786aeb47ae3e173d"></a>
@@ -502,7 +722,45 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a17799306038e1b6e3c89285ac3ae9331">CompManager::addPart()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">CompManager::checkKnown()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5d66b72b740db7cc024d397ae7f25cec">CompManager::finalizeComp()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">CompManager::getCompIndex()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aa9291bc5b68656214c5ce1f223cdde73">CompManager::getElementalAbundances()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a742c230847747e6b610858b474473974">CompManager::initComp()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a17799306038e1b6e3c89285ac3ae9331">CompManager::addPart()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">bool</span> ele;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">auto</span> error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">checkKnown</a>( name, <span class="keywordtype">id</span>, ele );</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> ) <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">// quick return if element exists</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">getCompIndex</a>( name ) != 0 ) <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="comment">// get the elemental abundances</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    std::vector&lt;int&gt; ids;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    std::vector&lt;double&gt; wts;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aa9291bc5b68656214c5ce1f223cdde73">getElementalAbundances</a>( <span class="keywordtype">id</span>, ids, wts );</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> ) <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">// initialize, add parts, and finalize</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a742c230847747e6b610858b474473974">initComp</a>( name, <span class="stringliteral">&quot;WT&quot;</span>, <span class="stringliteral">&quot;PCT&quot;</span>, <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">double</span> sum = 0.0;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); i++ )</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        sum += wts[i];</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a17799306038e1b6e3c89285ac3ae9331">addPart</a>( name, std::to_string( ids[i] ), wts[i] );</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5d66b72b740db7cc024d397ae7f25cec">finalizeComp</a>( name );</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">// check sum</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">if</span>( sum == 0.0 )</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;element name=&#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; has all zero abundances!&quot;</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a1103633bf7b577d5cdadd855da4909c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">Origen::CompManager::getCompIndex</a></div><div class="ttdeci">int getCompIndex(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:64</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a17799306038e1b6e3c89285ac3ae9331"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a17799306038e1b6e3c89285ac3ae9331">Origen::CompManager::addPart</a></div><div class="ttdeci">std::string addPart(const std::string &amp;name, const std::string &amp;part, double value)</div><div class="ttdef"><b>Definition:</b> CompManager.cpp:157</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a742c230847747e6b610858b474473974"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a742c230847747e6b610858b474473974">Origen::CompManager::initComp</a></div><div class="ttdeci">std::string initComp(const std::string &amp;name, const std::string &amp;inputTypeString, const std::string &amp;inputScaleString, bool inputNorm=false)</div><div class="ttdef"><b>Definition:</b> CompManager.cpp:321</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_aa9291bc5b68656214c5ce1f223cdde73"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#aa9291bc5b68656214c5ce1f223cdde73">Origen::CompManager::getElementalAbundances</a></div><div class="ttdeci">std::string getElementalAbundances(int id, std::vector&lt; int &gt; &amp;ids_out, std::vector&lt; double &gt; &amp;nums_out) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:38</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a5cffc9ad27a5f38d8df71e22988cdfbe"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">Origen::CompManager::checkKnown</a></div><div class="ttdeci">std::string checkKnown(const std::string &amp;part, int &amp;id, bool &amp;ele) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:71</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a5d66b72b740db7cc024d397ae7f25cec"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5d66b72b740db7cc024d397ae7f25cec">Origen::CompManager::finalizeComp</a></div><div class="ttdeci">std::string finalizeComp(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> CompManager.cpp:392</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5d66b72b740db7cc024d397ae7f25cec"></a>
@@ -523,7 +781,91 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">CompManager::getMolarMass()</a>, <a class="el" href="../../d8/d23/struct_origen_1_1_comp_container.html#a9b45b3e13bd9167aab02e17e08916231">CompContainer::name</a>, and <a class="el" href="../../d8/dff/namespaceorigen__beta.html#af3257f602b31173c3e989351557fd836">origen_beta::normalize()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">CompManager::createEle()</a>, and <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;{</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    Check( cc != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="comment">// quick return</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">if</span>( cc-&gt;final )</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="comment">// try to finalize children and build local molar masses in progress</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    std::vector&lt;double&gt; molarmasses;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; cc-&gt;ids.size(); i++ )</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = cc-&gt;ids[i];</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">if</span>( <span class="keywordtype">id</span> &lt; 0 )</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            CompContainer* child_cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( -<span class="keywordtype">id</span> )-&gt;second;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            std::string error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5d66b72b740db7cc024d397ae7f25cec">finalizeComp</a>( child_cc-&gt;name );</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="comment">// only addPart line endings if we have an error</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                ss &lt;&lt; error &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        }</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        molarmasses.push_back( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">getMolarMass</a>( <span class="keywordtype">id</span> ) );</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="comment">// error with children</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordflow">if</span>( ss.str() != <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    {</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    }</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="comment">// save total</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    cc-&gt;inputTotal = cm::total( cc-&gt;nums );</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="comment">// normalize after children are finalized</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">if</span>( cc-&gt;inputNorm )</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        cc-&gt;nums = <a class="code" href="../../d8/dff/namespaceorigen__beta.html#af3257f602b31173c3e989351557fd836">cm::normalize</a>( cc-&gt;nums );</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="comment">// verify fractions</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">if</span>( !cm::verify_frac( cc-&gt;nums ) )</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        {</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;cannot finalize composition name=&quot;</span> + name +</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                   <span class="stringliteral">&quot; unless number fractions &gt;=0 and sum to 1.0 &quot;</span> +</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                   nprintf( <span class="stringliteral">&quot;(sum=%.5e)&quot;</span>, cc-&gt;inputTotal );</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        }</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    }</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="comment">// get number fractions</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">if</span>( cc-&gt;inputTypeString == <span class="stringliteral">&quot;WT&quot;</span> )</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        cc-&gt;nums = cm::num_from_wt( molarmasses, cc-&gt;nums );</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    }</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="comment">// get molar mass</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    cc-&gt;molarmass = cm::molarmass_from_num( molarmasses, cc-&gt;nums );</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordflow">if</span>( cc-&gt;inputTypeString == <span class="stringliteral">&quot;CONC&quot;</span> )</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        Check( cc-&gt;referenceDensity == 0.0 );</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        cc-&gt;referenceDensity =</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            ( cc-&gt;inputTotal ) * ( cc-&gt;molarmass ) / cm::avogadro_factor();</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="comment">// because N_i=rho*NA*f_i/M</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <span class="comment">// rho can be backed out from number densities N_i as rho=sum(N_i)*M/NA</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="comment">// sum(N_i) we would store as total</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="comment">// if we make it to here, we are finalized too</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    cc-&gt;final = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a73878af2424273d029e610717264301a"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">Origen::CompManager::getMolarMass</a></div><div class="ttdeci">double getMolarMass(int id) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:480</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+<div class="ttc" id="namespaceorigen__beta_html_af3257f602b31173c3e989351557fd836"><div class="ttname"><a href="../../d8/dff/namespaceorigen__beta.html#af3257f602b31173c3e989351557fd836">origen_beta::normalize</a></div><div class="ttdeci">subroutine normalize(v1, v2, a, b, dist2, dist1, eps, isub, emax, z)</div><div class="ttdoc">return normalizing factors v1 and v2 </div><div class="ttdef"><b>Definition:</b> origen_beta.f90:376</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a5d66b72b740db7cc024d397ae7f25cec"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5d66b72b740db7cc024d397ae7f25cec">Origen::CompManager::finalizeComp</a></div><div class="ttdeci">std::string finalizeComp(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> CompManager.cpp:392</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a67b763aed72f9fa3190ae65e52e2456f"></a>
@@ -541,7 +883,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;{</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">if</span>( cc == <span class="keyword">nullptr</span> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="keywordflow">return</span> cc-&gt;final;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a73878af2424273d029e610717264301a"></a>
@@ -561,7 +909,38 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">CompManager::b_lib</a>, and <a class="el" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">auxiliary::nuclide()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5d66b72b740db7cc024d397ae7f25cec">CompManager::finalizeComp()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3054b235272ebec18c3f00d4416c353f">CompManager::getConcMap()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#af4843a60ba7968c4d3b95ff88189e955">CompManager::getDC()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a58fed612fc77de3749ab74f4904574be">CompManager::getMolarMass()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a29329bb0c156301b2f761e6791821f10">CompManager::getMolarMasses()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;{</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">if</span>( <span class="keywordtype">id</span> &lt; 0 )</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    {</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( -<span class="keywordtype">id</span> )-&gt;second-&gt;molarmass;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    }</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keywordtype">double</span> mm = 0.0;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="keywordtype">int</span> a = <span class="keywordtype">id</span> % 1000;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordflow">if</span>( a == 0 )</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    {</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        Element* nf = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">b_lib</a>.getElementAt( <span class="keywordtype">id</span>, 0 );</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        <span class="keywordflow">if</span>( nf != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        {</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            mm = nf-&gt;getMass();</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        }</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    }</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    {</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        Nuclide* <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a> = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">b_lib</a>.getNuclide( <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordflow">if</span>( nuclide != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        {</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            mm = nuclide-&gt;getMass();</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    }</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    Ensure( mm &gt; 0.0 );</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">return</span> mm;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ab3df1468ea9c2910d73defa1a5378cb1"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">Origen::CompManager::b_lib</a></div><div class="ttdeci">const ScaleData::StdComp &amp; b_lib</div><div class="ttdoc">std comp library used for molar masses and isotopic content of elements </div><div class="ttdef"><b>Definition:</b> CompManager.h:70</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+<div class="ttc" id="namespaceauxiliary_html_abe8a5a630f5d44f6fc0a7fb5efbe9c29"><div class="ttname"><a href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">auxiliary::nuclide</a></div><div class="ttdeci">subroutine nuclide(nuclide_id, name)</div><div class="ttdoc">Convert six-digit nuclide identifier to alphanumeric symbol. The result will be exactly six character...</div><div class="ttdef"><b>Definition:</b> auxiliary.f90:232</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a29329bb0c156301b2f761e6791821f10"></a>
@@ -581,7 +960,16 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">CompManager::getMolarMass()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#adba2b71642c601dcba8fa404fa7146c0">CompManager::getWtMap()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;{</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    std::vector&lt;double&gt; molarmasses;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <span class="keywordtype">id</span>.size(); i++ )</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    {</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        molarmasses.push_back( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">getMolarMass</a>( <span class="keywordtype">id</span>[i] ) );</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="keywordflow">return</span> molarmasses;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a73878af2424273d029e610717264301a"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">Origen::CompManager::getMolarMass</a></div><div class="ttdeci">double getMolarMass(int id) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:480</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a58fed612fc77de3749ab74f4904574be"></a>
@@ -599,7 +987,21 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">CompManager::getCompIndex()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">CompManager::getMolarMass()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;{</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keywordtype">int</span> index = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">getCompIndex</a>( name );</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keywordflow">if</span>( index != 0 )</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">getMolarMass</a>( -index );</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    }</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    {</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = ScaleData::Utils::symbol_to_pizzzaaa( name );</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">getMolarMass</a>( <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    }</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a1103633bf7b577d5cdadd855da4909c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">Origen::CompManager::getCompIndex</a></div><div class="ttdeci">int getCompIndex(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:64</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a73878af2424273d029e610717264301a"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">Origen::CompManager::getMolarMass</a></div><div class="ttdeci">double getMolarMass(int id) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:480</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a1103633bf7b577d5cdadd855da4909c3"></a>
@@ -619,7 +1021,13 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">CompManager::b_id_lookup</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a17799306038e1b6e3c89285ac3ae9331">CompManager::addPart()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5cffc9ad27a5f38d8df71e22988cdfbe">CompManager::checkKnown()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">CompManager::createEle()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a58fed612fc77de3749ab74f4904574be">CompManager::getMolarMass()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a742c230847747e6b610858b474473974">CompManager::initComp()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.find( name );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span>( it != <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.end() ) <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ac6cfbd3aed96accd200ccfffd2b0bd20"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">Origen::CompManager::b_id_lookup</a></div><div class="ttdeci">CiMap_t b_id_lookup</div><div class="ttdef"><b>Definition:</b> CompManager.h:62</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="abab4789f40750cd9c403deff87fbdb7e"></a>
@@ -639,7 +1047,14 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">CompManager::getCompIndex()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a17799306038e1b6e3c89285ac3ae9331">CompManager::addPart()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a5d66b72b740db7cc024d397ae7f25cec">CompManager::finalizeComp()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#af4843a60ba7968c4d3b95ff88189e955">CompManager::getDC()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">CompManager::getNumMap()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a03dabb326941b64a0b792558ed69e60e">CompManager::getReferenceDensity()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a67b763aed72f9fa3190ae65e52e2456f">CompManager::isFinalizedComp()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a7085ed5cda7e098652ba51642c8a5488">CompManager::setReferenceDensity()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3392e1a5eb6d856b8f50a8e9f5faefca">CompManager::toString()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;{</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">getCompIndex</a>( name );</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="keywordflow">if</span>( <span class="keywordtype">id</span> == 0 ) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( <span class="keywordtype">id</span> )-&gt;second;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a1103633bf7b577d5cdadd855da4909c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a1103633bf7b577d5cdadd855da4909c3">Origen::CompManager::getCompIndex</a></div><div class="ttdeci">int getCompIndex(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:64</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3f1e30ee65f8f7dc17e20349e6e3f9a4"></a>
@@ -660,7 +1075,18 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">CompManager::getNumComps()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#af4843a60ba7968c4d3b95ff88189e955">CompManager::getDC()</a>, and <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;{</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="comment">// allow positive or negative</span></div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    <span class="keywordtype">int</span> <span class="keywordtype">id</span> = std::abs( index );</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    Require( <span class="keywordtype">id</span> &gt; 0 &amp;&amp; <span class="keywordtype">id</span> &lt;= <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">getNumComps</a>() );</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="keyword">auto</span> name = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( <span class="keywordtype">id</span> )-&gt;second-&gt;name;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="comment">// always return a name without the leading _</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="keywordflow">if</span>( name[0] == <span class="charliteral">&#39;_&#39;</span> ) name = name.substr( 1 );</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keywordflow">return</span> name;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a941aab5376f77d4b6690de89af835d8d"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">Origen::CompManager::getNumComps</a></div><div class="ttdeci">int getNumComps() const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:688</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3392e1a5eb6d856b8f50a8e9f5faefca"></a>
@@ -691,7 +1117,53 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">Origen::doIndent()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#ac34098ed3656bef071a78ccd0c5c9340">Origen::toYesNo()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">if</span>( cc == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown name=&quot;</span> + name;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">// header info</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;name:  &quot;</span> &lt;&lt; cc-&gt;name &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;inputScaleString: &quot;</span> &lt;&lt; cc-&gt;inputScaleString</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;       &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;inputScaleFactor: &quot;</span> &lt;&lt; cc-&gt;inputScaleFactor</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;       &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;inputTypeString: &quot;</span> &lt;&lt; cc-&gt;inputTypeString</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;       &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;inputNorm:  &quot;</span> &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#ac34098ed3656bef071a78ccd0c5c9340">toYesNo</a>( cc-&gt;inputNorm )</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;       &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;inputTotal: &quot;</span> &lt;&lt; cc-&gt;inputTotal &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;index: &quot;</span> &lt;&lt; cc-&gt;index &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;molarmass: &quot;</span> &lt;&lt; cc-&gt;molarmass &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;referenceDensity: &quot;</span> &lt;&lt; cc-&gt;referenceDensity</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;       &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;numfracs: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// recurse through values</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    ss.flags( std::ios_base::scientific );</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; cc-&gt;ids.size(); i++ )</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; std::setw( 9 ) &lt;&lt; cc-&gt;ids[i] &lt;&lt; <span class="stringliteral">&quot;  &quot;</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;           &lt;&lt; std::scientific &lt;&lt; cc-&gt;nums[i] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">if</span>( cc-&gt;ids[i] &lt; 0 )</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            ss &lt;&lt; <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3392e1a5eb6d856b8f50a8e9f5faefca">toString</a>( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( -cc-&gt;ids[i] )-&gt;second-&gt;name,</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                            indent + 4 );</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    ss &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">doIndent</a>( indent ) &lt;&lt; <span class="stringliteral">&quot;final: &quot;</span> &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#ac34098ed3656bef071a78ccd0c5c9340">toYesNo</a>( cc-&gt;final ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a3392e1a5eb6d856b8f50a8e9f5faefca"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3392e1a5eb6d856b8f50a8e9f5faefca">Origen::CompManager::toString</a></div><div class="ttdeci">std::string toString(const std::string &amp;name, int indent=0) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:241</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+<div class="ttc" id="namespace_origen_html_a785a23d07d48532283b0bd29c7e654d1"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a785a23d07d48532283b0bd29c7e654d1">Origen::doIndent</a></div><div class="ttdeci">std::string doIndent(int indent)</div><div class="ttdef"><b>Definition:</b> CompManager.cpp:218</div></div>
+<div class="ttc" id="namespace_origen_html_ac34098ed3656bef071a78ccd0c5c9340"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ac34098ed3656bef071a78ccd0c5c9340">Origen::toYesNo</a></div><div class="ttdeci">std::string toYesNo(bool yes_no)</div><div class="ttdef"><b>Definition:</b> CompManager.cpp:229</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aeadf6a96687ca52b85a97781cb7f80c3"></a>
@@ -722,7 +1194,70 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3054b235272ebec18c3f00d4416c353f">CompManager::getConcMap()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#af4843a60ba7968c4d3b95ff88189e955">CompManager::getDC()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#adba2b71642c601dcba8fa404fa7146c0">CompManager::getWtMap()</a>, and <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;{</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    map_out.clear();</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <span class="keywordflow">if</span>( cc == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    {</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;name=&#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; was not found&quot;</span>;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    }</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keywordflow">if</span>( !cc-&gt;final )</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    {</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;CompManager::getNumMap requires comp=&quot;</span> + name + <span class="stringliteral">&quot; is finalized&quot;</span>;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    }</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; cc-&gt;ids.size(); i++ )</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    {</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = cc-&gt;ids[i];</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        <span class="comment">// handle an element with children</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        <span class="keywordflow">if</span>( <span class="keywordtype">id</span> &lt; 0 )</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        {</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            Check( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( -<span class="keywordtype">id</span> ) != <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.end() );</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            CompContainer* child_cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( -<span class="keywordtype">id</span> )-&gt;second;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;            <span class="comment">// need a temporary map so we can multiply it by this fraction</span></div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;            std::map&lt;int, double&gt; map_temp;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            std::string error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">getNumMap</a>( child_cc-&gt;name, map_temp );</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;            <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;            {</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;            }</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;            <span class="keyword">auto</span> it = map_temp.begin();</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            <span class="keywordflow">while</span>( it != map_temp.end() )</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            {</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                <span class="keywordtype">int</span> id_temp = it-&gt;first;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                <span class="keywordtype">double</span> frac_temp = it-&gt;second;</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                <span class="keywordflow">if</span>( map_out.find( id_temp ) == map_out.end() )</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                {</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;                    map_out[id_temp] = 0.0;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                }</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                map_out[id_temp] += cc-&gt;nums[i] * frac_temp;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                ++it;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;            }</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        }</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;        <span class="comment">// handle a single element</span></div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;        {</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;            <span class="comment">// initComp</span></div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;            <span class="keywordflow">if</span>( map_out.find( <span class="keywordtype">id</span> ) == map_out.end() )</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            {</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                map_out[id] = 0.0;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            }</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            map_out[id] += cc-&gt;nums[i];</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    }</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <span class="comment">// make sure all elements add up to 1</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    Ensure( cm::verify_frac( map_out ) );</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_aeadf6a96687ca52b85a97781cb7f80c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">Origen::CompManager::getNumMap</a></div><div class="ttdeci">std::string getNumMap(const std::string &amp;name, std::map&lt; int, double &gt; &amp;map_out) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:575</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="adba2b71642c601dcba8fa404fa7146c0"></a>
@@ -753,7 +1288,45 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a29329bb0c156301b2f761e6791821f10">CompManager::getMolarMasses()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">CompManager::getNumMap()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;{</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="comment">// get map of ids to number fractions</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    std::string error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">getNumMap</a>( name, map_out );</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    {</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    }</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="comment">// extract data</span></div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    std::vector&lt;double&gt; wt;</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    std::vector&lt;int&gt; ids;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="keyword">auto</span> it = map_out.begin();</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordflow">while</span>( it != map_out.end() )</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    {</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        ids.push_back( it-&gt;first );</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        wt.push_back( it-&gt;second );</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        ++it;</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    }</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="comment">// get molar masses</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keyword">auto</span> molarmasses = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a29329bb0c156301b2f761e6791821f10">getMolarMasses</a>( ids );</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="comment">// perform conversion</span></div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    wt = cm::wt_from_num( molarmasses, wt );</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="comment">// replace num data in map with wt data</span></div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); i++ )</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    {</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        map_out[ids[i]] = wt[i];</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    }</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="comment">// make sure all elements add up to 1</span></div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    Ensure( cm::verify_frac( map_out ) );</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a29329bb0c156301b2f761e6791821f10"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a29329bb0c156301b2f761e6791821f10">Origen::CompManager::getMolarMasses</a></div><div class="ttdeci">std::vector&lt; double &gt; getMolarMasses(const std::vector&lt; int &gt; &amp;id) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:510</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_aeadf6a96687ca52b85a97781cb7f80c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">Origen::CompManager::getNumMap</a></div><div class="ttdeci">std::string getNumMap(const std::string &amp;name, std::map&lt; int, double &gt; &amp;map_out) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:575</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3054b235272ebec18c3f00d4416c353f"></a>
@@ -790,7 +1363,25 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">CompManager::getMolarMass()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">CompManager::getNumMap()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;{</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    std::string error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">getNumMap</a>( name, map_out );</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    }</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keyword">auto</span> it = map_out.begin();</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="keywordtype">double</span> scaling = cm::avogadro_factor() / <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">getMolarMass</a>( name );</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="keywordflow">while</span>( it != map_out.end() )</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    {</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        it-&gt;second *= dens * scaling;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        ++it;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    }</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a73878af2424273d029e610717264301a"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">Origen::CompManager::getMolarMass</a></div><div class="ttdeci">double getMolarMass(int id) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:480</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_aeadf6a96687ca52b85a97781cb7f80c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">Origen::CompManager::getNumMap</a></div><div class="ttdeci">std::string getNumMap(const std::string &amp;name, std::map&lt; int, double &gt; &amp;map_out) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:575</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa9291bc5b68656214c5ce1f223cdde73"></a>
@@ -826,7 +1417,31 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">CompManager::b_lib</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3083bda9d654abef786aeb47ae3e173d">CompManager::createEle()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// add wt fractions as nuclide objects</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Element* nf = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">b_lib</a>.getElementAt( <span class="keywordtype">id</span>, 0 );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span>( nf == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::stringstream ss;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        ss &lt;&lt; <span class="stringliteral">&quot;element &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; does not have nuclide fractions&quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> std::map&lt;int, std::pair&lt;Nuclide*, float&gt;&gt; Nuclides;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> Nuclides&amp; wtFractions = nf-&gt;getNuclidesMap();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">auto</span> it = wtFractions.begin();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">while</span>( it != wtFractions.end() )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        ids.push_back( it-&gt;first );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        wts.push_back( it-&gt;second.second );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ++it;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ab3df1468ea9c2910d73defa1a5378cb1"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ab3df1468ea9c2910d73defa1a5378cb1">Origen::CompManager::b_lib</a></div><div class="ttdeci">const ScaleData::StdComp &amp; b_lib</div><div class="ttdoc">std comp library used for molar masses and isotopic content of elements </div><div class="ttdef"><b>Definition:</b> CompManager.h:70</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a941aab5376f77d4b6690de89af835d8d"></a>
@@ -846,7 +1461,9 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3f1e30ee65f8f7dc17e20349e6e3f9a4">CompManager::getCompName()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#af4843a60ba7968c4d3b95ff88189e955">CompManager::getDC()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a742c230847747e6b610858b474473974">CompManager::initComp()</a>, and <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.size(); }</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af4843a60ba7968c4d3b95ff88189e955"></a>
@@ -877,7 +1494,88 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3f1e30ee65f8f7dc17e20349e6e3f9a4">CompManager::getCompName()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">CompManager::getMolarMass()</a>, <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">CompManager::getNumComps()</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">CompManager::getNumMap()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d3/de0/tst_comp_manager_8cpp.html#a5c3c4d242748028a34e9df2a5c14001c">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;{</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <span class="comment">// must come in with space already allocated</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    Require( dcCompositionList != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    dcCompositionList-&gt;addInt( <span class="stringliteral">&quot;size&quot;</span>, <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">getNumComps</a>() );</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 1; i &lt;= <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">getNumComps</a>(); i++ )</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    {</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        <span class="comment">// new data container for this comp</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        DataContainer* dcComposition = <span class="keyword">new</span> DataContainer();</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        <span class="comment">// set the index</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        dcCompositionList-&gt;add( std::to_string( i ), dcComposition );</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="comment">// get the basic info</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        std::string name = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3f1e30ee65f8f7dc17e20349e6e3f9a4">getCompName</a>( i );</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <span class="keywordtype">double</span> mm = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">getMolarMass</a>( name );</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        <span class="comment">// add all data pointers into the container</span></div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        dcComposition-&gt;addString( <span class="stringliteral">&quot;name&quot;</span>, name );</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        dcComposition-&gt;addString( <span class="stringliteral">&quot;inputTypeString&quot;</span>, cc-&gt;inputTypeString );</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        dcComposition-&gt;addString( <span class="stringliteral">&quot;inputScaleString&quot;</span>, cc-&gt;inputScaleString );</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        dcComposition-&gt;addDouble(</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;            <span class="stringliteral">&quot;inputRecoveryFactor&quot;</span>,</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            ( cc-&gt;inputTotal ) / ( cc-&gt;inputScaleFactor ) );</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        dcComposition-&gt;addInt( <span class="stringliteral">&quot;id&quot;</span>, i );</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        dcComposition-&gt;addDouble( <span class="stringliteral">&quot;molarMass&quot;</span>, mm );</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        dcComposition-&gt;addDouble( <span class="stringliteral">&quot;referenceDensity&quot;</span>, cc-&gt;referenceDensity );</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        dcComposition-&gt;addDouble( <span class="stringliteral">&quot;concFactor&quot;</span>, cm::avogadro_factor() / mm );</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        IntegerList* ilNuclideIds = <span class="keyword">new</span> IntegerList();</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        DoubleList* dlNumFracs = <span class="keyword">new</span> DoubleList();</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        DoubleList* dlMasses = <span class="keyword">new</span> DoubleList();</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        dcComposition-&gt;add( <span class="stringliteral">&quot;nuclideIds&quot;</span>, ilNuclideIds );</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        dcComposition-&gt;add( <span class="stringliteral">&quot;numFracs&quot;</span>, dlNumFracs );</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        dcComposition-&gt;add( <span class="stringliteral">&quot;masses&quot;</span>, dlMasses );</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="keywordflow">if</span>( flatten )</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        {</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;            <span class="comment">// get map of ids to number fractions</span></div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;            std::map&lt;int, double&gt; map_out;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;            std::string error = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">getNumMap</a>( name, map_out );</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            {</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;            }</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;            <span class="comment">// add data to container</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            <span class="keyword">auto</span> it = map_out.begin();</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            <span class="keywordflow">while</span>( it != map_out.end() )</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            {</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;                ilNuclideIds-&gt;push_back( it-&gt;first );</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                dlNumFracs-&gt;push_back( it-&gt;second );</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                dlMasses-&gt;push_back( <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">getMolarMass</a>( it-&gt;first ) );</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                ++it;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;            }</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        }</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        {</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            <span class="keywordflow">if</span>( !cc-&gt;final )</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;            {</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;CompManager::getDC requires comp=&quot;</span> + name +</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                       <span class="stringliteral">&quot; is finalized&quot;</span>;</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;            }</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;            <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; cc-&gt;ids.size(); j++ )</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            {</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                ilNuclideIds-&gt;push_back( cc-&gt;ids[j] );</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                dlNumFracs-&gt;push_back( cc-&gt;nums[j] );</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;            }</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        }</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    }</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a73878af2424273d029e610717264301a"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a73878af2424273d029e610717264301a">Origen::CompManager::getMolarMass</a></div><div class="ttdeci">double getMolarMass(int id) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:480</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a3f1e30ee65f8f7dc17e20349e6e3f9a4"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a3f1e30ee65f8f7dc17e20349e6e3f9a4">Origen::CompManager::getCompName</a></div><div class="ttdeci">std::string getCompName(int index) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:677</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_aeadf6a96687ca52b85a97781cb7f80c3"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#aeadf6a96687ca52b85a97781cb7f80c3">Origen::CompManager::getNumMap</a></div><div class="ttdeci">std::string getNumMap(const std::string &amp;name, std::map&lt; int, double &gt; &amp;map_out) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:575</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_a941aab5376f77d4b6690de89af835d8d"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#a941aab5376f77d4b6690de89af835d8d">Origen::CompManager::getNumComps</a></div><div class="ttdeci">int getNumComps() const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:688</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a22e1ce96894c54da3fe505bd42e19874"></a>
@@ -901,7 +1599,63 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;{</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    std::string in = <span class="stringliteral">&quot;  &quot;</span>;  <span class="comment">// indentation</span></div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;CompositionList:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    <span class="keywordtype">size_t</span> sizeCL = dcCompositionList-&gt;getInt( <span class="stringliteral">&quot;size&quot;</span> );</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    ss &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;size: &quot;</span> &lt;&lt; sizeCL &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> c = 0; c &lt; sizeCL; c++ )</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    {</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <span class="comment">// Composition</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        ss &lt;&lt; in &lt;&lt; c + 1 &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setprecision( 12 ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        std::string indexComposition = std::to_string( c + 1 );</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        DataContainer* dcComposition =</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            (DataContainer*)dcCompositionList-&gt;get( indexComposition );</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keywordflow">if</span>( dcComposition == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        {</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;            ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;NULL&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        }</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        <span class="comment">// Check(dcComposition!=nullptr);</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;name: &quot;</span> &lt;&lt; dcComposition-&gt;getString( <span class="stringliteral">&quot;name&quot;</span> )</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;           &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;inputTypeString: &quot;</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;           &lt;&lt; dcComposition-&gt;getString( <span class="stringliteral">&quot;inputTypeString&quot;</span> ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;inputScaleString: &quot;</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;           &lt;&lt; dcComposition-&gt;getString( <span class="stringliteral">&quot;inputScaleString&quot;</span> ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;inputRecoveryFactor: &quot;</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;           &lt;&lt; dcComposition-&gt;getDouble( <span class="stringliteral">&quot;inputRecoveryFactor&quot;</span> ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;id: &quot;</span> &lt;&lt; dcComposition-&gt;getInt( <span class="stringliteral">&quot;id&quot;</span> ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        ss &lt;&lt; in &lt;&lt; in</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;           &lt;&lt; <span class="stringliteral">&quot;molarMass: &quot;</span> &lt;&lt; dcComposition-&gt;getDouble( <span class="stringliteral">&quot;molarMass&quot;</span> )</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;           &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;referenceDensity: &quot;</span></div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;           &lt;&lt; dcComposition-&gt;getDouble( <span class="stringliteral">&quot;referenceDensity&quot;</span> ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        ss &lt;&lt; in &lt;&lt; in</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;           &lt;&lt; <span class="stringliteral">&quot;concFactor: &quot;</span> &lt;&lt; dcComposition-&gt;getDouble( <span class="stringliteral">&quot;concFactor&quot;</span> )</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;           &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        ss &lt;&lt; in &lt;&lt; in &lt;&lt; <span class="stringliteral">&quot;nuclideIds: numFracs &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        IntegerList* ilNuclideIds =</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;            (IntegerList*)dcComposition-&gt;get( <span class="stringliteral">&quot;nuclideIds&quot;</span> );</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        DoubleList* dlRefConcentrations =</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;            (DoubleList*)dcComposition-&gt;get( <span class="stringliteral">&quot;numFracs&quot;</span> );</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        <span class="keywordtype">size_t</span> sizeN = ilNuclideIds-&gt;size();</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; sizeN; i++ )</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        {</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;            ss &lt;&lt; in &lt;&lt; in &lt;&lt; in &lt;&lt; std::setw( 8 ) &lt;&lt; ilNuclideIds-&gt;at( i )</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setprecision( 12 ) &lt;&lt; std::scientific</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;               &lt;&lt; dlRefConcentrations-&gt;at( i ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;        }</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    }</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a03dabb326941b64a0b792558ed69e60e"></a>
@@ -919,7 +1673,19 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;{</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keywordflow">if</span>( cc == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    {</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    }</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    {</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordflow">return</span> cc-&gt;referenceDensity;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    }</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7085ed5cda7e098652ba51642c8a5488"></a>
@@ -947,7 +1713,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">CompManager::getComp()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;{</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keyword">auto</span> cc = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">getComp</a>( name );</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">if</span>( cc != <span class="keyword">nullptr</span> ) cc-&gt;referenceDensity = density;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_abab4789f40750cd9c403deff87fbdb7e"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#abab4789f40750cd9c403deff87fbdb7e">Origen::CompManager::getComp</a></div><div class="ttdeci">CompContainer * getComp(const std::string &amp;name) const </div><div class="ttdef"><b>Definition:</b> CompManager.cpp:689</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae4bc695b712d9414b1b24148853473ed"></a>
@@ -975,7 +1747,24 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">CompManager::b_id_lookup</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;{</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    <span class="keywordflow">if</span>( oldName != newName )</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    {</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keyword">auto</span> it = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.find( oldName );</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        <span class="keywordflow">if</span>( it != <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.end() )</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        {</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="keywordtype">int</span> index = it-&gt;second;</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.erase( it );</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>[newName] = index;</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        }</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    }</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ac6cfbd3aed96accd200ccfffd2b0bd20"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">Origen::CompManager::b_id_lookup</a></div><div class="ttdeci">CiMap_t b_id_lookup</div><div class="ttdef"><b>Definition:</b> CompManager.h:62</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aff4828faedcea23aa4abb94b7aebd469"></a>
@@ -993,7 +1782,25 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">CompManager::b_comps</a>, and <a class="el" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">CompManager::b_id_lookup</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;{</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keyword">auto</span> indexit = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.find( name );</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    <span class="keywordflow">if</span>( indexit == <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.end() )</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;    {</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    }</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <span class="keyword">auto</span> containerit = <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.find( indexit-&gt;second );</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    Require( containerit != <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.end() );</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;    <span class="keyword">delete</span> containerit-&gt;second;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">b_id_lookup</a>.erase( indexit );</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <a class="code" href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">b_comps</a>.erase( containerit );</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ae54a82e2590c9cf209ed0fb96f0a9223"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ae54a82e2590c9cf209ed0fb96f0a9223">Origen::CompManager::b_comps</a></div><div class="ttdeci">std::map&lt; int, CompContainer * &gt; b_comps</div><div class="ttdoc">map of elements and mixture ids to child mixtures </div><div class="ttdef"><b>Definition:</b> CompManager.h:61</div></div>
+<div class="ttc" id="class_origen_1_1_comp_manager_html_ac6cfbd3aed96accd200ccfffd2b0bd20"><div class="ttname"><a href="../../d8/dd1/class_origen_1_1_comp_manager.html#ac6cfbd3aed96accd200ccfffd2b0bd20">Origen::CompManager::b_id_lookup</a></div><div class="ttdeci">CiMap_t b_id_lookup</div><div class="ttdef"><b>Definition:</b> CompManager.h:62</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

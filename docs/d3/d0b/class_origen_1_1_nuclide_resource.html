@@ -215,7 +215,14 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#adb61847813ab464c57d90bffa87d9fbf">Origen::defaultNuclideResource()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>( load_default )</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#adb61847813ab464c57d90bffa87d9fbf">defaultNuclideResource</a>( <span class="keyword">this</span> );</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="namespace_origen_html_adb61847813ab464c57d90bffa87d9fbf"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#adb61847813ab464c57d90bffa87d9fbf">Origen::defaultNuclideResource</a></div><div class="ttdeci">void defaultNuclideResource(Origen::NuclideResource *nr)</div><div class="ttdoc">add default contents to a nuclide resource </div><div class="ttdef"><b>Definition:</b> defaultNuclideResource.cpp:9</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -235,7 +242,11 @@ Static Protected Attributes</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/d49/_core_2re_2tests_2tst_nuclide_resource_8cpp-example.html#a2">Core/re/tests/tstNuclideResource.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d9/d33/tst_nuclide_resource_8cpp.html#a5e315c68e6a8819b9a080c48a70b0841">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.count( izzzaaa ) &gt; 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_adc22fa354b17d536dc1bc922f4543035"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">Origen::NuclideResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, Properties &gt; parent_map</div><div class="ttdef"><b>Definition:</b> NuclideResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa48c39f92bc04eded742f5310c74aafe"></a>
@@ -250,7 +261,11 @@ Static Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#a3e708d496acb090a8657506c512ecf55">to_json</a>().toStyledString();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_a3e708d496acb090a8657506c512ecf55"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#a3e708d496acb090a8657506c512ecf55">Origen::NuclideResource::to_json</a></div><div class="ttdeci">Scale::Json::Value to_json() const </div><div class="ttdef"><b>Definition:</b> NuclideResource.cpp:46</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3e708d496acb090a8657506c512ecf55"></a>
@@ -267,7 +282,32 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../da/d8f/struct_origen_1_1_nuclide_resource_1_1_properties.html#ad1dc596c38321883a333224fa6001450">NuclideResource::Properties::abundance_num</a>, <a class="el" href="../../da/d8f/struct_origen_1_1_nuclide_resource_1_1_properties.html#ad03009a316ed428bd80446a773e5e73f">NuclideResource::Properties::abundance_wt</a>, and <a class="el" href="../../da/d8f/struct_origen_1_1_nuclide_resource_1_1_properties.html#a244bf42c46054cf1113be44d55f2156d">NuclideResource::Properties::mass</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Json::Value j_parents( Json::objectValue );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::map&lt;int, Properties&gt;::const_iterator it;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.begin(); it != <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.end(); it++ )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = it-&gt;first;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        Properties nd = it-&gt;second;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// initialize parents[idString]</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        Json::Value j_nd( Json::objectValue );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        j_nd[<span class="stringliteral">&quot;abundance_num&quot;</span>] = nd.abundance_num;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        j_nd[<span class="stringliteral">&quot;abundance_wt&quot;</span>] = nd.abundance_wt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        j_nd[<span class="stringliteral">&quot;mass&quot;</span>] = nd.mass;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// populate parents[idString]</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::stringstream ss;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        ss &lt;&lt; std::setw( 7 ) &lt;&lt; std::setfill( <span class="charliteral">&#39;0&#39;</span> ) &lt;&lt; id;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        j_parents[ss.str()] = j_nd;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> j_parents;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_adc22fa354b17d536dc1bc922f4543035"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">Origen::NuclideResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, Properties &gt; parent_map</div><div class="ttdef"><b>Definition:</b> NuclideResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a21fa7e5c28e7ae2edf4952d789e48898"></a>
@@ -285,7 +325,26 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#a11d7b72dff19856ae217e59e51d225a7">Origen::populateLibraryMass_NuclideResource()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Require( izzzaaa &lt; 9999999 );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// look for full id</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.find( izzzaaa );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span>( it != <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.end() ) <span class="keywordflow">return</span> it-&gt;second.mass;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// now look for id without isomeric</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> zzzaaa = izzzaaa % ScaleData::Utils::PIZZZAAA_I_OFFSET;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>( zzzaaa != izzzaaa )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        it = <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.find( zzzaaa );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span>( it != <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.end() ) <span class="keywordflow">return</span> it-&gt;second.mass;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// return mass number</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> izzzaaa % ScaleData::Utils::PIZZZAAA_Z_OFFSET;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_adc22fa354b17d536dc1bc922f4543035"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">Origen::NuclideResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, Properties &gt; parent_map</div><div class="ttdef"><b>Definition:</b> NuclideResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aae67dc2e632730d3424a51927e4a2a5e"></a>
@@ -303,7 +362,13 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#aa8285810e2a2b505f1604d7d415422e6">Origen::populateLibraryAbundance_NuclideResource()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.find( izzzaaa );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span>( it == <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.end() ) <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> it-&gt;second.abundance_num;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_adc22fa354b17d536dc1bc922f4543035"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">Origen::NuclideResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, Properties &gt; parent_map</div><div class="ttdef"><b>Definition:</b> NuclideResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a96a321a699a750ee2f03e38945dde30e"></a>
@@ -319,7 +384,13 @@ Static Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.find( izzzaaa );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span>( it == <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">parent_map</a>.end() ) <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> it-&gt;second.abundance_wt;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_adc22fa354b17d536dc1bc922f4543035"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035">Origen::NuclideResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, Properties &gt; parent_map</div><div class="ttdef"><b>Definition:</b> NuclideResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad9b4c458810293232c1e95e3faa2197b"></a>
@@ -345,7 +416,15 @@ Static Protected Attributes</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/d49/_core_2re_2tests_2tst_nuclide_resource_8cpp-example.html#a4">Core/re/tests/tstNuclideResource.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#a0b61efe686462d7b59b3f148c535b5fc">Origen::populateLibraryAbundance()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#afa62678e878b5cce0839fe0b0a3aa66b">Origen::populateLibraryMass()</a>, and <a class="el" href="../../d9/d33/tst_nuclide_resource_8cpp.html#abf07c0fe26ff5b5661a1094dc7dbc0c1">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adf473b97d35ce633cd007f9c2b4d1292">b_default_resource</a> == <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adf473b97d35ce633cd007f9c2b4d1292">b_default_resource</a> = std::make_shared&lt;NuclideResource&gt;( true );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adf473b97d35ce633cd007f9c2b4d1292">b_default_resource</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_adf473b97d35ce633cd007f9c2b4d1292"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adf473b97d35ce633cd007f9c2b4d1292">Origen::NuclideResource::b_default_resource</a></div><div class="ttdeci">static SCP b_default_resource</div><div class="ttdef"><b>Definition:</b> NuclideResource.h:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="abcff51c46a3adaaa1baabbf105516ad4"></a>
@@ -371,7 +450,9 @@ Static Protected Attributes</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/d49/_core_2re_2tests_2tst_nuclide_resource_8cpp-example.html#a5">Core/re/tests/tstNuclideResource.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d9/d33/tst_nuclide_resource_8cpp.html#abf07c0fe26ff5b5661a1094dc7dbc0c1">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{ <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adf473b97d35ce633cd007f9c2b4d1292">b_default_resource</a> = <span class="keyword">nullptr</span>; }</div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_adf473b97d35ce633cd007f9c2b4d1292"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#adf473b97d35ce633cd007f9c2b4d1292">Origen::NuclideResource::b_default_resource</a></div><div class="ttdeci">static SCP b_default_resource</div><div class="ttdef"><b>Definition:</b> NuclideResource.h:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

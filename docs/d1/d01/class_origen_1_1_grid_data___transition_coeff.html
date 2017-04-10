@@ -252,7 +252,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a57fa9b83c14f0ae2d78f8b5fe1720f5d">GridData_TransitionCoeff::clear_gridWts()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{ <a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a57fa9b83c14f0ae2d78f8b5fe1720f5d">clear_gridWts</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a57fa9b83c14f0ae2d78f8b5fe1720f5d"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a57fa9b83c14f0ae2d78f8b5fe1720f5d">Origen::GridData_TransitionCoeff::clear_gridWts</a></div><div class="ttdeci">void clear_gridWts()</div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.cpp:175</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -290,7 +292,133 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ada6fa2f1a09f83b8f3630b47dc43e29f">GridData_TransitionCoeff::b_extentTags</a>, <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ae6285ba40e8bb43e9f8e5e531c14e0f9">GridData_TransitionCoeff::b_tm_indexMap</a>, <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4bbfcf2b424b5e122648680b89f46c9e">GridData_TransitionCoeff::b_xGrids</a>, <a class="el" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f()</a>, and <a class="el" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">auxiliary_erf_m::x</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, and <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#a20693594227bd01ff568e0ddf27ac84b">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">// Grids defined by each unique tag value in each dimension</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    Vec_Xptr tag_xgrids;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// number of unique tag values for each dimension</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Vec_I tag_extents;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Fake responses for each GridData point</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Vec_Rptr fake_responses;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Fake set of responses; used as a memory placeholder</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Vec_R faker( 1, 0.0 );</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Push fake responses for each point only for the first tag</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> firstTag = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// Need to calculate number of UNIQUE tags for each extent</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">/* \todo It would be nice if we had a function that took a list of</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">     * TagManager</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">     *       objects &amp; list of tags and returned a list of unique tag-value</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">     *       combinations</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; it : interpTags )</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// Push back an x-grid extent</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a6d5530c8117ac3ad824fb0361af2ccba">SP_Vec_X</a> xgrid = <a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a6d5530c8117ac3ad824fb0361af2ccba">SP_Vec_X</a>( <span class="keyword">new</span> Vec_X );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; tm : tagManList )</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// First check that the tags of interest exist on all the</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">// TagManagers</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            Require( tm.hasTag( it ) );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="comment">// Second, check that the tag is an interp tag on all the</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="comment">// TagManagers</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a> tmp_check( tm.listInterpTags() );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            Require( std::find( tmp_check.begin(), tmp_check.end(), it ) !=</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                     tmp_check.end() );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">// Push back unique values onto the extent</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordtype">float</span> tagVal = (float)tm.getInterpTag( it );</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordtype">bool</span> unique = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">for</span>( <span class="keywordtype">float</span> xVal : *xgrid )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span>( ScaleSTL::approx_eq( xVal, tagVal ) ) unique = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">if</span>( unique )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                xgrid-&gt;push_back( tagVal );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">// Can we reverse the loop order?</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span>( firstTag )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="comment">// Push back a fake response for each point</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; nr; ++i )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    fake_responses.push_back( &amp;faker.at( 0 ) );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// Skip this x-grid if it contains one or fewer x-values</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// i.e., no interpolation to be performed for this dimension</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span>( !( xgrid-&gt;size() &gt; 1 ) ) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::sort( xgrid-&gt;begin(), xgrid-&gt;end() );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// Push on our xgrid extent onto the grid</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// Note that only this way works; push_back(&amp;xgrid[0]) does NOT work!</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        tag_xgrids.push_back( &amp;xgrid-&gt;at( 0 ) );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        tag_extents.push_back( xgrid-&gt;size() );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ada6fa2f1a09f83b8f3630b47dc43e29f">b_extentTags</a>.push_back( it );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4bbfcf2b424b5e122648680b89f46c9e">b_xGrids</a>.push_back( xgrid );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        firstTag = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// Set up the x-grid dimensions</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    GridData::setx( tag_extents, tag_xgrids );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Set the fake responses</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Vec_I fake_rextents( nr, 1 );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    GridData::setr( fake_rextents, fake_responses );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">     *  Create an indexMap to map the TagManager objects to each GridData flat</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">     *  index location</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">     *  Here, our job is to identify where each combination of tags on each</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">     *  TagManager resides in GridData space - i.e., the LOC value. To do this,</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">     *  we loop through each extent and find the location on the xgrid of each</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">     *  individual tag value in the tag combination. We then build an LOC index</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">     *  based on the xgrid locations of each tag. Then, we translate that LOC</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">     *  index into a flat index value to give the flat position of the response</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">     *  vector, such that we can construct the response vector from GridView</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">     *  objects - i.e., this is the tagIndex we return.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">size_t</span> tag_idx;  <span class="comment">// index on the extent where the tag is found</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">size_t</span> f_idx;  <span class="comment">// flat index corresponding to the LOC of the tag combination</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; tm : tagManList )</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        Vec_I loc;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i != this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ada6fa2f1a09f83b8f3630b47dc43e29f">b_extentTags</a>.size(); ++i )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keyword">const</span> X_t* xvRef = <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">GridData::x</a>( i );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            Vec_X xVec( xvRef, xvRef + GridData::nx( i ) );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j != xVec.size(); ++j )</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">if</span>( ScaleSTL::approx_eq(</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                        xVec[j],</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        (<span class="keywordtype">float</span>)tm.getInterpTag( this-&gt;b_extentTags[i] ) ) )</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    tag_idx = j;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            Check( tag_idx &gt;= 0 );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            loc.push_back( tag_idx );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">/* GridData stores all of the responses for each point sequentially on</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">         * the flat vector</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">         * Thus, to go from the flat index to the library order, simply divide</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">         * by the number of</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">         * responses</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        f_idx = <a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">GridData::f</a>( loc, 0 ) / nr;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ae6285ba40e8bb43e9f8e5e531c14e0f9">b_tm_indexMap</a>.push_back( f_idx );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        loc.clear();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a4bbfcf2b424b5e122648680b89f46c9e"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4bbfcf2b424b5e122648680b89f46c9e">Origen::GridData_TransitionCoeff::b_xGrids</a></div><div class="ttdeci">std::vector&lt; SP_Vec_X &gt; b_xGrids</div><div class="ttdoc">The xgrid values for each dimension. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a6d5530c8117ac3ad824fb0361af2ccba"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a6d5530c8117ac3ad824fb0361af2ccba">Origen::GridData_TransitionCoeff::SP_Vec_X</a></div><div class="ttdeci">std::shared_ptr&lt; Vec_X &gt; SP_Vec_X</div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:44</div></div>
+<div class="ttc" id="_nuclide_set_interface_8h_html_a656e8cc192193706f75546404dff74e3"><div class="ttname"><a href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a></div><div class="ttdeci">std::vector&lt; std::string &gt; Vec_Str</div><div class="ttdef"><b>Definition:</b> NuclideSetInterface.h:16</div></div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_ae6285ba40e8bb43e9f8e5e531c14e0f9"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ae6285ba40e8bb43e9f8e5e531c14e0f9">Origen::GridData_TransitionCoeff::b_tm_indexMap</a></div><div class="ttdeci">std::vector&lt; size_t &gt; b_tm_indexMap</div><div class="ttdoc">Flat index map of where each TagManager lives in GridData space. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:68</div></div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_ada6fa2f1a09f83b8f3630b47dc43e29f"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ada6fa2f1a09f83b8f3630b47dc43e29f">Origen::GridData_TransitionCoeff::b_extentTags</a></div><div class="ttdeci">std::vector&lt; std::string &gt; b_extentTags</div><div class="ttdoc">Interpolated tags defining the grid extents. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:70</div></div>
+<div class="ttc" id="namespacekernel__rksuite_html_ac6251e8fb528bf3da394e678ccacf8a5"><div class="ttname"><a href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f</a></div><div class="ttdeci">real(c_double) function, dimension(size(y)) f(t, y)</div><div class="ttdef"><b>Definition:</b> kernel_rksuite.f90:35</div></div>
+<div class="ttc" id="namespaceauxiliary__erf__m_html_a438a2d29bb9bd59a6a3bf10191fda6b1"><div class="ttname"><a href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">auxiliary_erf_m::x</a></div><div class="ttdeci">real(c_double), private x</div><div class="ttdef"><b>Definition:</b> auxiliary.f90:659</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a32d60080d8bbeb281b0b8b1466ff3cf0"></a>
@@ -311,7 +439,41 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">GridData_TransitionCoeff::b_gvResponses</a>, <a class="el" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f()</a>, and <a class="el" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, and <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#a20693594227bd01ff568e0ddf27ac84b">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">     * Need to create a single flat vector of responses from a list of</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">     * GridView_TC</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">     * objects. So, loop through each response and push it onto a big, single</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">     * flat-index vector where each response for a single xgrid point is</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">     * adjacent</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">b_gvResponses</a>.clear();  <span class="comment">// Clear out the vector of any old responses</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">b_gvResponses</a> = gridResponses;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    Vec_Rptr response( GridData::totalr() );</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a> = 0;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// Refactor this to the internal reference</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; gr : this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">b_gvResponses</a> )</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="comment">// get response grid</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">const</span> Vec_Rptr&amp; <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = gr.r();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; GridData::nr(); ++j )</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            response[<a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>] = r[j];</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            ++<a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    Check( response.size() == totalr() );</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">// Set the responses for the interpolation grid to those for THIS burnup</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    GridData::setr( this-&gt;b_gvResponses[0].rextents(), response );</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a4d41fc2d12353f51ff13c59124970d4a"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">Origen::GridData_TransitionCoeff::b_gvResponses</a></div><div class="ttdeci">std::vector&lt; GridView_TransitionCoeff &gt; b_gvResponses</div><div class="ttdoc">The response vectors to interpolate on. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:74</div></div>
+<div class="ttc" id="_fake_factory_8cpp_html_a6deea1c2ba17f0529b284f5013940b9f"><div class="ttname"><a href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a></div><div class="ttdeci">std::shared_ptr&lt; ScaleUtils::Math::MTRand &gt; r</div><div class="ttdef"><b>Definition:</b> FakeFactory.cpp:23</div></div>
+<div class="ttc" id="namespacekernel__rksuite_html_ac6251e8fb528bf3da394e678ccacf8a5"><div class="ttname"><a href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f</a></div><div class="ttdeci">real(c_double) function, dimension(size(y)) f(t, y)</div><div class="ttdef"><b>Definition:</b> kernel_rksuite.f90:35</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a159a631a6fedb6d84a708b1faaa85f17"></a>
@@ -332,7 +494,17 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">GridData_TransitionCoeff::b_gvResponses</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, and <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#a20693594227bd01ff568e0ddf27ac84b">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// Interpolate on the provided grid weights and return a new</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// TransitionCoeff via the permute method on the GridView object</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    Vec_Z z = GridData::rgridsum( wts );</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">// Should permute be a static function? Probably.</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d5/dc1/namespace_origen.html#a47464f887884b9b150a26b4cff85fc1b">SP_TransitionCoeff</a>( this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">b_gvResponses</a>[0].permute( z ) );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="ttc" id="namespace_origen_html_a47464f887884b9b150a26b4cff85fc1b"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a47464f887884b9b150a26b4cff85fc1b">Origen::SP_TransitionCoeff</a></div><div class="ttdeci">TransitionCoeff::SP SP_TransitionCoeff</div><div class="ttdef"><b>Definition:</b> TransitionCoeff.h:230</div></div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a4d41fc2d12353f51ff13c59124970d4a"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a4d41fc2d12353f51ff13c59124970d4a">Origen::GridData_TransitionCoeff::b_gvResponses</a></div><div class="ttdeci">std::vector&lt; GridView_TransitionCoeff &gt; b_gvResponses</div><div class="ttdoc">The response vectors to interpolate on. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:74</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7bde49893b0c4586b5df774b9e8671f0"></a>
@@ -362,7 +534,9 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ae6285ba40e8bb43e9f8e5e531c14e0f9">GridData_TransitionCoeff::b_tm_indexMap</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>, and <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#a20693594227bd01ff568e0ddf27ac84b">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ae6285ba40e8bb43e9f8e5e531c14e0f9">b_tm_indexMap</a>; };</div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_ae6285ba40e8bb43e9f8e5e531c14e0f9"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ae6285ba40e8bb43e9f8e5e531c14e0f9">Origen::GridData_TransitionCoeff::b_tm_indexMap</a></div><div class="ttdeci">std::vector&lt; size_t &gt; b_tm_indexMap</div><div class="ttdoc">Flat index map of where each TagManager lives in GridData space. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:68</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a49a8f69e7c8a2ada7859922c26f9af64"></a>
@@ -382,7 +556,33 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ada6fa2f1a09f83b8f3630b47dc43e29f">GridData_TransitionCoeff::b_extentTags</a>, <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a08fa8b2dd06317ca484bdb93cd803f4b">GridData_TransitionCoeff::b_gridWts</a>, <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a57fa9b83c14f0ae2d78f8b5fe1720f5d">GridData_TransitionCoeff::clear_gridWts()</a>, and <a class="el" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a35e5ff121618ca411cc8a97dba30eb7b">TagManager::getInterpTag()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#ac8b08e2256260ec49ab89926c7c62d7c">Origen::interpLibraryND()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a57fa9b83c14f0ae2d78f8b5fe1720f5d">clear_gridWts</a>();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    Vec_Xptr wts;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    X_t i = 0;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; tag : this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ada6fa2f1a09f83b8f3630b47dc43e29f">b_extentTags</a> )</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        std::vector&lt;float&gt; grid_pts;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> k = 0; k &lt; this-&gt;nx( i ); k++ )</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            grid_pts.push_back( this-&gt;x( i )[k] );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        Vec_X* dim_wts = <span class="keyword">new</span> Vec_X;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        ScaleUtils::Math::interpwts_lin(</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            grid_pts, tm.getInterpTag( tag ), dim_wts );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        Insist(</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            grid_pts.size() == dim_wts-&gt;size(),</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="stringliteral">&quot;Did not get the same number of dimension weights out of interpwts_lin \</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="stringliteral">                as grid points were put in.&quot;</span> );</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        wts.push_back( &amp;( dim_wts-&gt;at( 0 ) ) );</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a08fa8b2dd06317ca484bdb93cd803f4b">b_gridWts</a>.push_back( dim_wts );</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        i++;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">return</span> ( wts );</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a08fa8b2dd06317ca484bdb93cd803f4b"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a08fa8b2dd06317ca484bdb93cd803f4b">Origen::GridData_TransitionCoeff::b_gridWts</a></div><div class="ttdeci">std::vector&lt; Vec_X * &gt; b_gridWts</div><div class="ttdoc">Grid weights. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:76</div></div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_ada6fa2f1a09f83b8f3630b47dc43e29f"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#ada6fa2f1a09f83b8f3630b47dc43e29f">Origen::GridData_TransitionCoeff::b_extentTags</a></div><div class="ttdeci">std::vector&lt; std::string &gt; b_extentTags</div><div class="ttdoc">Interpolated tags defining the grid extents. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:70</div></div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a57fa9b83c14f0ae2d78f8b5fe1720f5d"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a57fa9b83c14f0ae2d78f8b5fe1720f5d">Origen::GridData_TransitionCoeff::clear_gridWts</a></div><div class="ttdeci">void clear_gridWts()</div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.cpp:175</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a57fa9b83c14f0ae2d78f8b5fe1720f5d"></a>
@@ -409,7 +609,16 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a08fa8b2dd06317ca484bdb93cd803f4b">GridData_TransitionCoeff::b_gridWts</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a49a8f69e7c8a2ada7859922c26f9af64">GridData_TransitionCoeff::getWts()</a>, and <a class="el" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a231312d40ead419be3d26e5e69cd0055">GridData_TransitionCoeff::~GridData_TransitionCoeff()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">// Delete any old weights if they exist</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span> wt : this-&gt;<a class="code" href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a08fa8b2dd06317ca484bdb93cd803f4b">b_gridWts</a> )</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span>( wt != <span class="keyword">nullptr</span> ) <span class="keyword">delete</span> wt;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    this-&gt;b_gridWts.clear();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_data___transition_coeff_html_a08fa8b2dd06317ca484bdb93cd803f4b"><div class="ttname"><a href="../../d1/d01/class_origen_1_1_grid_data___transition_coeff.html#a08fa8b2dd06317ca484bdb93cd803f4b">Origen::GridData_TransitionCoeff::b_gridWts</a></div><div class="ttdeci">std::vector&lt; Vec_X * &gt; b_gridWts</div><div class="ttdoc">Grid weights. </div><div class="ttdef"><b>Definition:</b> GridData_TransitionCoeff.h:76</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -130,7 +130,10 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">class</span>(origen_librarybuilder) :: this</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    this%instance_ptr = f_origen_librarybuilder_initialize()</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a60571280afa69555c035ef596318f5f1"></a>
@@ -146,7 +149,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">class</span>(origen_librarybuilder) :: this</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">call </span>f_origen_librarybuilder_destroy(this%instance_ptr)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    this%instance_ptr = c_null_ptr</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

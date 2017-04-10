@@ -153,7 +153,21 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d18/decay_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a>, and <a class="el" href="../../d6/d97/namespacedata_tests.html#a5fb434ff38321281c4255f502a597af4">dataTests::determine_solver()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../dc/daf/classdecay__compare.html#a3eceb602f00d96c4b2fb40bd72afe09d">slv</a> = <a class="code" href="../../d6/d97/namespacedata_tests.html#a5fb434ff38321281c4255f502a597af4">dataTests::determine_solver</a>( <a class="code" href="../../d1/d18/decay_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a>.get() );</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../dc/daf/classdecay__compare.html#adb1e133b26c8944dcf48fb5507ee55b5">decay_a</a> = <a class="code" href="../../d1/d18/decay_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a>-&gt;getValue( <span class="stringliteral">&quot;decay-a&quot;</span> );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../dc/daf/classdecay__compare.html#a26c096f8117e2c7718458355335e63dd">decay_b</a> = <a class="code" href="../../d1/d18/decay_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a>-&gt;getValue( <span class="stringliteral">&quot;decay-b&quot;</span> );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>( decay_a.empty() ) decay_a = <span class="stringliteral">&quot;origen.rev05.yields.data&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="../../dc/daf/classdecay__compare.html#a26c096f8117e2c7718458355335e63dd">decay_b</a>.empty() ) <a class="code" href="../../dc/daf/classdecay__compare.html#a26c096f8117e2c7718458355335e63dd">decay_b</a> = Origen::yields_filepath;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="ttc" id="decay_8cpp_html_a5a219b287d7b807dff8a3f9de68bcfcc"><div class="ttname"><a href="../../d1/d18/decay_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a></div><div class="ttdeci">Standard::SP_CommandLine cmdLine</div><div class="ttdef"><b>Definition:</b> decay.cpp:36</div></div>
+<div class="ttc" id="namespacedata_tests_html_a5fb434ff38321281c4255f502a597af4"><div class="ttname"><a href="../../d6/d97/namespacedata_tests.html#a5fb434ff38321281c4255f502a597af4">dataTests::determine_solver</a></div><div class="ttdeci">std::shared_ptr&lt; Origen::Solver &gt; determine_solver(Standard::CommandLine *cmdLine)</div><div class="ttdef"><b>Definition:</b> test_utils.cpp:7</div></div>
+<div class="ttc" id="classdecay__compare_html_adb1e133b26c8944dcf48fb5507ee55b5"><div class="ttname"><a href="../../dc/daf/classdecay__compare.html#adb1e133b26c8944dcf48fb5507ee55b5">decay_compare::decay_a</a></div><div class="ttdeci">std::string decay_a</div><div class="ttdef"><b>Definition:</b> decay.cpp:54</div></div>
+<div class="ttc" id="classdecay__compare_html_a3eceb602f00d96c4b2fb40bd72afe09d"><div class="ttname"><a href="../../dc/daf/classdecay__compare.html#a3eceb602f00d96c4b2fb40bd72afe09d">decay_compare::slv</a></div><div class="ttdeci">std::shared_ptr&lt; Origen::Solver &gt; slv</div><div class="ttdef"><b>Definition:</b> decay.cpp:53</div></div>
+<div class="ttc" id="classdecay__compare_html_a26c096f8117e2c7718458355335e63dd"><div class="ttname"><a href="../../dc/daf/classdecay__compare.html#a26c096f8117e2c7718458355335e63dd">decay_compare::decay_b</a></div><div class="ttdeci">std::string decay_b</div><div class="ttdef"><b>Definition:</b> decay.cpp:55</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

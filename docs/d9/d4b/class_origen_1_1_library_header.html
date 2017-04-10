@@ -277,7 +277,19 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a87978488032db519cca220a664e29b57">LibraryHeader::getCopy()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    : <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>( <span class="keyword">new</span> NuclideSet() )</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    , <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">b_month_made</a>( 0 )</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    , <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">b_day_made</a>( 0 )</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    , <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">b_year_made</a>( 0 )</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    , <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">b_title</a>( <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_acca762adb2c7ab97684a8c358131b8e7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">Origen::LibraryHeader::b_month_made</a></div><div class="ttdeci">int b_month_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:74</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aec2bf2c8bb12543515de97d8138f7b5c"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">Origen::LibraryHeader::b_title</a></div><div class="ttdeci">std::string b_title</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:80</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_adbaa280d154265c8b1edcd9ae1144f17"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">Origen::LibraryHeader::b_year_made</a></div><div class="ttdeci">int b_year_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5e7f5ab41b9b91ab25789ee961bd7145"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">Origen::LibraryHeader::b_day_made</a></div><div class="ttdeci">int b_day_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:76</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -297,7 +309,11 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a3e708d496acb090a8657506c512ecf55">LibraryHeader::to_json()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a3f23c97b6c9f2a88e1121d1c633ccafa">LibraryHeader::toString()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a3e708d496acb090a8657506c512ecf55">to_json</a>().toStyledString();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a3e708d496acb090a8657506c512ecf55"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a3e708d496acb090a8657506c512ecf55">Origen::LibraryHeader::to_json</a></div><div class="ttdeci">Scale::Json::Value to_json() const </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:72</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3e708d496acb090a8657506c512ecf55"></a>
@@ -316,7 +332,24 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">LibraryHeader::b_day_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">LibraryHeader::b_month_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">LibraryHeader::b_nuclide_set</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">LibraryHeader::b_title</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">LibraryHeader::b_year_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5093f4b919b8c511136f669b2b9583a7">LibraryHeader::has_nuclide_set()</a>, and <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">LibraryHeader::uid</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aa48c39f92bc04eded742f5310c74aafe">LibraryHeader::to_string()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Json::Value root;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    root[<span class="stringliteral">&quot;uid&quot;</span>] = Json::Value::Int64( <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">uid</a> );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    root[<span class="stringliteral">&quot;month_made&quot;</span>] = <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">b_month_made</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    root[<span class="stringliteral">&quot;day_made&quot;</span>] = <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">b_day_made</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    root[<span class="stringliteral">&quot;year_made&quot;</span>] = <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">b_year_made</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    root[<span class="stringliteral">&quot;title&quot;</span>] = <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">b_title</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5093f4b919b8c511136f669b2b9583a7">has_nuclide_set</a>() ) root[<span class="stringliteral">&quot;nuclide_set&quot;</span>] = <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;to_json();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> root;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5093f4b919b8c511136f669b2b9583a7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5093f4b919b8c511136f669b2b9583a7">Origen::LibraryHeader::has_nuclide_set</a></div><div class="ttdeci">bool has_nuclide_set() const </div><div class="ttdoc">return whether the class has a non-null nuclide_set </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:98</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_acca762adb2c7ab97684a8c358131b8e7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">Origen::LibraryHeader::b_month_made</a></div><div class="ttdeci">int b_month_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:74</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aec2bf2c8bb12543515de97d8138f7b5c"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">Origen::LibraryHeader::b_title</a></div><div class="ttdeci">std::string b_title</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:80</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a0ea8e46de87ad8422fdfb2dc263a6884"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">Origen::LibraryHeader::uid</a></div><div class="ttdeci">static const long uid</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:49</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_adbaa280d154265c8b1edcd9ae1144f17"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">Origen::LibraryHeader::b_year_made</a></div><div class="ttdeci">int b_year_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5e7f5ab41b9b91ab25789ee961bd7145"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">Origen::LibraryHeader::b_day_made</a></div><div class="ttdeci">int b_day_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:76</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad5179a8a9fb50d2217fe71198de375bb"></a>
@@ -334,7 +367,25 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">LibraryHeader::b_day_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">LibraryHeader::b_month_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">LibraryHeader::b_nuclide_set</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">LibraryHeader::b_title</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">LibraryHeader::b_year_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a99f9730bd44dab38d3d6307832cbc129">LibraryHeader::day_made()</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a010dea823b18fce5a5a0cf409d076cc3">LibraryHeader::month_made()</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a30d45658bf2bd71aa3f45267469d959e">LibraryHeader::nuclide_set()</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aa3e4f093a3603ead4ecd75dd187bbd5f">LibraryHeader::title()</a>, and <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#abfc865051a1c6533590613e3177f9249">LibraryHeader::year_made()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ORIGEN_COMPARE_SCALAR( <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a010dea823b18fce5a5a0cf409d076cc3">month_made</a>, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">b_month_made</a>, a.b_month_made );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ORIGEN_COMPARE_SCALAR( <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#abfc865051a1c6533590613e3177f9249">year_made</a>, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">b_year_made</a>, a.b_year_made );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ORIGEN_COMPARE_SCALAR( <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a99f9730bd44dab38d3d6307832cbc129">day_made</a>, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">b_day_made</a>, a.b_day_made );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ORIGEN_COMPARE_STRING( <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aa3e4f093a3603ead4ecd75dd187bbd5f">title</a>, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">b_title</a>, a.b_title );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ORIGEN_COMPARE_SP( <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>, a.b_nuclide_set );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_abfc865051a1c6533590613e3177f9249"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#abfc865051a1c6533590613e3177f9249">Origen::LibraryHeader::year_made</a></div><div class="ttdeci">int year_made() const </div><div class="ttdoc">return the scalar year_made </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:96</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_acca762adb2c7ab97684a8c358131b8e7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">Origen::LibraryHeader::b_month_made</a></div><div class="ttdeci">int b_month_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:74</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a010dea823b18fce5a5a0cf409d076cc3"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a010dea823b18fce5a5a0cf409d076cc3">Origen::LibraryHeader::month_made</a></div><div class="ttdeci">int month_made() const </div><div class="ttdoc">return the scalar month_made </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:94</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aec2bf2c8bb12543515de97d8138f7b5c"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">Origen::LibraryHeader::b_title</a></div><div class="ttdeci">std::string b_title</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:80</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aa3e4f093a3603ead4ecd75dd187bbd5f"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aa3e4f093a3603ead4ecd75dd187bbd5f">Origen::LibraryHeader::title</a></div><div class="ttdeci">std::string title() const </div><div class="ttdoc">return the scalar title </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:97</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a99f9730bd44dab38d3d6307832cbc129"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a99f9730bd44dab38d3d6307832cbc129">Origen::LibraryHeader::day_made</a></div><div class="ttdeci">int day_made() const </div><div class="ttdoc">return the scalar day_made </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:95</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_adbaa280d154265c8b1edcd9ae1144f17"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">Origen::LibraryHeader::b_year_made</a></div><div class="ttdeci">int b_year_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5e7f5ab41b9b91ab25789ee961bd7145"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">Origen::LibraryHeader::b_day_made</a></div><div class="ttdeci">int b_day_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:76</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a30d45658bf2bd71aa3f45267469d959e"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a30d45658bf2bd71aa3f45267469d959e">Origen::LibraryHeader::nuclide_set</a></div><div class="ttdeci">const NuclideSet &amp; nuclide_set() const </div><div class="ttdoc">return a const reference to nuclide_set </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:98</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4e88fe78e8204fb2f50dfba7dd31f441"></a>
@@ -352,7 +403,46 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">LibraryHeader::b_day_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">LibraryHeader::b_month_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">LibraryHeader::b_nuclide_set</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">LibraryHeader::b_title</a>, and <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">LibraryHeader::b_year_made</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;Library Title A: &quot;</span> &lt;&lt; <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">b_title</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;Library Title B: &quot;</span> &lt;&lt; a.b_title &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ss &lt;&lt; std::setw( 55 ) &lt;&lt; <span class="stringliteral">&quot;Library Header&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ss &lt;&lt; std::setw( 55 ) &lt;&lt; <span class="stringliteral">&quot;=-=-=-=-=-=-=-&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ss &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    ss &lt;&lt; std::setw( 40 ) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::setw( 10 ) &lt;&lt; <span class="stringliteral">&quot;A&quot;</span> &lt;&lt; std::setw( 15 )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;       &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::setw( 10 ) &lt;&lt; <span class="stringliteral">&quot;B&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ss &lt;&lt; std::setw( 40 ) &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;--------------------&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;     &quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;--------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ss &lt;&lt; std::setw( 35 ) &lt;&lt; <span class="stringliteral">&quot;Day Made:&quot;</span> &lt;&lt; std::setw( 25 ) &lt;&lt; <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">b_day_made</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;       &lt;&lt; std::setw( 25 ) &lt;&lt; a.b_day_made &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ss &lt;&lt; std::setw( 35 ) &lt;&lt; <span class="stringliteral">&quot;Month Made:&quot;</span> &lt;&lt; std::setw( 25 ) &lt;&lt; <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">b_month_made</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;       &lt;&lt; std::setw( 25 ) &lt;&lt; a.b_month_made &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ss &lt;&lt; std::setw( 35 ) &lt;&lt; <span class="stringliteral">&quot;Year Made:&quot;</span> &lt;&lt; std::setw( 25 ) &lt;&lt; <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">b_year_made</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;       &lt;&lt; std::setw( 25 ) &lt;&lt; a.b_year_made &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ss &lt;&lt; std::setw( 35 ) &lt;&lt; <span class="stringliteral">&quot;NuclideSet Size:&quot;</span> &lt;&lt; std::setw( 25 )</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;       &lt;&lt; <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>.get()-&gt;total_nuclides() &lt;&lt; std::setw( 25 )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;       &lt;&lt; a.b_nuclide_set.get()-&gt;total_nuclides() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ss &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ss &lt;&lt; <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>.get()-&gt;print_compare( *( a.b_nuclide_set ) );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ss &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_acca762adb2c7ab97684a8c358131b8e7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">Origen::LibraryHeader::b_month_made</a></div><div class="ttdeci">int b_month_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:74</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aec2bf2c8bb12543515de97d8138f7b5c"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">Origen::LibraryHeader::b_title</a></div><div class="ttdeci">std::string b_title</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:80</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_adbaa280d154265c8b1edcd9ae1144f17"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">Origen::LibraryHeader::b_year_made</a></div><div class="ttdeci">int b_year_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5e7f5ab41b9b91ab25789ee961bd7145"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">Origen::LibraryHeader::b_day_made</a></div><div class="ttdeci">int b_day_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:76</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a30d45658bf2bd71aa3f45267469d959e"></a>
@@ -520,7 +610,42 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">LibraryHeader::b_day_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">LibraryHeader::b_month_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">LibraryHeader::b_nuclide_set</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">LibraryHeader::b_title</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">LibraryHeader::b_year_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">LibraryHeader::getSerializedSize()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d66/tst_library_header_8cpp.html#a829c58919e79727d5ae2df27853cdb14">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    Require( stream != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::LibraryHeader::uid...&quot;</span> );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">LibraryHeader::uid</a> );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::LibraryHeader::SerializedSize...&quot;</span> );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    Remember( <span class="keywordtype">size_t</span> checkpoint = stream-&gt;getWriteHead() );</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::b_month_made...&quot;</span> );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">b_month_made</a> );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::LibraryHeader::b_day_made...&quot;</span> );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">b_day_made</a> );</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::LibraryHeader::b_year_made...&quot;</span> );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">b_year_made</a> );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::LibraryHeader::b_nuclide_set...&quot;</span> );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> );</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::LibraryHeader::b_title...&quot;</span> );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">b_title</a> );</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Ensure( stream-&gt;getWriteHead() == checkpoint + <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() );</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_acca762adb2c7ab97684a8c358131b8e7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">Origen::LibraryHeader::b_month_made</a></div><div class="ttdeci">int b_month_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:74</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aec2bf2c8bb12543515de97d8138f7b5c"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">Origen::LibraryHeader::b_title</a></div><div class="ttdeci">std::string b_title</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:80</div></div>
+<div class="ttc" id="namespace_origen_html_adc3bd8008cc072027f3900e34d9f3747"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write</a></div><div class="ttdeci">void write(bof::BOFObject &amp;obj, std::string name, const TagManager &amp;tag_manager)</div><div class="ttdoc">write a tag manager to a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:41</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a0ea8e46de87ad8422fdfb2dc263a6884"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">Origen::LibraryHeader::uid</a></div><div class="ttdeci">static const long uid</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:49</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_adbaa280d154265c8b1edcd9ae1144f17"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">Origen::LibraryHeader::b_year_made</a></div><div class="ttdeci">int b_year_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5e7f5ab41b9b91ab25789ee961bd7145"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">Origen::LibraryHeader::b_day_made</a></div><div class="ttdeci">int b_day_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:76</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a76830aeae6053d193eefb376628f9268"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">Origen::LibraryHeader::getSerializedSize</a></div><div class="ttdeci">virtual unsigned long getSerializedSize() const </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:182</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad6fdab80f4d25ff470dc98ec59635e5c"></a>
@@ -549,7 +674,49 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">LibraryHeader::b_day_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">LibraryHeader::b_month_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">LibraryHeader::b_nuclide_set</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">LibraryHeader::b_title</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">LibraryHeader::b_year_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aa12a65f432e57893c566f31156312ba4">LibraryHeader::canonicalize_nuclide_set()</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">LibraryHeader::getSerializedSize()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d66/tst_library_header_8cpp.html#a829c58919e79727d5ae2df27853cdb14">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    Require( stream != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::uid...&quot;</span> );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">int</span> return_code = <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">LibraryHeader::uid</a> );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span>( return_code != 0 ) <span class="keywordflow">return</span> return_code;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::SerializedSize...&quot;</span> );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> size;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, size );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">size_t</span> bytes = 0;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::b_month_made...&quot;</span> );</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">b_month_made</a> );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::b_day_made...&quot;</span> );</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">b_day_made</a> );</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::b_year_made...&quot;</span> );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">b_year_made</a> );</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::b_nuclide_set...&quot;</span> );</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> = std::make_shared&lt;NuclideSet&gt;();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> );</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aa12a65f432e57893c566f31156312ba4">canonicalize_nuclide_set</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::LibraryHeader::b_title...&quot;</span> );</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">b_title</a> );</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    Ensure( size == <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() &amp;&amp; size == bytes );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">if</span>( size != <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() || size != bytes ) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_acca762adb2c7ab97684a8c358131b8e7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">Origen::LibraryHeader::b_month_made</a></div><div class="ttdeci">int b_month_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:74</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aec2bf2c8bb12543515de97d8138f7b5c"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">Origen::LibraryHeader::b_title</a></div><div class="ttdeci">std::string b_title</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:80</div></div>
+<div class="ttc" id="namespace_origen_html_ad9dbf183ba4f551eeab50e180dce7f18"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read</a></div><div class="ttdeci">void read(const bof::BOFObject &amp;obj, TagManager &amp;tag_manager)</div><div class="ttdoc">read a tag manager from a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:6</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a0ea8e46de87ad8422fdfb2dc263a6884"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">Origen::LibraryHeader::uid</a></div><div class="ttdeci">static const long uid</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:49</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_adbaa280d154265c8b1edcd9ae1144f17"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">Origen::LibraryHeader::b_year_made</a></div><div class="ttdeci">int b_year_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5e7f5ab41b9b91ab25789ee961bd7145"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">Origen::LibraryHeader::b_day_made</a></div><div class="ttdeci">int b_day_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:76</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aa12a65f432e57893c566f31156312ba4"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aa12a65f432e57893c566f31156312ba4">Origen::LibraryHeader::canonicalize_nuclide_set</a></div><div class="ttdeci">void canonicalize_nuclide_set()</div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:100</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a76830aeae6053d193eefb376628f9268"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a76830aeae6053d193eefb376628f9268">Origen::LibraryHeader::getSerializedSize</a></div><div class="ttdeci">virtual unsigned long getSerializedSize() const </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:182</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a76830aeae6053d193eefb376628f9268"></a>
@@ -576,7 +743,19 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">LibraryHeader::b_day_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">LibraryHeader::b_month_made</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">LibraryHeader::b_nuclide_set</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">LibraryHeader::b_title</a>, and <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">LibraryHeader::b_year_made</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#ad6fdab80f4d25ff470dc98ec59635e5c">LibraryHeader::deserialize()</a>, and <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#ae4c23583af6639cd829b18fac3280e24">LibraryHeader::serialize()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    Standard::AbstractStream* a = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> Standard::bytes( a, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">b_month_made</a> ) +</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;           Standard::bytes( a, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">b_day_made</a> ) +</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;           Standard::bytes( a, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">b_year_made</a> ) + Standard::bytes( a, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">b_title</a> ) +</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;           Standard::bytes( a, <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> );</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_acca762adb2c7ab97684a8c358131b8e7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#acca762adb2c7ab97684a8c358131b8e7">Origen::LibraryHeader::b_month_made</a></div><div class="ttdeci">int b_month_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:74</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aec2bf2c8bb12543515de97d8138f7b5c"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aec2bf2c8bb12543515de97d8138f7b5c">Origen::LibraryHeader::b_title</a></div><div class="ttdeci">std::string b_title</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:80</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_adbaa280d154265c8b1edcd9ae1144f17"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#adbaa280d154265c8b1edcd9ae1144f17">Origen::LibraryHeader::b_year_made</a></div><div class="ttdeci">int b_year_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5e7f5ab41b9b91ab25789ee961bd7145"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5e7f5ab41b9b91ab25789ee961bd7145">Origen::LibraryHeader::b_day_made</a></div><div class="ttdeci">int b_day_made</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:76</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a87978488032db519cca220a664e29b57"></a>
@@ -601,7 +780,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a21a91c085ae365733e24891b818599c6">LibraryHeader::LibraryHeader()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a21a91c085ae365733e24891b818599c6">LibraryHeader</a>( *<span class="keyword">this</span> );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a21a91c085ae365733e24891b818599c6"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a21a91c085ae365733e24891b818599c6">Origen::LibraryHeader::LibraryHeader</a></div><div class="ttdeci">LibraryHeader()</div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:17</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0f2e2afb8dfa413752e23f838b9ece00"></a>
@@ -626,7 +809,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">LibraryHeader::uid</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">LibraryHeader::uid</a>; }</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a0ea8e46de87ad8422fdfb2dc263a6884"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a0ea8e46de87ad8422fdfb2dc263a6884">Origen::LibraryHeader::uid</a></div><div class="ttdeci">static const long uid</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:49</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a68e4c7e6b9806cf1abd028004e6d615a"></a>
@@ -650,7 +835,11 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> Standard::Serializable::getUID() == parentUID ||</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;           Standard::Serializable::childOf( parentUID );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
@@ -675,7 +864,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#aa48c39f92bc04eded742f5310c74aafe">LibraryHeader::to_string()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_aa48c39f92bc04eded742f5310c74aafe"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#aa48c39f92bc04eded742f5310c74aafe">Origen::LibraryHeader::to_string</a></div><div class="ttdeci">std::string to_string() const </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:84</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aedf4315c991cea533f1eee3149136c1c"></a>
@@ -863,7 +1054,12 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">LibraryHeader::b_nuclide_set</a>, and <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a5093f4b919b8c511136f669b2b9583a7">LibraryHeader::has_nuclide_set()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../da/d0b/slmaker_8cpp.html#a0fbf3811054624c910b9c1ea02ee8710">get_decay_data()</a>, <a class="el" href="../../da/d0b/slmaker_8cpp.html#a3f73c4f5aebd5c56e68bacef94be35c7">get_transition_data()</a>, <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#ade61ba2d13afa3ce9354aa311ebefc86">gtestLibrarySizes()</a>, and <a class="el" href="../../da/d0b/slmaker_8cpp.html#ad2c7c44567301e4e264eb41651d816cd">inject_fission_yields()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a5093f4b919b8c511136f669b2b9583a7">has_nuclide_set</a>() ? <a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;total_nuclides() : 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a5093f4b919b8c511136f669b2b9583a7"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a5093f4b919b8c511136f669b2b9583a7">Origen::LibraryHeader::has_nuclide_set</a></div><div class="ttdeci">bool has_nuclide_set() const </div><div class="ttdoc">return whether the class has a non-null nuclide_set </div><div class="ttdef"><b>Definition:</b> LibraryHeader.cpp:98</div></div>
+<div class="ttc" id="class_origen_1_1_library_header_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d9/d4b/class_origen_1_1_library_header.html#a855e5ef50b0358596356e911e655fe67">Origen::LibraryHeader::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> LibraryHeader.h:72</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa12a65f432e57893c566f31156312ba4"></a>
@@ -888,7 +1084,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#ad6fdab80f4d25ff470dc98ec59635e5c">LibraryHeader::deserialize()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>

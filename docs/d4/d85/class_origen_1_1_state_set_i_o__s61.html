@@ -162,7 +162,271 @@ Public Member Functions</h2></td></tr>
 <p>R02 :: state data variables </p>
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#ae6d80c8d139170788f490dbd03062c3f">StateSet::add_states()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>, <a class="el" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">Origen::detail::read()</a>, <a class="el" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>, <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a264abe5d00fbdbd158758c49769bfdfe">Spectrum::set_bounds()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46665469f97afd49df2787465dc1e6e5">StateInfo::set_case_number()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a1239112067f6a4de1faa122f676995b4">State::set_concs()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#ae224952b37ac31d6e2d14302131b22b3">State::set_definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#ad45e0aeba14fc3dac739859bf6dde1a3">StateInfo::set_flux()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#ade15cef49f1e0581e8d7415b1d378ef6">State::set_gamma_spectra()</a>, <a class="el" href="../../d7/dd5/class_origen_1_1_spectrum.html#a12704a8c4cefa8e359548bd6cda50de5">Spectrum::set_intensity()</a>, <a class="el" href="../../d8/dbe/class_origen_1_1_neutron_spectra.html#a6466cbbf08ad5a19605520307c5d5a4a">NeutronSpectra::set_intensity_alphan()</a>, <a class="el" href="../../d8/dbe/class_origen_1_1_neutron_spectra.html#a41956351e3e4fd16a14ebd05464c1f25">NeutronSpectra::set_intensity_sf()</a>, <a class="el" href="../../d1/db0/class_origen_1_1_gamma_spectra.html#add77f5fcb4e14c1356878e93d5607b7c">GammaSpectra::set_nuclide_type()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a96044bbdf6261c03244aa460a1d1634d">StateInfo::set_power()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a257ff123d6d80314748758be35118ebb">StateInfo::set_step_number()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a4e1bc08d966a51e464b45238a41eed28">StateInfo::set_time()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Concentrations::set_vals()</a>, <a class="el" href="../../df/d1e/namespace_origen_1_1detail.html#a149cd41b88c81cb6bfada2a6b639a218">Origen::detail::setupEndianness()</a>, <a class="el" href="../../da/d0d/group___cxx_identifiers.html#ga078f384d1ba9fa5cf96b6eda7cfb5d7f">Origen::SUBLIB_1LT</a>, <a class="el" href="../../da/d0d/group___cxx_identifiers.html#gabd3088395c8d6d875d09fe1ef9f1752a">Origen::SUBLIB_2AC</a>, and <a class="el" href="../../da/d0d/group___cxx_identifiers.html#ga2bca3e4f4d7ee705a4739c7e496c794b">Origen::SUBLIB_3FP</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// require stream is good</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">if</span>( !stream.good() )</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        opts.appendError( <span class="stringliteral">&quot;Failed to open stream for reading.&quot;</span> );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    nemesis::Timer t;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    t.start();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">// binary stream manipulator</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    ScaleUtils::IO::IStreamManipulator_FBin binsman( stream );</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="comment">// setup endianness on binsman and record in options</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a149cd41b88c81cb6bfada2a6b639a218">detail::setupEndianness</a>( binsman, opts );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">// rewind to beginning of file</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    stream.seekg( 0, std::ios::beg );</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">    //! R01 :: state header variables</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> itxx = -1, ilite, iact, ifp, nrflag, msub1, nstepo, kasepo, jobpos,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        nocs, noblnd, ndset, ntype, ngrp, nelem, nvert, ng, mmn, mout, index,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        mstar, nunit, kblend, nenle, nenac, nenfp, l1, l2, l3, l4;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">float</span> tmo, fracpw, tconst;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    std::string tunit;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">float</span> twrite, pwrite, fwrite;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">    //! R02 :: state data variables</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment"></span>    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> ivec;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> fvec;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">// convenience</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> has_header = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">while</span>( stream.good() )</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        binsman.readHeader( <span class="stringliteral">&quot;definition&quot;</span> );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        StateInfo <a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( itxx );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span>( itxx == 0 ) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( ilite );</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( iact );</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( ifp );</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nrflag );</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( msub1 );</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nstepo );</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        info.set_step_number( nstepo );</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( kasepo );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        info.set_case_number( kasepo );</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( jobpos );</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nocs );</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( noblnd );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( ndset );</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( ntype );</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( ngrp );</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nelem );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nvert );</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( ng );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( mmn );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( mout );</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( index );</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( mstar );</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nunit );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( kblend );</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nenle );</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nenac );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( nenfp );</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( l1 );</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( l2 );</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( l3 );</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( l4 );</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( tmo );</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( fracpw );</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( tconst );</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        tunit = binsman.readString( 4 );</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;tunit=&quot;</span> &lt;&lt; tunit );</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( twrite );</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        info.set_time( twrite * tconst );</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( pwrite );</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        info.set_power( pwrite );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a>( fwrite );</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        info.set_flux( fwrite );</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        binsman.readFooter();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        binsman.readHeader( <span class="stringliteral">&quot;data&quot;</span> );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        ivec.resize( itxx );</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;nucl&quot;</span>, ivec, has_header );</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="comment">// create legacy nuclide set</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        NuclideSet nuc_set( ilite, iact, ifp, ivec );</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        fvec.resize( itxx );</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;x&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        Concentrations concs( nuc_set );</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        concs.set_vals( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="comment">// add state for concentrations</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            State state;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            state.set_definition( info );</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            state.set_concs( concs );</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            obj.add_states( state );</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        std::string title = binsman.readString( 80 );</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;title=&quot;</span> &lt;&lt; title );</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        std::string basis = binsman.readString( 40 );</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;basis=&quot;</span> &lt;&lt; basis );</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="comment">// this shortcut is necessary to handle Ian Gauld&#39;s GROUPR in</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="comment">// SCALE 6.1</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;GROUPR test: getBytesRead=&quot;</span> &lt;&lt; binsman.getBytesRead()</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot; getHeader=&quot;</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                                       &lt;&lt; binsman.getHeader() );</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">if</span>( nenle == 0 &amp;&amp; nenac == 0 &amp;&amp; nenfp == 0 &amp;&amp;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            64 == ( binsman.getHeader() - binsman.getBytesRead() ) )</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            jDebugTaggedLine( <span class="stringliteral">&quot;GROUPR MODE CONFIRMED...&quot;</span> );</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            binsman.readFooter();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        fvec.resize( nenle + 1 );</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;egamle&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        GammaSpectra gamma_lt;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span>( nenle &gt; 0 )</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            gamma_lt.set_nuclide_type( <a class="code" href="../../da/d0d/group___cxx_identifiers.html#ga078f384d1ba9fa5cf96b6eda7cfb5d7f">SUBLIB_1LT</a> );</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            gamma_lt.set_bounds( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        fvec.resize( nenac + 1 );</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;egamac&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        GammaSpectra gamma_ac;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">if</span>( nenac &gt; 0 )</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            gamma_ac.set_nuclide_type( <a class="code" href="../../da/d0d/group___cxx_identifiers.html#gabd3088395c8d6d875d09fe1ef9f1752a">SUBLIB_2AC</a> );</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            gamma_ac.set_bounds( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        fvec.resize( nenfp + 1 );</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;egamfp&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        GammaSpectra gamma_fp;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">if</span>( nenfp &gt; 0 )</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            gamma_fp.set_nuclide_type( <a class="code" href="../../da/d0d/group___cxx_identifiers.html#ga2bca3e4f4d7ee705a4739c7e496c794b">SUBLIB_3FP</a> );</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            gamma_fp.set_bounds( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        fvec.resize( l1 );</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;specle&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="comment">// add state for light nuclide gamma spec</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">if</span>( nenle &gt; 0 )</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            gamma_lt.set_intensity( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            State state;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            state.set_definition( info );</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            state.set_gamma_spectra( gamma_lt );</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            obj.add_states( state );</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        fvec.resize( l2 );</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;specac&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="comment">// add state for actinide gamma spec</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">if</span>( nenle &gt; 0 )</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            gamma_ac.set_intensity( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            State state;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            state.set_definition( info );</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            state.set_gamma_spectra( gamma_ac );</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            obj.add_states( state );</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        fvec.resize( l3 );</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;specfp&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">// add state for light element gamma spec</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">if</span>( nenle &gt; 0 )</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            gamma_fp.set_intensity( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            State state;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            state.set_definition( info );</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            state.set_gamma_spectra( gamma_fp );</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            obj.add_states( state );</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        fvec.resize( ng + 1 );</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;ener&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        fvec.resize( ng );</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;dsav&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        fvec.resize( ng );</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;esav&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="comment">// this shortcut is necessary to handle &quot;f72&quot; and &quot;f73&quot; files produced</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="comment">// by orella (Ian Gauld&#39;s spent fuel isotopics utility) in SCALE 6.1</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;ORELLA test: getBytesRead=&quot;</span> &lt;&lt; binsman.getBytesRead()</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                                                       &lt;&lt; <span class="stringliteral">&quot; getHeader=&quot;</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                                                       &lt;&lt; binsman.getHeader() );</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">if</span>( binsman.getBytesRead() == binsman.getHeader() )</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            jDebugTaggedLine( <span class="stringliteral">&quot;ORELLA MODE CONFIRMED...&quot;</span> );</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            binsman.readFooter();</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        std::string itsav = binsman.readString( 80 );</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;itsav={&quot;</span> &lt;&lt; itsav &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> );</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        fvec.resize( l4 );</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;spnnuc&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        fvec.resize( l4 );</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;alpnuc&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        fvec.resize( ngrp );</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;spneut&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> neutron_total( fvec.begin(), fvec.end() );</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        fvec.resize( ngrp );</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;specan&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> neutron_alphan( fvec.begin(), fvec.end() );</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        fvec.resize( ngrp );</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;specsp&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> neutron_sf( fvec.begin(), fvec.end() );</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        fvec.resize( ngrp + 1 );</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <a class="code" href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">detail::read</a>( binsman, <span class="stringliteral">&quot;eneuts&quot;</span>, fvec, has_header );</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">if</span>( ngrp &gt; 0 )</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            NeutronSpectra neutron;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            neutron.set_bounds( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( fvec.begin(), fvec.end() ) );</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            neutron.set_intensity_alphan( neutron_alphan );</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            neutron.set_intensity_sf( neutron_alphan );</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        }</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        binsman.readFooter();</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }  <span class="comment">// end read states</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    t.stop();</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    opts.set( <span class="stringliteral">&quot;loadTime&quot;</span>, 1000 * t.wall_clock() );</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
+<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
+<div class="ttc" id="namespace_origen_1_1detail_html_a7db7e4db3cb5b23cc9634fe208b36117"><div class="ttname"><a href="../../df/d1e/namespace_origen_1_1detail.html#a7db7e4db3cb5b23cc9634fe208b36117">Origen::detail::read</a></div><div class="ttdeci">void read(ScaleUtils::IO::IStreamManipulator_FBin &amp;binsman, std::string name,::Origen::Vec_Flt &amp;fvec, bool has_header)</div><div class="ttdoc">read float vector with size already set </div><div class="ttdef"><b>Definition:</b> detail.cpp:103</div></div>
+<div class="ttc" id="namespace_origen_1_1detail_html_a149cd41b88c81cb6bfada2a6b639a218"><div class="ttname"><a href="../../df/d1e/namespace_origen_1_1detail.html#a149cd41b88c81cb6bfada2a6b639a218">Origen::detail::setupEndianness</a></div><div class="ttdeci">void setupEndianness(ScaleUtils::IO::IStreamManipulator_FBin &amp;binsman, ScaleUtils::IO::DB &amp;opts)</div><div class="ttdef"><b>Definition:</b> detail.cpp:17</div></div>
+<div class="ttc" id="namespace_vec___flt_html"><div class="ttname"><a href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a></div></div>
+<div class="ttc" id="group___cxx_identifiers_html_gabd3088395c8d6d875d09fe1ef9f1752a"><div class="ttname"><a href="../../da/d0d/group___cxx_identifiers.html#gabd3088395c8d6d875d09fe1ef9f1752a">Origen::SUBLIB_2AC</a></div><div class="ttdeci">const int SUBLIB_2AC</div><div class="ttdef"><b>Definition:</b> Definitions.h:124</div></div>
+<div class="ttc" id="group___cxx_identifiers_html_ga078f384d1ba9fa5cf96b6eda7cfb5d7f"><div class="ttname"><a href="../../da/d0d/group___cxx_identifiers.html#ga078f384d1ba9fa5cf96b6eda7cfb5d7f">Origen::SUBLIB_1LT</a></div><div class="ttdeci">const int SUBLIB_1LT</div><div class="ttdef"><b>Definition:</b> Definitions.h:123</div></div>
+<div class="ttc" id="_state_set_i_o__s61_8cpp_html_afbdb4fcf9a24710ab16654cac54c5ed3"><div class="ttname"><a href="../../d0/d4b/_state_set_i_o__s61_8cpp.html#afbdb4fcf9a24710ab16654cac54c5ed3">READ</a></div><div class="ttdeci">#define READ(XXX)</div><div class="ttdef"><b>Definition:</b> StateSetIO_s61.cpp:164</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="namespace_vec___int_html"><div class="ttname"><a href="../../d4/d05/namespace_vec___int.html">Vec_Int</a></div></div>
+<div class="ttc" id="namespace_origen_html_acac5275310c6e0fef2672b821eb08e38"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info</a></div><div class="ttdeci">int info(const StateSet &amp;state_set, ScaleUtils::IO::DB opts, std::ostream &amp;out, std::ostream &amp;err)</div><div class="ttdef"><b>Definition:</b> Obiwan_info.cpp:160</div></div>
+<div class="ttc" id="group___cxx_identifiers_html_ga2bca3e4f4d7ee705a4739c7e496c794b"><div class="ttname"><a href="../../da/d0d/group___cxx_identifiers.html#ga2bca3e4f4d7ee705a4739c7e496c794b">Origen::SUBLIB_3FP</a></div><div class="ttdeci">const int SUBLIB_3FP</div><div class="ttdef"><b>Definition:</b> Definitions.h:125</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="abb8abf9640d82eea7e057c0d7c68d829"></a>
@@ -194,7 +458,19 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;{</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    nemesis::Timer t;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    t.start();</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    opts.appendError(</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="stringliteral">&quot;no StateSet writer implemented for s61 (SCALE 6.1 format)&quot;</span> );</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    t.stop();</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    opts.set( <span class="stringliteral">&quot;saveTime&quot;</span>, 1000 * t.wall_clock() );</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

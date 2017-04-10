@@ -216,7 +216,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated origen library </p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>),<span class="keywordtype">pointer</span> :: lib=&gt;null()</div>
+<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa906d5a7c638db99b92ce5079ab76065"></a>
@@ -230,7 +232,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated alpha library </p>
-
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">type</span>(alpha_library_class),<span class="keywordtype">pointer</span> :: alib =&gt;null()</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad466b58f392ba2ccd511b90c418a851e"></a>
@@ -244,7 +247,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Number of time steps. </p>
-
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">integer</span> :: nsteps</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a095d91df0215d73db5841dd18bc633b1"></a>
@@ -258,7 +262,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set of alpha calculation options. </p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">type</span>(origen_alpha_options) :: opts</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac80319db42c4d4f67680e6d78f787db1"></a>
@@ -272,7 +277,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Alpha source [0:nsteps, itot, ngroups]. </p>
-
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source(:,:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab9dcfe34b8309f1065ca50da33843d1b"></a>
@@ -286,7 +292,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Alpha spectrum (1/s) [ngroups, 0:nsteps]. </p>
-
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this type was generated from the following file:<ul>

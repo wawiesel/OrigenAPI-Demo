@@ -159,7 +159,13 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        : <a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a20f24f9539a6562b563a67f97efbc41f">allow_decay</a>( <span class="keyword">true</span> ), <a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#ab020004096135bcbfb590ee3a2d121ca">allow_reaction</a>( <span class="keyword">true</span> ), <a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a15810b4737042931f3bcf63b1010929f">allow_fission</a>( <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_a20f24f9539a6562b563a67f97efbc41f"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a20f24f9539a6562b563a67f97efbc41f">Origen::TransitionGroupFilter::allow_decay</a></div><div class="ttdeci">bool allow_decay</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:9</div></div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_ab020004096135bcbfb590ee3a2d121ca"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#ab020004096135bcbfb590ee3a2d121ca">Origen::TransitionGroupFilter::allow_reaction</a></div><div class="ttdeci">bool allow_reaction</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:10</div></div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_a15810b4737042931f3bcf63b1010929f"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a15810b4737042931f3bcf63b1010929f">Origen::TransitionGroupFilter::allow_fission</a></div><div class="ttdeci">bool allow_fission</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:11</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -186,7 +192,19 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#acfad1129c3aced7bc56ed0d5e4969062">TransitionGroupFilter::filter()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a3731dc5f5eb00e78bb347cc584d27887">Origen::graphvizLibrary()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span>( transition_id == 18 &amp;&amp; !<a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a15810b4737042931f3bcf63b1010929f">allow_fission</a> ) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span>( transition_id &lt; 0 &amp;&amp; !<a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a20f24f9539a6562b563a67f97efbc41f">allow_decay</a> ) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span>( transition_id &gt; 0 &amp;&amp; !<a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#ab020004096135bcbfb590ee3a2d121ca">allow_reaction</a> ) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">bool</span> keep_this = <a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a004c2a7daadc6c1fcf504ace44305683">allow_transition_id</a>.empty() ||</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                         <a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a004c2a7daadc6c1fcf504ace44305683">allow_transition_id</a>.count( transition_id );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> !keep_this;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_a20f24f9539a6562b563a67f97efbc41f"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a20f24f9539a6562b563a67f97efbc41f">Origen::TransitionGroupFilter::allow_decay</a></div><div class="ttdeci">bool allow_decay</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:9</div></div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_ab020004096135bcbfb590ee3a2d121ca"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#ab020004096135bcbfb590ee3a2d121ca">Origen::TransitionGroupFilter::allow_reaction</a></div><div class="ttdeci">bool allow_reaction</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:10</div></div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_a004c2a7daadc6c1fcf504ace44305683"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a004c2a7daadc6c1fcf504ace44305683">Origen::TransitionGroupFilter::allow_transition_id</a></div><div class="ttdeci">std::set&lt; int &gt; allow_transition_id</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:12</div></div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_a15810b4737042931f3bcf63b1010929f"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a15810b4737042931f3bcf63b1010929f">Origen::TransitionGroupFilter::allow_fission</a></div><div class="ttdeci">bool allow_fission</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:11</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="acfad1129c3aced7bc56ed0d5e4969062"></a>
@@ -222,7 +240,13 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a9fee7951841d7c0c2e8921f230d6af6f">TransitionGroupFilter::filter()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a52fe81ef470a2add2f395991af3afdaa">TransitionGroupFilter</a> *obj =</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">static_cast&lt;</span><a class="code" href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a52fe81ef470a2add2f395991af3afdaa">TransitionGroupFilter</a> *<span class="keyword">&gt;</span>( obji );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> obj-&gt;filter( transition_id );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="ttc" id="class_origen_1_1_transition_group_filter_html_a52fe81ef470a2add2f395991af3afdaa"><div class="ttname"><a href="../../d7/d46/class_origen_1_1_transition_group_filter.html#a52fe81ef470a2add2f395991af3afdaa">Origen::TransitionGroupFilter::TransitionGroupFilter</a></div><div class="ttdeci">TransitionGroupFilter()</div><div class="ttdef"><b>Definition:</b> TransitionGroupFilter.h:13</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

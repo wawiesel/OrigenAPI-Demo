@@ -202,7 +202,44 @@ Private Attributes</h2></td></tr>
 <p>initialize </p>
 
 <p>References <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">GridView_StateInfo::b_obj</a>, <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">GridView_StateInfo::b_r</a>, <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">GridView_StateInfo::b_rextents</a>, and <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">GridView_StateInfo::b_tag_values</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                                          : <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a> )</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Require( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a> != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// reserve space for everything</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// b_r.reserve(I_TAGS+1);</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">auto</span> tag_values = <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a7812fdb3b5bacfd5b545b2d7360aad91">tag_manager</a>().<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a9716916a5342586df4d26ce1c710587f">listInterpValues</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// set the first 5 that we always have</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>.resize( ( tag_values.size() &gt; 0 ) ? I_TAGS + 1 : I_TAGS );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>[I_TIME] = &amp;( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>-&gt;b_time );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>[I_ENERGY] = &amp;( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>-&gt;b_energy );</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>[I_POWER] = &amp;( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>-&gt;b_power );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>[I_FLUX] = &amp;( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>-&gt;b_flux );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>[I_FLUENCE] = &amp;( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>-&gt;b_fluence );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">b_tag_values</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span>( tag_values.size() &gt; 0 )</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// only add tags if we have them</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">b_tag_values</a> = std::make_shared&lt;GD_t::Vec_R&gt;();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">b_tag_values</a>-&gt;assign( tag_values.begin(), tag_values.end() );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>[I_TAGS] = &amp;( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">b_tag_values</a>-&gt;at( 0 ) );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a> = {1, 1, 1, 1, 1, <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">b_tag_values</a>-&gt;size()};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a> = {1, 1, 1, 1, 1};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_state_info_html_a7812fdb3b5bacfd5b545b2d7360aad91"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a7812fdb3b5bacfd5b545b2d7360aad91">Origen::StateInfo::tag_manager</a></div><div class="ttdeci">const TagManager &amp; tag_manager() const </div><div class="ttdoc">return a const reference to tag_manager </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:75</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_a2de2e94170a38b6cfc9086083d2269ce"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">Origen::GridView_StateInfo::b_r</a></div><div class="ttdeci">GD_t::Vec_Rptr b_r</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:32</div></div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_a9716916a5342586df4d26ce1c710587f"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#a9716916a5342586df4d26ce1c710587f">Origen::TagManager::listInterpValues</a></div><div class="ttdeci">Vec_Dbl listInterpValues() const </div><div class="ttdoc">Return vector of interpolatable tag values in the DataContainer. </div><div class="ttdef"><b>Definition:</b> TagManager.cpp:134</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_a87a52aa3c7f39a70f28a2ab77fd03d8a"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">Origen::GridView_StateInfo::b_obj</a></div><div class="ttdeci">SCP_StateInfo b_obj</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:31</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_aa5d3d8dc68022343fcfab6dbf1219f2e"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">Origen::GridView_StateInfo::b_tag_values</a></div><div class="ttdeci">GD_t::SP_Vec_R b_tag_values</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:34</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_ada66ed1d7d03a0f24883db1bc8bf39ee"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">Origen::GridView_StateInfo::b_rextents</a></div><div class="ttdeci">GD_t::Vec_I b_rextents</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:33</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_ad894097a02e1f21103a29d36752168ef"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">Origen::GridView_StateInfo::obj</a></div><div class="ttdeci">const StateInfo &amp; obj() const </div><div class="ttdoc">Return the StateInfo object of this view. </div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.cpp:46</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -226,7 +263,12 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">GridView_StateInfo::b_obj</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#abb1b1d00f565e63c5a8bf66c94f0a5db">StateInfo::match()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#abb1b1d00f565e63c5a8bf66c94f0a5db">StateInfo::match</a>( *<a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>, other );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_a87a52aa3c7f39a70f28a2ab77fd03d8a"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">Origen::GridView_StateInfo::b_obj</a></div><div class="ttdeci">SCP_StateInfo b_obj</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:31</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_abb1b1d00f565e63c5a8bf66c94f0a5db"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#abb1b1d00f565e63c5a8bf66c94f0a5db">Origen::StateInfo::match</a></div><div class="ttdeci">static bool match(const StateInfo &amp;a, const StateInfo &amp;b)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:99</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0150217fab3a2d48453f09e057cc58e3"></a>
@@ -248,7 +290,11 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">GridView_StateInfo::b_r</a>.</p>
 
 <p>Referenced by <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_a2de2e94170a38b6cfc9086083d2269ce"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a2de2e94170a38b6cfc9086083d2269ce">Origen::GridView_StateInfo::b_r</a></div><div class="ttdeci">GD_t::Vec_Rptr b_r</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:32</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a94a315a1cb23ae48577ab6a66fd50c2d"></a>
@@ -270,7 +316,11 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">GridView_StateInfo::b_rextents</a>.</p>
 
 <p>Referenced by <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_ada66ed1d7d03a0f24883db1bc8bf39ee"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">Origen::GridView_StateInfo::b_rextents</a></div><div class="ttdeci">GD_t::Vec_I b_rextents</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:33</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a40bb76e59fe6b75d8f174cd514835613"></a>
@@ -292,7 +342,11 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">GridView_StateInfo::b_rextents</a>.</p>
 
 <p>Referenced by <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a>.size();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_ada66ed1d7d03a0f24883db1bc8bf39ee"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ada66ed1d7d03a0f24883db1bc8bf39ee">Origen::GridView_StateInfo::b_rextents</a></div><div class="ttdeci">GD_t::Vec_I b_rextents</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:33</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad894097a02e1f21103a29d36752168ef"></a>
@@ -313,7 +367,9 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">GridView_StateInfo::b_obj</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a4207b8f5d96b9879ab8d3735a45cc504">GridView_StateInfo::permute()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{ <span class="keywordflow">return</span> *<a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a>; }</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_a87a52aa3c7f39a70f28a2ab77fd03d8a"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">Origen::GridView_StateInfo::b_obj</a></div><div class="ttdeci">SCP_StateInfo b_obj</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:31</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4207b8f5d96b9879ab8d3735a45cc504"></a>
@@ -339,7 +395,40 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>References <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">GridView_StateInfo::b_obj</a>, <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">GridView_StateInfo::b_tag_values</a>, <a class="el" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">GridView_StateInfo::obj()</a>, and <a class="el" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3db3f6efd4a6ba6ca4fde0f8928a344b">TagManager::setInterpValues()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a77b3f1a223b4f13ead144bb3929f4b9c">SP_StateInfo</a> <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>( <span class="keyword">new</span> StateInfo( *<a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">b_obj</a> ) );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a4e1bc08d966a51e464b45238a41eed28">set_time</a>( ( *z[I_TIME] )[0] );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#ae195ee1ef9e5daa986c76f36bea4d01e">set_energy</a>( ( *z[I_ENERGY] )[0] );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a96044bbdf6261c03244aa460a1d1634d">set_power</a>( ( *z[I_POWER] )[0] );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#ad45e0aeba14fc3dac739859bf6dde1a3">set_flux</a>( ( *z[I_FLUX] )[0] );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a25565e90da6990303691138914dec6c3">set_fluence</a>( ( *z[I_FLUENCE] )[0] );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">b_tag_values</a> != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        GridView_StateInfo::GD_t::SP_Vec_R tags = z[I_TAGS];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::vector&lt;double&gt; values;  <span class="comment">// convert to double</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        values.assign( tags-&gt;begin(), tags-&gt;end() );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// get a new TagManager, assign values, and reset</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        TagManager tm = <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a7812fdb3b5bacfd5b545b2d7360aad91">tag_manager</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        tm.<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3db3f6efd4a6ba6ca4fde0f8928a344b">setInterpValues</a>( values );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>-&gt;<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a883803bed52a0bae14270eb5dc12f809">set_tag_manager</a>( tm );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">obj</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="namespace_origen_html_a77b3f1a223b4f13ead144bb3929f4b9c"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a77b3f1a223b4f13ead144bb3929f4b9c">Origen::SP_StateInfo</a></div><div class="ttdeci">StateInfo::SP SP_StateInfo</div><div class="ttdef"><b>Definition:</b> StateInfo.h:132</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_a7812fdb3b5bacfd5b545b2d7360aad91"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a7812fdb3b5bacfd5b545b2d7360aad91">Origen::StateInfo::tag_manager</a></div><div class="ttdeci">const TagManager &amp; tag_manager() const </div><div class="ttdoc">return a const reference to tag_manager </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:75</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_ad45e0aeba14fc3dac739859bf6dde1a3"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#ad45e0aeba14fc3dac739859bf6dde1a3">Origen::StateInfo::set_flux</a></div><div class="ttdeci">void set_flux(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:58</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_a96044bbdf6261c03244aa460a1d1634d"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a96044bbdf6261c03244aa460a1d1634d">Origen::StateInfo::set_power</a></div><div class="ttdeci">void set_power(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:54</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_a87a52aa3c7f39a70f28a2ab77fd03d8a"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#a87a52aa3c7f39a70f28a2ab77fd03d8a">Origen::GridView_StateInfo::b_obj</a></div><div class="ttdeci">SCP_StateInfo b_obj</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:31</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_aa5d3d8dc68022343fcfab6dbf1219f2e"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#aa5d3d8dc68022343fcfab6dbf1219f2e">Origen::GridView_StateInfo::b_tag_values</a></div><div class="ttdeci">GD_t::SP_Vec_R b_tag_values</div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.h:34</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_a25565e90da6990303691138914dec6c3"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a25565e90da6990303691138914dec6c3">Origen::StateInfo::set_fluence</a></div><div class="ttdeci">void set_fluence(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:66</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_info_html_ad894097a02e1f21103a29d36752168ef"><div class="ttname"><a href="../../db/dba/class_origen_1_1_grid_view___state_info.html#ad894097a02e1f21103a29d36752168ef">Origen::GridView_StateInfo::obj</a></div><div class="ttdeci">const StateInfo &amp; obj() const </div><div class="ttdoc">Return the StateInfo object of this view. </div><div class="ttdef"><b>Definition:</b> GridView_StateInfo.cpp:46</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_a4e1bc08d966a51e464b45238a41eed28"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a4e1bc08d966a51e464b45238a41eed28">Origen::StateInfo::set_time</a></div><div class="ttdeci">void set_time(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:62</div></div>
+<div class="ttc" id="class_origen_1_1_tag_manager_html_a3db3f6efd4a6ba6ca4fde0f8928a344b"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html#a3db3f6efd4a6ba6ca4fde0f8928a344b">Origen::TagManager::setInterpValues</a></div><div class="ttdeci">void setInterpValues(Vec_Dbl &amp;values)</div><div class="ttdoc">Set interpolatable tag values by a vector. </div><div class="ttdef"><b>Definition:</b> TagManager.cpp:151</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_a883803bed52a0bae14270eb5dc12f809"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a883803bed52a0bae14270eb5dc12f809">Origen::StateInfo::set_tag_manager</a></div><div class="ttdeci">void set_tag_manager(const TagManager &amp;)</div><div class="ttdoc">set the tag_manager (copy operation) </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:75</div></div>
+<div class="ttc" id="class_origen_1_1_state_info_html_ae195ee1ef9e5daa986c76f36bea4d01e"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#ae195ee1ef9e5daa986c76f36bea4d01e">Origen::StateInfo::set_energy</a></div><div class="ttdeci">void set_energy(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:70</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

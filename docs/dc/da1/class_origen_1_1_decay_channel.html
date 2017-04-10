@@ -165,7 +165,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    : <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">branch_ratio</a>( 0.0 ), <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">yield_type</a>( <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">DecayResource::MISSING_YIELDS</a> )</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_decay_resource_html_abb6502e5960d0dc9d929156de2ece2eb"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">Origen::DecayResource::MISSING_YIELDS</a></div><div class="ttdeci">static const int MISSING_YIELDS</div><div class="ttdef"><b>Definition:</b> DecayResource.h:162</div></div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a7094af6e3f19046213f24e70e7eb868e"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">Origen::DecayChannel::yield_type</a></div><div class="ttdeci">int yield_type</div><div class="ttdef"><b>Definition:</b> DecayResource.h:21</div></div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a3dbddaea056de13581622769516172c2"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">Origen::DecayChannel::branch_ratio</a></div><div class="ttdeci">double branch_ratio</div><div class="ttdef"><b>Definition:</b> DecayResource.h:20</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a00e8e36533472054cee2f7ce96b4b4d0"></a>
@@ -180,7 +186,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -199,7 +206,16 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">DecayChannel::yield_map</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;{</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    list.clear();</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    std::map&lt;int, double&gt;::const_iterator it;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>.begin(); it != <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>.end(); it++ )</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        list.push_back( it-&gt;first );</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}  <span class="comment">// DecayChannel::list_residual_ids</span></div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a61963f4f008d4c507dcecee59d4b1995"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">Origen::DecayChannel::yield_map</a></div><div class="ttdeci">std::map&lt; int, double &gt; yield_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5c79ed5ca4c70fae4640e927f0762cd3"></a>
@@ -230,7 +246,18 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">DecayChannel::yield_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d6/dff/class_origen_1_1_decay_resource_i_o__cimg.html#a236800934bb9e4a3bf867e0b60ba7eee">DecayResourceIO_cimg::read()</a>, and <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#a0a474501b480c56245b5fdfbd63f7037">TEST_F()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;{</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    yield_ids.clear();</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    yields.clear();</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    std::map&lt;int, double&gt;::const_iterator it;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>.begin(); it != <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>.end(); it++ )</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    {</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        yield_ids.push_back( it-&gt;first );</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        yields.push_back( it-&gt;second );</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;}  <span class="comment">// DecayChannel::get_yield_map</span></div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a61963f4f008d4c507dcecee59d4b1995"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">Origen::DecayChannel::yield_map</a></div><div class="ttdeci">std::map&lt; int, double &gt; yield_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0f7cc782c9be38291e77c464c6a7e5c9"></a>
@@ -248,7 +275,19 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">DecayChannel::yield_map</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;{</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    std::map&lt;int, double&gt;::const_iterator it = <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>.find( <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="keywordflow">if</span>( it == <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>.end() )</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    }</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    {</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    }</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a61963f4f008d4c507dcecee59d4b1995"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">Origen::DecayChannel::yield_map</a></div><div class="ttdeci">std::map&lt; int, double &gt; yield_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5356f4bf2655c095f2602ba787e946ce"></a>
@@ -268,7 +307,11 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">DecayChannel::branch_ratio</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a100e67fa8cf5197647c6ffc57413357c">DecayResource::check_consistency()</a>, <a class="el" href="../../d5/dab/class_origen_1_1_transition_system_adapter___decay_resource.html#ae1cb7a2227f64430533629c91a1a6739">TransitionSystemAdapter_DecayResource::extend()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a3ed177ab84bfbc739eeb5f82f1964d93">Origen::printDecayTable()</a>, <a class="el" href="../../d6/dff/class_origen_1_1_decay_resource_i_o__cimg.html#a236800934bb9e4a3bf867e0b60ba7eee">DecayResourceIO_cimg::read()</a>, <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#a0a474501b480c56245b5fdfbd63f7037">TEST_F()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">DecayResource::to_json()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;{</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">branch_ratio</a>;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;}  <span class="comment">// DecayChannel::get_branch_ratio</span></div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a3dbddaea056de13581622769516172c2"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">Origen::DecayChannel::branch_ratio</a></div><div class="ttdeci">double branch_ratio</div><div class="ttdef"><b>Definition:</b> DecayResource.h:20</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a44525f0ceb43f4748923c07d568875b8"></a>
@@ -289,7 +332,9 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">DecayChannel::branch_ratio</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d6/dff/class_origen_1_1_decay_resource_i_o__cimg.html#a236800934bb9e4a3bf867e0b60ba7eee">DecayResourceIO_cimg::read()</a>, and <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#a0a474501b480c56245b5fdfbd63f7037">TEST_F()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{ <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">branch_ratio</a> = value; }</div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a3dbddaea056de13581622769516172c2"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a3dbddaea056de13581622769516172c2">Origen::DecayChannel::branch_ratio</a></div><div class="ttdeci">double branch_ratio</div><div class="ttdef"><b>Definition:</b> DecayResource.h:20</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ade469a5c5723b7f5b7acf862e17b961c"></a>
@@ -306,7 +351,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">DecayChannel::yield_map</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>.size(); }</div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a61963f4f008d4c507dcecee59d4b1995"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">Origen::DecayChannel::yield_map</a></div><div class="ttdeci">std::map&lt; int, double &gt; yield_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa1918e23482efa2af3fa9b07307c3f0e"></a>
@@ -325,7 +372,9 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">DecayChannel::yield_type</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a100e67fa8cf5197647c6ffc57413357c">DecayResource::check_consistency()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">DecayResource::to_json()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">yield_type</a>; }</div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a7094af6e3f19046213f24e70e7eb868e"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">Origen::DecayChannel::yield_type</a></div><div class="ttdeci">int yield_type</div><div class="ttdef"><b>Definition:</b> DecayResource.h:21</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a593a1b004155b1b5c22e849bb2453c07"></a>
@@ -346,7 +395,11 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">DecayChannel::yield_type</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d6/dff/class_origen_1_1_decay_resource_i_o__cimg.html#a236800934bb9e4a3bf867e0b60ba7eee">DecayResourceIO_cimg::read()</a>, and <a class="el" href="../../d8/d9b/tst_transition_system_adapter___decay_resource_8cpp.html#a0a474501b480c56245b5fdfbd63f7037">TEST_F()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">yield_type</a> = value;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}  <span class="comment">// DecayChannel::set_yield_type</span></div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a7094af6e3f19046213f24e70e7eb868e"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e">Origen::DecayChannel::yield_type</a></div><div class="ttdeci">int yield_type</div><div class="ttdef"><b>Definition:</b> DecayResource.h:21</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a08c10dc5d70222550367386d2ce843ad"></a>
@@ -365,7 +418,11 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">DecayChannel::yield_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a100e67fa8cf5197647c6ffc57413357c">DecayResource::check_consistency()</a>, <a class="el" href="../../d5/dab/class_origen_1_1_transition_system_adapter___decay_resource.html#ae1cb7a2227f64430533629c91a1a6739">TransitionSystemAdapter_DecayResource::extend()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a3ed177ab84bfbc739eeb5f82f1964d93">Origen::printDecayTable()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">DecayResource::to_json()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;{</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a61963f4f008d4c507dcecee59d4b1995"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">Origen::DecayChannel::yield_map</a></div><div class="ttdeci">std::map&lt; int, double &gt; yield_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae774ab9e6fe65751c119f309ac38de99"></a>
@@ -382,7 +439,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">DecayChannel::yield_map</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">yield_map</a>; }</div>
+<div class="ttc" id="class_origen_1_1_decay_channel_html_a61963f4f008d4c507dcecee59d4b1995"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html#a61963f4f008d4c507dcecee59d4b1995">Origen::DecayChannel::yield_map</a></div><div class="ttdeci">std::map&lt; int, double &gt; yield_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

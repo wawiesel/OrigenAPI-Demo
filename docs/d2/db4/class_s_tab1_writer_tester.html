@@ -191,7 +191,13 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d59/_core_2io_2tests_2tst_yield_resource_i_o_8cpp-example.html#a2">Core/io/tests/tstYieldResourceIO.cpp</a>.</dd>
-</dl>
+</dl><div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::string line;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        STab1Writer::setRealValue( &amp;line, value, 1 );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        line.resize( 11 );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> line;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a69bb4b6681d7bb3792fba3b2a178bda3"></a>
@@ -221,7 +227,12 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7833ff09e189a4ab1821af2a2a93f45c">STab1Writer::stab1</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aab9ea0ba257259835645ebfa1a31a928">STab1Writer::writeFile()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/d95/class_origen_1_1_yield_resource_i_o__stab1.html#a79bea301ab327b73459f8334891f2a33">YieldResourceIO_stab1::write()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aab9ea0ba257259835645ebfa1a31a928">writeFile</a>( os, *( this-&gt;<a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7833ff09e189a4ab1821af2a2a93f45c">stab1</a> ) );</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_a7833ff09e189a4ab1821af2a2a93f45c"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7833ff09e189a4ab1821af2a2a93f45c">Origen::STab1Writer::stab1</a></div><div class="ttdeci">SP_STab1 stab1</div><div class="ttdoc">data that was write in </div><div class="ttdef"><b>Definition:</b> STab1Writer.h:17</div></div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_aab9ea0ba257259835645ebfa1a31a928"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aab9ea0ba257259835645ebfa1a31a928">Origen::STab1Writer::writeFile</a></div><div class="ttdeci">static std::string writeFile(std::ostream &amp;os, const STab1 &amp;stab1)</div><div class="ttdoc">write the simplified tab1 data </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:138</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab0b28fe956a8143b9261b762f6f8cdbd"></a>
@@ -267,7 +278,18 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#af76a872478b8562c67fb7d2509da963d">STab1Writer::setLineValues_2Real_4Int()</a>, <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a18ffe92b765e7d70f7d16935d2cda542">STab1Writer::setLineValues_6Real()</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a65680dece9a86dd0321501ccf697fa4e">STab1Writer::writeData()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Require( line != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    line-&gt;resize( 6 * <a class="code" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a> );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> start = ( index - 1 ) * <a class="code" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// int end = start+STab1::ENDF_FIELD_LENGTH;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">char</span> buffer[12];</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// double dvalue = value;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    endfendf::Record::setDoubleValue( buffer, value );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    line-&gt;replace( start, <a class="code" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a>, buffer );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="struct_origen_1_1_s_tab1_html_add767cbd35d993c6a1e949b8bb00620f"><div class="ttname"><a href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">Origen::STab1::ENDF_FIELD_LENGTH</a></div><div class="ttdeci">static const int ENDF_FIELD_LENGTH</div><div class="ttdef"><b>Definition:</b> STab1.h:15</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aeb6c6a41a20bc11fdc19d0dd4fa76240"></a>
@@ -313,7 +335,22 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#af76a872478b8562c67fb7d2509da963d">STab1Writer::setLineValues_2Real_4Int()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Require( line != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    line-&gt;resize( 6 * <a class="code" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a> );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> start = ( index - 1 ) * <a class="code" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// int end = start+STab1::ENDF_FIELD_LENGTH;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">char</span> buffer[12];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    endfendf::Record::setIntValue( buffer, value, 11 );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// comes back as blanks when value is zero</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span>( value == 0 )</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        buffer[10] = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    line-&gt;replace( start, <a class="code" href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">STab1::ENDF_FIELD_LENGTH</a>, buffer );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="struct_origen_1_1_s_tab1_html_add767cbd35d993c6a1e949b8bb00620f"><div class="ttname"><a href="../../d8/df7/struct_origen_1_1_s_tab1.html#add767cbd35d993c6a1e949b8bb00620f">Origen::STab1::ENDF_FIELD_LENGTH</a></div><div class="ttdeci">static const int ENDF_FIELD_LENGTH</div><div class="ttdef"><b>Definition:</b> STab1.h:15</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af76a872478b8562c67fb7d2509da963d"></a>
@@ -383,7 +420,17 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aeb6c6a41a20bc11fdc19d0dd4fa76240">STab1Writer::setIntValue()</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">STab1Writer::setRealValue()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">STab1Writer::writeTerminatorLine()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f1, 1 );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f2, 2 );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aeb6c6a41a20bc11fdc19d0dd4fa76240">setIntValue</a>( line, i1, 3 );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aeb6c6a41a20bc11fdc19d0dd4fa76240">setIntValue</a>( line, i2, 4 );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aeb6c6a41a20bc11fdc19d0dd4fa76240">setIntValue</a>( line, i3, 5 );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aeb6c6a41a20bc11fdc19d0dd4fa76240">setIntValue</a>( line, i4, 6 );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_aeb6c6a41a20bc11fdc19d0dd4fa76240"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aeb6c6a41a20bc11fdc19d0dd4fa76240">Origen::STab1Writer::setIntValue</a></div><div class="ttdeci">static void setIntValue(std::string *line, int value, int index)</div><div class="ttdoc">set the index of 6 values as an integer on line </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:29</div></div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_ab0b28fe956a8143b9261b762f6f8cdbd"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">Origen::STab1Writer::setRealValue</a></div><div class="ttdeci">static void setRealValue(std::string *line, double value, int index)</div><div class="ttdoc">set the index of 6 values as a double on line </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:17</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a18ffe92b765e7d70f7d16935d2cda542"></a>
@@ -451,7 +498,16 @@ Static Protected Member Functions</h2></td></tr>
 <p>set 6 floats on a line </p>
 
 <p>References <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">STab1Writer::setRealValue()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f1, 1 );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f2, 2 );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f3, 3 );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f4, 4 );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f5, 5 );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( line, f6, 6 );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_ab0b28fe956a8143b9261b762f6f8cdbd"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">Origen::STab1Writer::setRealValue</a></div><div class="ttdeci">static void setRealValue(std::string *line, double value, int index)</div><div class="ttdoc">set the index of 6 values as a double on line </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:17</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae71ee35254bc38587ed0dff8074c586c"></a>
@@ -481,7 +537,14 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f()</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#af76a872478b8562c67fb7d2509da963d">STab1Writer::setLineValues_2Real_4Int()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#adbd032cf9172ce0b2cf4edd37be3a9c8">STab1Writer::writeBlock()</a>, <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a65680dece9a86dd0321501ccf697fa4e">STab1Writer::writeData()</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aab9ea0ba257259835645ebfa1a31a928">STab1Writer::writeFile()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string line;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#af76a872478b8562c67fb7d2509da963d">setLineValues_2Real_4Int</a>( &amp;line, 0.0<a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>, 0.0<a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>, 0, 0, 0, 0 );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    os &lt;&lt; line &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_af76a872478b8562c67fb7d2509da963d"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#af76a872478b8562c67fb7d2509da963d">Origen::STab1Writer::setLineValues_2Real_4Int</a></div><div class="ttdeci">static void setLineValues_2Real_4Int(std::string *line, double f1, double f2, int i1, int i2, int i3, int i4)</div><div class="ttdoc">set 2 floats and 4 ints a line </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:45</div></div>
+<div class="ttc" id="namespacekernel__rksuite_html_ac6251e8fb528bf3da394e678ccacf8a5"><div class="ttname"><a href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f</a></div><div class="ttdeci">real(c_double) function, dimension(size(y)) f(t, y)</div><div class="ttdef"><b>Definition:</b> kernel_rksuite.f90:35</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7d38acec348aa3d0a8b2d4d9fcbcb629"></a>
@@ -519,7 +582,12 @@ Static Protected Member Functions</h2></td></tr>
 <p>write the one line title </p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aab9ea0ba257259835645ebfa1a31a928">STab1Writer::writeFile()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">if</span>( !os.good() ) <span class="keywordflow">return</span> <span class="stringliteral">&quot;premature end of file&quot;</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    os &lt;&lt; title &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a65680dece9a86dd0321501ccf697fa4e"></a>
@@ -559,7 +627,36 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../db/d85/struct_origen_1_1_s_tab1_1_1_data.html#aadf28fb41c3df23a1de5b70475ea1bda">STab1::Data::cr</a>, <a class="el" href="../../db/d85/struct_origen_1_1_s_tab1_1_1_data.html#a4a385af81d236accdf95dbc203a77132">STab1::Data::id</a>, <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">STab1Writer::setRealValue()</a>, <a class="el" href="../../db/d85/struct_origen_1_1_s_tab1_1_1_data.html#a6f41b7ad15757087f462936d3ab2b723">STab1::Data::val</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">STab1Writer::writeTerminatorLine()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#adbd032cf9172ce0b2cf4edd37be3a9c8">STab1Writer::writeBlock()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> status = data.cr.writeData( os );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>( status != 0 )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;problem writing Data header&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> ipairs = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> npairs = data.id.size();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">while</span>( ipairs &lt; npairs )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        std::string buffer;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; 3; j++ )</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">if</span>( ipairs &gt;= npairs ) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordtype">int</span> id1 = data.id[ipairs];</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordtype">double</span> f1 = data.val[ipairs];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( &amp;buffer, id1, 2 * j + 1 );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">setRealValue</a>( &amp;buffer, f1, 2 * j + 2 );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            ++ipairs;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        os &lt;&lt; buffer &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">writeTerminatorLine</a>( os );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_ab0b28fe956a8143b9261b762f6f8cdbd"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">Origen::STab1Writer::setRealValue</a></div><div class="ttdeci">static void setRealValue(std::string *line, double value, int index)</div><div class="ttdoc">set the index of 6 values as a double on line </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:17</div></div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_ae71ee35254bc38587ed0dff8074c586c"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">Origen::STab1Writer::writeTerminatorLine</a></div><div class="ttdeci">static void writeTerminatorLine(std::ostream &amp;os)</div><div class="ttdoc">write a terminator to a string </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:72</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="adbd032cf9172ce0b2cf4edd37be3a9c8"></a>
@@ -599,7 +696,28 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../d3/de5/struct_origen_1_1_s_tab1_1_1_block.html#aadf28fb41c3df23a1de5b70475ea1bda">STab1::Block::cr</a>, <a class="el" href="../../d3/de5/struct_origen_1_1_s_tab1_1_1_block.html#a76ef704319319c8de8c03465b5afae74">STab1::Block::set</a>, <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a65680dece9a86dd0321501ccf697fa4e">STab1Writer::writeData()</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">STab1Writer::writeTerminatorLine()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#aab9ea0ba257259835645ebfa1a31a928">STab1Writer::writeFile()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> status = block.cr.writeData( os );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span>( status != 0 )</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;problem writing Block header&quot;</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    std::string error;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> iset = 0; iset &lt; block.set.size(); ++iset )</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        error = <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a65680dece9a86dd0321501ccf697fa4e">writeData</a>( os, block.set[iset] );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> ) <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">writeTerminatorLine</a>( os );</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span>( !os.good() ) <span class="keywordflow">return</span> <span class="stringliteral">&quot;premature end of file&quot;</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_a65680dece9a86dd0321501ccf697fa4e"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a65680dece9a86dd0321501ccf697fa4e">Origen::STab1Writer::writeData</a></div><div class="ttdeci">static std::string writeData(std::ostream &amp;os, const STab1::Data &amp;data)</div><div class="ttdoc">write a data set </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:79</div></div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_ae71ee35254bc38587ed0dff8074c586c"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">Origen::STab1Writer::writeTerminatorLine</a></div><div class="ttdeci">static void writeTerminatorLine(std::ostream &amp;os)</div><div class="ttdoc">write a terminator to a string </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:72</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aab9ea0ba257259835645ebfa1a31a928"></a>
@@ -639,7 +757,29 @@ Static Protected Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../d8/df7/struct_origen_1_1_s_tab1.html#ad747784e219cebd0632b9c1875715fce">STab1::block</a>, <a class="el" href="../../d8/df7/struct_origen_1_1_s_tab1.html#ac30fed21fe991cc8475ce543929f8b72">STab1::title</a>, <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#adbd032cf9172ce0b2cf4edd37be3a9c8">STab1Writer::writeBlock()</a>, <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">STab1Writer::writeTerminatorLine()</a>, and <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7d38acec348aa3d0a8b2d4d9fcbcb629">STab1Writer::writeTitle()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a69bb4b6681d7bb3792fba3b2a178bda3">STab1Writer::write()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    std::string error = <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7d38acec348aa3d0a8b2d4d9fcbcb629">writeTitle</a>( os, <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7833ff09e189a4ab1821af2a2a93f45c">stab1</a>.title );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> iblock = 0; iblock &lt; <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7833ff09e189a4ab1821af2a2a93f45c">stab1</a>.block.size(); ++iblock )</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        error = <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#adbd032cf9172ce0b2cf4edd37be3a9c8">writeBlock</a>( os, <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7833ff09e189a4ab1821af2a2a93f45c">stab1</a>.block[iblock] );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span>( error != <span class="stringliteral">&quot;&quot;</span> ) <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">writeTerminatorLine</a>( os );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span>( !os.good() ) <span class="keywordflow">return</span> <span class="stringliteral">&quot;premature end of file&quot;</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_a7833ff09e189a4ab1821af2a2a93f45c"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7833ff09e189a4ab1821af2a2a93f45c">Origen::STab1Writer::stab1</a></div><div class="ttdeci">SP_STab1 stab1</div><div class="ttdoc">data that was write in </div><div class="ttdef"><b>Definition:</b> STab1Writer.h:17</div></div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_adbd032cf9172ce0b2cf4edd37be3a9c8"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#adbd032cf9172ce0b2cf4edd37be3a9c8">Origen::STab1Writer::writeBlock</a></div><div class="ttdeci">static std::string writeBlock(std::ostream &amp;os, const STab1::Block &amp;block)</div><div class="ttdoc">write a data block (contains 1 or more data sets) </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:108</div></div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_a7d38acec348aa3d0a8b2d4d9fcbcb629"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#a7d38acec348aa3d0a8b2d4d9fcbcb629">Origen::STab1Writer::writeTitle</a></div><div class="ttdeci">static std::string writeTitle(std::ostream &amp;os, const std::string &amp;title)</div><div class="ttdoc">write the one line title </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:130</div></div>
+<div class="ttc" id="class_origen_1_1_s_tab1_writer_html_ae71ee35254bc38587ed0dff8074c586c"><div class="ttname"><a href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ae71ee35254bc38587ed0dff8074c586c">Origen::STab1Writer::writeTerminatorLine</a></div><div class="ttdeci">static void writeTerminatorLine(std::ostream &amp;os)</div><div class="ttdoc">write a terminator to a string </div><div class="ttdef"><b>Definition:</b> STab1Writer.cpp:72</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

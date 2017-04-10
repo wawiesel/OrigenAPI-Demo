@@ -148,7 +148,23 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d8/d2d/class_origen_1_1_solver_selector.html#a55b2d9f3330ec71fa49f60cecc426c12">SolverSelector::get_solver()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ScaleUtils::IO::DB db;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">Origen::SP_Solver</a> solver;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// get CRAM solver</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    db.set&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span>, <span class="stringliteral">&quot;cram&quot;</span> );</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    solver = <a class="code" href="../../d8/d2d/class_origen_1_1_solver_selector.html#a55b2d9f3330ec71fa49f60cecc426c12">Origen::SolverSelector::get_solver</a>( db );</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    EXPECT_TRUE( solver-&gt;status().get&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span> ) == <span class="stringliteral">&quot;cram&quot;</span> );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// get MATREX solver</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    db.set&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span>, <span class="stringliteral">&quot;matrex&quot;</span> );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    solver = <a class="code" href="../../d8/d2d/class_origen_1_1_solver_selector.html#a55b2d9f3330ec71fa49f60cecc426c12">Origen::SolverSelector::get_solver</a>( db );</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    EXPECT_TRUE( solver-&gt;status().get&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span> ) == <span class="stringliteral">&quot;matrex&quot;</span> );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_solver_selector_html_a55b2d9f3330ec71fa49f60cecc426c12"><div class="ttname"><a href="../../d8/d2d/class_origen_1_1_solver_selector.html#a55b2d9f3330ec71fa49f60cecc426c12">Origen::SolverSelector::get_solver</a></div><div class="ttdeci">static SP_Solver get_solver(const ScaleUtils::IO::DB db)</div><div class="ttdoc">Return a solver object corresponding to "solver" in db. </div><div class="ttdef"><b>Definition:</b> SolverSelector.cpp:24</div></div>
+<div class="ttc" id="namespace_origen_html_a9da6dd730b150000ffb0235d3c8a0c22"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">Origen::SP_Solver</a></div><div class="ttdeci">std::shared_ptr&lt; Solver &gt; SP_Solver</div><div class="ttdef"><b>Definition:</b> Solver.h:79</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

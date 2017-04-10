@@ -136,7 +136,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../df/d7d/_core_2xf_2tests_2tst_solver_8cpp-example.html#a0">Core/xf/tests/tstSolver.cpp</a>.</dd>
-</dl>
+</dl><div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; n1.size(); ++i )</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::cerr &lt;&lt; nprintf(</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="stringliteral">&quot;    EXPECT_FLOAT_EQ(%22.9e,n1[%4d]);\n&quot;</span>, n1[i], i );</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac977c17c14339ed9e7d9dbc6f93593e3"></a>
@@ -164,7 +171,31 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">Solver::solve()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../d4/df6/class_origen_1_1_solver___fake.html">Origen::Solver_Fake</a> slv;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> n0( 10, 0.0 );</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    n0[5] = 1.0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> n1;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    slv.<a class="code" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">solve</a>( n0, 1.0, 1e12, &amp;n1 );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// print_checks(n1);</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EXPECT_FLOAT_EQ( 2.430000000e-03, n1[0] );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    EXPECT_FLOAT_EQ( 0.000000000e+00, n1[1] );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    EXPECT_FLOAT_EQ( 0.000000000e+00, n1[2] );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    EXPECT_FLOAT_EQ( 0.000000000e+00, n1[3] );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    EXPECT_FLOAT_EQ( 0.000000000e+00, n1[4] );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    EXPECT_FLOAT_EQ( 7.000000000e-01, n1[5] );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    EXPECT_FLOAT_EQ( 2.100000000e-01, n1[6] );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    EXPECT_FLOAT_EQ( 6.300000000e-02, n1[7] );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    EXPECT_FLOAT_EQ( 1.890000000e-02, n1[8] );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    EXPECT_FLOAT_EQ( 5.670000000e-03, n1[9] );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_solver_html_af4682463633952a2e3fd6477b3ed9318"><div class="ttname"><a href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">Origen::Solver::solve</a></div><div class="ttdeci">bool solve(const Vec_Dbl &amp;in, double flux, double dt, Vec_Dbl *out)</div><div class="ttdef"><b>Definition:</b> Solver.cpp:95</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="class_origen_1_1_solver___fake_html"><div class="ttname"><a href="../../d4/df6/class_origen_1_1_solver___fake.html">Origen::Solver_Fake</a></div><div class="ttdoc">A fake solver satisfying the Origen::Solver interface. </div><div class="ttdef"><b>Definition:</b> Solver_Fake.h:17</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0f20feb3250a2ad1866341c265206951"></a>
@@ -192,7 +223,131 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">Solver::solve()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d4/df6/class_origen_1_1_solver___fake.html">Origen::Solver_Fake</a> slv;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// 100 nuclides</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">size_t</span> n = 100;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> n0( n, 0.0 );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; n; ++i )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        n0[i] = i * 3.14e-3 / ( n - i );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// 100 time steps</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> n1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; 100; ++j )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        slv.<a class="code" href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">solve</a>( n0, 60.0, 1e12, &amp;n1 );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        n0 = n1;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// print_checks(n1);</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    EXPECT_FLOAT_EQ( 6.351493057e-03, n1[0] );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    EXPECT_FLOAT_EQ( 4.725051869e-03, n1[1] );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    EXPECT_FLOAT_EQ( 4.935777158e-03, n1[2] );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    EXPECT_FLOAT_EQ( 5.158682296e-03, n1[3] );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    EXPECT_FLOAT_EQ( 5.394919423e-03, n1[4] );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    EXPECT_FLOAT_EQ( 5.645801977e-03, n1[5] );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    EXPECT_FLOAT_EQ( 5.912836949e-03, n1[6] );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    EXPECT_FLOAT_EQ( 6.197766380e-03, n1[7] );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    EXPECT_FLOAT_EQ( 6.502621794e-03, n1[8] );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    EXPECT_FLOAT_EQ( 6.829796943e-03, n1[9] );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    EXPECT_FLOAT_EQ( 7.182146410e-03, n1[10] );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    EXPECT_FLOAT_EQ( 7.563119990e-03, n1[11] );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    EXPECT_FLOAT_EQ( 7.976944575e-03, n1[12] );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    EXPECT_FLOAT_EQ( 8.428865133e-03, n1[13] );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    EXPECT_FLOAT_EQ( 8.925452128e-03, n1[14] );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    EXPECT_FLOAT_EQ( 9.474972088e-03, n1[15] );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    EXPECT_FLOAT_EQ( 1.008779886e-02, n1[16] );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    EXPECT_FLOAT_EQ( 1.077681504e-02, n1[17] );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    EXPECT_FLOAT_EQ( 1.155771822e-02, n1[18] );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    EXPECT_FLOAT_EQ( 1.244911154e-02, n1[19] );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    EXPECT_FLOAT_EQ( 1.347223128e-02, n1[20] );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    EXPECT_FLOAT_EQ( 1.465015869e-02, n1[21] );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    EXPECT_FLOAT_EQ( 1.600638950e-02, n1[22] );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    EXPECT_FLOAT_EQ( 1.756269968e-02, n1[23] );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    EXPECT_FLOAT_EQ( 1.933634951e-02, n1[24] );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    EXPECT_FLOAT_EQ( 2.133679839e-02, n1[25] );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    EXPECT_FLOAT_EQ( 2.356224009e-02, n1[26] );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    EXPECT_FLOAT_EQ( 2.599638363e-02, n1[27] );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    EXPECT_FLOAT_EQ( 2.860597137e-02, n1[28] );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    EXPECT_FLOAT_EQ( 3.133951851e-02, n1[29] );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    EXPECT_FLOAT_EQ( 3.412766777e-02, n1[30] );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    EXPECT_FLOAT_EQ( 3.688538323e-02, n1[31] );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    EXPECT_FLOAT_EQ( 3.951598113e-02, n1[32] );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    EXPECT_FLOAT_EQ( 4.191674638e-02, n1[33] );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    EXPECT_FLOAT_EQ( 4.398565425e-02, n1[34] );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    EXPECT_FLOAT_EQ( 4.562854464e-02, n1[35] );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    EXPECT_FLOAT_EQ( 4.676601317e-02, n1[36] );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    EXPECT_FLOAT_EQ( 4.733930050e-02, n1[37] );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    EXPECT_FLOAT_EQ( 4.731457768e-02, n1[38] );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    EXPECT_FLOAT_EQ( 4.668521838e-02, n1[39] );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    EXPECT_FLOAT_EQ( 4.547188874e-02, n1[40] );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    EXPECT_FLOAT_EQ( 4.372053353e-02, n1[41] );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    EXPECT_FLOAT_EQ( 4.149855931e-02, n1[42] );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    EXPECT_FLOAT_EQ( 3.888968192e-02, n1[43] );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    EXPECT_FLOAT_EQ( 3.598800139e-02, n1[44] );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    EXPECT_FLOAT_EQ( 3.289188707e-02, n1[45] );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    EXPECT_FLOAT_EQ( 2.969820677e-02, n1[46] );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    EXPECT_FLOAT_EQ( 2.649733220e-02, n1[47] );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    EXPECT_FLOAT_EQ( 2.336921891e-02, n1[48] );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    EXPECT_FLOAT_EQ( 2.038071396e-02, n1[49] );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    EXPECT_FLOAT_EQ( 1.758410791e-02, n1[50] );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    EXPECT_FLOAT_EQ( 1.501683361e-02, n1[51] );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    EXPECT_FLOAT_EQ( 1.270213124e-02, n1[52] );</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    EXPECT_FLOAT_EQ( 1.065045063e-02, n1[53] );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    EXPECT_FLOAT_EQ( 8.861345327e-03, n1[54] );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    EXPECT_FLOAT_EQ( 7.325623605e-03, n1[55] );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    EXPECT_FLOAT_EQ( 6.027551968e-03, n1[56] );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    EXPECT_FLOAT_EQ( 4.946948865e-03, n1[57] );</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    EXPECT_FLOAT_EQ( 4.061053119e-03, n1[58] );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    EXPECT_FLOAT_EQ( 3.346097136e-03, n1[59] );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    EXPECT_FLOAT_EQ( 2.778555037e-03, n1[60] );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    EXPECT_FLOAT_EQ( 2.336068014e-03, n1[61] );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    EXPECT_FLOAT_EQ( 1.998072500e-03, n1[62] );</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    EXPECT_FLOAT_EQ( 1.746171507e-03, n1[63] );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    EXPECT_FLOAT_EQ( 1.564296696e-03, n1[64] );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    EXPECT_FLOAT_EQ( 1.438710057e-03, n1[65] );</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    EXPECT_FLOAT_EQ( 1.357891026e-03, n1[66] );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    EXPECT_FLOAT_EQ( 1.312349187e-03, n1[67] );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    EXPECT_FLOAT_EQ( 1.294395571e-03, n1[68] );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    EXPECT_FLOAT_EQ( 1.297898177e-03, n1[69] );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    EXPECT_FLOAT_EQ( 1.318040342e-03, n1[70] );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    EXPECT_FLOAT_EQ( 1.351094451e-03, n1[71] );</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    EXPECT_FLOAT_EQ( 1.394218453e-03, n1[72] );</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    EXPECT_FLOAT_EQ( 1.445278747e-03, n1[73] );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    EXPECT_FLOAT_EQ( 1.502700170e-03, n1[74] );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    EXPECT_FLOAT_EQ( 1.565341907e-03, n1[75] );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    EXPECT_FLOAT_EQ( 1.632396958e-03, n1[76] );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    EXPECT_FLOAT_EQ( 1.703312244e-03, n1[77] );</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    EXPECT_FLOAT_EQ( 1.777726206e-03, n1[78] );</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    EXPECT_FLOAT_EQ( 1.855420897e-03, n1[79] );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    EXPECT_FLOAT_EQ( 1.936285773e-03, n1[80] );</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    EXPECT_FLOAT_EQ( 2.020290796e-03, n1[81] );</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    EXPECT_FLOAT_EQ( 2.107466789e-03, n1[82] );</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    EXPECT_FLOAT_EQ( 2.197891383e-03, n1[83] );</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    EXPECT_FLOAT_EQ( 2.291679204e-03, n1[84] );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    EXPECT_FLOAT_EQ( 2.388975271e-03, n1[85] );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    EXPECT_FLOAT_EQ( 2.489950779e-03, n1[86] );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    EXPECT_FLOAT_EQ( 2.594800687e-03, n1[87] );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    EXPECT_FLOAT_EQ( 2.703742655e-03, n1[88] );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    EXPECT_FLOAT_EQ( 2.817017028e-03, n1[89] );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    EXPECT_FLOAT_EQ( 2.934887640e-03, n1[90] );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    EXPECT_FLOAT_EQ( 3.057643309e-03, n1[91] );</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    EXPECT_FLOAT_EQ( 3.185599937e-03, n1[92] );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    EXPECT_FLOAT_EQ( 3.319103190e-03, n1[93] );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    EXPECT_FLOAT_EQ( 3.458531762e-03, n1[94] );</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    EXPECT_FLOAT_EQ( 3.604301257e-03, n1[95] );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    EXPECT_FLOAT_EQ( 3.756868790e-03, n1[96] );</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    EXPECT_FLOAT_EQ( 3.916738380e-03, n1[97] );</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    EXPECT_FLOAT_EQ( 4.084467314e-03, n1[98] );</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    EXPECT_FLOAT_EQ( 4.260673651e-03, n1[99] );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_solver_html_af4682463633952a2e3fd6477b3ed9318"><div class="ttname"><a href="../../d2/df0/class_origen_1_1_solver.html#af4682463633952a2e3fd6477b3ed9318">Origen::Solver::solve</a></div><div class="ttdeci">bool solve(const Vec_Dbl &amp;in, double flux, double dt, Vec_Dbl *out)</div><div class="ttdef"><b>Definition:</b> Solver.cpp:95</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="class_origen_1_1_solver___fake_html"><div class="ttname"><a href="../../d4/df6/class_origen_1_1_solver___fake.html">Origen::Solver_Fake</a></div><div class="ttdoc">A fake solver satisfying the Origen::Solver interface. </div><div class="ttdef"><b>Definition:</b> Solver_Fake.h:17</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

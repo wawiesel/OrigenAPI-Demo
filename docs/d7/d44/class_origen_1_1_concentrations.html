@@ -382,7 +382,24 @@ Friends</h2></td></tr>
 <p>default constructor (default MOLE units, 0.0 cm^3 volume) </p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a2e6c1f5cfadd82be3032d41cc2a58723">Concentrations::getCopy()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    : <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">GATOMS</a> )</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>( <span class="keyword">new</span> NuclideSet() )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>() )</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>( 0.0 )</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">r_nuclide_resource</a>( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">Origen::NuclideResource::default_resource</a>() )</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">r_decay_resource</a>( <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a9ce414cf84174cdce99cb606664dcdea"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">Origen::Concentrations::r_decay_resource</a></div><div class="ttdeci">SCP_DecayResource r_decay_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:168</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_ad9b4c458810293232c1e95e3faa2197b"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">Origen::NuclideResource::default_resource</a></div><div class="ttdeci">static SCP default_resource()</div><div class="ttdef"><b>Definition:</b> NuclideResource.cpp:26</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="namespace_origen_html_ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">Origen::GATOMS</a></div><div class="ttdoc">Gram atoms, gram-atomic weights or moles. </div><div class="ttdef"><b>Definition:</b> ConcentrationUnit.h:16</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_abcdbbfcad0ca9f3a868688a2c3d05ea6"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">Origen::Concentrations::r_nuclide_resource</a></div><div class="ttdeci">SCP_NuclideResource r_nuclide_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:167</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa5917e9cedefe40bc67f38537781c67b"></a>
@@ -400,7 +417,24 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>constructor with units (1.0 cm^3 volume) </p>
-
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    : <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a> )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>( <span class="keyword">new</span> NuclideSet() )</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>() )</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>( 0.0 )</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">r_nuclide_resource</a>( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">Origen::NuclideResource::default_resource</a>() )</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">r_decay_resource</a>( <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a9ce414cf84174cdce99cb606664dcdea"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">Origen::Concentrations::r_decay_resource</a></div><div class="ttdeci">SCP_DecayResource r_decay_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:168</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_ad9b4c458810293232c1e95e3faa2197b"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">Origen::NuclideResource::default_resource</a></div><div class="ttdeci">static SCP default_resource()</div><div class="ttdef"><b>Definition:</b> NuclideResource.cpp:26</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab5709e367acc993c40084a72fd150daa"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Origen::Concentrations::units</a></div><div class="ttdeci">ConcentrationUnit units() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:357</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_abcdbbfcad0ca9f3a868688a2c3d05ea6"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">Origen::Concentrations::r_nuclide_resource</a></div><div class="ttdeci">SCP_NuclideResource r_nuclide_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:167</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a77b871dbee59060814f82347d5ad2bd1"></a>
@@ -417,7 +451,24 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>constructor with nuclide set (default MOLE units, 1.0 cm^3 volume) this constructor will let you pass a nuclide set where a concentrations </p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    : <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">GATOMS</a> )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>( <span class="keyword">new</span> NuclideSet( nucset ) )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>() )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>( 0.0 )</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">r_nuclide_resource</a>( <a class="code" href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">Origen::NuclideResource::default_resource</a>() )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    , <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">r_decay_resource</a>( <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a9ce414cf84174cdce99cb606664dcdea"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">Origen::Concentrations::r_decay_resource</a></div><div class="ttdeci">SCP_DecayResource r_decay_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:168</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_nuclide_resource_html_ad9b4c458810293232c1e95e3faa2197b"><div class="ttname"><a href="../../d3/d0b/class_origen_1_1_nuclide_resource.html#ad9b4c458810293232c1e95e3faa2197b">Origen::NuclideResource::default_resource</a></div><div class="ttdeci">static SCP default_resource()</div><div class="ttdef"><b>Definition:</b> NuclideResource.cpp:26</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="namespace_origen_html_ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">Origen::GATOMS</a></div><div class="ttdoc">Gram atoms, gram-atomic weights or moles. </div><div class="ttdef"><b>Definition:</b> ConcentrationUnit.h:16</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_abcdbbfcad0ca9f3a868688a2c3d05ea6"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">Origen::Concentrations::r_nuclide_resource</a></div><div class="ttdeci">SCP_NuclideResource r_nuclide_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:167</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -437,7 +488,11 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a3e708d496acb090a8657506c512ecf55">Concentrations::to_json()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a3f23c97b6c9f2a88e1121d1c633ccafa">Concentrations::toString()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a3e708d496acb090a8657506c512ecf55">to_json</a>().toStyledString();</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a3e708d496acb090a8657506c512ecf55"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a3e708d496acb090a8657506c512ecf55">Origen::Concentrations::to_json</a></div><div class="ttdeci">Scale::Json::Value to_json() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:368</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3e708d496acb090a8657506c512ecf55"></a>
@@ -456,7 +511,20 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#aa649a448baa622301bbb046e431e84a4">Origen::convertConcUnitToPrettyString()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#aa48c39f92bc04eded742f5310c74aafe">Concentrations::to_string()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;{</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    Json::Value root;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    root[<span class="stringliteral">&quot;nuclide_set&quot;</span>] = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;to_json();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    root[<span class="stringliteral">&quot;units&quot;</span>] = <a class="code" href="../../d5/dc1/namespace_origen.html#aa649a448baa622301bbb046e431e84a4">convertConcUnitToPrettyString</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a> );</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    root[<span class="stringliteral">&quot;volume&quot;</span>] = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    Standard::Json::arrayToJson( root[<span class="stringliteral">&quot;vals&quot;</span>], *<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> );</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">return</span> root;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="namespace_origen_html_aa649a448baa622301bbb046e431e84a4"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#aa649a448baa622301bbb046e431e84a4">Origen::convertConcUnitToPrettyString</a></div><div class="ttdeci">string convertConcUnitToPrettyString(ConcentrationUnit unit)</div><div class="ttdef"><b>Definition:</b> ConcentrationUnit.cpp:17</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a30d45658bf2bd71aa3f45267469d959e"></a>
@@ -616,7 +684,12 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a5093f4b919b8c511136f669b2b9583a7">Concentrations::has_nuclide_set()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a5a3b5a74d6fc001c1a06a91bfeaf68ad">Concentrations::accumulate()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad4648f8215d34ffb3c91390f305750c1">Origen::printConcentrations_csv()</a>, and <a class="el" href="../../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html#abb8abf9640d82eea7e057c0d7c68d829">StateSetIO_s62b::write()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a5093f4b919b8c511136f669b2b9583a7">has_nuclide_set</a>() ? <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;total_nuclides() : 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a5093f4b919b8c511136f669b2b9583a7"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a5093f4b919b8c511136f669b2b9583a7">Origen::Concentrations::has_nuclide_set</a></div><div class="ttdeci">bool has_nuclide_set() const </div><div class="ttdoc">return whether the class has a non-null nuclide_set </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:56</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a45e7f26f3b785cf397a6ecd3e4640bec"></a>
@@ -637,7 +710,16 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ae1a348ae48ba9542f2f6254d976e3f97">Concentrations::canonicalize_vals()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a5a3b5a74d6fc001c1a06a91bfeaf68ad">Concentrations::accumulate()</a>, <a class="el" href="../../df/d34/class_origen_1_1_material.html#a144cbd1121614a0aa5cfcd092374bdb2">Material::get_concs_at()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a6185440953d33eed566c645dfcd74eae">FakeFactory::newspStateSet_10nuclide()</a>, <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a0295ac70b7b2744d6788b800c44911d1">GridView_State::permute()</a>, <a class="el" href="../../d4/d85/class_origen_1_1_state_set_i_o__s61.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s61::read()</a>, <a class="el" href="../../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s62b::read()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a371782e2ae025b5502a49a8653fda9bd">Concentrations::set_concs()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1()</a>, and <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> = <a class="code" href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;total_nuclides(), val ) );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ae1a348ae48ba9542f2f6254d976e3f97">canonicalize_vals</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ae1a348ae48ba9542f2f6254d976e3f97"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ae1a348ae48ba9542f2f6254d976e3f97">Origen::Concentrations::canonicalize_vals</a></div><div class="ttdeci">void canonicalize_vals()</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:358</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_ga5e18b474a63afeb9e75120a2fa1e3c37"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#ga5e18b474a63afeb9e75120a2fa1e3c37">Origen::SP_Vec_Dbl</a></div><div class="ttdeci">std::shared_ptr&lt; Vec_Dbl &gt; SP_Vec_Dbl</div><div class="ttdef"><b>Definition:</b> Definitions.h:40</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9ff9c3000e638823e09250bc1e852afa"></a>
@@ -926,7 +1008,15 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>, and <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a17b5b8d3750dec872de61522aac710b2">NuclideSet::NOT_FOUND()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#ae1cabda8b4758f939ab19636cac2a8c2">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">size_t</span> i = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;lookup_index( <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">if</span>( i == <a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a17b5b8d3750dec872de61522aac710b2">NuclideSet::NOT_FOUND</a>() ) <span class="keywordflow">return</span> not_found;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_nuclide_set_html_a17b5b8d3750dec872de61522aac710b2"><div class="ttname"><a href="../../d2/de0/class_origen_1_1_nuclide_set.html#a17b5b8d3750dec872de61522aac710b2">Origen::NuclideSet::NOT_FOUND</a></div><div class="ttdeci">static size_t NOT_FOUND(bool fortran_offset=false)</div><div class="ttdef"><b>Definition:</b> NuclideSet.cpp:204</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4f7af621f5bc11580263728832530282"></a>
@@ -965,7 +1055,10 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ae542848d630d279137c2d29a4c80c9e0">Concentrations::approx_eq()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6577c072727d5ade190d8b9cd6a72e6">Concentrations::isEqualConcentrations()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a7cc5746d4f5a7c5306fe22e9094ab3b5">State::match()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a425fc02c42953913835df952d6f702bb">Concentrations::match()</a>, and <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> eq_sp_obj( a.b_nuclide_set, b.b_nuclide_set );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a425fc02c42953913835df952d6f702bb"></a>
@@ -983,7 +1076,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">Concentrations::match()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">match</a>( *<span class="keyword">this</span>, b );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4f7af621f5bc11580263728832530282"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">Origen::Concentrations::match</a></div><div class="ttdeci">static bool match(const Concentrations &amp;a, const Concentrations &amp;b)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:81</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae542848d630d279137c2d29a4c80c9e0"></a>
@@ -1011,7 +1108,25 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">Concentrations::convert_units()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">Origen::GATOMS</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">Concentrations::match()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ad84d9ca6b809a6db3d4ea4c95d937b3b">Concentrations::vals_size()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// quick return if not matching ids</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span>( !<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">match</a>( b ) ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// check values (in same units)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> vals_this( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ad84d9ca6b809a6db3d4ea4c95d937b3b">vals_size</a>() );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">convert_units</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">GATOMS</a>, &amp;vals_this );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> vals_b( b.vals_size() );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    b.convert_units( <a class="code" href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">GATOMS</a>, &amp;vals_b );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> approx_eq_vec( vals_this, vals_b, tol );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4f7af621f5bc11580263728832530282"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">Origen::Concentrations::match</a></div><div class="ttdeci">static bool match(const Concentrations &amp;a, const Concentrations &amp;b)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:81</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ad84d9ca6b809a6db3d4ea4c95d937b3b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ad84d9ca6b809a6db3d4ea4c95d937b3b">Origen::Concentrations::vals_size</a></div><div class="ttdeci">size_t vals_size() const </div><div class="ttdoc">return size of vals vector </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a646ee34c52f0713bedb1091058de680d"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">Origen::Concentrations::convert_units</a></div><div class="ttdeci">bool convert_units(ConcentrationUnit, Vec_Dbl *) const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:299</div></div>
+<div class="ttc" id="namespace_origen_html_ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ae45c38d6dbf0590cf3956b85a97e880da93a61d5070692a59b516345edf85d458">Origen::GATOMS</a></div><div class="ttdoc">Gram atoms, gram-atomic weights or moles. </div><div class="ttdef"><b>Definition:</b> ConcentrationUnit.h:16</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3680d6a9dfba0e096906180b18a97155"></a>
@@ -1032,7 +1147,25 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">Concentrations::convert_units()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Concentrations::units()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Concentrations::vals()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../df/d34/class_origen_1_1_material.html#a144cbd1121614a0aa5cfcd092374bdb2">Material::get_concs_at()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a6185440953d33eed566c645dfcd74eae">FakeFactory::newspStateSet_10nuclide()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad4648f8215d34ffb3c91390f305750c1">Origen::printConcentrations_csv()</a>, <a class="el" href="../../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s62b::read()</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#aebd8d5013fa55e48aef5809e5517d9db">FakeFactory::StateSet_random1()</a>, <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#a76d8f2050e047dc359e8839db7888bf8">TEST()</a>, and <a class="el" href="../../d5/d12/burst_fission_8cpp.html#a0bd61623f396a8a8af92ab0335d1467c">TEST_P()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;{</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <a class="code" href="../../d6/da8/mgfluxmapper_8cpp.html#a5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>() );</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">bool</span> convertible = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">convert_units</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>, &amp;*<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a> );</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">if</span>( !convertible )</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;conversion failed!&quot;</span> );</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a> = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">return</span> convertible;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a646ee34c52f0713bedb1091058de680d"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">Origen::Concentrations::convert_units</a></div><div class="ttdeci">bool convert_units(ConcentrationUnit, Vec_Dbl *) const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:299</div></div>
+<div class="ttc" id="mgfluxmapper_8cpp_html_a5e18b474a63afeb9e75120a2fa1e3c37"><div class="ttname"><a href="../../d6/da8/mgfluxmapper_8cpp.html#a5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a></div><div class="ttdeci">std::shared_ptr&lt; Vec_Dbl &gt; SP_Vec_Dbl</div><div class="ttdef"><b>Definition:</b> mgfluxmapper.cpp:10</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab5709e367acc993c40084a72fd150daa"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Origen::Concentrations::units</a></div><div class="ttdeci">ConcentrationUnit units() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:357</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab5709e367acc993c40084a72fd150daa"></a>
@@ -1052,7 +1185,9 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a63d6ca993ac2257043de57f0d5ce076d">Concentrations::accumulate_concs()</a>, <a class="el" href="../../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html#a038b5acab351e58114571a4d3d9cf0c9">StateSetIO_s62b::read()</a>, <a class="el" href="../../d4/d18/class_i_o_1_1_accessor_3_01_origen_1_1_concentrations_01_4.html#a95ffe3883ea73310985f96c1a5232f00">Accessor&lt; Origen::Concentrations &gt;::read()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a3680d6a9dfba0e096906180b18a97155">Concentrations::set_units()</a>, <a class="el" href="../../d9/dd8/burnup_interp_8cpp.html#a13b29acd9c6ab0be839e5a158eb7d58a">TEST()</a>, <a class="el" href="../../d5/d12/burst_fission_8cpp.html#a0bd61623f396a8a8af92ab0335d1467c">TEST_P()</a>, <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#af0f0b30aa52a7c8f248033c42eb0f6e8">timing_ref()</a>, <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a15c10fc710367aaa688466a61c2dd6e6">timing_ref_at()</a>, <a class="el" href="../../dc/de3/class_origen_1_1_state_set_i_o__bof.html#abb8abf9640d82eea7e057c0d7c68d829">StateSetIO_bof::write()</a>, and <a class="el" href="../../d6/dc6/class_origen_1_1_state_set_i_o__s62b.html#abb8abf9640d82eea7e057c0d7c68d829">StateSetIO_s62b::write()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a>; }</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a646ee34c52f0713bedb1091058de680d"></a>
@@ -1082,7 +1217,14 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a63d6ca993ac2257043de57f0d5ce076d">Concentrations::accumulate_concs()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ae542848d630d279137c2d29a4c80c9e0">Concentrations::approx_eq()</a>, <a class="el" href="../../df/d34/class_origen_1_1_material.html#aa88efac07dacfb5bd53c3c5f3ee06e89">Material::set_concs_at()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a3680d6a9dfba0e096906180b18a97155">Concentrations::set_units()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;{</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">convert_units</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a> );</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a646ee34c52f0713bedb1091058de680d"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">Origen::Concentrations::convert_units</a></div><div class="ttdeci">bool convert_units(ConcentrationUnit, Vec_Dbl *) const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:299</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab5709e367acc993c40084a72fd150daa"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Origen::Concentrations::units</a></div><div class="ttdeci">ConcentrationUnit units() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:357</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4eb218def30331dd819ab22737342f60"></a>
@@ -1116,7 +1258,51 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, <a class="el" href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">Origen::BAD_DOUBLE</a>, <a class="el" href="../../de/d52/class_origen_1_1_concentration_converter.html#a5a480ece2c9d21b0f944123ae0586498">ConcentrationConverter::convert_to()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">Concentrations::r_decay_resource</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">Concentrations::r_nuclide_resource</a>, <a class="el" href="../../de/d52/class_origen_1_1_concentration_converter.html#affb3bde4d9d33fd62016584418e6db2a">ConcentrationConverter::set_decay_resource()</a>, and <a class="el" href="../../de/d52/class_origen_1_1_concentration_converter.html#ad3eb8f31a888b9aec622a72071e5b438">ConcentrationConverter::set_nuclide_resource()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    Require( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a> != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    ConcentrationConverter converter;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordtype">bool</span> convertible = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    converter.set_decay_resource( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">r_decay_resource</a> );</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    converter.set_nuclide_resource( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">r_nuclide_resource</a> );</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>-&gt;resize( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size() );</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size(); ++i )</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="comment">// if we start with garbage, don&#39;t even try to convert</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i ) == <a class="code" href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">BAD_DOUBLE</a> )</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            convertible = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>-&gt;at( i ) = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i );</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i ) == 0.0 )</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>-&gt;at( i ) = 0.0;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="comment">// don&#39;t waste time on conversion</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>-&gt;at( i ) =</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            converter.convert_to( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>,</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                                  <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;izzzaaa_at( i ),</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                                  <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a>,</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                                  <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i ),</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                  <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab323360dd6dfae056bbfeebf72a70375">volume</a> &gt; 0.0 ? <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab323360dd6dfae056bbfeebf72a70375">volume</a> : <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> );</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>-&gt;at( i ) == <a class="code" href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">BAD_DOUBLE</a> ) convertible = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">return</span> convertible;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab323360dd6dfae056bbfeebf72a70375"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab323360dd6dfae056bbfeebf72a70375">Origen::Concentrations::volume</a></div><div class="ttdeci">double volume() const </div><div class="ttdoc">return the scalar volume </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:55</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a9ce414cf84174cdce99cb606664dcdea"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a9ce414cf84174cdce99cb606664dcdea">Origen::Concentrations::r_decay_resource</a></div><div class="ttdeci">SCP_DecayResource r_decay_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:168</div></div>
+<div class="ttc" id="group___cxx_constants_html_ga3083f3df34689c1aa3f0f0107c6f70f5"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga3083f3df34689c1aa3f0f0107c6f70f5">Origen::BAD_DOUBLE</a></div><div class="ttdeci">const double BAD_DOUBLE</div><div class="ttdef"><b>Definition:</b> Definitions.h:78</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab5709e367acc993c40084a72fd150daa"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Origen::Concentrations::units</a></div><div class="ttdeci">ConcentrationUnit units() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:357</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_abcdbbfcad0ca9f3a868688a2c3d05ea6"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#abcdbbfcad0ca9f3a868688a2c3d05ea6">Origen::Concentrations::r_nuclide_resource</a></div><div class="ttdeci">SCP_NuclideResource r_nuclide_resource</div><div class="ttdef"><b>Definition:</b> Concentrations.h:167</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0fefd52ed9e48f7b500a5489a5aa7ee5"></a>
@@ -1195,7 +1381,26 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Concentrations::vals()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a38a8925700a6350a19ee19c66fb28b91">Concentrations::normalize()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">// new data</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="../../d6/da8/mgfluxmapper_8cpp.html#a5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size() ) );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size(); ++i )</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>-&gt;at( i ) = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i ) * wt;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// modify values</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">// modify the volume</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">if</span>( wt != 0 ) <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> /= wt;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="mgfluxmapper_8cpp_html_a5e18b474a63afeb9e75120a2fa1e3c37"><div class="ttname"><a href="../../d6/da8/mgfluxmapper_8cpp.html#a5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a></div><div class="ttdeci">std::shared_ptr&lt; Vec_Dbl &gt; SP_Vec_Dbl</div><div class="ttdef"><b>Definition:</b> mgfluxmapper.cpp:10</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a84c49a592b084e92f182eac1e7574f45"></a>
@@ -1215,7 +1420,9 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a38a8925700a6350a19ee19c66fb28b91">Concentrations::normalize()</a>, and <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#a98b9ccc7fff97c6a20589350e8a02c27">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{ <span class="keywordflow">return</span> ScaleSTL::sum( *<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> ); }</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4cdba977856c3342812015db870ba18d"></a>
@@ -1246,7 +1453,26 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>, and <a class="el" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">auxiliary_erf_m::x</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#aed94fdd5ef2b0e69611bf24df8751121">Concentrations::normalize_hm()</a>, and <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#a98b9ccc7fff97c6a20589350e8a02c27">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">double</span> total_hm = 0.0;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">double</span> total = 0.0;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size(); ++i )</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">x</a> = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;z_at( i ) &gt;= min_z )</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            total_hm += <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">x</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        total += <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">x</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">sum</a> != <span class="keyword">nullptr</span> ) *<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">sum</a> = total;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> total_hm;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a84c49a592b084e92f182eac1e7574f45"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">Origen::Concentrations::sum</a></div><div class="ttdeci">double sum() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:141</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="namespaceauxiliary__erf__m_html_a438a2d29bb9bd59a6a3bf10191fda6b1"><div class="ttname"><a href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">auxiliary_erf_m::x</a></div><div class="ttdeci">real(c_double), private x</div><div class="ttdef"><b>Definition:</b> auxiliary.f90:659</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a38a8925700a6350a19ee19c66fb28b91"></a>
@@ -1267,7 +1493,18 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#aefa15798d9ff8030f778b1d2d916d710">Concentrations::scale()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">Concentrations::sum()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#aed94fdd5ef2b0e69611bf24df8751121">Concentrations::normalize_hm()</a>, and <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#acd367b7308656d6aa2344bfca799b4a4">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">double</span> z = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">sum</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span>( z != 0.0 )</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> /= ( z * z );</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aefa15798d9ff8030f778b1d2d916d710">scale</a>( target_sum / z );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_aefa15798d9ff8030f778b1d2d916d710"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#aefa15798d9ff8030f778b1d2d916d710">Origen::Concentrations::scale</a></div><div class="ttdeci">void scale(double wt)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:125</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a84c49a592b084e92f182eac1e7574f45"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a84c49a592b084e92f182eac1e7574f45">Origen::Concentrations::sum</a></div><div class="ttdeci">double sum() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:141</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aed94fdd5ef2b0e69611bf24df8751121"></a>
@@ -1298,7 +1535,14 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a38a8925700a6350a19ee19c66fb28b91">Concentrations::normalize()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4cdba977856c3342812015db870ba18d">Concentrations::sum_hm()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#a98b9ccc7fff97c6a20589350e8a02c27">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">double</span> total;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">double</span> total_hm = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4cdba977856c3342812015db870ba18d">sum_hm</a>( min_z, &amp;total );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span>( total_hm &gt; 0 ) <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a38a8925700a6350a19ee19c66fb28b91">normalize</a>( total * target_hm / total_hm );</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a38a8925700a6350a19ee19c66fb28b91"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a38a8925700a6350a19ee19c66fb28b91">Origen::Concentrations::normalize</a></div><div class="ttdeci">void normalize(double target_total=1.0)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:159</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4cdba977856c3342812015db870ba18d"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4cdba977856c3342812015db870ba18d">Origen::Concentrations::sum_hm</a></div><div class="ttdeci">double sum_hm(int min_z=90, double *total_hm=nullptr) const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:142</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5a3b5a74d6fc001c1a06a91bfeaf68ad"></a>
@@ -1326,7 +1570,18 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Concentrations::set_vals()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a9f78d67a34395eea0b650fd5714a89f7">Concentrations::total_nuclides()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Require( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>.size() == <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a9f78d67a34395eea0b650fd5714a89f7">total_nuclides</a>() );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size() == 0 ) <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( 0.0 );</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a5a3b5a74d6fc001c1a06a91bfeaf68ad">accumulate</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>.size(), &amp;<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>[0], wt );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a45e7f26f3b785cf397a6ecd3e4640bec"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Origen::Concentrations::set_vals</a></div><div class="ttdeci">void set_vals(double)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:112</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a5a3b5a74d6fc001c1a06a91bfeaf68ad"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a5a3b5a74d6fc001c1a06a91bfeaf68ad">Origen::Concentrations::accumulate</a></div><div class="ttdeci">void accumulate(const Vec_Dbl &amp;vals, double wt=1.0)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:176</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a9f78d67a34395eea0b650fd5714a89f7"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a9f78d67a34395eea0b650fd5714a89f7">Origen::Concentrations::total_nuclides</a></div><div class="ttdeci">size_t total_nuclides() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:72</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5afbd3df982e2405aecae10c63c7c95c"></a>
@@ -1360,7 +1615,21 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    Require( n == <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size() );</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">// new data</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="../../d6/da8/mgfluxmapper_8cpp.html#a5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a> temp( <span class="keyword">new</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Vec_Dbl</a>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size() ) );</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size(); ++i )</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        temp-&gt;at( i ) = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;at( i ) + wt * <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>[i];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> = temp;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="group___cxx_typedefs_html_gab1ba8712f15aa615abd0cbc3cc58112f"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> DiscreteSpectrum.h:9</div></div>
+<div class="ttc" id="mgfluxmapper_8cpp_html_a5e18b474a63afeb9e75120a2fa1e3c37"><div class="ttname"><a href="../../d6/da8/mgfluxmapper_8cpp.html#a5e18b474a63afeb9e75120a2fa1e3c37">SP_Vec_Dbl</a></div><div class="ttdeci">std::shared_ptr&lt; Vec_Dbl &gt; SP_Vec_Dbl</div><div class="ttdef"><b>Definition:</b> mgfluxmapper.cpp:10</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a8837765f48e45c30739d15657a5c531a"></a>
@@ -1395,7 +1664,14 @@ Friends</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dc9/_core_2dc_2tests_2tst_concentrations_8cpp-example.html#a12">Core/dc/tests/tstConcentrations.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a63d6ca993ac2257043de57f0d5ce076d">Concentrations::accumulate_concs()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a371782e2ae025b5502a49a8653fda9bd">Concentrations::set_concs()</a>, and <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#ac6e0825f3a0ed085c3d0d2f8eb99be52">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    Require( ids.size() == <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>.size() );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">if</span>( ids.size() == 0 ) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">accumulate_concs</a>( ids.size(), &amp;ids[0], &amp;<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>[0], wt );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a8837765f48e45c30739d15657a5c531a"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">Origen::Concentrations::accumulate_concs</a></div><div class="ttdeci">bool accumulate_concs(const Vec_Int &amp;ids, const Vec_Dbl &amp;vals, double wt=1.0)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:226</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7ae6b6a99e0aa41f21cf7956efd37ee4"></a>
@@ -1461,7 +1737,40 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">Concentrations::accumulate_concs()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a646ee34c52f0713bedb1091058de680d">Concentrations::convert_units()</a>, <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">NuclideSet::ids()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ab5482de7cc18674272e221c764f0a7cc">Origen::isVolumetric()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a30d45658bf2bd71aa3f45267469d959e">Concentrations::nuclide_set()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Concentrations::units()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Concentrations::vals()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ad84d9ca6b809a6db3d4ea4c95d937b3b">Concentrations::vals_size()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ab323360dd6dfae056bbfeebf72a70375">Concentrations::volume()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">// create a new vals with units converted</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>( concs.vals_size() );</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    concs.convert_units( this-&gt;<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>(), &amp;<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a> );</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">// if volumetric we want result of this operation to be average</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">// and not sum.</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">bool</span> volumetric = <a class="code" href="../../d5/dc1/namespace_origen.html#ab5482de7cc18674272e221c764f0a7cc">isVolumetric</a>( this-&gt;<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">units</a>() );</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span>( volumetric )</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="comment">// scale up by volumes</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>.size(); ++i ) <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>[i] *= concs.volume();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size(); ++i ) ( *<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> )[i] *= <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">// increase this volume by weight</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> += concs.volume() * wt;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">bool</span> all_found = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">accumulate_concs</a>( concs.nuclide_set().ids(), <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>, wt );</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">// reconstruct average</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">if</span>( volumetric )</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size(); ++i ) ( *<a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> )[i] /= <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">return</span> all_found;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a8837765f48e45c30739d15657a5c531a"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">Origen::Concentrations::accumulate_concs</a></div><div class="ttdeci">bool accumulate_concs(const Vec_Int &amp;ids, const Vec_Dbl &amp;vals, double wt=1.0)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:226</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ab5709e367acc993c40084a72fd150daa"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ab5709e367acc993c40084a72fd150daa">Origen::Concentrations::units</a></div><div class="ttdeci">ConcentrationUnit units() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:357</div></div>
+<div class="ttc" id="namespace_origen_html_ab5482de7cc18674272e221c764f0a7cc"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ab5482de7cc18674272e221c764f0a7cc">Origen::isVolumetric</a></div><div class="ttdeci">bool isVolumetric(ConcentrationUnit unit)</div><div class="ttdef"><b>Definition:</b> ConcentrationUnit.cpp:329</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a371782e2ae025b5502a49a8653fda9bd"></a>
@@ -1498,7 +1807,19 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">Concentrations::accumulate_concs()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Concentrations::set_vals()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">Concentrations::set_volume()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#a76d8f2050e047dc359e8839db7888bf8">TEST()</a>, and <a class="el" href="../../d5/d12/burst_fission_8cpp.html#a6e51ce69cec51dca289db55d6e08bdb1">TEST_P()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( 0.0 );</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">double</span> v = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">bool</span> conserved = <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">accumulate_concs</a>( ids, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">vals</a>, wt );</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">set_volume</a>( v );</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> conserved;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a8837765f48e45c30739d15657a5c531a"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">Origen::Concentrations::accumulate_concs</a></div><div class="ttdeci">bool accumulate_concs(const Vec_Int &amp;ids, const Vec_Dbl &amp;vals, double wt=1.0)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:226</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a45e7f26f3b785cf397a6ecd3e4640bec"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Origen::Concentrations::set_vals</a></div><div class="ttdeci">void set_vals(double)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:112</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a0fefd52ed9e48f7b500a5489a5aa7ee5"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">Origen::Concentrations::set_volume</a></div><div class="ttdeci">void set_volume(double)</div><div class="ttdoc">set the scalar volume </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:55</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a33ef586db314dbe5cac7700013d13157"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157">Origen::Concentrations::vals</a></div><div class="ttdeci">const Vec_Dbl &amp; vals() const </div><div class="ttdoc">return a const reference to vals </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:57</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a539c439211be229eef1e03cd4f34a2ec"></a>
@@ -1564,7 +1885,15 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">Concentrations::accumulate_concs()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Concentrations::set_vals()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">Concentrations::set_volume()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">set_vals</a>( 0.0 );</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">set_volume</a>( 0.0 );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">accumulate_concs</a>( concs, wt );</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a8837765f48e45c30739d15657a5c531a"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a8837765f48e45c30739d15657a5c531a">Origen::Concentrations::accumulate_concs</a></div><div class="ttdeci">bool accumulate_concs(const Vec_Int &amp;ids, const Vec_Dbl &amp;vals, double wt=1.0)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:226</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a45e7f26f3b785cf397a6ecd3e4640bec"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Origen::Concentrations::set_vals</a></div><div class="ttdeci">void set_vals(double)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:112</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a0fefd52ed9e48f7b500a5489a5aa7ee5"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a0fefd52ed9e48f7b500a5489a5aa7ee5">Origen::Concentrations::set_volume</a></div><div class="ttdeci">void set_volume(double)</div><div class="ttdoc">set the scalar volume </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:55</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af88eec76a39af94b8568c67ec7fb8da8"></a>
@@ -1708,7 +2037,38 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">Concentrations::getSerializedSize()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#adae5ecad19d0e5d48b43703c708773fc">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;{</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    Require( stream != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::Concentrations::uid...&quot;</span> );</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a20453b44564e70ab97f56c71a9425415">Concentrations::uid</a> );</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::Concentrations::SerializedSize...&quot;</span> );</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() );</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    Remember( <span class="keywordtype">size_t</span> checkpoint = stream-&gt;getWriteHead() );</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::Concentrations::b_nuclide_set...&quot;</span> );</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> );</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::Concentrations::b_units...&quot;</span> );</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a> );</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::Concentrations::b_vals...&quot;</span> );</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> );</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;writing Origen::Concentrations::b_volume...&quot;</span> );</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Standard::write</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> );</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    Ensure( stream-&gt;getWriteHead() == checkpoint + <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() );</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a76830aeae6053d193eefb376628f9268"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">Origen::Concentrations::getSerializedSize</a></div><div class="ttdeci">virtual unsigned long getSerializedSize() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:448</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="namespace_origen_html_adc3bd8008cc072027f3900e34d9f3747"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write</a></div><div class="ttdeci">void write(bof::BOFObject &amp;obj, std::string name, const TagManager &amp;tag_manager)</div><div class="ttdoc">write a tag manager to a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:41</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a20453b44564e70ab97f56c71a9425415"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a20453b44564e70ab97f56c71a9425415">Origen::Concentrations::uid</a></div><div class="ttdeci">static const long uid</div><div class="ttdef"><b>Definition:</b> Concentrations.h:151</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad6fdab80f4d25ff470dc98ec59635e5c"></a>
@@ -1737,7 +2097,48 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#aa12a65f432e57893c566f31156312ba4">Concentrations::canonicalize_nuclide_set()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ae1a348ae48ba9542f2f6254d976e3f97">Concentrations::canonicalize_vals()</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">Concentrations::getSerializedSize()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/de8/tst_concentrations_8cpp.html#adae5ecad19d0e5d48b43703c708773fc">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;{</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    Require( stream != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::Concentrations::uid...&quot;</span> );</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordtype">int</span> return_code = <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a20453b44564e70ab97f56c71a9425415">Concentrations::uid</a> );</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">if</span>( return_code != 0 ) <span class="keywordflow">return</span> return_code;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::Concentrations::SerializedSize...&quot;</span> );</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> size;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, size );</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordtype">size_t</span> bytes = 0;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::Concentrations::b_nuclide_set...&quot;</span> );</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> = std::make_shared&lt;NuclideSet&gt;();</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> );</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa12a65f432e57893c566f31156312ba4">canonicalize_nuclide_set</a>();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::Concentrations::b_units...&quot;</span> );</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a> );</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::Concentrations::b_vals...&quot;</span> );</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> = std::make_shared&lt;Vec_Dbl&gt;();</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> );</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ae1a348ae48ba9542f2f6254d976e3f97">canonicalize_vals</a>();</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;reading Origen::Concentrations::b_volume...&quot;</span> );</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">read</a>( stream, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> );</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    Ensure( size == <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() &amp;&amp; size == bytes );</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">if</span>( size != <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">getSerializedSize</a>() || size != bytes ) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a76830aeae6053d193eefb376628f9268"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a76830aeae6053d193eefb376628f9268">Origen::Concentrations::getSerializedSize</a></div><div class="ttdeci">virtual unsigned long getSerializedSize() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:448</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_aa12a65f432e57893c566f31156312ba4"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#aa12a65f432e57893c566f31156312ba4">Origen::Concentrations::canonicalize_nuclide_set</a></div><div class="ttdeci">void canonicalize_nuclide_set()</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:67</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+<div class="ttc" id="namespace_origen_html_ad9dbf183ba4f551eeab50e180dce7f18"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read</a></div><div class="ttdeci">void read(const bof::BOFObject &amp;obj, TagManager &amp;tag_manager)</div><div class="ttdoc">read a tag manager from a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:6</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ae1a348ae48ba9542f2f6254d976e3f97"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ae1a348ae48ba9542f2f6254d976e3f97">Origen::Concentrations::canonicalize_vals</a></div><div class="ttdeci">void canonicalize_vals()</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:358</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a20453b44564e70ab97f56c71a9425415"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a20453b44564e70ab97f56c71a9425415">Origen::Concentrations::uid</a></div><div class="ttdeci">static const long uid</div><div class="ttdef"><b>Definition:</b> Concentrations.h:151</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a76830aeae6053d193eefb376628f9268"></a>
@@ -1764,7 +2165,17 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6fdab80f4d25ff470dc98ec59635e5c">Concentrations::deserialize()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ae4c23583af6639cd829b18fac3280e24">Concentrations::serialize()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;{</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    SerialStream a;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">return</span> Standard::bytes( &amp;a, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a> ) +</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;           Standard::bytes( &amp;a, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a> ) + Standard::bytes( &amp;a, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a> ) +</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;           Standard::bytes( &amp;a, <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> );</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2e6c1f5cfadd82be3032d41cc2a58723"></a>
@@ -1789,7 +2200,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a70d8ef9b570028bc545d14fc3baccd0e">Concentrations::Concentrations()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;{</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a70d8ef9b570028bc545d14fc3baccd0e">Concentrations</a>( *<span class="keyword">this</span> );</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a70d8ef9b570028bc545d14fc3baccd0e"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a70d8ef9b570028bc545d14fc3baccd0e">Origen::Concentrations::Concentrations</a></div><div class="ttdeci">Concentrations()</div><div class="ttdoc">default constructor (default MOLE units, 0.0 cm^3 volume) </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:22</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0f2e2afb8dfa413752e23f838b9ece00"></a>
@@ -1814,7 +2229,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a20453b44564e70ab97f56c71a9425415">Concentrations::uid</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a20453b44564e70ab97f56c71a9425415">Concentrations::uid</a>; }</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a20453b44564e70ab97f56c71a9425415"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a20453b44564e70ab97f56c71a9425415">Origen::Concentrations::uid</a></div><div class="ttdeci">static const long uid</div><div class="ttdef"><b>Definition:</b> Concentrations.h:151</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3f23c97b6c9f2a88e1121d1c633ccafa"></a>
@@ -1839,7 +2256,9 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#aa48c39f92bc04eded742f5310c74aafe">Concentrations::to_string()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_aa48c39f92bc04eded742f5310c74aafe"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#aa48c39f92bc04eded742f5310c74aafe">Origen::Concentrations::to_string</a></div><div class="ttdeci">std::string to_string() const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:378</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad6577c072727d5ade190d8b9cd6a72e6"></a>
@@ -1867,7 +2286,15 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Concentrations::b_units</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Concentrations::b_vals</a>, <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">Concentrations::match()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a138b23fb7d7aa421a175eaaa764eb06c">Concentrations::isEqual()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">match</a>( *<span class="keyword">this</span>, a ) &amp;&amp; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">b_units</a> == a.b_units &amp;&amp;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;           eq_sp_vec( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>, a.b_vals ) &amp;&amp; <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> == a.b_volume;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4f7af621f5bc11580263728832530282"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4f7af621f5bc11580263728832530282">Origen::Concentrations::match</a></div><div class="ttdeci">static bool match(const Concentrations &amp;a, const Concentrations &amp;b)</div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:81</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_adcdf5eecbc0320ef80be9ae8f53f9302"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#adcdf5eecbc0320ef80be9ae8f53f9302">Origen::Concentrations::b_units</a></div><div class="ttdeci">ConcentrationUnit b_units</div><div class="ttdef"><b>Definition:</b> Concentrations.h:161</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a138b23fb7d7aa421a175eaaa764eb06c"></a>
@@ -1893,7 +2320,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6577c072727d5ade190d8b9cd6a72e6">Concentrations::isEqualConcentrations()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6577c072727d5ade190d8b9cd6a72e6">isEqualConcentrations</a>( static_cast&lt;const Concentrations&amp;&gt;( a ) );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_ad6577c072727d5ade190d8b9cd6a72e6"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#ad6577c072727d5ade190d8b9cd6a72e6">Origen::Concentrations::isEqualConcentrations</a></div><div class="ttdeci">bool isEqualConcentrations(const Concentrations &amp;a) const </div><div class="ttdef"><b>Definition:</b> Concentrations.cpp:86</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae1a348ae48ba9542f2f6254d976e3f97"></a>
@@ -1920,7 +2351,18 @@ Friends</h2></td></tr>
 <p>References <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Concentrations::b_nuclide_set</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Concentrations::b_volume</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6fdab80f4d25ff470dc98ec59635e5c">Concentrations::deserialize()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Concentrations::set_vals()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;{</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    Require( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">b_vals</a>-&gt;size() == <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">b_nuclide_set</a>-&gt;ids_size() );</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="comment">//set uninitialized volume</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> == 0.0 )</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <a class="code" href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">b_volume</a> = 1.0;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a6c2f8d6da996fce66641a9c4df290e8b"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a6c2f8d6da996fce66641a9c4df290e8b">Origen::Concentrations::b_volume</a></div><div class="ttdeci">double b_volume</div><div class="ttdef"><b>Definition:</b> Concentrations.h:164</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a4ad7a19c1c978a5ccb4841bd6817acbf"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a4ad7a19c1c978a5ccb4841bd6817acbf">Origen::Concentrations::b_vals</a></div><div class="ttdeci">SP_Vec_Dbl b_vals</div><div class="ttdef"><b>Definition:</b> Concentrations.h:163</div></div>
+<div class="ttc" id="class_origen_1_1_concentrations_html_a855e5ef50b0358596356e911e655fe67"><div class="ttname"><a href="../../d7/d44/class_origen_1_1_concentrations.html#a855e5ef50b0358596356e911e655fe67">Origen::Concentrations::b_nuclide_set</a></div><div class="ttdeci">SP_NuclideSet b_nuclide_set</div><div class="ttdef"><b>Definition:</b> Concentrations.h:162</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa12a65f432e57893c566f31156312ba4"></a>
@@ -1945,7 +2387,10 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#ad6fdab80f4d25ff470dc98ec59635e5c">Concentrations::deserialize()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// null op</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>

@@ -238,7 +238,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">class</span>(origen_case) :: this</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">class</span>(origen_transitionmatrixp)::trx</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>::adj</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    this%instance_ptr = f_origen_case_initialize( trx%instance_ptr,adj)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9d42db4515268fed3cf7cf38c50b2e6d"></a>
@@ -288,7 +293,15 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::numnuc</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">class</span>(integerlist)::ids</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">class</span>(integerlist)::libs</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">class</span>(doublelist)::concent</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::concent_units</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">call </span>f_origen_case_set_initial_concentrations(this%instance_ptr, numnuc,ids%instance_ptr,libs%instance_ptr,concent%instance_ptr,concent_units)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab38fdf53f47d4970234d94e302087f20"></a>
@@ -320,7 +333,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">class</span>(doublelist)::concent</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::concent_units</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">call </span>f_origen_case_set_initial_concentrations_by_vector(this%instance_ptr, concent%instance_ptr,concent_units)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2acb4c83c8ec321e4b4e84f954c58f54"></a>
@@ -370,7 +388,15 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::numnuc</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">class</span>(integerlist)::ids</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">class</span>(integerlist)::libs</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(doublelist)::concent</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::concent_units</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">call </span>f_origen_case_set_feed_rates(this%instance_ptr, numnuc,ids%instance_ptr,libs%instance_ptr,concent%instance_ptr,concent_units)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a84a3b889ee2c7d4053638566999a0a64"></a>
@@ -402,7 +428,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">class</span>(doublelist)::concent</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::concent_units</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">call </span>f_origen_case_set_feed_rates_by_vector(this%instance_ptr, concent%instance_ptr,concent_units)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3a12617704603ea80fd9e509274f217a"></a>
@@ -458,7 +489,16 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">class</span>(doublelist)::concentrations</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::nuc_n</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">class</span>(integerlist)::nuc_id</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">class</span>(doublelist)::nuc_x</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">class</span>(integerlist)::nuc_lib</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::units</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">call </span>f_origen_case_load_new_concentrations(this%instance_ptr, concentrations%instance_ptr,nuc_n,nuc_id%instance_ptr,nuc_x%instance_ptr,nuc_lib%instance_ptr,units)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="affe604ccaa5905e96654a19fb876ecb9"></a>
@@ -484,7 +524,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">class</span>(doublelist)::time_list</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">call </span>f_origen_case_set_times(this%instance_ptr, time_list%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7a549689e192f40da16f5a9e657af83a"></a>
@@ -510,7 +554,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">class</span>(doublelist)::fluxes</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">call </span>f_origen_case_set_fluxes(this%instance_ptr, fluxes%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a319b448e7487bfe43d72fdf9a264a329"></a>
@@ -536,7 +584,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">class</span>(doublelist)::powers</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">call </span>f_origen_case_set_powers(this%instance_ptr, powers%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a21ff47697c0d0e06dff04366e4c47390"></a>
@@ -562,7 +614,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">class</span>(double2dlist)::concent_f</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">call </span>f_origen_case_get_concentrations(this%instance_ptr, concent_f%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9c3a600b0114935ef740362d8c812255"></a>
@@ -588,7 +644,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">class</span>(origen_transitionmatrixp) :: object_ptr</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_transition_matrix(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac6a82b1e9a9d85a73cedbac0c28837b6"></a>
@@ -604,7 +664,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    result2return=f_origen_case_get_nsteps(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="acce3686ae59fc49098cfd486fa5d893e"></a>
@@ -620,7 +684,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    result2return=f_origen_case_get_nlibs(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a1b325c72715b91da11c32882c252821b"></a>
@@ -636,7 +704,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    result2return=f_origen_case_get_nucs(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae7db59d4eb6d79fbee4b881a19a00ee6"></a>
@@ -652,7 +724,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    result2return=f_origen_case_get_adjoint(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad2e45c2f0b6fac8282af89635ef6f737"></a>
@@ -668,7 +744,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    result2return=f_origen_case_get_fixed_fission_energy(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3636539e4d6a3f39498fae42f15e56c0"></a>
@@ -684,7 +764,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    result2return=f_origen_case_get_conc_units(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a69a7d0ebce946b6ebb48e5de068e133a"></a>
@@ -710,7 +794,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">class</span>(integerlist) :: object_ptr</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_libr(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a1408d68a209d14219c032c3496a54876"></a>
@@ -736,7 +824,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">class</span>(integerlist) :: object_ptr</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_zaid(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2ca1a7a3e72520ca311578a8070d2f85"></a>
@@ -762,7 +854,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_times(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a04e0ae221a8fb3c0c7203009d8c8a037"></a>
@@ -788,7 +884,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_flux(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a15f7f98cd0adbc552aae41000d5c84fc"></a>
@@ -814,7 +914,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_power(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac23cb4d61a60aae0fac36ff137f91791"></a>
@@ -840,7 +944,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_burnup(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a31797cabebba043a70d03778a374b69c"></a>
@@ -866,7 +974,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_fluence(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab2bffeaf8e80d5b7b481fcae3950bac2"></a>
@@ -892,7 +1004,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_conc0(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4883a932b6000d672ae247289f18f3aa"></a>
@@ -918,7 +1034,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_reprocessing_rate(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="acee767a022648709a9fee5ef3e64af8f"></a>
@@ -944,7 +1064,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">class</span>(doublelist) :: object_ptr</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    object_ptr%instance_ptr = f_origen_case_get_feed_rate(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a538080aefeb68df1c95a6104791f0a90"></a>
@@ -960,7 +1084,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    result2return=f_origen_case_get_solver(this%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a8a14360870a6fe99b327057335802275"></a>
@@ -986,7 +1114,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::temp_nsteps</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">call </span>f_origen_case_set_nsteps(this%instance_ptr, temp_nsteps)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a394eb59da79d626e3dbc481bf875555d"></a>
@@ -1012,7 +1144,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::temp_nlibs</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">call </span>f_origen_case_set_nlibs(this%instance_ptr, temp_nlibs)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a29b89d1f248300cf5b3dee7dcac45546"></a>
@@ -1038,7 +1174,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::temp_nucs</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">call </span>f_origen_case_set_nucs(this%instance_ptr, temp_nucs)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aaaaec537379436a4a30b8dc21e048947"></a>
@@ -1064,7 +1204,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>::temp_fixed_fission_energy</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">call </span>f_origen_case_set_fixed_fission_energy(this%instance_ptr, temp_fixed_fission_energy)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7c12c0f90b929b735892509ca5b42fb1"></a>
@@ -1090,7 +1234,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">class</span>(integerlist)::temp_libr</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">call </span>f_origen_case_set_libr(this%instance_ptr, temp_libr%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a86864d1820a0b2ca942f5b265820a71e"></a>
@@ -1116,7 +1264,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">class</span>(doublelist)::temp_burnup</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">call </span>f_origen_case_set_burnup(this%instance_ptr, temp_burnup%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a6a70ab9d39eb9903178826af18a47600"></a>
@@ -1142,7 +1294,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordtype">class</span>(doublelist)::temp_fluence</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">call </span>f_origen_case_set_fluence(this%instance_ptr, temp_fluence%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af7e9934caf0a2d4f0cfd1a74bc51cc58"></a>
@@ -1168,7 +1324,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">class</span>(double2dlist)::temp_conc</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">call </span>f_origen_case_set_conc(this%instance_ptr, temp_conc%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ada9b7758994478be096020317c3b77d3"></a>
@@ -1194,7 +1354,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">class</span>(doublelist)::temp_conc0</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">call </span>f_origen_case_set_conc0(this%instance_ptr, temp_conc0%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aac1ef756e42460733038a754a1b94f1b"></a>
@@ -1220,7 +1384,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">class</span>(doublelist)::temp_reprocessing_rate</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keyword">call </span>f_origen_case_set_reprocessing_rate(this%instance_ptr, temp_reprocessing_rate%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a334c8ab8e4d562633626d3177747b8a2"></a>
@@ -1246,7 +1414,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordtype">class</span>(doublelist)::temp_feed_rate</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">call </span>f_origen_case_set_feed_rate(this%instance_ptr, temp_feed_rate%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aeb17cbf27d8c11907a1d83d316f5a4dc"></a>
@@ -1278,7 +1450,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::i</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keyword">call </span>f_origen_case_set_conc0_at(this%instance_ptr, i,<span class="keywordtype">value</span>)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2a58bc776b27f8fcf78095cbe7e30540"></a>
@@ -1310,7 +1487,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::i</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keyword">call </span>f_origen_case_set_reprocessing_rate_at(this%instance_ptr, i,<span class="keywordtype">value</span>)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae23c9aad7a65d370f5f399b3083f4476"></a>
@@ -1342,7 +1524,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::i</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keyword">call </span>f_origen_case_set_feed_rate_at(this%instance_ptr, i,<span class="keywordtype">value</span>)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad346963a27afe769c00135c75444172a"></a>
@@ -1374,7 +1561,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::i</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keyword">call </span>f_origen_case_set_burnup_at(this%instance_ptr, i,<span class="keywordtype">value</span>)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac28adc3c5505d9af582308fec9674ff8"></a>
@@ -1406,7 +1598,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::i</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">call </span>f_origen_case_set_fluence_at(this%instance_ptr, i,<span class="keywordtype">value</span>)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac794051f9ecf8ba891c8eab78d273701"></a>
@@ -1468,7 +1665,17 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::solver</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::nterm</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::nshrt</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::abstol</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::reltol</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::cram_order</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::internal_steps</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keyword">call </span>f_origen_case_get_solver_options(this%instance_ptr, solver,nterm,nshrt,abstol,reltol,cram_order,internal_steps)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a760f2540183b5dfe5e2d2e10021d1a7f"></a>
@@ -1530,7 +1737,17 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">class</span>(origen_case)::this</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::solver</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::nterm</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::nshrt</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::abstol</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::reltol</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::cram_order</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::internal_steps</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">call </span>f_origen_case_set_solver_options(this%instance_ptr, solver,nterm,nshrt,abstol,reltol,cram_order,internal_steps)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a70c34b5e51fcfa60ef3b05f742be00f8"></a>
@@ -1546,7 +1763,10 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">class</span>(origen_case) :: this</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    this%instance_ptr = f_origen_case_removed_constructor_initialize()</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a26970fbe2ab74a06948689794f904025"></a>
@@ -1562,7 +1782,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">class</span>(origen_case) :: this</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keyword">call </span>f_origen_case_destroy(this%instance_ptr)</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    this%instance_ptr = c_null_ptr</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

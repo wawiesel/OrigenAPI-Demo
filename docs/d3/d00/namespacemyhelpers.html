@@ -136,7 +136,22 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d3/d00/namespacemyhelpers.html#a53b8e120d2d48367c4fbb523c123b53a">super_daughter_check()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>),<span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">integer</span> :: i,last_reaction</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">!keep searching until we go past</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">do</span> i=1,this%get_itot()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span>( this%non0(i) &gt; n )<span class="keywordflow">then</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keywordflow">exit</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordflow">  end do</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span>( i&gt;this%get_itot() )<span class="keywordflow">then</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">write</span>(error_unit,*)<span class="stringliteral">&#39;error finding this daughter&#39;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  stop 7</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordflow">  end if</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a53b8e120d2d48367c4fbb523c123b53a"></a>
@@ -166,7 +181,101 @@ Functions/Subroutines</h2></td></tr>
 <p>References <a class="el" href="../../d3/d00/namespacemyhelpers.html#a174256d2cafece6a6dc5582fcc36f25e">search_daughter()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/d59/tst_x_s_8f90.html#a3a7918374c8a9cf125a9311d8c37984a">tstxs()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>),<span class="keywordtype">intent(inout)</span> :: this</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">integer</span> :: parent_id</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">integer</span> :: idaughter,adiff,z</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">logical</span> :: was_alpha_decay,was_fp_decay</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">real(C_DOUBLE)</span> :: myfsum,mydsum,mycsum,factor</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">real(C_DOUBLE)</span> :: afy,libc,libd,libf</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">integer</span> :: i,ilite</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">integer</span>,<span class="keywordtype">allocatable</span> :: nucl(:), mt(:),loc(:),typ(:)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">real(C_DOUBLE)</span>,<span class="keywordtype">allocatable</span> :: a(:),fiss(:),tocap(:)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">real</span>,<span class="keywordtype">allocatable</span> :: dis(:)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  ilite=this%get_ilite()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">call </span>this%get_mt(mt)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">call </span>this%get_nucl(nucl)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">call </span>this%get_loc(loc)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">call </span>this%get_typ_nuc(typ)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">call </span>this%get_a(a)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">call </span>this%get_fiss(fiss)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">call </span>this%get_tocap(tocap)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">call </span>this%get_dis(dis)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">!  write(ERROR_UNIT,&#39;(3a12,a12,2a6,a5)&#39;)&#39;id&#39;,&#39;type&#39;,&#39;mt&#39;,&#39;coeff&#39;,&#39;alpha&#39;,&#39;fpdec&#39;,&#39;mult&#39;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  myfsum=0</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  mydsum=0</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  mycsum=0</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">do</span> i=1,this%get_non()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span>( loc(i)==parent_id )<span class="keywordflow">then</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      idaughter=search_daughter(this,i)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="comment">!in order for the sums to be correct, we need to assign a factor</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="comment">!to reactions which produce more than one &quot;nuclide&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="comment">!for example, alpha-particles appear to be accumulated as id 40020 type=2 (actinide)</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="comment">!thus there needs to be a 0.5 factor to account for alpha + residual heavy nuclide</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      was_alpha_decay=.false.</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      was_fp_decay=.false.</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      factor=1</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">if</span>( mt(i)==18 )<span class="keywordflow">then</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        z=floor(nucl(idaughter)/10000.d0)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span>( z==1 .OR. z==2 )<span class="keywordflow">then</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          was_fp_decay=.true.</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          factor=0.5d0</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          myfsum=myfsum+a(i)*factor</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mt(i)==-1 )<span class="keywordflow">then</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        adiff=nucl(loc(i))-nucl(idaughter)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">!write(ERROR_UNIT,*)&#39;adiff=&#39;,adiff</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span>( nucl(idaughter)==20040 .OR. adiff==20040 )<span class="keywordflow">then</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          was_alpha_decay=.true.</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          factor=0.5d0</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          factor=1</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          mydsum=mydsum+factor*a(i)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">select case</span>(mt(i))</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keywordflow">case</span>(16,17,28,37,51,102,103,111); factor = 1; mycsum=mycsum+a(i)*factor</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keywordflow">case</span>(22,24,25,32,33,34,104,105,106,107,112); factor = 1.d0/2.d0; mycsum=mycsum+a(i)*factor</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="keywordflow">case</span>(29,108); factor = 1.d0/3.d0; mycsum=mycsum+a(i)*factor</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordflow">          case default</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <span class="keyword">write</span>(error_unit,*)<span class="stringliteral">&#39;error in reaction handling with unknown mt=&#39;</span>,mt(i)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          stop 6</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordflow">        end select</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">!      write(ERROR_UNIT,&#39;(3i12,es12.5,2g6.6,f5.2)&#39;)nucl(idaughter),typ(idaughter),mt(i),a(i),was_alpha_decay,was_fp_decay,factor</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordflow">  end do</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  libd=dis(parent_id)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  libc=tocap(parent_id)-fiss(parent_id-ilite)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  libf=fiss(parent_id-ilite)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  afy=myfsum/(0.5d0*fiss(parent_id-ilite))</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">!  write(ERROR_UNIT,*)&#39;********************&#39;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">!  write(ERROR_UNIT,*)&#39;LIBRARY CONSISTENCY&#39;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">!  write(ERROR_UNIT,*)&#39;********************&#39;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">!  write(ERROR_UNIT,&#39;(a10,3a12)&#39;)&#39;source|&#39;,&#39;disint.&#39;,&#39;capture&#39;,&#39;fission&#39;</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">!  write(ERROR_UNIT,&#39;(a10,3es12.5)&#39;)&#39;summed|&#39;,mydsum,mycsum,myfsum</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">!  write(ERROR_UNIT,&#39;(a10,3es12.5)&#39;)&#39;stored|&#39;,libd,libc,libf</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">!  write(ERROR_UNIT,*)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">!  write(ERROR_UNIT,&#39;(a,es12.5)&#39;)&#39;average fission yield: &#39;,afy</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">!  write(ERROR_UNIT,*)&#39;********************&#39;</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  expect_near(libd, mydsum, 1.0d-4)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  expect_near(libc, mycsum, 1.0d-5)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  expect_near(libf, myfsum, 1.0d-5)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  expect_near(2.d0, afy, 1.d-5)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

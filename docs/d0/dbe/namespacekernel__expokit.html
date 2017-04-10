@@ -163,7 +163,70 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0f/namespaceexpokit.html#a560261cf74240b8ccadb16175e768c15">expokit::dgexpv()</a>, <a class="el" href="../../d1/d0f/namespaceexpokit.html#ad654038a4c502878786db8bb55dda2a3">expokit::nmax</a>, and <a class="el" href="../../d1/d0f/namespaceexpokit.html#a044490168a69bf0f036f8be2b9ae466a">expokit::nzmax</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">use </span><a class="code" href="../../d1/d0f/namespaceexpokit.html">expokit</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: itot</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(in)</span> :: n0(itot)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(in)</span> :: t</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(in)</span> :: flux</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">type</span>(origenlibrarywrapper), <span class="keywordtype">intent(inout)</span> :: lib</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(out)</span> :: nx(itot)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">integer</span> n, nz</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">integer</span> ia(<a class="code" href="../../d1/d0f/namespaceexpokit.html#a044490168a69bf0f036f8be2b9ae466a">nzmax</a>), ja(<a class="code" href="../../d1/d0f/namespaceexpokit.html#a044490168a69bf0f036f8be2b9ae466a">nzmax</a>)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> a(<a class="code" href="../../d1/d0f/namespaceexpokit.html#a044490168a69bf0f036f8be2b9ae466a">nzmax</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">integer</span> m, mmax, lwsp, liwsp, lzwsp</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    parameter( mmax = 50 )</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    parameter( lwsp = 10*(<a class="code" href="../../d1/d0f/namespaceexpokit.html#ad654038a4c502878786db8bb55dda2a3">nmax</a>*(mmax+2)+5*(mmax+2)**2+7), liwsp = 10*(<a class="code" href="../../d1/d0f/namespaceexpokit.html#ad654038a4c502878786db8bb55dda2a3">nmax</a>), lzwsp = lwsp )</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">integer</span> iwsp(liwsp)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">complex</span>(c_double_complex)) zwsp(lzwsp)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> tol, anorm</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> v(<a class="code" href="../../d1/d0f/namespaceexpokit.html#ad654038a4c502878786db8bb55dda2a3">nmax</a>), w(<a class="code" href="../../d1/d0f/namespaceexpokit.html#ad654038a4c502878786db8bb55dda2a3">nmax</a>), wsp(lwsp)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">integer</span> i, itrace, iflag</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> zero, one</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    parameter( zero=0.0d0, one=1.0d0 )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    n = itot</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">call </span>lib%build_coo_matrix(flux, <a class="code" href="../../d1/d0f/namespaceexpokit.html#a044490168a69bf0f036f8be2b9ae466a">nzmax</a>, nz, ia, ja, a)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    log_debug <span class="stringliteral">&#39;(a6,i6,a6,i6,a6,es14.6)&#39;</span>, <span class="stringliteral">&quot;N = &quot;</span>, n, <span class="stringliteral">&quot;NZ = &quot;</span>, nz, <span class="stringliteral">&quot; t = &quot;</span>, t</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">do</span> i = 1,n</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       wsp(i) = zero</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordflow">    enddo</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">do</span> i = 1,nz</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;       wsp(ia(i)) = wsp(ia(i)) + abs( a(i) )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordflow">    enddo</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    anorm = wsp(1)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">do</span> i = 2,n</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;       <span class="keywordflow">if</span> ( anorm.lt.wsp(i) ) anorm =  wsp(i)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordflow">    enddo</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">write</span>(unit=*,fmt=<span class="stringliteral">&#39;(A,E9.2)&#39;</span>) <span class="stringliteral">&#39;||A||_inf= &#39;</span>,anorm</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    iwsp = 0</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    v(:) = zero</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    v(:itot) = n0(:)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    tol = 0.0d0</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    m = 30</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (m &gt; n) m = n-1</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    itrace = 1</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">call </span><a class="code" href="../../d1/d0f/namespaceexpokit.html#a560261cf74240b8ccadb16175e768c15">dgexpv</a>( n, nz, m, t , v, w, tol, anorm, ia, ja, a, wsp,lwsp, zwsp,lzwsp, iwsp,liwsp, itrace, iflag )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (iflag /= 0) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      soutline(1,*) <span class="stringliteral">&quot;DGEXPV went wrong&quot;</span>, iflag</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      stop</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    nx = w(:itot)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="ttc" id="namespaceexpokit_html_a044490168a69bf0f036f8be2b9ae466a"><div class="ttname"><a href="../../d1/d0f/namespaceexpokit.html#a044490168a69bf0f036f8be2b9ae466a">expokit::nzmax</a></div><div class="ttdeci">integer, parameter nzmax</div><div class="ttdef"><b>Definition:</b> expokit.f90:25</div></div>
+<div class="ttc" id="namespaceexpokit_html_a560261cf74240b8ccadb16175e768c15"><div class="ttname"><a href="../../d1/d0f/namespaceexpokit.html#a560261cf74240b8ccadb16175e768c15">expokit::dgexpv</a></div><div class="ttdeci">subroutine dgexpv(n, nz, m, t, v, w, tol, anorm, ia, ja, a,                                                                                               wsp, lwsp, zwsp, lzwsp, iwsp, liwsp, itrace, iflag)</div><div class="ttdef"><b>Definition:</b> expokit.f90:371</div></div>
+<div class="ttc" id="namespaceexpokit_html_ad654038a4c502878786db8bb55dda2a3"><div class="ttname"><a href="../../d1/d0f/namespaceexpokit.html#ad654038a4c502878786db8bb55dda2a3">expokit::nmax</a></div><div class="ttdeci">integer, parameter nmax</div><div class="ttdef"><b>Definition:</b> expokit.f90:25</div></div>
+<div class="ttc" id="namespaceexpokit_html"><div class="ttname"><a href="../../d1/d0f/namespaceexpokit.html">expokit</a></div><div class="ttdoc">Expokit (University of Queensland) solver module. </div><div class="ttdef"><b>Definition:</b> expokit.f90:21</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

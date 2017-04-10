@@ -269,7 +269,8 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d1/d9f/class_origen_1_1_transition.html#a50b5b39a125ac6bf6cf5ec123e8a25e5">Transition</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="adbc265a32d3b35bc0df58ec25f23bfea"></a>
@@ -296,7 +297,9 @@ Private Member Functions</h2></td></tr>
 <p>return the product nuclide </p>
 
 <p>Referenced by <a class="el" href="../../d1/d66/class_origen_1_1_transition___gen.html#a4793d018e8384947f69c22c95e78458c">Transition_Gen::set_product_impl()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a9c3092638fca0f417281a62c345e0d62">product_impl</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_transition_html_a9c3092638fca0f417281a62c345e0d62"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#a9c3092638fca0f417281a62c345e0d62">Origen::Transition::product_impl</a></div><div class="ttdeci">virtual WP_Nuclide product_impl() const  =0</div><div class="ttdef"><b>Definition:</b> Transition.cpp:51</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4de61bafa75cfab494e94b341943f98f"></a>
@@ -324,7 +327,12 @@ Private Member Functions</h2></td></tr>
 <p>set the product nuclide </p>
 
 <p>Referenced by <a class="el" href="../../d1/d66/class_origen_1_1_transition___gen.html#aa6e6f5feedf0adf437a59d95ab459826">Transition_Gen::Transition_Gen()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a0073a5e1bdea8722bc6a8d4de92758d2">set_product_impl</a>( <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#adbc265a32d3b35bc0df58ec25f23bfea">product</a> );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_transition_html_adbc265a32d3b35bc0df58ec25f23bfea"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#adbc265a32d3b35bc0df58ec25f23bfea">Origen::Transition::product</a></div><div class="ttdeci">WP_Nuclide product() const </div><div class="ttdoc">return the product nuclide </div><div class="ttdef"><b>Definition:</b> Transition.cpp:17</div></div>
+<div class="ttc" id="class_origen_1_1_transition_html_a0073a5e1bdea8722bc6a8d4de92758d2"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#a0073a5e1bdea8722bc6a8d4de92758d2">Origen::Transition::set_product_impl</a></div><div class="ttdeci">virtual void set_product_impl(WP_Nuclide product)=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a92eabac049b3d0c03166043af84efea5"></a>
@@ -352,7 +360,9 @@ Private Member Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a67">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d7/d07/class_origen_1_1_nuclide___gen.html#ad2f23265b4f9738ab8881d22b1fcc9cf">Nuclide_Gen::append_gain_impl()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a5dc35b9b26cae9cde38501d1ab91e9d1">LibraryBuilder::search_reaction_transitions()</a>, <a class="el" href="../../d1/d66/class_origen_1_1_transition___gen.html#ac55f5174f7be3ecc6ed170a6000d4091">Transition_Gen::set_channel_impl()</a>, and <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#a0eed3995cdc59da9e381fd2dfa617e06">TEST_F()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#afc2760a21da9dd95e39f1f21ba0fdde6">channel_impl</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_transition_html_afc2760a21da9dd95e39f1f21ba0fdde6"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#afc2760a21da9dd95e39f1f21ba0fdde6">Origen::Transition::channel_impl</a></div><div class="ttdeci">virtual WP_Channel channel_impl() const  =0</div><div class="ttdef"><b>Definition:</b> Transition.cpp:52</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab8fab006353ad153deb8219bdc5031d3"></a>
@@ -378,7 +388,12 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set the channel </p>
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#aff7f6a536c7e758788031b804cc94b1b">set_channel_impl</a>( <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a92eabac049b3d0c03166043af84efea5">channel</a> );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_transition_html_aff7f6a536c7e758788031b804cc94b1b"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#aff7f6a536c7e758788031b804cc94b1b">Origen::Transition::set_channel_impl</a></div><div class="ttdeci">virtual void set_channel_impl(WP_Channel channel)=0</div></div>
+<div class="ttc" id="class_origen_1_1_transition_html_a92eabac049b3d0c03166043af84efea5"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#a92eabac049b3d0c03166043af84efea5">Origen::Transition::channel</a></div><div class="ttdeci">WP_Channel channel() const </div><div class="ttdoc">return the parent channel </div><div class="ttdef"><b>Definition:</b> Transition.cpp:19</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae52070e67656d6989956c3b8ca99d43c"></a>
@@ -405,7 +420,9 @@ Private Member Functions</h2></td></tr>
 <p>return the yield, i.e. number of product nuclides per transition </p>
 
 <p>Referenced by <a class="el" href="../../d1/d66/class_origen_1_1_transition___gen.html#a1577f9250244eb85918388ffe9940b8a">Transition_Gen::set_yield_impl()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#af3c9e1444cf7528623bbc1d61dfa58a5">yield_impl</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_transition_html_af3c9e1444cf7528623bbc1d61dfa58a5"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#af3c9e1444cf7528623bbc1d61dfa58a5">Origen::Transition::yield_impl</a></div><div class="ttdeci">virtual double yield_impl() const  =0</div><div class="ttdef"><b>Definition:</b> Transition.cpp:53</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a25ccb33b648db2ee2abd2cde28d1081a"></a>
@@ -431,7 +448,10 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set the yield </p>
-
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{ <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a26aba6642499b8f99ecccbe66a4b18f1">set_yield_impl</a>( <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#ae52070e67656d6989956c3b8ca99d43c">yield</a> ); }</div>
+<div class="ttc" id="class_origen_1_1_transition_html_ae52070e67656d6989956c3b8ca99d43c"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#ae52070e67656d6989956c3b8ca99d43c">Origen::Transition::yield</a></div><div class="ttdeci">double yield() const </div><div class="ttdoc">return the yield, i.e. number of product nuclides per transition </div><div class="ttdef"><b>Definition:</b> Transition.cpp:21</div></div>
+<div class="ttc" id="class_origen_1_1_transition_html_a26aba6642499b8f99ecccbe66a4b18f1"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#a26aba6642499b8f99ecccbe66a4b18f1">Origen::Transition::set_yield_impl</a></div><div class="ttdeci">virtual void set_yield_impl(const double &amp;yield)=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a927d0d0011691a746c1b3eb873f544de"></a>
@@ -456,7 +476,11 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>whether yield has been initialized for this transition </p>
-
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#afbbc8399450a0243e5b4421cff59b067">has_initialized_yield_impl</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_transition_html_afbbc8399450a0243e5b4421cff59b067"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#afbbc8399450a0243e5b4421cff59b067">Origen::Transition::has_initialized_yield_impl</a></div><div class="ttdeci">virtual bool has_initialized_yield_impl() const  =0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0bf9d664407ba0699774d52ede017bfc"></a>
@@ -482,7 +506,11 @@ Private Member Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d9f/_core_2ts_2tests_2tst_transition_system__gen_8cpp-example.html#a69">Core/ts/tests/tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">LibraryBuilder::create_decay_transitions()</a>, <a class="el" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">LibraryBuilder::create_reaction_transitions()</a>, and <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#a0eed3995cdc59da9e381fd2dfa617e06">TEST_F()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a92eabac049b3d0c03166043af84efea5">channel</a>()-&gt;<a class="code" href="../../d6/d47/class_origen_1_1_channel.html#a0bf9d664407ba0699774d52ede017bfc">coeff</a>() * <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#ae52070e67656d6989956c3b8ca99d43c">yield</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_transition_html_ae52070e67656d6989956c3b8ca99d43c"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#ae52070e67656d6989956c3b8ca99d43c">Origen::Transition::yield</a></div><div class="ttdeci">double yield() const </div><div class="ttdoc">return the yield, i.e. number of product nuclides per transition </div><div class="ttdef"><b>Definition:</b> Transition.cpp:21</div></div>
+<div class="ttc" id="class_origen_1_1_channel_html_a0bf9d664407ba0699774d52ede017bfc"><div class="ttname"><a href="../../d6/d47/class_origen_1_1_channel.html#a0bf9d664407ba0699774d52ede017bfc">Origen::Channel::coeff</a></div><div class="ttdeci">double coeff() const </div><div class="ttdef"><b>Definition:</b> Channel.cpp:41</div></div>
+<div class="ttc" id="class_origen_1_1_transition_html_a92eabac049b3d0c03166043af84efea5"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#a92eabac049b3d0c03166043af84efea5">Origen::Transition::channel</a></div><div class="ttdeci">WP_Channel channel() const </div><div class="ttdoc">return the parent channel </div><div class="ttdef"><b>Definition:</b> Transition.cpp:19</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5c57ac03cc882258334f756988917503"></a>
@@ -505,7 +533,11 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a92eabac049b3d0c03166043af84efea5">channel</a>()-&gt;<a class="code" href="../../d6/d47/class_origen_1_1_channel.html#a5c57ac03cc882258334f756988917503">rate</a>() * <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#ae52070e67656d6989956c3b8ca99d43c">yield</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_channel_html_a5c57ac03cc882258334f756988917503"><div class="ttname"><a href="../../d6/d47/class_origen_1_1_channel.html#a5c57ac03cc882258334f756988917503">Origen::Channel::rate</a></div><div class="ttdeci">double rate() const </div><div class="ttdef"><b>Definition:</b> Channel.cpp:42</div></div>
+<div class="ttc" id="class_origen_1_1_transition_html_ae52070e67656d6989956c3b8ca99d43c"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#ae52070e67656d6989956c3b8ca99d43c">Origen::Transition::yield</a></div><div class="ttdeci">double yield() const </div><div class="ttdoc">return the yield, i.e. number of product nuclides per transition </div><div class="ttdef"><b>Definition:</b> Transition.cpp:21</div></div>
+<div class="ttc" id="class_origen_1_1_transition_html_a92eabac049b3d0c03166043af84efea5"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#a92eabac049b3d0c03166043af84efea5">Origen::Transition::channel</a></div><div class="ttdeci">WP_Channel channel() const </div><div class="ttdoc">return the parent channel </div><div class="ttdef"><b>Definition:</b> Transition.cpp:19</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad43a2e9a2f03ac4b753e5a4a0a9bac88"></a>
@@ -530,7 +562,9 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>whether this transition is a byproduct </p>
-
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a50b5b39a125ac6bf6cf5ec123e8a25e5">is_byproduct_impl</a>(); }</div>
+<div class="ttc" id="class_origen_1_1_transition_html_a50b5b39a125ac6bf6cf5ec123e8a25e5"><div class="ttname"><a href="../../d1/d9f/class_origen_1_1_transition.html#a50b5b39a125ac6bf6cf5ec123e8a25e5">Origen::Transition::is_byproduct_impl</a></div><div class="ttdeci">virtual bool is_byproduct_impl() const </div><div class="ttdef"><b>Definition:</b> Transition.cpp:48</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a37627d5d5bba7f4a8690c71c2ab3cb07"></a>

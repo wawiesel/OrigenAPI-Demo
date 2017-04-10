@@ -203,7 +203,34 @@ Private Attributes</h2></td></tr>
 <p>Initializer. </p>
 
 <p>References <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a781464b14500d5289a3cde31e073346c">GridView_State::b_concs</a>, <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">GridView_State::b_r</a>, and <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">GridView_State::b_rextents</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                              : <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">b_obj</a>( <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">obj</a> )</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    Require( <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">obj</a> != <span class="keyword">nullptr</span> );</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// reserve max</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>.reserve( 1 );</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a>.reserve( 1 );</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// just concentrations for now</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a781464b14500d5289a3cde31e073346c">b_concs</a> = <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">obj</a>-&gt;<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a781464b14500d5289a3cde31e073346c">b_concs</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a781464b14500d5289a3cde31e073346c">b_concs</a> != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">size_t</span> nc = <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a781464b14500d5289a3cde31e073346c">b_concs</a>-&gt;vals_size();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span>( nc &gt; 0 )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>.resize( I_CONC + 1 );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>[I_CONC] = <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a781464b14500d5289a3cde31e073346c">b_concs</a>-&gt;vals_array();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a>.push_back( nc );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_a781464b14500d5289a3cde31e073346c"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a781464b14500d5289a3cde31e073346c">Origen::GridView_State::b_concs</a></div><div class="ttdeci">SP_Concentrations b_concs</div><div class="ttdef"><b>Definition:</b> GridView_State.h:32</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_a2de2e94170a38b6cfc9086083d2269ce"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">Origen::GridView_State::b_r</a></div><div class="ttdeci">GD_t::Vec_Rptr b_r</div><div class="ttdef"><b>Definition:</b> GridView_State.h:33</div></div>
+<div class="ttc" id="class_origen_1_1_state_html_a781464b14500d5289a3cde31e073346c"><div class="ttname"><a href="../../d8/d01/class_origen_1_1_state.html#a781464b14500d5289a3cde31e073346c">Origen::State::b_concs</a></div><div class="ttdeci">SP_Concentrations b_concs</div><div class="ttdef"><b>Definition:</b> State.h:129</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_aa3f98555ef52101f1fcc8365045a8422"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">Origen::GridView_State::b_obj</a></div><div class="ttdeci">SCP_State b_obj</div><div class="ttdef"><b>Definition:</b> GridView_State.h:31</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_a2479454a0153f3d8d4005432c4201139"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">Origen::GridView_State::obj</a></div><div class="ttdeci">const State &amp; obj() const </div><div class="ttdoc">Return the State being viewed. </div><div class="ttdef"><b>Definition:</b> GridView_State.cpp:34</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_ada66ed1d7d03a0f24883db1bc8bf39ee"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">Origen::GridView_State::b_rextents</a></div><div class="ttdeci">GD_t::Vec_I b_rextents</div><div class="ttdef"><b>Definition:</b> GridView_State.h:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -227,7 +254,12 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">GridView_State::b_obj</a>, and <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a7cc5746d4f5a7c5306fe22e9094ab3b5">State::match()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#a7bcb01cf2b0c839382e98cc1fc11d1ce">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d01/class_origen_1_1_state.html#a7cc5746d4f5a7c5306fe22e9094ab3b5">State::match</a>( *<a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">b_obj</a>, other );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_state_html_a7cc5746d4f5a7c5306fe22e9094ab3b5"><div class="ttname"><a href="../../d8/d01/class_origen_1_1_state.html#a7cc5746d4f5a7c5306fe22e9094ab3b5">Origen::State::match</a></div><div class="ttdeci">static bool match(const State &amp;a, const State &amp;b)</div><div class="ttdef"><b>Definition:</b> State.cpp:89</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_aa3f98555ef52101f1fcc8365045a8422"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">Origen::GridView_State::b_obj</a></div><div class="ttdeci">SCP_State b_obj</div><div class="ttdef"><b>Definition:</b> GridView_State.h:31</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a51ae44cf4aa58d2d6f6e854c603f1c95"></a>
@@ -247,7 +279,9 @@ Private Attributes</h2></td></tr>
 <p>Return the response vector for this <a class="el" href="../../d8/d01/class_origen_1_1_state.html" title="Container for state data. ">State</a>. </p>
 
 <p>References <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">GridView_State::b_r</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">b_r</a>; }</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_a2de2e94170a38b6cfc9086083d2269ce"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2de2e94170a38b6cfc9086083d2269ce">Origen::GridView_State::b_r</a></div><div class="ttdeci">GD_t::Vec_Rptr b_r</div><div class="ttdef"><b>Definition:</b> GridView_State.h:33</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab399c18d2ca7d901e65e4288d13c544d"></a>
@@ -267,7 +301,11 @@ Private Attributes</h2></td></tr>
 <p>Return the response vector extents for this <a class="el" href="../../d8/d01/class_origen_1_1_state.html" title="Container for state data. ">State</a>. </p>
 
 <p>References <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">GridView_State::b_rextents</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_ada66ed1d7d03a0f24883db1bc8bf39ee"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">Origen::GridView_State::b_rextents</a></div><div class="ttdeci">GD_t::Vec_I b_rextents</div><div class="ttdef"><b>Definition:</b> GridView_State.h:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a1f7c506053f34eb272d16a467125e982"></a>
@@ -289,7 +327,11 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">GridView_State::b_rextents</a>.</p>
 
 <p>Referenced by <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#a7bcb01cf2b0c839382e98cc1fc11d1ce">TEST()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">b_rextents</a>.size();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_ada66ed1d7d03a0f24883db1bc8bf39ee"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#ada66ed1d7d03a0f24883db1bc8bf39ee">Origen::GridView_State::b_rextents</a></div><div class="ttdeci">GD_t::Vec_I b_rextents</div><div class="ttdef"><b>Definition:</b> GridView_State.h:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2479454a0153f3d8d4005432c4201139"></a>
@@ -311,7 +353,9 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">GridView_State::b_obj</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a0295ac70b7b2744d6788b800c44911d1">GridView_State::permute()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{ <span class="keywordflow">return</span> *<a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">b_obj</a>; }</div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_aa3f98555ef52101f1fcc8365045a8422"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">Origen::GridView_State::b_obj</a></div><div class="ttdeci">SCP_State b_obj</div><div class="ttdef"><b>Definition:</b> GridView_State.h:31</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0295ac70b7b2744d6788b800c44911d1"></a>
@@ -337,7 +381,27 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>References <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">GridView_State::b_obj</a>, <a class="el" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">GridView_State::obj()</a>, and <a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html#a45e7f26f3b785cf397a6ecd3e4640bec">Concentrations::set_vals()</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// note: cannot do a copy constructor because StateInfo pointer/smart</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// pointer</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// copy creates A REALLY DIFFICULT TO DEBUG segfault</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">obj</a>( <span class="keyword">new</span> State() );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    GridView_State::GD_t::SP_Vec_R vals = z[I_CONC];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// copy the concentrations data in the base object and then</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// change the values and create a new object</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Concentrations concs( <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">b_obj</a>-&gt;concs() );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    concs.set_vals( *vals );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">obj</a>-&gt;<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a1239112067f6a4de1faa122f676995b4">set_concs</a>( concs );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">obj</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="ttc" id="namespace_origen_html_a7f27362cc5de3176a488bb9e3a2ff7ab"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">Origen::SP_State</a></div><div class="ttdeci">State::SP SP_State</div><div class="ttdef"><b>Definition:</b> State.h:137</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_aa3f98555ef52101f1fcc8365045a8422"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#aa3f98555ef52101f1fcc8365045a8422">Origen::GridView_State::b_obj</a></div><div class="ttdeci">SCP_State b_obj</div><div class="ttdef"><b>Definition:</b> GridView_State.h:31</div></div>
+<div class="ttc" id="class_origen_1_1_grid_view___state_html_a2479454a0153f3d8d4005432c4201139"><div class="ttname"><a href="../../d8/d4f/class_origen_1_1_grid_view___state.html#a2479454a0153f3d8d4005432c4201139">Origen::GridView_State::obj</a></div><div class="ttdeci">const State &amp; obj() const </div><div class="ttdoc">Return the State being viewed. </div><div class="ttdef"><b>Definition:</b> GridView_State.cpp:34</div></div>
+<div class="ttc" id="class_origen_1_1_state_html_a1239112067f6a4de1faa122f676995b4"><div class="ttname"><a href="../../d8/d01/class_origen_1_1_state.html#a1239112067f6a4de1faa122f676995b4">Origen::State::set_concs</a></div><div class="ttdeci">void set_concs(const Concentrations &amp;)</div><div class="ttdoc">set the concs (copy operation) </div><div class="ttdef"><b>Definition:</b> State.cpp:34</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

@@ -160,7 +160,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper)::this</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">class</span>(scaledata_energyunionizer)::unionizer</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::union_flux_integrals</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">call </span>f_scaledata_mgfluxmapper_setunionizer(this%instance_ptr, unionizer%instance_ptr,union_flux_integrals%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3fec5cd4f40bfec1fe6177ffc402afd9"></a>
@@ -192,7 +197,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper)::this</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::old_flux</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::new_flux</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">call </span>f_scaledata_mgfluxmapper_mapflux(this%instance_ptr, old_flux%instance_ptr,new_flux%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aaa843c5084ef119344f466ea10709781"></a>
@@ -230,7 +240,15 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper)::this</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">character(len=*)</span> :: string2populate</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::old_flux</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::new_flux</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">integer(C_INT)</span> :: lengthofstring2populate</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    lengthofstring2populate = len(string2populate)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">call </span>f_scaledata_mgfluxmapper_printflux(this%instance_ptr, string2populate, lengthofstring2populate, old_flux%instance_ptr,new_flux%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="acb0cb2ee1c148a9eac6024b31f571a9d"></a>
@@ -256,7 +274,13 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper)::this</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">character(len=*)</span> :: string2populate</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">integer(C_INT)</span> :: lengthofstring2populate</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    lengthofstring2populate = len(string2populate)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">call </span>f_scaledata_mgfluxmapper_tostring(this%instance_ptr, string2populate, lengthofstring2populate)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a95c6dd80854dfb03335a38a4882dbb8d"></a>
@@ -288,7 +312,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper)::this</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl) :: object_ptr</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::union_grid</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    object_ptr%instance_ptr = f_scaledata_mgfluxmapper_fluxintegrals_1(  union_grid%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5c08633f4e773b53be1203c4e44507a1"></a>
@@ -320,7 +349,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper)::this</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl) :: object_ptr</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::union_grid</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    object_ptr%instance_ptr = f_scaledata_mgfluxmapper_fluxintegrals_e(  union_grid%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3206b467d055cdd30ab410833f85f688"></a>
@@ -352,7 +386,12 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper)::this</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl) :: object_ptr</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::union_grid</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    object_ptr%instance_ptr = f_scaledata_mgfluxmapper_fluxintegrals_1overe(  union_grid%instance_ptr)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa6ee46454da2ef8f2df44fd4da7e5acf"></a>
@@ -368,7 +407,10 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper) :: this</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    this%instance_ptr = f_scaledata_mgfluxmapper_initialize()</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac5e5b2cb540e212b25ab1cb66365e1af"></a>
@@ -384,7 +426,11 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">class</span>(scaledata_mgfluxmapper) :: this</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">call </span>f_scaledata_mgfluxmapper_destroy(this%instance_ptr)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this%instance_ptr = c_null_ptr</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

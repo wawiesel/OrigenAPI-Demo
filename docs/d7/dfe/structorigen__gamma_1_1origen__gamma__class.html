@@ -248,7 +248,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Number of steps. </p>
-
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">integer</span> :: nsteps</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aca217f2b2b238f4a56fb199d8d20edb6"></a>
@@ -262,7 +263,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated ORIGEN library </p>
-
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>),<span class="keywordtype">pointer</span> :: lib=&gt;null()</div>
+<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3eafcd69e7a8e0edd814c5ccb9b0c73a"></a>
@@ -276,7 +279,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated GAMMA library </p>
-
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">type</span>(gamma_library_class),<span class="keywordtype">pointer</span> :: glib=&gt;null()</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af311dc5babf8a3310328efbe70e44021"></a>
@@ -290,7 +294,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>options for gamma calculations </p>
-
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">type</span>(origen_gamma_options) :: opts</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac079ca6994ccd5a5d6233a0f0ba9d8ac"></a>
@@ -304,7 +309,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>non-summed n/s spectrum [ngroups * 0:nsteps * itot] </p>
-
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: gamma_yields(:,:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4c2234d69dd6dc5dbdb55cdbd12ff35b"></a>
@@ -318,7 +324,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>spectrum [n/s] [ngroups * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum_n(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa82262daa236f28e5d6d4092be2fb9d1"></a>
@@ -332,7 +339,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>spectrum [MeV/s] [ngroups * 0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum_e(:,:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a457b7b713998ddc95af3ae144909112a"></a>
@@ -346,7 +354,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>total counts including outside bin structure [n/s] [0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: total_n(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac394c43a3e1119fa76c855e657528af6"></a>
@@ -360,7 +369,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>total energy including outside bin structure [MeV/s] [0:nsteps] </p>
-
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: total_e(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5d89c3ef5252ca5c1e5e10af2887fa86"></a>
@@ -374,7 +384,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>total energy for nuclides without spectra [MeV/s] [0:nsteps] but not including brem </p>
-
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: missing_e_nobrem(:)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this type was generated from the following file:<ul>
