@@ -9,10 +9,13 @@ through `<https://rsicc.ornl.gov>`_ in the latest version of
 `SCALE <https://scale.ornl.gov>`_, the *documentation of the API* 
 is open.
 
+Also, C++ and Fortran code written using the API is also open. That means
+we can post example code here and share it easily.
+
 Here is a link to the ORIGEN API
 `Doxygen documentation <https://wawiesel.github.io/OrigenAPI-Demo/>`_.
 
-Check out the Examples!
+Check out the Examples page!
 
 Linking To The ORIGEN API
 -------------------------
