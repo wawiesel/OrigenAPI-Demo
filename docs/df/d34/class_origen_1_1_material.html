@@ -629,7 +629,7 @@ Protected Attributes</h2></td></tr>
 </ul>
 <p>There is only a single way to 'set' something, set_x(const T&amp; v).</p>
 <p>Using set always implies a copy. To manipulate data directly, which is not recommended, use the getters that return smart pointers, e.g. trx_over(), <a class="el" href="../../df/d34/class_origen_1_1_material.html#a9f5e682d981dbd194752cd80e6c89bc4" title="get amount (cm^2/barn) at a time point ">amount_at()</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dfd/_core_2dc_2tests_2tst_material_8cpp-example.html#_a1">Core/dc/tests/tstMaterial.cpp</a>, <a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#_a22">Core/io/tests/tstMaterialBuffer.cpp</a>, <a class="el" href="../../d0/d07/_core_2xf_2tests_2tst_multi_zone_depleter_8cpp-example.html#_a6">Core/xf/tests/tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../d8/d71/_manager_2mzd_2tests_2tst_parallel_depletion_8cpp-example.html#_a9">Manager/mzd/tests/tstParallelDepletion.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d60/tst_material_8cpp-example.html#_a1">tstMaterial.cpp</a>, <a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#_a22">tstMaterialBuffer.cpp</a>, <a class="el" href="../../d1/db2/tst_multi_zone_depleter_8cpp-example.html#_a6">tstMultiZoneDepleter.cpp</a>, and <a class="el" href="../../db/db9/tst_parallel_depletion_8cpp-example.html#_a9">tstParallelDepletion.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="ac71c961a7c5aba87ce8eefcaac0ed6fa"></a>
 <div class="memitem">
@@ -842,7 +842,7 @@ Protected Attributes</h2></td></tr>
 
 <p>allocate and set delta-time </p>
 <p>add new time step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a50">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a50">tstMaterialBuffer.cpp</a>.</dd>
 </dl><div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../df/d34/class_origen_1_1_material.html#af7089e8907f50596db4e0edb1cb7b341">allocate_step</a>();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../df/d34/class_origen_1_1_material.html#a6c2dc0949d48f97450540c85fcaa741f">set_dt</a>( <a class="code" href="../../df/d34/class_origen_1_1_material.html#a352e31e1b76369b0582bcbc8d678d20e">dt</a> );</div>
@@ -1003,7 +1003,7 @@ Protected Attributes</h2></td></tr>
 
 <p>get library type </p>
 <p>get library type </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a32">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a32">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#abcc70a9543ab61ba14aea9c5e1b2b7b7">b_library_type</a>; }</div>
@@ -1026,7 +1026,7 @@ Protected Attributes</h2></td></tr>
 
 <p>get library </p>
 <p>get library </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a49">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a49">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a066cc9e6c13b09b0b4af7ce00800bdcd">Origen::tabulateMaterialFission()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad1f7805721dc35df742741b512f6dd24">Origen::tabulateMaterialIsotopics()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acc1b57d68cf042c6a16bc8029e88ff5e">Origen::tabulateMaterialLoss()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#a2c4d507fbd5d4965b0273c0903d43e29">b_library</a>; }</div>
@@ -1049,7 +1049,7 @@ Protected Attributes</h2></td></tr>
 
 <p>total number of nuclides </p>
 <p>get total number of nuclides </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a23">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a23">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#a2c4d507fbd5d4965b0273c0903d43e29">b_library</a>-&gt;total_nuclides(); }</div>
@@ -1327,7 +1327,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get initial mass (g) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a33">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a33">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#a479ae0a3952b70d0177314e0ebf0dd82">b_mass</a>; }</div>
@@ -1349,7 +1349,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get initial hm mass (gIHM) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a34">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a34">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;{</div>
@@ -1461,7 +1461,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get cold volume (cm^3), volume at room temperature </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a36">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a36">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#a6b8436987bd8fc08f4c56cb5aa916405">b_cold_volume</a>; }</div>
@@ -1592,7 +1592,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get the number of times stored (including on disk) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a37">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a37">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#abb16f9c83b8b355b33acb7a0b6e66fe5">b_point_time_s</a>.size(); }</div>
@@ -1614,7 +1614,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get the number of steps </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a25">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a25">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#a48d58e8a1baca4c1351488c9856320f6">ntimes</a>() - 1; }</div>
@@ -1714,7 +1714,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get a time (s) value (0 to nsteps) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a26">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a26">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;{</div>
@@ -1788,7 +1788,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get amount (cm^2/barn) at a time point </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a24">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a24">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;{</div>
@@ -2357,7 +2357,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set number density (#/barn-cm) at begin of step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a48">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a48">tstMaterialBuffer.cpp</a>.</dd>
 </dl><div class="fragment"><div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;{</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <a class="code" href="../../df/d34/class_origen_1_1_material.html#a42ec052dda00bd04fc043000d3bda5aa">set_numden_at</a>( numden, <a class="code" href="../../df/d34/class_origen_1_1_material.html#a2236c35357dc0865f9a33ef14ae33010">point_bos</a>(), volume );</div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;}</div>
@@ -3190,7 +3190,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get a transition matrix over a step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a29">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a29">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a066cc9e6c13b09b0b4af7ce00800bdcd">Origen::tabulateMaterialFission()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acc1b57d68cf042c6a16bc8029e88ff5e">Origen::tabulateMaterialLoss()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;{</div>
@@ -3245,7 +3245,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set transition matrix of current step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a52">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a52">tstMaterialBuffer.cpp</a>.</dd>
 </dl><div class="fragment"><div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;{</div>
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    Require( <a class="code" href="../../df/d34/class_origen_1_1_material.html#a60f8f1b2a0d0cb9fb2564bd14572455a">nsteps</a>() &gt;= 1 );</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    <a class="code" href="../../df/d34/class_origen_1_1_material.html#a50a30c70546c24a6250f1c163d3daf0d">b_step_trx</a>.back() = trx;</div>
@@ -3270,7 +3270,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get power (W) over a step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a28">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a28">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;{</div>
@@ -3395,7 +3395,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get flux (#/cm^2-s) over a step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a27">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a27">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a01522ea5cf369bcb5179fa8627f5b1fc">h5_write_step()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;{</div>
@@ -3450,7 +3450,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set flux (#/cm^2-s) over current step </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a51">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a51">tstMaterialBuffer.cpp</a>.</dd>
 </dl><div class="fragment"><div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;{</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    Require( <a class="code" href="../../df/d34/class_origen_1_1_material.html#a60f8f1b2a0d0cb9fb2564bd14572455a">nsteps</a>() &gt; 0 );</div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;</div>
@@ -4052,7 +4052,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a31">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a31">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>.</p>
 <div class="fragment"><div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#a1cd0a9eeaa0f11d3027de09e40504434">b_id</a>; }</div>
@@ -4133,7 +4133,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d61/_core_2io_2tests_2tst_material_buffer_8cpp-example.html#a35">Core/io/tests/tstMaterialBuffer.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de7/tst_material_buffer_8cpp-example.html#a35">tstMaterialBuffer.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/d51/tst_material_buffer_8cpp.html#a66927a99e8d41f67daebed751786534a">h5_write_material()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a58ddfdf93f035495635a68feec3b7c18">Origen::saveLibraries()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#af9065a0a9565609b76569429c697e084">Origen::saveStateSet()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a066cc9e6c13b09b0b4af7ce00800bdcd">Origen::tabulateMaterialFission()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#ad1f7805721dc35df742741b512f6dd24">Origen::tabulateMaterialIsotopics()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acc1b57d68cf042c6a16bc8029e88ff5e">Origen::tabulateMaterialLoss()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a4cc4f52038e4936da306db0363963f66">Origen::tabulateMaterialTransitionRates()</a>.</p>
 <div class="fragment"><div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../df/d34/class_origen_1_1_material.html#a71982ed9753119c9b6d25ebb9682adc0">b_name</a>; }</div>
@@ -5435,7 +5435,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d1c/_manager_2libld_2tests_2tst_transition_system_adapter__ampx_n_8cpp-example.html#a32">Manager/libld/tests/tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/d29/tst_transition_system_adapter__ampx_n_8cpp-example.html#a32">tstTransitionSystemAdapter_AmpxN.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a2edbeb0ab90d2711f2ed92838dd6f770">TEST_F()</a>.</p>
 
