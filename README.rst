@@ -27,7 +27,7 @@ If you know the installation directory of SCALE, then it should
 be a fairly simple process.  See the "Linking" section of the
 `Doxygen documentation <https://wawiesel.github.io/OrigenAPI-Demo/>`_.
 
-Also, take a look at the `_CyBORG <https://github.com/sskutnik/cyborg`_ 
+Also, take a look at the `CyBORG <https://github.com/sskutnik/cyborg>`_ 
 code as an example of linking against the ORIGEN API.
 
 Coming Soon
