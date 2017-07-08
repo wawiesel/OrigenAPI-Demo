@@ -6,7 +6,7 @@ var searchData=
   ['map',['map',['../d8/d54/class_origen_1_1_energy_resource.html#a9641d5b5e6602d772858966b9188921c',1,'Origen::EnergyResource']]],
   ['mass',['mass',['../da/d8f/struct_origen_1_1_nuclide_resource_1_1_properties.html#a244bf42c46054cf1113be44d55f2156d',1,'Origen::NuclideResource::Properties']]],
   ['masses',['masses',['../db/d2d/class_origen_1_1_decay_data.html#a1a1083188a6a73c54e408d7fe9535a52',1,'Origen::DecayData']]],
-  ['mat',['mat',['../de/d89/class_material_tester.html#a6d3ae0cec798e10c00ec6000f064ec55',1,'MaterialTester::mat()'],['../df/dae/structfpytype.html#ab564110b409d7df5f4a94cdaafd2d7c3',1,'fpytype::mat()']]],
+  ['mat',['mat',['../df/dae/structfpytype.html#ab564110b409d7df5f4a94cdaafd2d7c3',1,'fpytype']]],
   ['mat1',['mat1',['../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b',1,'TabulateMaterial']]],
   ['mat2',['mat2',['../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05',1,'TabulateMaterial']]],
   ['mat4',['mat4',['../dd/d44/class_multi_zone_depleter_tester.html#a38db98f507bad6058f5964b741f4742d',1,'MultiZoneDepleterTester']]],

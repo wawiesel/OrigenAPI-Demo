@@ -176,50 +176,7 @@ Protected Attributes</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d99/tst_c_r_a_m_8cpp-example.html#a4">tstCRAM.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a>, <a class="el" href="../../dd/df4/classtst_c_r_a_m.html#abe35f2304f68209f297cfe6796939218">kd</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#affc00b67fd5e67c205d0f87f8daf5360">Origen::loadLibrary()</a>, <a class="el" href="../../dd/df4/classtst_c_r_a_m.html#a06ea0c2ecf8a3d13e6a89d43d8d93b00">loc</a>, <a class="el" href="../../dd/df4/classtst_c_r_a_m.html#a63d390aad036f8c02618c0ce30386b95">non</a>, <a class="el" href="../../dd/df4/classtst_c_r_a_m.html#adf5e8b0356b153d74ed228e6c4be8e9e">non0</a>, <a class="el" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>, and <a class="el" href="../../dd/df4/classtst_c_r_a_m.html#a6212e234dfdb3d438990886832f4d7fe">ZAI</a>.</p>
-<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="comment">// Must load rev01 library because that is what reference is based on</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            ScaleUtils::IO::DB opts;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            lib = <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>(</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <a class="code" href="../../d5/dc1/namespace_origen.html#affc00b67fd5e67c205d0f87f8daf5360">Origen::loadLibrary</a>( <span class="stringliteral">&quot;pwr.rev01.orglib&quot;</span>, opts ) );</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            opts.throwErrorStack();</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a> = lib-&gt;newsp_transition_matrix_at( 0 );</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a> = <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_itot();</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a63d390aad036f8c02618c0ce30386b95">non</a> = <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_non();</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="comment">// Convert the Lists to vectors</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#adf5e8b0356b153d74ed228e6c4be8e9e">non0</a>.resize( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a> );</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#abe35f2304f68209f297cfe6796939218">kd</a>.resize( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a> );</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a06ea0c2ecf8a3d13e6a89d43d8d93b00">loc</a>.resize( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a63d390aad036f8c02618c0ce30386b95">non</a> );</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a6212e234dfdb3d438990886832f4d7fe">ZAI</a>.resize( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">itot</a> );</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_non0_() )-&gt;begin(),</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_non0_() )-&gt;end(),</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;              <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#adf5e8b0356b153d74ed228e6c4be8e9e">non0</a>.begin() );</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_kd_() )-&gt;begin(),</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_kd_() )-&gt;end(),</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;              <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#abe35f2304f68209f297cfe6796939218">kd</a>.begin() );</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_loc() )-&gt;begin(),</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_loc() )-&gt;end(),</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;              <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a06ea0c2ecf8a3d13e6a89d43d8d93b00">loc</a>.begin() );</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        copy( ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_nucl() )-&gt;begin(),</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;              ( <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">trx</a>-&gt;get_nucl() )-&gt;end(),</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;              <a class="code" href="../../dd/df4/classtst_c_r_a_m.html#a6212e234dfdb3d438990886832f4d7fe">ZAI</a>.begin() );</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
-<div class="ttc" id="classtst_c_r_a_m_html_a322cb4160214f683fdc15b1c00741f08"><div class="ttname"><a href="../../dd/df4/classtst_c_r_a_m.html#a322cb4160214f683fdc15b1c00741f08">tstCRAM::trx</a></div><div class="ttdeci">Origen::SP_TransitionMatrixP trx</div><div class="ttdef"><b>Definition:</b> tstCRAM.cpp:327</div></div>
-<div class="ttc" id="classtst_c_r_a_m_html_a63d390aad036f8c02618c0ce30386b95"><div class="ttname"><a href="../../dd/df4/classtst_c_r_a_m.html#a63d390aad036f8c02618c0ce30386b95">tstCRAM::non</a></div><div class="ttdeci">int non</div><div class="ttdef"><b>Definition:</b> tstCRAM.cpp:328</div></div>
-<div class="ttc" id="classtst_c_r_a_m_html_adf5e8b0356b153d74ed228e6c4be8e9e"><div class="ttname"><a href="../../dd/df4/classtst_c_r_a_m.html#adf5e8b0356b153d74ed228e6c4be8e9e">tstCRAM::non0</a></div><div class="ttdeci">Vec_Int non0</div><div class="ttdef"><b>Definition:</b> tstCRAM.cpp:329</div></div>
-<div class="ttc" id="classtst_c_r_a_m_html_a79c44febd4937c9ecbd755d1b6e6b208"><div class="ttname"><a href="../../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208">tstCRAM::itot</a></div><div class="ttdeci">int itot</div><div class="ttdef"><b>Definition:</b> tstCRAM.cpp:328</div></div>
-<div class="ttc" id="classtst_c_r_a_m_html_a06ea0c2ecf8a3d13e6a89d43d8d93b00"><div class="ttname"><a href="../../dd/df4/classtst_c_r_a_m.html#a06ea0c2ecf8a3d13e6a89d43d8d93b00">tstCRAM::loc</a></div><div class="ttdeci">Vec_Int loc</div><div class="ttdef"><b>Definition:</b> tstCRAM.cpp:329</div></div>
-<div class="ttc" id="namespace_origen_html_affc00b67fd5e67c205d0f87f8daf5360"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#affc00b67fd5e67c205d0f87f8daf5360">Origen::loadLibrary</a></div><div class="ttdeci">Library * loadLibrary(const Str path, ScaleUtils::IO::DB opts)</div><div class="ttdef"><b>Definition:</b> LibraryIO.h:18</div></div>
-<div class="ttc" id="classtst_c_r_a_m_html_abe35f2304f68209f297cfe6796939218"><div class="ttname"><a href="../../dd/df4/classtst_c_r_a_m.html#abe35f2304f68209f297cfe6796939218">tstCRAM::kd</a></div><div class="ttdeci">Vec_Int kd</div><div class="ttdef"><b>Definition:</b> tstCRAM.cpp:329</div></div>
-<div class="ttc" id="namespace_origen_html_aa3ba24879f383fe079561477ccb875cb"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a></div><div class="ttdeci">Library::SP SP_Library</div><div class="ttdef"><b>Definition:</b> Library.h:165</div></div>
-<div class="ttc" id="classtst_c_r_a_m_html_a6212e234dfdb3d438990886832f4d7fe"><div class="ttname"><a href="../../dd/df4/classtst_c_r_a_m.html#a6212e234dfdb3d438990886832f4d7fe">tstCRAM::ZAI</a></div><div class="ttdeci">Vec_Int ZAI</div><div class="ttdef"><b>Definition:</b> tstCRAM.cpp:329</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa0dae0593dcc16247410aa2f3016da45"></a>
@@ -243,8 +200,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d99/tst_c_r_a_m_8cpp-example.html#a8">tstCRAM.cpp</a>.</dd>
-</dl><div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{}</div>
-</div><!-- fragment -->
+</dl>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

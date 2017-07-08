@@ -152,11 +152,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    result2return=f_origen_stateset_has_states(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a477ff5c2d2b3813245844186bb7b5c78"></a>
@@ -172,11 +168,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>:: result2return</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    result2return=f_origen_stateset_states_size(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7d3ccf3e33edae5e018ef3bb0d13010a"></a>
@@ -202,12 +194,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::index</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    result2return=f_origen_stateset_has_states_at(this%instance_ptr, index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2de867249385a582f5658983483b0a80"></a>
@@ -233,11 +220,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::size</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">call </span>f_origen_stateset_resize_states(this%instance_ptr, size)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2b7ac116be24c4e04150b37b32a9de9a"></a>
@@ -269,12 +252,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">class</span>(origen_state)::state</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::index</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">call </span>f_origen_stateset_getptr_states_at(this%instance_ptr, state%instance_ptr,index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1e57aed6f514e66502699381723bb753"></a>
@@ -306,12 +284,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">class</span>(origen_state)::state</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::index</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">call </span>f_origen_stateset_manageptr_states_at(this%instance_ptr, state%instance_ptr,index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4d1081d0e48a8e7905aa0f56534cebb0"></a>
@@ -343,12 +316,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">class</span>(origen_state)::state</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::index</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">call </span>f_origen_stateset_get_states_at(this%instance_ptr, state%instance_ptr,index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a15ce32e43d5c194518c7d2ad29f1ee64"></a>
@@ -380,12 +348,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">class</span>(origen_state)::state</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::index</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">call </span>f_origen_stateset_set_states_at(this%instance_ptr, state%instance_ptr,index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af5b9c335854a9cd1ab644703ac63bbb2"></a>
@@ -411,11 +374,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">class</span>(origen_state)::state</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">call </span>f_origen_stateset_add_states(this%instance_ptr, state%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a867923d1ee800d6934eafb9e3d8038c1"></a>
@@ -441,11 +400,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::index</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">call </span>f_origen_stateset_delete_states_at(this%instance_ptr, index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a5e510fed27b5435dbff02efef7382e49"></a>
@@ -471,12 +426,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::this</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">class</span>(origen_stateset)::obj</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    result2return=f_origen_stateset_equals(this%instance_ptr, obj%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aac20601e6dcae78b49ae470ddfdaa61b"></a>
@@ -492,10 +442,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">class</span>(origen_stateset) :: this</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    this%instance_ptr = f_origen_stateset_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a77453c82ede3a1c208e293e39a37379c"></a>
@@ -511,11 +458,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">class</span>(origen_stateset) :: this</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">call </span>f_origen_stateset_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

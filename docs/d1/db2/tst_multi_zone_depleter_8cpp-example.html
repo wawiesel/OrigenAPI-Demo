@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">//    jDebugLine(&quot;Host: &#39;&quot; &lt;&lt; world.host()</span></div>
 <div class="line">    <span class="comment">//            &lt;&lt; &quot;&#39;, rank: &quot; &lt;&lt; world.rank()</span></div>
 <div class="line">    <span class="comment">//            &lt;&lt; &quot;, size: &quot; &lt;&lt; world.size());</span></div>
-<div class="line">    <span class="keywordtype">double</span> <a name="a3"></a><a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">x</a> = <a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank();</div>
+<div class="line">    <span class="keywordtype">double</span> x = <a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank();</div>
 <div class="line">    std::vector&lt;double&gt; vecx;</div>
 <div class="line">    <a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.allgather( x, vecx );</div>
 <div class="line"></div>
@@ -152,13 +152,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    ofs.close();</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> <a name="a4"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a7c7146d13255e82cad81ee1eaf4bb139">get_name_id</a>( <span class="keywordtype">int</span> start, std::string&amp; name, <span class="keywordtype">int</span>&amp; <span class="keywordtype">id</span> )</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a3"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a7c7146d13255e82cad81ee1eaf4bb139">get_name_id</a>( <span class="keywordtype">int</span> start, std::string&amp; name, <span class="keywordtype">int</span>&amp; <span class="keywordtype">id</span> )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">id</span> = 1000 * ( <a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank() + 1 ) + start;</div>
 <div class="line">    name = nprintf( <span class="stringliteral">&quot;mix%05d&quot;</span>, <span class="keywordtype">id</span> );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a name="a5"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a4d70fef2ced78f8aa435d320ecc5105d">setup_material1</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib )</div>
+<div class="line"><a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a name="a4"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a4d70fef2ced78f8aa435d320ecc5105d">setup_material1</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Don&#39;t be alarmed, this is all just approximate.</span></div>
 <div class="line">    <span class="keywordtype">double</span> cm2_barn = 1e-24;              <span class="comment">// cm^2/barn</span></div>
@@ -176,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordtype">int</span> id0;</div>
 <div class="line">    <a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a7c7146d13255e82cad81ee1eaf4bb139">get_name_id</a>( 5, name0, id0 );</div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> mat(</div>
-<div class="line">        <span class="keyword">new</span> <a name="_a6"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Origen::Material</a>( <span class="stringliteral">&quot;GENERAL&quot;</span>, lib, name0, id0, vol ) );</div>
+<div class="line">        <span class="keyword">new</span> <a name="_a5"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Origen::Material</a>( <span class="stringliteral">&quot;GENERAL&quot;</span>, lib, name0, id0, vol ) );</div>
 <div class="line">    jDebugTaggedLine( <span class="stringliteral">&quot;material library assoc finished...&quot;</span> );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// BOS numden</span></div>
@@ -191,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">return</span> mat;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a name="a7"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a4e8c0bae91f1b1593cdcda3837d5a530">setup_material2</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib )</div>
+<div class="line"><a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a name="a6"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a4e8c0bae91f1b1593cdcda3837d5a530">setup_material2</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Don&#39;t be alarmed, this is all just approximate.</span></div>
 <div class="line">    <span class="keywordtype">double</span> cm2_barn = 1e-24;              <span class="comment">// cm^2/barn</span></div>
@@ -225,7 +225,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">return</span> mat;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> <a name="a8"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#ac2b8fd9b31136621b72c17fc097f87fb">build_simple_data1</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib,</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a7"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#ac2b8fd9b31136621b72c17fc097f87fb">build_simple_data1</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib,</div>
 <div class="line">                         DataContainer&amp; dc,</div>
 <div class="line">                         <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> matmap )</div>
 <div class="line">{</div>
@@ -240,7 +240,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    jDebugTaggedLine( <span class="stringliteral">&quot;leaving build_simple_data1...&quot;</span> );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> <a name="a9"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#ad4686771ca65e0f5d79f339ed0ed77c7">build_simple_data2</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib,</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a8"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#ad4686771ca65e0f5d79f339ed0ed77c7">build_simple_data2</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> lib,</div>
 <div class="line">                         DataContainer&amp; dc,</div>
 <div class="line">                         <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> matmap )</div>
 <div class="line">{</div>
@@ -252,44 +252,44 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    jDebugTaggedLine( <span class="stringliteral">&quot;leaving build_simple_data2...&quot;</span> );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span><a name="_a10"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html">MultiZoneDepleterTester</a> : <span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><span class="keyword">class </span><a name="_a9"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html">MultiZoneDepleterTester</a> : <span class="keyword">public</span> ::testing::Test</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
 <div class="line">    <span class="comment">// data</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7a406c531668ac8d63ce2e70eb1b38f4">Origen::SP_TransitionMatrixP</a> <a name="a11"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a322cb4160214f683fdc15b1c00741f08">trx</a>;</div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> <a name="a12"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1de101ee1b94c92f126b9853d78048d1">lib</a>;</div>
-<div class="line">    DataContainer <a name="a13"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a93554aee92b1a0701d801d34ef056df2">dc</a>;</div>
-<div class="line">    <a name="_a14"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html">Origen::MultiZoneDepleter</a> <a name="a15"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a09c2b0559a21bf8116fdbe0bfa73191c">mzd</a>;</div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> <a name="a16"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#affaa92aa09a60a482d4b5c15a6f3362d">matmap</a>;</div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a name="a17"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a38db98f507bad6058f5964b741f4742d">mat4</a>, <a name="a18"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#adf57dcbc29cf90896491d394a72fa4df">mat5</a>;</div>
-<div class="line">    Standard::SP_Communicator <a name="a19"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a163ac4deb4c550c67473588a419a4eea">comm</a>;</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a7a406c531668ac8d63ce2e70eb1b38f4">Origen::SP_TransitionMatrixP</a> <a name="a10"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a322cb4160214f683fdc15b1c00741f08">trx</a>;</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> <a name="a11"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1de101ee1b94c92f126b9853d78048d1">lib</a>;</div>
+<div class="line">    DataContainer <a name="a12"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a93554aee92b1a0701d801d34ef056df2">dc</a>;</div>
+<div class="line">    <a name="_a13"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html">Origen::MultiZoneDepleter</a> <a name="a14"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a09c2b0559a21bf8116fdbe0bfa73191c">mzd</a>;</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> <a name="a15"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#affaa92aa09a60a482d4b5c15a6f3362d">matmap</a>;</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> <a name="a16"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a38db98f507bad6058f5964b741f4742d">mat4</a>, <a name="a17"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#adf57dcbc29cf90896491d394a72fa4df">mat5</a>;</div>
+<div class="line">    Standard::SP_Communicator <a name="a18"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a163ac4deb4c550c67473588a419a4eea">comm</a>;</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">bool</span> <a name="a20"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a0a6e1dfb02851473efd687b6771f87fa">created</a>;</div>
+<div class="line">    <span class="keywordtype">bool</span> <a name="a19"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a0a6e1dfb02851473efd687b6771f87fa">created</a>;</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a21"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">SetUp</a>()</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a20"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">SetUp</a>()</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// other stuff</span></div>
-<div class="line">        matmap = <a name="a22"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a>( <span class="keyword">new</span> <a name="_a23"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a>() );</div>
+<div class="line">        matmap = <a name="a21"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a>( <span class="keyword">new</span> <a name="_a22"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a>() );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// get a library</span></div>
 <div class="line">        lib = std::make_shared&lt;Origen::Library&gt;();</div>
-<div class="line">        created = <a name="a24"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( *lib );</div>
+<div class="line">        created = <a name="a23"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#aeeab0b5173c8f0f318815516c66f96d1">Origen::FakeFactory::Library_scale_pwr</a>( *lib );</div>
 <div class="line">        trx = lib-&gt;newsp_transition_matrix_at( 0 );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// set solver</span></div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">Origen::SP_Solver</a> fake( <span class="keyword">new</span> <a name="_a25"></a><a class="code" href="../../d4/df6/class_origen_1_1_solver___fake.html">Origen::Solver_Fake</a>() );</div>
-<div class="line">        mzd.<a name="a26"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a900c4ac4ba5ae27bd02bacf4dee0a1b1">set_solver</a>( fake );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">Origen::SP_Solver</a> fake( <span class="keyword">new</span> <a name="_a24"></a><a class="code" href="../../d4/df6/class_origen_1_1_solver___fake.html">Origen::Solver_Fake</a>() );</div>
+<div class="line">        mzd.<a name="a25"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a900c4ac4ba5ae27bd02bacf4dee0a1b1">set_solver</a>( fake );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// create a dc and matmap</span></div>
 <div class="line">        <a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#ad4686771ca65e0f5d79f339ed0ed77c7">build_simple_data2</a>( lib, dc, matmap );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// comm = world.split(0); //make a comm with ALL processes</span></div>
 <div class="line">        <span class="comment">// mzd.set_comm(comm);</span></div>
-<div class="line">        mzd.<a name="a27"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa25aacf5e2fc3a37c73e4d8d1049260d">set_comm</a>( &amp;<a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a> );</div>
+<div class="line">        mzd.<a name="a26"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa25aacf5e2fc3a37c73e4d8d1049260d">set_comm</a>( &amp;<a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a> );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// associate materials</span></div>
 <div class="line">        ASSERT_FALSE( matmap == <span class="keyword">nullptr</span> );</div>
-<div class="line">        mzd.<a name="a28"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
+<div class="line">        mzd.<a name="a27"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// make sure we have mass</span></div>
 <div class="line">        ASSERT_LT( 0.0, matmap-&gt;initial_mass() );</div>
@@ -314,26 +314,26 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        jDebugTaggedLine( <span class="stringliteral">&quot;finished SetUp&quot;</span> );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a29"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a324819835f8847e4bcee0b884d8c7860">WrapUp</a>()</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a28"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a324819835f8847e4bcee0b884d8c7860">WrapUp</a>()</div>
 <div class="line">    {</div>
 <div class="line">        dc.deepDelete();</div>
 <div class="line">        jDebugTaggedLine( <span class="stringliteral">&quot;finished WrapUp&quot;</span> );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a30"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#af52823a74894aa413e99d2fa48c90566">print</a>( std::ostream&amp; os = std::cout )</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a29"></a><a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#af52823a74894aa413e99d2fa48c90566">print</a>( std::ostream&amp; os = std::cout )</div>
 <div class="line">    {</div>
 <div class="line">        os &lt;&lt; matmap-&gt;to_string() &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line"><a name="a31"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a162c00bf050b2304e6da3fbdeac48d8c">TEST_F</a>( <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html">MultiZoneDepleterTester</a>, DepleteByFlux )</div>
+<div class="line"><a name="a30"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a162c00bf050b2304e6da3fbdeac48d8c">TEST_F</a>( <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html">MultiZoneDepleterTester</a>, DepleteByFlux )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span>( !created ) <span class="keywordflow">return</span>;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set data for this step</span></div>
-<div class="line">    mzd.<a name="a32"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a55669259c86b01befd75b8d81502170d">add_step</a>( 86400.0 * 10 );</div>
-<div class="line">    mzd.<a name="a33"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">update</a>( dc );</div>
-<div class="line">    mzd.<a name="a34"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a>( 10, 0.1 ) );</div>
+<div class="line">    mzd.<a name="a31"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a55669259c86b01befd75b8d81502170d">add_step</a>( 86400.0 * 10 );</div>
+<div class="line">    mzd.<a name="a32"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">update</a>( dc );</div>
+<div class="line">    mzd.<a name="a33"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a>( 10, 0.1 ) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set data on materials</span></div>
 <div class="line">    mat4-&gt;set_transition_matrix( trx );</div>
@@ -342,12 +342,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    mat5-&gt;set_flux( 2.0e14 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// execute</span></div>
-<div class="line">    ASSERT_TRUE( mzd.<a name="a35"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>() );</div>
+<div class="line">    ASSERT_TRUE( mzd.<a name="a34"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// extract material map</span></div>
-<div class="line">    matmap = mzd.<a name="a36"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae254f0b94b02e0cb7af7b7c33e7c2d43">sp_materials</a>();</div>
+<div class="line">    matmap = mzd.<a name="a35"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae254f0b94b02e0cb7af7b7c33e7c2d43">sp_materials</a>();</div>
 <div class="line">    ASSERT_FALSE( matmap == <span class="keyword">nullptr</span> );</div>
-<div class="line">    <a name="a37"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a98704691bff479196601fa28ca402e2a">print</a>();</div>
+<div class="line">    <a name="a36"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a98704691bff479196601fa28ca402e2a">print</a>();</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a162c00bf050b2304e6da3fbdeac48d8c">TEST_F</a>( <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html">MultiZoneDepleterTester</a>, DepleteByPower )</div>
@@ -382,7 +382,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        dc.addBool( <span class="stringliteral">&quot;depleteByPower&quot;</span>, <span class="keyword">true</span> );</div>
 <div class="line">        dc.addDouble( <span class="stringliteral">&quot;systemPower&quot;</span>, systemPower );  <span class="comment">// Watts</span></div>
 <div class="line">        mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">update</a>( dc );</div>
-<div class="line">        mzd.<a name="a38"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab77ecce57efa7528667bc94682b90741">set_constraint_its_max</a>( 2 );</div>
+<div class="line">        mzd.<a name="a37"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab77ecce57efa7528667bc94682b90741">set_constraint_its_max</a>( 2 );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// check instantaneous powers at bos (trel=0.0)</span></div>
 <div class="line">        EXPECT_NEAR( 5.29545e-12, 0.3 * mat4-&gt;power_factor_bos(), 1e-17 );</div>
@@ -390,12 +390,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">        <span class="comment">// Solve the problem.</span></div>
 <div class="line">        mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
-<div class="line">        <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> scaling = mzd.<a name="a39"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa5e2c22b83e512d1d6b4ac244af3e4a5">scaling_factors</a>();</div>
+<div class="line">        <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> scaling = mzd.<a name="a38"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa5e2c22b83e512d1d6b4ac244af3e4a5">scaling_factors</a>();</div>
 <div class="line">        ASSERT_EQ( nstep + 1, scaling.size() );</div>
 <div class="line">        EXPECT_NEAR( 4.16098e13, scaling[0], 1e8 );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Get status.</span></div>
-<div class="line">        <span class="keyword">const</span> ScaleUtils::IO::DB&amp; stat = mzd.<a name="a40"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a585cd31bba044ea2fead91ae062010c9">status</a>();</div>
+<div class="line">        <span class="keyword">const</span> ScaleUtils::IO::DB&amp; stat = mzd.<a name="a39"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a585cd31bba044ea2fead91ae062010c9">status</a>();</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Output status to a file.</span></div>
 <div class="line">        ofs &lt;&lt; mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a585cd31bba044ea2fead91ae062010c9">status</a>() &lt;&lt; std::endl;</div>
@@ -428,49 +428,49 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a98704691bff479196601fa28ca402e2a">print</a>( ofs );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">typedef</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> <a name="a41"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#acab3665fb78512e85e262dd4cb165055">Vec_Dbl</a>;</div>
+<div class="line"><span class="keyword">typedef</span> <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gab1ba8712f15aa615abd0cbc3cc58112f">Origen::Vec_Dbl</a> <a name="a40"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#acab3665fb78512e85e262dd4cb165055">Vec_Dbl</a>;</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span><a name="_a42"></a><a class="code" href="../../dc/db2/class_stepper.html">Stepper</a></div>
+<div class="line"><span class="keyword">class </span><a name="_a41"></a><a class="code" href="../../dc/db2/class_stepper.html">Stepper</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">public</span>:</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a43"></a><a class="code" href="../../dc/db2/class_stepper.html#aa26481af19dd12b5af0dade86cd8e8c1">initialize</a>( <a class="code" href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a> ) = 0;  <span class="comment">// keys to check for convergence</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a42"></a><a class="code" href="../../dc/db2/class_stepper.html#aa26481af19dd12b5af0dade86cd8e8c1">initialize</a>( <a class="code" href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a> ) = 0;  <span class="comment">// keys to check for convergence</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// iteration control</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a44"></a><a class="code" href="../../dc/db2/class_stepper.html#a40eb4a47b0607f0226b5777d0aab3c9d">done</a>() <span class="keyword">const</span> = 0;           <span class="comment">// check in while loop</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a45"></a><a class="code" href="../../dc/db2/class_stepper.html#aaf893c33f3c041e289a12c153dcc9789">begin</a>() = 0;                <span class="comment">// begin new step</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a46"></a><a class="code" href="../../dc/db2/class_stepper.html#acc89e870e91cebfc3debd2207e457298">done_resp_its</a>() <span class="keyword">const</span> = 0;  <span class="comment">// uses internal logic to determine</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a47"></a><a class="code" href="../../dc/db2/class_stepper.html#a4071f68a178cb25ca3d02783ae0eec23">begin_resp_its</a>() = 0;  <span class="comment">// begin new response iteration loop</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a48"></a><a class="code" href="../../dc/db2/class_stepper.html#aaea007945ca2b7fe98d2bd312f36ef12">set_done_resp_its</a>( <span class="keywordtype">bool</span> ) = 0;  <span class="comment">// overrides any internal logic</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a43"></a><a class="code" href="../../dc/db2/class_stepper.html#a40eb4a47b0607f0226b5777d0aab3c9d">done</a>() <span class="keyword">const</span> = 0;           <span class="comment">// check in while loop</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a44"></a><a class="code" href="../../dc/db2/class_stepper.html#aaf893c33f3c041e289a12c153dcc9789">begin</a>() = 0;                <span class="comment">// begin new step</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a45"></a><a class="code" href="../../dc/db2/class_stepper.html#acc89e870e91cebfc3debd2207e457298">done_resp_its</a>() <span class="keyword">const</span> = 0;  <span class="comment">// uses internal logic to determine</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a46"></a><a class="code" href="../../dc/db2/class_stepper.html#a4071f68a178cb25ca3d02783ae0eec23">begin_resp_its</a>() = 0;  <span class="comment">// begin new response iteration loop</span></div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a47"></a><a class="code" href="../../dc/db2/class_stepper.html#aaea007945ca2b7fe98d2bd312f36ef12">set_done_resp_its</a>( <span class="keywordtype">bool</span> ) = 0;  <span class="comment">// overrides any internal logic</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// iteration query</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a49"></a><a class="code" href="../../dc/db2/class_stepper.html#a08b84a44c922f39d0289438e5d63f028">resp_its_max</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a50"></a><a class="code" href="../../dc/db2/class_stepper.html#ada23f432f4bac51ad535eefbe5c4877a">resp_its_tol</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a48"></a><a class="code" href="../../dc/db2/class_stepper.html#a08b84a44c922f39d0289438e5d63f028">resp_its_max</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a49"></a><a class="code" href="../../dc/db2/class_stepper.html#ada23f432f4bac51ad535eefbe5c4877a">resp_its_tol</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// time values</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a51"></a><a class="code" href="../../dc/db2/class_stepper.html#a96176ca785a06c80eabc08306f6d658d">step</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a52"></a><a class="code" href="../../dc/db2/class_stepper.html#a0d9d93be7e83cdc5d32ba7d62f69ac7c">time0</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a53"></a><a class="code" href="../../dc/db2/class_stepper.html#a44e818185206066686a8d2fd80b339e2">time1</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a54"></a><a class="code" href="../../dc/db2/class_stepper.html#a08d0789eaf74a837295ab5e0a5d05078">dtime</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a50"></a><a class="code" href="../../dc/db2/class_stepper.html#a96176ca785a06c80eabc08306f6d658d">step</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a51"></a><a class="code" href="../../dc/db2/class_stepper.html#a0d9d93be7e83cdc5d32ba7d62f69ac7c">time0</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a52"></a><a class="code" href="../../dc/db2/class_stepper.html#a44e818185206066686a8d2fd80b339e2">time1</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a name="a53"></a><a class="code" href="../../dc/db2/class_stepper.html#a08d0789eaf74a837295ab5e0a5d05078">dtime</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// update and get what was set</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a55"></a><a class="code" href="../../dc/db2/class_stepper.html#ae689622a70793ea4c244df21c1a4d1d7">resp_its_count</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a56"></a><a class="code" href="../../dc/db2/class_stepper.html#a50c243ebde4e9ecbbad9d4813675a865">update_resp</a>( <span class="keyword">const</span> Vec_Dbl&amp; ) = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a57"></a><a class="code" href="../../dc/db2/class_stepper.html#aaaa23478e6085c6239ceeb24d1a4fe1c">get_last_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a58"></a><a class="code" href="../../dc/db2/class_stepper.html#a796f5eab4120e69783c973089e887600">get_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a59"></a><a class="code" href="../../dc/db2/class_stepper.html#aa12f6c20f2e5039f54e8fa0985a2cb05">get_delta_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a60"></a><a class="code" href="../../dc/db2/class_stepper.html#a935a14f379eef7b1a19eb1ed0645ac16">get_rel_delta_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a54"></a><a class="code" href="../../dc/db2/class_stepper.html#ae689622a70793ea4c244df21c1a4d1d7">resp_its_count</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a55"></a><a class="code" href="../../dc/db2/class_stepper.html#a50c243ebde4e9ecbbad9d4813675a865">update_resp</a>( <span class="keyword">const</span> Vec_Dbl&amp; ) = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a56"></a><a class="code" href="../../dc/db2/class_stepper.html#aaaa23478e6085c6239ceeb24d1a4fe1c">get_last_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a57"></a><a class="code" href="../../dc/db2/class_stepper.html#a796f5eab4120e69783c973089e887600">get_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a58"></a><a class="code" href="../../dc/db2/class_stepper.html#aa12f6c20f2e5039f54e8fa0985a2cb05">get_delta_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a59"></a><a class="code" href="../../dc/db2/class_stepper.html#a935a14f379eef7b1a19eb1ed0645ac16">get_rel_delta_resp</a>( Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// guess value (returns true if interpolating/false if extrapolating)</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a61"></a><a class="code" href="../../dc/db2/class_stepper.html#a2b22c52fb11aa19dce196d1e11f80d1e">guess_r</a>( <span class="keywordtype">double</span> t, Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a62"></a><a class="code" href="../../dc/db2/class_stepper.html#a76bf47138a97a3f007d660e97be883a7">guess_dtrel</a>( Vec_Dbl* dtrel ) <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a63"></a><a class="code" href="../../dc/db2/class_stepper.html#ab4d46af6527b6d42ec553a415f5f3e47">guess_dtrel_size</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a60"></a><a class="code" href="../../dc/db2/class_stepper.html#a2b22c52fb11aa19dce196d1e11f80d1e">guess_r</a>( <span class="keywordtype">double</span> t, Vec_Dbl* ) <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a name="a61"></a><a class="code" href="../../dc/db2/class_stepper.html#a76bf47138a97a3f007d660e97be883a7">guess_dtrel</a>( Vec_Dbl* dtrel ) <span class="keyword">const</span> = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a name="a62"></a><a class="code" href="../../dc/db2/class_stepper.html#ab4d46af6527b6d42ec553a415f5f3e47">guess_dtrel_size</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"></div>
 <div class="line">  <span class="keyword">private</span>:</div>
-<div class="line">    <span class="keyword">friend</span> std::ostream&amp; <a name="a64"></a><a class="code" href="../../dc/db2/class_stepper.html#aea5803c42c9f5631b1629c728d2e09e8">operator&lt;&lt;</a>( std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="../../dc/db2/class_stepper.html">Stepper</a>&amp; s );</div>
+<div class="line">    <span class="keyword">friend</span> std::ostream&amp; <a name="a63"></a><a class="code" href="../../dc/db2/class_stepper.html#aea5803c42c9f5631b1629c728d2e09e8">operator&lt;&lt;</a>( std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="../../dc/db2/class_stepper.html">Stepper</a>&amp; s );</div>
 <div class="line">};</div>
-<div class="line"><span class="keyword">typedef</span> std::shared_ptr&lt;Stepper&gt; <a name="a65"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a78473fae167e85e88bcbb2c73f43fe42">SP_Stepper</a>;</div>
+<div class="line"><span class="keyword">typedef</span> std::shared_ptr&lt;Stepper&gt; <a name="a64"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a78473fae167e85e88bcbb2c73f43fe42">SP_Stepper</a>;</div>
 <div class="line"></div>
-<div class="line">::std::ostream&amp; <a name="a66"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a78de19e80608d67799c0dfbeb6cfbe2e">operator&lt;&lt;</a>(::std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="../../dc/db2/class_stepper.html">Stepper</a>&amp; s )</div>
+<div class="line">::std::ostream&amp; <a name="a65"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a78de19e80608d67799c0dfbeb6cfbe2e">operator&lt;&lt;</a>(::std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="../../dc/db2/class_stepper.html">Stepper</a>&amp; s )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot; tol=&quot;</span> &lt;&lt; s.<a class="code" href="../../dc/db2/class_stepper.html#ada23f432f4bac51ad535eefbe5c4877a">resp_its_tol</a>() &lt;&lt; <span class="stringliteral">&quot; max=&quot;</span> &lt;&lt; s.<a class="code" href="../../dc/db2/class_stepper.html#a08b84a44c922f39d0289438e5d63f028">resp_its_max</a>()</div>
 <div class="line">              &lt;&lt; <span class="stringliteral">&quot; dtrel.size()=&quot;</span> &lt;&lt; s.<a class="code" href="../../dc/db2/class_stepper.html#ab4d46af6527b6d42ec553a415f5f3e47">guess_dtrel_size</a>();</div>
@@ -481,72 +481,72 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">return</span> os &lt;&lt; *s;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span><a name="_a67"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html">Stepper_fixed</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="../../dc/db2/class_stepper.html">Stepper</a></div>
+<div class="line"><span class="keyword">class </span><a name="_a66"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html">Stepper_fixed</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="../../dc/db2/class_stepper.html">Stepper</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">private</span>:</div>
-<div class="line">    <a name="a68"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a75e7f042ea36b8899c0b57be99c2a631">Stepper_fixed</a>() {}</div>
+<div class="line">    <a name="a67"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a75e7f042ea36b8899c0b57be99c2a631">Stepper_fixed</a>() {}</div>
 <div class="line">  <span class="keyword">public</span>:</div>
-<div class="line">    <span class="keyword">virtual</span> <a name="a69"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a9d864efbf610a552cf87a1772edf4d99">~Stepper_fixed</a>() {}</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a70"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ac59f44e26a3861c69daa07289ee24025">initialize</a>( <a class="code" href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a> keys )</div>
+<div class="line">    <span class="keyword">virtual</span> <a name="a68"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a9d864efbf610a552cf87a1772edf4d99">~Stepper_fixed</a>() {}</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a69"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ac59f44e26a3861c69daa07289ee24025">initialize</a>( <a class="code" href="../../d0/d50/_nuclide_set_interface_8h.html#a656e8cc192193706f75546404dff74e3">Vec_Str</a> keys )</div>
 <div class="line">    {</div>
 <div class="line">        Require( keys.size() &gt; 0 );</div>
-<div class="line">        <a name="a71"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a49c47eaa7fac8b60fd25521caba2fef1">b_keys</a> = keys;</div>
-<div class="line">        <a name="a72"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>.resize( b_keys.size(), 0.0 );</div>
-<div class="line">        <a name="a73"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#abdbe75979bdb2f131cf9980a601f3aa5">b_resp_last</a>.resize( b_keys.size(), 0.0 );</div>
+<div class="line">        <a name="a70"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a49c47eaa7fac8b60fd25521caba2fef1">b_keys</a> = keys;</div>
+<div class="line">        <a name="a71"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>.resize( b_keys.size(), 0.0 );</div>
+<div class="line">        <a name="a72"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#abdbe75979bdb2f131cf9980a601f3aa5">b_resp_last</a>.resize( b_keys.size(), 0.0 );</div>
 <div class="line">    }</div>
 <div class="line">    <a class="code" href="../../d3/d51/class_stepper__fixed.html#a75e7f042ea36b8899c0b57be99c2a631">Stepper_fixed</a>( Vec_Dbl dtrel, <span class="keywordtype">int</span> its_max, <span class="keywordtype">double</span> its_tol )</div>
 <div class="line">    {</div>
-<div class="line">        <a name="a74"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a> = dtrel;</div>
-<div class="line">        <a name="a75"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a16312be116ad46a846c4e5c806a4f2a4">b_resp_its_max</a> = its_max;</div>
-<div class="line">        <a name="a76"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ad4c6671197c45578b3678e8c0085e5aa">b_resp_its_tol</a> = its_tol;</div>
-<div class="line">        <a name="a77"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a> = 0;</div>
-<div class="line">        <a name="a78"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a> = 0;</div>
+<div class="line">        <a name="a73"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a> = dtrel;</div>
+<div class="line">        <a name="a74"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a16312be116ad46a846c4e5c806a4f2a4">b_resp_its_max</a> = its_max;</div>
+<div class="line">        <a name="a75"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ad4c6671197c45578b3678e8c0085e5aa">b_resp_its_tol</a> = its_tol;</div>
+<div class="line">        <a name="a76"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a> = 0;</div>
+<div class="line">        <a name="a77"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a> = 0;</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">bool</span> <a name="a79"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a6db83072bdb45ff66ab856903170c40d">done</a>()<span class="keyword"> const</span></div>
+<div class="line">    <span class="keywordtype">bool</span> <a name="a78"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a6db83072bdb45ff66ab856903170c40d">done</a>()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        Require( b_keys.size() &gt; 0 );</div>
 <div class="line">        <span class="keywordflow">return</span> !( <a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a> &lt; <a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a>.size() );</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a80"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a>()</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a79"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a>()</div>
 <div class="line">    {</div>
 <div class="line">        ++<a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a>;</div>
-<div class="line">        <a name="a81"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#aa8104b904050084b19977e879ebc012e">b_t1</a> = <a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a> + <a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a>[<a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a> - 1];</div>
-<div class="line">        <a name="a82"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a583c01f0e9363429ee1ed4c49278c712">b_resp_its_count</a> = 0;</div>
-<div class="line">        <a name="a83"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a> = <span class="keyword">false</span>;</div>
+<div class="line">        <a name="a80"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#aa8104b904050084b19977e879ebc012e">b_t1</a> = <a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a> + <a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a>[<a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a> - 1];</div>
+<div class="line">        <a name="a81"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a583c01f0e9363429ee1ed4c49278c712">b_resp_its_count</a> = 0;</div>
+<div class="line">        <a name="a82"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a> = <span class="keyword">false</span>;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordtype">bool</span> <a name="a84"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ad82400ec426b252c4d2cc97f9015cc2e">done_resp_its</a>()<span class="keyword"> const</span></div>
+<div class="line">    <span class="keywordtype">bool</span> <a name="a83"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ad82400ec426b252c4d2cc97f9015cc2e">done_resp_its</a>()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        <span class="comment">// quick return</span></div>
 <div class="line">        <span class="keywordflow">if</span>( <a class="code" href="../../d3/d51/class_stepper__fixed.html#a583c01f0e9363429ee1ed4c49278c712">b_resp_its_count</a> &gt; <a class="code" href="../../d3/d51/class_stepper__fixed.html#a16312be116ad46a846c4e5c806a4f2a4">b_resp_its_max</a> ) <a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a> = <span class="keyword">true</span>;</div>
 <div class="line">        <span class="keywordflow">if</span>( <a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a> ) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"></div>
 <div class="line">        Vec_Dbl rel_dr;</div>
-<div class="line">        <a name="a85"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a2f22491690568ab967480de4e9907f49">get_delta_resp</a>( &amp;rel_dr );</div>
-<div class="line">        <span class="keywordflow">for</span>( <span class="keyword">auto</span> <a name="a86"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> : rel_dr )</div>
+<div class="line">        <a name="a84"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a2f22491690568ab967480de4e9907f49">get_delta_resp</a>( &amp;rel_dr );</div>
+<div class="line">        <span class="keywordflow">for</span>( <span class="keyword">auto</span> <a name="a85"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> : rel_dr )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span>( <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> &gt; <a class="code" href="../../d3/d51/class_stepper__fixed.html#ad4c6671197c45578b3678e8c0085e5aa">b_resp_its_tol</a> ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line">        }</div>
 <div class="line">        <a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a> = <span class="keyword">true</span>;</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a87"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ac3ae90c4689a4926fbb4960aa35cdae9">begin_resp_its</a>() { ++<a class="code" href="../../d3/d51/class_stepper__fixed.html#a583c01f0e9363429ee1ed4c49278c712">b_resp_its_count</a>; }</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a88"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a53dc08018478a889a4ac9673e049bb5a">set_done_resp_its</a>( <span class="keywordtype">bool</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a6db83072bdb45ff66ab856903170c40d">done</a> ) { <a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a> = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a6db83072bdb45ff66ab856903170c40d">done</a>; }</div>
-<div class="line">    <span class="keywordtype">size_t</span> <a name="a89"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a76694cdc2dfc7b595d30539afbad0f2f">resp_its_max</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a16312be116ad46a846c4e5c806a4f2a4">b_resp_its_max</a>; }</div>
-<div class="line">    <span class="keywordtype">double</span> <a name="a90"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a06355638e664fdcdf5e2c1a70d468294">resp_its_tol</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#ad4c6671197c45578b3678e8c0085e5aa">b_resp_its_tol</a>; }</div>
-<div class="line">    <span class="keywordtype">size_t</span> <a name="a91"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#aef44efce49e2e1c99c00fb249db7db06">step</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a> - 1; }</div>
-<div class="line">    <span class="keywordtype">double</span> <a name="a92"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a5eaf52841bc290d49797f2a20e61dec6">time0</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a>; }</div>
-<div class="line">    <span class="keywordtype">double</span> <a name="a93"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a39d983307b56627b5c2f8e0bfa3be491">time1</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#aa8104b904050084b19977e879ebc012e">b_t1</a>; }</div>
-<div class="line">    <span class="keywordtype">double</span> <a name="a94"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#afe59a443a587455848db61f78369f43f">dtime</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#aa8104b904050084b19977e879ebc012e">b_t1</a> - <a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a>; }</div>
-<div class="line">    <span class="keywordtype">size_t</span> <a name="a95"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a69edce19a9f529306097933ceb1515b5">resp_its_count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a583c01f0e9363429ee1ed4c49278c712">b_resp_its_count</a>; }</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a96"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#affae57b48ca78d1b1dadb085be6f1715">update_resp</a>( <span class="keyword">const</span> Vec_Dbl&amp; resp )</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a86"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ac3ae90c4689a4926fbb4960aa35cdae9">begin_resp_its</a>() { ++<a class="code" href="../../d3/d51/class_stepper__fixed.html#a583c01f0e9363429ee1ed4c49278c712">b_resp_its_count</a>; }</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a87"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a53dc08018478a889a4ac9673e049bb5a">set_done_resp_its</a>( <span class="keywordtype">bool</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a6db83072bdb45ff66ab856903170c40d">done</a> ) { <a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a> = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a6db83072bdb45ff66ab856903170c40d">done</a>; }</div>
+<div class="line">    <span class="keywordtype">size_t</span> <a name="a88"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a76694cdc2dfc7b595d30539afbad0f2f">resp_its_max</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a16312be116ad46a846c4e5c806a4f2a4">b_resp_its_max</a>; }</div>
+<div class="line">    <span class="keywordtype">double</span> <a name="a89"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a06355638e664fdcdf5e2c1a70d468294">resp_its_tol</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#ad4c6671197c45578b3678e8c0085e5aa">b_resp_its_tol</a>; }</div>
+<div class="line">    <span class="keywordtype">size_t</span> <a name="a90"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#aef44efce49e2e1c99c00fb249db7db06">step</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#aedb683073763e345e13702f1406af7b3">b_s</a> - 1; }</div>
+<div class="line">    <span class="keywordtype">double</span> <a name="a91"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a5eaf52841bc290d49797f2a20e61dec6">time0</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a>; }</div>
+<div class="line">    <span class="keywordtype">double</span> <a name="a92"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a39d983307b56627b5c2f8e0bfa3be491">time1</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#aa8104b904050084b19977e879ebc012e">b_t1</a>; }</div>
+<div class="line">    <span class="keywordtype">double</span> <a name="a93"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#afe59a443a587455848db61f78369f43f">dtime</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#aa8104b904050084b19977e879ebc012e">b_t1</a> - <a class="code" href="../../d3/d51/class_stepper__fixed.html#af05b54ce366972d56c6c42cd817de625">b_t0</a>; }</div>
+<div class="line">    <span class="keywordtype">size_t</span> <a name="a94"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a69edce19a9f529306097933ceb1515b5">resp_its_count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a583c01f0e9363429ee1ed4c49278c712">b_resp_its_count</a>; }</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a95"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#affae57b48ca78d1b1dadb085be6f1715">update_resp</a>( <span class="keyword">const</span> Vec_Dbl&amp; resp )</div>
 <div class="line">    {</div>
 <div class="line">        Require( resp.size() == b_keys.size() );</div>
 <div class="line">        <a class="code" href="../../d3/d51/class_stepper__fixed.html#abdbe75979bdb2f131cf9980a601f3aa5">b_resp_last</a> = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>;</div>
 <div class="line">        <a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a> = resp;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a97"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a2ff7582fbaf9a54d1e01c7b419b67019">get_last_resp</a>( Vec_Dbl* resp )<span class="keyword"> const </span>{ *resp = <a class="code" href="../../d3/d51/class_stepper__fixed.html#abdbe75979bdb2f131cf9980a601f3aa5">b_resp_last</a>; }</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a98"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ad5087504ddfd080813cc6f71b55fd585">get_resp</a>( Vec_Dbl* resp )<span class="keyword"> const </span>{ *resp = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>; }</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a96"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a2ff7582fbaf9a54d1e01c7b419b67019">get_last_resp</a>( Vec_Dbl* resp )<span class="keyword"> const </span>{ *resp = <a class="code" href="../../d3/d51/class_stepper__fixed.html#abdbe75979bdb2f131cf9980a601f3aa5">b_resp_last</a>; }</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a97"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#ad5087504ddfd080813cc6f71b55fd585">get_resp</a>( Vec_Dbl* resp )<span class="keyword"> const </span>{ *resp = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>; }</div>
 <div class="line">    <span class="keywordtype">void</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a2f22491690568ab967480de4e9907f49">get_delta_resp</a>( Vec_Dbl* resp )<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        Require( resp-&gt;size() == b_keys.size() );</div>
@@ -555,7 +555,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            ( *resp )[i] = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>[i] - <a class="code" href="../../d3/d51/class_stepper__fixed.html#abdbe75979bdb2f131cf9980a601f3aa5">b_resp_last</a>[i];</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a99"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a36a81b745413053da186345aebcb111f">get_rel_delta_resp</a>( Vec_Dbl* resp )<span class="keyword"> const</span></div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a98"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a36a81b745413053da186345aebcb111f">get_rel_delta_resp</a>( Vec_Dbl* resp )<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        Require( resp-&gt;size() == b_keys.size() );</div>
 <div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; b_keys.size(); ++i )</div>
@@ -569,18 +569,18 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// guess value (returns true if interpolating/false if extrapolating)</span></div>
-<div class="line">    <span class="keywordtype">bool</span> <a name="a100"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a66094044e2c60904901a856007df6b83">guess_r</a>( <span class="keywordtype">double</span> t, Vec_Dbl* resp )<span class="keyword"> const</span></div>
+<div class="line">    <span class="keywordtype">bool</span> <a name="a99"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a66094044e2c60904901a856007df6b83">guess_r</a>( <span class="keywordtype">double</span> t, Vec_Dbl* resp )<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        *resp = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>;</div>
 <div class="line">        <span class="keywordflow">return</span> t == <a class="code" href="../../d3/d51/class_stepper__fixed.html#aa8104b904050084b19977e879ebc012e">b_t1</a>;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// true if known/false if guessing</span></div>
-<div class="line">    <span class="keywordtype">bool</span> <a name="a101"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a67e22c3b91b0bbb09565e2a8904c6d54">guess_dtrel</a>( Vec_Dbl* dtrel )<span class="keyword"> const</span></div>
+<div class="line">    <span class="keywordtype">bool</span> <a name="a100"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a67e22c3b91b0bbb09565e2a8904c6d54">guess_dtrel</a>( Vec_Dbl* dtrel )<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        *dtrel = <a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a>;</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordtype">size_t</span> <a name="a102"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a1ab180c3b085df0c0359c74e0903d6d8">guess_dtrel_size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a>.size(); }</div>
+<div class="line">    <span class="keywordtype">size_t</span> <a name="a101"></a><a class="code" href="../../d3/d51/class_stepper__fixed.html#a1ab180c3b085df0c0359c74e0903d6d8">guess_dtrel_size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a>.size(); }</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
 <div class="line">    Vec_Dbl <a class="code" href="../../d3/d51/class_stepper__fixed.html#a22175720032921cd2976f04e462d5d93">b_dtrel</a>;</div>
 <div class="line">    Vec_Dbl <a class="code" href="../../d3/d51/class_stepper__fixed.html#a82385bed19f922a0f573e663c2745c8e">b_resp</a>;</div>
@@ -595,22 +595,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d51/class_stepper__fixed.html#abf90fa3f0517b32474dbdebb99beaebb">b_resp_done</a>;</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span><a name="_a103"></a><a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html">MultiZoneDepleterTesterP</a></div>
+<div class="line"><span class="keyword">class </span><a name="_a102"></a><a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html">MultiZoneDepleterTesterP</a></div>
 <div class="line">    : <span class="keyword">public</span> <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html">MultiZoneDepleterTester</a>,</div>
 <div class="line">      <span class="keyword">public</span> <span class="keyword">virtual</span> ::testing::WithParamInterface&lt;SP_Stepper&gt;</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">protected</span>:</div>
-<div class="line">    <span class="keywordtype">void</span> <a name="a104"></a><a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#a1b06560e0e01a806b92c2386220d0b57">SetUp</a>()</div>
+<div class="line">    <span class="keywordtype">void</span> <a name="a103"></a><a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#a1b06560e0e01a806b92c2386220d0b57">SetUp</a>()</div>
 <div class="line">    {</div>
 <div class="line">        <a class="code" href="../../dd/d44/class_multi_zone_depleter_tester.html#a1b06560e0e01a806b92c2386220d0b57">MultiZoneDepleterTester::SetUp</a>();</div>
 <div class="line">        ASSERT_FALSE( matmap == <span class="keyword">nullptr</span> );</div>
-<div class="line">        <a name="a105"></a><a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#aa1c7c6ecade46891b6d8d38e64c17bda">stepper</a> = GetParam();</div>
+<div class="line">        <a name="a104"></a><a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#aa1c7c6ecade46891b6d8d38e64c17bda">stepper</a> = GetParam();</div>
 <div class="line">    }</div>
 <div class="line">    SP_Stepper <a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html#aa1c7c6ecade46891b6d8d38e64c17bda">stepper</a>;</div>
 <div class="line">};</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// same-size steps, step-constant power constraint</span></div>
-<div class="line"><a name="a106"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a63de83cc1793b4c6fef2bdbedbd1a95c">TEST_P</a>( <a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html">MultiZoneDepleterTesterP</a>, PowerConstraint0 )</div>
+<div class="line"><a name="a105"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a63de83cc1793b4c6fef2bdbedbd1a95c">TEST_P</a>( <a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html">MultiZoneDepleterTesterP</a>, PowerConstraint0 )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span>( !created ) <span class="keywordflow">return</span>;</div>
 <div class="line"></div>
@@ -643,14 +643,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        mat5-&gt;set_flux( 0.4 );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Set global power constraint</span></div>
-<div class="line">        mzd.<a name="a107"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">set_power_constraint</a>( sys_p[n] );</div>
+<div class="line">        mzd.<a name="a106"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">set_power_constraint</a>( sys_p[n] );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Set substep parameters.  Eventually we want to move this into</span></div>
 <div class="line">        <span class="comment">// MZD such that it has its own stepper.</span></div>
 <div class="line">        EXPECT_TRUE( stepper-&gt;guess_dtrel( &amp;dtrel ) );</div>
 <div class="line">        mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( dtrel );</div>
 <div class="line">        mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ab77ecce57efa7528667bc94682b90741">set_constraint_its_max</a>( stepper-&gt;resp_its_max() );</div>
-<div class="line">        mzd.<a name="a108"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a91e9df178e91376ccd7cd2cc7e237220">set_constraint_its_tol</a>( stepper-&gt;resp_its_tol() );</div>
+<div class="line">        mzd.<a name="a107"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a91e9df178e91376ccd7cd2cc7e237220">set_constraint_its_tol</a>( stepper-&gt;resp_its_tol() );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Solve the problem.</span></div>
 <div class="line">        mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
@@ -661,7 +661,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        EXPECT_EQ( stepper-&gt;guess_dtrel_size(),</div>
 <div class="line">                   stat.get&lt;<span class="keywordtype">int</span>&gt;( <span class="stringliteral">&quot;numSubsteps&quot;</span> ) );</div>
 <div class="line">        EXPECT_EQ( <span class="keyword">true</span>, stat.get&lt;<span class="keywordtype">bool</span>&gt;( <span class="stringliteral">&quot;hasConstraint&quot;</span> ) );</div>
-<div class="line">        EXPECT_EQ( mzd.<a name="a109"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a352e31e1b76369b0582bcbc8d678d20e">dt</a>(), stat.get&lt;<span class="keywordtype">double</span>&gt;( <span class="stringliteral">&quot;stepTime&quot;</span> ) );</div>
+<div class="line">        EXPECT_EQ( mzd.<a name="a108"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a352e31e1b76369b0582bcbc8d678d20e">dt</a>(), stat.get&lt;<span class="keywordtype">double</span>&gt;( <span class="stringliteral">&quot;stepTime&quot;</span> ) );</div>
 <div class="line">        EXPECT_EQ( <span class="stringliteral">&quot;POWER&quot;</span>, stat.get&lt;std::string&gt;( <span class="stringliteral">&quot;constraintType&quot;</span> ) );</div>
 <div class="line">        EXPECT_EQ( sys_p[n], stat.get&lt;<span class="keywordtype">double</span>&gt;( <span class="stringliteral">&quot;constraintValue&quot;</span> ) );</div>
 <div class="line">        EXPECT_EQ( stepper-&gt;resp_its_max(),</div>
@@ -674,10 +674,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">const</span> Vec_Dbl <a name="a110"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#aea9d7524c343da129abd7fd5c780ae2c">dtrel_1</a>( {1.0} );</div>
-<div class="line"><span class="keyword">const</span> Vec_Dbl <a name="a111"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a5e01f3047a550db7a94b8b48233ace1c">dtrel_3</a>( {0.1, 0.2, 0.7} );</div>
+<div class="line"><span class="keyword">const</span> Vec_Dbl <a name="a109"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#aea9d7524c343da129abd7fd5c780ae2c">dtrel_1</a>( {1.0} );</div>
+<div class="line"><span class="keyword">const</span> Vec_Dbl <a name="a110"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a5e01f3047a550db7a94b8b48233ace1c">dtrel_3</a>( {0.1, 0.2, 0.7} );</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">const</span> std::vector&lt;SP_Stepper&gt; <a name="a112"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a732a0158cc17ec3393a6bfc4af1da186">steppers</a> = {</div>
+<div class="line"><span class="keyword">const</span> std::vector&lt;SP_Stepper&gt; <a name="a111"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#a732a0158cc17ec3393a6bfc4af1da186">steppers</a> = {</div>
 <div class="line">    std::make_shared&lt;Stepper_fixed&gt;(</div>
 <div class="line">        <a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#aea9d7524c343da129abd7fd5c780ae2c">dtrel_1</a>, 1, 1e-5 ),  <span class="comment">// single step with 1 response iteration</span></div>
 <div class="line">    std::make_shared&lt;Stepper_fixed&gt;(</div>
@@ -696,7 +696,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        1e-5 ),  <span class="comment">// single step with 2 response iterations &amp; reduced tolerance</span></div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line"><a name="a113"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#af5a877e74e671f8d984c466cc76895cd">INSTANTIATE_TEST_CASE_P</a>( StepperTesting,</div>
+<div class="line"><a name="a112"></a><a class="code" href="../../d5/d3d/tst_multi_zone_depleter_8cpp.html#af5a877e74e671f8d984c466cc76895cd">INSTANTIATE_TEST_CASE_P</a>( StepperTesting,</div>
 <div class="line">                         <a class="code" href="../../d6/dfc/class_multi_zone_depleter_tester_p.html">MultiZoneDepleterTesterP</a>,</div>
 <div class="line">                         ::testing::ValuesIn( steppers ) );</div>
 </div><!-- fragment --> </div><!-- contents -->

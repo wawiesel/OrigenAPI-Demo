@@ -408,8 +408,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_FALSE( t-&gt;has_initialized_field() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// add field</span></div>
-<div class="line">    <a class="code" href="../../d9/d32/class_origen_1_1_field.html#ae797c12e5580836e0a4b8347a9bda869">Origen::Field::SP</a> neutron_field( <span class="keyword">new</span> <a class="code" href="../../d2/dfe/class_origen_1_1_neutron_field.html">Origen::NeutronField</a>() );</div>
-<div class="line">    t-&gt;set_field( neutron_field );</div>
+<div class="line">    <a class="code" href="../../d9/d32/class_origen_1_1_field.html#ae797c12e5580836e0a4b8347a9bda869">Origen::Field::SP</a> <a name="a31"></a><a class="code" href="../../da/d0c/group___field.html#ga5774f40ae7945e72f2f57a0161a6adff">neutron_field</a>( <span class="keyword">new</span> <a class="code" href="../../d2/dfe/class_origen_1_1_neutron_field.html">Origen::NeutronField</a>() );</div>
+<div class="line">    t-&gt;set_field( <a class="code" href="../../da/d0c/group___field.html#ga5774f40ae7945e72f2f57a0161a6adff">neutron_field</a> );</div>
 <div class="line">    EXPECT_TRUE( t-&gt;has_initialized_field() );</div>
 <div class="line">    EXPECT_TRUE( t-&gt;is_initialized() );</div>
 <div class="line"></div>
@@ -465,11 +465,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line"><a class="code" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST</a>( Nuclide_Gen, Accessors )</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> <a name="a31"></a><a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>( <span class="keyword">new</span> <a name="_a32"></a><a class="code" href="../../d7/d07/class_origen_1_1_nuclide___gen.html">Origen::Nuclide_Gen</a>() );</div>
-<div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#ac93c765c77d2a09dcbe959be6585d756">EXPECT_ERRORS</a>( <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a> );</div>
+<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> nuclide( <span class="keyword">new</span> <a name="_a32"></a><a class="code" href="../../d7/d07/class_origen_1_1_nuclide___gen.html">Origen::Nuclide_Gen</a>() );</div>
+<div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#ac93c765c77d2a09dcbe959be6585d756">EXPECT_ERRORS</a>( nuclide );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d5/df7/class_origen_1_1_species.html#a6b7cce4e9670e9b4dcf07899e62479f9">Origen::Species::SP</a> species( <span class="keyword">new</span> <a class="code" href="../../d5/df4/class_origen_1_1_species___gen.html">Origen::Species_Gen</a>( 92, 235, 235.1 ) );</div>
-<div class="line">    <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>-&gt;set_species( species );</div>
+<div class="line">    nuclide-&gt;set_species( species );</div>
 <div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#aba58e940fbf3b72881b22ef1410c2ac3">EXPECT_NO_ERRORS</a>( species );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// std::cout &lt;&lt; nuclide-&gt;to_string() &lt;&lt; std::endl;</span></div>
@@ -508,17 +508,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    channel-&gt;set_channel_type( channel_type1 );</div>
 <div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#ac93c765c77d2a09dcbe959be6585d756">EXPECT_ERRORS</a>( channel );</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>( <span class="keyword">new</span> <a class="code" href="../../d7/d07/class_origen_1_1_nuclide___gen.html">Origen::Nuclide_Gen</a>() );</div>
-<div class="line">    channel-&gt;set_parent( &amp;*<a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a> );</div>
+<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> nuclide( <span class="keyword">new</span> <a class="code" href="../../d7/d07/class_origen_1_1_nuclide___gen.html">Origen::Nuclide_Gen</a>() );</div>
+<div class="line">    channel-&gt;set_parent( &amp;*nuclide );</div>
 <div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#ac93c765c77d2a09dcbe959be6585d756">EXPECT_ERRORS</a>( channel );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d5/df7/class_origen_1_1_species.html#a6b7cce4e9670e9b4dcf07899e62479f9">Origen::Species::SP</a> species( <span class="keyword">new</span> <a class="code" href="../../d5/df4/class_origen_1_1_species___gen.html">Origen::Species_Gen</a>( 10, 20, 20.0 ) );</div>
-<div class="line">    <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>-&gt;set_species( species );</div>
+<div class="line">    nuclide-&gt;set_species( species );</div>
 <div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#ac93c765c77d2a09dcbe959be6585d756">EXPECT_ERRORS</a>( channel );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#a229c96f3dab9e9c64eae846de1f894bc">Origen::TransitionSystem::SP</a> system( <span class="keyword">new</span> <a name="_a37"></a><a class="code" href="../../d5/d42/class_origen_1_1_transition_system___gen.html">Origen::TransitionSystem_Gen</a>() );</div>
-<div class="line">    <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>-&gt;set_system( &amp;*system );</div>
-<div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#aba58e940fbf3b72881b22ef1410c2ac3">EXPECT_NO_ERRORS</a>( <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a> );</div>
+<div class="line">    nuclide-&gt;set_system( &amp;*system );</div>
+<div class="line">    <a class="code" href="../../d6/d89/gtest__macros_8h.html#aba58e940fbf3b72881b22ef1410c2ac3">EXPECT_NO_ERRORS</a>( nuclide );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// mode=0 gives no byproducts</span></div>
 <div class="line">    channel-&gt;channel_type()-&gt;set_decay_mode( 0 );</div>
@@ -551,7 +551,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a class="code" href="../../db/dcd/tst_transition_system___gen_8cpp.html#abdc19b66f20a96b3659ac1ece9c69058">TEST</a>( Channel_Gen, Coverage )</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="../../d5/d42/class_origen_1_1_transition_system___gen.html">Origen::TransitionSystem_Gen</a> ts;</div>
-<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a> = ts.<a name="a40"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#ac3bae4473269e13c5ca70afb7ddf39cc">add_nuclide</a>( 0, 92, 235 );</div>
+<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> nuclide = ts.<a name="a40"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#ac3bae4473269e13c5ca70afb7ddf39cc">add_nuclide</a>( 0, 92, 235 );</div>
 <div class="line">    <a class="code" href="../../d6/d47/class_origen_1_1_channel.html#ad1f820a4c73ef39ee91a141c33c95e90">Origen::Channel::SP</a> channel = nuclide-&gt;add_loss( 6 );  <span class="comment">// decay</span></div>
 <div class="line">    <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a3dff3799de02666096155224bae2eb00">Origen::Transition::SP</a> transition = channel-&gt;add_transition( 0 );</div>
 <div class="line">    <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a3dff3799de02666096155224bae2eb00">Origen::Transition::SP</a> transition2;</div>
@@ -1085,7 +1085,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">                                         &lt;&lt; std::endl;</div>
 <div class="line">    EXPECT_EQ( ref_num_nuclides, (<span class="keywordtype">int</span>)ts.<a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#af03d421b7084594fdb757e3ddc8d1394">num_nuclides</a>() );</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>;</div>
+<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> nuclide;</div>
 <div class="line">    <a class="code" href="../../d6/d47/class_origen_1_1_channel.html#ad1f820a4c73ef39ee91a141c33c95e90">Origen::Channel::SP</a> channel;</div>
 <div class="line">    std::vector&lt;Origen::Nuclide::SP&gt; nuclides;</div>
 <div class="line">    std::vector&lt;Origen::Channel::SP&gt; losses;</div>
@@ -1123,7 +1123,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">                                         &lt;&lt; std::endl;</div>
 <div class="line">    EXPECT_EQ( ref_num_nuclides, (<span class="keywordtype">int</span>)ts.<a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#af03d421b7084594fdb757e3ddc8d1394">num_nuclides</a>() );</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>;</div>
+<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> nuclide;</div>
 <div class="line">    <a class="code" href="../../d6/d47/class_origen_1_1_channel.html#ad1f820a4c73ef39ee91a141c33c95e90">Origen::Channel::SP</a> channel;</div>
 <div class="line">    std::vector&lt;Origen::Nuclide::SP&gt; nuclides;</div>
 <div class="line">    std::vector&lt;Origen::Channel::SP&gt; losses;</div>
@@ -1158,7 +1158,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">                                         &lt;&lt; std::endl;</div>
 <div class="line">    EXPECT_EQ( ref_num_nuclides, (<span class="keywordtype">int</span>)ts.<a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#af03d421b7084594fdb757e3ddc8d1394">num_nuclides</a>() );</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>;</div>
+<div class="line">    <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> nuclide;</div>
 <div class="line">    <a class="code" href="../../d6/d47/class_origen_1_1_channel.html#ad1f820a4c73ef39ee91a141c33c95e90">Origen::Channel::SP</a> channel;</div>
 <div class="line">    std::vector&lt;Origen::Transition::SP&gt; transitions;</div>
 <div class="line">    <a class="code" href="../../d1/d9f/class_origen_1_1_transition.html#a3dff3799de02666096155224bae2eb00">Origen::Transition::SP</a> transition;</div>
@@ -1273,7 +1273,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    {</div>
 <div class="line">        nt = 0;</div>
 <div class="line">        std::vector&lt;Origen::Nuclide::SP&gt; nuclides;</div>
-<div class="line">        <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> <a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a>;</div>
+<div class="line">        <a class="code" href="../../d3/dec/class_origen_1_1_nuclide.html#a6e971010e3448e235944ab8a5d9d095b">Origen::Nuclide::SP</a> nuclide;</div>
 <div class="line">        std::vector&lt;Origen::Transition::WP&gt; gains;</div>
 <div class="line">        <a name="_a66"></a><a class="code" href="../../d1/d9f/class_origen_1_1_transition.html">Origen::Transition::WP</a> transition;</div>
 <div class="line">        nuclides = ts.<a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#a30fbae36bd2651b2ce0342772495f664">nuclides</a>();</div>

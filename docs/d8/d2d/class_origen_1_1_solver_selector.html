@@ -157,37 +157,7 @@ Static Public Member Functions</h2></td></tr>
 <p>References <a class="el" href="../../d7/dd1/_solver_selector_8cpp.html#a47f2e62c0dbebc787052c165afcada0e">NAME</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d98/tst_solver_selector_8cpp.html#a98a2fc70dd0a161f4a3d8c8ef55a24ce">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span>( !db.has&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span> ) )</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::stringstream ss;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        ss &lt;&lt; <a class="code" href="../../d7/dd1/_solver_selector_8cpp.html#a47f2e62c0dbebc787052c165afcada0e">NAME</a> &lt;&lt; <span class="stringliteral">&quot; Option \&quot;solver\&quot; (the depletion solver) is missing.&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;           &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        SErrLine( 1, ss.str() );</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        exit( EXIT_FAILURE );</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( db.get&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span> ) == <span class="stringliteral">&quot;cram&quot;</span> )</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">// Make a CRAM solver</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;Origen::Solver_cram&gt;();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( db.get&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span> ) == <span class="stringliteral">&quot;matrex&quot;</span> )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// Make a MATREX solver</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;Origen::Solver_matrex&gt;();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::stringstream ss;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        ss &lt;&lt; <a class="code" href="../../d7/dd1/_solver_selector_8cpp.html#a47f2e62c0dbebc787052c165afcada0e">NAME</a></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;           &lt;&lt; <span class="stringliteral">&quot; Unknown depletion solver: &quot;</span> &lt;&lt; db.get&lt;std::string&gt;( <span class="stringliteral">&quot;solver&quot;</span> )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;           &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        SErrLine( 1, ss.str() );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        exit( EXIT_FAILURE );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="_solver_selector_8cpp_html_a47f2e62c0dbebc787052c165afcada0e"><div class="ttname"><a href="../../d7/dd1/_solver_selector_8cpp.html#a47f2e62c0dbebc787052c165afcada0e">NAME</a></div><div class="ttdeci">#define NAME</div><div class="ttdef"><b>Definition:</b> SolverSelector.cpp:11</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

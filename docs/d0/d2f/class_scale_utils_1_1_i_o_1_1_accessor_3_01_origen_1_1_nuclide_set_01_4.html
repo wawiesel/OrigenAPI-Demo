@@ -189,18 +189,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ab4c759a3b8b8630efbd09fcfe8e52cb5">NuclideSet::b_ids</a>, <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a9b0d3349dcb548045f46187d1120451f">NuclideSet::canonicalize_ids()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordtype">size_t</span> bytes = 0;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        obj.<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ab4c759a3b8b8630efbd09fcfe8e52cb5">b_ids</a> = std::make_shared&lt;Vec_Int&gt;();</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        bytes +=</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <a class="code" href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">ScaleUtils::IO::Accessor&lt;Vec_Int&gt;::read</a>( a, <span class="stringliteral">&quot;ids&quot;</span>, *obj.<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ab4c759a3b8b8630efbd09fcfe8e52cb5">b_ids</a> );</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        obj.<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a9b0d3349dcb548045f46187d1120451f">canonicalize_ids</a>();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">return</span> bytes;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
-<div class="ttc" id="class_origen_1_1_nuclide_set_html_a9b0d3349dcb548045f46187d1120451f"><div class="ttname"><a href="../../d2/de0/class_origen_1_1_nuclide_set.html#a9b0d3349dcb548045f46187d1120451f">Origen::NuclideSet::canonicalize_ids</a></div><div class="ttdeci">void canonicalize_ids()</div><div class="ttdef"><b>Definition:</b> NuclideSet.cpp:158</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_set_html_ab4c759a3b8b8630efbd09fcfe8e52cb5"><div class="ttname"><a href="../../d2/de0/class_origen_1_1_nuclide_set.html#ab4c759a3b8b8630efbd09fcfe8e52cb5">Origen::NuclideSet::b_ids</a></div><div class="ttdeci">SP_Vec_Int b_ids</div><div class="ttdef"><b>Definition:</b> NuclideSet.h:175</div></div>
-<div class="ttc" id="namespace_origen_html_ad9dbf183ba4f551eeab50e180dce7f18"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ad9dbf183ba4f551eeab50e180dce7f18">Origen::read</a></div><div class="ttdeci">void read(const bof::BOFObject &amp;obj, TagManager &amp;tag_manager)</div><div class="ttdoc">read a tag manager from a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:6</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0d86bafdd562cebed6db412232e38d28"></a>
@@ -242,15 +231,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">size_t</span> bytes = 0;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        bytes += <a class="code" href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">ScaleUtils::IO::Accessor&lt;Vec_Int&gt;::write</a>(</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            a, <span class="stringliteral">&quot;ids&quot;</span>, *obj.<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#ab4c759a3b8b8630efbd09fcfe8e52cb5">b_ids</a>, only_size );</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">return</span> bytes;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
-<div class="ttc" id="class_origen_1_1_nuclide_set_html_ab4c759a3b8b8630efbd09fcfe8e52cb5"><div class="ttname"><a href="../../d2/de0/class_origen_1_1_nuclide_set.html#ab4c759a3b8b8630efbd09fcfe8e52cb5">Origen::NuclideSet::b_ids</a></div><div class="ttdeci">SP_Vec_Int b_ids</div><div class="ttdef"><b>Definition:</b> NuclideSet.h:175</div></div>
-<div class="ttc" id="namespace_origen_html_adc3bd8008cc072027f3900e34d9f3747"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#adc3bd8008cc072027f3900e34d9f3747">Origen::write</a></div><div class="ttdeci">void write(bof::BOFObject &amp;obj, std::string name, const TagManager &amp;tag_manager)</div><div class="ttdoc">write a tag manager to a bof object </div><div class="ttdef"><b>Definition:</b> bof.cpp:41</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a93d95e08b994e47e8bddedf3fa5e5f64"></a>

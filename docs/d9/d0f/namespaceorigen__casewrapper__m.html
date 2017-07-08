@@ -165,33 +165,7 @@ Functions/Subroutines</h2></td></tr>
 <p>initial time </p>
 
 <p>References <a class="el" href="../../d4/dc3/namespacedepletion.html#a4942f37401b222891148bcc3db4b003a">depletion::deplete()</a>, <a class="el" href="../../df/d9a/namespaceorigen__iofunctions__m.html#a1bdecc1c56eceb07c42a0281a6cf3f97">origen_iofunctions_m::origen_appendstateset()</a>, <a class="el" href="../../db/d88/group___fortran_identifiers.html#ga563b1ebf8402c65fe986f90a4230669f">origen_definitions_m::origen_concentrationunit_gatoms</a>, <a class="el" href="../../df/d9a/namespaceorigen__iofunctions__m.html#a465e7f9439321911fb54e3a1b042a632">origen_iofunctions_m::origen_loadstateset()</a>, and <a class="el" href="../../df/d9a/namespaceorigen__iofunctions__m.html#aa1aef71afe3a97030061d2f6ad7628fd">origen_iofunctions_m::rstop()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">!   D u m m y   A r g u m e n t s</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">!-----------------------------------------------</span><span class="comment"></span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">    !&gt; number of steps</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: nstep<span class="comment"></span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">    !&gt; time array</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(inout)</span> :: time(0:nstep)<span class="comment"></span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">    !&gt; flux array</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(inout)</span> :: flux(1:nstep)</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">!   L o c a l   V a r i a b l e s</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">!-----------------------------------------------</span><span class="comment"></span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">    !&gt; initial time</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span> :: tmo</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    tmo = time(0)</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">call </span><a class="code" href="../../da/da9/namespaceauxiliary.html#acdb484b80699451123dd41004ee7c38a">flip</a>(nstep + 1, time)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    time(:) =  time(:) - time(0)</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    time(:) = -time(:)</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    time(:) =  time(:) + tmo</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">call </span><a class="code" href="../../da/da9/namespaceauxiliary.html#acdb484b80699451123dd41004ee7c38a">flip</a>(nstep, flux)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="ttc" id="namespaceauxiliary_html_acdb484b80699451123dd41004ee7c38a"><div class="ttname"><a href="../../da/da9/namespaceauxiliary.html#acdb484b80699451123dd41004ee7c38a">auxiliary::flip</a></div><div class="ttdeci">subroutine flip(len, a)</div><div class="ttdoc">Reverse order of a floating-point array. </div><div class="ttdef"><b>Definition:</b> auxiliary.f90:150</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

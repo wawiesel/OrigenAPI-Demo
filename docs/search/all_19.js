@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['y',['y',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#ae5b45caca7ae19fed435a22a1b54eb37',1,'rksuite_90::rk_comm_real_1d::y()'],['../de/de8/namespaceauxiliary__erf__m.html#a0d070adbf68e0be0c8ff26c2829ea989',1,'auxiliary_erf_m::y()']]],
+  ['y',['y',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#ae5b45caca7ae19fed435a22a1b54eb37',1,'rksuite_90::rk_comm_real_1d']]],
   ['y_5fnew',['y_new',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#ae1da400e4c007ba035d8a1bdda6f3188',1,'rksuite_90::rk_comm_real_1d']]],
   ['y_5fold',['y_old',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a47852fb61ad7caac509aca75501be8d6',1,'rksuite_90::rk_comm_real_1d']]],
   ['year_5fmade',['year_made',['../da/dbb/structorigen__libraryheader__m_1_1origen__libraryheader.html#a226077bb05009e51d95edf627b035595',1,'origen_libraryheader_m::origen_libraryheader::year_made()'],['../d9/d4b/class_origen_1_1_library_header.html#abfc865051a1c6533590613e3177f9249',1,'Origen::LibraryHeader::year_made()']]],
@@ -15,11 +15,11 @@ var searchData=
   ['yield_5fnuclides',['yield_nuclides',['../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4',1,'Origen::ReactionResource']]],
   ['yield_5fsimple',['YIELD_SIMPLE',['../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51ae0d521069cf945e94bef2350a7240df3',1,'Origen']]],
   ['yield_5ftolerance',['YIELD_TOLERANCE',['../da/d97/group___cxx_constants.html#gab786a8c9cdcf0fa78a4f9738b05105cb',1,'Origen']]],
-  ['yield_5ftype',['yield_type',['../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e',1,'Origen::DecayChannel::yield_type()'],['../dd/ddc/struct_special_yield.html#a7094af6e3f19046213f24e70e7eb868e',1,'SpecialYield::yield_type()'],['../d2/d8c/struct_yield_def.html#a7094af6e3f19046213f24e70e7eb868e',1,'YieldDef::yield_type()']]],
+  ['yield_5ftype',['yield_type',['../dc/da1/class_origen_1_1_decay_channel.html#a7094af6e3f19046213f24e70e7eb868e',1,'Origen::DecayChannel::yield_type()'],['../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#a26b7cdb1e6b3da31f93483be8ade0ba4',1,'Origen::detail::RRXs::yield_type()'],['../dd/ddc/struct_special_yield.html#a7094af6e3f19046213f24e70e7eb868e',1,'SpecialYield::yield_type()'],['../d2/d8c/struct_yield_def.html#a7094af6e3f19046213f24e70e7eb868e',1,'YieldDef::yield_type()']]],
   ['yield_5ftype_5fname',['yield_type_name',['../d5/dc1/namespace_origen.html#a1c06797bb52ee9107cbc230ad65b1b6d',1,'Origen']]],
   ['yield_5funknown',['YIELD_UNKNOWN',['../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51af9ed3b2be3735965d489944604753c7b',1,'Origen']]],
-  ['yielddata',['YieldData',['../d8/d3f/class_origen_1_1_yield_data.html',1,'Origen']]],
   ['yielddata',['YieldData',['../d8/d3f/class_origen_1_1_yield_data.html#a98ff584b1e62ee20abf18e13d4d5b4e8',1,'Origen::YieldData']]],
+  ['yielddata',['YieldData',['../d8/d3f/class_origen_1_1_yield_data.html',1,'Origen']]],
   ['yielddef',['YieldDef',['../d2/d8c/struct_yield_def.html',1,'']]],
   ['yielddefmap_5ft',['YieldDefMap_t',['../da/d0b/slmaker_8cpp.html#ae13ac1f88e5bcd0750c10915f2613b5d',1,'slmaker.cpp']]],
   ['yieldnuclides_5ft',['YieldNuclides_t',['../d1/d0c/class_origen_1_1_reaction_resource.html#a3e41e7bc141cf66c34316ba68b432a42',1,'Origen::ReactionResource']]],
@@ -33,10 +33,14 @@ var searchData=
   ['yieldresource_5fscale',['YieldResource_scale',['../da/daf/class_origen_1_1_fake_factory.html#ac0ba6129812e023b6a5c3ab7fb8fe08d',1,'Origen::FakeFactory']]],
   ['yieldresourceinterface_2ecpp',['YieldResourceInterface.cpp',['../d2/d8e/_yield_resource_interface_8cpp.html',1,'']]],
   ['yieldresourceinterface_2eh',['YieldResourceInterface.h',['../d3/d90/_yield_resource_interface_8h.html',1,'']]],
-  ['yieldresourceio',['YieldResourceIO',['../d5/d9a/class_origen_1_1_yield_resource_i_o.html',1,'Origen']]],
   ['yieldresourceio',['YieldResourceIO',['../d5/d9a/class_origen_1_1_yield_resource_i_o.html#a722cae7dd6217a9e842f25d19dc65991',1,'Origen::YieldResourceIO']]],
+  ['yieldresourceio',['YieldResourceIO',['../d5/d9a/class_origen_1_1_yield_resource_i_o.html',1,'Origen']]],
   ['yieldresourceio_2ecpp',['YieldResourceIO.cpp',['../d7/d68/_yield_resource_i_o_8cpp.html',1,'']]],
   ['yieldresourceio_2eh',['YieldResourceIO.h',['../d9/d68/_yield_resource_i_o_8h.html',1,'']]],
+  ['yieldresourceio_5fampx',['YieldResourceIO_ampx',['../d4/dc5/class_origen_1_1_yield_resource_i_o__ampx.html',1,'Origen']]],
+  ['yieldresourceio_5fampx_2ecpp',['YieldResourceIO_ampx.cpp',['../da/d92/_yield_resource_i_o__ampx_8cpp.html',1,'']]],
+  ['yieldresourceio_5fampx_2eh',['YieldResourceIO_ampx.h',['../df/d75/_yield_resource_i_o__ampx_8h.html',1,'']]],
+  ['yieldresourceio_5ff',['YieldResourceIO_F',['../d9/dce/class_origen_1_1test_1_1_yield_resource_i_o___f.html',1,'Origen::test']]],
   ['yieldresourceio_5fm_2ef90',['YieldResourceIO_M.f90',['../d5/de0/_yield_resource_i_o___m_8f90.html',1,'']]],
   ['yieldresourceio_5fstab1',['YieldResourceIO_stab1',['../d8/d95/class_origen_1_1_yield_resource_i_o__stab1.html',1,'Origen']]],
   ['yieldresourceio_5fstab1_2ecpp',['YieldResourceIO_stab1.cpp',['../d1/dba/_yield_resource_i_o__stab1_8cpp.html',1,'']]],
@@ -54,7 +58,6 @@ var searchData=
   ['ymax',['ymax',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#af000ff60a960e6fb91eb2614de656556',1,'rksuite_90::rk_comm_real_1d']]],
   ['yp',['yp',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a6bee3db37dc4802c830353de35adf62f',1,'rksuite_90::rk_comm_real_1d']]],
   ['yp_5fold',['yp_old',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a57e7647cef687be421a3182038ef519e',1,'rksuite_90::rk_comm_real_1d']]],
-  ['yr',['yr',['../dc/d9b/class_transition_system_adapter_tester_jeff252.html#a3067f896ff0c31b998f5aa8de8a00309',1,'TransitionSystemAdapterTesterJeff252']]],
-  ['ytemp',['ytemp',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#aadfede99a80b56737cff239e458c9051',1,'rksuite_90::rk_comm_real_1d']]],
-  ['yy',['yy',['../de/de8/namespaceauxiliary__erf__m.html#a1014ca11d74754857deb0e1bd96f07f0',1,'auxiliary_erf_m']]]
+  ['yr',['yr',['../d9/dce/class_origen_1_1test_1_1_yield_resource_i_o___f.html#a17cf427d650d34fd952883a65587451c',1,'Origen::test::YieldResourceIO_F::yr()'],['../dc/d9b/class_transition_system_adapter_tester_jeff252.html#a3067f896ff0c31b998f5aa8de8a00309',1,'TransitionSystemAdapterTesterJeff252::yr()']]],
+  ['ytemp',['ytemp',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#aadfede99a80b56737cff239e458c9051',1,'rksuite_90::rk_comm_real_1d']]]
 ];

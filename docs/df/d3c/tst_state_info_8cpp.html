@@ -151,68 +151,7 @@ Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/d66/tst_state_info_8cpp-example.html#a0">tstStateInfo.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a3dcf5efae7811f925726bcc9ba023a64">StateInfo::accumulate_definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#aaa3d242e1b2475c0184c7792aa5b3250">StateInfo::fluence()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a976de47802913ecedcb65e919d45394c">StateInfo::flux()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a9094a36f758d5c904d6e02670b6d9809">StateInfo::power()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#ae195ee1ef9e5daa986c76f36bea4d01e">StateInfo::set_energy()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a25565e90da6990303691138914dec6c3">StateInfo::set_fluence()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#ad45e0aeba14fc3dac739859bf6dde1a3">StateInfo::set_flux()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a96044bbdf6261c03244aa460a1d1634d">StateInfo::set_power()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a4e1bc08d966a51e464b45238a41eed28">StateInfo::set_time()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html">StateInfo</a> def;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">double</span> seven_days = 60 * 60 * 24 * 7;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a4e1bc08d966a51e464b45238a41eed28">set_time</a>( seven_days );</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a96044bbdf6261c03244aa460a1d1634d">set_power</a>( 20 );   <span class="comment">// MW</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#ad45e0aeba14fc3dac739859bf6dde1a3">set_flux</a>( 1e14 );  <span class="comment">// n/cm2-s</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EXPECT_FLOAT_EQ( seven_days, def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">time</a>() );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EXPECT_FLOAT_EQ( 20, def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a9094a36f758d5c904d6e02670b6d9809">power</a>() );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    EXPECT_FLOAT_EQ( 1e14, def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a976de47802913ecedcb65e919d45394c">flux</a>() );</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#ae195ee1ef9e5daa986c76f36bea4d01e">set_energy</a>( 20 * 7 );              <span class="comment">// 7*20 MWd</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a25565e90da6990303691138914dec6c3">set_fluence</a>( 1e14 * seven_days );  <span class="comment">//</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    EXPECT_FLOAT_EQ( 140, def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">energy</a>() );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    EXPECT_FLOAT_EQ( 1e14 * seven_days, def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#aaa3d242e1b2475c0184c7792aa5b3250">fluence</a>() );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html">StateInfo</a> def2 = def;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// with same weights</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">double</span> volume = 1.0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">double</span> previous_volume = 1.0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    def2.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a3dcf5efae7811f925726bcc9ba023a64">accumulate_definition</a>( def, volume, previous_volume );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// unchanged for time</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    EXPECT_FLOAT_EQ( seven_days, def2.time() );</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// for power, energy</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// def2 = def + def2</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    EXPECT_FLOAT_EQ( 2 * 20, def2.power() );</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    EXPECT_FLOAT_EQ( 2 * 140, def2.energy() );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// for flux, fluence</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// def2 = ( volume*def + previous_volume*def2 )/(volume+previous_volume)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    EXPECT_FLOAT_EQ( 1e14, def2.flux() );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    EXPECT_FLOAT_EQ( 1e14 * seven_days, def2.fluence() );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// with different weights</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    volume = 0.6;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    previous_volume = 1.4;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#a96044bbdf6261c03244aa460a1d1634d">set_power</a>( 10 );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    def.<a class="code" href="../../d8/dd4/class_origen_1_1_state_info.html#ad45e0aeba14fc3dac739859bf6dde1a3">set_flux</a>( 1e13 );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    def2.accumulate_definition( def, volume, previous_volume );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// unchanged for time</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    EXPECT_FLOAT_EQ( seven_days, def2.time() );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// for power, energy</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// def2 = def + def2</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    EXPECT_FLOAT_EQ( 2 * 20 + 10, def2.power() );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    EXPECT_FLOAT_EQ( 3 * 140, def2.energy() );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// for flux, fluence</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// def2 = ( volume*def + previous_volume*def2 )/(volume+previous_volume)</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    EXPECT_FLOAT_EQ( 0.7 * 1.0e14 + 0.3 * 1.0e13, def2.flux() );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    EXPECT_FLOAT_EQ( 1e14 * seven_days, def2.fluence() );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_info_html_ad45e0aeba14fc3dac739859bf6dde1a3"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#ad45e0aeba14fc3dac739859bf6dde1a3">Origen::StateInfo::set_flux</a></div><div class="ttdeci">void set_flux(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:58</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_a96044bbdf6261c03244aa460a1d1634d"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a96044bbdf6261c03244aa460a1d1634d">Origen::StateInfo::set_power</a></div><div class="ttdeci">void set_power(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:54</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_a46517f06d20da77a7f53cd4a2cde12c6"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">Origen::StateInfo::time</a></div><div class="ttdeci">float time() const </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:60</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_a976de47802913ecedcb65e919d45394c"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a976de47802913ecedcb65e919d45394c">Origen::StateInfo::flux</a></div><div class="ttdeci">float flux() const </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:56</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_aaa3d242e1b2475c0184c7792aa5b3250"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#aaa3d242e1b2475c0184c7792aa5b3250">Origen::StateInfo::fluence</a></div><div class="ttdeci">float fluence() const </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:64</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_a9094a36f758d5c904d6e02670b6d9809"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a9094a36f758d5c904d6e02670b6d9809">Origen::StateInfo::power</a></div><div class="ttdeci">float power() const </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:52</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_a25565e90da6990303691138914dec6c3"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a25565e90da6990303691138914dec6c3">Origen::StateInfo::set_fluence</a></div><div class="ttdeci">void set_fluence(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:66</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_a3dcf5efae7811f925726bcc9ba023a64"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a3dcf5efae7811f925726bcc9ba023a64">Origen::StateInfo::accumulate_definition</a></div><div class="ttdeci">void accumulate_definition(const StateInfo &amp;definition, float volume, float previous_volume=1.0)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:106</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html">Origen::StateInfo</a></div><div class="ttdoc">Container for a State information tag. </div><div class="ttdef"><b>Definition:</b> StateInfo.h:21</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_af0533addfd809fa9a8fcbfc38621ac71"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">Origen::StateInfo::energy</a></div><div class="ttdeci">float energy() const </div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:68</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_a4e1bc08d966a51e464b45238a41eed28"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#a4e1bc08d966a51e464b45238a41eed28">Origen::StateInfo::set_time</a></div><div class="ttdeci">void set_time(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:62</div></div>
-<div class="ttc" id="class_origen_1_1_state_info_html_ae195ee1ef9e5daa986c76f36bea4d01e"><div class="ttname"><a href="../../d8/dd4/class_origen_1_1_state_info.html#ae195ee1ef9e5daa986c76f36bea4d01e">Origen::StateInfo::set_energy</a></div><div class="ttdeci">void set_energy(float)</div><div class="ttdef"><b>Definition:</b> StateInfo.cpp:70</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

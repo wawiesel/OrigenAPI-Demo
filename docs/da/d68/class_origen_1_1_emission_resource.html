@@ -244,14 +244,7 @@ Public Attributes</h2></td></tr>
 <p>References <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#ac6e16494168a05251e65e83c959b6520">EmissionResource::b_map</a>, and <a class="el" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a>.</p>
 
 <p>Referenced by <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a1b92f1f0d9627037d563d36c7c15002b">EmissionResource::add_emission()</a>, <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a6e7c1020d091d23ec2572779c4d19708">EmissionResource::emission()</a>, and <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#aee4ca6fa73f12e1f24c58dd088bb4936">EmissionResource::has_emission()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#ac6e16494168a05251e65e83c959b6520">b_map</a>.find( <span class="keywordtype">id</span> );</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span>( it == <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#ac6e16494168a05251e65e83c959b6520">b_map</a>.end() ) <span class="keywordflow">return</span> <a class="code" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">BAD_SIZE_T</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> it-&gt;second;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="ttc" id="group___cxx_constants_html_ga8da970fb94874ede2d27529011ca9f4b"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a></div><div class="ttdeci">const size_t BAD_SIZE_T</div><div class="ttdef"><b>Definition:</b> Definitions.h:80</div></div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_ac6e16494168a05251e65e83c959b6520"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#ac6e16494168a05251e65e83c959b6520">Origen::EmissionResource::b_map</a></div><div class="ttdeci">std::map&lt; int, size_t &gt; b_map</div><div class="ttdef"><b>Definition:</b> EmissionResource.h:27</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a6e7c1020d091d23ec2572779c4d19708"></a>
@@ -267,21 +260,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a17">tstEmissionResource.cpp</a>, and <a class="el" href="../../da/d36/tst_gamma_resource_i_o_8cpp-example.html#a27">tstGammaResourceIO.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a16">tstEmissionResource.cpp</a>, and <a class="el" href="../../da/d36/tst_gamma_resource_i_o_8cpp-example.html#a27">tstGammaResourceIO.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">EmissionResource::b_emission</a>, <a class="el" href="../../da/d97/group___cxx_constants.html#ga572d194a2066e8a699101ee80901a663">Origen::BAD_INT</a>, <a class="el" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a>, and <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">EmissionResource::emission_index()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a2381a234a8b9a67883e2ffd6f87a23b1">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">size_t</span> i = <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">emission_index</a>( <span class="keywordtype">id</span> );</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span>( i &lt; <a class="code" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">BAD_SIZE_T</a> ) <span class="keywordflow">return</span> <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a>[i];</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> EmissionSpectrum( <a class="code" href="../../da/d97/group___cxx_constants.html#ga572d194a2066e8a699101ee80901a663">BAD_INT</a> );  <span class="comment">// id is bad</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a8f504037fa9a769ab6badb72e9a729f1"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">Origen::EmissionResource::emission_index</a></div><div class="ttdeci">size_t emission_index(int id) const </div><div class="ttdef"><b>Definition:</b> EmissionResource.cpp:8</div></div>
-<div class="ttc" id="group___cxx_constants_html_ga8da970fb94874ede2d27529011ca9f4b"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a></div><div class="ttdeci">const size_t BAD_SIZE_T</div><div class="ttdef"><b>Definition:</b> Definitions.h:80</div></div>
-<div class="ttc" id="group___cxx_constants_html_ga572d194a2066e8a699101ee80901a663"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga572d194a2066e8a699101ee80901a663">Origen::BAD_INT</a></div><div class="ttdeci">const int BAD_INT</div><div class="ttdef"><b>Definition:</b> Definitions.h:77</div></div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a3ca2f9e4098938e6352aad3f76eaacd8"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">Origen::EmissionResource::b_emission</a></div><div class="ttdeci">std::vector&lt; EmissionSpectrum &gt; b_emission</div><div class="ttdef"><b>Definition:</b> EmissionResource.h:26</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1b92f1f0d9627037d563d36c7c15002b"></a>
@@ -297,30 +281,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a15">tstEmissionResource.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a14">tstEmissionResource.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">EmissionResource::b_emission</a>, <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#ac6e16494168a05251e65e83c959b6520">EmissionResource::b_map</a>, <a class="el" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a>, <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">EmissionResource::emission_index()</a>, and <a class="el" href="../../d4/d89/class_origen_1_1_emission_spectrum.html#ae0c063cfb2479f614be43b9d2f92ba63">EmissionSpectrum::id()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../da/d9f/tst_emission_resource_8cpp.html#a1ad65b0467695dbeb81bc359b1ecf9d3">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">size_t</span> i = <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">emission_index</a>( em.id() );</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span>( i &lt; <a class="code" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">BAD_SIZE_T</a> )</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a>[i] = em;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a>.emplace_back( em );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#ac6e16494168a05251e65e83c959b6520">b_map</a>[em.id()] = <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a>.size() - 1;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a8f504037fa9a769ab6badb72e9a729f1"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">Origen::EmissionResource::emission_index</a></div><div class="ttdeci">size_t emission_index(int id) const </div><div class="ttdef"><b>Definition:</b> EmissionResource.cpp:8</div></div>
-<div class="ttc" id="group___cxx_constants_html_ga8da970fb94874ede2d27529011ca9f4b"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a></div><div class="ttdeci">const size_t BAD_SIZE_T</div><div class="ttdef"><b>Definition:</b> Definitions.h:80</div></div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a3ca2f9e4098938e6352aad3f76eaacd8"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">Origen::EmissionResource::b_emission</a></div><div class="ttdeci">std::vector&lt; EmissionSpectrum &gt; b_emission</div><div class="ttdef"><b>Definition:</b> EmissionResource.h:26</div></div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_ac6e16494168a05251e65e83c959b6520"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#ac6e16494168a05251e65e83c959b6520">Origen::EmissionResource::b_map</a></div><div class="ttdeci">std::map&lt; int, size_t &gt; b_map</div><div class="ttdef"><b>Definition:</b> EmissionResource.h:27</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aee4ca6fa73f12e1f24c58dd088bb4936"></a>
@@ -336,17 +302,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a16">tstEmissionResource.cpp</a>, and <a class="el" href="../../da/d36/tst_gamma_resource_i_o_8cpp-example.html#a26">tstGammaResourceIO.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../de/d45/tst_emission_resource_8cpp-example.html#a15">tstEmissionResource.cpp</a>, and <a class="el" href="../../da/d36/tst_gamma_resource_i_o_8cpp-example.html#a26">tstGammaResourceIO.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a>, and <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">EmissionResource::emission_index()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a2381a234a8b9a67883e2ffd6f87a23b1">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">emission_index</a>( <span class="keywordtype">id</span> ) != <a class="code" href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">BAD_SIZE_T</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a8f504037fa9a769ab6badb72e9a729f1"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a8f504037fa9a769ab6badb72e9a729f1">Origen::EmissionResource::emission_index</a></div><div class="ttdeci">size_t emission_index(int id) const </div><div class="ttdef"><b>Definition:</b> EmissionResource.cpp:8</div></div>
-<div class="ttc" id="group___cxx_constants_html_ga8da970fb94874ede2d27529011ca9f4b"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga8da970fb94874ede2d27529011ca9f4b">Origen::BAD_SIZE_T</a></div><div class="ttdeci">const size_t BAD_SIZE_T</div><div class="ttdef"><b>Definition:</b> Definitions.h:80</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9ae9704c9c07df64626e50f22d3a5f67"></a>
@@ -367,12 +328,7 @@ Public Attributes</h2></td></tr>
 <p>References <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">EmissionResource::b_emission</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a2381a234a8b9a67883e2ffd6f87a23b1">TEST()</a>, and <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a0ee1868fda931bd08ca7a8812514f32c">TEST_P()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Require( i &lt; <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a>.size() );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a>[i];</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a3ca2f9e4098938e6352aad3f76eaacd8"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">Origen::EmissionResource::b_emission</a></div><div class="ttdeci">std::vector&lt; EmissionSpectrum &gt; b_emission</div><div class="ttdef"><b>Definition:</b> EmissionResource.h:26</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a6bc8b708013152c8c2acd5106ccf2faa"></a>
@@ -392,9 +348,7 @@ Public Attributes</h2></td></tr>
 <p>References <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">EmissionResource::b_emission</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a2381a234a8b9a67883e2ffd6f87a23b1">TEST()</a>, and <a class="el" href="../../db/d50/tst_gamma_resource_i_o_8cpp.html#a0ee1868fda931bd08ca7a8812514f32c">TEST_P()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a>.size(); }</div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a3ca2f9e4098938e6352aad3f76eaacd8"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">Origen::EmissionResource::b_emission</a></div><div class="ttdeci">std::vector&lt; EmissionSpectrum &gt; b_emission</div><div class="ttdef"><b>Definition:</b> EmissionResource.h:26</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a97261c26b04430b062fb45da0314acf1"></a>
@@ -410,23 +364,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>References <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">EmissionResource::b_emission</a>, <a class="el" href="../../da/d97/group___cxx_constants.html#ga0bc9bbb757bd8cc100a34947e84a24cd">Origen::EMAX</a>, <a class="el" href="../../da/d97/group___cxx_constants.html#ga767b2576f8d74a8dc0957ec03a58ba90">Origen::EMIN</a>, and <a class="el" href="../../de/de8/namespaceauxiliary__erf__m.html#a78b78590e75dbb352329791d73788241">auxiliary_erf_m::er</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">double</span> emin = <a class="code" href="../../da/d97/group___cxx_constants.html#ga767b2576f8d74a8dc0957ec03a58ba90">EMIN</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">double</span> emax = <a class="code" href="../../da/d97/group___cxx_constants.html#ga0bc9bbb757bd8cc100a34947e84a24cd">EMAX</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">const</span> <span class="keyword">auto</span>&amp; em : <a class="code" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">b_emission</a> )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">auto</span> <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a78b78590e75dbb352329791d73788241">er</a> = em.energy_range();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        emin = std::min( emin, <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a78b78590e75dbb352329791d73788241">er</a>.first );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        emax = std::max( emax, <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a78b78590e75dbb352329791d73788241">er</a>.second );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> std::make_pair( emin, emax );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="ttc" id="group___cxx_constants_html_ga0bc9bbb757bd8cc100a34947e84a24cd"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga0bc9bbb757bd8cc100a34947e84a24cd">Origen::EMAX</a></div><div class="ttdeci">const double EMAX</div><div class="ttdef"><b>Definition:</b> Definitions.h:67</div></div>
-<div class="ttc" id="group___cxx_constants_html_ga767b2576f8d74a8dc0957ec03a58ba90"><div class="ttname"><a href="../../da/d97/group___cxx_constants.html#ga767b2576f8d74a8dc0957ec03a58ba90">Origen::EMIN</a></div><div class="ttdeci">const double EMIN</div><div class="ttdef"><b>Definition:</b> Definitions.h:66</div></div>
-<div class="ttc" id="namespaceauxiliary__erf__m_html_a78b78590e75dbb352329791d73788241"><div class="ttname"><a href="../../de/de8/namespaceauxiliary__erf__m.html#a78b78590e75dbb352329791d73788241">auxiliary_erf_m::er</a></div><div class="ttdeci">real(c_double), private er</div><div class="ttdef"><b>Definition:</b> auxiliary.f90:659</div></div>
-<div class="ttc" id="class_origen_1_1_emission_resource_html_a3ca2f9e4098938e6352aad3f76eaacd8"><div class="ttname"><a href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">Origen::EmissionResource::b_emission</a></div><div class="ttdeci">std::vector&lt; EmissionSpectrum &gt; b_emission</div><div class="ttdef"><b>Definition:</b> EmissionResource.h:26</div></div>
-</div><!-- fragment -->
+<p>References <a class="el" href="../../da/d68/class_origen_1_1_emission_resource.html#a3ca2f9e4098938e6352aad3f76eaacd8">EmissionResource::b_emission</a>, <a class="el" href="../../da/d97/group___cxx_constants.html#ga0bc9bbb757bd8cc100a34947e84a24cd">Origen::EMAX</a>, and <a class="el" href="../../da/d97/group___cxx_constants.html#ga767b2576f8d74a8dc0957ec03a58ba90">Origen::EMIN</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

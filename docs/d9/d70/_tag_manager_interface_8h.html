@@ -176,12 +176,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ( (<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen_TagManager</a>*)Origen_TagManager_ptr )</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        -&gt;setIdTag( tag_name, tag_value );</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_tag_manager_html"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen::TagManager</a></div><div class="ttdoc">TagManager class definition. </div><div class="ttdef"><b>Definition:</b> TagManager.h:33</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad5ca14fac4aab4870716998aaa902f07"></a>
@@ -213,12 +208,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    ( (<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen_TagManager</a>*)Origen_TagManager_ptr )</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        -&gt;setInterpTag( tag_name, *tag_value );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_tag_manager_html"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen::TagManager</a></div><div class="ttdoc">TagManager class definition. </div><div class="ttdef"><b>Definition:</b> TagManager.h:33</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a31ae397de5373e6490c1500686b80886"></a>
@@ -244,11 +234,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> ( (<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen_TagManager</a>*)Origen_TagManager_ptr )-&gt;hasTag( tag_name );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_tag_manager_html"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen::TagManager</a></div><div class="ttdoc">TagManager class definition. </div><div class="ttdef"><b>Definition:</b> TagManager.h:33</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa9cc878eeec38436c74c317f932f590d"></a>
@@ -286,21 +272,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> std::string&amp; cix_string =</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        ( (<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen_TagManager</a>*)Origen_TagManager_ptr )-&gt;getIdTag( tag_name );</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> t_length =</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        *lengthOfString2Populate &lt; static_cast&lt;int&gt;( cix_string.length() )</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            ? *lengthOfString2Populate</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            : cix_string.length();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    strncpy( string2Populate, cix_string.c_str(), t_length );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> cix_i = t_length; cix_i &lt; *lengthOfString2Populate; cix_i++ )</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        string2Populate[cix_i] = <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_tag_manager_html"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen::TagManager</a></div><div class="ttdoc">TagManager class definition. </div><div class="ttdef"><b>Definition:</b> TagManager.h:33</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa73d6fdb9658bdaf20946605ef132c14"></a>
@@ -326,12 +298,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> ( (<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen_TagManager</a>*)Origen_TagManager_ptr )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        -&gt;getInterpTag( tag_name );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_tag_manager_html"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen::TagManager</a></div><div class="ttdoc">TagManager class definition. </div><div class="ttdef"><b>Definition:</b> TagManager.h:33</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab6e7e9f6bb14b73804203d4a45e3391c"></a>
@@ -346,9 +313,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d9/d70/_tag_manager_interface_8h.html#aa08fe76c7ab7253d50ae0836c9407b28">Origen_TagManager</a>(); }</div>
-<div class="ttc" id="_tag_manager_interface_8h_html_aa08fe76c7ab7253d50ae0836c9407b28"><div class="ttname"><a href="../../d9/d70/_tag_manager_interface_8h.html#aa08fe76c7ab7253d50ae0836c9407b28">Origen_TagManager</a></div><div class="ttdeci">Origen::TagManager Origen_TagManager</div><div class="ttdef"><b>Definition:</b> TagManagerInterface.h:14</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ae9fa799e03714c6f1c4d5b561baf6148"></a>
@@ -364,11 +329,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">delete</span>(<a class="code" href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen_TagManager</a>*)Origen_TagManager_ptr;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_tag_manager_html"><div class="ttname"><a href="../../d7/d5c/class_origen_1_1_tag_manager.html">Origen::TagManager</a></div><div class="ttdoc">TagManager class definition. </div><div class="ttdef"><b>Definition:</b> TagManager.h:33</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

@@ -170,11 +170,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader) :: this</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::orig</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    this%instance_ptr = f_origen_libraryheader_initialize_copy( orig%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9ec012292658510e9ee092e79ae0d9c5"></a>
@@ -190,11 +186,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">integer(C_LONG)</span>:: result2return</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    result2return=f_origen_libraryheader_uid( )</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9ddfc74c4d6a22b1372b67d28f41e555"></a>
@@ -210,11 +202,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    result2return=f_origen_libraryheader_month_made(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a319bd24f901435bc7d7aefe92306ea09"></a>
@@ -230,11 +218,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    result2return=f_origen_libraryheader_day_made(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a5e22cb3503417e4201b16ba5fa770039"></a>
@@ -250,11 +234,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    result2return=f_origen_libraryheader_year_made(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0d7bd6c24469388dbc72e8a2c219ae56"></a>
@@ -280,13 +260,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">character(len=*)</span> :: string2populate</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">integer(C_INT)</span> :: lengthofstring2populate</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    lengthofstring2populate = len(string2populate)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_title(this%instance_ptr, string2populate, lengthofstring2populate)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af5ee468503528a6adb3282c82a4b729c"></a>
@@ -312,11 +286,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::month_made</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_set_month_made(this%instance_ptr, month_made)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab0e2512554ba6936d717a842bea461dc"></a>
@@ -342,11 +312,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::day_made</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_set_day_made(this%instance_ptr, day_made)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0f37108dc84463b9ac7df29bc7fd3b2c"></a>
@@ -372,11 +338,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::year_made</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_set_year_made(this%instance_ptr, year_made)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a504b26d8fa0cfe3be97e06ff565902fc"></a>
@@ -402,11 +364,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">character(len=*)</span>::title</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_set_title(this%instance_ptr, title//c_null_char)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7b007de1937cc703bc045d4772f6bba3"></a>
@@ -422,11 +380,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    result2return=f_origen_libraryheader_has_nuclide_set(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a956a613bdcfc989e3491b7215e4561cf"></a>
@@ -452,11 +406,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">class</span>(origen_nuclideset)::nuclide_set</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_get_nuclide_set(this%instance_ptr, nuclide_set%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2e964a78bf224d426d57cb5f02df36bf"></a>
@@ -482,11 +432,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">class</span>(origen_nuclideset)::nuclide_set</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_set_nuclide_set(this%instance_ptr, nuclide_set%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a8a31950419968d8d800caf9ced1209f0"></a>
@@ -512,11 +458,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">class</span>(origen_nuclideset)::nuclide_set</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_manageptr_nuclide_set(this%instance_ptr, nuclide_set%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a49974b9990404249a725593876daeed4"></a>
@@ -542,11 +484,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader)::this</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">class</span>(origen_nuclideset)::nuclide_set</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_getptr_nuclide_set(this%instance_ptr, nuclide_set%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a52eca48b8b0e75169eb4c3b1257ab387"></a>
@@ -562,10 +500,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader) :: this</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    this%instance_ptr = f_origen_libraryheader_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0cc47219ef292246dbac98ea41c868c1"></a>
@@ -581,11 +516,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">class</span>(origen_libraryheader) :: this</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">call </span>f_origen_libraryheader_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

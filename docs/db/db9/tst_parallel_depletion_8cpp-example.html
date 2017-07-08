@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">// warm up</span></div>
 <div class="line">    <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.barrier();</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordtype">double</span> <a name="a2"></a><a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">x</a> = 1;</div>
+<div class="line">        <span class="keywordtype">double</span> x = 1;</div>
 <div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; 5e7; ++j )</div>
 <div class="line">        {</div>
 <div class="line">            x = x * 2 / 6.;</div>
@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.barrier();</div>
 <div class="line">    {</div>
 <div class="line">        SCOPED_TIMER( <span class="stringliteral">&quot;total time&quot;</span> );</div>
-<div class="line">        <span class="keywordtype">double</span> <a class="code" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">x</a> = 1;</div>
+<div class="line">        <span class="keywordtype">double</span> x = 1;</div>
 <div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; 1e9; ++j )</div>
 <div class="line">        {</div>
 <div class="line">            x = x * 2 / 6.;</div>
@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        (void)x;</div>
 <div class="line">    }</div>
 <div class="line">    <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.barrier();</div>
-<div class="line">    <span class="keywordflow">if</span>( <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank() == 0 ) <a name="a3"></a><a class="code" href="../../d5/dc1/namespace_origen.html#af1145aecbf23fda29398fa71fe1c8dda">Origen::printTimingReport</a>( std::cout );</div>
+<div class="line">    <span class="keywordflow">if</span>( <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank() == 0 ) <a name="a2"></a><a class="code" href="../../d5/dc1/namespace_origen.html#af1145aecbf23fda29398fa71fe1c8dda">Origen::printTimingReport</a>( std::cout );</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a0bbbb90b9625a341931882aeb6815312">TEST</a>( Parallel, WeakScaling )</div>
@@ -170,8 +170,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <span class="comment">//**********************************************************************</span></div>
 <div class="line"></div>
 <div class="line">        ScaleUtils::IO::DB opts;</div>
-<div class="line">        lib = <a name="a4"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>(</div>
-<div class="line">            <a name="a5"></a><a class="code" href="../../d5/dc1/namespace_origen.html#affc00b67fd5e67c205d0f87f8daf5360">Origen::loadLibrary</a>( Origen::pwrlib_filepath, opts ) );</div>
+<div class="line">        lib = <a name="a3"></a><a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>(</div>
+<div class="line">            <a name="a4"></a><a class="code" href="../../d5/dc1/namespace_origen.html#affc00b67fd5e67c205d0f87f8daf5360">Origen::loadLibrary</a>( Origen::pwrlib_filepath, opts ) );</div>
 <div class="line">        opts.throwErrorStack();</div>
 <div class="line">        trx = lib-&gt;newsp_transition_matrix_at( 0 );</div>
 <div class="line">    }</div>
@@ -184,13 +184,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">// divide materials evenly into number of processes, taking extra</span></div>
 <div class="line">    <span class="comment">// into head node</span></div>
 <div class="line">    <span class="keywordtype">int</span> num_mat_total = 1 * <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.size();</div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> matmap( <span class="keyword">new</span> <a name="_a6"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a>() );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a5bae16b6dbc998d03ea075b3290a1b91">Origen::SP_MaterialMap</a> matmap( <span class="keyword">new</span> <a name="_a5"></a><a class="code" href="../../d2/d86/class_origen_1_1_material_map.html">Origen::MaterialMap</a>() );</div>
 <div class="line">    {</div>
 <div class="line">        SCOPED_TIMER( <span class="stringliteral">&quot;mat time&quot;</span> );</div>
 <div class="line"></div>
 <div class="line">        std::vector&lt;int&gt; ids;</div>
 <div class="line">        std::vector&lt;double&gt; numden;</div>
-<div class="line">        <a name="a7"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a>( ids, numden );</div>
+<div class="line">        <a name="a6"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a>( ids, numden );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordtype">int</span> num_mat = num_mat_total / <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.size();</div>
 <div class="line">        <span class="keywordflow">if</span>( <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank() == 0 ) num_mat += num_mat_total % num_mat;</div>
@@ -199,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        std::vector&lt;int&gt; mat_count;</div>
 <div class="line">        <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.allgather( num_mat, mat_count );</div>
 <div class="line">        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = 0;</div>
-<div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> <a name="a8"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = 0; <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> &lt; mat_count.size(); ++<a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> )</div>
+<div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> <a name="a7"></a><a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = 0; <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> &lt; mat_count.size(); ++<a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span>( <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> == <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.rank() )</div>
 <div class="line">            {</div>
@@ -209,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">                    ++id;</div>
 <div class="line">                    std::string name = nprintf( <span class="stringliteral">&quot;mat%d&quot;</span>, <span class="keywordtype">id</span> );</div>
 <div class="line">                    <span class="keywordtype">double</span> volume = 5.6;</div>
-<div class="line">                    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> mat( <span class="keyword">new</span> <a name="_a9"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Origen::Material</a>(</div>
+<div class="line">                    <a class="code" href="../../d5/dc1/namespace_origen.html#a55c03e9e8d89fdf39a370e8e83220fec">Origen::SP_Material</a> mat( <span class="keyword">new</span> <a name="_a8"></a><a class="code" href="../../df/d34/class_origen_1_1_material.html">Origen::Material</a>(</div>
 <div class="line">                        <span class="stringliteral">&quot;GENERAL&quot;</span>, lib, name, <span class="keywordtype">id</span>, volume ) );</div>
 <div class="line">                    mat-&gt;set_numden_bos( numden, ids );</div>
 <div class="line">                    matmap-&gt;add( mat );</div>
@@ -233,17 +233,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create step depleter.</span></div>
 <div class="line">    DataContainer dc;</div>
-<div class="line">    <a name="_a10"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html">Origen::MultiZoneDepleter</a> mzd;</div>
+<div class="line">    <a name="_a9"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html">Origen::MultiZoneDepleter</a> mzd;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set solver</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">Origen::SP_Solver</a> slv( <span class="keyword">new</span> <a name="_a11"></a><a class="code" href="../../dd/db3/class_origen_1_1_solver__matrex.html">Origen::Solver_matrex</a>() );</div>
-<div class="line">    mzd.<a name="a12"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a900c4ac4ba5ae27bd02bacf4dee0a1b1">set_solver</a>( slv );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a9da6dd730b150000ffb0235d3c8a0c22">Origen::SP_Solver</a> slv( <span class="keyword">new</span> <a name="_a10"></a><a class="code" href="../../dd/db3/class_origen_1_1_solver__matrex.html">Origen::Solver_matrex</a>() );</div>
+<div class="line">    mzd.<a name="a11"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a900c4ac4ba5ae27bd02bacf4dee0a1b1">set_solver</a>( slv );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set materials</span></div>
-<div class="line">    mzd.<a name="a13"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
+<div class="line">    mzd.<a name="a12"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a894b9b129ce6272d01bb9d8d62cc6084">set_materials</a>( matmap );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set communicator</span></div>
-<div class="line">    mzd.<a name="a14"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa25aacf5e2fc3a37c73e4d8d1049260d">set_comm</a>( &amp;<a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a> );</div>
+<div class="line">    mzd.<a name="a13"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa25aacf5e2fc3a37c73e4d8d1049260d">set_comm</a>( &amp;<a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a> );</div>
 <div class="line"></div>
 <div class="line">    dc.addInt( <span class="stringliteral">&quot;numSubsteps&quot;</span>, 1 );</div>
 <div class="line">    dc.addBool( <span class="stringliteral">&quot;depleteByPower&quot;</span>, <span class="keyword">false</span> );</div>
@@ -270,10 +270,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">            <span class="comment">// Update data container.</span></div>
 <div class="line">            dc.addDouble( <span class="stringliteral">&quot;stepTime&quot;</span>, stepTime );</div>
-<div class="line">            mzd.<a name="a15"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">update</a>( dc );</div>
+<div class="line">            mzd.<a name="a14"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a04c28f4e34f3f4432d71f54c5fcf3550">update</a>( dc );</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Step in time.</span></div>
-<div class="line">            mzd.<a name="a16"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
+<div class="line">            mzd.<a name="a15"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#ae006844a02161d12182ab372ca5c257b">execute</a>();</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Output</span></div>
 <div class="line">            <span class="comment">/*</span></div>
@@ -386,8 +386,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">// set communicator</span></div>
 <div class="line">    mzd.<a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#aa25aacf5e2fc3a37c73e4d8d1049260d">set_comm</a>( &amp;<a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a> );</div>
 <div class="line"></div>
-<div class="line">    mzd.<a name="a17"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">set_power_constraint</a>( 4.9e6 );</div>
-<div class="line">    mzd.<a name="a18"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( {1.0} );</div>
+<div class="line">    mzd.<a name="a16"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a8d34e157b956e9d2b792647b8c050d28">set_power_constraint</a>( 4.9e6 );</div>
+<div class="line">    mzd.<a name="a17"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#af1df1032351f82bbbe622d0b6566361e">set_substep_dtrel</a>( {1.0} );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Enter step loop.</span></div>
 <div class="line">    <a class="code" href="../../d9/d0d/tst_parallel_depletion_8cpp.html#a3fbc6275638f2c6c543b3f46c7d6a9db">world</a>.barrier();</div>
@@ -398,7 +398,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            SCOPED_TIMER( nprintf( <span class="stringliteral">&quot;loop(%03d)&quot;</span>, ( j + 1 ) ) );</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Add new step data.</span></div>
-<div class="line">            mzd.<a name="a19"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a55669259c86b01befd75b8d81502170d">add_step</a>( time[j + 1] - time[j] );</div>
+<div class="line">            mzd.<a name="a18"></a><a class="code" href="../../d4/d0c/class_origen_1_1_multi_zone_depleter.html#a55669259c86b01befd75b8d81502170d">add_step</a>( time[j + 1] - time[j] );</div>
 <div class="line">            <span class="keywordflow">for</span>( <span class="keyword">auto</span> it = matmap-&gt;begin(); it != matmap-&gt;end(); ++it )</div>
 <div class="line">            {</div>
 <div class="line">                it-&gt;second-&gt;set_flux( flux[j] );</div>

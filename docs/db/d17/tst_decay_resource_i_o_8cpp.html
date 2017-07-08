@@ -158,104 +158,7 @@ Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d04/tst_decay_resource_i_o_8cpp-example.html#a0">tstDecayResourceIO.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ae52fe60d2aa8238466dd890763be2672">DecayResource::check()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#a9a771fbb48ad33f3ca1555f8035294f0">DecayParent::get_channel_map()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#a817b970e5b1d54959d0e87eec7622213">DecayParent::get_decay_constant()</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">DecayResource::get_parent_map()</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a1c515dee2a02ab53734d2a80e2b07256">DecayResource::has_decay_mode()</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#aeed6058308ba91219209453242970099">DecayResource::is_present()</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a4fd4c904cf4bbba51a518c434ec0880a">DecayResource::ISOMERIC_YIELDS</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">DecayResource::MISSING_YIELDS</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a3ed177ab84bfbc739eeb5f82f1964d93">Origen::printDecayTable()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">DecayResource::to_json()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// Load</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html">Origen::DecayResource</a> dr;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> pass;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        ScaleUtils::IO::DB opts;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="../../dc/d5b/class_origen_1_1_decay_resource_i_o.html">Origen::DecayResourceIO</a> io;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        pass = io.load( dr, Origen::decay_filepath, opts );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        ASSERT_TRUE( pass ) &lt;&lt; opts.writeErrorStack();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Check the object for correctness.</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::vector&lt;std::string&gt; errors;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    pass = dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ae52fe60d2aa8238466dd890763be2672">check</a>( errors );</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span>( !pass )</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Checking Errors:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ScaleUtils::IO::DB db;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        db.appendErrorStack( errors );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::cout &lt;&lt; db.dumpErrorStack() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ASSERT_TRUE( pass );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Check that hydrogen is present.</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    EXPECT_TRUE( dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#aeed6058308ba91219209453242970099">is_present</a>( 1001 ) );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Check out hydrogen in detail.</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    EXPECT_EQ( 0.0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_half_life() );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    EXPECT_LT( 0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_time_units() );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    EXPECT_EQ( 0.0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_recoverable_energy_value() );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    EXPECT_EQ( 0.0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_q_fraction_from_photons() );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    EXPECT_EQ( 0.0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_decay_constant() );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    EXPECT_EQ( 1.0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_rcg_for_air() );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    EXPECT_EQ( 1.0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_rcg_for_water() );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Test changing something directly.</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].set_decay_constant( 3.04 );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    EXPECT_FLOAT_EQ( 3.04, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_decay_constant() );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].set_decay_constant( 0.0 );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    EXPECT_EQ( 0.0, dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[1001].get_decay_constant() );</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Check out Cs-137 with half life 30.1 yrs.</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        EXPECT_TRUE( dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#aeed6058308ba91219209453242970099">is_present</a>( 55137 ) );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// Check the decay constant for 1% difference.</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">double</span> ref_decay = log( 2.0 ) / ( 30.1 * 365 * 24 * 60 * 60 );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="../../df/d71/class_origen_1_1_decay_parent.html">Origen::DecayParent</a> parent = dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[55137];</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        EXPECT_NEAR( ref_decay, parent.<a class="code" href="../../df/d71/class_origen_1_1_decay_parent.html#a817b970e5b1d54959d0e87eec7622213">get_decay_constant</a>(), ref_decay * 0.01 );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        EXPECT_TRUE(</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a1c515dee2a02ab53734d2a80e2b07256">has_decay_mode</a>( 55137, ScaleData::Utils::DECAY_BETA_MINUS ) );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html">Origen::DecayChannel</a> channel =</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            parent.<a class="code" href="../../df/d71/class_origen_1_1_decay_parent.html#a9a771fbb48ad33f3ca1555f8035294f0">get_channel_map</a>()[ScaleData::Utils::DECAY_BETA_MINUS];</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        EXPECT_EQ( <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a4fd4c904cf4bbba51a518c434ec0880a">Origen::DecayResource::ISOMERIC_YIELDS</a>,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                   channel.get_yield_type() );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        EXPECT_NEAR( 1.0, channel.get_branch_ratio(), 1e-5 );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        EXPECT_NEAR( 0.053, channel.get_yield_map()[0], 0.053 * 0.01 );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        EXPECT_NEAR( 0.947, channel.get_yield_map()[1], 0.947 * 0.01 );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Check out Cm-250</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        EXPECT_TRUE( dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#aeed6058308ba91219209453242970099">is_present</a>( 96250 ) );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../dc/da1/class_origen_1_1_decay_channel.html">Origen::DecayChannel</a> channel =</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[96250]</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                .get_channel_map()[ScaleData::Utils::DECAY_SPONTANEOUS_FISSION];</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        EXPECT_EQ( <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">Origen::DecayResource::MISSING_YIELDS</a>,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                   channel.get_yield_type() );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        EXPECT_NEAR( 0.74, channel.get_branch_ratio(), 0.74 * 0.01 );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// Print the decay resource as JSON.</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span>( <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        Scale::Json::Value json = dr.<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">to_json</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::cout &lt;&lt; json.toStyledString() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// Print the decay resource in a table.</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span>( <span class="keyword">false</span> ) <a class="code" href="../../d5/dc1/namespace_origen.html#a3ed177ab84bfbc739eeb5f82f1964d93">printDecayTable</a>( dr, std::cout );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_abb6502e5960d0dc9d929156de2ece2eb"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">Origen::DecayResource::MISSING_YIELDS</a></div><div class="ttdeci">static const int MISSING_YIELDS</div><div class="ttdef"><b>Definition:</b> DecayResource.h:162</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ae52fe60d2aa8238466dd890763be2672"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ae52fe60d2aa8238466dd890763be2672">Origen::DecayResource::check</a></div><div class="ttdeci">bool check(Vec_Str &amp;errors) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:547</div></div>
-<div class="ttc" id="namespace_origen_html_a3ed177ab84bfbc739eeb5f82f1964d93"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a3ed177ab84bfbc739eeb5f82f1964d93">Origen::printDecayTable</a></div><div class="ttdeci">void printDecayTable(const DecayResource &amp;dr, std::ostream &amp;stream)</div><div class="ttdoc">prints all decay info on the library </div><div class="ttdef"><b>Definition:</b> print.cpp:42</div></div>
-<div class="ttc" id="class_origen_1_1_decay_parent_html_a817b970e5b1d54959d0e87eec7622213"><div class="ttname"><a href="../../df/d71/class_origen_1_1_decay_parent.html#a817b970e5b1d54959d0e87eec7622213">Origen::DecayParent::get_decay_constant</a></div><div class="ttdeci">double get_decay_constant() const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:460</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a3e708d496acb090a8657506c512ecf55"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">Origen::DecayResource::to_json</a></div><div class="ttdeci">Scale::Json::Value to_json() const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:158</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a1c515dee2a02ab53734d2a80e2b07256"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a1c515dee2a02ab53734d2a80e2b07256">Origen::DecayResource::has_decay_mode</a></div><div class="ttdeci">bool has_decay_mode(const int id, const int decay_mode) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:85</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_aeed6058308ba91219209453242970099"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#aeed6058308ba91219209453242970099">Origen::DecayResource::is_present</a></div><div class="ttdeci">bool is_present(const int id) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:57</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a2f62f52e16ae55e92dfb37cf59bee8ce"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">Origen::DecayResource::get_parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; &amp; get_parent_map()</div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:398</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a4fd4c904cf4bbba51a518c434ec0880a"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a4fd4c904cf4bbba51a518c434ec0880a">Origen::DecayResource::ISOMERIC_YIELDS</a></div><div class="ttdeci">static const int ISOMERIC_YIELDS</div><div class="ttdef"><b>Definition:</b> DecayResource.h:160</div></div>
-<div class="ttc" id="class_origen_1_1_decay_parent_html"><div class="ttname"><a href="../../df/d71/class_origen_1_1_decay_parent.html">Origen::DecayParent</a></div><div class="ttdef"><b>Definition:</b> DecayResource.h:41</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html">Origen::DecayResource</a></div><div class="ttdef"><b>Definition:</b> DecayResource.h:82</div></div>
-<div class="ttc" id="class_origen_1_1_decay_channel_html"><div class="ttname"><a href="../../dc/da1/class_origen_1_1_decay_channel.html">Origen::DecayChannel</a></div><div class="ttdef"><b>Definition:</b> DecayResource.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_i_o_html"><div class="ttname"><a href="../../dc/d5b/class_origen_1_1_decay_resource_i_o.html">Origen::DecayResourceIO</a></div><div class="ttdef"><b>Definition:</b> DecayResourceIO.h:12</div></div>
-<div class="ttc" id="class_origen_1_1_decay_parent_html_a9a771fbb48ad33f3ca1555f8035294f0"><div class="ttname"><a href="../../df/d71/class_origen_1_1_decay_parent.html#a9a771fbb48ad33f3ca1555f8035294f0">Origen::DecayParent::get_channel_map</a></div><div class="ttdeci">void get_channel_map(Vec_Int &amp;decay_modes, std::vector&lt; DecayChannel * &gt; &amp;decaychannels)</div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:520</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4a0153e0f53977b3175104fa8e6cba85"></a>
@@ -281,21 +184,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">bool</span> pass;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        ScaleUtils::IO::DB opts;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="../../dc/d5b/class_origen_1_1_decay_resource_i_o.html">Origen::DecayResourceIO</a> io;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html">Origen::DecayResource</a> dr;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        pass = io.load( dr, Origen::yields_filepath, opts );</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        EXPECT_FALSE( pass );</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        EXPECT_EQ( 2, opts.numError() ) &lt;&lt; opts.writeErrorStack();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        opts.clearErrorStack();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html">Origen::DecayResource</a></div><div class="ttdef"><b>Definition:</b> DecayResource.h:82</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_i_o_html"><div class="ttname"><a href="../../dc/d5b/class_origen_1_1_decay_resource_i_o.html">Origen::DecayResourceIO</a></div><div class="ttdef"><b>Definition:</b> DecayResourceIO.h:12</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

@@ -10,5 +10,7 @@ var searchData=
   ['reactionresourceio_5fampx_2ecpp',['ReactionResourceIO_ampx.cpp',['../d5/d5e/_reaction_resource_i_o__ampx_8cpp.html',1,'']]],
   ['reactionresourceio_5fampx_2eh',['ReactionResourceIO_ampx.h',['../d1/d0c/_reaction_resource_i_o__ampx_8h.html',1,'']]],
   ['readme_2emd',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]],
+  ['removal_2ecpp',['Removal.cpp',['../da/dc0/_removal_8cpp.html',1,'']]],
+  ['removal_2eh',['Removal.h',['../d1/d73/_removal_8h.html',1,'']]],
   ['rksuite_5f90_2ef90',['rksuite_90.f90',['../df/df9/rksuite__90_8f90.html',1,'']]]
 ];

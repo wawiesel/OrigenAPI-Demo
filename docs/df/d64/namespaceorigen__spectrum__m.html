@@ -168,11 +168,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>:: result2return</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    result2return=f_origen_spectrum_intensity_size(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a5b5e7155782f3f08d563eb90f2bcedc0"></a>
@@ -188,11 +184,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    result2return=f_origen_spectrum_has_intensity(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="abfccb4d2182dddb5d8a99b57854e8341"></a>
@@ -218,11 +210,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::intensity</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_get_intensity_vec(this%instance_ptr, intensity%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a97e6569294ac62c147732c9f913157fb"></a>
@@ -248,11 +236,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::intensity</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_set_intensity_vec(this%instance_ptr, intensity%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7138b211fe539fa73155c8e4f7de5c0a"></a>
@@ -278,11 +262,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::intensity</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_manageptr_intensity(this%instance_ptr, intensity%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa159fec5ed18891605ea0586b8afdb42"></a>
@@ -308,11 +288,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::intensity</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_getptr_intensity_vec(this%instance_ptr, intensity%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aae2f381a681891bd0146ef4b2c65ed1c"></a>
@@ -338,19 +314,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::intensity_size</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">dimension(:)</span>,<span class="keywordtype">allocatable</span>::intensity</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    intensity_size = this % intensity_size()</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>( <span class="keyword">allocated</span>(intensity) )<span class="keywordflow">then</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span>( <span class="keyword">size</span>(intensity,1).ne.intensity_size )<span class="keyword">deallocate</span>(intensity)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordflow">    end if</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span>( intensity_size==0 )<span class="keywordflow">return</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span>( .not.<span class="keyword">allocated</span>(intensity) )<span class="keyword">allocate</span>(intensity(intensity_size))</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_get_intensity(this%instance_ptr, intensity_size,intensity(1))</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a999cec53373521d86285873273bafc20"></a>
@@ -376,12 +340,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::idx</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    result2return=f_origen_spectrum_intensity_at(this%instance_ptr, idx-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7ef7096b1471f9b7b76c6891cef478c8"></a>
@@ -407,14 +366,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::intensity_size</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">dimension(:)</span>::intensity</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    intensity_size = <span class="keyword">size</span>(intensity,1)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_set_intensity(this%instance_ptr, intensity_size,intensity(1))</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a44096722c74921489405c391a4d81a67"></a>
@@ -430,11 +382,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>:: result2return</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    result2return=f_origen_spectrum_bounds_size(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af4b9bded3f7d57b22f40b9edeb89fdc6"></a>
@@ -450,11 +398,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    result2return=f_origen_spectrum_has_bounds(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a598983c57dfeca320fcd236674e13712"></a>
@@ -480,11 +424,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::bounds</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_get_bounds_vec(this%instance_ptr, bounds%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab5beeaa6014dbbd5a6bc5eecea809cda"></a>
@@ -510,11 +450,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::bounds</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_set_bounds_vec(this%instance_ptr, bounds%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aea2cece9ad749e4af7cdbf906f949884"></a>
@@ -540,11 +476,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::bounds</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_manageptr_bounds(this%instance_ptr, bounds%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aacd481995a8d2270e099ac97928babf5"></a>
@@ -570,11 +502,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">class</span>(scalestl_vec_dbl)::bounds</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_getptr_bounds_vec(this%instance_ptr, bounds%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a045bf2b7668b4b1b420ff9d0b83ca864"></a>
@@ -600,19 +528,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::bounds_size</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">dimension(:)</span>,<span class="keywordtype">allocatable</span>::bounds</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    bounds_size = this % bounds_size()</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span>( <span class="keyword">allocated</span>(bounds) )<span class="keywordflow">then</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span>( <span class="keyword">size</span>(bounds,1).ne.bounds_size )<span class="keyword">deallocate</span>(bounds)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keywordflow">    end if</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span>( bounds_size==0 )<span class="keywordflow">return</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span>( .not.<span class="keyword">allocated</span>(bounds) )<span class="keyword">allocate</span>(bounds(bounds_size))</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_get_bounds(this%instance_ptr, bounds_size,bounds(1))</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a3425397d2a58144f52fdb86cf3521539"></a>
@@ -638,12 +554,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::idx</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    result2return=f_origen_spectrum_bounds_at(this%instance_ptr, idx-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af57cdf10219d52654798436829c51abc"></a>
@@ -669,14 +580,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">integer(C_SIZE_T)</span>::bounds_size</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">dimension(:)</span>::bounds</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    bounds_size = <span class="keyword">size</span>(bounds,1)</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_set_bounds(this%instance_ptr, bounds_size,bounds(1))</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1fef9a36be55ab345917847416d77869"></a>
@@ -692,11 +596,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum)::this</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    result2return=f_origen_spectrum_total_intensity(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9362f530671d9b060bd6cac311f7bc93"></a>
@@ -712,10 +612,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum) :: this</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    this%instance_ptr = f_origen_spectrum_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a54c0adafb4d06fd64b85419ee5fc5cae"></a>
@@ -731,11 +628,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">class</span>(origen_spectrum) :: this</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">call </span>f_origen_spectrum_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

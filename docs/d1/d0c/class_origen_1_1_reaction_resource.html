@@ -131,7 +131,7 @@ Inheritance diagram for ReactionResource:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac00a717a1c502086e339690d7fb68904"><td class="memItemLeft" align="right" valign="top">typedef detail::RRNuclide&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ac00a717a1c502086e339690d7fb68904">Nuclide</a></td></tr>
+<tr class="memitem:ac00a717a1c502086e339690d7fb68904"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d8/df7/class_origen_1_1detail_1_1_r_r_nuclide.html">detail::RRNuclide</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ac00a717a1c502086e339690d7fb68904">Nuclide</a></td></tr>
 <tr class="separator:ac00a717a1c502086e339690d7fb68904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e41e7bc141cf66c34316ba68b432a42"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; int, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a3e41e7bc141cf66c34316ba68b432a42">YieldNuclides_t</a></td></tr>
 <tr class="separator:a3e41e7bc141cf66c34316ba68b432a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,7 +412,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef detail::RRNuclide&lt;float&gt; <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ac00a717a1c502086e339690d7fb68904">Nuclide</a></td>
+          <td class="memname">typedef <a class="el" href="../../d8/df7/class_origen_1_1detail_1_1_r_r_nuclide.html">detail::RRNuclide</a>&lt;float&gt; <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ac00a717a1c502086e339690d7fb68904">Nuclide</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -494,25 +494,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">ReactionResource::d_allowed_mts</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">ReactionResource::d_direct_yields</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">ReactionResource::d_max_isomeric_state</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a88445bff0a0cfdeff02aabed82fc028d">ReactionResource::default_allowed_mts()</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ab425f991455f285b5efa5ece96c7c690">ReactionResource::default_direct_yields()</a>, and <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a134d4bc86fc4fd6b864ba57018888c71">ReactionResource::default_isomeric_states()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    : <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">d_storage_bounds</a>( <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    , <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">d_max_isomeric_state</a>( 1 )</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    , <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a>( <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;initializing defaults for ReactionResource&quot;</span> );</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a88445bff0a0cfdeff02aabed82fc028d">default_allowed_mts</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a> );</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a134d4bc86fc4fd6b864ba57018888c71">default_isomeric_states</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">d_max_isomeric_state</a>, <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a> );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ab425f991455f285b5efa5ece96c7c690">default_direct_yields</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">d_direct_yields</a> );</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;leaving ReactionResource::ctor&quot;</span> );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7359f05b21d0c222869bd8d900a8fddc"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">Origen::ReactionResource::d_storage_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_storage_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:278</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a88445bff0a0cfdeff02aabed82fc028d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a88445bff0a0cfdeff02aabed82fc028d">Origen::ReactionResource::default_allowed_mts</a></div><div class="ttdeci">static void default_allowed_mts(AllowedMts_t &amp;allowed_mts)</div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:224</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_aad413c6ce11b3ecb6d9e6a98342a691e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">Origen::ReactionResource::d_max_isomeric_state</a></div><div class="ttdeci">int d_max_isomeric_state</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:279</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a134d4bc86fc4fd6b864ba57018888c71"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a134d4bc86fc4fd6b864ba57018888c71">Origen::ReactionResource::default_isomeric_states</a></div><div class="ttdeci">static void default_isomeric_states(int max_isomeric_state, AllowedMts_t &amp;allowed_mts)</div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:249</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ab425f991455f285b5efa5ece96c7c690"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ab425f991455f285b5efa5ece96c7c690">Origen::ReactionResource::default_direct_yields</a></div><div class="ttdeci">static void default_direct_yields(DirectYields_t &amp;direct_yields)</div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:258</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7e6c7af5d82ff69bcfb49c49cf36c6bd"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">Origen::ReactionResource::d_using_data_mapper</a></div><div class="ttdeci">bool d_using_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:280</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a101ac67b4fdb0ccf6a7fd661a112fa3a"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">Origen::ReactionResource::d_direct_yields</a></div><div class="ttdeci">DirectYields_t d_direct_yields</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:291</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad4d653b1cdeabab8ededd0a8ec630754"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">Origen::ReactionResource::d_allowed_mts</a></div><div class="ttdeci">AllowedMts_t d_allowed_mts</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:290</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="afc4e93e98cb1ec1a6242eb0295ffe760"></a>
@@ -530,25 +512,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">ReactionResource::d_allowed_mts</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">ReactionResource::d_direct_yields</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">ReactionResource::d_max_isomeric_state</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a88445bff0a0cfdeff02aabed82fc028d">ReactionResource::default_allowed_mts()</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ab425f991455f285b5efa5ece96c7c690">ReactionResource::default_direct_yields()</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a134d4bc86fc4fd6b864ba57018888c71">ReactionResource::default_isomeric_states()</a>, and <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4daa14d1b04d0fe8e343c8b7db9b6ca0">ReactionResource::set_storage_bounds()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    : <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">d_max_isomeric_state</a>( 1 ), <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a>( <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;initializing defaults for ReactionResource&quot;</span> );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a88445bff0a0cfdeff02aabed82fc028d">default_allowed_mts</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a> );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a134d4bc86fc4fd6b864ba57018888c71">default_isomeric_states</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">d_max_isomeric_state</a>, <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a> );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ab425f991455f285b5efa5ece96c7c690">default_direct_yields</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">d_direct_yields</a> );</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4daa14d1b04d0fe8e343c8b7db9b6ca0">set_storage_bounds</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a2770d027a452fd40fce38b4cd5462622">storage_bounds</a> );</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    jDebugTaggedLine( <span class="stringliteral">&quot;leaving ReactionResource::ctor&quot;</span> );</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a88445bff0a0cfdeff02aabed82fc028d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a88445bff0a0cfdeff02aabed82fc028d">Origen::ReactionResource::default_allowed_mts</a></div><div class="ttdeci">static void default_allowed_mts(AllowedMts_t &amp;allowed_mts)</div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:224</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_aad413c6ce11b3ecb6d9e6a98342a691e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">Origen::ReactionResource::d_max_isomeric_state</a></div><div class="ttdeci">int d_max_isomeric_state</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:279</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a2770d027a452fd40fce38b4cd5462622"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a2770d027a452fd40fce38b4cd5462622">Origen::ReactionResource::storage_bounds</a></div><div class="ttdeci">const Vec_Flt &amp; storage_bounds() const </div><div class="ttdoc">return a const reference to storage_bounds </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:54</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a4daa14d1b04d0fe8e343c8b7db9b6ca0"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4daa14d1b04d0fe8e343c8b7db9b6ca0">Origen::ReactionResource::set_storage_bounds</a></div><div class="ttdeci">void set_storage_bounds(const Vec_Flt &amp;)</div><div class="ttdoc">set the storage_bounds (copy operation) </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:54</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a134d4bc86fc4fd6b864ba57018888c71"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a134d4bc86fc4fd6b864ba57018888c71">Origen::ReactionResource::default_isomeric_states</a></div><div class="ttdeci">static void default_isomeric_states(int max_isomeric_state, AllowedMts_t &amp;allowed_mts)</div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:249</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ab425f991455f285b5efa5ece96c7c690"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ab425f991455f285b5efa5ece96c7c690">Origen::ReactionResource::default_direct_yields</a></div><div class="ttdeci">static void default_direct_yields(DirectYields_t &amp;direct_yields)</div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:258</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7e6c7af5d82ff69bcfb49c49cf36c6bd"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">Origen::ReactionResource::d_using_data_mapper</a></div><div class="ttdeci">bool d_using_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:280</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a101ac67b4fdb0ccf6a7fd661a112fa3a"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">Origen::ReactionResource::d_direct_yields</a></div><div class="ttdeci">DirectYields_t d_direct_yields</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:291</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad4d653b1cdeabab8ededd0a8ec630754"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">Origen::ReactionResource::d_allowed_mts</a></div><div class="ttdeci">AllowedMts_t d_allowed_mts</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:290</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a165f9943ad9cf3b312d73476e57b949c"></a>
@@ -571,8 +535,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{};</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -600,9 +563,7 @@ Protected Attributes</h2></td></tr>
 <p>field id for this data set, e.g. NEUTRON_FIELD </p>
 
 <p>References <a class="el" href="../../da/d0d/group___cxx_identifiers.html#gaa04f36cae4b5f0862ca3f96617d315bf">Origen::NEUTRON_FIELD</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../da/d0d/group___cxx_identifiers.html#gaa04f36cae4b5f0862ca3f96617d315bf">NEUTRON_FIELD</a>; }</div>
-<div class="ttc" id="group___cxx_identifiers_html_gaa04f36cae4b5f0862ca3f96617d315bf"><div class="ttname"><a href="../../da/d0d/group___cxx_identifiers.html#gaa04f36cae4b5f0862ca3f96617d315bf">Origen::NEUTRON_FIELD</a></div><div class="ttdeci">const FieldId NEUTRON_FIELD</div><div class="ttdef"><b>Definition:</b> Definitions.h:135</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a3d83bd59cda5c6a2e4d9cbaa484ef6e0"></a>
@@ -630,37 +591,10 @@ Protected Attributes</h2></td></tr>
 <p>print contents </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/de5/tst_transition_matrix_updater_8cpp-example.html#a14">tstTransitionMatrixUpdater.cpp</a>.</dd>
 </dl>
-<p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a1c06797bb52ee9107cbc230ad65b1b6d">Origen::yield_type_name()</a>.</p>
+<p>References <a class="el" href="../../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#aee4e4a343315e86e5513306656e33eeb">RRXs&lt; T &gt;::dyield</a>, <a class="el" href="../../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#a13c3ed0370f13bc743c6afba5ddf92bc">RRXs&lt; T &gt;::iyield</a>, <a class="el" href="../../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#aa0231148e59e36e4511859153eaa81fd">RRXs&lt; T &gt;::pyield</a>, <a class="el" href="../../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#a361b7a0e2553c1b1e8a0d646706786b7">RRXs&lt; T &gt;::totxs</a>, <a class="el" href="../../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#a26b7cdb1e6b3da31f93483be8ade0ba4">RRXs&lt; T &gt;::yield_type</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a1c06797bb52ee9107cbc230ad65b1b6d">Origen::yield_type_name()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d2/da0/namespace_origen_1_1test.html#a38627c537252156f3061a151090cf68d">Origen::test::TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;{</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    os &lt;&lt; std::setw( 13 ) &lt;&lt; <span class="stringliteral">&quot;izzzaaa&quot;</span> &lt;&lt; std::setw( 6 ) &lt;&lt; <span class="stringliteral">&quot;mt&quot;</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;       &lt;&lt; std::setw( 6 ) &lt;&lt; <span class="stringliteral">&quot;type&quot;</span> &lt;&lt; std::setw( 8 ) &lt;&lt; <span class="stringliteral">&quot;hastot&quot;</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;       &lt;&lt; std::setw( 8 ) &lt;&lt; <span class="stringliteral">&quot;#pyield&quot;</span> &lt;&lt; std::setw( 8 ) &lt;&lt; <span class="stringliteral">&quot;#dyield&quot;</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;       &lt;&lt; std::setw( 8 ) &lt;&lt; <span class="stringliteral">&quot;#iyield&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    ReactionResource::const_iterator it1;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    ReactionResource::Nuclide::const_iterator it2;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">for</span>( it1 = begin(); it1 != end(); ++it1 )</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordtype">int</span> izzzaaa = it1-&gt;first;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d8/dc8/class_reaction_resource_1_1_nuclide.html">ReactionResource::Nuclide</a>&amp; a_nd = it1-&gt;second;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">for</span>( it2 = a_nd.begin(); it2 != a_nd.end(); ++it2 )</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordtype">int</span> mt = it2-&gt;first;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../df/ddc/class_reaction_resource_1_1_nuclide_1_1_xs.html">ReactionResource::Nuclide::Xs</a>&amp; a_xs = it2-&gt;second;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            os &lt;&lt; std::setw( 13 ) &lt;&lt; izzzaaa &lt;&lt; std::setw( 6 ) &lt;&lt; mt</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;               &lt;&lt; std::setw( 6 ) &lt;&lt; <a class="code" href="../../d5/dc1/namespace_origen.html#a1c06797bb52ee9107cbc230ad65b1b6d">yield_type_name</a>( a_xs.yield_type )</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;               &lt;&lt; std::setw( 8 ) &lt;&lt; std::boolalpha &lt;&lt; ( a_xs.totxs.size() &gt; 0 )</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;               &lt;&lt; std::setw( 8 ) &lt;&lt; a_xs.pyield.size() &lt;&lt; std::setw( 8 )</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;               &lt;&lt; a_xs.dyield.size() &lt;&lt; std::setw( 8 ) &lt;&lt; a_xs.iyield.size()</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;               &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a1c06797bb52ee9107cbc230ad65b1b6d"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a1c06797bb52ee9107cbc230ad65b1b6d">Origen::yield_type_name</a></div><div class="ttdeci">std::string yield_type_name(const YieldType yt)</div><div class="ttdef"><b>Definition:</b> YieldType.cpp:5</div></div>
-<div class="ttc" id="class_reaction_resource_1_1_nuclide_1_1_xs_html"><div class="ttname"><a href="../../df/ddc/class_reaction_resource_1_1_nuclide_1_1_xs.html">ReactionResource::Nuclide::Xs</a></div><div class="ttdoc">A simple multi-group cross section storage class. </div></div>
-<div class="ttc" id="class_reaction_resource_1_1_nuclide_html"><div class="ttname"><a href="../../d8/dc8/class_reaction_resource_1_1_nuclide.html">ReactionResource::Nuclide</a></div><div class="ttdoc">Simple cross section storage for a nuclide. </div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="acf058b5a18f971792828696c9f076c1c"></a>
@@ -688,12 +622,7 @@ Protected Attributes</h2></td></tr>
 <p>set max isomeric state </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">ReactionResource::d_max_isomeric_state</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Check( i &gt;= 0 );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">d_max_isomeric_state</a> = i;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_aad413c6ce11b3ecb6d9e6a98342a691e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">Origen::ReactionResource::d_max_isomeric_state</a></div><div class="ttdeci">int d_max_isomeric_state</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:279</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7c7b67f8a16bc93841c2847075ff5168"></a>
@@ -722,11 +651,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">ReactionResource::d_max_isomeric_state</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a134d4bc86fc4fd6b864ba57018888c71">ReactionResource::default_isomeric_states()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#afb2d12b6d3182ff31d344f6a2fa587ed">Origen::populateReactionResource_AmpxLibrary()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">d_max_isomeric_state</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_aad413c6ce11b3ecb6d9e6a98342a691e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#aad413c6ce11b3ecb6d9e6a98342a691e">Origen::ReactionResource::d_max_isomeric_state</a></div><div class="ttdeci">int d_max_isomeric_state</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:279</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4089058798e67333102b66ba3d7a3603"></a>
@@ -764,16 +689,7 @@ Protected Attributes</h2></td></tr>
 <p>set allowed mts </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">ReactionResource::d_allowed_mts</a>.</p>
-<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;{</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">if</span>( !union_with ) <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.clear();</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>.size(); ++i )</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>[<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[i]] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad4d653b1cdeabab8ededd0a8ec630754"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">Origen::ReactionResource::d_allowed_mts</a></div><div class="ttdeci">AllowedMts_t d_allowed_mts</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:290</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a4b953a25c86b6ee4911e3fc48f6fba9e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">Origen::ReactionResource::allowed_mts</a></div><div class="ttdeci">virtual const AllowedMts_t &amp; allowed_mts() const </div><div class="ttdoc">direct return of allowed mts </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:331</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="afd5778fcca49fde8436a4d9ead2a81b4"></a>
@@ -813,15 +729,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">ReactionResource::d_allowed_mts</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#afb2d12b6d3182ff31d344f6a2fa587ed">Origen::populateReactionResource_AmpxLibrary()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">if</span>( !union_with ) <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.clear();</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; disallowed_mts.size(); ++i )</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>[disallowed_mts[i]] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad4d653b1cdeabab8ededd0a8ec630754"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">Origen::ReactionResource::d_allowed_mts</a></div><div class="ttdeci">AllowedMts_t d_allowed_mts</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:290</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af3e17c696ca199b63ed7f3cd2759cf63"></a>
@@ -849,19 +757,7 @@ Protected Attributes</h2></td></tr>
 <p>get allowed mts </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">ReactionResource::d_allowed_mts</a>.</p>
-<div class="fragment"><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;{</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a> != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>-&gt;clear();</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>-&gt;reserve( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.size() );</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    AllowedMts_t::const_iterator it;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.begin(); it != <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.end(); ++it )</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">if</span>( it-&gt;second ) <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>-&gt;push_back( it-&gt;first );</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad4d653b1cdeabab8ededd0a8ec630754"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">Origen::ReactionResource::d_allowed_mts</a></div><div class="ttdeci">AllowedMts_t d_allowed_mts</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:290</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a4b953a25c86b6ee4911e3fc48f6fba9e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">Origen::ReactionResource::allowed_mts</a></div><div class="ttdeci">virtual const AllowedMts_t &amp; allowed_mts() const </div><div class="ttdoc">direct return of allowed mts </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:331</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a8ac706b29db99d6b66fde6e8c5373967"></a>
@@ -889,18 +785,7 @@ Protected Attributes</h2></td></tr>
 <p>get disallowed mts </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">ReactionResource::d_allowed_mts</a>.</p>
-<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    Require( disallowed_mts != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    disallowed_mts-&gt;clear();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    disallowed_mts-&gt;reserve( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.size() );</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    AllowedMts_t::const_iterator it;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.begin(); it != <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>.end(); ++it )</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">if</span>( !it-&gt;second ) disallowed_mts-&gt;push_back( it-&gt;first );</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad4d653b1cdeabab8ededd0a8ec630754"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">Origen::ReactionResource::d_allowed_mts</a></div><div class="ttdeci">AllowedMts_t d_allowed_mts</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:290</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4b953a25c86b6ee4911e3fc48f6fba9e"></a>
@@ -929,11 +814,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">ReactionResource::d_allowed_mts</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#afb2d12b6d3182ff31d344f6a2fa587ed">Origen::populateReactionResource_AmpxLibrary()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">d_allowed_mts</a>;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad4d653b1cdeabab8ededd0a8ec630754"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad4d653b1cdeabab8ededd0a8ec630754">Origen::ReactionResource::d_allowed_mts</a></div><div class="ttdeci">AllowedMts_t d_allowed_mts</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:290</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ae57313711dfa70b08199b19f3c8942a7"></a>
@@ -971,16 +852,7 @@ Protected Attributes</h2></td></tr>
 <p>set nuclides with allowed fission yields (used only in import) </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">ReactionResource::d_yield_nuclides</a>.</p>
-<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">if</span>( !union_with ) <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>.clear();</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">yield_nuclides</a>.size(); ++i )</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>[<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">yield_nuclides</a>[i]] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a5b9b3955dd49cdf41fdb3b37d4fc013d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">Origen::ReactionResource::d_yield_nuclides</a></div><div class="ttdeci">YieldNuclides_t d_yield_nuclides</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:289</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a60772a2deafead47745fb7f3633ba0c4"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">Origen::ReactionResource::yield_nuclides</a></div><div class="ttdeci">virtual const YieldNuclides_t &amp; yield_nuclides() const </div><div class="ttdoc">direct return of allowed fission yields (used only in import) </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:285</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aacfcb10cb257fc6601cbef663f8e2b4c"></a>
@@ -1008,19 +880,7 @@ Protected Attributes</h2></td></tr>
 <p>get nuclides with allowed fission yields (used only in import) </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">ReactionResource::d_yield_nuclides</a>.</p>
-<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">yield_nuclides</a> != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">yield_nuclides</a>-&gt;clear();</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">yield_nuclides</a>-&gt;reserve( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>.size() );</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    YieldNuclides_t::const_iterator it;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>.begin(); it != <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>.end(); ++it )</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">yield_nuclides</a>-&gt;push_back( it-&gt;first );</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a5b9b3955dd49cdf41fdb3b37d4fc013d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">Origen::ReactionResource::d_yield_nuclides</a></div><div class="ttdeci">YieldNuclides_t d_yield_nuclides</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:289</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a60772a2deafead47745fb7f3633ba0c4"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a60772a2deafead47745fb7f3633ba0c4">Origen::ReactionResource::yield_nuclides</a></div><div class="ttdeci">virtual const YieldNuclides_t &amp; yield_nuclides() const </div><div class="ttdoc">direct return of allowed fission yields (used only in import) </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:285</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a60772a2deafead47745fb7f3633ba0c4"></a>
@@ -1047,11 +907,7 @@ Protected Attributes</h2></td></tr>
 <p>direct return of allowed fission yields (used only in import) </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">ReactionResource::d_yield_nuclides</a>.</p>
-<div class="fragment"><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a5b9b3955dd49cdf41fdb3b37d4fc013d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">Origen::ReactionResource::d_yield_nuclides</a></div><div class="ttdeci">YieldNuclides_t d_yield_nuclides</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:289</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4a7536f5f10318ca4a45e2a0f07c9200"></a>
@@ -1080,11 +936,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">ReactionResource::d_direct_yields</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#afb2d12b6d3182ff31d344f6a2fa587ed">Origen::populateReactionResource_AmpxLibrary()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;{</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">d_direct_yields</a>;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a101ac67b4fdb0ccf6a7fd661a112fa3a"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">Origen::ReactionResource::d_direct_yields</a></div><div class="ttdeci">DirectYields_t d_direct_yields</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:291</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a6269828df85322792af9a8c170f2b9ab"></a>
@@ -1128,11 +980,7 @@ Protected Attributes</h2></td></tr>
 <p>set new direct yields </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">ReactionResource::d_direct_yields</a>.</p>
-<div class="fragment"><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;{</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">d_direct_yields</a>[mt] = std::pair&lt;int, int&gt;( target_mt, izzzaaa );</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a101ac67b4fdb0ccf6a7fd661a112fa3a"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">Origen::ReactionResource::d_direct_yields</a></div><div class="ttdeci">DirectYields_t d_direct_yields</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:291</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a068d042920bd4c39b405cc9fc3c4a5ca"></a>
@@ -1160,11 +1008,7 @@ Protected Attributes</h2></td></tr>
 <p>remove direct yields </p>
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">ReactionResource::d_direct_yields</a>.</p>
-<div class="fragment"><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;{</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">d_direct_yields</a>.erase( mt );</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a101ac67b4fdb0ccf6a7fd661a112fa3a"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a101ac67b4fdb0ccf6a7fd661a112fa3a">Origen::ReactionResource::d_direct_yields</a></div><div class="ttdeci">DirectYields_t d_direct_yields</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:291</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a90fa7040e4a675cf627e33d958ebb745"></a>
@@ -1182,86 +1026,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">ReactionResource::d_yield_nuclides</a>, <a class="el" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a5f70f8d397ae41edb2f3a75e5f062ab6">YieldParent::data_at()</a>, <a class="el" href="../../d8/d3f/class_origen_1_1_yield_data.html#a7d8a7d1d94db857f9b53e50c675f216b">YieldData::energy()</a>, <a class="el" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a222869c2028f42bbaf633b9c15f62ead">YieldResource::fissionable_at()</a>, <a class="el" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aa1bf483de36760cb3d8588ef27311348">YieldParent::get_fp_ids()</a>, <a class="el" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ae0c063cfb2479f614be43b9d2f92ba63">YieldParent::id()</a>, <a class="el" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ae61d3f0660a84a3329ecef4b92ae7fc6">YieldParent::num_energies()</a>, <a class="el" href="../../d1/dbc/class_origen_1_1_yield_resource.html#a7a9482b06ae5b14022c3abaf66f2c227">YieldResource::num_fissionables()</a>, <a class="el" href="../../d8/d3f/class_origen_1_1_yield_data.html#a722641b6315752acb93d4e71f5f18416">YieldData::num_yields()</a>, <a class="el" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">YieldData::yield_at()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51a49af8306a448f020dfc15f108dbfc83a">Origen::YIELD_DISTRIBUTED</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51a807a3e5ef86f16a85b7e91d1468f0f96">Origen::YIELD_ISOMERIC</a>.</p>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    SCOPED_TIMER( <span class="stringliteral">&quot;ReactionResource.import_fission_yields&quot;</span> );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">// iterate through actinide parents</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> k = 0; k &lt; yr.num_fissionables(); ++k )</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keyword">const</span> YieldParent&amp; fn = yr.fissionable_at( k );</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">int</span> izzzaaa = fn.id();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="comment">// an empty yield nuclides means we take it all, but if it is</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">// non-empty, we only keep going if the value is true</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>.size() != 0 )</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            YieldNuclides_t::const_iterator ity =</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>.find( izzzaaa );</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">if</span>( ity == <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">d_yield_nuclides</a>.end() ) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">if</span>( !ity-&gt;second ) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> fp_ids;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        fn.get_fp_ids( &amp;fp_ids );</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">// data collection</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> xvalues;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        std::map&lt;int, Vec_Flt&gt; yvalues;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">// iterate through yield sets (usually 3)</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; fn.num_energies(); i++ )</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keyword">const</span> YieldData&amp; data = fn.data_at( i );</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">float</span> energy = data.energy();</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="comment">// get xvalues</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            xvalues.push_back( energy );</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            Check( (<span class="keywordtype">int</span>)fp_ids.size() == data.num_yields() );</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">for</span>( <span class="keywordtype">int</span> ifp = 0; ifp &lt; data.num_yields(); ++ifp )</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="comment">// get yvalues</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keywordtype">int</span> fp_iza = fp_ids[ifp];</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                yvalues[fp_iza].push_back( data.yield_at( ifp ) );</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">// have collected all the data for this parent</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">// get the AmpxData container and create the interpolation functions</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">if</span>( xvalues.size() &gt; 0 )</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            Check( this-&gt;count( izzzaaa ) != 0 );</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <a class="code" href="../../d8/dc8/class_reaction_resource_1_1_nuclide.html">ReactionResource::Nuclide</a>&amp; a_nd = this-&gt;find( izzzaaa )-&gt;second;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            Check( a_nd.count( 18 ) != 0 );</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <a class="code" href="../../df/ddc/class_reaction_resource_1_1_nuclide_1_1_xs.html">ReactionResource::Nuclide::Xs</a>&amp; a_xs = a_nd.find( 18 )-&gt;second;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            Check( a_xs.yield_type !=</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                   <a class="code" href="../../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51a807a3e5ef86f16a85b7e91d1468f0f96">YIELD_ISOMERIC</a> );  <span class="comment">// means we already set it</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            a_xs.yield_type = <a class="code" href="../../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51a49af8306a448f020dfc15f108dbfc83a">YIELD_DISTRIBUTED</a>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            std::map&lt;int, Vec_Flt&gt;::const_iterator iv;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">for</span>( iv = yvalues.begin(); iv != yvalues.end(); ++iv )</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <span class="keywordtype">int</span> fp_iza = iv-&gt;first;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="comment">// Check(a_xs.iyield.count(fp_iza)!=0);</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                a_xs.iyield[fp_iza].                 <span class="comment">/* Interp1d&lt;float&gt; */</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    set_data( xvalues, iv-&gt;second ); <span class="comment">/* yields */</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a5b9b3955dd49cdf41fdb3b37d4fc013d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a5b9b3955dd49cdf41fdb3b37d4fc013d">Origen::ReactionResource::d_yield_nuclides</a></div><div class="ttdeci">YieldNuclides_t d_yield_nuclides</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:289</div></div>
-<div class="ttc" id="class_reaction_resource_1_1_nuclide_1_1_xs_html"><div class="ttname"><a href="../../df/ddc/class_reaction_resource_1_1_nuclide_1_1_xs.html">ReactionResource::Nuclide::Xs</a></div><div class="ttdoc">A simple multi-group cross section storage class. </div></div>
-<div class="ttc" id="namespace_vec___flt_html"><div class="ttname"><a href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a></div></div>
-<div class="ttc" id="namespace_origen_html_a374cbfc5df1cffe097fc1e85bde98e51a49af8306a448f020dfc15f108dbfc83a"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51a49af8306a448f020dfc15f108dbfc83a">Origen::YIELD_DISTRIBUTED</a></div><div class="ttdef"><b>Definition:</b> YieldType.h:13</div></div>
-<div class="ttc" id="namespace_vec___int_html"><div class="ttname"><a href="../../d4/d05/namespace_vec___int.html">Vec_Int</a></div></div>
-<div class="ttc" id="class_reaction_resource_1_1_nuclide_html"><div class="ttname"><a href="../../d8/dc8/class_reaction_resource_1_1_nuclide.html">ReactionResource::Nuclide</a></div><div class="ttdoc">Simple cross section storage for a nuclide. </div></div>
-<div class="ttc" id="namespace_origen_html_a374cbfc5df1cffe097fc1e85bde98e51a807a3e5ef86f16a85b7e91d1468f0f96"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a374cbfc5df1cffe097fc1e85bde98e51a807a3e5ef86f16a85b7e91d1468f0f96">Origen::YIELD_ISOMERIC</a></div><div class="ttdef"><b>Definition:</b> YieldType.h:12</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2770d027a452fd40fce38b4cd5462622"></a>
@@ -2204,20 +1969,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">ReactionResource::d_data_mapper</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">ReactionResource::d_storage_bounds</a>, and <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">ReactionResource::d_using_data_mapper</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#afb2d12b6d3182ff31d344f6a2fa587ed">Origen::populateReactionResource_AmpxLibrary()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    Require( xs != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a> )</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> xs_copy( *xs );</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        xs-&gt;resize( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">d_storage_bounds</a>-&gt;size() - 1 );</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">d_data_mapper</a>.mapXS1D( xs_copy, *xs );</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7359f05b21d0c222869bd8d900a8fddc"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">Origen::ReactionResource::d_storage_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_storage_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:278</div></div>
-<div class="ttc" id="namespace_vec___flt_html"><div class="ttname"><a href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a></div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a756db0ba98aa07225383ef159c11c74d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">Origen::ReactionResource::d_data_mapper</a></div><div class="ttdeci">ScaleData::MGXS1DMapper&lt; float &gt; d_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:287</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7e6c7af5d82ff69bcfb49c49cf36c6bd"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">Origen::ReactionResource::d_using_data_mapper</a></div><div class="ttdeci">bool d_using_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:280</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a61e32f4eb68ed22a3c1b2a1ace752964"></a>
@@ -2235,23 +1987,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">ReactionResource::d_data_mapper</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">ReactionResource::d_storage_bounds</a>, and <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">ReactionResource::d_using_data_mapper</a>.</p>
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Require( flux != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a> )</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> flux_copy( *flux );</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        flux-&gt;resize( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">d_storage_bounds</a>-&gt;size() - 1 );</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        this-&gt;<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">d_data_mapper</a>.mapFlux( flux_copy, *flux );</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        jDebugTaggedLine( <span class="stringliteral">&quot;printFlux:\n&quot;</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                          &lt;&lt; <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">d_data_mapper</a>.printFlux( flux_copy, *flux )</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                          &lt;&lt; std::endl );</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7359f05b21d0c222869bd8d900a8fddc"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">Origen::ReactionResource::d_storage_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_storage_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:278</div></div>
-<div class="ttc" id="namespace_vec___flt_html"><div class="ttname"><a href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a></div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a756db0ba98aa07225383ef159c11c74d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">Origen::ReactionResource::d_data_mapper</a></div><div class="ttdeci">ScaleData::MGXS1DMapper&lt; float &gt; d_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:287</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7e6c7af5d82ff69bcfb49c49cf36c6bd"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">Origen::ReactionResource::d_using_data_mapper</a></div><div class="ttdeci">bool d_using_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:280</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a211f4314dc69a55a171c8db516597305"></a>
@@ -2268,9 +2004,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">ReactionResource::d_using_data_mapper</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a>; }</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7e6c7af5d82ff69bcfb49c49cf36c6bd"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">Origen::ReactionResource::d_using_data_mapper</a></div><div class="ttdeci">bool d_using_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:280</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a88445bff0a0cfdeff02aabed82fc028d"></a>
@@ -2296,32 +2030,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a480040f7eb5932d93bacacfd5b57b2b2">ReactionResource::ReactionResource()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[16] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[17] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[18] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[22] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[24] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[25] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[28] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[29] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[32] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[33] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[34] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[37] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[41] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[102] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[103] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[104] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[105] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[106] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[107] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[108] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[111] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[112] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a4b953a25c86b6ee4911e3fc48f6fba9e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">Origen::ReactionResource::allowed_mts</a></div><div class="ttdeci">virtual const AllowedMts_t &amp; allowed_mts() const </div><div class="ttdoc">direct return of allowed mts </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:331</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a134d4bc86fc4fd6b864ba57018888c71"></a>
@@ -2359,16 +2068,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7c7b67f8a16bc93841c2847075ff5168">ReactionResource::max_isomeric_state()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a480040f7eb5932d93bacacfd5b57b2b2">ReactionResource::ReactionResource()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">// inelastic scattering isomeric states</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 1; i &lt;= <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7c7b67f8a16bc93841c2847075ff5168">max_isomeric_state</a>; ++i )</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">allowed_mts</a>[50 + i] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7c7b67f8a16bc93841c2847075ff5168"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7c7b67f8a16bc93841c2847075ff5168">Origen::ReactionResource::max_isomeric_state</a></div><div class="ttdeci">virtual int max_isomeric_state() const </div><div class="ttdoc">get max isomeric state </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:49</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a4b953a25c86b6ee4911e3fc48f6fba9e"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4b953a25c86b6ee4911e3fc48f6fba9e">Origen::ReactionResource::allowed_mts</a></div><div class="ttdeci">virtual const AllowedMts_t &amp; allowed_mts() const </div><div class="ttdoc">direct return of allowed mts </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:331</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab425f991455f285b5efa5ece96c7c690"></a>
@@ -2394,13 +2094,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a480040f7eb5932d93bacacfd5b57b2b2">ReactionResource::ReactionResource()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;{</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// accumulate mt=452 into data set as direct_yield for</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">// mt=18 with daughter izzzaaa=1 (neutron)</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4a7536f5f10318ca4a45e2a0f07c9200">direct_yields</a>[452] = std::make_pair&lt;int, int&gt;( 18, 1 );</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a4a7536f5f10318ca4a45e2a0f07c9200"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a4a7536f5f10318ca4a45e2a0f07c9200">Origen::ReactionResource::direct_yields</a></div><div class="ttdeci">virtual const DirectYields_t &amp; direct_yields() const </div><div class="ttdoc">direct yields </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:363</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1dbc362d5a87594a9efdfb85bbbf6b3d"></a>
@@ -2516,15 +2210,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">storage_bounds_size</a>() &gt; 1 );</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    Require( decreasing( *<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">d_storage_bounds</a> ) );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Require( !<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a13dc6a9a352a776e86917410e1d942be">has_library_bounds</a>() );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7359f05b21d0c222869bd8d900a8fddc"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">Origen::ReactionResource::d_storage_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_storage_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:278</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a13dc6a9a352a776e86917410e1d942be"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a13dc6a9a352a776e86917410e1d942be">Origen::ReactionResource::has_library_bounds</a></div><div class="ttdeci">bool has_library_bounds() const </div><div class="ttdoc">return whether the class has a non-null library_bounds </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:56</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a0d9314111c93d89c0abcf29f36050d62"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">Origen::ReactionResource::storage_bounds_size</a></div><div class="ttdeci">size_t storage_bounds_size() const </div><div class="ttdoc">return size of storage_bounds vector </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:54</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1efad46e09f497005320d299dd9726a5"></a>
@@ -2549,14 +2235,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a74ee455ad3de28e5c6821b4b1dc3444c">ReactionResource::d_storage_flux</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a151089e36b56626b80eb7eb793fdfdac">ReactionResource::has_storage_bounds()</a>, and <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">ReactionResource::storage_bounds_size()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a151089e36b56626b80eb7eb793fdfdac">has_storage_bounds</a>() );</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a74ee455ad3de28e5c6821b4b1dc3444c">d_storage_flux</a>-&gt;size() + 1 == <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">storage_bounds_size</a>() );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a74ee455ad3de28e5c6821b4b1dc3444c"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a74ee455ad3de28e5c6821b4b1dc3444c">Origen::ReactionResource::d_storage_flux</a></div><div class="ttdeci">SP_Vec_Flt d_storage_flux</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:282</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a0d9314111c93d89c0abcf29f36050d62"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">Origen::ReactionResource::storage_bounds_size</a></div><div class="ttdeci">size_t storage_bounds_size() const </div><div class="ttdoc">return size of storage_bounds vector </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:54</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a151089e36b56626b80eb7eb793fdfdac"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a151089e36b56626b80eb7eb793fdfdac">Origen::ReactionResource::has_storage_bounds</a></div><div class="ttdeci">bool has_storage_bounds() const </div><div class="ttdoc">return whether the class has a non-null storage_bounds </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:54</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aba62bda37fb7afe7fb638098683c3428"></a>
@@ -2581,34 +2260,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">ReactionResource::d_library_bounds</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">ReactionResource::d_storage_bounds</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">ReactionResource::d_using_data_mapper</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a151089e36b56626b80eb7eb793fdfdac">ReactionResource::has_storage_bounds()</a>, and <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad97467b5d0f83dd92c5ec4dd6a5d2157">ReactionResource::library_bounds_size()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad97467b5d0f83dd92c5ec4dd6a5d2157">library_bounds_size</a>() &gt; 1 );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Require( decreasing( *<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">d_library_bounds</a> ) );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// by default do not do mapping</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a151089e36b56626b80eb7eb793fdfdac">has_storage_bounds</a>() )</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// make sure the bounds are not effectively the same, even though</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">// different vectors</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span>( !approx_eq_vec( *<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">d_storage_bounds</a>, *<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">d_library_bounds</a> ) )</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// don&#39;t have storage bounds, so we just set to the library bounds</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">d_storage_bounds</a> = <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">d_library_bounds</a>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a723a58b1740698d8a701388a9108fb20"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">Origen::ReactionResource::d_library_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_library_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:285</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7359f05b21d0c222869bd8d900a8fddc"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">Origen::ReactionResource::d_storage_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_storage_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:278</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad97467b5d0f83dd92c5ec4dd6a5d2157"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad97467b5d0f83dd92c5ec4dd6a5d2157">Origen::ReactionResource::library_bounds_size</a></div><div class="ttdeci">size_t library_bounds_size() const </div><div class="ttdoc">return size of library_bounds vector </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:56</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7e6c7af5d82ff69bcfb49c49cf36c6bd"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">Origen::ReactionResource::d_using_data_mapper</a></div><div class="ttdeci">bool d_using_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:280</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a151089e36b56626b80eb7eb793fdfdac"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a151089e36b56626b80eb7eb793fdfdac">Origen::ReactionResource::has_storage_bounds</a></div><div class="ttdeci">bool has_storage_bounds() const </div><div class="ttdoc">return whether the class has a non-null storage_bounds </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:54</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2e7cb37468d90906b909c8d879d1904c"></a>
@@ -2633,39 +2285,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">ReactionResource::d_data_mapper</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">ReactionResource::d_library_bounds</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a6f01aad5b80107f6404d5fc9e6a0f7a5">ReactionResource::d_library_flux</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">ReactionResource::d_storage_bounds</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a74ee455ad3de28e5c6821b4b1dc3444c">ReactionResource::d_storage_flux</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">ReactionResource::d_using_data_mapper</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a13dc6a9a352a776e86917410e1d942be">ReactionResource::has_library_bounds()</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad97467b5d0f83dd92c5ec4dd6a5d2157">ReactionResource::library_bounds_size()</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a1dbc362d5a87594a9efdfb85bbbf6b3d">ReactionResource::set_storage_flux()</a>, <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">ReactionResource::storage_bounds_size()</a>, and <a class="el" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#acd331d4ed2c88f05498df5930715c7dc">ReactionResource::storage_flux()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a13dc6a9a352a776e86917410e1d942be">has_library_bounds</a>() );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    Require( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a6f01aad5b80107f6404d5fc9e6a0f7a5">d_library_flux</a>-&gt;size() + 1 == <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad97467b5d0f83dd92c5ec4dd6a5d2157">library_bounds_size</a>() );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// if we are using the data mapper, it&#39;s time to set it up</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">d_using_data_mapper</a> )</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        ScaleData::EnergyUnionizer&lt;float&gt; eu( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">d_library_bounds</a>,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                              <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">d_storage_bounds</a> );</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">d_data_mapper</a> = ScaleData::MGXS1DMapper&lt;float&gt;( eu );</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a> <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#acd331d4ed2c88f05498df5930715c7dc">storage_flux</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">storage_bounds_size</a>() - 1 );</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">d_data_mapper</a>.mapFlux( *<a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a6f01aad5b80107f6404d5fc9e6a0f7a5">d_library_flux</a>, <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#acd331d4ed2c88f05498df5930715c7dc">storage_flux</a> );</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a1dbc362d5a87594a9efdfb85bbbf6b3d">set_storage_flux</a>( <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#acd331d4ed2c88f05498df5930715c7dc">storage_flux</a> );</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// otherwise, the same group bounds for storage and library mean same flux</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a74ee455ad3de28e5c6821b4b1dc3444c">d_storage_flux</a> = <a class="code" href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a6f01aad5b80107f6404d5fc9e6a0f7a5">d_library_flux</a>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_acd331d4ed2c88f05498df5930715c7dc"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#acd331d4ed2c88f05498df5930715c7dc">Origen::ReactionResource::storage_flux</a></div><div class="ttdeci">const Vec_Flt &amp; storage_flux() const </div><div class="ttdoc">return a const reference to storage_flux </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:55</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a723a58b1740698d8a701388a9108fb20"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a723a58b1740698d8a701388a9108fb20">Origen::ReactionResource::d_library_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_library_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:285</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a6f01aad5b80107f6404d5fc9e6a0f7a5"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a6f01aad5b80107f6404d5fc9e6a0f7a5">Origen::ReactionResource::d_library_flux</a></div><div class="ttdeci">SP_Vec_Flt d_library_flux</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:284</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7359f05b21d0c222869bd8d900a8fddc"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7359f05b21d0c222869bd8d900a8fddc">Origen::ReactionResource::d_storage_bounds</a></div><div class="ttdeci">SP_Vec_Flt d_storage_bounds</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:278</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a13dc6a9a352a776e86917410e1d942be"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a13dc6a9a352a776e86917410e1d942be">Origen::ReactionResource::has_library_bounds</a></div><div class="ttdeci">bool has_library_bounds() const </div><div class="ttdoc">return whether the class has a non-null library_bounds </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:56</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a74ee455ad3de28e5c6821b4b1dc3444c"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a74ee455ad3de28e5c6821b4b1dc3444c">Origen::ReactionResource::d_storage_flux</a></div><div class="ttdeci">SP_Vec_Flt d_storage_flux</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:282</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_ad97467b5d0f83dd92c5ec4dd6a5d2157"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#ad97467b5d0f83dd92c5ec4dd6a5d2157">Origen::ReactionResource::library_bounds_size</a></div><div class="ttdeci">size_t library_bounds_size() const </div><div class="ttdoc">return size of library_bounds vector </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:56</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a1dbc362d5a87594a9efdfb85bbbf6b3d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a1dbc362d5a87594a9efdfb85bbbf6b3d">Origen::ReactionResource::set_storage_flux</a></div><div class="ttdeci">void set_storage_flux(const Vec_Flt &amp;)</div><div class="ttdoc">set the storage_flux (copy operation) </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:55</div></div>
-<div class="ttc" id="namespace_vec___flt_html"><div class="ttname"><a href="../../de/d1d/namespace_vec___flt.html">Vec_Flt</a></div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a0d9314111c93d89c0abcf29f36050d62"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a0d9314111c93d89c0abcf29f36050d62">Origen::ReactionResource::storage_bounds_size</a></div><div class="ttdeci">size_t storage_bounds_size() const </div><div class="ttdoc">return size of storage_bounds vector </div><div class="ttdef"><b>Definition:</b> ReactionResource.cpp:54</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a756db0ba98aa07225383ef159c11c74d"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a756db0ba98aa07225383ef159c11c74d">Origen::ReactionResource::d_data_mapper</a></div><div class="ttdeci">ScaleData::MGXS1DMapper&lt; float &gt; d_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:287</div></div>
-<div class="ttc" id="class_origen_1_1_reaction_resource_html_a7e6c7af5d82ff69bcfb49c49cf36c6bd"><div class="ttname"><a href="../../d1/d0c/class_origen_1_1_reaction_resource.html#a7e6c7af5d82ff69bcfb49c49cf36c6bd">Origen::ReactionResource::d_using_data_mapper</a></div><div class="ttdeci">bool d_using_data_mapper</div><div class="ttdef"><b>Definition:</b> ReactionResource.h:280</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

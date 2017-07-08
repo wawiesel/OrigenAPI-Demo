@@ -149,10 +149,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;: <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">d_normal</a>( <span class="keyword">true</span> ), <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">d_old</a>( <span class="keyword">nullptr</span> ) {}</div>
-<div class="ttc" id="struct_cout_to_cerr_html_ab59cf75039eb74e9a15977171c1906ed"><div class="ttname"><a href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">CoutToCerr::d_normal</a></div><div class="ttdeci">bool d_normal</div><div class="ttdef"><b>Definition:</b> CoutToCerr.h:24</div></div>
-<div class="ttc" id="struct_cout_to_cerr_html_afc88785034a52dd150259dc15bcf55ca"><div class="ttname"><a href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">CoutToCerr::d_old</a></div><div class="ttdeci">std::streambuf * d_old</div><div class="ttdef"><b>Definition:</b> CoutToCerr.h:25</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af674e1059626fd2259b57fed8082b206"></a>
@@ -177,9 +174,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d3/dd6/struct_cout_to_cerr.html#aac3789ad6796dca42d9cadcd7de21836">normal()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{ <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#aac3789ad6796dca42d9cadcd7de21836">normal</a>(); }</div>
-<div class="ttc" id="struct_cout_to_cerr_html_aac3789ad6796dca42d9cadcd7de21836"><div class="ttname"><a href="../../d3/dd6/struct_cout_to_cerr.html#aac3789ad6796dca42d9cadcd7de21836">CoutToCerr::normal</a></div><div class="ttdeci">void normal()</div><div class="ttdef"><b>Definition:</b> CoutToCerr.h:13</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -205,16 +200,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">d_normal</a>, and <a class="el" href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">d_old</a>.</p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">d_normal</a> )</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">d_normal</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">d_old</a> = std::cout.rdbuf( std::cerr.rdbuf() );</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        }</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
-<div class="ttc" id="struct_cout_to_cerr_html_ab59cf75039eb74e9a15977171c1906ed"><div class="ttname"><a href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">CoutToCerr::d_normal</a></div><div class="ttdeci">bool d_normal</div><div class="ttdef"><b>Definition:</b> CoutToCerr.h:24</div></div>
-<div class="ttc" id="struct_cout_to_cerr_html_afc88785034a52dd150259dc15bcf55ca"><div class="ttname"><a href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">CoutToCerr::d_old</a></div><div class="ttdeci">std::streambuf * d_old</div><div class="ttdef"><b>Definition:</b> CoutToCerr.h:25</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aac3789ad6796dca42d9cadcd7de21836"></a>
@@ -241,16 +227,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">d_normal</a>, and <a class="el" href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">d_old</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d3/dd6/struct_cout_to_cerr.html#af674e1059626fd2259b57fed8082b206">~CoutToCerr()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span>( !<a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">d_normal</a> )</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">d_normal</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            std::cout.rdbuf( <a class="code" href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">d_old</a> );</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="ttc" id="struct_cout_to_cerr_html_ab59cf75039eb74e9a15977171c1906ed"><div class="ttname"><a href="../../d3/dd6/struct_cout_to_cerr.html#ab59cf75039eb74e9a15977171c1906ed">CoutToCerr::d_normal</a></div><div class="ttdeci">bool d_normal</div><div class="ttdef"><b>Definition:</b> CoutToCerr.h:24</div></div>
-<div class="ttc" id="struct_cout_to_cerr_html_afc88785034a52dd150259dc15bcf55ca"><div class="ttname"><a href="../../d3/dd6/struct_cout_to_cerr.html#afc88785034a52dd150259dc15bcf55ca">CoutToCerr::d_old</a></div><div class="ttdeci">std::streambuf * d_old</div><div class="ttdef"><b>Definition:</b> CoutToCerr.h:25</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

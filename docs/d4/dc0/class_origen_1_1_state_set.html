@@ -323,10 +323,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;: <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>( <span class="keyword">new</span> <a class="code" href="../../d5/dc1/namespace_origen.html#a1eab1fc0a879b8ec743be611fbe8f38a">Vec_SP_State</a>() ) {}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-<div class="ttc" id="namespace_origen_html_a1eab1fc0a879b8ec743be611fbe8f38a"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a1eab1fc0a879b8ec743be611fbe8f38a">Origen::Vec_SP_State</a></div><div class="ttdeci">std::vector&lt; SP_State &gt; Vec_SP_State</div><div class="ttdef"><b>Definition:</b> StateSet.h:25</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -348,21 +345,7 @@ Protected Attributes</h2></td></tr>
 <p>Test for equality with this <a class="el" href="../../d8/d01/class_origen_1_1_state.html" title="Container for state data. ">State</a>. </p>
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">StateSet::b_states</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// check that either both lists are nullptr or both exist</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ORIGEN_CHECK_SP( state, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>, a.b_states );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// compare elements in list</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ORIGEN_COMPARE_SCALAR( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;size(), a.b_states-&gt;size() );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;size(); ++i )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ORIGEN_COMPARE_SP( state[i], ( *<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a> )[i], ( *a.b_states )[i] );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a041c5927ddc7d08c7bc87f6f90c19506"></a>
@@ -673,12 +656,7 @@ Protected Attributes</h2></td></tr>
 <p>Return the last/back element. </p>
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">StateSet::b_states</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Require( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;size() &gt; 0 );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> *<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;back();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7234af58c8fd83aef665ac959f4a66b6"></a>
@@ -695,12 +673,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the first/front element. </p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Require( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;size() &gt; 0 );</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> *<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;front();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab4d06f615e1ee88a3d205ae484eb891f"></a>
@@ -778,27 +751,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a684ef567b18983d5ffb8ef9dfa954995">State::scp_neutron_spectra()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a4f249e291bae4a7fa4c6296eb60b2002">Vec_Pair_NSpectra</a> result;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a730ab37fce9bee130195a26a432f2413">SCP_NeutronSpectra</a> s = c.scp_neutron_spectra();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">if</span>( s &amp;&amp; s-&gt;bounds_size() &gt; 0 )</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            result.push_back(</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                std::make_pair( std::make_pair( c.definition().time(),</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                                c.definition().energy() ),</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                s ) );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_a730ab37fce9bee130195a26a432f2413"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a730ab37fce9bee130195a26a432f2413">Origen::SCP_NeutronSpectra</a></div><div class="ttdeci">NeutronSpectra::SCP SCP_NeutronSpectra</div><div class="ttdef"><b>Definition:</b> NeutronSpectra.h:97</div></div>
-<div class="ttc" id="namespace_origen_html_a4f249e291bae4a7fa4c6296eb60b2002"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a4f249e291bae4a7fa4c6296eb60b2002">Origen::Vec_Pair_NSpectra</a></div><div class="ttdeci">std::vector&lt; Pair_NSpectra &gt; Vec_Pair_NSpectra</div><div class="ttdef"><b>Definition:</b> StateSet.h:19</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a03b2f24e8a6c4f3579e6257ca4674933"></a>
@@ -821,27 +774,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a8a5e0f243d5228ccf325a16fd3c182be">State::scp_alpha_spectra()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a9ddf5fd50b43a1195b48e216d1855a4d">Vec_Pair_ASpectra</a> result;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#ae7b220bd2f3347fb195ca5a9a218a05c">SCP_AlphaSpectra</a> s = c.scp_alpha_spectra();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span>( s &amp;&amp; s-&gt;bounds_size() &gt; 0 )</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            result.push_back(</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                std::make_pair( std::make_pair( c.definition().time(),</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                                c.definition().energy() ),</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                s ) );</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_ae7b220bd2f3347fb195ca5a9a218a05c"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ae7b220bd2f3347fb195ca5a9a218a05c">Origen::SCP_AlphaSpectra</a></div><div class="ttdeci">AlphaSpectra::SCP SCP_AlphaSpectra</div><div class="ttdef"><b>Definition:</b> AlphaSpectra.h:45</div></div>
-<div class="ttc" id="namespace_origen_html_a9ddf5fd50b43a1195b48e216d1855a4d"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a9ddf5fd50b43a1195b48e216d1855a4d">Origen::Vec_Pair_ASpectra</a></div><div class="ttdeci">std::vector&lt; Pair_ASpectra &gt; Vec_Pair_ASpectra</div><div class="ttdef"><b>Definition:</b> StateSet.h:20</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aed143ca39ad9c6b86040c800bac2f202"></a>
@@ -864,27 +797,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a2324dacd37c96ec76094deb6603a922d">State::scp_beta_spectra()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a049b595c2707669098d8bb1c1e17747d">Vec_Pair_BSpectra</a> result;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a41f54a3b0871e988f71b77c5e5092242">SCP_BetaSpectra</a> s = c.scp_beta_spectra();</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span>( s &amp;&amp; s-&gt;bounds_size() &gt; 0 )</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            result.push_back(</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                std::make_pair( std::make_pair( c.definition().time(),</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                                                c.definition().energy() ),</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                                s ) );</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a41f54a3b0871e988f71b77c5e5092242"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a41f54a3b0871e988f71b77c5e5092242">Origen::SCP_BetaSpectra</a></div><div class="ttdeci">BetaSpectra::SCP SCP_BetaSpectra</div><div class="ttdef"><b>Definition:</b> BetaSpectra.h:45</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_a049b595c2707669098d8bb1c1e17747d"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a049b595c2707669098d8bb1c1e17747d">Origen::Vec_Pair_BSpectra</a></div><div class="ttdeci">std::vector&lt; Pair_BSpectra &gt; Vec_Pair_BSpectra</div><div class="ttdef"><b>Definition:</b> StateSet.h:21</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a751c85c85ca0ae3e849d6ac1e89f97e7"></a>
@@ -907,27 +820,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#aeaddccab345772c7bd3204867504de28">State::scp_gamma_spectra()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a67411e6fceae6635ee770faa5437ecdc">Vec_Pair_GSpectra</a> result;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a5cbc26f5046e2c66578f007c9028bc1b">SCP_GammaSpectra</a> s = c.scp_gamma_spectra();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span>( s &amp;&amp; s-&gt;bounds_size() &gt; 0 )</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            result.push_back(</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                std::make_pair( std::make_pair( c.definition().time(),</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                                c.definition().energy() ),</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                s ) );</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_a5cbc26f5046e2c66578f007c9028bc1b"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a5cbc26f5046e2c66578f007c9028bc1b">Origen::SCP_GammaSpectra</a></div><div class="ttdeci">GammaSpectra::SCP SCP_GammaSpectra</div><div class="ttdef"><b>Definition:</b> GammaSpectra.h:45</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_a67411e6fceae6635ee770faa5437ecdc"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a67411e6fceae6635ee770faa5437ecdc">Origen::Vec_Pair_GSpectra</a></div><div class="ttdeci">std::vector&lt; Pair_GSpectra &gt; Vec_Pair_GSpectra</div><div class="ttdef"><b>Definition:</b> StateSet.h:22</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9d635ec91d1a4dde7d2f9812d3a848aa"></a>
@@ -951,27 +844,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a8510cfb7c5bf338d06863db4ff2f9146">State::scp_concs()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#abd8a3106e9df4e91df54686b9392af95">Vec_Pair_Concs</a> result;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a9c012da9fb664e11e346628ad72472f5">SCP_Concentrations</a> c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a8510cfb7c5bf338d06863db4ff2f9146">scp_concs</a>();</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span>( c &amp;&amp; c-&gt;vals_size() &gt; 0 )</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keyword">const</span> StateInfo&amp; h = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>();</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            result.push_back(</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                std::make_pair( std::make_pair( h.time(), h.energy() ), c ) );</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_abd8a3106e9df4e91df54686b9392af95"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#abd8a3106e9df4e91df54686b9392af95">Origen::Vec_Pair_Concs</a></div><div class="ttdeci">std::vector&lt; Pair_Concs &gt; Vec_Pair_Concs</div><div class="ttdef"><b>Definition:</b> StateSet.h:23</div></div>
-<div class="ttc" id="class_origen_1_1_state_html_a8510cfb7c5bf338d06863db4ff2f9146"><div class="ttname"><a href="../../d8/d01/class_origen_1_1_state.html#a8510cfb7c5bf338d06863db4ff2f9146">Origen::State::scp_concs</a></div><div class="ttdeci">SCP_Concentrations scp_concs() const </div><div class="ttdoc">return a shared (read-only) concs pointer </div><div class="ttdef"><b>Definition:</b> State.cpp:34</div></div>
-<div class="ttc" id="class_origen_1_1_state_html_a5f82e1f2268eca3d5b3fec6940a8cb4e"><div class="ttname"><a href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">Origen::State::definition</a></div><div class="ttdeci">const StateInfo &amp; definition() const </div><div class="ttdoc">return a const reference to definition </div><div class="ttdef"><b>Definition:</b> State.cpp:33</div></div>
-<div class="ttc" id="namespace_origen_html_a9c012da9fb664e11e346628ad72472f5"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a9c012da9fb664e11e346628ad72472f5">Origen::SCP_Concentrations</a></div><div class="ttdeci">Concentrations::SCP SCP_Concentrations</div><div class="ttdef"><b>Definition:</b> Concentrations.h:172</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab7abdbe390d603918dc26f4418a658a1"></a>
@@ -999,32 +872,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d7/d44/class_origen_1_1_concentrations.html" title="Container for Concentrations data. ">Concentrations</a> at each state </dd></dl>
 
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a8510cfb7c5bf338d06863db4ff2f9146">State::scp_concs()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#abd8a3106e9df4e91df54686b9392af95">Vec_Pair_Concs</a> result;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a9c012da9fb664e11e346628ad72472f5">SCP_Concentrations</a> c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a8510cfb7c5bf338d06863db4ff2f9146">scp_concs</a>();</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">if</span>( c &amp;&amp; c-&gt;vals_size() &gt; 0 )</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keyword">const</span> StateInfo&amp; h = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i ).<a class="code" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">definition</a>();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="comment">// copy the filter and set data</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="../../d5/dc1/namespace_origen.html#ae474f60862e60a362b01d2580210f243">SP_Concentrations</a> copy( <span class="keyword">new</span> Concentrations( filter ) );</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            copy-&gt;set_concs( *c );</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="comment">// copy now has the units and nuclide set of proto</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            result.push_back( std::make_pair(</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                std::make_pair( h.time(), h.energy() ), copy ) );</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_abd8a3106e9df4e91df54686b9392af95"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#abd8a3106e9df4e91df54686b9392af95">Origen::Vec_Pair_Concs</a></div><div class="ttdeci">std::vector&lt; Pair_Concs &gt; Vec_Pair_Concs</div><div class="ttdef"><b>Definition:</b> StateSet.h:23</div></div>
-<div class="ttc" id="namespace_origen_html_ae474f60862e60a362b01d2580210f243"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#ae474f60862e60a362b01d2580210f243">Origen::SP_Concentrations</a></div><div class="ttdeci">Concentrations::SP SP_Concentrations</div><div class="ttdef"><b>Definition:</b> Concentrations.h:171</div></div>
-<div class="ttc" id="class_origen_1_1_state_html_a8510cfb7c5bf338d06863db4ff2f9146"><div class="ttname"><a href="../../d8/d01/class_origen_1_1_state.html#a8510cfb7c5bf338d06863db4ff2f9146">Origen::State::scp_concs</a></div><div class="ttdeci">SCP_Concentrations scp_concs() const </div><div class="ttdoc">return a shared (read-only) concs pointer </div><div class="ttdef"><b>Definition:</b> State.cpp:34</div></div>
-<div class="ttc" id="class_origen_1_1_state_html_a5f82e1f2268eca3d5b3fec6940a8cb4e"><div class="ttname"><a href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">Origen::State::definition</a></div><div class="ttdeci">const StateInfo &amp; definition() const </div><div class="ttdoc">return a const reference to definition </div><div class="ttdef"><b>Definition:</b> State.cpp:33</div></div>
-<div class="ttc" id="namespace_origen_html_a9c012da9fb664e11e346628ad72472f5"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a9c012da9fb664e11e346628ad72472f5">Origen::SCP_Concentrations</a></div><div class="ttdeci">Concentrations::SCP SCP_Concentrations</div><div class="ttdef"><b>Definition:</b> Concentrations.h:172</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a78b5124cf8563e61c7eabd25b79201d2"></a>
@@ -1044,11 +892,7 @@ Protected Attributes</h2></td></tr>
 <p>Return the (deprecated) burnups for each <a class="el" href="../../d8/d01/class_origen_1_1_state.html" title="Container for state data. ">State</a> on the <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html">StateSet</a>. </p>
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a07811662bc1944837bcaf54226ed0296">StateSet::energies()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;{</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a07811662bc1944837bcaf54226ed0296">energies</a>();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a07811662bc1944837bcaf54226ed0296"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a07811662bc1944837bcaf54226ed0296">Origen::StateSet::energies</a></div><div class="ttdeci">Vec_Dbl energies() const </div><div class="ttdoc">Return each energy-released on the StateSet. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:241</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a07811662bc1944837bcaf54226ed0296"></a>
@@ -1071,19 +915,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a78b5124cf8563e61c7eabd25b79201d2">StateSet::burnups()</a>, <a class="el" href="../../d7/ddc/class_origen_1_1_obiwan__diff.html#a5a6045f766bf853cff0060dbb230634c">Obiwan_diff::diff()</a>, and <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> result;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        result.push_back( c.definition().energy() );</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a6bcd2e74f37332cbb4da5f9a040789fc"></a>
@@ -1106,19 +938,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a070b50ab87fc4ada81e4e917991d5498">StateSet::create_interp_times()</a>, <a class="el" href="../../d7/ddc/class_origen_1_1_obiwan__diff.html#a5a6045f766bf853cff0060dbb230634c">Obiwan_diff::diff()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#aa08cd2eea65138d4c66ee5c9a76dc83c">StateSet::guessNumSteps()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">StateSet::interpolate_internal()</a>, and <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> result;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        result.push_back( c.definition().time() );</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1067c9550e39b373eb9035eb8e69e6c4"></a>
@@ -1141,19 +961,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a9094a36f758d5c904d6e02670b6d9809">StateInfo::power()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/ddc/class_origen_1_1_obiwan__diff.html#a5a6045f766bf853cff0060dbb230634c">Obiwan_diff::diff()</a>, and <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> result;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        result.push_back( c.definition().power() );</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a85824ba3c5ec2e1a70c7cc69f06f4daa"></a>
@@ -1176,19 +984,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a976de47802913ecedcb65e919d45394c">StateInfo::flux()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d7/ddc/class_origen_1_1_obiwan__diff.html#a5a6045f766bf853cff0060dbb230634c">Obiwan_diff::diff()</a>, and <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a1a27e6008527287937a0d52cdeabfb43">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> result;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keyword">const</span> State&amp; c = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        result.push_back( c.definition().flux() );</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a78a0018aa7698f2eec938d78000a6f65"></a>
@@ -1221,13 +1017,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">StateSet::interpolate_internal()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../dc/dd7/tst_grid_view_8cpp.html#aa6c9fb123088ce59ae7a25025c28a6ea">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">interpolate_internal</a>( time, case_number, <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> std::make_shared&lt;StateInfo&gt;( state-&gt;definition() );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a7f27362cc5de3176a488bb9e3a2ff7ab"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">Origen::SP_State</a></div><div class="ttdeci">State::SP SP_State</div><div class="ttdef"><b>Definition:</b> State.h:137</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a0ec062ba5d452c8750b857faafb40123"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">Origen::StateSet::interpolate_internal</a></div><div class="ttdeci">SP_State interpolate_internal(float time, int case_number, bool info_only) const </div><div class="ttdoc">Interpolate a StateSet to a given time & optionally generate a new interpolated State. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:477</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2e31d3edbb02b119fd229386b86ad45b"></a>
@@ -1261,13 +1051,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">StateSet::interpolate_internal()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d9/ddc/tst_state_set_8cpp.html#a9f3ea6edcb92cebd10e1d06be92fa8ad">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">interpolate_internal</a>( time, case_number, <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> state;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a7f27362cc5de3176a488bb9e3a2ff7ab"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">Origen::SP_State</a></div><div class="ttdeci">State::SP SP_State</div><div class="ttdef"><b>Definition:</b> State.h:137</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a0ec062ba5d452c8750b857faafb40123"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">Origen::StateSet::interpolate_internal</a></div><div class="ttdeci">SP_State interpolate_internal(float time, int case_number, bool info_only) const </div><div class="ttdoc">Interpolate a StateSet to a given time & optionally generate a new interpolated State. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:477</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aaafa45264714894aad79643b770f9487"></a>
@@ -1297,25 +1081,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">StateSet::b_states</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#ae1490c5965622e0768ca399de523e353">StateInfo::case_number()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">StateSet::interpolate_internal()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    std::vector&lt;size_t&gt; matches;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    matches.reserve( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;size() );</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">size_t</span> n = 0;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; state : *<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a> )</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    {</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keyword">const</span> StateInfo&amp; <a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a> = state-&gt;definition();</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">if</span>( info.case_number() == case_number )</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            matches.push_back( n );</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        ++n;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">return</span> matches;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-<div class="ttc" id="namespace_origen_html_acac5275310c6e0fef2672b821eb08e38"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info</a></div><div class="ttdeci">int info(const StateSet &amp;state_set, ScaleUtils::IO::DB opts, std::ostream &amp;out, std::ostream &amp;err)</div><div class="ttdef"><b>Definition:</b> Obiwan_info.cpp:160</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="acf7af9c601ee85ba8d67826128f49e21"></a>
@@ -1356,25 +1122,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">StateSet::b_states</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">StateSet::interpolate_internal()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;{</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordtype">size_t</span> nearest = 0;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">const</span> <span class="keyword">auto</span>&amp; n : matches )</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    {</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keyword">const</span> StateInfo&amp; <a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a> = ( *b_states )[n]-&gt;definition();</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">if</span>( std::fabs( info.time() - time ) &lt;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            ( ( *<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a> )[nearest]-&gt;definition().time() - time ) )</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            nearest = n;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        }</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    }</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">if</span>( matches.size() == 0 ) nearest = static_cast&lt;size_t&gt;( -1 );</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">return</span> nearest;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-<div class="ttc" id="namespace_origen_html_acac5275310c6e0fef2672b821eb08e38"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info</a></div><div class="ttdeci">int info(const StateSet &amp;state_set, ScaleUtils::IO::DB opts, std::ostream &amp;out, std::ostream &amp;err)</div><div class="ttdef"><b>Definition:</b> Obiwan_info.cpp:160</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa08cd2eea65138d4c66ee5c9a76dc83c"></a>
@@ -1391,15 +1139,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">StateSet::times()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;{</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordtype">int</span> n = 0;</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> t = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>();</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keywordflow">while</span>( ( n + 1 &lt; (<span class="keywordtype">int</span>)t.size() ) &amp;&amp; ( t[n] &lt;= t[n + 1] ) ) n++;</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordflow">return</span> n + 1;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;}</div>
-<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6bcd2e74f37332cbb4da5f9a040789fc"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">Origen::StateSet::times</a></div><div class="ttdeci">Vec_Dbl times() const </div><div class="ttdoc">Return each time on the StateSet. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:259</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa48c39f92bc04eded742f5310c74aafe"></a>
@@ -1416,9 +1156,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a3e708d496acb090a8657506c512ecf55">StateSet::to_json()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a3e708d496acb090a8657506c512ecf55">to_json</a>().toStyledString(); }</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a3e708d496acb090a8657506c512ecf55"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a3e708d496acb090a8657506c512ecf55">Origen::StateSet::to_json</a></div><div class="ttdeci">Scale::Json::Value to_json() const </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:44</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a3e708d496acb090a8657506c512ecf55"></a>
@@ -1437,23 +1175,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">StateSet::b_states</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#aa48c39f92bc04eded742f5310c74aafe">StateSet::to_string()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    Json::Value root;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">char</span> buf[40];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> index = 0; index &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;size(); ++index )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        root[<span class="stringliteral">&quot;states&quot;</span>][(int)index] = ( *<a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a> )[index]-&gt;to_json();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// add comments to show the start and end of the large reaction set</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// blocks</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        sprintf( buf, <span class="stringliteral">&quot;/* %s %d */&quot;</span>, <span class="stringliteral">&quot;begin state &quot;</span>, (<span class="keywordtype">int</span>)index );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        root[<span class="stringliteral">&quot;states&quot;</span>][(int)index].setComment( buf, Json::commentBefore );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        sprintf( buf, <span class="stringliteral">&quot;/* %s %d */&quot;</span>, <span class="stringliteral">&quot;end state &quot;</span>, (<span class="keywordtype">int</span>)index );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        root[<span class="stringliteral">&quot;states&quot;</span>][(int)index].setComment( buf, Json::commentAfter );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> root;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa974a4fdf6fdee458d50015364526537"></a>
@@ -1479,19 +1201,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a9ce414cf84174cdce99cb606664dcdea">StateSet::r_decay_resource</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// set a Concentration&#39;s DecayResource from the StateSet&#39;s DecayResource</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6185678676ffc30d947afacc20cb60cc">has_decay_resource</a>() )</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">auto</span> <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a9d635ec91d1a4dde7d2f9812d3a848aa">concs</a> = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">b_states</a>-&gt;at( i )-&gt;b_concs;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a9d635ec91d1a4dde7d2f9812d3a848aa">concs</a> != <span class="keyword">nullptr</span> ) <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a9d635ec91d1a4dde7d2f9812d3a848aa">concs</a>-&gt;r_decay_resource = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a9ce414cf84174cdce99cb606664dcdea">r_decay_resource</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6a10ebc14ee2d2426a9830ed2f2b71c9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6a10ebc14ee2d2426a9830ed2f2b71c9">Origen::StateSet::b_states</a></div><div class="ttdeci">SP_Vec_SP_State b_states</div><div class="ttdef"><b>Definition:</b> StateSet.h:116</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6185678676ffc30d947afacc20cb60cc"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6185678676ffc30d947afacc20cb60cc">Origen::StateSet::has_decay_resource</a></div><div class="ttdeci">bool has_decay_resource() const </div><div class="ttdoc">whether this instantiation of class has the decay_resource resource \ </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:32</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a9ce414cf84174cdce99cb606664dcdea"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a9ce414cf84174cdce99cb606664dcdea">Origen::StateSet::r_decay_resource</a></div><div class="ttdeci">SCP_DecayResource r_decay_resource</div><div class="ttdef"><b>Definition:</b> StateSet.h:143</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a9d635ec91d1a4dde7d2f9812d3a848aa"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a9d635ec91d1a4dde7d2f9812d3a848aa">Origen::StateSet::concs</a></div><div class="ttdeci">Vec_Pair_Concs concs() const </div><div class="ttdoc">Return all concentrations. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:197</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0f2c8b051599cd6d9077c1c19848cc84"></a>
@@ -1520,24 +1230,7 @@ Protected Attributes</h2></td></tr>
 <p>Also checks for monotonicity in time / burnup values </p>
 
 <p>References <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a5f82e1f2268eca3d5b3fec6940a8cb4e">State::definition()</a>, <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#af0533addfd809fa9a8fcbfc38621ac71">StateInfo::energy()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#ad29dfe545dd9189f011ab51a74fc0774">State::num_alpha_groups()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a258aca8e10b8e0f275c53afbe39f3261">State::num_beta_groups()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a63a89b1e4b79591db74433d2142ec965">State::num_gamma_groups()</a>, <a class="el" href="../../d8/d01/class_origen_1_1_state.html#a2a570c72dd202dcedbc4467251c59980">State::num_neutron_groups()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">StateSet::states_at()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">StateSet::states_size()</a>, and <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html#a46517f06d20da77a7f53cd4a2cde12c6">StateInfo::time()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>() &lt;= 1 ) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 1; i &lt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">states_size</a>(); ++i )</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">const</span> State&amp; ci = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">const</span> State&amp; cp = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">states_at</a>( i - 1 );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span>( cp.num_neutron_groups() != ci.num_neutron_groups() ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span>( cp.num_alpha_groups() != ci.num_alpha_groups() ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>( cp.num_gamma_groups() != ci.num_gamma_groups() ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span>( cp.num_beta_groups() != ci.num_beta_groups() ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span>( cp.definition().time() &gt;= ci.definition().time() ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span>( cp.definition().energy() &gt;= ci.definition().energy() ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a21f2d2ef74738372bec44a57b1e42ee1"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a21f2d2ef74738372bec44a57b1e42ee1">Origen::StateSet::states_at</a></div><div class="ttdeci">const State &amp; states_at(size_t) const </div><div class="ttdoc">Create a shallow copy of a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a8507782d5537a409e10df8b9dc1ad4bd"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a8507782d5537a409e10df8b9dc1ad4bd">Origen::StateSet::states_size</a></div><div class="ttdeci">size_t states_size() const </div><div class="ttdoc">Get number of states. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0ec062ba5d452c8750b857faafb40123"></a>
@@ -1589,56 +1282,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a070b50ab87fc4ada81e4e917991d5498">StateSet::create_interp_times()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#aaafa45264714894aad79643b770f9487">StateSet::matching_states()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#acf7af9c601ee85ba8d67826128f49e21">StateSet::nearest_time()</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">StateSet::times()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a2e31d3edbb02b119fd229386b86ad45b">StateSet::interpolate()</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a78a0018aa7698f2eec938d78000a6f65">StateSet::interpolate_info()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;{</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="comment">// get matching states based on case number</span></div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keyword">auto</span>&amp;&amp; matches = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#aaafa45264714894aad79643b770f9487">matching_states</a>( case_number );</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    <span class="keywordflow">if</span>( matches.size() == 0 ) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="comment">// get times of each matching state</span></div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keyword">auto</span>&amp;&amp; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a> = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a070b50ab87fc4ada81e4e917991d5498">create_interp_times</a>( matches );</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="comment">// get nearest time (for prototype copy)</span></div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordtype">size_t</span> nearest = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acf7af9c601ee85ba8d67826128f49e21">nearest_time</a>( time, matches );</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="comment">// get interpolated header</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a77b3f1a223b4f13ead144bb3929f4b9c">SP_StateInfo</a> <a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a>;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    {</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <span class="comment">// get list of views for those matches</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <span class="keyword">auto</span>&amp;&amp; viewer_list =</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            create_interp_viewers&lt;GridView_StateInfo&gt;( matches );</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        <span class="comment">// interpolate</span></div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        info = interpolate_view&lt;GridView_StateInfo&gt;(</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;            time, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>, viewer_list, viewer_list[nearest] );</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    }</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    Check( info != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="comment">// quick return if only interested in state</span></div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">SP_State</a> state( <span class="keyword">new</span> State() );</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="comment">// get interpolated state</span></div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="keywordflow">if</span>( !info_only )</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    {</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="comment">// get list of views for those matches</span></div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="keyword">auto</span>&amp;&amp; viewer_list = create_interp_viewers&lt;GridView_State&gt;( matches );</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="comment">// interpolate</span></div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        state = interpolate_view&lt;GridView_State&gt;(</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            time, <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>, viewer_list, viewer_list[nearest] );</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    }</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    Check( state != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    state-&gt;set_definition( *info );</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="keywordflow">return</span> state;</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a77b3f1a223b4f13ead144bb3929f4b9c"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a77b3f1a223b4f13ead144bb3929f4b9c">Origen::SP_StateInfo</a></div><div class="ttdeci">StateInfo::SP SP_StateInfo</div><div class="ttdef"><b>Definition:</b> StateInfo.h:132</div></div>
-<div class="ttc" id="namespace_origen_html_a7f27362cc5de3176a488bb9e3a2ff7ab"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a7f27362cc5de3176a488bb9e3a2ff7ab">Origen::SP_State</a></div><div class="ttdeci">State::SP SP_State</div><div class="ttdef"><b>Definition:</b> State.h:137</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_aaafa45264714894aad79643b770f9487"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#aaafa45264714894aad79643b770f9487">Origen::StateSet::matching_states</a></div><div class="ttdeci">std::vector&lt; size_t &gt; matching_states(int case_number) const </div><div class="ttdoc">Find all States matching a case number. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:378</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_acf7af9c601ee85ba8d67826128f49e21"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#acf7af9c601ee85ba8d67826128f49e21">Origen::StateSet::nearest_time</a></div><div class="ttdeci">size_t nearest_time(float time, const std::vector&lt; size_t &gt; &amp;matches) const </div><div class="ttdoc">Find State closest to the given time. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:405</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6bcd2e74f37332cbb4da5f9a040789fc"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">Origen::StateSet::times</a></div><div class="ttdeci">Vec_Dbl times() const </div><div class="ttdoc">Return each time on the StateSet. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:259</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a070b50ab87fc4ada81e4e917991d5498"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a070b50ab87fc4ada81e4e917991d5498">Origen::StateSet::create_interp_times</a></div><div class="ttdeci">std::vector&lt; float &gt; create_interp_times(const std::vector&lt; size_t &gt; &amp;viewer_list) const </div><div class="ttdoc">Create a set of reference times as grid points for interpolation, based on a selected set of States (...</div><div class="ttdef"><b>Definition:</b> StateSet.cpp:528</div></div>
-<div class="ttc" id="namespace_origen_html_acac5275310c6e0fef2672b821eb08e38"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info</a></div><div class="ttdeci">int info(const StateSet &amp;state_set, ScaleUtils::IO::DB opts, std::ostream &amp;out, std::ostream &amp;err)</div><div class="ttdef"><b>Definition:</b> Obiwan_info.cpp:160</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a070b50ab87fc4ada81e4e917991d5498"></a>
@@ -1668,25 +1312,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>, <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">StateSet::scp_states_at()</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">StateSet::times()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a0ec062ba5d452c8750b857faafb40123">StateSet::interpolate_internal()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;{</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    std::vector&lt;float&gt; <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>;</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; m : matches )</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    {</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">SCP_State</a> state = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( m );</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        Check( state );</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">SCP_StateInfo</a> <a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a> = state-&gt;scp_definition();</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        Check( info );</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        times.push_back( info-&gt;time() );</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    }</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">times</a>;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_acb809bdfc70bd11d1bc16350e26aef07"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">Origen::StateSet::scp_states_at</a></div><div class="ttdeci">SCP_State scp_states_at(size_t) const </div><div class="ttdoc">Get a shared pointer to a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a6bcd2e74f37332cbb4da5f9a040789fc"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a6bcd2e74f37332cbb4da5f9a040789fc">Origen::StateSet::times</a></div><div class="ttdeci">Vec_Dbl times() const </div><div class="ttdoc">Return each time on the StateSet. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:259</div></div>
-<div class="ttc" id="namespace_origen_html_a1882e49519a4504e43d48f1254e5eb99"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">Origen::SCP_State</a></div><div class="ttdeci">State::SCP SCP_State</div><div class="ttdef"><b>Definition:</b> State.h:138</div></div>
-<div class="ttc" id="namespace_origen_html_a3f14b5b6094209e6ec0cea66fb4e4353"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">Origen::SCP_StateInfo</a></div><div class="ttdeci">StateInfo::SCP SCP_StateInfo</div><div class="ttdef"><b>Definition:</b> StateInfo.h:133</div></div>
-<div class="ttc" id="namespace_origen_html_acac5275310c6e0fef2672b821eb08e38"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info</a></div><div class="ttdeci">int info(const StateSet &amp;state_set, ScaleUtils::IO::DB opts, std::ostream &amp;out, std::ostream &amp;err)</div><div class="ttdef"><b>Definition:</b> Obiwan_info.cpp:160</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a127a9e24bac063ba3ca9d8aad6214ba4"></a>
@@ -1740,30 +1366,7 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f()</a>, and <a class="el" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#adfc93169d49fccb816e71b229044f62e">StateSet::interpolate_view()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;{</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">size_t</span> nx = viewer_list.size();</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">size_t</span> nr = ( nx == 0 ) ? 0 : viewer_list[0].nr();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">typename</span> T::GD_t::Vec_Rptr response( nr * nx );</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a> = 0;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; v : viewer_list )</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="comment">// get response grid</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keyword">const</span> <span class="keyword">typename</span> T::GD_t::Vec_Rptr&amp; <a class="code" href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a> = v.r();</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        Check( v.nr() == nr );</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; nr; ++j )</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            response[<a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>] = r[j];</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            ++<a class="code" href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">f</a>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    Ensure( f == nr * nx );</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">return</span> response;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
-<div class="ttc" id="_fake_factory_8cpp_html_a6deea1c2ba17f0529b284f5013940b9f"><div class="ttname"><a href="../../d8/dc8/_fake_factory_8cpp.html#a6deea1c2ba17f0529b284f5013940b9f">r</a></div><div class="ttdeci">std::shared_ptr&lt; ScaleUtils::Math::MTRand &gt; r</div><div class="ttdef"><b>Definition:</b> FakeFactory.cpp:23</div></div>
-<div class="ttc" id="namespacekernel__rksuite_html_ac6251e8fb528bf3da394e678ccacf8a5"><div class="ttname"><a href="../../df/d36/namespacekernel__rksuite.html#ac6251e8fb528bf3da394e678ccacf8a5">kernel_rksuite::f</a></div><div class="ttdeci">real(c_double) function, dimension(size(y)) f(t, y)</div><div class="ttdef"><b>Definition:</b> kernel_rksuite.f90:35</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="adfc93169d49fccb816e71b229044f62e"></a>
@@ -1814,38 +1417,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section remark"><dt>Remarks</dt><dd>Grid extents defined by times (interpolated on time) </dd></dl>
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#a07fb8c2e4b27e7fcf318a15a2754b3b9">StateSet::create_interp_responses()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="comment">// get responses</span></div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keyword">auto</span>&amp;&amp; response = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#a07fb8c2e4b27e7fcf318a15a2754b3b9">create_interp_responses</a>( viewer_list );</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordtype">size_t</span> nx = times.size();</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="comment">// Grid b_state object</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keyword">typename</span> View::GD_t gd;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="comment">// set x-grid (1D with times in this case)</span></div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keyword">typename</span> View::GD_t::Vec_I gextents( {nx} );       <span class="comment">// one-dimension</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keyword">typename</span> View::GD_t::Vec_Xptr grid = {&amp;times[0]};  <span class="comment">// one set of pointers</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    gd.setx( gextents, grid );</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="comment">// set response-grid (multiple in this case)</span></div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    gd.setr( prototype.rextents(), response );</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="comment">// interpolate (linear for now)</span></div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    std::vector&lt;float&gt; time_wts( nx );</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    interpwts_lin( times, time, &amp;time_wts );</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keyword">typename</span> View::GD_t::Vec_Xptr wts = {&amp;time_wts[0]};</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keyword">typename</span> View::GD_t::Vec_Z interp_view = gd.rgridsum( wts );</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="comment">// create new interpolated StateInfo by pushing interpolated</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="comment">// response back to newly created state info</span></div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">typename</span> View::Type::SP interp = prototype.permute( interp_view );</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordflow">return</span> interp;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_a07fb8c2e4b27e7fcf318a15a2754b3b9"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#a07fb8c2e4b27e7fcf318a15a2754b3b9">Origen::StateSet::create_interp_responses</a></div><div class="ttdeci">T::GD_t::Vec_Rptr create_interp_responses(const std::vector&lt; T &gt; &amp;viewer_list) const </div><div class="ttdoc">Create a set of interpolated responses from a viewer list. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:346</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4436c2d12a87221b3b8bbc168e6e751b"></a>
@@ -1874,24 +1446,7 @@ Protected Attributes</h2></td></tr>
 <p>This method translates <a class="el" href="../../d8/dd4/class_origen_1_1_state_info.html" title="Container for a State information tag. ">StateInfo</a> objects (headers for <a class="el" href="../../d8/d01/class_origen_1_1_state.html" title="Container for state data. ">State</a>) into a set of <a class="el" href="../../d2/d2c/class_origen_1_1_grid_view.html" title="GridView provides a template for creating &quot;views&quot; of date usable with GridData to perform interpolati...">GridView</a> extents, which can then be used for ND interpolation operations </p>
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info()</a>, and <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">StateSet::scp_states_at()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    std::vector&lt;GridView_StateInfo&gt; viewer_list;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    viewer_list.reserve( matches.size() );</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; m : matches )</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">SCP_State</a> state = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( m );</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        Check( state );</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">SCP_StateInfo</a> <a class="code" href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">info</a> = state-&gt;scp_definition();</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        viewer_list.emplace_back( info );</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> viewer_list;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_acb809bdfc70bd11d1bc16350e26aef07"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">Origen::StateSet::scp_states_at</a></div><div class="ttdeci">SCP_State scp_states_at(size_t) const </div><div class="ttdoc">Get a shared pointer to a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_a1882e49519a4504e43d48f1254e5eb99"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">Origen::SCP_State</a></div><div class="ttdeci">State::SCP SCP_State</div><div class="ttdef"><b>Definition:</b> State.h:138</div></div>
-<div class="ttc" id="namespace_origen_html_a3f14b5b6094209e6ec0cea66fb4e4353"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a3f14b5b6094209e6ec0cea66fb4e4353">Origen::SCP_StateInfo</a></div><div class="ttdeci">StateInfo::SCP SCP_StateInfo</div><div class="ttdef"><b>Definition:</b> StateInfo.h:133</div></div>
-<div class="ttc" id="namespace_origen_html_acac5275310c6e0fef2672b821eb08e38"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#acac5275310c6e0fef2672b821eb08e38">Origen::info</a></div><div class="ttdeci">int info(const StateSet &amp;state_set, ScaleUtils::IO::DB opts, std::ostream &amp;out, std::ostream &amp;err)</div><div class="ttdef"><b>Definition:</b> Obiwan_info.cpp:160</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a09c95874d6970ea340c775b5d09b43af"></a>
@@ -1921,21 +1476,7 @@ Protected Attributes</h2></td></tr>
 <p>Here, interpolation would be of concentrations &amp; spectra (as responses) on a time dimension (i.e., time mapped onto extents) </p>
 
 <p>References <a class="el" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">StateSet::scp_states_at()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    std::vector&lt;GridView_State&gt; viewer_list;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    viewer_list.reserve( matches.size() );</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">auto</span>&amp; m : matches )</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <a class="code" href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">SCP_State</a> state = <a class="code" href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">scp_states_at</a>( m );</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        Check( state );</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        viewer_list.emplace_back( state );</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">return</span> viewer_list;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_state_set_html_acb809bdfc70bd11d1bc16350e26aef07"><div class="ttname"><a href="../../d4/dc0/class_origen_1_1_state_set.html#acb809bdfc70bd11d1bc16350e26aef07">Origen::StateSet::scp_states_at</a></div><div class="ttdeci">SCP_State scp_states_at(size_t) const </div><div class="ttdoc">Get a shared pointer to a State at a given index. </div><div class="ttdef"><b>Definition:</b> StateSet.cpp:18</div></div>
-<div class="ttc" id="namespace_origen_html_a1882e49519a4504e43d48f1254e5eb99"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a1882e49519a4504e43d48f1254e5eb99">Origen::SCP_State</a></div><div class="ttdeci">State::SCP SCP_State</div><div class="ttdef"><b>Definition:</b> State.h:138</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

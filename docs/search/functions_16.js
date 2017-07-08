@@ -1,7 +1,7 @@
 var searchData=
 [
   ['validate',['validate',['../da/d73/namespace_scale_1_1_module.html#a9681074d96b8debab18fd021d75dea02',1,'Scale::Module']]],
-  ['vals',['vals',['../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157',1,'Origen::Concentrations']]],
+  ['vals',['vals',['../d7/d44/class_origen_1_1_concentrations.html#a33ef586db314dbe5cac7700013d13157',1,'Origen::Concentrations::vals()'],['../d3/d04/class_origen_1_1_removal.html#a6dc6691db8e7c764f674876155794fee',1,'Origen::Removal::vals()']]],
   ['vals_5farray',['vals_array',['../d7/d44/class_origen_1_1_concentrations.html#a3c0ec1da6a9ca5a2281c74b6bdce3377',1,'Origen::Concentrations']]],
   ['vals_5fat',['vals_at',['../d7/d44/class_origen_1_1_concentrations.html#aa2e4ee5c5b98502d721489a1c529b5f5',1,'Origen::Concentrations::vals_at()'],['../d3/d70/structorigen__concentrations__m_1_1origen__concentrations.html#a92650f2cc42a1070a7977c4a59ba8515',1,'origen_concentrations_m::origen_concentrations::vals_at()']]],
   ['vals_5fsize',['vals_size',['../d7/d44/class_origen_1_1_concentrations.html#ad84d9ca6b809a6db3d4ea4c95d937b3b',1,'Origen::Concentrations::vals_size()'],['../d3/d70/structorigen__concentrations__m_1_1origen__concentrations.html#ac138970df4fb59df035f19b3e40f1892',1,'origen_concentrations_m::origen_concentrations::vals_size()']]],

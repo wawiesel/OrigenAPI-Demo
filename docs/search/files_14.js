@@ -7,6 +7,8 @@ var searchData=
   ['yieldresourceinterface_2eh',['YieldResourceInterface.h',['../d3/d90/_yield_resource_interface_8h.html',1,'']]],
   ['yieldresourceio_2ecpp',['YieldResourceIO.cpp',['../d7/d68/_yield_resource_i_o_8cpp.html',1,'']]],
   ['yieldresourceio_2eh',['YieldResourceIO.h',['../d9/d68/_yield_resource_i_o_8h.html',1,'']]],
+  ['yieldresourceio_5fampx_2ecpp',['YieldResourceIO_ampx.cpp',['../da/d92/_yield_resource_i_o__ampx_8cpp.html',1,'']]],
+  ['yieldresourceio_5fampx_2eh',['YieldResourceIO_ampx.h',['../df/d75/_yield_resource_i_o__ampx_8h.html',1,'']]],
   ['yieldresourceio_5fm_2ef90',['YieldResourceIO_M.f90',['../d5/de0/_yield_resource_i_o___m_8f90.html',1,'']]],
   ['yieldresourceio_5fstab1_2ecpp',['YieldResourceIO_stab1.cpp',['../d1/dba/_yield_resource_i_o__stab1_8cpp.html',1,'']]],
   ['yieldresourceio_5fstab1_2eh',['YieldResourceIO_stab1.h',['../d5/d1e/_yield_resource_i_o__stab1_8h.html',1,'']]],

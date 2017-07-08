@@ -40,6 +40,7 @@ var searchData=
   ['origen_5fnuclideresource',['origen_nuclideresource',['../dd/da4/structorigen__nuclideresource__m_1_1origen__nuclideresource.html',1,'origen_nuclideresource_m']]],
   ['origen_5fnuclideset',['origen_nuclideset',['../d8/da1/structorigen__nuclideset__m_1_1origen__nuclideset.html',1,'origen_nuclideset_m']]],
   ['origen_5foutput_5fclass',['origen_output_class',['../db/df3/structorigen__output_1_1origen__output__class.html',1,'origen_output']]],
+  ['origen_5fparticleemitter',['origen_particleemitter',['../d5/de7/structorigen__particleemitter__api_1_1origen__particleemitter.html',1,'origen_particleemitter_api']]],
   ['origen_5fspectrum',['origen_spectrum',['../dc/d28/structorigen__spectrum__m_1_1origen__spectrum.html',1,'origen_spectrum_m']]],
   ['origen_5fstate',['origen_state',['../dc/d64/structorigen__state__m_1_1origen__state.html',1,'origen_state_m']]],
   ['origen_5fstateinfo',['origen_stateinfo',['../d0/d8c/structorigen__stateinfo__m_1_1origen__stateinfo.html',1,'origen_stateinfo_m']]],

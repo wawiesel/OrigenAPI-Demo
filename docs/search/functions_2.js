@@ -13,7 +13,6 @@ var searchData=
   ['binlib_5fget_5fn_5fng',['binlib_get_n_ng',['../dd/d0f/namespacescale__libraries.html#a0528788946ee8504c734e0b8228155ba',1,'scale_libraries']]],
   ['binlib_5fread_5fg_5fegs',['binlib_read_g_egs',['../dd/d0f/namespacescale__libraries.html#a62a661f1d81cf7f19a77ef2c4d6b8223',1,'scale_libraries']]],
   ['binlib_5fread_5fn_5fegs',['binlib_read_n_egs',['../dd/d0f/namespacescale__libraries.html#a07043a98a6d23f816fb9d328b2b4982e',1,'scale_libraries']]],
-  ['bool',['bool',['../da/da9/namespaceauxiliary.html#a6cd4ec71f388dc57f2dafcf6b2bfc5a2',1,'auxiliary']]],
   ['bounds',['bounds',['../d7/dd5/class_origen_1_1_spectrum.html#af43ae7da1529751a1670dd955079731c',1,'Origen::Spectrum']]],
   ['bounds_5farray',['bounds_array',['../d7/dd5/class_origen_1_1_spectrum.html#af9aec2fb32759b0be29472395f073200',1,'Origen::Spectrum']]],
   ['bounds_5fat',['bounds_at',['../dc/d28/structorigen__spectrum__m_1_1origen__spectrum.html#ac22e1def9686735b5f6a71e3c41b94e9',1,'origen_spectrum_m::origen_spectrum::bounds_at()'],['../d7/dd5/class_origen_1_1_spectrum.html#ad07d872f51b642657f333f6135b816b9',1,'Origen::Spectrum::bounds_at()']]],

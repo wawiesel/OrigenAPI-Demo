@@ -103,80 +103,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d5a/_energy_resource_8h.html">Origen/Core/re/EnergyResource.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d25/_nuclide_set_8h.html">Origen/Core/dc/NuclideSet.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;ScaleData/Core/Utils.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;cctype&gt;</span></div>
 <div class="line"></div>
 <div class="line"><a name="a0"></a><a class="code" href="../../d7/dca/tst_energy_resource_8cpp.html#a05e6c077045bb6104cc211a7a030337b">TEST</a>( EnergyResource, Basic )</div>
 <div class="line">{</div>
 <div class="line">    <a name="_a1"></a><a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html">Origen::EnergyResource</a> fiscap;</div>
 <div class="line">    <span class="keywordtype">double</span> kCap, kFiss;</div>
 <div class="line"></div>
-<div class="line"><span class="keywordflow">for</span>( <span class="keywordtype">int</span> i : std::vector&lt;int&gt;({1001,</div>
-<div class="line">5010,</div>
-<div class="line">8016,</div>
-<div class="line">26056,</div>
-<div class="line">28058,</div>
-<div class="line">40090,</div>
-<div class="line">40091,</div>
-<div class="line">40092,</div>
-<div class="line">40096,</div>
-<div class="line">42095,</div>
-<div class="line">43095,</div>
-<div class="line">44101,</div>
-<div class="line">45103,</div>
-<div class="line">45105,</div>
-<div class="line">47109,</div>
-<div class="line">54131,</div>
-<div class="line">54135,</div>
-<div class="line">55133,</div>
-<div class="line">55134,</div>
-<div class="line">60143,</div>
-<div class="line">60145,</div>
-<div class="line">61147,</div>
-<div class="line">61148,</div>
-<div class="line">62147,</div>
-<div class="line">62149,</div>
-<div class="line">62150,</div>
-<div class="line">62151,</div>
-<div class="line">62152,</div>
-<div class="line">63153,</div>
-<div class="line">63154,</div>
-<div class="line">63155,</div>
-<div class="line">90230,</div>
-<div class="line">90232,</div>
-<div class="line">90233,</div>
-<div class="line">91231,</div>
-<div class="line">91233,</div>
-<div class="line">92232,</div>
-<div class="line">92233,</div>
-<div class="line">92234,</div>
-<div class="line">92235,</div>
-<div class="line">92236,</div>
-<div class="line">92238,</div>
-<div class="line">93237,</div>
-<div class="line">93239,</div>
-<div class="line">94238,</div>
-<div class="line">94239,</div>
-<div class="line">94240,</div>
-<div class="line">94241,</div>
-<div class="line">94242,</div>
-<div class="line">94243,</div>
-<div class="line">95241,</div>
-<div class="line">95243,</div>
-<div class="line">96244,</div>
-<div class="line">96245,</div>
-<div class="line">1061148,</div>
-<div class="line">1095242}))</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordtype">int</span> z = (i/1000) % 1000;</div>
-<div class="line">    <span class="keyword">auto</span> s = ScaleData::Utils::z_to_symbol(z);</div>
-<div class="line">    s[0] = toupper(s[0]);</div>
-<div class="line">    <span class="keywordtype">int</span> a = i%1000;</div>
-<div class="line">    fiscap.<a name="a2"></a><a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( i, kCap, kFiss);</div>
-<div class="line">    <span class="keywordflow">if</span>( kCap==0.0 )<span class="keywordflow">continue</span>;</div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\\nuclide{&quot;</span>&lt;&lt;z&lt;&lt;<span class="stringliteral">&quot;}{&quot;</span>&lt;&lt; s &lt;&lt;<span class="stringliteral">&quot;}{&quot;</span>&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot;}\t&amp;\t&quot;</span>&lt;&lt; kCap &lt;&lt; <span class="stringliteral">&quot;\t&amp;\t&quot;</span> &lt;&lt; kFiss &lt;&lt; <span class="stringliteral">&quot;\t\\\\\\hline&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line">}</div>
 <div class="line">    <span class="comment">// test behavior for a bad zzzaaai, i.e. -5000.</span></div>
-<div class="line">    Insist( !fiscap.<a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( -5000, kCap, kFiss ),</div>
+<div class="line">    Insist( !fiscap.<a name="a2"></a><a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( -5000, kCap, kFiss ),</div>
 <div class="line">            <span class="stringliteral">&quot;found ZZZAAAI -5000 when did not expect to&quot;</span> );</div>
 <div class="line">    Insist( nemesis::soft_equiv( kCap, 5.0 ),</div>
 <div class="line">            <span class="stringliteral">&quot;By default, kappa-capture should be 5 MeV&quot;</span> );</div>

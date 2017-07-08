@@ -134,6 +134,7 @@ var searchData=
   ['count_5fsublibs',['count_sublibs',['../d8/da1/structorigen__nuclideset__m_1_1origen__nuclideset.html#a8465016ee1f8b2fee086b55ae979a105',1,'origen_nuclideset_m::origen_nuclideset::count_sublibs()'],['../d2/de0/class_origen_1_1_nuclide_set.html#a310f1fa17b0d141d97e928463a003468',1,'Origen::NuclideSet::count_sublibs()']]],
   ['couttocerr',['CoutToCerr',['../d3/dd6/struct_cout_to_cerr.html#afee77bc9b93de2a7c99871819cbee913',1,'CoutToCerr']]],
   ['cpu_5ftime',['cpu_time',['../d9/ddc/tst_state_set_8cpp.html#ad1a7bd27020865129c86de9563a1c6a0',1,'tstStateSet.cpp']]],
+  ['create',['create',['../d3/d04/class_origen_1_1_removal.html#a579d4062387144153acdb9319f911698',1,'Origen::Removal']]],
   ['create_5fbounds_5flog',['create_bounds_log',['../d4/d89/class_origen_1_1_emission_spectrum.html#a01bfafdcd614b7fe7814c3a2d5f02ce8',1,'Origen::EmissionSpectrum']]],
   ['create_5fdecay_5flibrary',['create_decay_library',['../df/d95/class_origen_1_1_library_builder.html#a2dd497b00a1c58db9f9666693fb83b44',1,'Origen::LibraryBuilder']]],
   ['create_5fdecay_5ftransitions',['create_decay_transitions',['../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a',1,'Origen::LibraryBuilder']]],
@@ -164,6 +165,5 @@ var searchData=
   ['createnuclideids_5fscale62',['createNuclideIds_scale62',['../da/daf/class_origen_1_1_fake_factory.html#adc94d0b51de13feabfeddb635e8f942b',1,'Origen::FakeFactory']]],
   ['createnuclideset_5frandom1',['createNuclideSet_random1',['../d5/dc1/namespace_origen.html#a64999c0f07ce8b21ed0bb8a4e3dfdf96',1,'Origen']]],
   ['createtransitioncoeff_5frandom1',['createTransitionCoeff_random1',['../d5/dc1/namespace_origen.html#a9f8495d8bd1598c09a5b2e1f1144ed3f',1,'Origen']]],
-  ['createtransitionstructure_5frandom1',['createTransitionStructure_random1',['../d5/dc1/namespace_origen.html#a118a86bbb0c579b9f45577bd2b584f5e',1,'Origen']]],
-  ['csevl',['csevl',['../de/de8/namespaceauxiliary__erf__m.html#a106d530a8c920735699410050dd0e255',1,'auxiliary_erf_m']]]
+  ['createtransitionstructure_5frandom1',['createTransitionStructure_random1',['../d5/dc1/namespace_origen.html#a118a86bbb0c579b9f45577bd2b584f5e',1,'Origen']]]
 ];

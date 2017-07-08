@@ -173,16 +173,7 @@ Static Public Attributes</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ae63bf01444fa83e2e4d536e113dddf95adc6f24fd6915a3f2786a1b7045406924"></a>END&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95a6ce26a62afab55d7606ad4e92428b30c">UNKNOWN</a> = -1,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95a01092d84689d1948a3dc80a7101b57ec">WATT</a>,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        EV__S,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95adc6f24fd6915a3f2786a1b7045406924">END</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
-<div class="ttc" id="struct_origen_1_1_power_html_ae63bf01444fa83e2e4d536e113dddf95a01092d84689d1948a3dc80a7101b57ec"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95a01092d84689d1948a3dc80a7101b57ec">Origen::Power::WATT</a></div><div class="ttdef"><b>Definition:</b> Power.h:14</div></div>
-<div class="ttc" id="struct_origen_1_1_power_html_ae63bf01444fa83e2e4d536e113dddf95a6ce26a62afab55d7606ad4e92428b30c"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95a6ce26a62afab55d7606ad4e92428b30c">Origen::Power::UNKNOWN</a></div><div class="ttdef"><b>Definition:</b> Power.h:13</div></div>
-<div class="ttc" id="struct_origen_1_1_power_html_ae63bf01444fa83e2e4d536e113dddf95adc6f24fd6915a3f2786a1b7045406924"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95adc6f24fd6915a3f2786a1b7045406924">Origen::Power::END</a></div><div class="ttdef"><b>Definition:</b> Power.h:16</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -230,11 +221,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> base&lt;from&gt;() / base&lt;to&gt;();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">template</span> &lt;Power::UNITS to&gt;</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2584201ca69d238ac0f9f772c736d8b0"></a>
@@ -286,16 +273,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">Power::base()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">base</a>( from ) / base&lt;to&gt;();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#a90e0a3bea0ca70cc630a773255afb1da">factor</a>( <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95">Power::UNITS</a> to, <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95">Power::UNITS</a> from )</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">base</a>( from ) / <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">base</a>( to );</div>
-<div class="ttc" id="struct_origen_1_1_power_html_a90e0a3bea0ca70cc630a773255afb1da"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#a90e0a3bea0ca70cc630a773255afb1da">Origen::Power::factor</a></div><div class="ttdeci">static double factor()</div><div class="ttdef"><b>Definition:</b> Power.h:32</div></div>
-<div class="ttc" id="struct_origen_1_1_power_html_a2584201ca69d238ac0f9f772c736d8b0"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">Origen::Power::base</a></div><div class="ttdeci">static double base()</div></div>
-<div class="ttc" id="struct_origen_1_1_power_html_ae63bf01444fa83e2e4d536e113dddf95"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95">Origen::Power::UNITS</a></div><div class="ttdeci">UNITS</div><div class="ttdef"><b>Definition:</b> Power.h:11</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a90e0a3bea0ca70cc630a773255afb1da"></a>
@@ -318,10 +296,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> base&lt;from&gt;() / base&lt;to&gt;();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ac227c3491bf4ca1259a408f37c64c614"></a>
@@ -345,11 +320,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">base</a>( from ) / base&lt;to&gt;();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="ttc" id="struct_origen_1_1_power_html_a2584201ca69d238ac0f9f772c736d8b0"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">Origen::Power::base</a></div><div class="ttdeci">static double base()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad16200060b718b53857ff3c8a9c96456"></a>
@@ -385,11 +356,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">Power::base()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">base</a>( from ) / <a class="code" href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">base</a>( to );</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="ttc" id="struct_origen_1_1_power_html_a2584201ca69d238ac0f9f772c736d8b0"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#a2584201ca69d238ac0f9f772c736d8b0">Origen::Power::base</a></div><div class="ttdeci">static double base()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a988eb1ed9bb0f27b172f4cfd0ccc98b8"></a>
@@ -437,11 +404,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95">Power::UNITS</a><span class="keyword">&gt;</span>( i );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="ttc" id="struct_origen_1_1_power_html_ae63bf01444fa83e2e4d536e113dddf95"><div class="ttname"><a href="../../d4/d94/struct_origen_1_1_power.html#ae63bf01444fa83e2e4d536e113dddf95">Origen::Power::UNITS</a></div><div class="ttdeci">UNITS</div><div class="ttdef"><b>Definition:</b> Power.h:11</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

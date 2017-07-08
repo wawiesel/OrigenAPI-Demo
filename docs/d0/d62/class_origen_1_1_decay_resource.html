@@ -218,10 +218,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;{</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="comment">// initialize library</span></div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7e77f512c8665e614503a8c8ffa19d91"></a>
@@ -239,23 +236,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../db/d2d/class_origen_1_1_decay_data.html#aa60ce09301066a3c124dc5aef66eec8b">DecayData::decay_constants</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#a7c55c01e1e736dd4b2205d593be18786">Library::decay_data()</a>, <a class="el" href="../../de/d87/class_origen_1_1_library.html#a91acb9d4be4da86e3d90c43ee40249a1">Library::definition()</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">DecayResource::get_parent_map()</a>, <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html#af65c9c915f254006705af86d2d9c8ddd">NuclideSet::ids_at()</a>, <a class="el" href="../../d9/d4b/class_origen_1_1_library_header.html#a30d45658bf2bd71aa3f45267469d959e">LibraryHeader::nuclide_set()</a>, <a class="el" href="../../db/d2d/class_origen_1_1_decay_data.html#a20e19690b5a5d8554ffcdd06e2165354">DecayData::q_fractions_from_photons</a>, <a class="el" href="../../db/d2d/class_origen_1_1_decay_data.html#aee092acdc05801ba44688204731f6e60">DecayData::rcg_for_air</a>, <a class="el" href="../../db/d2d/class_origen_1_1_decay_data.html#a6f4208700c8580edfddf80045fee35d3">DecayData::rcg_for_water</a>, <a class="el" href="../../db/d2d/class_origen_1_1_decay_data.html#a8af2124dfdc5be17e6159171f5c3318e">DecayData::recoverable_energy_values</a>, and <a class="el" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a9f78d67a34395eea0b650fd5714a89f7">NuclideSet::total_nuclides()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;{</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keyword">const</span> NuclideSet&amp; nucset = library.definition().nuclide_set();</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="keyword">const</span> DecayData&amp; dd = library.decay_data();</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; nucset.total_nuclides(); ++i )</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    {</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        <span class="keywordtype">int</span> sizzzaaa = nucset.ids_at( i );</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        <span class="keywordtype">int</span> izzzaaa = sizzzaaa % ScaleData::Utils::PIZZZAAA_P_OFFSET;</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="keyword">auto</span>&amp; e = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">get_parent_map</a>()[izzzaaa];</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        e.set_rcg_for_air( dd.rcg_for_air[i] );</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;        e.set_rcg_for_water( dd.rcg_for_water[i] );</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;        e.set_decay_constant( dd.decay_constants[i] );</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        e.set_q_fraction_from_photons( dd.q_fractions_from_photons[i] );</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        e.set_recoverable_energy_value( dd.recoverable_energy_values[i] );</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    }</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a2f62f52e16ae55e92dfb37cf59bee8ce"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a2f62f52e16ae55e92dfb37cf59bee8ce">Origen::DecayResource::get_parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; &amp; get_parent_map()</div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:398</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -275,11 +256,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dab/class_origen_1_1_transition_system_adapter___decay_resource.html#ae1cb7a2227f64430533629c91a1a6739">TransitionSystemAdapter_DecayResource::extend()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#afd75aaa1dabc9c172166f9a20049ddd6">Origen::populateLibraryDecayEnergy_DecayResource()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a3481c1a788b40a2594cac34cb78a0e98">Origen::populateLibraryToxicity_DecayResource()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a3ed177ab84bfbc739eeb5f82f1964d93">Origen::printDecayTable()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;{</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;}  <span class="comment">// DecayResource::get_const_parent_map</span></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2f62f52e16ae55e92dfb37cf59bee8ce"></a>
@@ -299,11 +276,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a7e77f512c8665e614503a8c8ffa19d91">DecayResource::DecayResource()</a>, <a class="el" href="../../d6/dff/class_origen_1_1_decay_resource_i_o__cimg.html#a236800934bb9e4a3bf867e0b60ba7eee">DecayResourceIO_cimg::read()</a>, and <a class="el" href="../../db/d17/tst_decay_resource_i_o_8cpp.html#aec234f362803fbd06541939fac70aa03">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;{</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}  <span class="comment">// DecayResource::get_parent_map</span></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa3e8d541a94f189a5919612c365cfdc8"></a>
@@ -322,9 +295,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d5/dc1/namespace_origen.html#a7a9022499dba71064543a035e94f25fc">Origen::loadMulti()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.size(); }</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a66d1dd0f895b9a2512d0f16d08740a4f"></a>
@@ -344,16 +315,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#aeed6058308ba91219209453242970099">DecayResource::is_present()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::map&lt;int, DecayParent&gt;::const_iterator it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.find( <span class="keywordtype">id</span> );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>( it == <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end() )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> it-&gt;second.get_const_channel_map().size();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4d72381846bf0f85ead7bf459d8981c0"></a>
@@ -383,13 +345,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a1c515dee2a02ab53734d2a80e2b07256">DecayResource::has_decay_mode()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    std::map&lt;int, DecayParent&gt;::const_iterator it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.find( <span class="keywordtype">id</span> );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span>( it == <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end() ) <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> ( it-&gt;second ).num_residuals( decay_mode );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aeed6058308ba91219209453242970099"></a>
@@ -410,11 +366,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a66d1dd0f895b9a2512d0f16d08740a4f">DecayResource::num_decay_modes()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d17/tst_decay_resource_i_o_8cpp.html#aec234f362803fbd06541939fac70aa03">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a66d1dd0f895b9a2512d0f16d08740a4f">num_decay_modes</a>( <span class="keywordtype">id</span> ) != -1;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a66d1dd0f895b9a2512d0f16d08740a4f"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a66d1dd0f895b9a2512d0f16d08740a4f">Origen::DecayResource::num_decay_modes</a></div><div class="ttdeci">int num_decay_modes(const int id) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1c515dee2a02ab53734d2a80e2b07256"></a>
@@ -445,11 +397,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a4d72381846bf0f85ead7bf459d8981c0">DecayResource::num_residuals()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d17/tst_decay_resource_i_o_8cpp.html#aec234f362803fbd06541939fac70aa03">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a4d72381846bf0f85ead7bf459d8981c0">num_residuals</a>( <span class="keywordtype">id</span>, decay_mode ) != -1;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a4d72381846bf0f85ead7bf459d8981c0"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a4d72381846bf0f85ead7bf459d8981c0">Origen::DecayResource::num_residuals</a></div><div class="ttdeci">int num_residuals(const int id, const int decay_mode) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:62</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a5b6d5456b1c710d8a7f1047e1ad7b189"></a>
@@ -467,20 +415,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
-<div class="fragment"><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;{</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    std::list&lt;int&gt; idList;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    std::map&lt;int, DecayParent&gt;::const_iterator it;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.begin(); it != <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end(); it++ )</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        idList.push_back( it-&gt;first );</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    idList.unique();</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    list.clear();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    list.assign( idList.begin(), idList.end() );</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7852c7d5aaf3c855cd0960a3e1ca1ba2"></a>
@@ -500,26 +435,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#ac8634e6ec2423ed902011936e04e56f0">DecayParent::get_const_channel_map()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">DecayResource::to_json()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;{</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    std::list&lt;int&gt; modeList;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    std::map&lt;int, DecayParent&gt;::const_iterator it;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.begin(); it != <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end(); it++ )</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        DecayParent parent = it-&gt;second;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        std::map&lt;int, DecayChannel&gt;::const_iterator it2;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">for</span>( it2 = parent.get_const_channel_map().begin();</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;             it2 != parent.get_const_channel_map().end();</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;             it2++ )</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            modeList.push_back( it2-&gt;first );</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        }</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    }</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    modeList.unique();</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    list.clear();</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    list.assign( modeList.begin(), modeList.end() );</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7ea3821b2b968451d74376d5e8d3dbbe"></a>
@@ -543,11 +459,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> &amp;<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.find( <span class="keywordtype">id</span> )-&gt;second;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7d3892c60b3d480f8a878665a74d7b67"></a>
@@ -566,62 +478,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d6/dff/class_origen_1_1_decay_resource_i_o__cimg.html#a236800934bb9e4a3bf867e0b60ba7eee">DecayResourceIO_cimg::read()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// This computation is emulating the</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// Fortran source from src/couple/halfl.f90</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// data c/ 6.9315E-01, 1.1552E-02, 1.9254E-04, 8.0226E-06, 2.1965E-08, 0.0,</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// &amp;</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//          2.1965E-11, 2.1965E-14, 2.1965E-17/</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//       if (a &lt;= 0.0) then</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">//          if (i == 6) go to 110</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//          a = 9.99</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">//          return</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">//       endif</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//       a = c(i)/a</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">//       return</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//   110 continue</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">//       a = 0.0</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">// sec,min,hr,day,yr,NONE,1e3 yr, 1e6 yr, 1e9 yr</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">double</span> conversion_data[] = {6.9315E-01,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                1.1552E-02,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                1.9254E-04,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                8.0226E-06,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                2.1965E-08,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                0.0,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                2.1965E-11,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                2.1965E-14,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                2.1965E-17};</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    std::map&lt;int, DecayParent&gt;::iterator it;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.begin(); it != <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end(); it++ )</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">double</span> decay_constant = 0.0;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">double</span> half_life = it-&gt;second.get_half_life();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">int</span> iu = it-&gt;second.get_time_units();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">if</span>( half_life &lt;= 0.0 )</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">if</span>( iu == 6 )</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                decay_constant = 0.0;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                decay_constant = 9.99;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            Check( iu != 6 );</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            decay_constant = conversion_data[iu - 1] / half_life;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        it-&gt;second.set_decay_constant( decay_constant );</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ae52fe60d2aa8238466dd890763be2672"></a>
@@ -642,15 +499,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a100e67fa8cf5197647c6ffc57413357c">DecayResource::check_consistency()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#afad6dd3a9cf468e1c273d1db07ab0249">DecayResource::check_ids()</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d17/tst_decay_resource_i_o_8cpp.html#aec234f362803fbd06541939fac70aa03">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;{</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordtype">bool</span> pass = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    pass = pass &amp;&amp; this-&gt;<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#afad6dd3a9cf468e1c273d1db07ab0249">check_ids</a>( errors );</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    pass = pass &amp;&amp; this-&gt;<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a100e67fa8cf5197647c6ffc57413357c">check_consistency</a>( errors );</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordflow">return</span> pass;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_afad6dd3a9cf468e1c273d1db07ab0249"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#afad6dd3a9cf468e1c273d1db07ab0249">Origen::DecayResource::check_ids</a></div><div class="ttdeci">bool check_ids(Vec_Str &amp;errors) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:555</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a100e67fa8cf5197647c6ffc57413357c"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a100e67fa8cf5197647c6ffc57413357c">Origen::DecayResource::check_consistency</a></div><div class="ttdeci">bool check_consistency(Vec_Str &amp;errors) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:288</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a100e67fa8cf5197647c6ffc57413357c"></a>
@@ -670,115 +519,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#aa0782e5362be5b1696b70bd24c3ee298">DecayResource::check_id()</a>, <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a5356f4bf2655c095f2602ba787e946ce">DecayChannel::get_branch_ratio()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#ac8634e6ec2423ed902011936e04e56f0">DecayParent::get_const_channel_map()</a>, <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a08c10dc5d70222550367386d2ce843ad">DecayChannel::get_const_yield_map()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#a2e11196608948ef204271603c26e9364">DecayParent::get_half_life()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#a0ea043d20ecd458d32f345c06c8cb36f">DecayParent::get_recoverable_energy_value()</a>, <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#aa1918e23482efa2af3fa9b07307c3f0e">DecayChannel::get_yield_type()</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a4fd4c904cf4bbba51a518c434ec0880a">DecayResource::ISOMERIC_YIELDS</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a272031fec68c018681cadce74f1a0485">DecayResource::IZZZAAA_YIELDS</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">DecayResource::MISSING_YIELDS</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ae52fe60d2aa8238466dd890763be2672">DecayResource::check()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">size_t</span> nErr = errors.size();</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    std::map&lt;int, DecayParent&gt;::const_iterator it;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.begin(); it != <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end(); it++ )</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = it-&gt;first;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        DecayParent parent = it-&gt;second;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordtype">double</span> recoverable_energy_value = parent.get_recoverable_energy_value();</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">double</span> half_life = parent.get_half_life();</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">if</span>( half_life &gt; 0.0 &amp;&amp; recoverable_energy_value == 0.0 )</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        {</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            std::stringstream ss;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;Parent id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; cannot have a half_life=&quot;</span> &lt;&lt; half_life</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;               &lt;&lt; <span class="stringliteral">&quot;&gt;0.0 and recoverable_energy_value==0.0.&quot;</span>;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            errors.push_back( ss.str() );</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        std::map&lt;int, DecayChannel&gt;::const_iterator it2;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">if</span>( parent.get_const_channel_map().size() == 0 &amp;&amp; half_life != 0.0 )</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            std::stringstream ss;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;Parent id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;               &lt;&lt; <span class="stringliteral">&quot; cannot have a half_life&gt;0.0 and no decay modes.&quot;</span>;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            errors.push_back( ss.str() );</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordtype">double</span> sum_branch_ratio = 0;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">for</span>( it2 = parent.get_const_channel_map().begin();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;             it2 != parent.get_const_channel_map().end();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;             it2++ )</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordtype">int</span> decay_mode = it2-&gt;first;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">if</span>( !ScaleData::Utils::is_valid_decay_mode( decay_mode ) )</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                std::stringstream ss;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                ss &lt;&lt; <span class="stringliteral">&quot;Parent id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                   &lt;&lt; <span class="stringliteral">&quot; has invalide decay_mode=&quot;</span> &lt;&lt; decay_mode &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                errors.push_back( ss.str() );</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            DecayChannel channel = it2-&gt;second;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            sum_branch_ratio += channel.get_branch_ratio();</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordtype">int</span> yield_type = channel.get_yield_type();</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            std::map&lt;int, double&gt;::const_iterator it3;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordtype">double</span> sum_yield = 0;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordflow">for</span>( it3 = channel.get_const_yield_map().begin();</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                 it3 != channel.get_const_yield_map().end();</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                 it3++ )</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                <span class="keywordtype">int</span> did = it3-&gt;first;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                sum_yield += it3-&gt;second;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                <span class="keywordflow">if</span>( yield_type == <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a4fd4c904cf4bbba51a518c434ec0880a">ISOMERIC_YIELDS</a> )</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                    <span class="keywordflow">if</span>( did &lt; 0 &amp;&amp; did &gt; 9 )</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                        std::stringstream ss;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                        ss &lt;&lt; <span class="stringliteral">&quot;Parent id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; decay_mode=&quot;</span> &lt;&lt; decay_mode</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                           &lt;&lt; <span class="stringliteral">&quot; has yield yield_type=ISOMERIC_YIELDS, which &quot;</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                              <span class="stringliteral">&quot;means only the isomeric state is given (0-9) but&quot;</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                           &lt;&lt; <span class="stringliteral">&quot; I=&quot;</span> &lt;&lt; did &lt;&lt; <span class="stringliteral">&quot; was found.&quot;</span>;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                        errors.push_back( ss.str() );</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                    }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                }</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>( yield_type == <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a272031fec68c018681cadce74f1a0485">IZZZAAA_YIELDS</a> )</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                    std::stringstream ss;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                    ss &lt;&lt; <span class="stringliteral">&quot;Parent id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; decay_mode=&quot;</span> &lt;&lt; decay_mode</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                       &lt;&lt; <span class="stringliteral">&quot; has yield yield_type=IZZZAAA_YIELDS, with IZZZAAA=&quot;</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                       &lt;&lt; did &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                    this-&gt;<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#aa0782e5362be5b1696b70bd24c3ee298">check_id</a>( <span class="keywordtype">id</span>, ss.str(), errors );</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                }</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>( yield_type == <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">MISSING_YIELDS</a> )</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                {</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                    std::stringstream ss;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                    ss &lt;&lt; <span class="stringliteral">&quot;Parent id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; decay_mode=&quot;</span> &lt;&lt; decay_mode</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                       &lt;&lt; <span class="stringliteral">&quot; has yield yield_type=MISSING_YIELDS which means no &quot;</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                          <span class="stringliteral">&quot;yields may be present.&quot;</span>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                    errors.push_back( ss.str() );</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                    std::stringstream ss;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    ss &lt;&lt; <span class="stringliteral">&quot;Parent id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; decay_mode=&quot;</span> &lt;&lt; decay_mode</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                       &lt;&lt; <span class="stringliteral">&quot; has yield yield_type=UNKNOWN (&quot;</span> &lt;&lt; yield_type</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                       &lt;&lt; <span class="stringliteral">&quot;).&quot;</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                    errors.push_back( ss.str() );</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">if</span>( parent.get_const_channel_map().size() &gt; 0 &amp;&amp;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            std::abs( sum_branch_ratio - 1.0 ) &gt; 1.0e-5 )</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        {</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            std::stringstream ss;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;The sum of branch ratios for id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; is &quot;</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;               &lt;&lt; sum_branch_ratio &lt;&lt; <span class="stringliteral">&quot;.  It should be closer to 1.&quot;</span>;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            errors.push_back( ss.str() );</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        }</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="comment">// no errors were introduced</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">return</span> errors.size() == nErr;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_abb6502e5960d0dc9d929156de2ece2eb"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#abb6502e5960d0dc9d929156de2ece2eb">Origen::DecayResource::MISSING_YIELDS</a></div><div class="ttdeci">static const int MISSING_YIELDS</div><div class="ttdef"><b>Definition:</b> DecayResource.h:162</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_aa0782e5362be5b1696b70bd24c3ee298"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#aa0782e5362be5b1696b70bd24c3ee298">Origen::DecayResource::check_id</a></div><div class="ttdeci">bool check_id(const int id, const std::string prefix, Vec_Str &amp;errors) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:260</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a4fd4c904cf4bbba51a518c434ec0880a"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a4fd4c904cf4bbba51a518c434ec0880a">Origen::DecayResource::ISOMERIC_YIELDS</a></div><div class="ttdeci">static const int ISOMERIC_YIELDS</div><div class="ttdef"><b>Definition:</b> DecayResource.h:160</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a272031fec68c018681cadce74f1a0485"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a272031fec68c018681cadce74f1a0485">Origen::DecayResource::IZZZAAA_YIELDS</a></div><div class="ttdeci">static const int IZZZAAA_YIELDS</div><div class="ttdef"><b>Definition:</b> DecayResource.h:161</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa0782e5362be5b1696b70bd24c3ee298"></a>
@@ -812,30 +553,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a100e67fa8cf5197647c6ffc57413357c">DecayResource::check_consistency()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#afad6dd3a9cf468e1c273d1db07ab0249">DecayResource::check_ids()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">size_t</span> nErr = errors.size();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">int</span> p, i, z, a;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    ScaleData::Utils::split_pizzzaaa( <span class="keywordtype">id</span>, p, i, z, a );</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">if</span>( p != 0 )</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        std::stringstream ss;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        ss &lt;&lt; <span class="stringliteral">&quot;The id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; has an invalid PREFIX=&quot;</span> &lt;&lt; p</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;           &lt;&lt; <span class="stringliteral">&quot; which should be 0.&quot;</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        errors.push_back( prefix + ss.str() );</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">if</span>( !ScaleData::Utils::is_valid_nuclide( i, z, a ) )</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        std::stringstream ss;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        ss &lt;&lt; <span class="stringliteral">&quot;The IZZZAAA id=&quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; is invalid.&quot;</span>;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        errors.push_back( prefix + ss.str() );</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">return</span> nErr == errors.size();</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="afad6dd3a9cf468e1c273d1db07ab0249"></a>
@@ -855,18 +573,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#aa0782e5362be5b1696b70bd24c3ee298">DecayResource::check_id()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ae52fe60d2aa8238466dd890763be2672">DecayResource::check()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;{</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    std::map&lt;int, DecayParent&gt;::const_iterator it;</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <span class="keywordtype">size_t</span> nErr = errors.size();</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.begin(); it != <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end(); it++ )</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    {</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        this-&gt;<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#aa0782e5362be5b1696b70bd24c3ee298">check_id</a>( it-&gt;first, <span class="stringliteral">&quot;&quot;</span>, errors );</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    }</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="keywordflow">return</span> errors.size() == nErr;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_aa0782e5362be5b1696b70bd24c3ee298"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#aa0782e5362be5b1696b70bd24c3ee298">Origen::DecayResource::check_id</a></div><div class="ttdeci">bool check_id(const int id, const std::string prefix, Vec_Str &amp;errors) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:260</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a3e708d496acb090a8657506c512ecf55"></a>
@@ -886,96 +593,7 @@ Private Attributes</h2></td></tr>
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a40737bd8724117acf3ac075cf3825a58">Origen::_to_id_string()</a>, <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a5356f4bf2655c095f2602ba787e946ce">DecayChannel::get_branch_ratio()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#ac8634e6ec2423ed902011936e04e56f0">DecayParent::get_const_channel_map()</a>, <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#a08c10dc5d70222550367386d2ce843ad">DecayChannel::get_const_yield_map()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#a2e11196608948ef204271603c26e9364">DecayParent::get_half_life()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#a342b9f6aa5c1a150c9148dd6914216c0">DecayParent::get_q_fraction_from_photons()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#aaee96e7f04a091950c6c59e2d5cba99e">DecayParent::get_rcg_for_air()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#ab5a1409abff8f71ca94973e530eea0b3">DecayParent::get_rcg_for_water()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#a0ea043d20ecd458d32f345c06c8cb36f">DecayParent::get_recoverable_energy_value()</a>, <a class="el" href="../../df/d71/class_origen_1_1_decay_parent.html#ae3ff3c088e441dc7620d1d8cc6ae49ec">DecayParent::get_time_units()</a>, <a class="el" href="../../dc/da1/class_origen_1_1_decay_channel.html#aa1918e23482efa2af3fa9b07307c3f0e">DecayChannel::get_yield_type()</a>, <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a7852c7d5aaf3c855cd0960a3e1ca1ba2">DecayResource::list_decay_modes()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">DecayResource::parent_map</a>.</p>
 
 <p>Referenced by <a class="el" href="../../db/d17/tst_decay_resource_i_o_8cpp.html#aec234f362803fbd06541939fac70aa03">TEST()</a>, and <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#aa48c39f92bc04eded742f5310c74aafe">DecayResource::to_string()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    Json::Value j_root( Json::objectValue );</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    Json::Value j_parents( Json::objectValue );</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    std::map&lt;int, DecayParent&gt;::const_iterator it;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">for</span>( it = <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.begin(); it != <a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">parent_map</a>.end(); it++ )</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = it-&gt;first;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        DecayParent parent = it-&gt;second;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="comment">// initialize parents[idString]</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        Json::Value j_parent( Json::objectValue );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        j_parent[<span class="stringliteral">&quot;half_life&quot;</span>] = parent.get_half_life();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        j_parent[<span class="stringliteral">&quot;time_units&quot;</span>] = parent.get_time_units();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        j_parent[<span class="stringliteral">&quot;recoverable_energy_value&quot;</span>] =</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            parent.get_recoverable_energy_value();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        j_parent[<span class="stringliteral">&quot;q_fraction_from_photons&quot;</span>] =</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            parent.get_q_fraction_from_photons();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        j_parent[<span class="stringliteral">&quot;rcg_for_air&quot;</span>] = parent.get_rcg_for_air();</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        j_parent[<span class="stringliteral">&quot;rcg_for_water&quot;</span>] = parent.get_rcg_for_water();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        Json::Value j_decay_modes( Json::objectValue );</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        std::map&lt;int, DecayChannel&gt;::const_iterator it2;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">for</span>( it2 = parent.get_const_channel_map().begin();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;             it2 != parent.get_const_channel_map().end();</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;             it2++ )</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordtype">int</span> decay_mode = it2-&gt;first;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            DecayChannel channel = it2-&gt;second;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="comment">// initialize parents[idString][&quot;decay_modes&quot;][decay_modeString]</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            Json::Value j_mode( Json::objectValue );</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="comment">// populate parents[idString][&quot;decay_modes&quot;][decay_modeString]</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            j_mode[<span class="stringliteral">&quot;branch_ratio&quot;</span>] = channel.get_branch_ratio();</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            j_mode[<span class="stringliteral">&quot;yield_type&quot;</span>] = channel.get_yield_type();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            Json::Value j_yield_map( Json::objectValue );</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            std::map&lt;int, double&gt;::const_iterator it3;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">for</span>( it3 = channel.get_const_yield_map().begin();</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                 it3 != channel.get_const_yield_map().end();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                 it3++ )</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <span class="keywordtype">int</span> did = it3-&gt;first;  <span class="comment">// residual id</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                <span class="keywordtype">double</span> yield = it3-&gt;second;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                j_yield_map[<a class="code" href="../../d5/dc1/namespace_origen.html#a40737bd8724117acf3ac075cf3825a58">_to_id_string</a>( did )] = yield;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            j_mode[<span class="stringliteral">&quot;yield_map&quot;</span>] = j_yield_map;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            std::string decay_modeString =</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                ScaleUtils::IO::toString( decay_mode );</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            j_decay_modes[decay_modeString] = j_mode;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }  <span class="comment">// end channels</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// populate parents[idString][&quot;decay_modes&quot;]</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        j_parent[<span class="stringliteral">&quot;decay_modes&quot;</span>] = j_decay_modes;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">// populate parents[idString]</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        j_parents[<a class="code" href="../../d5/dc1/namespace_origen.html#a40737bd8724117acf3ac075cf3825a58">_to_id_string</a>( <span class="keywordtype">id</span> )] = j_parent;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    j_root[<span class="stringliteral">&quot;parents&quot;</span>] = j_parents;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> modes;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    this-&gt;<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a7852c7d5aaf3c855cd0960a3e1ca1ba2">list_decay_modes</a>( modes );</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; modes.size(); i++ )</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        j_root[<span class="stringliteral">&quot;_present_decay_modes&quot;</span>][ScaleUtils::IO::toString( modes[i] )] =</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            ScaleData::Utils::decay_mode_to_name( modes[i] );</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;1&quot;</span>] = <span class="stringliteral">&quot;second&quot;</span>;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;2&quot;</span>] = <span class="stringliteral">&quot;minute&quot;</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;3&quot;</span>] = <span class="stringliteral">&quot;hour&quot;</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;4&quot;</span>] = <span class="stringliteral">&quot;day&quot;</span>;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;5&quot;</span>] = <span class="stringliteral">&quot;year&quot;</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;6&quot;</span>] = <span class="stringliteral">&quot;NONE&quot;</span>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;7&quot;</span>] = <span class="stringliteral">&quot;k-year&quot;</span>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;8&quot;</span>] = <span class="stringliteral">&quot;M-year&quot;</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    j_root[<span class="stringliteral">&quot;_legend_times&quot;</span>][<span class="stringliteral">&quot;9&quot;</span>] = <span class="stringliteral">&quot;G-year&quot;</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">return</span> j_root;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_ab4a39ae3292424eba62faa17abc181e1"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1">Origen::DecayResource::parent_map</a></div><div class="ttdeci">std::map&lt; int, DecayParent &gt; parent_map</div><div class="ttdef"><b>Definition:</b> DecayResource.h:147</div></div>
-<div class="ttc" id="namespace_origen_html_a40737bd8724117acf3ac075cf3825a58"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a40737bd8724117acf3ac075cf3825a58">Origen::_to_id_string</a></div><div class="ttdeci">std::string _to_id_string(int id)</div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:151</div></div>
-<div class="ttc" id="namespace_vec___int_html"><div class="ttname"><a href="../../d4/d05/namespace_vec___int.html">Vec_Int</a></div></div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a7852c7d5aaf3c855cd0960a3e1ca1ba2"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a7852c7d5aaf3c855cd0960a3e1ca1ba2">Origen::DecayResource::list_decay_modes</a></div><div class="ttdeci">void list_decay_modes(Vec_Int &amp;decay_modes) const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:403</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa48c39f92bc04eded742f5310c74aafe"></a>
@@ -992,11 +610,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">DecayResource::to_json()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">to_json</a>().toStyledString();</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_decay_resource_html_a3e708d496acb090a8657506c512ecf55"><div class="ttname"><a href="../../d0/d62/class_origen_1_1_decay_resource.html#a3e708d496acb090a8657506c512ecf55">Origen::DecayResource::to_json</a></div><div class="ttdeci">Scale::Json::Value to_json() const </div><div class="ttdef"><b>Definition:</b> DecayResource.cpp:158</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

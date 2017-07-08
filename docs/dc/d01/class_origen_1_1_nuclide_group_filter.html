@@ -163,9 +163,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;: <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#af1f94f8ce3b9b39bb3ddddd40d74e44b">min_z</a>( 0 ) {}</div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_af1f94f8ce3b9b39bb3ddddd40d74e44b"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#af1f94f8ce3b9b39bb3ddddd40d74e44b">Origen::NuclideGroupFilter::min_z</a></div><div class="ttdeci">int min_z</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:15</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a00a26f8553271ab4c0d74516b42657d8"></a>
@@ -189,24 +187,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                        : <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#af1f94f8ce3b9b39bb3ddddd40d74e44b">min_z</a>( 0 )</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span>( target_id &gt; 0 )</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">int</span> s, i, z, a;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            ScaleData::Utils::split_pizzzaaa( target_id, s, i, z, a );</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span>( s != 0 ) <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#afe5d9701774a06a41a6bd2ae7190b8cb">allow_s</a>.insert( s );</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span>( s &gt; 0 ) <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aa773e227364ad45f292e46bf0ff29fd7">allow_i</a>.insert( i );</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">if</span>( z != 0 ) <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#a0f0389302d749b08e420931cace044cf">allow_z</a>.insert( z );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span>( a != 0 ) <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#abeb8025e58d2dbfeca6dacd2ab8808b1">allow_a</a>.insert( a );</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_afe5d9701774a06a41a6bd2ae7190b8cb"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#afe5d9701774a06a41a6bd2ae7190b8cb">Origen::NuclideGroupFilter::allow_s</a></div><div class="ttdeci">std::set&lt; int &gt; allow_s</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:11</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_af1f94f8ce3b9b39bb3ddddd40d74e44b"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#af1f94f8ce3b9b39bb3ddddd40d74e44b">Origen::NuclideGroupFilter::min_z</a></div><div class="ttdeci">int min_z</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:15</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_a0f0389302d749b08e420931cace044cf"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#a0f0389302d749b08e420931cace044cf">Origen::NuclideGroupFilter::allow_z</a></div><div class="ttdeci">std::set&lt; int &gt; allow_z</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:13</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_abeb8025e58d2dbfeca6dacd2ab8808b1"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#abeb8025e58d2dbfeca6dacd2ab8808b1">Origen::NuclideGroupFilter::allow_a</a></div><div class="ttdeci">std::set&lt; int &gt; allow_a</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:14</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_aa773e227364ad45f292e46bf0ff29fd7"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aa773e227364ad45f292e46bf0ff29fd7">Origen::NuclideGroupFilter::allow_i</a></div><div class="ttdeci">std::set&lt; int &gt; allow_i</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:12</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -233,24 +214,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Referenced by <a class="el" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#a4f6c5d75ced33b4cc2963b81d37dbe2f">NuclideGroupFilter::filter()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a3731dc5f5eb00e78bb347cc584d27887">Origen::graphvizLibrary()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#a82e9a54bf1fd07584e3cbed62654efb4">Origen::tabulateNuclideInfo()</a>, <a class="el" href="../../d5/dc1/namespace_origen.html#aaba0466ab0592c0ce9f91e82218ad517">Origen::tabulateNuclideLabel()</a>, and <a class="el" href="../../d5/dc1/namespace_origen.html#a51023eafdadd3018f7946c2126e32205">Origen::tabulateTransitionCoeff()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">int</span> s, i, z, a;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        ScaleData::Utils::split_pizzzaaa( sizzzaaa, s, i, z, a );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> keep_this_s = <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#afe5d9701774a06a41a6bd2ae7190b8cb">allow_s</a>.empty() || <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#afe5d9701774a06a41a6bd2ae7190b8cb">allow_s</a>.count( s );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">bool</span> keep_this_i = <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aa773e227364ad45f292e46bf0ff29fd7">allow_i</a>.empty() || <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aa773e227364ad45f292e46bf0ff29fd7">allow_i</a>.count( i );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">bool</span> keep_this_z =</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            ( <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#a0f0389302d749b08e420931cace044cf">allow_z</a>.empty() || <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#a0f0389302d749b08e420931cace044cf">allow_z</a>.count( z ) ) &amp;&amp; z &gt;= <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#af1f94f8ce3b9b39bb3ddddd40d74e44b">min_z</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">bool</span> keep_this_a = <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#abeb8025e58d2dbfeca6dacd2ab8808b1">allow_a</a>.empty() || <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#abeb8025e58d2dbfeca6dacd2ab8808b1">allow_a</a>.count( a );</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">bool</span> keep_this =</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            keep_this_s &amp;&amp; keep_this_i &amp;&amp; keep_this_z &amp;&amp; keep_this_a;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> !keep_this;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_afe5d9701774a06a41a6bd2ae7190b8cb"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#afe5d9701774a06a41a6bd2ae7190b8cb">Origen::NuclideGroupFilter::allow_s</a></div><div class="ttdeci">std::set&lt; int &gt; allow_s</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:11</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_af1f94f8ce3b9b39bb3ddddd40d74e44b"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#af1f94f8ce3b9b39bb3ddddd40d74e44b">Origen::NuclideGroupFilter::min_z</a></div><div class="ttdeci">int min_z</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:15</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_a0f0389302d749b08e420931cace044cf"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#a0f0389302d749b08e420931cace044cf">Origen::NuclideGroupFilter::allow_z</a></div><div class="ttdeci">std::set&lt; int &gt; allow_z</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:13</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_abeb8025e58d2dbfeca6dacd2ab8808b1"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#abeb8025e58d2dbfeca6dacd2ab8808b1">Origen::NuclideGroupFilter::allow_a</a></div><div class="ttdeci">std::set&lt; int &gt; allow_a</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:14</div></div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_aa773e227364ad45f292e46bf0ff29fd7"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aa773e227364ad45f292e46bf0ff29fd7">Origen::NuclideGroupFilter::allow_i</a></div><div class="ttdeci">std::set&lt; int &gt; allow_i</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:12</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4f6c5d75ced33b4cc2963b81d37dbe2f"></a>
@@ -286,12 +250,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#a4eb25410b47b27e0e60c250de11b8910">NuclideGroupFilter::filter()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aedba7755a53d34f9750d4052977698c9">NuclideGroupFilter</a> *obj = <span class="keyword">static_cast&lt;</span><a class="code" href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aedba7755a53d34f9750d4052977698c9">NuclideGroupFilter</a> *<span class="keyword">&gt;</span>( obji );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> obj-&gt;filter( sizzzaaa );</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="ttc" id="class_origen_1_1_nuclide_group_filter_html_aedba7755a53d34f9750d4052977698c9"><div class="ttname"><a href="../../dc/d01/class_origen_1_1_nuclide_group_filter.html#aedba7755a53d34f9750d4052977698c9">Origen::NuclideGroupFilter::NuclideGroupFilter</a></div><div class="ttdeci">NuclideGroupFilter()</div><div class="ttdef"><b>Definition:</b> NuclideGroupFilter.h:16</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

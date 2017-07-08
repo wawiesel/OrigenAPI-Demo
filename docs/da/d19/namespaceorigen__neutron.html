@@ -173,32 +173,10 @@ Variables</h2></td></tr>
 
 <p>Called from wrneut, to sum arrays for printing column total. </p>
 
-<p>References <a class="el" href="../../d0/db4/namespaceconst.html#a39b61da8885ec349eb298439ba9c62b2">const::amass</a>, <a class="el" href="../../dc/d32/group___fortran_constants.html#ga6783933ba842c8f5a92a23b0306028ad">origen_definitions_m::avogadro</a>, <a class="el" href="../../de/de8/namespaceauxiliary__erf__m.html#a676b94123e2f0889ffa3b5e26656367b">auxiliary_erf_m::double_erf()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#a8402482545d523f5b69b63e63c068644">auxiliary::nuclide_compact()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#af858d73b4c61da5add697f41cebfa845">auxiliary::output()</a>, <a class="el" href="../../dc/d32/group___fortran_constants.html#gaace21972c2778bb9a1922c39b698ffdf">origen_definitions_m::pi</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#a6d420a0eea6f06adff6b45a8076da66b">auxiliary::print_break()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#a87f00206fa389873214d5885a0eface7">auxiliary::print_hrule()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#ae07460cc2d072b2cb115cc1c1fc571a8">auxiliary::print_multigroup_table()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#a43f424d74b994ecfdd9e76484b86b005">auxiliary::table_banner()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#a0b8c2210d041dace1661f87ae2b80695">auxiliary::table_tail()</a>, and <a class="el" href="../../de/de8/namespaceauxiliary__erf__m.html#a438a2d29bb9bd59a6a3bf10191fda6b1">auxiliary_erf_m::x</a>.</p>
+<p>References <a class="el" href="../../d0/db4/namespaceconst.html#a39b61da8885ec349eb298439ba9c62b2">const::amass</a>, <a class="el" href="../../dc/d32/group___fortran_constants.html#ga6783933ba842c8f5a92a23b0306028ad">origen_definitions_m::avogadro</a>, and <a class="el" href="../../dc/d32/group___fortran_constants.html#gaace21972c2778bb9a1922c39b698ffdf">origen_definitions_m::pi</a>.</p>
 
-<p>Referenced by <a class="el" href="../../d3/df6/structorigen__neutron_1_1origen__neutron__class.html#aff89b1dc6bd4aede5a092182bd0bb498">origen_neutron_class::order_target()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;   <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;   <span class="comment">!   D u m m y   A r g u m e n t s</span></div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;   <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;   <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: nsteps</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;   <span class="keywordtype">logical</span>, <span class="keywordtype">intent(in)</span> :: do_not_clear</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;   <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(inout)</span> :: tot(0:nsteps)</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;   <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">intent(in)</span> :: array(:,:)</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;   <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;   <span class="comment">!   L o c a l   V a r i a b l e s</span></div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;   <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;   <span class="keywordtype">integer</span> :: m</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;   <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;   <span class="keywordflow">if</span> (.not. do_not_clear) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;     tot(0:nsteps) = 0.0d0</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="keywordflow">   end if</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;   <span class="keywordflow">do</span> m = 0, nsteps</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      tot(m) = tot(m) + sum(array(:,m+1))</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="keywordflow">   end do</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;   <span class="keywordflow">return</span></div>
-</div><!-- fragment -->
+<p>Referenced by <a class="el" href="../../d3/df6/structorigen__neutron_1_1origen__neutron__class.html#aa19f51453d486e50092ddf2f8e5da603">origen_neutron_class::get_spectrum()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -213,9 +191,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>character buffer </p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordtype">character(2048)</span>, <span class="keywordtype">private</span> :: <a class="code" href="../../dd/d83/namespacekernel__matrex.html#a1b7102b09b40287832d227060573b20f">rbuffer</a>(2048)</div>
-<div class="ttc" id="namespacekernel__matrex_html_a1b7102b09b40287832d227060573b20f"><div class="ttname"><a href="../../dd/d83/namespacekernel__matrex.html#a1b7102b09b40287832d227060573b20f">kernel_matrex::rbuffer</a></div><div class="ttdeci">character(256), dimension(256), private rbuffer</div><div class="ttdoc">buffer for writing stuff </div><div class="ttdef"><b>Definition:</b> kernel_matrex.f90:39</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa7aa74641313efb95449232c11903ce6"></a>
@@ -229,8 +205,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>status flag </p>
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">private</span> :: rstatus</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

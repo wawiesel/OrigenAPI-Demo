@@ -246,11 +246,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    result2return=f_origen_decaychannellist_size(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a8468e58c302a635913fa2b45338b2ef3"></a>
@@ -266,11 +262,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    result2return=f_origen_decaychannellist_empty(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aef622e81e927fa53c3ec99d8a51ec85f"></a>
@@ -302,12 +294,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel) :: object_ptr</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::index</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    object_ptr%instance_ptr = f_origen_decaychannellist_at(this%instance_ptr, index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="abbba0685559e879d978e0b7a6446b7cd"></a>
@@ -333,11 +320,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel) :: object_ptr</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    object_ptr%instance_ptr = f_origen_decaychannellist_front(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad9ca2d401b3a64a096c8a9fbda2e652d"></a>
@@ -363,11 +346,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel) :: object_ptr</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    object_ptr%instance_ptr = f_origen_decaychannellist_back(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a51a56b15efac48ed453b618c83fd868c"></a>
@@ -393,11 +372,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::newvalue</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">call </span>f_origen_decaychannellist_push_back(this%instance_ptr, newvalue%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="adc3229640efd8546a282fefd7e4860fe"></a>
@@ -413,10 +388,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">call </span>f_origen_decaychannellist_pop_back(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0c906e9fc3f722c5efda54e86654857f"></a>
@@ -448,12 +420,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::index</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::item</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">call </span>f_origen_decaychannellist_insert(this%instance_ptr, index-1,item%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a74ef7eaebe40b5393c1006e07e226b5d"></a>
@@ -479,11 +446,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::index</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">call </span>f_origen_decaychannellist_removeat(this%instance_ptr, index-1)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7265684f51fc4a0bca8abae45e38224a"></a>
@@ -509,12 +472,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::item</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    result2return=f_origen_decaychannellist_contains(this%instance_ptr, item%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7dc826c23e3d299cbaca18053aa04a38"></a>
@@ -530,10 +488,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::this</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">call </span>f_origen_decaychannellist_clear(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a5528d9006e7e9fa93ffddbc2d47f1472"></a>
@@ -549,10 +504,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist) :: this</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    this%instance_ptr = f_origen_decaychannellist_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1bcbbc5ed4dac61cb06f8bd5cfd1d685"></a>
@@ -568,11 +520,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist) :: this</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">call </span>f_origen_decaychannellist_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="abb6ba3b07c5e6d401d66bf1b23ca8ceb"></a>
@@ -588,11 +536,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    result2return=f_origen_decaychannel_get_yield_type(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="abdd153c8adf3af9b7b14db472107ffa9"></a>
@@ -618,11 +562,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::value</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">call </span>f_origen_decaychannel_set_yield_type(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a01205c966f58dbd88bd0e55aaf197f47"></a>
@@ -638,11 +578,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    result2return=f_origen_decaychannel_get_branch_ratio(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a40cc832a70f54f725bef42084bef8920"></a>
@@ -668,11 +604,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">call </span>f_origen_decaychannel_set_branch_ratio(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad337160313b4ff8c4363ae28526ba961"></a>
@@ -698,12 +630,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::daughter_id</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    result2return=f_origen_decaychannel_get_yield(this%instance_ptr, daughter_id)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a6a02ba7ca9bd0e5b0c4017348924710a"></a>
@@ -735,12 +662,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">class</span>(integerlist)::yield_ids</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">class</span>(doublelist)::yields</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">call </span>f_origen_decaychannel_get_yield_map(this%instance_ptr, yield_ids%instance_ptr,yields%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a02dae8e7abc43671c6cd1208deb57abf"></a>
@@ -766,11 +688,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">class</span>(integerlist)::residual_ids</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">call </span>f_origen_decaychannel_list_residual_ids(this%instance_ptr, residual_ids%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a685124ff472c2338c697872a787ece5b"></a>
@@ -786,11 +704,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel)::this</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    result2return=f_origen_decaychannel_num_residuals(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a149318f35a47e001e93663a1b53cde7b"></a>
@@ -806,10 +720,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel) :: this</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    this%instance_ptr = f_origen_decaychannel_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa69506a7836570b6213c2d2e823a73ed"></a>
@@ -825,11 +736,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel) :: this</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">call </span>f_origen_decaychannel_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a302e827d11d986dae387d96911351984"></a>
@@ -861,12 +768,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">class</span>(integerlist)::decay_modes</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannellist)::decaychannels</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_get_channel_map(this%instance_ptr, decay_modes%instance_ptr,decaychannels%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a39c691a3c441d4500c7432ced0fe8763"></a>
@@ -898,12 +800,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">class</span>(origen_decaychannel) :: object_ptr</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::decay_mode</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    object_ptr%instance_ptr = f_origen_decayparent_get_decaychannel(this%instance_ptr, decay_mode)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa2c4cacefc9f6cd4fb169738c70879fc"></a>
@@ -929,12 +826,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::decay_mode</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    result2return=f_origen_decayparent_num_residuals(this%instance_ptr, decay_mode)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a108133efad52de2f1937ad955c6aae37"></a>
@@ -950,10 +842,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_num_decay_modes(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7269b04168022d6926691a637e1afd72"></a>
@@ -969,11 +858,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    result2return=f_origen_decayparent_get_half_life(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a7744d9f951baad39b224896f0cbad65d"></a>
@@ -999,11 +884,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_set_half_life(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a40f93ea761f6f150745b377f53fe3d36"></a>
@@ -1019,11 +900,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    result2return=f_origen_decayparent_get_rcg_for_air(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a76b961162afc772720757faa2a2c8cd8"></a>
@@ -1049,11 +926,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_set_rcg_for_air(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad785b1dd6d5d1188e3245ac281c75b70"></a>
@@ -1069,11 +942,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    result2return=f_origen_decayparent_get_rcg_for_water(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a016a24862b3b6638eaa42d82b0987fba"></a>
@@ -1099,11 +968,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_set_rcg_for_water(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a575fd2f50e2d647a8291551e9bca518b"></a>
@@ -1119,11 +984,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    result2return=f_origen_decayparent_get_decay_constant(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4768a770037dfd76d8f8b8f0069d918a"></a>
@@ -1149,11 +1010,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_set_decay_constant(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a65d07a933e92500614d5b0b181e60500"></a>
@@ -1169,11 +1026,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    result2return=f_origen_decayparent_get_q_fraction_from_photons(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af4d75dbfeabb34244b26c5556712291c"></a>
@@ -1199,11 +1052,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_set_q_fraction_from_photons(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad3e8583163d1f340697eeba538947e29"></a>
@@ -1219,11 +1068,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>:: result2return</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    result2return=f_origen_decayparent_get_recoverable_energy_value(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad2065b5dbac0593ce7c8f7ee9eff2882"></a>
@@ -1249,11 +1094,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::value</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_set_recoverable_energy_value(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ac93c6c80f9cc47dd7a2fe32f8a8148c0"></a>
@@ -1269,11 +1110,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    result2return=f_origen_decayparent_get_time_units(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a581431536ffab7f1a544f647084d4064"></a>
@@ -1299,11 +1136,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::value</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_set_time_units(this%instance_ptr, <span class="keywordtype">value</span>)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a77e2c0629051d5fd82869d5d937c51d8"></a>
@@ -1329,11 +1162,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent)::this</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordtype">class</span>(integerlist)::decay_modes</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_list_decay_modes(this%instance_ptr, decay_modes%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aaa110de634d1d63f495769a738db3e7b"></a>
@@ -1349,10 +1178,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent) :: this</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    this%instance_ptr = f_origen_decayparent_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0b7c6400a54a90670c0dd58f4d5a0770"></a>
@@ -1368,11 +1194,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent) :: this</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keyword">call </span>f_origen_decayparent_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4621f959e7f1ccafcde399567668ce2b"></a>
@@ -1388,11 +1210,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    result2return=f_origen_decayresource_isomeric_yields( )</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9a626edef97218ab25aee7e721058980"></a>
@@ -1408,11 +1226,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    result2return=f_origen_decayresource_izzzaaa_yields( )</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="acdf28c00d73dceb31e7c02c36004aeb1"></a>
@@ -1428,11 +1242,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    result2return=f_origen_decayresource_missing_yields( )</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a91af0a996ff3dc7166c0a10ef769028b"></a>
@@ -1448,11 +1258,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    result2return=f_origen_decayresource_num_parents(this%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a6f7e492eca57d86d6cd63de15867b9a3"></a>
@@ -1478,12 +1284,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::id</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    result2return=f_origen_decayresource_num_decay_modes(this%instance_ptr, id)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a64cc9a77e36bb7f1f06b2e3fba0c5ed9"></a>
@@ -1515,13 +1316,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::id</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::decay_mode</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordtype">integer(C_INT)</span>:: result2return</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    result2return=f_origen_decayresource_num_residuals(this%instance_ptr, id,decay_mode)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a5d3b993eb10dfb9063a2b2566e1ef713"></a>
@@ -1547,12 +1342,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::id</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    result2return=f_origen_decayresource_is_present(this%instance_ptr, id)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2fb9147ec0534e095aaf93c04531915a"></a>
@@ -1584,13 +1374,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::id</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::decay_mode</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    result2return=f_origen_decayresource_has_decay_mode(this%instance_ptr, id,decay_mode)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa60accac3130ec3fab0f40a3d92f4aaf"></a>
@@ -1616,11 +1400,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordtype">class</span>(integerlist)::parent_ids</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keyword">call </span>f_origen_decayresource_list_parent_ids(this%instance_ptr, parent_ids%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab9ed6865645e35e52e9b4a5c4838e08d"></a>
@@ -1646,11 +1426,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordtype">class</span>(integerlist)::decay_modes</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keyword">call </span>f_origen_decayresource_list_decay_modes(this%instance_ptr, decay_modes%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af93d4aa87c382d5465a97fa3107926e4"></a>
@@ -1682,12 +1458,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource)::this</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordtype">class</span>(origen_decayparent) :: object_ptr</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::id</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    object_ptr%instance_ptr = f_origen_decayresource_get_parent(this%instance_ptr, id)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="abb41134070357710b062dd57b90cf923"></a>
@@ -1703,10 +1474,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource) :: this</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    this%instance_ptr = f_origen_decayresource_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="adb9e590f630b2b44ff59c3e3f6510ed7"></a>
@@ -1722,11 +1490,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordtype">class</span>(origen_decayresource) :: this</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keyword">call </span>f_origen_decayresource_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

@@ -154,14 +154,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">class</span>(origen_energyresource)::this</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer(C_INT)</span>::izzzaaa</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::kapcap</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>::kapfiss</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    result2return=f_origen_energyresource_getkappavalues(this%instance_ptr, izzzaaa,kapcap,kapfiss)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="af1be742c8a0e4ba25d65e683a332d1be"></a>
@@ -177,10 +170,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">class</span>(origen_energyresource) :: this</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    this%instance_ptr = f_origen_energyresource_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="abef79f97756173e9de15c6a396897b21"></a>
@@ -196,11 +186,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">class</span>(origen_energyresource) :: this</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">call </span>f_origen_energyresource_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

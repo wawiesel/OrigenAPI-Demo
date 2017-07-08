@@ -4,12 +4,12 @@ var searchData=
   ['parent_5fmap',['parent_map',['../d0/d62/class_origen_1_1_decay_resource.html#ab4a39ae3292424eba62faa17abc181e1',1,'Origen::DecayResource::parent_map()'],['../d3/d0b/class_origen_1_1_nuclide_resource.html#adc22fa354b17d536dc1bc922f4543035',1,'Origen::NuclideResource::parent_map()']]],
   ['pass_5fnumber',['pass_number',['../dd/da4/namespacegamma__library.html#ac7a431ba1a04e68e28a9b95a0b35e2d1',1,'gamma_library']]],
   ['phase2',['phase2',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a558fbb61c451cc14b46ece284d0293e7',1,'rksuite_90::rk_comm_real_1d']]],
-  ['photon_5ffield',['PHOTON_FIELD',['../da/d0d/group___cxx_identifiers.html#gabb113de20215443ed427a926447590b2',1,'Origen']]],
+  ['photon_5ffield',['photon_field',['../da/d0c/group___field.html#ga79b3d646fec2f5a6e64021c3aacfa59d',1,'origen_definitions_m::photon_field()'],['../da/d0d/group___cxx_identifiers.html#gabb113de20215443ed427a926447590b2',1,'Origen::PHOTON_FIELD()']]],
   ['pi',['pi',['../dc/d32/group___fortran_constants.html#gaace21972c2778bb9a1922c39b698ffdf',1,'origen_definitions_m']]],
   ['pos',['pos',['../d7/d41/class_origen_1_1_transition_matrix_p.html#a1910d262855b71da353ed0d07a6c7823',1,'Origen::TransitionMatrixP']]],
   ['positron_5fbyproduct_5fid',['POSITRON_BYPRODUCT_ID',['../da/d0d/group___cxx_identifiers.html#gac842993c8595be3b85531fabb8ef8267',1,'Origen']]],
   ['positron_5fcharge_5fnumber',['POSITRON_CHARGE_NUMBER',['../da/d0d/group___cxx_identifiers.html#gae7838976338d06774a1adcc670d5f2a0',1,'Origen']]],
-  ['positron_5ffield',['POSITRON_FIELD',['../da/d0d/group___cxx_identifiers.html#ga98e549cb3940aa2686bff7b7927039e9',1,'Origen']]],
+  ['positron_5ffield',['POSITRON_FIELD',['../da/d0d/group___cxx_identifiers.html#ga98e549cb3940aa2686bff7b7927039e9',1,'Origen::POSITRON_FIELD()'],['../da/d0c/group___field.html#ga1d94a086e793222371a2811ef8bb8682',1,'origen_definitions_m::positron_field()']]],
   ['positron_5fmass',['POSITRON_MASS',['../da/d97/group___cxx_constants.html#gaa4e3694cecf252a02ee26d32dc6bacb8',1,'Origen']]],
   ['positron_5fmass_5fnumber',['POSITRON_MASS_NUMBER',['../da/d0d/group___cxx_identifiers.html#gac84db97bc49cc58a98aff233b57f1620',1,'Origen']]],
   ['power',['power',['../df/d45/class_origen_1_1_case.html#a06973c2ef88cdde2e1710f7cf617384f',1,'Origen::Case']]],
@@ -23,8 +23,9 @@ var searchData=
   ['print_5funbinned',['print_unbinned',['../d3/dfb/structgamma__library_1_1origen__gamma__options.html#aae49b3848744fd026c98585b0fe7e568',1,'gamma_library::origen_gamma_options']]],
   ['proton_5fbyproduct_5fid',['PROTON_BYPRODUCT_ID',['../da/d0d/group___cxx_identifiers.html#ga8b5971267eb6e7646d57fc757ae9bbf3',1,'Origen']]],
   ['proton_5fcharge_5fnumber',['PROTON_CHARGE_NUMBER',['../da/d0d/group___cxx_identifiers.html#ga83c807b61ffc8ece390e47e4b0fe5f54',1,'Origen']]],
-  ['proton_5ffield',['PROTON_FIELD',['../da/d0d/group___cxx_identifiers.html#ga77e2f12c501d85d5c7de03157d8cefe7',1,'Origen']]],
+  ['proton_5ffield',['proton_field',['../da/d0c/group___field.html#ga3f5d2b1df2eba5a889c20175c5f9002e',1,'origen_definitions_m::proton_field()'],['../da/d0d/group___cxx_identifiers.html#ga77e2f12c501d85d5c7de03157d8cefe7',1,'Origen::PROTON_FIELD()']]],
   ['proton_5fmass',['PROTON_MASS',['../da/d97/group___cxx_constants.html#ga5f246964f032b55222bb764056a66481',1,'Origen']]],
   ['proton_5fmass_5fnumber',['PROTON_MASS_NUMBER',['../da/d0d/group___cxx_identifiers.html#gab7db6bbadabe37bfcf6a782bbd36e7cb',1,'Origen']]],
-  ['ptr',['ptr',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a3b6674a10771ba4bcca8f72dd73c2559',1,'rksuite_90::rk_comm_real_1d']]]
+  ['ptr',['ptr',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a3b6674a10771ba4bcca8f72dd73c2559',1,'rksuite_90::rk_comm_real_1d']]],
+  ['pyield',['pyield',['../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#aa0231148e59e36e4511859153eaa81fd',1,'Origen::detail::RRXs']]]
 ];

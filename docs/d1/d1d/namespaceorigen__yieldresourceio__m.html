@@ -156,14 +156,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">class</span>(origen_yieldresourceio)::this</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">class</span>(origen_yieldresource)::obj</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">character(len=*)</span>::path</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">class</span>(datacontainer)::options</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    result2return=f_origen_yieldresourceio_load(this%instance_ptr, obj%instance_ptr,path//c_null_char,options%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ac106e0c81db726270dba848a83b6c106"></a>
@@ -201,14 +194,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">class</span>(origen_yieldresourceio)::this</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">class</span>(origen_yieldresource)::obj</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">character(len=*)</span>::path</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">class</span>(datacontainer)::options</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">logical(C_BOOL)</span>:: result2return</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    result2return=f_origen_yieldresourceio_save(this%instance_ptr, obj%instance_ptr,path//c_null_char,options%instance_ptr)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aef8a36f77e037830b40fcc8c2476f0e9"></a>
@@ -224,10 +210,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">class</span>(origen_yieldresourceio) :: this</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    this%instance_ptr = f_origen_yieldresourceio_initialize()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a3843e6a18002021001ebcc6fdf87d4c0"></a>
@@ -243,11 +226,7 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">class</span>(origen_yieldresourceio) :: this</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">call </span>f_origen_yieldresourceio_destroy(this%instance_ptr)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    this%instance_ptr = c_null_ptr</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

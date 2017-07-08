@@ -155,37 +155,7 @@ Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/df8/tst_reaction_resource_i_o_8cpp-example.html#a0">tstReactionResourceIO.cpp</a>, <a class="el" href="../../d4/d82/tst_solver_cram_8cpp-example.html#a17">tstSolver_cram.cpp</a>, and <a class="el" href="../../d1/df4/tst_solver_matrex_8cpp-example.html#a17">tstSolver_matrex.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../d4/d7e/tst_solver__cram_8cpp.html#a6c4f5f1a81b5d1665e6d7ef5a04952a3">print_summary_1()</a>, and <a class="el" href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#ac5881c3a18ed1c11d1c49aa6024c3bd6">TEST()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> ng = nxs.getNeutronEnergyBounds()-&gt;getSize() - 1;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">float</span> sum = 0.0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> num_ampx_nuclides = nxs.getNumberNuclides();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> j = 0; j &lt; num_ampx_nuclides; j++ )</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        LibraryNuclide* ampx_nuclide = nxs.getNuclideAt( j );</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">int</span> iza = ampx_nuclide-&gt;getId();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span>( iza != search_iza ) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> num_1dxs = ampx_nuclide-&gt;getNumNeutron1dData();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">int</span> k = 0; k &lt; num_1dxs; k++ )</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            CrossSection1d* xs = ampx_nuclide-&gt;getNeutron1dDataAt( k );</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordtype">int</span> mt = xs-&gt;getMt();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordtype">bool</span> partial;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">int</span> final_isomeric_state, initial_isomeric_state;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            ScaleData::Utils::transform_mt(</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                mt, partial, final_isomeric_state, initial_isomeric_state );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span>( mt == search_mt )</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> g = 0; g &lt; ng; ++g )</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    sum += xs-&gt;getValues()[g];</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ac5881c3a18ed1c11d1c49aa6024c3bd6"></a>
@@ -214,25 +184,7 @@ Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/df8/tst_reaction_resource_i_o_8cpp-example.html#a1">tstReactionResourceIO.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#a9bd9c096d0c0331784133cb114c7ae85">xs_sum()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::shared_ptr&lt;AmpxLibrary&gt; idnxs;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        AmpxLoader loader;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">bool</span> success =</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            loader.load( QString( Origen::jeff252_filepath.c_str() ) );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        ASSERT_TRUE( success );</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        idnxs = std::shared_ptr&lt;AmpxLibrary&gt;( loader.getLibrary() );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ASSERT_NE( <span class="keyword">nullptr</span>, idnxs );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    EXPECT_FLOAT_EQ( 54352.719, <a class="code" href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#a9bd9c096d0c0331784133cb114c7ae85">xs_sum</a>( *idnxs, 92235, 18 ) );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    EXPECT_FLOAT_EQ( 9367.1338, <a class="code" href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#a9bd9c096d0c0331784133cb114c7ae85">xs_sum</a>( *idnxs, 92238, 102 ) );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    EXPECT_FLOAT_EQ( 0.024841489, <a class="code" href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#a9bd9c096d0c0331784133cb114c7ae85">xs_sum</a>( *idnxs, 8016, 102 ) );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    EXPECT_FLOAT_EQ( 3314.8083, <a class="code" href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#a9bd9c096d0c0331784133cb114c7ae85">xs_sum</a>( *idnxs, 1076191, 102 ) );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    EXPECT_FLOAT_EQ( 0.0067568747, <a class="code" href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#a9bd9c096d0c0331784133cb114c7ae85">xs_sum</a>( *idnxs, 2003, 102 ) );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="ttc" id="tst_reaction_resource_i_o_8cpp_html_a9bd9c096d0c0331784133cb114c7ae85"><div class="ttname"><a href="../../da/d97/tst_reaction_resource_i_o_8cpp.html#a9bd9c096d0c0331784133cb114c7ae85">xs_sum</a></div><div class="ttdeci">float xs_sum(const AmpxLibrary &amp;nxs, int search_iza, int search_mt)</div><div class="ttdef"><b>Definition:</b> tstReactionResourceIO.cpp:10</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

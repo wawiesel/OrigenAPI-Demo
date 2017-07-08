@@ -114,7 +114,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <code>#include &quot;<a class="el" href="../../df/d5a/_energy_resource_8h.html">Origen/Core/re/EnergyResource.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d25/_nuclide_set_8h.html">Origen/Core/dc/NuclideSet.h</a>&quot;</code><br />
 <code>#include &quot;ScaleData/Core/Utils.h&quot;</code><br />
-<code>#include &lt;cctype&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -148,94 +147,7 @@ Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d09/tst_energy_resource_8cpp-example.html#a0">tstEnergyResource.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">EnergyResource::getKappaValues()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html">Origen::EnergyResource</a> fiscap;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> kCap, kFiss;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordflow">for</span>( <span class="keywordtype">int</span> i : std::vector&lt;int&gt;({1001,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;5010,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;8016,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;26056,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;28058,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;40090,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;40091,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;40092,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;40096,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;42095,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;43095,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;44101,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;45103,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;45105,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;47109,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;54131,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;54135,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;55133,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;55134,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;60143,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;60145,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;61147,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;61148,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;62147,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;62149,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;62150,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;62151,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;62152,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;63153,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;63154,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;63155,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;90230,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;90232,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;90233,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;91231,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;91233,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;92232,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;92233,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;92234,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;92235,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;92236,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;92238,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;93237,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;93239,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;94238,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;94239,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;94240,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;94241,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;94242,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;94243,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;95241,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;95243,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;96244,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;96245,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;1061148,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;1095242}))</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">int</span> z = (i/1000) % 1000;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">auto</span> s = ScaleData::Utils::z_to_symbol(z);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    s[0] = toupper(s[0]);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> a = i%1000;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    fiscap.<a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( i, kCap, kFiss);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span>( kCap==0.0 )<span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\\nuclide{&quot;</span>&lt;&lt;z&lt;&lt;<span class="stringliteral">&quot;}{&quot;</span>&lt;&lt; s &lt;&lt;<span class="stringliteral">&quot;}{&quot;</span>&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot;}\t&amp;\t&quot;</span>&lt;&lt; kCap &lt;&lt; <span class="stringliteral">&quot;\t&amp;\t&quot;</span> &lt;&lt; kFiss &lt;&lt; <span class="stringliteral">&quot;\t\\\\\\hline&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// test behavior for a bad zzzaaai, i.e. -5000.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Insist( !fiscap.<a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( -5000, kCap, kFiss ),</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="stringliteral">&quot;found ZZZAAAI -5000 when did not expect to&quot;</span> );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Insist( nemesis::soft_equiv( kCap, 5.0 ),</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="stringliteral">&quot;By default, kappa-capture should be 5 MeV&quot;</span> );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Insist( nemesis::soft_equiv( kFiss, 200.0 ),</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="stringliteral">&quot;By default, kappa-fission should be 200 MeV&quot;</span> );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// test behavior for a good zzzaaai, i.e. 92235.</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    Insist( fiscap.<a class="code" href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">getKappaValues</a>( 92235, kCap, kFiss ),</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="stringliteral">&quot;should have found ZZZAAAI 92235&quot;</span> );</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Insist( nemesis::soft_equiv( kCap, 6.5451 ),</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="stringliteral">&quot;92235 kappa-capture should be 6.5451 MeV&quot;</span> );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Insist( nemesis::soft_equiv( kFiss, 194.02 ),</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="stringliteral">&quot;92235 kappa-fission should be 194.02 MeV&quot;</span> );</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_energy_resource_html"><div class="ttname"><a href="../../d8/d54/class_origen_1_1_energy_resource.html">Origen::EnergyResource</a></div><div class="ttdoc">Computes kappa values for fission/capture based on izzzaaa lookup. </div><div class="ttdef"><b>Definition:</b> EnergyResource.h:13</div></div>
-<div class="ttc" id="class_origen_1_1_energy_resource_html_a24bfc3f1e91c746fcd485ca891a95ef2"><div class="ttname"><a href="../../d8/d54/class_origen_1_1_energy_resource.html#a24bfc3f1e91c746fcd485ca891a95ef2">Origen::EnergyResource::getKappaValues</a></div><div class="ttdeci">bool getKappaValues(int izzzaaa, double &amp;kapCap, double &amp;kapFiss) const </div><div class="ttdoc">getKappaValues </div><div class="ttdef"><b>Definition:</b> EnergyResource.cpp:81</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

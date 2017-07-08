@@ -157,42 +157,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a3cc87fdf6f503fab8a567ee48b80eded">TransitionMatrixUpdater::load()</a>, <a class="el" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#aceca9176d1b239704b0debedf80a493e">TransitionMatrixUpdater::sp_library()</a>, and <a class="el" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#adf3b22a9889a5a9f57ff56c5753c9d8b">TransitionMatrixUpdater::update_mg_flux()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Load library produced by COUPLE:</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../db/d30/class_origen_1_1_library_i_o.html">Origen::LibraryIO</a> ol_io;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ScaleUtils::IO::DB opts;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> clib = <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a>( <span class="keyword">new</span> <a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a>() );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> pass = ol_io.load( *clib, <span class="stringliteral">&quot;u235_fast_heatlib&quot;</span>, opts );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ASSERT_TRUE( pass ) &lt;&lt; <span class="stringliteral">&quot;COUPLE Library had errors.&quot;</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Create a TMU class and get the library from it:</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html">Origen::TransitionMatrixUpdater</a> tmu;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    tmu.<a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a3cc87fdf6f503fab8a567ee48b80eded">load</a>( Origen::pwrlib_filepath,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;              Origen::jeff238_filepath,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;              Origen::yields_filepath );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// Set the flux weight spectrum:</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gabde6822a61a2a62c6bf8780cb7d42193">Origen::Vec_Flt</a> mg_flux( 238, 0.0 );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    mg_flux[13] = 1.25;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mg_flux[14] = 0.3;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    tmu.<a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#adf3b22a9889a5a9f57ff56c5753c9d8b">update_mg_flux</a>( mg_flux );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a> tmulib = tmu.<a class="code" href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#aceca9176d1b239704b0debedf80a493e">sp_library</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::cout &lt;&lt; clib-&gt;print_compare( *tmulib );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">//~ std::string lib_diffs = clib-&gt;diff(*tmulib);</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//~ std::cout &lt;&lt; lib_diffs;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="ttc" id="class_origen_1_1_library_i_o_html"><div class="ttname"><a href="../../db/d30/class_origen_1_1_library_i_o.html">Origen::LibraryIO</a></div><div class="ttdef"><b>Definition:</b> LibraryIO.h:12</div></div>
-<div class="ttc" id="group___cxx_typedefs_html_gabde6822a61a2a62c6bf8780cb7d42193"><div class="ttname"><a href="../../d7/d09/group___cxx_typedefs.html#gabde6822a61a2a62c6bf8780cb7d42193">Origen::Vec_Flt</a></div><div class="ttdeci">std::vector&lt; float &gt; Vec_Flt</div><div class="ttdef"><b>Definition:</b> Definitions.h:32</div></div>
-<div class="ttc" id="class_origen_1_1_transition_matrix_updater_html_aceca9176d1b239704b0debedf80a493e"><div class="ttname"><a href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#aceca9176d1b239704b0debedf80a493e">Origen::TransitionMatrixUpdater::sp_library</a></div><div class="ttdeci">SP_Library sp_library()</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.cpp:712</div></div>
-<div class="ttc" id="class_origen_1_1_library_html"><div class="ttname"><a href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a></div><div class="ttdef"><b>Definition:</b> Library.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_transition_matrix_updater_html_a3cc87fdf6f503fab8a567ee48b80eded"><div class="ttname"><a href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#a3cc87fdf6f503fab8a567ee48b80eded">Origen::TransitionMatrixUpdater::load</a></div><div class="ttdeci">void load(std::string library_definition, std::string aux_mg_library, std::string fission_yields)</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.cpp:38</div></div>
-<div class="ttc" id="namespace_origen_html_aa3ba24879f383fe079561477ccb875cb"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#aa3ba24879f383fe079561477ccb875cb">Origen::SP_Library</a></div><div class="ttdeci">Library::SP SP_Library</div><div class="ttdef"><b>Definition:</b> Library.h:165</div></div>
-<div class="ttc" id="class_origen_1_1_transition_matrix_updater_html_adf3b22a9889a5a9f57ff56c5753c9d8b"><div class="ttname"><a href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html#adf3b22a9889a5a9f57ff56c5753c9d8b">Origen::TransitionMatrixUpdater::update_mg_flux</a></div><div class="ttdeci">float update_mg_flux(const Vec_Flt &amp;mg_flux)</div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.cpp:258</div></div>
-<div class="ttc" id="class_origen_1_1_transition_matrix_updater_html"><div class="ttname"><a href="../../d1/d77/class_origen_1_1_transition_matrix_updater.html">Origen::TransitionMatrixUpdater</a></div><div class="ttdef"><b>Definition:</b> TransitionMatrixUpdater.h:20</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0ddf1224851353fc92bfbff6f499fa97"></a>
@@ -220,14 +185,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dd5/compare_couple_and_t_m_updater_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ::testing::InitGoogleTest( &amp;argc, argv );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d5/dd5/compare_couple_and_t_m_updater_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a> =</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        Standard::SP_CommandLine( <span class="keyword">new</span> Standard::CommandLine( argc, argv ) );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="ttc" id="compare_couple_and_t_m_updater_8cpp_html_a5a219b287d7b807dff8a3f9de68bcfcc"><div class="ttname"><a href="../../d5/dd5/compare_couple_and_t_m_updater_8cpp.html#a5a219b287d7b807dff8a3f9de68bcfcc">cmdLine</a></div><div class="ttdeci">Standard::SP_CommandLine cmdLine</div><div class="ttdoc">TMU Test. </div><div class="ttdef"><b>Definition:</b> compareCoupleAndTMUpdater.cpp:26</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>

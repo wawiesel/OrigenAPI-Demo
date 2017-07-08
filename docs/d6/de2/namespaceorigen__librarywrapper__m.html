@@ -149,39 +149,8 @@ Functions/Subroutines</h2></td></tr>
 <p>Copies the library. </p>
 <p>locals </p>
 
-<p>References <a class="el" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">auxiliary::nuclide()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#afae558f0ef45e9611187c8880f641e85">auxiliary::print_dhrule()</a>, <a class="el" href="../../da/da9/namespaceauxiliary.html#a87f00206fa389873214d5885a0eface7">auxiliary::print_hrule()</a>, and <a class="el" href="../../da/da9/namespaceauxiliary.html#a0b8c2210d041dace1661f87ae2b80695">auxiliary::table_tail()</a>.</p>
-
 <p>Referenced by <a class="el" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html#adce8590cce36ccfe772a451e6bb6fb5d">origen_librarywrapper::set_legacy_mass()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="comment">!   M o d u l e s</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="comment">!-----------------------------------------------</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="comment">!   D u m m y   A r g u m e n t s</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">!-----------------------------------------------</span><span class="comment"></span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">    !&gt; to</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>) :: to<span class="comment"></span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">    !&gt; from</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>) :: from<span class="comment"></span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">    !&gt; locals</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">type</span>(origen_library) :: lib</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">!start out clean</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">call </span>to % destroy()</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="comment">!make a copy of library</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">call </span>lib % initialize_copy( from % b_lib )</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="comment">!initialize and manage this new data</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">call </span>to % initialize_manageptr(lib)</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="comment">!set position properly</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keyword">call </span>to % set_pos( from%get_pos() )</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

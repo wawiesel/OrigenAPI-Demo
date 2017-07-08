@@ -8,7 +8,7 @@ var searchData=
   ['has_5fgamma',['has_gamma',['../d3/d09/structgamma__library_1_1gamma__library__class.html#a2ec9277d17727e803665fa32d5010001',1,'gamma_library::gamma_library_class']]],
   ['helion_5fbyproduct_5fid',['HELION_BYPRODUCT_ID',['../da/d0d/group___cxx_identifiers.html#gaac1994f45eb45f84de85352d47220f99',1,'Origen']]],
   ['helion_5fcharge_5fnumber',['HELION_CHARGE_NUMBER',['../da/d0d/group___cxx_identifiers.html#ga5d68d96a881189465feefe95497cdc9c',1,'Origen']]],
-  ['helion_5ffield',['HELION_FIELD',['../da/d0d/group___cxx_identifiers.html#ga42db33790b3e683f80b12b070b7d7bed',1,'Origen']]],
+  ['helion_5ffield',['HELION_FIELD',['../da/d0d/group___cxx_identifiers.html#ga42db33790b3e683f80b12b070b7d7bed',1,'Origen::HELION_FIELD()'],['../da/d0c/group___field.html#gac877d3c5e71a64c73b8cdf2cb2fcf41f',1,'origen_definitions_m::helion_field()']]],
   ['helion_5fmass',['HELION_MASS',['../da/d97/group___cxx_constants.html#gad044b16aae906e86286d7936b61c02c2',1,'Origen']]],
   ['helion_5fmass_5fnumber',['HELION_MASS_NUMBER',['../da/d0d/group___cxx_identifiers.html#ga6eae587f09aa6e92b5673e602352c455',1,'Origen']]],
   ['hi1',['hi1',['../d0/db4/namespaceconst.html#a91816b75f751116a968a8d06fa2a9c93',1,'const']]],

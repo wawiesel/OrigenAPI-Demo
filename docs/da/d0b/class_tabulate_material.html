@@ -154,57 +154,7 @@ Protected Attributes</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d4/dc5/tsttabulate_8cpp-example.html#a8">tsttabulate.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>, <a class="el" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>, <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">FakeFactory::newspMaterial_scale_pwr()</a>, and <a class="el" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">FakeFactory::vera_uox_e360()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// initialize materials</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a> = <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">Origen::FakeFactory::newspMaterial_scale_pwr</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_id( 1 );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_name( <span class="stringliteral">&quot;mix1&quot;</span> );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a> = <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">Origen::FakeFactory::newspMaterial_scale_pwr</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_id( 2 );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_name( <span class="stringliteral">&quot;mix2&quot;</span> );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// reference bos data</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="../../d4/d05/namespace_vec___int.html">Vec_Int</a> ref_ids;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> ref_vals;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a>( ref_ids, ref_vals );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_numden_bos( ref_vals, ref_ids );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            ref_ids.push_back( 72172 );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            ref_vals.push_back( 1e-20 );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_numden_bos( ref_vals, ref_ids );</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// add solvers and take a step</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_solver( std::make_shared&lt;Origen::Solver_Fake&gt;() );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> flux, power, dtrel;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            dtrel = {1.0};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;add_step( 1.0 );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_flux( 1e14 );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;set_transition_matrix(</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;library()-&gt;newsp_transition_matrix_at( 0 ) );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;solve( dtrel, &amp;flux, &amp;power );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_solver( std::make_shared&lt;Origen::Solver_Fake&gt;() );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a> flux, power, dtrel;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            dtrel = {1.0};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;add_step( 1.0 );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_flux( 2e14 );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;set_transition_matrix(</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <a class="code" href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">mat1</a>-&gt;library()-&gt;newsp_transition_matrix_at( 0 ) );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">mat2</a>-&gt;solve( dtrel, &amp;flux, &amp;power );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="ttc" id="_concentrations_interface_8h_html_a4bafe4730fd213e9619defa233242c48"><div class="ttname"><a href="../../d4/d50/_concentrations_interface_8h.html#a4bafe4730fd213e9619defa233242c48">Vec_Dbl</a></div><div class="ttdeci">std::vector&lt; double &gt; Vec_Dbl</div><div class="ttdef"><b>Definition:</b> ConcentrationsInterface.h:17</div></div>
-<div class="ttc" id="class_origen_1_1_fake_factory_html_a4fe59504b5e52a9172e46c08c42b600c"><div class="ttname"><a href="../../da/daf/class_origen_1_1_fake_factory.html#a4fe59504b5e52a9172e46c08c42b600c">Origen::FakeFactory::newspMaterial_scale_pwr</a></div><div class="ttdeci">static SP_Material newspMaterial_scale_pwr()</div><div class="ttdef"><b>Definition:</b> FakeFactory.cpp:1653</div></div>
-<div class="ttc" id="class_origen_1_1_fake_factory_html_a32955ef2509f74b312d8b7b3110c16a8"><div class="ttname"><a href="../../da/daf/class_origen_1_1_fake_factory.html#a32955ef2509f74b312d8b7b3110c16a8">Origen::FakeFactory::vera_uox_e360</a></div><div class="ttdeci">static void vera_uox_e360(Vec_Int &amp;ids, Vec_Dbl &amp;numden)</div><div class="ttdef"><b>Definition:</b> FakeFactory.cpp:592</div></div>
-<div class="ttc" id="namespace_vec___int_html"><div class="ttname"><a href="../../d4/d05/namespace_vec___int.html">Vec_Int</a></div></div>
-<div class="ttc" id="class_tabulate_material_html_abcf536357ebc2ebff6ece92196a0cb7b"><div class="ttname"><a href="../../da/d0b/class_tabulate_material.html#abcf536357ebc2ebff6ece92196a0cb7b">TabulateMaterial::mat1</a></div><div class="ttdeci">Origen::SP_Material mat1</div><div class="ttdef"><b>Definition:</b> tsttabulate.cpp:96</div></div>
-<div class="ttc" id="class_tabulate_material_html_af176eaf1254d8fd7ef5f8169a84d3e05"><div class="ttname"><a href="../../da/d0b/class_tabulate_material.html#af176eaf1254d8fd7ef5f8169a84d3e05">TabulateMaterial::mat2</a></div><div class="ttdeci">Origen::SP_Material mat2</div><div class="ttdef"><b>Definition:</b> tsttabulate.cpp:97</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

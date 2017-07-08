@@ -126,6 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9d934e3a340697e9b36ebab508e8f33"><td class="memItemLeft" align="right" valign="top">procedure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#af9d934e3a340697e9b36ebab508e8f33">output</a> =&gt; origen_alpha__output</td></tr>
 <tr class="memdesc:af9d934e3a340697e9b36ebab508e8f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform the output  <a href="#af9d934e3a340697e9b36ebab508e8f33">More...</a><br /></td></tr>
 <tr class="separator:af9d934e3a340697e9b36ebab508e8f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7a6b54a1178f9d95ac302e180e6ee6"><td class="memItemLeft" align="right" valign="top">procedure, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/structorigen__alpha_1_1origen__alpha__class.html#a0f7a6b54a1178f9d95ac302e180e6ee6">get_spectrum</a> =&gt; origen_alpha__get_spectrum</td></tr>
+<tr class="memdesc:a0f7a6b54a1178f9d95ac302e180e6ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get spectrum on a case #  <a href="#a0f7a6b54a1178f9d95ac302e180e6ee6">More...</a><br /></td></tr>
+<tr class="separator:a0f7a6b54a1178f9d95ac302e180e6ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -200,6 +203,23 @@ Public Attributes</h2></td></tr>
 
 <p>perform the output </p>
 
+</div>
+</div>
+<a class="anchor" id="a0f7a6b54a1178f9d95ac302e180e6ee6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure, public get_spectrum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get spectrum on a case # </p>
+
 <p>References <a class="el" href="../../dc/d32/group___fortran_constants.html#ga6783933ba842c8f5a92a23b0306028ad">origen_definitions_m::avogadro</a>, and <a class="el" href="../../dc/d32/group___fortran_constants.html#ga595a7a58c908ec8f7c6778d9d5b532aa">origen_definitions_m::err</a>.</p>
 
 </div>
@@ -216,9 +236,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated origen library </p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">type</span>(<a class="code" href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper</a>),<span class="keywordtype">pointer</span> :: lib=&gt;null()</div>
-<div class="ttc" id="structorigen__librarywrapper__m_1_1origen__librarywrapper_html"><div class="ttname"><a href="../../dc/d7b/structorigen__librarywrapper__m_1_1origen__librarywrapper.html">origen_librarywrapper_m::origen_librarywrapper</a></div><div class="ttdef"><b>Definition:</b> LibraryWrapper_M.f90:26</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aa906d5a7c638db99b92ce5079ab76065"></a>
@@ -232,8 +250,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>associated alpha library </p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">type</span>(alpha_library_class),<span class="keywordtype">pointer</span> :: alib =&gt;null()</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad466b58f392ba2ccd511b90c418a851e"></a>
@@ -247,8 +264,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Number of time steps. </p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">integer</span> :: nsteps</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a095d91df0215d73db5841dd18bc633b1"></a>
@@ -262,8 +278,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set of alpha calculation options. </p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">type</span>(origen_alpha_options) :: opts</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ac80319db42c4d4f67680e6d78f787db1"></a>
@@ -277,8 +292,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Alpha source [0:nsteps, itot, ngroups]. </p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: source(:,:,:)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab9dcfe34b8309f1065ca50da33843d1b"></a>
@@ -292,8 +306,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Alpha spectrum (1/s) [ngroups, 0:nsteps]. </p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">real(C_DOUBLE)</span>, <span class="keywordtype">allocatable</span> :: spectrum(:,:)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this type was generated from the following file:<ul>

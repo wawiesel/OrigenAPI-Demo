@@ -118,101 +118,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/d00/_s_tab1_reader_8h.html">Origen/Core/io/STab1Reader.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/d8f/_s_tab1_writer_8h.html">Origen/Core/io/STab1Writer.h</a>&quot;</span></div>
 <div class="line"></div>
-<div class="line"><span class="comment">//&quot;/Users/ww5/pkg/scale_tip/packages/Origen/Core/io/tests/origen.revXX.e70.dyields.data&quot;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keyword">class </span><a name="_a0"></a><a class="code" href="../../d2/db4/class_s_tab1_writer_tester.html">STab1WriterTester</a> : <span class="keyword">public</span> <a name="_a1"></a><a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html">Origen::STab1Writer</a></div>
+<div class="line"><span class="keyword">namespace </span><a class="code" href="../../d5/dc1/namespace_origen.html">Origen</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">namespace </span>test</div>
+<div class="line">{</div>
+<div class="line"><span class="comment">// extended writer for testing</span></div>
+<div class="line"><span class="keyword">class </span>STab1Writer : <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html">::Origen::STab1Writer</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">public</span>:</div>
-<div class="line">    <span class="keyword">static</span> std::string <a name="a2"></a><a class="code" href="../../d2/db4/class_s_tab1_writer_tester.html#a9f88ca91d2aa8a39c7bc339c915fb94d">as_string</a>( <span class="keywordtype">double</span> value )</div>
+<div class="line">    <span class="keyword">static</span> std::string <a name="a1"></a><a class="code" href="../../df/d77/class_origen_1_1test_1_1_s_tab1_writer.html#a9f88ca91d2aa8a39c7bc339c915fb94d">as_string</a>( <span class="keywordtype">double</span> value )</div>
 <div class="line">    {</div>
 <div class="line">        std::string line;</div>
-<div class="line">        STab1Writer::setRealValue( &amp;line, value, 1 );</div>
+<div class="line">        <a name="a2"></a><a class="code" href="../../d1/d1e/class_origen_1_1_s_tab1_writer.html#ab0b28fe956a8143b9261b762f6f8cdbd">STab1Writer::setRealValue</a>( &amp;line, value, 1 );</div>
 <div class="line">        line.resize( 11 );</div>
 <div class="line">        <span class="keywordflow">return</span> line;</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line"><a name="a3"></a><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a4dc79e0b8cd5976e5d2ac8dba0739d2f">TEST</a>( YieldResourceIOTester, Data )</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// get yields resource</span></div>
-<div class="line">    ScaleUtils::IO::DB opts;</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">Origen::SP_YieldResource</a> yr(</div>
-<div class="line">        <a name="a4"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">Origen::loadYieldResource</a>( Origen::yields_filepath, opts ) );</div>
-<div class="line"></div>
-<div class="line">    ASSERT_TRUE( yr != <span class="keyword">nullptr</span> ) &lt;&lt; opts.dumpErrorStack();</div>
-<div class="line"></div>
-<div class="line">    EXPECT_TRUE( opts.numError() == 0 );</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// Check the yield resource for correctness.</span></div>
-<div class="line">    std::vector&lt;std::string&gt; errors;</div>
-<div class="line">    <span class="keywordtype">bool</span> pass = yr-&gt;check( errors );</div>
-<div class="line">    opts.appendErrorStack( &amp;errors );</div>
-<div class="line">    EXPECT_TRUE( pass ) &lt;&lt; opts.dumpErrorStack();</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// dump it out for inspection</span></div>
-<div class="line">    <span class="keywordflow">if</span>( !pass )</div>
-<div class="line">    {</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Error in yields: dumping yield table&quot;</span></div>
-<div class="line">                  &lt;&lt; <span class="stringliteral">&quot; output to yields.txt&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">        std::ofstream ofs( <span class="stringliteral">&quot;yields.txt&quot;</span> );</div>
-<div class="line">        <a name="a5"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">Origen::printYields</a>( *yr, ofs );</div>
-<div class="line">        ofs.close();</div>
-<div class="line">    }</div>
-<div class="line"></div>
-<div class="line">    EXPECT_EQ( 30, yr-&gt;num_fissionables() );</div>
-<div class="line">    EXPECT_TRUE( yr-&gt;has_fissionable( 92235 ) )</div>
-<div class="line">        &lt;&lt; <span class="stringliteral">&quot;must have U-235 as a parent fissionable nuclide&quot;</span>;</div>
-<div class="line">    EXPECT_EQ( 1151, yr-&gt;num_fps( 92235 ) )</div>
-<div class="line">        &lt;&lt; <span class="stringliteral">&quot;number of fission products for U-235&quot;</span>;</div>
-<div class="line"></div>
-<div class="line">    <span class="keyword">const</span> <a name="_a6"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html">Origen::YieldParent</a>* u235_ptr = yr-&gt;fissionable( 92235 );</div>
-<div class="line">    EXPECT_TRUE( u235_ptr != <span class="keyword">nullptr</span> );</div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html">Origen::YieldParent</a>&amp; u235 = *u235_ptr;</div>
-<div class="line"></div>
-<div class="line">    EXPECT_TRUE( u235.<a name="a7"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#ab4397529a79c8359cfff7cb70c16dd1d">has_fp</a>( 54135 ) );</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordtype">int</span> i_xe135 = u235.<a name="a8"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a8e72a72b38f255a2361a5cc7358e61f0">fp_index</a>( 54135 );</div>
-<div class="line">    EXPECT_TRUE( i_xe135 != -1 );</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// get yields and energies for Xe-135</span></div>
-<div class="line">    std::vector&lt;double&gt; energies, yields;</div>
-<div class="line">    u235.<a name="a9"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#abd3ea764d8421c372a03ef69bd7d82d4">get_energies</a>( &amp;energies );</div>
-<div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; energies.size(); j++ )</div>
-<div class="line">    {</div>
-<div class="line">        yields.push_back( u235.<a name="a10"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#a5f70f8d397ae41edb2f3a75e5f062ab6">data_at</a>( j ).<a name="a11"></a><a class="code" href="../../d8/d3f/class_origen_1_1_yield_data.html#a64c08a9130c1bbff8123faf4fb949430">yield_at</a>( i_xe135 ) );</div>
-<div class="line">        <span class="comment">// std::cout &lt;&lt; energies[j] &lt;&lt; &quot;: &quot;&lt;&lt; yields[j]&lt;&lt;std::endl;</span></div>
-<div class="line">    }</div>
-<div class="line"></div>
-<div class="line">    EXPECT_FLOAT_EQ( 0.0253, energies[0] );</div>
-<div class="line">    EXPECT_FLOAT_EQ( 2e6, energies[1] );</div>
-<div class="line">    EXPECT_FLOAT_EQ( 1.4e7, energies[2] );</div>
-<div class="line"></div>
-<div class="line">    EXPECT_FLOAT_EQ( 0.00079801498, yields[0] );</div>
-<div class="line">    EXPECT_FLOAT_EQ( 0.0011961, yields[1] );</div>
-<div class="line">    EXPECT_FLOAT_EQ( 0.0045401901, yields[2] );</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordtype">double</span> my_energy = 1e6;</div>
-<div class="line">    std::vector&lt;double&gt; yield_list;</div>
-<div class="line">    std::vector&lt;int&gt; fp_list;</div>
-<div class="line">    u235.<a name="a12"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aff497f4bcea5ae2f782b64217f1eb373">get_interp_yields</a>( &amp;yield_list, my_energy );</div>
-<div class="line">    u235.<a name="a13"></a><a class="code" href="../../d2/dc9/class_origen_1_1_yield_parent.html#aa1bf483de36760cb3d8588ef27311348">get_fp_ids</a>( &amp;fp_list );</div>
-<div class="line">    EXPECT_EQ( 54135, fp_list[i_xe135] ) &lt;&lt; <span class="stringliteral">&quot;U-235 fp ids are consistent&quot;</span>;</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordtype">double</span> by_hand = yields[0] +</div>
-<div class="line">                     ( yields[1] - yields[0] ) * ( my_energy - energies[0] ) /</div>
-<div class="line">                         ( energies[1] - energies[0] );</div>
-<div class="line"></div>
-<div class="line">    EXPECT_FLOAT_EQ( by_hand, yield_list[i_xe135] )</div>
-<div class="line">        &lt;&lt; <span class="stringliteral">&quot;U-235 by hand and set yield interpolation are same&quot;</span>;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="preprocessor">#define SEXPECT_EQ( a, b ) EXPECT_EQ( a, STab1WriterTester::as_string( b ) )</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a4dc79e0b8cd5976e5d2ac8dba0739d2f">TEST</a>( YieldResourceIOTester, AmpxFloatWriting )</div>
+<div class="line"><span class="preprocessor">#define SEXPECT_EQ( a, b ) EXPECT_EQ( a, STab1Writer::as_string( b ) )</span></div>
+<div class="line"><a name="a3"></a><a class="code" href="../../d2/da0/namespace_origen_1_1test.html#a3e61838dc3e91562861a52e018752efa">TEST</a>( Ampx, FloatWriting )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// positive numbers with exponents</span></div>
-<div class="line">    <a name="a14"></a><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a33f1058872d4015d1591ffeec9c3a0f7">SEXPECT_EQ</a>( <span class="stringliteral">&quot; 1.0000-200&quot;</span>, 1e-200 );</div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a33f1058872d4015d1591ffeec9c3a0f7">SEXPECT_EQ</a>( <span class="stringliteral">&quot; 1.0000-200&quot;</span>, 1e-200 );</div>
 <div class="line">    <a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a33f1058872d4015d1591ffeec9c3a0f7">SEXPECT_EQ</a>( <span class="stringliteral">&quot; 1.0000-100&quot;</span>, 1e-100 );</div>
 <div class="line">    <a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a33f1058872d4015d1591ffeec9c3a0f7">SEXPECT_EQ</a>( <span class="stringliteral">&quot; 1.00000-99&quot;</span>, 1e-99 );</div>
 <div class="line">    <a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a33f1058872d4015d1591ffeec9c3a0f7">SEXPECT_EQ</a>( <span class="stringliteral">&quot; 1.00000-10&quot;</span>, 1e-10 );</div>
@@ -277,15 +204,194 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a33f1058872d4015d1591ffeec9c3a0f7">SEXPECT_EQ</a>( <span class="stringliteral">&quot; 5.555556-0&quot;</span>, 5.55555555 );</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a4dc79e0b8cd5976e5d2ac8dba0739d2f">TEST</a>( YieldResourceIOTester, Rebaseline )</div>
+<div class="line"><span class="keyword">class </span>YieldResourceIO_F : <span class="keyword">public</span> ::testing::Test</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">protected</span>:</div>
+<div class="line">    ScaleUtils::IO::DB <a name="a5"></a><a class="code" href="../../d9/dce/class_origen_1_1test_1_1_yield_resource_i_o___f.html#a2ff17c0063d20c7ce10fd577f93b5e3a">opts</a>;</div>
+<div class="line">    <a name="_a6"></a><a class="code" href="../../d5/d9a/class_origen_1_1_yield_resource_i_o.html">::Origen::YieldResourceIO</a> <a name="a7"></a><a class="code" href="../../d9/dce/class_origen_1_1test_1_1_yield_resource_i_o___f.html#af6a5ace1696d02b242c730f37bafa7a9">io</a>;</div>
+<div class="line">    <a name="_a8"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html">::Origen::YieldResource</a> <a name="a9"></a><a class="code" href="../../d9/dce/class_origen_1_1test_1_1_yield_resource_i_o___f.html#a17cf427d650d34fd952883a65587451c">yr</a>;</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><a name="a10"></a><a class="code" href="../../d2/da0/namespace_origen_1_1test.html#ab5f02e3173e2e83ab537e3ee0b7f153a">TEST_F</a>( YieldResourceIO_F, Basic )</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// get yields resource</span></div>
+<div class="line">    io.load( yr, yields_filepath, opts );</div>
+<div class="line">    EXPECT_TRUE( opts.numError() == 0 );</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Check the yield resource for correctness.</span></div>
+<div class="line">    std::vector&lt;std::string&gt; errors;</div>
+<div class="line">    <span class="keywordtype">bool</span> pass = yr.check( errors );</div>
+<div class="line">    opts.appendErrorStack( &amp;errors );</div>
+<div class="line">    EXPECT_TRUE( pass ) &lt;&lt; opts.dumpErrorStack();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// dump it out for inspection</span></div>
+<div class="line">    <span class="keywordflow">if</span>( !pass )</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Error in yields: dumping yield table&quot;</span></div>
+<div class="line">                  &lt;&lt; <span class="stringliteral">&quot; output to yields.txt&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        std::ofstream ofs( <span class="stringliteral">&quot;yields.txt&quot;</span> );</div>
+<div class="line">        <a name="a11"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">printYields</a>( yr, ofs );</div>
+<div class="line">        ofs.close();</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    EXPECT_EQ( 30, yr.num_fissionables() );</div>
+<div class="line">    EXPECT_TRUE( yr.has_fissionable( 92235 ) )</div>
+<div class="line">        &lt;&lt; <span class="stringliteral">&quot;must have U-235 as a parent fissionable nuclide&quot;</span>;</div>
+<div class="line">    EXPECT_EQ( 1151, yr.num_fps( 92235 ) )</div>
+<div class="line">        &lt;&lt; <span class="stringliteral">&quot;number of fission products for U-235&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">const</span> YieldParent* u235_ptr = yr.fissionable( 92235 );</div>
+<div class="line">    EXPECT_TRUE( u235_ptr != <span class="keyword">nullptr</span> );</div>
+<div class="line">    <span class="keyword">const</span> YieldParent&amp; u235 = *u235_ptr;</div>
+<div class="line"></div>
+<div class="line">    EXPECT_TRUE( u235.has_fp( 54135 ) );</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> i_xe135 = u235.fp_index( 54135 );</div>
+<div class="line">    EXPECT_TRUE( i_xe135 != -1 );</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// get yields and energies for Xe-135</span></div>
+<div class="line">    std::vector&lt;double&gt; energies, yields;</div>
+<div class="line">    u235.get_energies( &amp;energies );</div>
+<div class="line">    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> j = 0; j &lt; energies.size(); j++ )</div>
+<div class="line">    {</div>
+<div class="line">        yields.push_back( u235.data_at( j ).yield_at( i_xe135 ) );</div>
+<div class="line">        <span class="comment">// std::cout &lt;&lt; energies[j] &lt;&lt; &quot;: &quot;&lt;&lt; yields[j]&lt;&lt;std::endl;</span></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    EXPECT_FLOAT_EQ( 0.0253, energies[0] );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 2e6, energies[1] );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 1.4e7, energies[2] );</div>
+<div class="line"></div>
+<div class="line">    EXPECT_FLOAT_EQ( 0.00079801498, yields[0] );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 0.0011961, yields[1] );</div>
+<div class="line">    EXPECT_FLOAT_EQ( 0.0045401901, yields[2] );</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">double</span> my_energy = 1e6;</div>
+<div class="line">    std::vector&lt;double&gt; yield_list;</div>
+<div class="line">    std::vector&lt;int&gt; fp_list;</div>
+<div class="line">    u235.get_interp_yields( &amp;yield_list, my_energy );</div>
+<div class="line">    u235.get_fp_ids( &amp;fp_list );</div>
+<div class="line">    EXPECT_EQ( 54135, fp_list[i_xe135] ) &lt;&lt; <span class="stringliteral">&quot;U-235 fp ids are consistent&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">double</span> by_hand = yields[0] + ( yields[1] - yields[0] ) *</div>
+<div class="line">                                     ( my_energy - energies[0] ) /</div>
+<div class="line">                                     ( energies[1] - energies[0] );</div>
+<div class="line"></div>
+<div class="line">    EXPECT_FLOAT_EQ( by_hand, yield_list[i_xe135] )</div>
+<div class="line">        &lt;&lt; <span class="stringliteral">&quot;U-235 by hand and set yield interpolation are same&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Check that we fail properly when trying to load a different type of file.</span></div>
+<div class="line"><a class="code" href="../../d2/da0/namespace_origen_1_1test.html#ab5f02e3173e2e83ab537e3ee0b7f153a">TEST_F</a>( YieldResourceIO_F, WrongTextFormat )</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">bool</span> pass = io.load( yr, decay_filepath, opts );</div>
+<div class="line">    EXPECT_FALSE( pass );</div>
+<div class="line">    EXPECT_EQ( 3, opts.numError() ) &lt;&lt; opts.writeErrorStack();</div>
+<div class="line">    <span class="keywordflow">if</span>( opts.numError() == 3 )</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> e = opts.errorStack();</div>
+<div class="line">        EXPECT_EQ( <span class="stringliteral">&quot;premature end of file with format=&#39;stab1&#39;&quot;</span>, e[0] );</div>
+<div class="line">        EXPECT_EQ( <span class="stringliteral">&quot;file is not ENDF-formatted yield data with format=&#39;ampx&#39;&quot;</span>,</div>
+<div class="line">                   e[1] );</div>
+<div class="line">        EXPECT_EQ( <span class="stringliteral">&quot;tried to load formats: (stab1|ampx) and failed&quot;</span>, e[2] );</div>
+<div class="line">    }</div>
+<div class="line">    opts.clearErrorStack();</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Test loading using AMPX data.</span></div>
+<div class="line"><a class="code" href="../../d2/da0/namespace_origen_1_1test.html#ab5f02e3173e2e83ab537e3ee0b7f153a">TEST_F</a>( YieldResourceIO_F, AmpxLoadingAndErrorCatching )</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// load with defaults and check that we got endf</span></div>
+<div class="line">    <span class="keywordtype">bool</span> pass = io.load( yr, endfyields_filepath, opts );</div>
+<div class="line">    EXPECT_TRUE( pass ) &lt;&lt; opts;</div>
+<div class="line">    EXPECT_EQ( <span class="stringliteral">&quot;ampx&quot;</span>, opts.get&lt;std::string&gt;( <span class="stringliteral">&quot;loadedFileFormat&quot;</span>, <span class="stringliteral">&quot;&quot;</span> ) );</div>
+<div class="line">    EXPECT_EQ( <span class="stringliteral">&quot;endf&quot;</span>, opts.get&lt;std::string&gt;( <span class="stringliteral">&quot;ampxFormat&quot;</span>, <span class="stringliteral">&quot;&quot;</span> ) );</div>
+<div class="line">    opts.clearErrorStack();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// try with gnd format</span></div>
+<div class="line">    yr.clear();</div>
+<div class="line">    opts.set&lt;std::string&gt;( <span class="stringliteral">&quot;fileFormat&quot;</span>, <span class="stringliteral">&quot;ampx&quot;</span> );</div>
+<div class="line">    opts.set&lt;std::string&gt;( <span class="stringliteral">&quot;ampxFormat&quot;</span>, <span class="stringliteral">&quot;gnd&quot;</span> );</div>
+<div class="line">    pass = io.load( yr, endfyields_filepath, opts );</div>
+<div class="line">    EXPECT_FALSE( pass ) &lt;&lt; opts;</div>
+<div class="line">    opts.clearErrorStack();</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="../../d2/da0/namespace_origen_1_1test.html#a3e61838dc3e91562861a52e018752efa">TEST</a>( YieldResourceIO, IntenseRoundTrip )</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// list of possible formats</span></div>
+<div class="line">    std::vector&lt;std::string&gt; fmts{<span class="stringliteral">&quot;stab1&quot;</span>};</div>
+<div class="line">    <span class="comment">// Andrew, need to work to enable this line</span></div>
+<div class="line">    <span class="comment">// std::vector&lt;std::string&gt; fmts{&quot;stab1&quot;,&quot;ampx&quot;};</span></div>
+<div class="line">    <span class="keywordflow">for</span>( <span class="keyword">auto</span> fmt1 : fmts )</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span>( <span class="keyword">auto</span> fmt2 : fmts )</div>
+<div class="line">        {</div>
+<div class="line">            ScaleUtils::IO::DB opts;</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// read it in whatever format it exists</span></div>
+<div class="line">            <a name="a12"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">SP_YieldResource</a> yr1( <a name="a13"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">loadYieldResource</a>( yields_filepath, opts ) );</div>
+<div class="line">            ASSERT_TRUE( yr1 != <span class="keyword">nullptr</span> ) &lt;&lt; opts.writeErrorStack();</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// write it to format 1</span></div>
+<div class="line">            opts.set&lt;std::string&gt;( <span class="stringliteral">&quot;fileFormat&quot;</span>, fmt1 );</div>
+<div class="line">            <span class="keywordtype">bool</span> status1 = <a name="a14"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a36c82d53c04d5848f98ff4eb4fd433e9">saveYieldResource</a>( *yr1, <span class="stringliteral">&quot;out1.&quot;</span> + fmt1, opts );</div>
+<div class="line">            ASSERT_TRUE( status1 ) &lt;&lt; opts.writeErrorStack();</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// read it again (with automatic format finding)</span></div>
+<div class="line">            <span class="comment">// this is the first thing to compare</span></div>
+<div class="line">            opts.remove&lt;std::string&gt;( <span class="stringliteral">&quot;fileFormat&quot;</span> );</div>
+<div class="line">            yr1 = <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">SP_YieldResource</a>( <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">loadYieldResource</a>( <span class="stringliteral">&quot;out1.&quot;</span> + fmt1, opts ) );</div>
+<div class="line">            ASSERT_TRUE( yr1 != <span class="keyword">nullptr</span> ) &lt;&lt; opts.writeErrorStack();</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// write it, now to format 2</span></div>
+<div class="line">            opts.set&lt;std::string&gt;( <span class="stringliteral">&quot;fileFormat&quot;</span>, fmt2 );</div>
+<div class="line">            <span class="keywordtype">bool</span> status2 = <a class="code" href="../../d5/dc1/namespace_origen.html#a36c82d53c04d5848f98ff4eb4fd433e9">saveYieldResource</a>( *yr1, <span class="stringliteral">&quot;out2.&quot;</span> + fmt2, opts );</div>
+<div class="line">            ASSERT_TRUE( status2 ) &lt;&lt; opts.writeErrorStack();</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// finally read it from format 2</span></div>
+<div class="line">            <span class="comment">// this is the second thing to compare</span></div>
+<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">SP_YieldResource</a> yr2( <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">loadYieldResource</a>( <span class="stringliteral">&quot;out2.&quot;</span> + fmt2, opts ) );</div>
+<div class="line">            ASSERT_TRUE( yr2 != <span class="keyword">nullptr</span> ) &lt;&lt; opts.writeErrorStack();</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// compare resources by using the JSON string dump as a middle man</span></div>
+<div class="line">            std::vector&lt;std::string&gt; content( 2 );</div>
+<div class="line">            content[0] = yr1-&gt;to_string();</div>
+<div class="line">            content[1] = yr2-&gt;to_string();</div>
+<div class="line">            std::vector&lt;std::string&gt; file( 2 );</div>
+<div class="line">            file[0] = <span class="stringliteral">&quot;out1.&quot;</span> + fmt1 + <span class="stringliteral">&quot;.json&quot;</span>;</div>
+<div class="line">            file[1] = <span class="stringliteral">&quot;out2.&quot;</span> + fmt2 + <span class="stringliteral">&quot;.json&quot;</span>;</div>
+<div class="line">            <span class="keywordtype">bool</span> print_contents =</div>
+<div class="line">                <span class="keyword">false</span>;  <span class="comment">// can change to true to get print out anyway</span></div>
+<div class="line">            <span class="keywordflow">if</span>( content[0] != content[1] )</div>
+<div class="line">            {</div>
+<div class="line">                print_contents = <span class="keyword">true</span>;</div>
+<div class="line">                EXPECT_TRUE( content[0] == content[1] )</div>
+<div class="line">                    &lt;&lt; <span class="stringliteral">&quot;compare content of &quot;</span> &lt;&lt; file[0] &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; file[1]</div>
+<div class="line">                    &lt;&lt; <span class="stringliteral">&quot; for differences!&quot;</span>;</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">if</span>( print_contents )</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">for</span>( <span class="keyword">auto</span> i : {0, 1} )</div>
+<div class="line">                {</div>
+<div class="line">                    std::ofstream ofs( file[i] );</div>
+<div class="line">                    ofs &lt;&lt; content[i];</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">        }  <span class="comment">// end fmt2 loop</span></div>
+<div class="line">    }      <span class="comment">// end fmt1 loop</span></div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="../../d2/da0/namespace_origen_1_1test.html#a3e61838dc3e91562861a52e018752efa">TEST</a>( YieldResourceJobs, Rebaseline )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">bool</span> rebaseline = <span class="keyword">false</span>;</div>
 <div class="line">    <span class="keywordflow">if</span>( rebaseline )</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// get yields resource</span></div>
 <div class="line">        ScaleUtils::IO::DB opts;</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">Origen::SP_YieldResource</a> yr(</div>
-<div class="line">            <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">Origen::loadYieldResource</a>( Origen::yields_filepath, opts ) );</div>
+<div class="line">        opts.set&lt;std::string&gt;( <span class="stringliteral">&quot;fileFormat&quot;</span>, <span class="stringliteral">&quot;stab1&quot;</span> );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">SP_YieldResource</a> yr( <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">loadYieldResource</a>( yields_filepath, opts ) );</div>
 <div class="line">        ASSERT_TRUE( yr != <span class="keyword">nullptr</span> );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Print the yield resource.</span></div>
@@ -293,86 +399,38 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        <span class="comment">//   diff yields.in.txt yields.in.gold</span></div>
 <div class="line"></div>
 <div class="line">        std::ofstream ofs( <span class="stringliteral">&quot;yields.txt&quot;</span> );</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">Origen::printYields</a>( *yr, ofs );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">printYields</a>( *yr, ofs );</div>
 <div class="line">        std::ofstream ofs2( <span class="stringliteral">&quot;yields.in.txt&quot;</span> );</div>
-<div class="line">        <a name="a15"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a49814e88b42df729555669ecbe6e6468">Origen::printInterpolatedYields</a>(</div>
-<div class="line">            *yr, 92235, 1.4e6, <a name="a16"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a308a5b5d9122f1abe39d36eda70e09de">Origen::INTERP_LINLIN</a>, ofs2 );</div>
+<div class="line">        <a name="a15"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a49814e88b42df729555669ecbe6e6468">printInterpolatedYields</a>( *yr, 92235, 1.4e6, <a name="a16"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a308a5b5d9122f1abe39d36eda70e09de">INTERP_LINLIN</a>, ofs2 );</div>
 <div class="line">        std::ofstream ofs3( <span class="stringliteral">&quot;yields.en.txt&quot;</span> );</div>
-<div class="line">        <a name="a17"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a39b9685c18f87122726909aff67632fc">Origen::printYieldEnergies</a>( *yr, ofs3 );</div>
+<div class="line">        <a name="a17"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a39b9685c18f87122726909aff67632fc">printYieldEnergies</a>( *yr, ofs3 );</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a4dc79e0b8cd5976e5d2ac8dba0739d2f">TEST</a>( YieldResourceIOTester, ExperimentalCumulativeYields )</div>
+<div class="line"><a class="code" href="../../d2/da0/namespace_origen_1_1test.html#a3e61838dc3e91562861a52e018752efa">TEST</a>( YieldResourceJobs, ExperimentalCumulativeYields )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// load another</span></div>
 <div class="line">    <span class="keywordtype">bool</span> experimental_cumulative_yields = <span class="keyword">false</span>;</div>
 <div class="line">    <span class="keywordflow">if</span>( experimental_cumulative_yields )</div>
 <div class="line">    {</div>
 <div class="line">        ScaleUtils::IO::DB opts;</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">Origen::SP_YieldResource</a> yr( <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">Origen::loadYieldResource</a>(</div>
+<div class="line">        opts.set&lt;std::string&gt;( <span class="stringliteral">&quot;fileFormat&quot;</span>, <span class="stringliteral">&quot;stab1&quot;</span> );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">SP_YieldResource</a> yr( <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">loadYieldResource</a>(</div>
 <div class="line">            <span class="stringliteral">&quot;/Users/ww5/pkg/scale_tip/packages/Origen/Core/io/tests/&quot;</span></div>
 <div class="line">            <span class="stringliteral">&quot;origen.revXX.e70.cyields.data&quot;</span>,</div>
 <div class="line">            opts ) );</div>
 <div class="line">        std::cout &lt;&lt; opts.toString();</div>
 <div class="line">        std::ofstream ofs( <span class="stringliteral">&quot;cyields.txt&quot;</span> );</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">Origen::printYields</a>( *yr, ofs );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a2b19dcfe6d0fd2e6c024d3ca976a1f9f">printYields</a>( *yr, ofs );</div>
 <div class="line">        std::ofstream ofs2( <span class="stringliteral">&quot;cyields.in.txt&quot;</span> );</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a49814e88b42df729555669ecbe6e6468">Origen::printInterpolatedYields</a>(</div>
-<div class="line">            *yr, 92235, 1.4e6, <a class="code" href="../../d5/dc1/namespace_origen.html#a308a5b5d9122f1abe39d36eda70e09de">Origen::INTERP_LINLIN</a>, ofs2 );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a49814e88b42df729555669ecbe6e6468">printInterpolatedYields</a>( *yr, 92235, 1.4e6, <a class="code" href="../../d5/dc1/namespace_origen.html#a308a5b5d9122f1abe39d36eda70e09de">INTERP_LINLIN</a>, ofs2 );</div>
 <div class="line">        std::ofstream ofs3( <span class="stringliteral">&quot;cyields.en.txt&quot;</span> );</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a39b9685c18f87122726909aff67632fc">Origen::printYieldEnergies</a>( *yr, ofs3 );</div>
+<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a39b9685c18f87122726909aff67632fc">printYieldEnergies</a>( *yr, ofs3 );</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a4dc79e0b8cd5976e5d2ac8dba0739d2f">TEST</a>( YieldResourceIOTester, RoundTrip )</div>
-<div class="line">{</div>
-<div class="line">    ScaleUtils::IO::DB opts;</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// get yields resource</span></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">Origen::SP_YieldResource</a> yr1(</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">Origen::loadYieldResource</a>( Origen::yields_filepath, opts ) );</div>
-<div class="line">    ASSERT_TRUE( yr1 != <span class="keyword">nullptr</span> ) &lt;&lt; opts.writeErrorStack();</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// round trip</span></div>
-<div class="line">    <span class="keywordtype">bool</span> status1 = <a name="a18"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a36c82d53c04d5848f98ff4eb4fd433e9">Origen::saveYieldResource</a>( *yr1, <span class="stringliteral">&quot;out1.yld&quot;</span>, opts );</div>
-<div class="line">    ASSERT_TRUE( status1 ) &lt;&lt; opts.writeErrorStack();</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a100fb3e2ac5f1171d8c0fd52caccc570">Origen::SP_YieldResource</a> yr2(</div>
-<div class="line">        <a class="code" href="../../d5/dc1/namespace_origen.html#a4f814788dcb81f2c4a623b8899e1ecde">Origen::loadYieldResource</a>( <span class="stringliteral">&quot;out1.yld&quot;</span>, opts ) );</div>
-<div class="line">    ASSERT_TRUE( yr2 != <span class="keyword">nullptr</span> ) &lt;&lt; opts.writeErrorStack();</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordtype">bool</span> status2 = <a class="code" href="../../d5/dc1/namespace_origen.html#a36c82d53c04d5848f98ff4eb4fd433e9">Origen::saveYieldResource</a>( *yr2, <span class="stringliteral">&quot;out2.yld&quot;</span>, opts );</div>
-<div class="line">    ASSERT_TRUE( status2 ) &lt;&lt; opts.writeErrorStack();</div>
-<div class="line"></div>
-<div class="line">    std::ifstream ofs1( <span class="stringliteral">&quot;out1.yld&quot;</span> );</div>
-<div class="line">    std::ifstream ofs2( <span class="stringliteral">&quot;out2.yld&quot;</span> );</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// this is basically a line by line file diff</span></div>
-<div class="line">    <span class="keywordtype">char</span> str1[80];</div>
-<div class="line">    <span class="keywordtype">char</span> str2[80];</div>
-<div class="line">    <span class="keywordtype">int</span> line = 0;</div>
-<div class="line">    <span class="keywordflow">while</span>( ofs1.good() &amp;&amp; ofs2.good() )</div>
-<div class="line">    {</div>
-<div class="line">        ofs1.getline( str1, 80 );</div>
-<div class="line">        ofs2.getline( str2, 80 );</div>
-<div class="line">        ++line;</div>
-<div class="line">        EXPECT_STREQ( str1, str2 ) &lt;&lt; <span class="stringliteral">&quot;line &quot;</span> &lt;&lt; line &lt;&lt; <span class="stringliteral">&quot; was not the same&quot;</span>;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><a class="code" href="../../d6/d1c/tst_yield_resource_i_o_8cpp.html#a4dc79e0b8cd5976e5d2ac8dba0739d2f">TEST</a>( YieldResourceIOTester, ErrorTryingToLoadDecay )</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordtype">bool</span> pass;</div>
-<div class="line">    {</div>
-<div class="line">        ScaleUtils::IO::DB opts;</div>
-<div class="line">        <a name="_a19"></a><a class="code" href="../../d5/d9a/class_origen_1_1_yield_resource_i_o.html">Origen::YieldResourceIO</a> io;</div>
-<div class="line">        <a name="_a20"></a><a class="code" href="../../d1/dbc/class_origen_1_1_yield_resource.html">Origen::YieldResource</a> yr;</div>
-<div class="line">        pass = io.load( yr, Origen::decay_filepath, opts );</div>
-<div class="line">        EXPECT_FALSE( pass );</div>
-<div class="line">        EXPECT_EQ( 2, opts.numError() ) &lt;&lt; opts.writeErrorStack();</div>
-<div class="line">        opts.clearErrorStack();</div>
-<div class="line">    }</div>
-<div class="line">}</div>
+<div class="line">}  <span class="comment">// namespace test</span></div>
+<div class="line">}  <span class="comment">// namespace Origen</span></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

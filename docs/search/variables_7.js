@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gamma_5fdata',['gamma_data',['../d5/de7/structorigen__particleemitter__api_1_1origen__particleemitter.html#a018849078214b4015d4e13be03023238',1,'origen_particleemitter_api::origen_particleemitter']]],
   ['gamma_5flibrary_5funit',['gamma_library_unit',['../dd/da4/namespacegamma__library.html#a2d188895fa1dfe44518ef478e1dd7680',1,'gamma_library']]],
   ['gamma_5fyields',['gamma_yields',['../d7/dfe/structorigen__gamma_1_1origen__gamma__class.html#ac079ca6994ccd5a5d6233a0f0ba9d8ac',1,'origen_gamma::origen_gamma_class']]],
   ['ge_5fassess',['ge_assess',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a5c4dd6b6cd055207464fe057b0e59522',1,'rksuite_90::rk_comm_real_1d']]],

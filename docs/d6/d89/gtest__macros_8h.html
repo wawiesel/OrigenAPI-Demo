@@ -368,9 +368,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                                        \</div>
 <div class="line">        Vec_Str errors;                                                      \</div>
-<div class="line">        Origen::Field::SP neutron_field( <span class="keyword">new</span> <a class="code" href="../../d2/dfe/class_origen_1_1_neutron_field.html">Origen::NeutronField</a>() );       \</div>
+<div class="line">        Origen::Field::SP <a class="code" href="../../da/d0c/group___field.html#ga5774f40ae7945e72f2f57a0161a6adff">neutron_field</a>( <span class="keyword">new</span> <a class="code" href="../../d2/dfe/class_origen_1_1_neutron_field.html">Origen::NeutronField</a>() );       \</div>
 <div class="line">        Origen::ChannelType::SP t(                                           \</div>
-<div class="line">            <span class="keyword">new</span> <a class="code" href="../../da/d2c/class_origen_1_1_channel_type___reac.html">Origen::ChannelType_Reac</a>( neutron_field, reaction_mt ) );    \</div>
+<div class="line">            <span class="keyword">new</span> <a class="code" href="../../da/d2c/class_origen_1_1_channel_type___reac.html">Origen::ChannelType_Reac</a>( <a class="code" href="../../da/d0c/group___field.html#ga5774f40ae7945e72f2f57a0161a6adff">neutron_field</a>, reaction_mt ) );    \</div>
 <div class="line">        EXPECT_NO_ERRORS( t );                                               \</div>
 <div class="line">        int dz = t-&gt;delta_charge_number();                                   \</div>
 <div class="line">        int da = t-&gt;delta_mass_number();                                     \</div>
@@ -381,6 +381,7 @@ Functions</h2></td></tr>
 <div class="line">    }</div>
 <div class="ttc" id="class_origen_1_1_neutron_field_html"><div class="ttname"><a href="../../d2/dfe/class_origen_1_1_neutron_field.html">Origen::NeutronField</a></div><div class="ttdoc">fundamental particle field class: neutron field </div><div class="ttdef"><b>Definition:</b> Field_FunPart.h:16</div></div>
 <div class="ttc" id="class_origen_1_1_channel_type___reac_html"><div class="ttname"><a href="../../da/d2c/class_origen_1_1_channel_type___reac.html">Origen::ChannelType_Reac</a></div><div class="ttdoc">Channel type for (non-fission) reactions. </div><div class="ttdef"><b>Definition:</b> ChannelType_Reac.h:19</div></div>
+<div class="ttc" id="group___field_html_ga5774f40ae7945e72f2f57a0161a6adff"><div class="ttname"><a href="../../da/d0c/group___field.html#ga5774f40ae7945e72f2f57a0161a6adff">origen_definitions_m::neutron_field</a></div><div class="ttdeci">integer(c_int), parameter neutron_field</div><div class="ttdef"><b>Definition:</b> Definitions_M.f90:80</div></div>
 </div><!-- fragment --><dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/dda/tst_transition_system__gen_8cpp-example.html#a27">tstTransitionSystem_Gen.cpp</a>.</dd>
 </dl>
 <p>Referenced by <a class="el" href="../../db/dcd/tst_transition_system___gen_8cpp.html#ac40b31f9d0661471175c22bd65dcdfa2">TEST()</a>.</p>
@@ -455,16 +456,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::stringstream ss;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> i = 0; i &lt; errors.size(); ++i )</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        ss &lt;&lt; ( i + 1 ) &lt;&lt; <span class="stringliteral">&quot;. &quot;</span> &lt;&lt; errors[i] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> ss.str();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

@@ -154,21 +154,7 @@ Functions</h2></td></tr>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/d3a/tstpopulate_8cpp-example.html#a1">tstpopulate.cpp</a>.</dd>
 </dl>
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">// check that it works with format</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;20092235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, <span class="stringliteral">&quot;$S$I$ZZZ$AAA&quot;</span> ) );</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;21092235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, <span class="stringliteral">&quot;$S$I$ZZZ$AAA&quot;</span> ) );</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;10001001&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 10001001, <span class="stringliteral">&quot;$S$I$ZZZ$AAA&quot;</span> ) );</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;0001001&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, <span class="stringliteral">&quot;$S$I$ZZZ$AAA&quot;</span> ) );</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// check default</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;20092235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235 ) );</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;21092235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235 ) );</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;10001001&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 10001001 ) );</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;0001001&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001 ) );</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> populate.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a799c35811d8f92801941c10eeb6db4b4"></a>
@@ -196,17 +182,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string idform = <span class="stringliteral">&quot;$Z$AAA$I&quot;</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;922350&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;922351&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, idform ) );</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;922352&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 22092235, idform ) );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;1002560&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20100256, idform ) );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;10010&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 10001001, idform ) );</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;10010&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, idform ) );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> populate.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a4fff6310458a8ebd851743315fc49697"></a>
@@ -234,17 +210,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string idform = <span class="stringliteral">&quot;$Ee-$A$m&quot;</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;U-235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;U-235m&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, idform ) );</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;U-235m2&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 22092235, idform ) );</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;Fm-256&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20100256, idform ) );</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;H-1&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 10001001, idform ) );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;H-1&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, idform ) );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> populate.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9a9b6d3d2198fb5d6f50ad0ec0bc8333"></a>
@@ -272,17 +238,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::string idform = <span class="stringliteral">&quot;$S:$Ee-$A$m&quot;</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;2:U-235&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;2:U-235m&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, idform ) );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;2:U-235m2&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 22092235, idform ) );</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;2:Fm-256&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20100256, idform ) );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;1:H-1&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 10001001, idform ) );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;0:H-1&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, idform ) );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> populate.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1af35ef24f52a3c78dd1e1cefa8f2c84"></a>
@@ -310,13 +266,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;fm&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 100256, <span class="stringliteral">&quot;$ee&quot;</span> ) );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;FM&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 100256, <span class="stringliteral">&quot;$EE&quot;</span> ) );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;Fm&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 100256, <span class="stringliteral">&quot;$Ee&quot;</span> ) );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> populate.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a79f3094537e7d6a895c0ac5380c28dc9"></a>
@@ -344,13 +294,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, <span class="stringliteral">&quot;$M&quot;</span> ) );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;M&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, <span class="stringliteral">&quot;$M&quot;</span> ) );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;m&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, <span class="stringliteral">&quot;$m&quot;</span> ) );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> populate.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a2233b195a86bc861b436c5983bc3556e"></a>
@@ -378,17 +322,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>References <a class="el" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::string idform = <span class="stringliteral">&quot;$Z-$Ee-$Am$I&quot;</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;92-U-235m0&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20092235, idform ) );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;92-U-235m1&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 21092235, idform ) );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;92-U-235m2&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 22092235, idform ) );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;100-Fm-256m0&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 20100256, idform ) );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;1-H-1m0&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 10001001, idform ) );</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    EXPECT_EQ( <span class="stringliteral">&quot;1-H-1m0&quot;</span>, <a class="code" href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">stringifyNuclide</a>( 1001, idform ) );</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="ttc" id="namespace_origen_html_a119b4a39eb1802fe7823b8d70f38f184"><div class="ttname"><a href="../../d5/dc1/namespace_origen.html#a119b4a39eb1802fe7823b8d70f38f184">Origen::stringifyNuclide</a></div><div class="ttdeci">std::string stringifyNuclide(int id, std::string idform)</div><div class="ttdoc">idform can include various symbols to be substituted </div><div class="ttdef"><b>Definition:</b> populate.cpp:45</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

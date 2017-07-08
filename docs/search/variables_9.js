@@ -12,6 +12,7 @@ var searchData=
   ['ilite',['ilite',['../d7/d41/class_origen_1_1_transition_matrix_p.html#aff5de68fb2aa2945ad7a424857f04763',1,'Origen::TransitionMatrixP']]],
   ['implicit_5fbyproduct_5fmax_5fmassnumber',['IMPLICIT_BYPRODUCT_MAX_MASSNUMBER',['../d5/dc1/namespace_origen.html#afa412e0df30d0ed5f21a7dbfb2ab214b',1,'Origen']]],
   ['index',['index',['../d8/d23/struct_origen_1_1_comp_container.html#a750b5d744c39a06bfb13e6eb010e35d0',1,'Origen::CompContainer']]],
+  ['initialized',['initialized',['../d5/de7/structorigen__particleemitter__api_1_1origen__particleemitter.html#ac3463d9e23c44e41b3f9bf5842ee62e8',1,'origen_particleemitter_api::origen_particleemitter']]],
   ['input_5fby_5fflux',['input_by_flux',['../df/d63/structorigen__casewrapper__m_1_1origen__casewrapper.html#a89e4c7c6c1ca3527f86fab2a37c22f92',1,'origen_casewrapper_m::origen_casewrapper']]],
   ['inputnorm',['inputNorm',['../d8/d23/struct_origen_1_1_comp_container.html#acc052fe715704d8e0e0d5f1f69b36cc3',1,'Origen::CompContainer']]],
   ['inputscalefactor',['inputScaleFactor',['../d8/d23/struct_origen_1_1_comp_container.html#a301207fb784f8815e7c9c23273ff2842',1,'Origen::CompContainer']]],
@@ -31,8 +32,10 @@ var searchData=
   ['intrp_5fable',['intrp_able',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a2bebae73b4da8f79c3a235e4c9008f3d',1,'rksuite_90::rk_comm_real_1d']]],
   ['intrp_5fdegree',['intrp_degree',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#a23de715d13b97bbbde3bcc789f142275',1,'rksuite_90::rk_comm_real_1d']]],
   ['intrp_5fneeds_5fstages',['intrp_needs_stages',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#abfcebad71a4fe7a0567c5906649350cb',1,'rksuite_90::rk_comm_real_1d']]],
+  ['io',['io',['../d9/dce/class_origen_1_1test_1_1_yield_resource_i_o___f.html#af6a5ace1696d02b242c730f37bafa7a9',1,'Origen::test::YieldResourceIO_F']]],
   ['is_5fadjoint',['is_adjoint',['../d4/d20/classtst_origen_to_c_r_s_matrix.html#a49d61c7bf0b001a499b38c75863084cb',1,'tstOrigenToCRSMatrix::is_adjoint()'],['../df/d52/classtst_c_r_a_m_negative_source.html#a49d61c7bf0b001a499b38c75863084cb',1,'tstCRAMNegativeSource::is_adjoint()']]],
   ['isomeric_5fyields',['ISOMERIC_YIELDS',['../d0/d62/class_origen_1_1_decay_resource.html#a4fd4c904cf4bbba51a518c434ec0880a',1,'Origen::DecayResource']]],
   ['itot',['itot',['../d7/d41/class_origen_1_1_transition_matrix_p.html#a79c44febd4937c9ecbd755d1b6e6b208',1,'Origen::TransitionMatrixP::itot()'],['../dd/df4/classtst_c_r_a_m.html#a79c44febd4937c9ecbd755d1b6e6b208',1,'tstCRAM::itot()']]],
+  ['iyield',['iyield',['../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#a13c3ed0370f13bc743c6afba5ddf92bc',1,'Origen::detail::RRXs']]],
   ['izzzaaa_5fyields',['IZZZAAA_YIELDS',['../d0/d62/class_origen_1_1_decay_resource.html#a272031fec68c018681cadce74f1a0485',1,'Origen::DecayResource']]]
 ];

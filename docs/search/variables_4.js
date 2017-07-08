@@ -51,7 +51,7 @@ var searchData=
   ['default_5fkappa_5ffission',['DEFAULT_KAPPA_FISSION',['../d8/d54/class_origen_1_1_energy_resource.html#ac7e3a9587955ecad335e88aa71d2573e',1,'Origen::EnergyResource']]],
   ['deuteron_5fbyproduct_5fid',['DEUTERON_BYPRODUCT_ID',['../da/d0d/group___cxx_identifiers.html#ga283381ad6d5ff50bff57e95f28689706',1,'Origen']]],
   ['deuteron_5fcharge_5fnumber',['DEUTERON_CHARGE_NUMBER',['../da/d0d/group___cxx_identifiers.html#ga361172f33a08f7f89852f1950cf17663',1,'Origen']]],
-  ['deuteron_5ffield',['DEUTERON_FIELD',['../da/d0d/group___cxx_identifiers.html#gaf86de50dbfebc12cb17546ecfd30e1f1',1,'Origen']]],
+  ['deuteron_5ffield',['DEUTERON_FIELD',['../da/d0d/group___cxx_identifiers.html#gaf86de50dbfebc12cb17546ecfd30e1f1',1,'Origen::DEUTERON_FIELD()'],['../da/d0c/group___field.html#ga1fb1f6471e9c35bebf0ea7d85f43ff82',1,'origen_definitions_m::deuteron_field()']]],
   ['deuteron_5fmass',['DEUTERON_MASS',['../da/d97/group___cxx_constants.html#gad0b4618ff804d459897cf5336b6f43ac',1,'Origen']]],
   ['deuteron_5fmass_5fnumber',['DEUTERON_MASS_NUMBER',['../da/d0d/group___cxx_identifiers.html#ga4488df1a30241b6829bc37087be5beed',1,'Origen']]],
   ['diag',['diag',['../df/d52/classtst_c_r_a_m_negative_source.html#a9a7ec4469f38bdf0fac9bf57c3654738',1,'tstCRAMNegativeSource']]],
@@ -65,17 +65,7 @@ var searchData=
   ['dn_5fsource_5fn',['dn_source_n',['../d3/df6/structorigen__neutron_1_1origen__neutron__class.html#a9c5834997431b836aa87280939afe5bc',1,'origen_neutron::origen_neutron_class']]],
   ['dn_5fsource_5fnuclides',['dn_source_nuclides',['../d3/df6/structorigen__neutron_1_1origen__neutron__class.html#acc86bfed9387c5f96da9d7de8e0cd0dc',1,'origen_neutron::origen_neutron_class']]],
   ['dn_5fsource_5fspectra',['dn_source_spectra',['../d3/df6/structorigen__neutron_1_1origen__neutron__class.html#ad0b836d8cdc8cfbb0f586c593bb2fe4d',1,'origen_neutron::origen_neutron_class']]],
-  ['dp0',['dp0',['../de/de8/namespaceauxiliary__erf__m.html#a97d30576f5bfa31076d07dbb8b9beb91',1,'auxiliary_erf_m']]],
-  ['dp1',['dp1',['../de/de8/namespaceauxiliary__erf__m.html#ad9c291bc73e78e9e6cb05e27e5476d6b',1,'auxiliary_erf_m']]],
-  ['dp2',['dp2',['../de/de8/namespaceauxiliary__erf__m.html#a216099714ffbb2f77118005d5b8409a8',1,'auxiliary_erf_m']]],
-  ['dp2th',['dp2th',['../de/de8/namespaceauxiliary__erf__m.html#ae24608df0ea804cbf578966dd8e5b1c2',1,'auxiliary_erf_m']]],
-  ['dp3',['dp3',['../de/de8/namespaceauxiliary__erf__m.html#afa9b047e31e436ecc182788ad207adda',1,'auxiliary_erf_m']]],
-  ['dp4',['dp4',['../de/de8/namespaceauxiliary__erf__m.html#ab36f6682c710159aea8ca2baa841ff2c',1,'auxiliary_erf_m']]],
-  ['dp5',['dp5',['../de/de8/namespaceauxiliary__erf__m.html#a06bb4c004ba51aabd87efaabe7b00ff2',1,'auxiliary_erf_m']]],
-  ['dp8',['dp8',['../de/de8/namespaceauxiliary__erf__m.html#aaada2b5655da3cafc9c20a935a07e839',1,'auxiliary_erf_m']]],
-  ['dph',['dph',['../de/de8/namespaceauxiliary__erf__m.html#a5de6d42f45301b638a9663b23886bece',1,'auxiliary_erf_m']]],
-  ['dppi',['dppi',['../de/de8/namespaceauxiliary__erf__m.html#a635bb040e003dd040657c86436527828',1,'auxiliary_erf_m']]],
-  ['dpth',['dpth',['../de/de8/namespaceauxiliary__erf__m.html#a1a54c7bb4bf40ed0e7bc4c6a1b60cfa1',1,'auxiliary_erf_m']]],
   ['dr',['dr',['../dc/d9b/class_transition_system_adapter_tester_jeff252.html#a15d0dc9afad35cc55d574b054ca603c4',1,'TransitionSystemAdapterTesterJeff252::dr()'],['../dd/d63/class_library_builder_tester.html#afb42fd04bd4c77ad8b19dfae1ab4b817',1,'LibraryBuilderTester::dr()']]],
-  ['dwarf',['dwarf',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#aba65f4c5dfcf45b7ff463e2cf5d20ff4',1,'rksuite_90::rk_comm_real_1d']]]
+  ['dwarf',['dwarf',['../db/d7b/structrksuite__90_1_1rk__comm__real__1d.html#aba65f4c5dfcf45b7ff463e2cf5d20ff4',1,'rksuite_90::rk_comm_real_1d']]],
+  ['dyield',['dyield',['../d1/da1/class_origen_1_1detail_1_1_r_r_xs.html#aee4e4a343315e86e5513306656e33eeb',1,'Origen::detail::RRXs']]]
 ];

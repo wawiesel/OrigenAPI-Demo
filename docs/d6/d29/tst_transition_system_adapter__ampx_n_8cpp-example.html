@@ -226,7 +226,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a00d3a62d94433164b7b43ad8d6cafc6a">Origen::SP_ChannelType</a> channeltype = ts.<a name="a24"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#a96c891a041d2b6ac3a6fcd2423af1735">channel_type</a>( field, mt );</div>
 <div class="line">    EXPECT_FALSE( channeltype == <span class="keyword">nullptr</span> );</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a1ad92e6eff1bb424299002cfe6c97307">Origen::SP_Nuclide</a> <a name="a25"></a><a class="code" href="../../da/da9/namespaceauxiliary.html#abe8a5a630f5d44f6fc0a7fb5efbe9c29">nuclide</a> = ts.<a name="a26"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#a76c224d3bcb16b386641bb9f6d6026aa">nuclide</a>( iza );</div>
+<div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#a1ad92e6eff1bb424299002cfe6c97307">Origen::SP_Nuclide</a> nuclide = ts.<a name="a25"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#a76c224d3bcb16b386641bb9f6d6026aa">nuclide</a>( iza );</div>
 <div class="line">    EXPECT_FALSE( nuclide == <span class="keyword">nullptr</span> );</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d5/dc1/namespace_origen.html#aebc16087596b0a029214d0626699e0f5">Origen::SP_Channel</a> channel = nuclide-&gt;loss( channeltype-&gt;id() );</div>
@@ -240,7 +240,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">return</span> xs;</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><a name="a27"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a2edbeb0ab90d2711f2ed92838dd6f770">TEST_F</a>( <a class="code" href="../../dc/d9b/class_transition_system_adapter_tester_jeff252.html">TransitionSystemAdapterTesterJeff252</a>, OneGroupXsCalc )</div>
+<div class="line"><a name="a26"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a2edbeb0ab90d2711f2ed92838dd6f770">TEST_F</a>( <a class="code" href="../../dc/d9b/class_transition_system_adapter_tester_jeff252.html">TransitionSystemAdapterTesterJeff252</a>, OneGroupXsCalc )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span>( !success ) <span class="keywordflow">return</span>;</div>
 <div class="line"></div>
@@ -250,7 +250,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    rr-&gt;set_max_isomeric_state( 1 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// load reaction resource (mapping to storage_bounds)</span></div>
-<div class="line">    <a name="_a28"></a><a class="code" href="../../dc/d19/class_origen_1_1_reaction_resource_i_o.html">Origen::ReactionResourceIO</a> rr_io;</div>
+<div class="line">    <a name="_a27"></a><a class="code" href="../../dc/d19/class_origen_1_1_reaction_resource_i_o.html">Origen::ReactionResourceIO</a> rr_io;</div>
 <div class="line">    success = success &amp;&amp; rr_io.load( *rr, Origen::jeff252_filepath, opts );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Set reaction resource on adapter.</span></div>
@@ -260,13 +260,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    std::vector&lt;float&gt; mg_flux( 252, 1.0 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create a transition system.</span></div>
-<div class="line">    <a name="_a29"></a><a class="code" href="../../d5/d42/class_origen_1_1_transition_system___gen.html">Origen::TransitionSystem_Gen</a> ts;</div>
-<div class="line">    ts.<a name="a30"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#a523c454156f0d616a8dcfb02ce241488">add_field</a>( <a class="code" href="../../da/d0d/group___cxx_identifiers.html#gaa04f36cae4b5f0862ca3f96617d315bf">Origen::NEUTRON_FIELD</a> );  <span class="comment">// needs at least a neutron field</span></div>
+<div class="line">    <a name="_a28"></a><a class="code" href="../../d5/d42/class_origen_1_1_transition_system___gen.html">Origen::TransitionSystem_Gen</a> ts;</div>
+<div class="line">    ts.<a name="a29"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#a523c454156f0d616a8dcfb02ce241488">add_field</a>( <a class="code" href="../../da/d0d/group___cxx_identifiers.html#gaa04f36cae4b5f0862ca3f96617d315bf">Origen::NEUTRON_FIELD</a> );  <span class="comment">// needs at least a neutron field</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Update a transition system (will not actually be able to update</span></div>
 <div class="line">    <span class="comment">// anything because system is empty).</span></div>
 <div class="line">    tsa.update( &amp;ts, mg_flux );</div>
-<div class="line">    EXPECT_EQ( 0u, ts.<a name="a31"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#af03d421b7084594fdb757e3ddc8d1394">num_nuclides</a>() ) &lt;&lt; ts.<a name="a32"></a><a class="code" href="../../de/d3d/class_origen_1_1_checkable.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a>() &lt;&lt; std::endl;</div>
+<div class="line">    EXPECT_EQ( 0u, ts.<a name="a30"></a><a class="code" href="../../df/d1a/class_origen_1_1_transition_system.html#af03d421b7084594fdb757e3ddc8d1394">num_nuclides</a>() ) &lt;&lt; ts.<a name="a31"></a><a class="code" href="../../de/d3d/class_origen_1_1_checkable.html#aa48c39f92bc04eded742f5310c74aafe">to_string</a>() &lt;&lt; std::endl;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Now actually extend the system to include the proper nuclides</span></div>
 <div class="line">    <span class="comment">// and channels.</span></div>
@@ -381,7 +381,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="keywordflow">if</span>( <span class="keyword">false</span> )</div>
 <div class="line">    {</div>
 <div class="line">        std::ofstream ofs( <span class="stringliteral">&quot;tsxs1.out&quot;</span> );</div>
-<div class="line">        <a name="a33"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a40f5467a10223544562df6cc706d8cb7">printTransitionSystemXs</a>( ts, ofs );</div>
+<div class="line">        <a name="a32"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a40f5467a10223544562df6cc706d8cb7">printTransitionSystemXs</a>( ts, ofs );</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
@@ -534,7 +534,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <a class="code" href="../../d5/d42/class_origen_1_1_transition_system___gen.html">Origen::TransitionSystem_Gen</a> ts;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// variables for Origen library builder</span></div>
-<div class="line">    <a name="_a34"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html">Origen::LibraryBuilder</a> bld;</div>
+<div class="line">    <a name="_a33"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html">Origen::LibraryBuilder</a> bld;</div>
 <div class="line">    std::vector&lt;int&gt; num_decay_parents;</div>
 <div class="line">    std::vector&lt;int&gt; num_parents;</div>
 <div class="line">    std::vector&lt;int&gt; parent_positions;</div>
@@ -550,16 +550,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// get nuclides</span></div>
 <div class="line">    <a class="code" href="../../d7/d09/group___cxx_typedefs.html#gae386eb6c70779056cf6d5c6d1c43c48f">Origen::Vec_Int</a> sizzzaaa_list =</div>
-<div class="line">        <a name="a35"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#adc94d0b51de13feabfeddb635e8f942b">Origen::FakeFactory::createNuclideIds_scale62</a>();</div>
+<div class="line">        <a name="a34"></a><a class="code" href="../../da/daf/class_origen_1_1_fake_factory.html#adc94d0b51de13feabfeddb635e8f942b">Origen::FakeFactory::createNuclideIds_scale62</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create a decay adapter and extend the transition system with decay data</span></div>
-<div class="line">    <a name="_a36"></a><a class="code" href="../../d5/dab/class_origen_1_1_transition_system_adapter___decay_resource.html">Origen::TransitionSystemAdapter_DecayResource</a> tsa_dec;</div>
-<div class="line">    tsa_dec.<a name="a37"></a><a class="code" href="../../d5/dab/class_origen_1_1_transition_system_adapter___decay_resource.html#ae1cb7a2227f64430533629c91a1a6739">extend</a>( &amp;ts, <span class="keyword">true</span>, dr );</div>
+<div class="line">    <a name="_a35"></a><a class="code" href="../../d5/dab/class_origen_1_1_transition_system_adapter___decay_resource.html">Origen::TransitionSystemAdapter_DecayResource</a> tsa_dec;</div>
+<div class="line">    tsa_dec.<a name="a36"></a><a class="code" href="../../d5/dab/class_origen_1_1_transition_system_adapter___decay_resource.html#ae1cb7a2227f64430533629c91a1a6739">extend</a>( &amp;ts, <span class="keyword">true</span>, dr );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Build basic decay library from extended transition system</span></div>
 <div class="line">    {</div>
 <div class="line">        SCOPED_TIMER( <span class="stringliteral">&quot;create_decay_library&quot;</span> );</div>
-<div class="line">        bld.<a name="a38"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">create_decay_transitions</a>( &amp;num_decay_parents,</div>
+<div class="line">        bld.<a name="a37"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#a26e93e52ba642c9e0db04b76a8b6c66a">create_decay_transitions</a>( &amp;num_decay_parents,</div>
 <div class="line">                                      &amp;num_parents,</div>
 <div class="line">                                      &amp;parent_positions,</div>
 <div class="line">                                      &amp;transition_ids,</div>
@@ -571,7 +571,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// include EVERY reaction</span></div>
-<div class="line">    bld.<a name="a39"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#a39e5894c8b419821130a501bb9c9cdc8">set_minimum_reaction_coeff</a>( 0.0 );</div>
+<div class="line">    bld.<a name="a38"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#a39e5894c8b419821130a501bb9c9cdc8">set_minimum_reaction_coeff</a>( 0.0 );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create a reaction adapter.</span></div>
 <div class="line">    <a class="code" href="../../dc/d19/class_origen_1_1_reaction_resource_i_o.html">Origen::ReactionResourceIO</a> rr_io;</div>
@@ -579,15 +579,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"></div>
 <div class="line">    <a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html">Origen::TransitionSystemAdapter_AmpxN</a> tsa_reac;</div>
 <div class="line">    rr-&gt;import_fission_yields( yr );</div>
-<div class="line">    tsa_reac.<a name="a40"></a><a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html#a12fb2a934e3c25188a60c15048392a56">set_reaction_resource</a>( rr );</div>
-<div class="line">    tsa_reac.<a name="a41"></a><a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html#ad5250c865bb54942cf5a08c918ad7ccd">extend</a>( &amp;ts );</div>
+<div class="line">    tsa_reac.<a name="a39"></a><a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html#a12fb2a934e3c25188a60c15048392a56">set_reaction_resource</a>( rr );</div>
+<div class="line">    tsa_reac.<a name="a40"></a><a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html#ad5250c865bb54942cf5a08c918ad7ccd">extend</a>( &amp;ts );</div>
 <div class="line">    std::vector&lt;float&gt; mg_flux = rr-&gt;library_flux();</div>
-<div class="line">    tsa_reac.<a name="a42"></a><a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html#a2a5072bf7813d6e30213744205d74b25">update</a>( &amp;ts, mg_flux );</div>
+<div class="line">    tsa_reac.<a name="a41"></a><a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html#a2a5072bf7813d6e30213744205d74b25">update</a>( &amp;ts, mg_flux );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// build reaction transitions</span></div>
 <div class="line">    {</div>
 <div class="line">        SCOPED_TIMER( <span class="stringliteral">&quot;create_reaction_transitions&quot;</span> );</div>
-<div class="line">        bld.<a name="a43"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">create_reaction_transitions</a>( &amp;num_decay_parents,</div>
+<div class="line">        bld.<a name="a42"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#ad18485d86033c82e42340fa3b8bd6c6b">create_reaction_transitions</a>( &amp;num_decay_parents,</div>
 <div class="line">                                         &amp;num_parents,</div>
 <div class="line">                                         &amp;parent_positions,</div>
 <div class="line">                                         &amp;transition_ids,</div>
@@ -604,9 +604,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    EXPECT_EQ( 64079u, reaction_gain_sequence.size() );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create this library.</span></div>
-<div class="line">    <a name="_a44"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a> lib;</div>
+<div class="line">    <a name="_a43"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html">Origen::Library</a> lib;</div>
 <div class="line">    ScaleUtils::IO::DB opts;</div>
-<div class="line">    bld.<a name="a45"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#a7b1ae45e8bf4dacb8dc32805ec6b7fa1">create_library</a>( &amp;lib,</div>
+<div class="line">    bld.<a name="a44"></a><a class="code" href="../../df/d95/class_origen_1_1_library_builder.html#a7b1ae45e8bf4dacb8dc32805ec6b7fa1">create_library</a>( &amp;lib,</div>
 <div class="line">                        num_decay_parents,</div>
 <div class="line">                        num_parents,</div>
 <div class="line">                        parent_positions,</div>
@@ -636,14 +636,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            kinf, n_production_xs[index] / loss_xs[index], kinf * 1.e-4 );</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <a name="a46"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a74f31502109fccedd04286fd61548627">Origen::saveLibrary</a>( lib, <span class="stringliteral">&quot;rxlib.f33&quot;</span>, opts );</div>
+<div class="line">    <a name="a45"></a><a class="code" href="../../d5/dc1/namespace_origen.html#a74f31502109fccedd04286fd61548627">Origen::saveLibrary</a>( lib, <span class="stringliteral">&quot;rxlib.f33&quot;</span>, opts );</div>
 <div class="line">    <span class="comment">// std::cerr&lt;&lt;opts&lt;&lt;std::endl;</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// do this loop some times to simulate the real timing breakdown</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">bool</span> debug = <span class="keyword">false</span>;</div>
 <div class="line">    {</div>
 <div class="line">        SCOPED_TIMER( <span class="stringliteral">&quot;update_reaction_transitions&quot;</span> );</div>
-<div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> <a name="a47"></a><a class="code" href="../../d8/dff/namespaceorigen__beta.html#a87261de321db0d27bd655f64bf49b611">iii</a> = 0; <a class="code" href="../../d8/dff/namespaceorigen__beta.html#a87261de321db0d27bd655f64bf49b611">iii</a> &lt; 3; ++<a class="code" href="../../d8/dff/namespaceorigen__beta.html#a87261de321db0d27bd655f64bf49b611">iii</a> )</div>
+<div class="line">        <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> <a name="a46"></a><a class="code" href="../../d8/dff/namespaceorigen__beta.html#a87261de321db0d27bd655f64bf49b611">iii</a> = 0; <a class="code" href="../../d8/dff/namespaceorigen__beta.html#a87261de321db0d27bd655f64bf49b611">iii</a> &lt; 3; ++<a class="code" href="../../d8/dff/namespaceorigen__beta.html#a87261de321db0d27bd655f64bf49b611">iii</a> )</div>
 <div class="line">        {</div>
 <div class="line">            mg_flux[7] = 90.0;</div>
 <div class="line">            tsa_reac.<a class="code" href="../../d4/ded/class_origen_1_1_transition_system_adapter___ampx_n.html#a2a5072bf7813d6e30213744205d74b25">update</a>( &amp;ts, mg_flux );</div>
@@ -688,7 +688,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> <a name="a48"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#aca9864c021ad9b1c9c9a1a758ebd83e7">output_ampx_library_text_files</a>( std::string ampxlib,</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a47"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#aca9864c021ad9b1c9c9a1a758ebd83e7">output_ampx_library_text_files</a>( std::string ampxlib,</div>
 <div class="line">                                     std::string prefix = <span class="stringliteral">&quot;ampx&quot;</span> )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">auto</span> sp_nxs = <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#aac482ae9deee4301143c8b7c460773ff">loadAmpx</a>( ampxlib );</div>
@@ -732,7 +732,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><a name="a49"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a75683d392d35a03e5e6f0f101bbf0c2d">TEST</a>( Output, AmpxLib )</div>
+<div class="line"><a name="a48"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#a75683d392d35a03e5e6f0f101bbf0c2d">TEST</a>( Output, AmpxLib )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// output_ampx_library_text_files(&quot;/Users/ww5/lib/scale_dev_data/scale.rev03.xn56v7.1&quot;,&quot;ampx56v7.1&quot;);</span></div>
 <div class="line">}</div>
@@ -794,7 +794,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// I will add data in place to this library.</span></div>
-<div class="line">    <a name="_a50"></a><a class="code" href="../../db/d30/class_origen_1_1_library_i_o.html">::Origen::LibraryIO</a> io;</div>
+<div class="line">    <a name="_a49"></a><a class="code" href="../../db/d30/class_origen_1_1_library_i_o.html">::Origen::LibraryIO</a> io;</div>
 <div class="line">    <a class="code" href="../../de/d87/class_origen_1_1_library.html">::Origen::Library</a> lib;</div>
 <div class="line">    {</div>
 <div class="line">        ScaleUtils::IO::DB opts;</div>
@@ -805,7 +805,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">// Alternatively, because the lib has decay data on it,</span></div>
 <div class="line">    <span class="comment">// I could have used that but it would have looked a little more</span></div>
 <div class="line">    <span class="comment">// convoluted.</span></div>
-<div class="line">    <a class="code" href="../../de/d87/class_origen_1_1_library.html">::Origen::Library</a> <a name="a51"></a><a class="code" href="../../d4/d0c/radaua_8f90.html#acca2d4c86d3a52896d5155ce22833186">dec</a>;</div>
+<div class="line">    <a class="code" href="../../de/d87/class_origen_1_1_library.html">::Origen::Library</a> <a name="a50"></a><a class="code" href="../../d4/d0c/radaua_8f90.html#acca2d4c86d3a52896d5155ce22833186">dec</a>;</div>
 <div class="line">    {</div>
 <div class="line">        ScaleUtils::IO::DB opts;</div>
 <div class="line">        io.load(dec,<span class="stringliteral">&quot;origen.rev04.end7dec&quot;</span>,opts);</div>
@@ -830,9 +830,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">    <span class="comment">// STEP 1a: nuclide set</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> num_nuclides;</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">auto</span> def = lib.<a name="a52"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a91acb9d4be4da86e3d90c43ee40249a1">definition</a>();</div>
-<div class="line">        <span class="keyword">auto</span> nucset = def.<a name="a53"></a><a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>();</div>
-<div class="line">        <span class="keyword">auto</span> ids = nucset.<a name="a54"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">ids</a>();</div>
+<div class="line">        <span class="keyword">auto</span> def = lib.<a name="a51"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a91acb9d4be4da86e3d90c43ee40249a1">definition</a>();</div>
+<div class="line">        <span class="keyword">auto</span> nucset = def.<a name="a52"></a><a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>();</div>
+<div class="line">        <span class="keyword">auto</span> ids = nucset.<a name="a53"></a><a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">ids</a>();</div>
 <div class="line">        <span class="keyword">auto</span> ids2 = dec.<a class="code" href="../../de/d87/class_origen_1_1_library.html#a91acb9d4be4da86e3d90c43ee40249a1">definition</a>().<a class="code" href="../../d9/d4b/class_origen_1_1_library_header.html#a30d45658bf2bd71aa3f45267469d959e">nuclide_set</a>().<a class="code" href="../../d2/de0/class_origen_1_1_nuclide_set.html#a889dc0300ad2c9cc1f40884d2e61ac25">ids</a>();</div>
 <div class="line">        num_nuclides = ids2.size();</div>
 <div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;num_nuclides; ++i )</div>
@@ -841,34 +841,34 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        }</div>
 <div class="line">        nucset.set_ids( ids );</div>
 <div class="line">        def.set_nuclide_set( nucset );</div>
-<div class="line">        lib.<a name="a55"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#abade2f9325eef118478da4e9522b80c1">set_definition</a>( def );</div>
+<div class="line">        lib.<a name="a54"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#abade2f9325eef118478da4e9522b80c1">set_definition</a>( def );</div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// STEP 1b: copy decay data</span></div>
 <div class="line">    <span class="comment">// NOTE: if you want to add a decay from S--&gt;S+3, you&#39;d have to</span></div>
 <div class="line">    <span class="comment">// do it here on the vector decay_constants.</span></div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">auto</span> dd = lib.<a name="a56"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a7c55c01e1e736dd4b2205d593be18786">decay_data</a>();</div>
+<div class="line">        <span class="keyword">auto</span> dd = lib.<a name="a55"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a7c55c01e1e736dd4b2205d593be18786">decay_data</a>();</div>
 <div class="line">        <span class="keyword">auto</span> dd2 = dec.<a class="code" href="../../de/d87/class_origen_1_1_library.html#a7c55c01e1e736dd4b2205d593be18786">decay_data</a>();</div>
-<div class="line">        <a name="a57"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , decay_constants, dd2, 0  );</div>
+<div class="line">        <a name="a56"></a><a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , decay_constants, dd2, 0  );</div>
 <div class="line">        <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , recoverable_energy_values, dd2, 0   );</div>
 <div class="line">        <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , q_fractions_from_photons, dd2, 0   );</div>
 <div class="line">        <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , rcg_for_air, dd2, 0   );</div>
 <div class="line">        <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , rcg_for_water, dd2, 0   );</div>
 <div class="line">        <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , abund_of_lite_nuclides, dd2, 0   );</div>
 <div class="line">        <a class="code" href="../../dc/de5/tst_transition_system_adapter___ampx_n_8cpp.html#afdeea8b301ff39e622e7147c5888f878">MIRROR_VECTOR</a>( dd , masses, dd2, 0   );</div>
-<div class="line">        lib.<a name="a58"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a50dc9f2e93e4c16ccd759c44fbef2b46">set_decay_data</a>( dd );</div>
+<div class="line">        lib.<a name="a57"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a50dc9f2e93e4c16ccd759c44fbef2b46">set_decay_data</a>( dd );</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// STEP 2 &amp; 3: add extra transition structure and coefficients.</span></div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">auto</span> tr = lib.<a name="a59"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#ae02084b4dd43bb4cb770de5db375c12f">transition_structure</a>();</div>
-<div class="line">        <span class="keyword">auto</span> new_parent_positions = tr.<a name="a60"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#a80a17b094e52f4e7a5a11a68e1164b1c">parent_positions</a>();</div>
+<div class="line">        <span class="keyword">auto</span> tr = lib.<a name="a58"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#ae02084b4dd43bb4cb770de5db375c12f">transition_structure</a>();</div>
+<div class="line">        <span class="keyword">auto</span> new_parent_positions = tr.<a name="a59"></a><a class="code" href="../../d5/d8b/class_origen_1_1_transition_structure.html#a80a17b094e52f4e7a5a11a68e1164b1c">parent_positions</a>();</div>
 <div class="line">        <span class="keyword">auto</span> new_transition_ids = tr.transition_ids();</div>
 <div class="line">        <span class="keyword">auto</span> new_num_parents = tr.num_parents();</div>
 <div class="line">        <span class="keyword">auto</span> new_num_decay_parents = tr.num_decay_parents();</div>
 <div class="line"></div>
-<div class="line">        <span class="keyword">auto</span> tc = lib.<a name="a61"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#abc79568ef9d6c9109fb3d497fee01f18">transition_coeff_at</a>( 0 );</div>
-<div class="line">        <span class="keyword">auto</span> new_matrix = tc.<a name="a62"></a><a class="code" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a22734b922eb5ed212fdf902bceb6281c">matrix</a>();</div>
+<div class="line">        <span class="keyword">auto</span> tc = lib.<a name="a60"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#abc79568ef9d6c9109fb3d497fee01f18">transition_coeff_at</a>( 0 );</div>
+<div class="line">        <span class="keyword">auto</span> new_matrix = tc.<a name="a61"></a><a class="code" href="../../d7/ddf/class_origen_1_1_transition_coeff.html#a22734b922eb5ed212fdf902bceb6281c">matrix</a>();</div>
 <div class="line">        <span class="keyword">auto</span> new_loss_xs = tc.loss_xs();</div>
 <div class="line">        <span class="keyword">auto</span> new_kappa_capture = tc.kappa_capture();</div>
 <div class="line"></div>
@@ -891,7 +891,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">            <span class="comment">//dummy value</span></div>
 <div class="line">            new_transition_ids.push_back( 0 );</div>
 <div class="line">            <span class="comment">//set a nonzero value to prove that we generate these isotopes</span></div>
-<div class="line">            new_matrix.push_back( dec.<a class="code" href="../../de/d87/class_origen_1_1_library.html#a7c55c01e1e736dd4b2205d593be18786">decay_data</a>().<a name="a63"></a><a class="code" href="../../db/d2d/class_origen_1_1_decay_data.html#aa60ce09301066a3c124dc5aef66eec8b">decay_constants</a>[i]*1e-20 );</div>
+<div class="line">            new_matrix.push_back( dec.<a class="code" href="../../de/d87/class_origen_1_1_library.html#a7c55c01e1e736dd4b2205d593be18786">decay_data</a>().<a name="a62"></a><a class="code" href="../../db/d2d/class_origen_1_1_decay_data.html#aa60ce09301066a3c124dc5aef66eec8b">decay_constants</a>[i]*1e-20 );</div>
 <div class="line">            <span class="comment">//copy over other transition data</span></div>
 <div class="line">            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j=0; j&lt;old_num_parents[i]; ++j)</div>
 <div class="line">            {</div>
@@ -914,13 +914,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">        tr.set_transition_ids(new_transition_ids);</div>
 <div class="line">        tr.set_num_parents(new_num_parents);</div>
 <div class="line">        tr.set_num_decay_parents(new_num_decay_parents);</div>
-<div class="line">        lib.<a name="a64"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a7a2053928cd4fdca72cf27f754191531">set_transition_structure</a>( tr );</div>
+<div class="line">        lib.<a name="a63"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a7a2053928cd4fdca72cf27f754191531">set_transition_structure</a>( tr );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//overwrite old transition coeff with the new</span></div>
 <div class="line">        tc.set_matrix( new_matrix );</div>
 <div class="line">        tc.set_kappa_capture( new_kappa_capture );</div>
 <div class="line">        tc.set_loss_xs( new_loss_xs );</div>
-<div class="line">        lib.<a name="a65"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a46cde2645cbcea6bd661b69d15dfe24b">set_transition_coeff_at</a>( tc, 0 );</div>
+<div class="line">        lib.<a name="a64"></a><a class="code" href="../../de/d87/class_origen_1_1_library.html#a46cde2645cbcea6bd661b69d15dfe24b">set_transition_coeff_at</a>( tc, 0 );</div>
 <div class="line"></div>
 <div class="line">    }</div>
 <div class="line"></div>
